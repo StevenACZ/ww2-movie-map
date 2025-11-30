@@ -130,6 +130,7 @@ const getFlag = (code: string) => {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(15px);
   font-family: 'Courier New', monospace;
+  z-index: 1002;
 }
 
 .menu-header {
