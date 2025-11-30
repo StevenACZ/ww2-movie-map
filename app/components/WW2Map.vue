@@ -1,14 +1,36 @@
 <template>
-  <div class="map-container">
-    <div id="map" class="map"></div>
+  <div class="map-container relative">
+    <div id="map" class="map z-0"></div>
+    
+    <!-- UI Components -->
+    <SelectedFilm 
+      :film="selectedFilm" 
+      @view-details="openModal" 
+    />
+    
+    <FilmModal 
+      v-if="selectedFilm"
+      :film="selectedFilm" 
+      :is-open="isModalOpen" 
+      @close="closeModal" 
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import { films } from '../../data/films.json'
+import type { Film, Location } from '../../types'
+import FilmModal from './FilmModal.vue'
+import SelectedFilm from './SelectedFilm.vue'
 
 // Map instance
 const map = ref<any>(null)
+
+// State
+const selectedFilm = ref<Film | null>(null)
+const isModalOpen = ref(false)
+const markers: any[] = []
 
 // Leaflet module (loaded dynamically for SSR)
 let L: any = null
@@ -18,22 +40,18 @@ const keysPressed: Record<string, boolean> = {}
 let animationFrameId: number | null = null
 
 // Map configuration
-const MAP_CENTER: [number, number] = [50, 20] // Europe center (matching reference)
+const MAP_CENTER: [number, number] = [50, 15] // Europe center
 const MAP_ZOOM = 4
-const PAN_SPEED = 10 // pixels per frame (matching reference)
+const PAN_SPEED = 10 
 
 /**
  * Initialize Leaflet and create map
  */
 onMounted(async () => {
-  // Only run in browser (SSR-safe)
   if (typeof window === 'undefined') return
 
-  // Dynamic import for SSR compatibility
   const leafletModule = await import('leaflet')
   L = leafletModule.default || leafletModule
-
-  // Import CSS
   await import('leaflet/dist/leaflet.css')
 
   // Initialize map
@@ -42,105 +60,141 @@ onMounted(async () => {
     zoom: MAP_ZOOM,
     zoomControl: false,
     attributionControl: true,
-    keyboard: false // Disable default keyboard (we implement WASD)
+    keyboard: false
   })
 
-  // Add CartoDB Dark Matter tile layer (the black style you like!)
+  // Add CartoDB Dark Matter tile layer
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     subdomains: 'abcd',
     maxZoom: 20
   }).addTo(map.value)
 
-  // Add zoom control to top-right
   L.control.zoom({ position: 'topright' }).addTo(map.value)
 
-  // Set up keyboard event listeners
+  // Add Film Markers
+  addFilmMarkers()
+
+  // Event listeners
   window.addEventListener('keydown', handleKeyDown)
   window.addEventListener('keyup', handleKeyUp)
-
-  // Start WASD animation loop
   animateMap()
 
-  console.log('Map initialized with Leaflet + CartoDB Dark Matter')
+  console.log('Map initialized with Films')
 })
 
-/**
- * Cleanup on unmount
- */
 onUnmounted(() => {
   window.removeEventListener('keydown', handleKeyDown)
   window.removeEventListener('keyup', handleKeyUp)
-
-  // Cancel animation frame
-  if (animationFrameId) {
-    cancelAnimationFrame(animationFrameId)
-  }
-
-  // Destroy map instance
-  if (map.value) {
-    map.value.remove()
-  }
+  if (animationFrameId) cancelAnimationFrame(animationFrameId)
+  if (map.value) map.value.remove()
 })
 
-/**
- * Handle keydown events - track pressed keys
- */
+const addFilmMarkers = () => {
+  (films as Film[]).forEach((film) => {
+    film.locations.forEach((location) => {
+      if (!location.isPrimary) return // Only show primary locations for now to avoid clutter
+
+      // Create custom icon
+      const icon = L.divIcon({
+        className: 'custom-film-marker',
+        html: `<div class="film-marker-content" style="background-image: url('${film.poster}'); box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);"></div>`,
+        iconSize: [40, 60],
+        iconAnchor: [20, 60],
+        popupAnchor: [0, -60]
+      })
+
+      // Note: Leaflet uses [lat, lng], but our data is [lng, lat]
+      const marker = L.marker([location.coordinates[1], location.coordinates[0]], { icon })
+        .addTo(map.value)
+        .on('click', () => selectFilm(film, location))
+      
+      markers.push(marker)
+    })
+  })
+}
+
+const selectFilm = (film: Film, location: Location) => {
+  selectedFilm.value = film
+  
+  // Fly to location
+  map.value.flyTo([location.coordinates[1], location.coordinates[0]], 6, {
+    duration: 1.5
+  })
+}
+
+const openModal = () => {
+  isModalOpen.value = true
+}
+
+const closeModal = () => {
+  isModalOpen.value = false
+}
+
+// WASD Logic
 const handleKeyDown = (e: KeyboardEvent) => {
   const key = e.key.toLowerCase()
   keysPressed[key] = true
-
-  // Prevent default for WASD keys to avoid scrolling
-  if (['w', 'a', 's', 'd'].includes(key)) {
-    e.preventDefault()
-  }
+  if (['w', 'a', 's', 'd'].includes(key)) e.preventDefault()
 }
 
-/**
- * Handle keyup events - release pressed keys
- */
 const handleKeyUp = (e: KeyboardEvent) => {
   const key = e.key.toLowerCase()
   keysPressed[key] = false
 }
 
-/**
- * Animation loop for smooth WASD navigation
- * Runs at 60fps using requestAnimationFrame
- */
 const animateMap = () => {
   if (!map.value) return
-
   let dx = 0
   let dy = 0
+  if (keysPressed['w']) dy -= PAN_SPEED
+  if (keysPressed['s']) dy += PAN_SPEED
+  if (keysPressed['a']) dx -= PAN_SPEED
+  if (keysPressed['d']) dx += PAN_SPEED
 
-  // Calculate movement delta based on pressed keys
-  if (keysPressed['w']) dy -= PAN_SPEED  // Up (north)
-  if (keysPressed['s']) dy += PAN_SPEED  // Down (south)
-  if (keysPressed['a']) dx -= PAN_SPEED  // Left (west)
-  if (keysPressed['d']) dx += PAN_SPEED  // Right (east)
-
-  // Apply panning if any movement detected
   if (dx !== 0 || dy !== 0) {
     map.value.panBy([dx, dy], { animate: false })
   }
-
-  // Continue animation loop
   animationFrameId = requestAnimationFrame(animateMap)
 }
 </script>
 
-<style scoped>
+<style>
 .map-container {
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: #000;
 }
 
 .map {
   width: 100%;
   height: 100%;
   outline: none;
+}
+
+/* Marker Styles */
+.custom-film-marker {
+  background: transparent;
+  border: none;
+}
+
+.film-marker-content {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.film-marker-content:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.8) !important;
+  border-color: #ef4444;
+  z-index: 1000;
 }
 </style>

@@ -1,0 +1,172 @@
+{
+  "films": [
+    {
+      "id": "stalingrad-1993",
+      "title": {
+        "en": "Stalingrad",
+        "es": "Stalingrado"
+      },
+      "year": 1993,
+      "eventYears": {
+        "start": 1942,
+        "end": 1943
+      },
+      "imdbRating": 7.5,
+      "country": "Germany",
+      "poster": "https://image.tmdb.org/t/p/w500/qLV3qW9c7tqLqX8qX8qX8qX8q.jpg",
+      "synopsis": {
+        "en": "German soldiers face the brutal reality of the Battle of Stalingrad during World War II.",
+        "es": "Soldados alemanes enfrentan la brutal realidad de la Batalla de Stalingrado durante la Segunda Guerra Mundial."
+      },
+      "locations": [
+        {
+          "name": "Stalingrad",
+          "coordinates": [44.516, 48.708],
+          "type": "city",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "saving-private-ryan-1998",
+      "title": {
+        "en": "Saving Private Ryan",
+        "es": "Salvar al Soldado Ryan"
+      },
+      "year": 1998,
+      "eventYears": {
+        "start": 1944,
+        "end": 1944
+      },
+      "imdbRating": 8.6,
+      "country": "United States",
+      "poster": "https://image.tmdb.org/t/p/w500/1wY4psJ5NVEhCuOYROwLH2QVExI.jpg",
+      "synopsis": {
+        "en": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+        "es": "Tras el desembarco de Normandía, un grupo de soldados estadounidenses va tras las líneas enemigas para rescatar a un paracaidista cuyos hermanos han muerto en combate."
+      },
+      "locations": [
+        {
+          "name": "Normandy",
+          "coordinates": [-0.3707, 49.3990],
+          "type": "region",
+          "isPrimary": true
+        },
+        {
+          "name": "Omaha Beach",
+          "coordinates": [-0.8776, 49.3711],
+          "type": "city",
+          "isPrimary": false
+        }
+      ]
+    },
+    {
+      "id": "dunkirk-2017",
+      "title": {
+        "en": "Dunkirk",
+        "es": "Dunkerque"
+      },
+      "year": 2017,
+      "eventYears": {
+        "start": 1940,
+        "end": 1940
+      },
+      "imdbRating": 7.8,
+      "country": "United Kingdom",
+      "poster": "https://image.tmdb.org/t/p/w500/ebSnODDg9lbsMIaWg2uAbjn7TO5.jpg",
+      "synopsis": {
+        "en": "Allied soldiers from Belgium, the British Commonwealth and Empire, and France are surrounded by the German Army and evacuated during a fierce battle in World War II.",
+        "es": "Soldados aliados de Bélgica, la Commonwealth británica y Francia son rodeados por el ejército alemán y evacuados durante una feroz batalla en la Segunda Guerra Mundial."
+      },
+      "locations": [
+        {
+          "name": "Dunkirk",
+          "coordinates": [2.3767, 51.0343],
+          "type": "city",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "schindlers-list-1993",
+      "title": {
+        "en": "Schindler's List",
+        "es": "La Lista de Schindler"
+      },
+      "year": 1993,
+      "eventYears": {
+        "start": 1939,
+        "end": 1945
+      },
+      "imdbRating": 9.0,
+      "country": "United States",
+      "poster": "https://image.tmdb.org/t/p/w500/c8Ass7acuOe4za6DhSattE359gr.jpg",
+      "synopsis": {
+        "en": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+        "es": "En la Polonia ocupada por los alemanes durante la Segunda Guerra Mundial, el industrial Oskar Schindler se preocupa gradualmente por su fuerza laboral judía después de presenciar su persecución por los nazis."
+      },
+      "locations": [
+        {
+          "name": "Kraków",
+          "coordinates": [19.9449, 50.0647],
+          "type": "city",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "the-pianist-2002",
+      "title": {
+        "en": "The Pianist",
+        "es": "El Pianista"
+      },
+      "year": 2002,
+      "eventYears": {
+        "start": 1939,
+        "end": 1945
+      },
+      "imdbRating": 8.5,
+      "country": "France",
+      "poster": "https://image.tmdb.org/t/p/w500/39dk464h9s1b2264hZ39k264hZ3.jpg",
+      "synopsis": {
+        "en": "A Polish Jewish radio station pianist sees Warsaw change gradually as World War II begins.",
+        "es": "Un pianista judío polaco de una estación de radio ve cómo Varsovia cambia gradualmente a medida que comienza la Segunda Guerra Mundial."
+      },
+      "locations": [
+        {
+          "name": "Warsaw",
+          "coordinates": [21.0122, 52.2297],
+          "type": "city",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "downfall-2004",
+      "title": {
+        "en": "Downfall",
+        "es": "La Caída"
+      },
+      "year": 2004,
+      "eventYears": {
+        "start": 1945,
+        "end": 1945
+      },
+      "imdbRating": 8.2,
+      "country": "Germany",
+      "poster": "https://image.tmdb.org/t/p/w500/5M5264hZ39k264hZ39k264hZ3.jpg",
+      "synopsis": {
+        "en": "Traudl Junge, the final secretary for Adolf Hitler, tells of the Nazi dictator's final days in his Berlin bunker at the end of WWII.",
+        "es": "Traudl Junge, la última secretaria de Adolf Hitler, cuenta los últimos días del dictador nazi en su búnker de Berlín al final de la Segunda Guerra Mundial."
+      },
+      "locations": [
+        {
+          "name": "Berlin",
+          "coordinates": [13.4050, 52.5200],
+          "type": "city",
+          "isPrimary": true
+        }
+      ]
+    }
+  ]
+}
