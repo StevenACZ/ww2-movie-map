@@ -78,6 +78,11 @@ onMounted(async () => {
   // Event listeners
   window.addEventListener('keydown', handleKeyDown)
   window.addEventListener('keyup', handleKeyUp)
+  
+  // Zoom listener for dynamic marker scaling
+  map.value.on('zoom', updateMarkerScale)
+  updateMarkerScale() // Initial call
+
   animateMap()
 
   console.log('Map initialized with Films')
@@ -87,8 +92,23 @@ onUnmounted(() => {
   window.removeEventListener('keydown', handleKeyDown)
   window.removeEventListener('keyup', handleKeyUp)
   if (animationFrameId) cancelAnimationFrame(animationFrameId)
-  if (map.value) map.value.remove()
+  if (map.value) {
+    map.value.off('zoom', updateMarkerScale)
+    map.value.remove()
+  }
 })
+
+const updateMarkerScale = () => {
+  if (!map.value) return
+  const zoom = map.value.getZoom()
+  // Base scale 1 at zoom 4, increasing by 0.15 per zoom level
+  // At zoom 15 (city), scale will be ~2.65
+  const scale = 1 + (zoom - 4) * 0.15
+  const mapContainer = document.querySelector('.map-container') as HTMLElement
+  if (mapContainer) {
+    mapContainer.style.setProperty('--marker-scale', Math.max(1, scale).toString())
+  }
+}
 
 const addFilmMarkers = () => {
   (films as Film[]).forEach((film) => {
@@ -117,9 +137,10 @@ const addFilmMarkers = () => {
 const selectFilm = (film: Film, location: Location) => {
   selectedFilm.value = film
   
-  // Fly to location
-  map.value.flyTo([location.coordinates[1], location.coordinates[0]], 6, {
-    duration: 1.5
+  // Fly to location with high zoom (city level)
+  map.value.flyTo([location.coordinates[1], location.coordinates[0]], 12, {
+    duration: 2.0,
+    easeLinearity: 0.25
   })
 }
 
@@ -166,6 +187,7 @@ const animateMap = () => {
   margin: 0;
   padding: 0;
   background-color: #000;
+  --marker-scale: 1;
 }
 
 .map {
@@ -187,13 +209,15 @@ const animateMap = () => {
   background-position: center;
   border-radius: 4px;
   border: 2px solid #fff;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.1s linear, box-shadow 0.2s;
   cursor: pointer;
+  transform: scale(var(--marker-scale));
+  transform-origin: bottom center;
 }
 
 .film-marker-content:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(220, 38, 38, 0.8) !important;
+  transform: scale(calc(var(--marker-scale) * 1.2));
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.9) !important;
   border-color: #ef4444;
   z-index: 1000;
 }
