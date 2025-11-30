@@ -31,6 +31,7 @@ const map = ref<any>(null)
 const selectedFilm = ref<Film | null>(null)
 const isModalOpen = ref(false)
 const markers: any[] = []
+const highlightLayer = ref<any>(null)
 
 // Leaflet module (loaded dynamically for SSR)
 let L: any = null
@@ -79,9 +80,9 @@ onMounted(async () => {
   window.addEventListener('keydown', handleKeyDown)
   window.addEventListener('keyup', handleKeyUp)
   
-  // Zoom listener for dynamic marker scaling
-  map.value.on('zoom', updateMarkerScale)
-  updateMarkerScale() // Initial call
+  // Zoom listener for dynamic marker scaling and highlight visibility
+  map.value.on('zoom', handleZoomUpdates)
+  handleZoomUpdates() // Initial call
 
   animateMap()
 
@@ -93,20 +94,31 @@ onUnmounted(() => {
   window.removeEventListener('keyup', handleKeyUp)
   if (animationFrameId) cancelAnimationFrame(animationFrameId)
   if (map.value) {
-    map.value.off('zoom', updateMarkerScale)
+    map.value.off('zoom', handleZoomUpdates)
     map.value.remove()
   }
 })
 
-const updateMarkerScale = () => {
+const handleZoomUpdates = () => {
   if (!map.value) return
   const zoom = map.value.getZoom()
+  
+  // 1. Marker Scaling
   // Base scale 1 at zoom 4, increasing by 0.15 per zoom level
-  // At zoom 15 (city), scale will be ~2.65
   const scale = 1 + (zoom - 4) * 0.15
   const mapContainer = document.querySelector('.map-container') as HTMLElement
   if (mapContainer) {
     mapContainer.style.setProperty('--marker-scale', Math.max(1, scale).toString())
+  }
+
+  // 2. Highlight Layer Visibility
+  // Hide the combat zone circle when zooming out to country view (zoom < 7)
+  if (highlightLayer.value) {
+    if (zoom < 7) {
+      highlightLayer.value.setStyle({ opacity: 0, fillOpacity: 0 })
+    } else {
+      highlightLayer.value.setStyle({ opacity: 1, fillOpacity: 0.2 })
+    }
   }
 }
 
@@ -137,6 +149,26 @@ const addFilmMarkers = () => {
 const selectFilm = (film: Film, location: Location) => {
   selectedFilm.value = film
   
+  // Remove existing highlight
+  if (highlightLayer.value) {
+    map.value.removeLayer(highlightLayer.value)
+  }
+
+  // Determine radius based on location type
+  let radius = 5000 // Default 5km for city
+  if (location.type === 'region') radius = 30000 // 30km
+  if (location.type === 'country') radius = 200000 // 200km
+
+  // Create highlight circle (Combat Zone)
+  highlightLayer.value = L.circle([location.coordinates[1], location.coordinates[0]], {
+    color: '#ef4444',
+    fillColor: '#ef4444',
+    fillOpacity: 0.2,
+    weight: 1,
+    className: 'combat-zone-pulse',
+    radius: radius
+  }).addTo(map.value)
+
   // Fly to location with high zoom (city level)
   map.value.flyTo([location.coordinates[1], location.coordinates[0]], 12, {
     duration: 2.0,
@@ -220,5 +252,18 @@ const animateMap = () => {
   box-shadow: 0 0 20px rgba(220, 38, 38, 0.9) !important;
   border-color: #ef4444;
   z-index: 1000;
+}
+
+/* Combat Zone Animation */
+.combat-zone-pulse {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: pulse-red 3s infinite ease-in-out;
+}
+
+@keyframes pulse-red {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.2; }
 }
 </style>
