@@ -8,9 +8,23 @@ export default defineNuxtConfig({
   ],
 
   i18n: {
-    locales: ['en', 'es'],
+    restructureDir: false,
+    locales: [
+      {
+        code: 'en',
+        name: 'English',
+        file: 'en.json'
+      },
+      {
+        code: 'es',
+        name: 'Español',
+        file: 'es.json'
+      }
+    ],
+    lazy: true,
+    langDir: 'locales',
     defaultLocale: 'en',
-    vueI18n: './i18n.config.ts'
+    strategy: 'no_prefix'
   },
 
   app: {
