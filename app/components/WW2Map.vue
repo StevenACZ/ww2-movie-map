@@ -3,6 +3,9 @@
     <div id="map" class="map z-0"></div>
     
     <!-- UI Components -->
+    <SettingsMenu />
+    <Timeline />
+    
     <SelectedFilm 
       :film="selectedFilm" 
       @view-details="openModal" 
@@ -18,11 +21,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-import { films } from '../../data/films.json'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 import type { Film, Location } from '../../types'
 import FilmModal from './FilmModal.vue'
 import SelectedFilm from './SelectedFilm.vue'
+import Timeline from './Timeline.vue'
+import SettingsMenu from './SettingsMenu.vue'
+import { useTimeline } from '../composables/useTimeline'
+
+// Get filtered films from timeline
+const { filteredFilms } = useTimeline()
 
 // Map instance
 const map = ref<any>(null)
@@ -99,6 +107,11 @@ onUnmounted(() => {
   }
 })
 
+// Watch for changes in filtered films and update markers
+watch(filteredFilms, () => {
+  updateMarkers()
+}, { deep: true })
+
 const handleZoomUpdates = () => {
   if (!map.value) return
   const zoom = map.value.getZoom()
@@ -122,8 +135,19 @@ const handleZoomUpdates = () => {
   }
 }
 
+const updateMarkers = () => {
+  // Remove all existing markers
+  markers.forEach(marker => {
+    map.value.removeLayer(marker)
+  })
+  markers.length = 0
+  
+  // Add new markers for filtered films
+  addFilmMarkers()
+}
+
 const addFilmMarkers = () => {
-  (films as Film[]).forEach((film) => {
+  (filteredFilms.value as Film[]).forEach((film) => {
     film.locations.forEach((location) => {
       if (!location.isPrimary) return // Only show primary locations for now to avoid clutter
 

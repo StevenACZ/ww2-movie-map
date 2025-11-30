@@ -1,0 +1,39 @@
+{
+  "common": {
+    "close": "Cerrar",
+    "loading": "Cargando...",
+    "error": "Error"
+  },
+  "settings": {
+    "title": "Configuración",
+    "language": "Idioma",
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "timeline": {
+    "title": "Línea de Tiempo",
+    "yearRange": "Rango de Años",
+    "from": "Desde",
+    "to": "Hasta",
+    "reset": "Restablecer"
+  },
+  "film": {
+    "close": "Cerrar",
+    "year": "Año",
+    "eventYears": "Años del Evento",
+    "rating": "Calificación",
+    "country": "País",
+    "locations": "Ubicaciones",
+    "viewDetails": "Ver Detalles",
+    "primaryLocation": "Ubicación Principal"
+  },
+  "selectedFilm": {
+    "viewDetails": "Ver Detalles",
+    "year": "Año",
+    "selected": "Película Seleccionada"
+  },
+  "map": {
+    "title": "Mapa de Películas WWII",
+    "navigation": "Usa WASD o el ratón para navegar"
+  }
+}

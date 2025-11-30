@@ -3,6 +3,16 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
+  modules: [
+    '@nuxtjs/i18n'
+  ],
+
+  i18n: {
+    locales: ['en', 'es'],
+    defaultLocale: 'en',
+    vueI18n: './i18n.config.ts'
+  },
+
   app: {
     head: {
       title: 'WW2 Map Films',
