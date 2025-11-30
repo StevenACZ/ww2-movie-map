@@ -40,7 +40,7 @@ const map = ref<any>(null)
 // State
 const selectedFilm = ref<Film | null>(null)
 const isModalOpen = ref(false)
-const markers: any[] = []
+let markerLayerGroup: any = null
 const highlightLayer = ref<any>(null)
 
 // Leaflet module (loaded dynamically for SSR)
@@ -83,6 +83,9 @@ onMounted(async () => {
   }).addTo(map.value)
 
   L.control.zoom({ position: 'bottomright' }).addTo(map.value)
+
+  // Initialize Marker Layer Group
+  markerLayerGroup = L.layerGroup().addTo(map.value)
 
   // Add Film Markers
   addFilmMarkers()
@@ -139,17 +142,15 @@ const handleZoomUpdates = () => {
 }
 
 const updateMarkers = () => {
-  // Remove all existing markers
-  markers.forEach(marker => {
-    map.value.removeLayer(marker)
-  })
-  markers.length = 0
+  if (!markerLayerGroup) return
   
-  // Add new markers for filtered films
+  markerLayerGroup.clearLayers()
   addFilmMarkers()
 }
 
 const addFilmMarkers = () => {
+  if (!markerLayerGroup) return;
+
   (filteredFilms.value as Film[]).forEach((film) => {
     film.locations.forEach((location) => {
       if (!location.isPrimary) return // Only show primary locations for now to avoid clutter
@@ -165,10 +166,9 @@ const addFilmMarkers = () => {
 
       // Note: Leaflet uses [lat, lng], but our data is [lng, lat]
       const marker = L.marker([location.coordinates[1], location.coordinates[0]], { icon })
-        .addTo(map.value)
         .on('click', () => selectFilm(film, location))
       
-      markers.push(marker)
+      markerLayerGroup.addLayer(marker)
     })
   })
 }
