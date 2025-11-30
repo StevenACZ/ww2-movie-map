@@ -1,8 +1,8 @@
 <template>
   <div class="timeline-container">
     <div class="timeline-header">
-      <h3>{{ $t('timeline.title') }}</h3>
-      <button @click="reset" class="reset-btn">{{ $t('timeline.reset') }}</button>
+      <h3>TIMELINE</h3>
+      <button @click="reset" class="reset-btn">Reset</button>
     </div>
     
     <div class="year-display">

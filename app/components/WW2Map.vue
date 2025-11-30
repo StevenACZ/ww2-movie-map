@@ -3,7 +3,6 @@
     <div id="map" class="map z-0"></div>
     
     <!-- UI Components -->
-    <SettingsMenu />
     <Timeline />
     
     <SelectedFilm 
@@ -26,7 +25,6 @@ import type { Film, Location } from '../../types'
 import FilmModal from './FilmModal.vue'
 import SelectedFilm from './SelectedFilm.vue'
 import Timeline from './Timeline.vue'
-import SettingsMenu from './SettingsMenu.vue'
 import { useTimeline } from '../composables/useTimeline'
 
 // Get filtered films from timeline
