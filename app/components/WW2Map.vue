@@ -2,6 +2,10 @@
   <div class="map-container relative">
     <div id="map" class="map z-0"></div>
     
+    <button class="reset-view-btn" @click="resetView" aria-label="Reset View">
+      🌍
+    </button>
+
     <!-- UI Components -->
     <Timeline />
     
@@ -48,6 +52,7 @@ let animationFrameId: number | null = null
 
 // Map configuration
 const MAP_CENTER: [number, number] = [50, 15] // Europe center
+const ASIA_CENTER: [number, number] = [25, 120] // Asia center
 const MAP_ZOOM = 4
 const PAN_SPEED = 10 
 
@@ -77,7 +82,7 @@ onMounted(async () => {
     maxZoom: 20
   }).addTo(map.value)
 
-  L.control.zoom({ position: 'topright' }).addTo(map.value)
+  L.control.zoom({ position: 'bottomright' }).addTo(map.value)
 
   // Add Film Markers
   addFilmMarkers()
@@ -198,6 +203,18 @@ const selectFilm = (film: Film, location: Location) => {
   })
 }
 
+const resetView = () => {
+  if (!map.value) return
+  
+  const center = map.value.getCenter()
+  // Rough longitude check: > 60 is Asia, else Europe
+  if (center.lng > 60) {
+    map.value.flyTo(ASIA_CENTER, MAP_ZOOM, { duration: 1.5 })
+  } else {
+    map.value.flyTo(MAP_CENTER, MAP_ZOOM, { duration: 1.5 })
+  }
+}
+
 const openModal = () => {
   isModalOpen.value = true
 }
@@ -248,6 +265,29 @@ const animateMap = () => {
   width: 100%;
   height: 100%;
   outline: none;
+}
+
+/* Reset View Button */
+.reset-view-btn {
+  position: absolute;
+  bottom: 95px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: 2px solid rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+  transition: background-color 0.2s;
+}
+
+.reset-view-btn:hover {
+  background-color: #f4f4f4;
 }
 
 /* Marker Styles */

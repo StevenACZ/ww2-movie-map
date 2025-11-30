@@ -12,6 +12,12 @@
     </div>
     
     <div class="slider-container">
+      <div class="slider-track">
+        <div 
+          class="slider-range" 
+          :style="rangeStyle"
+        ></div>
+      </div>
       <input
         v-model.number="localStartYear"
         type="range"
@@ -28,12 +34,6 @@
         class="slider slider-end"
         @input="updateRange"
       />
-      <div class="slider-track">
-        <div 
-          class="slider-range" 
-          :style="rangeStyle"
-        ></div>
-      </div>
     </div>
     
     <div class="year-markers">

@@ -2,6 +2,7 @@
   <div>
     <NuxtRouteAnnouncer />
     <WW2Map />
+    <ProjectInfo />
     <WelcomeModal 
       v-if="showWelcome" 
       @close="handleWelcomeClose" 
@@ -12,6 +13,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import WelcomeModal from '~/components/WelcomeModal.vue'
+import ProjectInfo from '~/components/ProjectInfo.vue'
 
 const showWelcome = ref(false)
 
