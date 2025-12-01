@@ -138,19 +138,24 @@ const close = () => {
 };
 </script>
 
-<style scoped>
-/* Custom scrollbar for the modal content */
-::-webkit-scrollbar {
-  width: 8px;
+<style lang="scss" scoped>
+@use '@/assets/scss/variables' as *;
+@use '@/assets/scss/mixins' as *;
+
+/* Custom scrollbar for the modal content using global mixin */
+* {
+  @include custom-scrollbar;
 }
+
+// Override scrollbar colors for dark theme modal
 ::-webkit-scrollbar-track {
   background: #1c1917;
 }
 ::-webkit-scrollbar-thumb {
   background: #44403c;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #57534e;
+
+  &:hover {
+    background: #57534e;
+  }
 }
 </style>

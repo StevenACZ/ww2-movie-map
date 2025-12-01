@@ -1,0 +1,191 @@
+// =====================================================
+// MIXINS - WW2 Movie Map
+// =====================================================
+
+@use './variables' as *;
+
+// MIXIN: Slider Thumb
+// ----------------------------------------------------
+// Estilos reutilizables para los controles del slider
+@mixin slider-thumb {
+  width: 22px;
+  height: 22px;
+  background: $gold;
+  border: 2px solid $gold-dark;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all $transition-normal;
+  box-shadow: $shadow-sm;
+
+  &:hover {
+    background: $gold-light;
+    transform: scale(1.1);
+    box-shadow: $shadow-glow;
+  }
+}
+
+// MIXIN: Button Styles
+// ----------------------------------------------------
+// Estilos base para botones del proyecto
+@mixin button-base {
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-sm;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all $transition-normal;
+  border: none;
+  outline: none;
+
+  &:focus {
+    outline: 2px solid $gold;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background: $gradient-gold;
+  color: $bg-dark;
+  box-shadow: $shadow-sm;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background: transparent;
+  color: $gold;
+  border: $border-width solid $gold;
+
+  &:hover:not(:disabled) {
+    background: rgba($gold, 0.1);
+    border-color: $gold-light;
+  }
+}
+
+// MIXIN: Card Styles
+// ----------------------------------------------------
+@mixin card {
+  background: $bg-card;
+  border: $border-width solid $gold;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-lg;
+  backdrop-filter: blur(10px);
+}
+
+// MIXIN: Scrollbar Personalizado
+// ----------------------------------------------------
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $gold;
+    border-radius: 4px;
+    transition: background $transition-normal;
+
+    &:hover {
+      background: $gold-light;
+    }
+  }
+}
+
+// MIXIN: Overlay de Modal
+// ----------------------------------------------------
+@mixin modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: $bg-overlay;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: $z-modal-backdrop;
+  backdrop-filter: blur(8px);
+}
+
+// MIXIN: Fade In Animation
+// ----------------------------------------------------
+@mixin fade-in($duration: $transition-normal) {
+  animation: fadeIn $duration ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// MIXIN: Slide Up Animation
+// ----------------------------------------------------
+@mixin slide-up($duration: $transition-normal) {
+  animation: slideUp $duration ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// MIXIN: Glow Effect
+// ----------------------------------------------------
+@mixin glow($color: $gold) {
+  box-shadow: 0 0 10px rgba($color, 0.5),
+              0 0 20px rgba($color, 0.3),
+              0 0 30px rgba($color, 0.1);
+}
+
+// MIXIN: Truncate Text
+// ----------------------------------------------------
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// MIXIN: Responsive Breakpoints
+// ----------------------------------------------------
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}

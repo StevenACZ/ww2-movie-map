@@ -252,14 +252,19 @@ const animateMap = () => {
 };
 </script>
 
-<style>
-.map-container {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  --marker-scale: 1;
+<style lang="scss">
+@use '@/assets/scss/variables' as *;
+@use '@/assets/scss/mixins' as *;
+
+.map {
+  &-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    --marker-scale: 1;
+  }
 }
 
 .map {
@@ -275,51 +280,51 @@ const animateMap = () => {
   left: 11px;
   width: 34px;
   height: 34px;
-  background: rgba(30, 30, 35, 0.95);
-  border: 2px solid rgba(139, 69, 19, 0.6);
+  background: $bg-dark;
+  border: $border-width solid rgba($brown, 0.6);
   cursor: pointer;
-  z-index: 1000;
+  z-index: $z-modal;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  transition: all 0.2s ease;
+  box-shadow: $shadow-sm;
+  transition: all $transition-fast;
   border-radius: 4px;
-}
 
-.reset-view-btn:hover {
-  background: rgba(139, 69, 19, 0.6);
-  border-color: #d4af37;
+  &:hover {
+    background: rgba($brown, 0.6);
+    border-color: $gold;
+  }
 }
 
 /* Leaflet Zoom Controls Custom Styles */
 .leaflet-control-zoom {
-  border: 2px solid rgba(139, 69, 19, 0.6) !important;
+  border: $border-width solid rgba($brown, 0.6) !important;
   border-radius: 4px !important;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: $shadow-sm !important;
   margin-top: 70px !important;
-}
 
-.leaflet-control-zoom a {
-  background-color: rgba(30, 30, 35, 0.95) !important;
-  color: #d4af37 !important;
-  border-bottom: 1px solid rgba(139, 69, 19, 0.4) !important;
-  font-weight: bold;
-  transition: all 0.2s ease !important;
-  width: 30px !important;
-  height: 30px !important;
-  line-height: 30px !important;
-}
+  a {
+    background-color: $bg-dark !important;
+    color: $gold !important;
+    border-bottom: 1px solid rgba($brown, 0.4) !important;
+    font-weight: bold;
+    transition: all $transition-fast !important;
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
 
-.leaflet-control-zoom a:hover {
-  background-color: rgba(139, 69, 19, 0.6) !important;
-  color: #f4cf5f !important;
-}
+    &:hover {
+      background-color: rgba($brown, 0.6) !important;
+      color: $gold-light !important;
+    }
 
-.leaflet-control-zoom a:last-child {
-  border-bottom: none !important;
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
 }
 
 /* Marker Styles */
@@ -335,17 +340,17 @@ const animateMap = () => {
   background-position: center;
   border-radius: 4px;
   border: 2px solid #fff;
-  transition: transform 0.1s linear, box-shadow 0.2s;
+  transition: transform 0.1s linear, box-shadow $transition-fast;
   cursor: pointer;
   transform: scale(var(--marker-scale));
   transform-origin: bottom center;
-}
 
-.film-marker-content:hover {
-  transform: scale(calc(var(--marker-scale) * 1.2));
-  box-shadow: 0 0 20px rgba(220, 38, 38, 0.9) !important;
-  border-color: #ef4444;
-  z-index: 1000;
+  &:hover {
+    transform: scale(calc(var(--marker-scale) * 1.2));
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.9) !important;
+    border-color: #ef4444;
+    z-index: $z-modal;
+  }
 }
 
 /* Combat Zone Animation */
@@ -356,14 +361,12 @@ const animateMap = () => {
 }
 
 @keyframes pulse-red {
-  0% {
+  0%,
+  100% {
     opacity: 0.2;
   }
   50% {
     opacity: 0.4;
-  }
-  100% {
-    opacity: 0.2;
   }
 }
 </style>

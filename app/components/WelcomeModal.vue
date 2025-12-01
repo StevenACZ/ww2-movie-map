@@ -71,51 +71,53 @@ const handleStart = () => {
 };
 </script>
 
-<style scoped>
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-  backdrop-filter: blur(5px);
-}
+<style lang="scss" scoped>
+@use '@/assets/scss/variables' as *;
+@use '@/assets/scss/mixins' as *;
 
-.modal-content {
-  background: rgba(30, 30, 35, 0.95);
-  border: 2px solid #8b4513;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 600px;
-  padding: 0;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-  font-family: "Courier New", monospace;
-  color: #e0e0e0;
-  animation: fadeIn 0.3s ease-out;
-}
+.modal {
+  &-overlay {
+    @include modal-overlay;
+    z-index: 2000; // Mayor que timeline
+  }
 
-.modal-header {
-  background: rgba(139, 69, 19, 0.2);
-  padding: 20px;
-  border-bottom: 1px solid #8b4513;
-  text-align: center;
-}
+  &-content {
+    background: $bg-dark;
+    border: $border-width solid $brown;
+    border-radius: $border-radius-sm;
+    width: 90%;
+    max-width: 600px;
+    padding: 0;
+    box-shadow: $shadow-lg;
+    font-family: "Courier New", monospace;
+    color: $text-secondary;
+    @include fade-in;
+  }
 
-.modal-header h2 {
-  margin: 0;
-  color: #d4af37;
-  font-size: 24px;
-  letter-spacing: 2px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
+  &-header {
+    background: rgba($brown, 0.2);
+    padding: $spacing-lg;
+    border-bottom: 1px solid $brown;
+    text-align: center;
 
-.modal-body {
-  padding: 30px;
+    h2 {
+      margin: 0;
+      color: $gold;
+      font-size: 24px;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &-body {
+    padding: 30px;
+  }
+
+  &-footer {
+    padding: $spacing-lg;
+    text-align: center;
+    border-top: 1px solid rgba($brown, 0.3);
+  }
 }
 
 .intro-text {
@@ -128,32 +130,32 @@ const handleStart = () => {
 
 .instructions {
   background: rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  padding: $spacing-lg;
   border-radius: 4px;
-  border: 1px solid rgba(139, 69, 19, 0.3);
+  border: 1px solid rgba($brown, 0.3);
   margin-bottom: 30px;
-}
 
-.instructions h3 {
-  color: #d4af37;
-  font-size: 14px;
-  margin-top: 0;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+  h3 {
+    color: $gold;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: $spacing-md;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 
-.instructions ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-.instructions li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  li {
+    margin-bottom: $spacing-sm;
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
 }
 
 .key {
@@ -163,7 +165,7 @@ const handleStart = () => {
   padding: 2px 6px;
   font-size: 12px;
   font-weight: bold;
-  color: #fff;
+  color: $text-primary;
   box-shadow: 0 2px 0 #111;
 }
 
@@ -171,27 +173,54 @@ const handleStart = () => {
   font-size: 15px;
 }
 
-.checkbox-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
+.checkbox {
+  &-container {
+    display: flex;
+    justify-content: center;
+    margin-top: $spacing-lg;
+  }
 
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  color: #aaa;
-  font-size: 14px;
-}
+  &-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    color: #aaa;
+    font-size: 14px;
 
-.checkbox-label input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked ~ .checkmark {
+        background-color: $gold;
+        border-color: $gold;
+
+        &:after {
+          display: block;
+        }
+      }
+    }
+
+    &:hover input ~ .checkmark {
+      background-color: #444;
+    }
+
+    .checkmark {
+      &:after {
+        left: 5px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+        border: solid #1a1a1a;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
 
 .checkmark {
@@ -199,79 +228,39 @@ const handleStart = () => {
   width: 18px;
   background-color: #333;
   border: 1px solid #666;
-  margin-right: 10px;
+  margin-right: $spacing-sm;
   position: relative;
-  transition: all 0.2s;
-}
+  transition: all $transition-fast;
 
-.checkbox-label:hover input ~ .checkmark {
-  background-color: #444;
-}
-
-.checkbox-label input:checked ~ .checkmark {
-  background-color: #d4af37;
-  border-color: #d4af37;
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.checkbox-label input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.checkbox-label .checkmark:after {
-  left: 5px;
-  top: 1px;
-  width: 5px;
-  height: 10px;
-  border: solid #1a1a1a;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-.modal-footer {
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid rgba(139, 69, 19, 0.3);
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
 }
 
 .start-btn {
-  background: linear-gradient(to bottom, #d4af37, #b4941f);
+  background: linear-gradient(to bottom, $gold, $gold-dark);
   color: #1a1a1a;
   border: none;
-  padding: 12px 40px;
+  padding: $spacing-md $spacing-xl;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
   font-family: "Courier New", monospace;
   letter-spacing: 1px;
-  transition: all 0.2s;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
+  transition: all $transition-fast;
+  box-shadow: $shadow-md;
 
-.start-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
-  background: linear-gradient(to bottom, #e5c14d, #c4a32a);
-}
-
-.start-btn:active {
-  transform: translateY(0);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba($gold, 0.4);
+    background: linear-gradient(to bottom, $gold-light, #c4a32a);
   }
-  to {
-    opacity: 1;
-    transform: scale(1);
+
+  &:active {
+    transform: translateY(0);
   }
 }
 </style>

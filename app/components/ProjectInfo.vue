@@ -62,12 +62,15 @@ const closeInfo = () => {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '@/assets/scss/variables' as *;
+@use '@/assets/scss/mixins' as *;
+
 .project-info-container {
   position: absolute;
-  top: 20px;
+  top: $spacing-lg;
   left: 11px;
-  z-index: 1000;
+  z-index: $z-modal;
   font-family: "Courier New", monospace;
 }
 
@@ -75,50 +78,59 @@ const closeInfo = () => {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: rgba(30, 30, 35, 0.9);
-  border: 2px solid #8b4513;
-  color: #d4af37;
+  background: rgba($bg-dark, 0.9);
+  border: $border-width solid $brown;
+  color: $gold;
   font-size: 20px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: all $transition-normal;
+  box-shadow: $shadow-sm;
+
+  &:hover {
+    background: rgba($brown, 0.8);
+    border-color: $gold;
+  }
 }
 
-.info-btn:hover {
-  background: rgba(139, 69, 19, 0.8);
-  border-color: #d4af37;
+.info {
+  &-panel {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 300px;
+    background: $bg-dark;
+    border: $border-width solid $brown;
+    border-radius: $border-radius-sm;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+  }
 }
 
-.info-panel {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 300px;
-  background: rgba(30, 30, 35, 0.95);
-  border: 2px solid #8b4513;
-  border-radius: 8px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-  overflow: hidden;
-}
+.panel {
+  &-header {
+    background: rgba($brown, 0.2);
+    padding: $spacing-md $spacing-md;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba($brown, 0.4);
 
-.panel-header {
-  background: rgba(139, 69, 19, 0.2);
-  padding: 12px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(139, 69, 19, 0.4);
-}
+    h3 {
+      margin: 0;
+      color: $gold;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  }
 
-.panel-header h3 {
-  margin: 0;
-  color: #d4af37;
-  font-size: 14px;
-  letter-spacing: 1px;
+  &-content {
+    padding: $spacing-md;
+    color: #ccc;
+  }
 }
 
 .close-btn {
@@ -129,46 +141,43 @@ const closeInfo = () => {
   cursor: pointer;
   padding: 0;
   line-height: 1;
-}
 
-.close-btn:hover {
-  color: #fff;
-}
-
-.panel-content {
-  padding: 16px;
-  color: #ccc;
+  &:hover {
+    color: $text-primary;
+  }
 }
 
 .description {
   font-size: 13px;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: $spacing-lg;
   color: #bbb;
 }
 
 .links {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-lg;
 }
 
-.link-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #d4af37;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 8px;
-  border-radius: 4px;
-  background: rgba(0, 0, 0, 0.2);
-  transition: background 0.2s;
-}
+.link {
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    color: $gold;
+    text-decoration: none;
+    font-size: 14px;
+    padding: $spacing-sm;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: background $transition-fast;
 
-.link-item:hover {
-  background: rgba(139, 69, 19, 0.3);
+    &:hover {
+      background: rgba($brown, 0.3);
+    }
+  }
 }
 
 .credits {
@@ -176,26 +185,28 @@ const closeInfo = () => {
   font-size: 11px;
   color: #666;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 12px;
-}
+  padding-top: $spacing-md;
 
-.credits p {
-  margin: 2px 0;
-}
-
-/* Transitions */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s, transform 0.2s;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
+  p {
+    margin: 2px 0;
+  }
 }
 
 .icon {
   font-size: 14px;
+}
+
+// Transitions
+.fade {
+  &-enter-active,
+  &-leave-active {
+    transition: opacity $transition-fast, transform $transition-fast;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 </style>
