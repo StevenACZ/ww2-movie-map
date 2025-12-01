@@ -167,6 +167,141 @@
           "isPrimary": true
         }
       ]
+    },
+    {
+      "id": "t-34-2019",
+      "title": {
+        "en": "T-34",
+        "es": "T-34"
+      },
+      "year": 2019,
+      "eventYears": {
+        "start": 1941,
+        "end": 1944
+      },
+      "imdbRating": 6.7,
+      "country": "Russia",
+      "poster": "https://timespacewarps.files.wordpress.com/2019/02/t-34-movie-poster.jpg",
+      "synopsis": {
+        "en": "A group of Russian soldiers escape from German captivity in a half-destroyed T-34 tank.",
+        "es": "Un grupo de soldados rusos escapa del cautiverio alemán en un tanque T-34 medio destruido."
+      },
+      "locations": [
+        {
+          "name": "Thuringia",
+          "coordinates": [11.0, 50.9],
+          "type": "region",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "the-eight-hundred-2020",
+      "title": {
+        "en": "The Eight Hundred",
+        "es": "Los 800"
+      },
+      "year": 2020,
+      "eventYears": {
+        "start": 1937,
+        "end": 1937
+      },
+      "imdbRating": 6.8,
+      "country": "China",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/2/29/The_Eight_Hundred_film_poster.jpg",
+      "synopsis": {
+        "en": "Chinese soldiers defend the Sihang Warehouse in Shanghai against the invading Japanese army.",
+        "es": "Soldados chinos defienden el Almacén Sihang en Shanghái contra el ejército japonés invasor."
+      },
+      "locations": [
+        {
+          "name": "Shanghai",
+          "coordinates": [121.4737, 31.2304],
+          "type": "city",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "letters-from-iwo-jima-2006",
+      "title": {
+        "en": "Letters from Iwo Jima",
+        "es": "Cartas desde Iwo Jima"
+      },
+      "year": 2006,
+      "eventYears": {
+        "start": 1945,
+        "end": 1945
+      },
+      "imdbRating": 7.9,
+      "country": "USA",
+      "poster": "https://image.tmdb.org/t/p/w500/x0K9lQx0sH3dJb7mYyBq1u2S8Q.jpg",
+      "synopsis": {
+        "en": "The story of the battle of Iwo Jima between the United States and Imperial Japan during World War II, as told from the perspective of the Japanese who fought it.",
+        "es": "La historia de la batalla de Iwo Jima entre los Estados Unidos y el Japón Imperial durante la Segunda Guerra Mundial, contada desde la perspectiva de los japoneses que lucharon en ella."
+      },
+      "locations": [
+        {
+          "name": "Iwo Jima",
+          "coordinates": [141.3283, 24.7833],
+          "type": "region",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "pearl-harbor-2001",
+      "title": {
+        "en": "Pearl Harbor",
+        "es": "Pearl Harbor"
+      },
+      "year": 2001,
+      "eventYears": {
+        "start": 1941,
+        "end": 1941
+      },
+      "imdbRating": 6.2,
+      "country": "USA",
+      "poster": "https://image.tmdb.org/t/p/w500/z3GfWn6q08j2hTf9L4Xw1g5Z8A.jpg",
+      "synopsis": {
+        "en": "A tale of war and romance mixed in with the history of the Japanese attack on Pearl Harbor.",
+        "es": "Una historia de guerra y romance mezclada con la historia del ataque japonés a Pearl Harbor."
+      },
+      "locations": [
+        {
+          "name": "Pearl Harbor",
+          "coordinates": [-157.9485, 21.3642],
+          "type": "city",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "midway-2019",
+      "title": {
+        "en": "Midway",
+        "es": "Midway"
+      },
+      "year": 2019,
+      "eventYears": {
+        "start": 1942,
+        "end": 1942
+      },
+      "imdbRating": 6.7,
+      "country": "USA",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/e/e4/Midway_Poster.jpg",
+      "synopsis": {
+        "en": "The story of the Battle of Midway, told by the leaders and the sailors who fought it.",
+        "es": "La historia de la Batalla de Midway, contada por los líderes y los marineros que lucharon en ella."
+      },
+      "locations": [
+        {
+          "name": "Midway Atoll",
+          "coordinates": [-177.3761, 28.2072],
+          "type": "region",
+          "isPrimary": true
+        }
+      ]
     }
   ]
 }

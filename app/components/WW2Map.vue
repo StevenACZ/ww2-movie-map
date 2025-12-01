@@ -189,12 +189,12 @@ const selectFilm = (film: Film, location: Location) => {
   const radiusMap = { city: 5000, region: 30000, country: 200000 };
   const radius = radiusMap[location.type] || 5000;
 
-  highlightLayer.value = L.circle(
+    highlightLayer.value = L.circle(
     [location.coordinates[1], location.coordinates[0]],
     {
-      color: "#ef4444",
-      fillColor: "#ef4444",
-      fillOpacity: 0.2,
+      color: "#dc2626",
+      fillColor: "#dc2626",
+      fillOpacity: 0.4,
       weight: 1,
       className: "combat-zone-pulse",
       radius,
@@ -347,8 +347,8 @@ const animateMap = () => {
 
   &:hover {
     transform: scale(calc(var(--marker-scale) * 1.2));
-    box-shadow: 0 0 20px rgba(220, 38, 38, 0.9) !important;
-    border-color: #ef4444;
+    box-shadow: 0 0 20px rgba($gold, 0.9) !important;
+    border-color: $gold;
     z-index: $z-modal;
   }
 }
@@ -363,10 +363,10 @@ const animateMap = () => {
 @keyframes pulse-red {
   0%,
   100% {
-    opacity: 0.2;
+    opacity: 0.3;
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.6;
   }
 }
 </style>
