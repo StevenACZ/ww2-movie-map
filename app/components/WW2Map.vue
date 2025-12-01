@@ -34,13 +34,16 @@ import { useTimeline } from '../composables/useTimeline'
 // Get filtered films from timeline
 const { filteredFilms } = useTimeline()
 
+// Import all films data for creating all markers
+import filmsData from '../../data/films.json'
+
 // Map instance
 const map = ref<any>(null)
 
 // State
 const selectedFilm = ref<Film | null>(null)
 const isModalOpen = ref(false)
-let markerLayerGroup: any = null
+const allFilmMarkers = new Map() // Map<filmId, marker> - created once, never removed
 const highlightLayer = ref<any>(null)
 
 // Leaflet module (loaded dynamically for SSR)
@@ -84,11 +87,8 @@ onMounted(async () => {
 
   L.control.zoom({ position: 'bottomright' }).addTo(map.value)
 
-  // Initialize Marker Layer Group
-  markerLayerGroup = L.layerGroup().addTo(map.value)
-
-  // Add Film Markers
-  addFilmMarkers()
+  // Create ALL film markers ONCE (simple, like Leaflet tutorial)
+  createAllMarkers()
 
   // Event listeners
   window.addEventListener('keydown', handleKeyDown)
@@ -113,19 +113,19 @@ onUnmounted(() => {
   }
 })
 
-// Watch for changes in filtered films and update markers
+// Watch for changes in filtered films - just show/hide markers
 watch(filteredFilms, () => {
-  updateMarkers()
+  console.log('🎬 Timeline changed - showing/hiding markers')
+  updateMarkerVisibility()
 })
 
 const handleZoomUpdates = () => {
   if (!map.value) return
   const zoom = map.value.getZoom()
 
-  console.log('🔍 Zoom level:', zoom)
+  console.log('🔍 Zoom level:', zoom, '| Total markers:', allFilmMarkers.size)
 
   // 1. Marker Scaling
-  // Base scale 1 at zoom 4, increasing by 0.15 per zoom level
   const scale = 1 + (zoom - 4) * 0.15
   const mapContainer = document.querySelector('.map-container') as HTMLElement
   if (mapContainer) {
@@ -133,7 +133,6 @@ const handleZoomUpdates = () => {
   }
 
   // 2. Highlight Layer Visibility
-  // Hide the combat zone circle when zooming out to country view (zoom < 7)
   if (highlightLayer.value) {
     if (zoom < 7) {
       highlightLayer.value.setStyle({ opacity: 0, fillOpacity: 0 })
@@ -143,20 +142,15 @@ const handleZoomUpdates = () => {
   }
 }
 
-const updateMarkers = () => {
-  if (!map.value || !markerLayerGroup) return
+// SIMPLE: Create ALL markers ONCE (like Leaflet tutorial)
+const createAllMarkers = () => {
+  if (!map.value || !L) return
 
-  // Simply clear existing markers and re-add them
-  markerLayerGroup.clearLayers()
-  addFilmMarkers()
-}
+  console.log('📍 Creating ALL film markers once...')
 
-const addFilmMarkers = () => {
-  if (!markerLayerGroup) return;
-
-  (filteredFilms.value as Film[]).forEach((film) => {
+  filmsData.films.forEach((film: Film) => {
     film.locations.forEach((location) => {
-      if (!location.isPrimary) return // Only show primary locations for now to avoid clutter
+      if (!location.isPrimary) return
 
       // Create custom icon
       const icon = L.divIcon({
@@ -167,12 +161,38 @@ const addFilmMarkers = () => {
         popupAnchor: [0, -60]
       })
 
-      // Note: Leaflet uses [lat, lng], but our data is [lng, lat]
-      const marker = L.marker([location.coordinates[1], location.coordinates[0]], { icon })
+      // Create marker (simple, like tutorial)
+      const coords = [location.coordinates[1], location.coordinates[0]]
+      const marker = L.marker(coords, { icon })
         .on('click', () => selectFilm(film, location))
-      
-      markerLayerGroup.addLayer(marker)
+        .addTo(map.value)
+
+      // Store for show/hide
+      allFilmMarkers.set(film.id, marker)
+
+      console.log(`  ✅ Created marker for ${film.title.en}`)
     })
+  })
+
+  console.log(`✅ Total markers created: ${allFilmMarkers.size}`)
+
+  // Initial visibility based on timeline
+  updateMarkerVisibility()
+}
+
+// SIMPLE: Just show/hide existing markers (no removing!)
+const updateMarkerVisibility = () => {
+  console.log('👁️ Updating marker visibility for', filteredFilms.value.length, 'films')
+
+  const filteredIds = new Set(filteredFilms.value.map(f => f.id))
+
+  allFilmMarkers.forEach((marker, filmId) => {
+    const shouldShow = filteredIds.has(filmId)
+    const markerElement = marker.getElement()
+
+    if (markerElement) {
+      markerElement.style.display = shouldShow ? '' : 'none'
+    }
   })
 }
 
