@@ -4,29 +4,38 @@
       <div class="modal-header">
         <h2>WELCOME TO WW2 MOVIE MAP</h2>
       </div>
-      
+
       <div class="modal-body">
         <p class="intro-text">
-          Explore the history of World War II through the lens of cinema. 
-          Discover film locations, historical context, and the stories that shaped the world.
+          Explore the history of World War II through the lens of cinema.
+          Discover film locations, historical context, and the stories that
+          shaped the world.
         </p>
-        
+
         <div class="instructions">
           <h3>HOW TO NAVIGATE</h3>
           <ul>
-            <li><span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span> to move the map</li>
-            <li><span class="icon">🖱️</span> Click markers to view film details</li>
-            <li><span class="icon">⏱️</span> Use the timeline to filter by year</li>
+            <li>
+              <span class="key">W</span><span class="key">A</span
+              ><span class="key">S</span><span class="key">D</span> to move the
+              map
+            </li>
+            <li>
+              <span class="icon">🖱️</span> Click markers to view film details
+            </li>
+            <li>
+              <span class="icon">⏱️</span> Use the timeline to filter by year
+            </li>
           </ul>
         </div>
 
         <div class="checkbox-container">
           <label class="checkbox-label">
-            <input 
-              type="checkbox" 
+            <input
+              type="checkbox"
               v-model="dontShowAgain"
               @change="handleCheckboxChange"
-            >
+            />
             <span class="checkmark"></span>
             Don't show this again
           </label>
@@ -34,34 +43,32 @@
       </div>
 
       <div class="modal-footer">
-        <button class="start-btn" @click="handleStart">
-          START EXPLORING
-        </button>
+        <button class="start-btn" @click="handleStart">START EXPLORING</button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const emit = defineEmits(['close'])
+const emit = defineEmits(["close"]);
 
-const dontShowAgain = ref(false)
+const dontShowAgain = ref(false);
 
 const handleCheckboxChange = () => {
-  // Logic handled in parent or here? 
+  // Logic handled in parent or here?
   // Plan said: "If 'Don't show again' is selected, set localStorage.setItem('welcome_seen', 'true')"
-  // It's cleaner to pass the preference to the parent or handle it here. 
+  // It's cleaner to pass the preference to the parent or handle it here.
   // Let's pass the preference when closing or handle it in the parent based on a prop/event?
   // Actually, the plan said "Handle close event: If 'Don't show again' is selected...".
   // So I will just emit close with the value, or let the parent read the state if I bound it?
   // Simpler: Just emit 'close' with the payload of the checkbox state.
-}
+};
 
 const handleStart = () => {
-  emit('close', dontShowAgain.value)
-}
+  emit("close", dontShowAgain.value);
+};
 </script>
 
 <style scoped>
@@ -87,7 +94,7 @@ const handleStart = () => {
   max-width: 600px;
   padding: 0;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   color: #e0e0e0;
   animation: fadeIn 0.3s ease-out;
 }
@@ -241,7 +248,7 @@ const handleStart = () => {
   font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   letter-spacing: 1px;
   transition: all 0.2s;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -258,7 +265,13 @@ const handleStart = () => {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 </style>

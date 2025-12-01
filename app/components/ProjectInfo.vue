@@ -1,6 +1,10 @@
 <template>
   <div class="project-info-container">
-    <button class="info-btn" @click="toggleInfo" aria-label="Project Information">
+    <button
+      class="info-btn"
+      @click="toggleInfo"
+      aria-label="Project Information"
+    >
       <span class="icon">ℹ️</span>
     </button>
 
@@ -10,14 +14,20 @@
           <h3>PROJECT INFO</h3>
           <button class="close-btn" @click="closeInfo">×</button>
         </div>
-        
+
         <div class="panel-content">
           <p class="description">
-            An interactive map visualization of World War II films, exploring cinema through geography and history.
+            An interactive map visualization of World War II films, exploring
+            cinema through geography and history.
           </p>
-          
+
           <div class="links">
-            <a href="https://github.com/yourusername/ww2-movie-map" target="_blank" rel="noopener noreferrer" class="link-item">
+            <a
+              href="https://github.com/yourusername/ww2-movie-map"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link-item"
+            >
               <span class="link-icon">📂</span> GitHub Repository
             </a>
             <a href="#" class="link-item">
@@ -39,17 +49,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const isOpen = ref(false)
+const isOpen = ref(false);
 
 const toggleInfo = () => {
-  isOpen.value = !isOpen.value
-}
+  isOpen.value = !isOpen.value;
+};
 
 const closeInfo = () => {
-  isOpen.value = false
-}
+  isOpen.value = false;
+};
 </script>
 
 <style scoped>
@@ -58,7 +68,7 @@ const closeInfo = () => {
   top: 20px;
   left: 20px;
   z-index: 1000;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .info-btn {

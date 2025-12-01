@@ -4,19 +4,16 @@
       <h3>TIMELINE</h3>
       <button @click="reset" class="reset-btn">Reset</button>
     </div>
-    
+
     <div class="year-display">
       <span class="year-label">{{ startYear }}</span>
       <span class="separator">-</span>
       <span class="year-label">{{ endYear }}</span>
     </div>
-    
+
     <div class="slider-container">
       <div class="slider-track">
-        <div 
-          class="slider-range" 
-          :style="rangeStyle"
-        ></div>
+        <div class="slider-range" :style="rangeStyle"></div>
       </div>
       <input
         v-model.number="localStartYear"
@@ -35,7 +32,7 @@
         @input="updateRange"
       />
     </div>
-    
+
     <div class="year-markers">
       <span v-for="year in yearMarkers" :key="year" class="year-marker">
         {{ year }}
@@ -45,44 +42,44 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
-import { useTimeline } from '~/composables/useTimeline'
+import { ref, computed, watch } from "vue";
+import { useTimeline } from "~/composables/useTimeline";
 
-const { startYear, endYear, setYearRange, resetYearRange } = useTimeline()
+const { startYear, endYear, setYearRange, resetYearRange } = useTimeline();
 
-const localStartYear = ref(startYear.value)
-const localEndYear = ref(endYear.value)
+const localStartYear = ref(startYear.value);
+const localEndYear = ref(endYear.value);
 
-const yearMarkers = [1936, 1938, 1940, 1942, 1944, 1945]
+const yearMarkers = [1936, 1938, 1940, 1942, 1944, 1945];
 
 const rangeStyle = computed(() => {
-  const min = 1936
-  const max = 1945
-  const range = max - min
-  const leftPercent = ((localStartYear.value - min) / range) * 100
-  const rightPercent = ((max - localEndYear.value) / range) * 100
-  
+  const min = 1936;
+  const max = 1945;
+  const range = max - min;
+  const leftPercent = ((localStartYear.value - min) / range) * 100;
+  const rightPercent = ((max - localEndYear.value) / range) * 100;
+
   return {
     left: `${leftPercent}%`,
-    right: `${rightPercent}%`
-  }
-})
+    right: `${rightPercent}%`,
+  };
+});
 
 const updateRange = () => {
-  setYearRange(localStartYear.value, localEndYear.value)
-}
+  setYearRange(localStartYear.value, localEndYear.value);
+};
 
 const reset = () => {
-  resetYearRange()
-  localStartYear.value = 1936
-  localEndYear.value = 1945
-}
+  resetYearRange();
+  localStartYear.value = 1936;
+  localEndYear.value = 1945;
+};
 
 // Sync with composable state
 watch([startYear, endYear], () => {
-  localStartYear.value = startYear.value
-  localEndYear.value = endYear.value
-})
+  localStartYear.value = startYear.value;
+  localEndYear.value = endYear.value;
+});
 </script>
 
 <style scoped>
@@ -98,7 +95,7 @@ watch([startYear, endYear], () => {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .timeline-header {
@@ -248,6 +245,6 @@ watch([startYear, endYear], () => {
 }
 
 .year-marker {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 </style>

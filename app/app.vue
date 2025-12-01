@@ -3,33 +3,30 @@
     <NuxtRouteAnnouncer />
     <WW2Map />
     <ProjectInfo />
-    <WelcomeModal 
-      v-if="showWelcome" 
-      @close="handleWelcomeClose" 
-    />
+    <WelcomeModal v-if="showWelcome" @close="handleWelcomeClose" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import WelcomeModal from '~/components/WelcomeModal.vue'
-import ProjectInfo from '~/components/ProjectInfo.vue'
+import { ref, onMounted } from "vue";
+import WelcomeModal from "~/components/WelcomeModal.vue";
+import ProjectInfo from "~/components/ProjectInfo.vue";
 
-const showWelcome = ref(false)
+const showWelcome = ref(false);
 
 onMounted(() => {
-  const seen = localStorage.getItem('welcome_seen')
+  const seen = localStorage.getItem("welcome_seen");
   if (!seen) {
-    showWelcome.value = true
+    showWelcome.value = true;
   }
-})
+});
 
 const handleWelcomeClose = (dontShowAgain: boolean) => {
   if (dontShowAgain) {
-    localStorage.setItem('welcome_seen', 'true')
+    localStorage.setItem("welcome_seen", "true");
   }
-  showWelcome.value = false
-}
+  showWelcome.value = false;
+};
 </script>
 
 <style>
