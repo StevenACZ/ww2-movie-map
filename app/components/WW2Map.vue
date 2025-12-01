@@ -87,20 +87,16 @@ onMounted(async () => {
 
   L.control.zoom({ position: 'bottomright' }).addTo(map.value)
 
-  // Create ALL film markers ONCE (simple, like Leaflet tutorial)
+  // Create all film markers once
   createAllMarkers()
 
   // Event listeners
   window.addEventListener('keydown', handleKeyDown)
   window.addEventListener('keyup', handleKeyUp)
-  
-  // Zoom listener for dynamic marker scaling and highlight visibility
   map.value.on('zoom', handleZoomUpdates)
-  handleZoomUpdates() // Initial call
+  handleZoomUpdates()
 
   animateMap()
-
-  console.log('Map initialized with Films')
 })
 
 onUnmounted(() => {
@@ -113,9 +109,8 @@ onUnmounted(() => {
   }
 })
 
-// Watch for changes in filtered films - just show/hide markers
+// Watch for timeline changes and update marker visibility
 watch(filteredFilms, () => {
-  console.log('🎬 Timeline changed - showing/hiding markers')
   updateMarkerVisibility()
 })
 
@@ -123,16 +118,14 @@ const handleZoomUpdates = () => {
   if (!map.value) return
   const zoom = map.value.getZoom()
 
-  console.log('🔍 Zoom level:', zoom, '| Total markers:', allFilmMarkers.size)
-
-  // 1. Marker Scaling
+  // Marker scaling based on zoom level
   const scale = 1 + (zoom - 4) * 0.15
   const mapContainer = document.querySelector('.map-container') as HTMLElement
   if (mapContainer) {
     mapContainer.style.setProperty('--marker-scale', Math.max(1, scale).toString())
   }
 
-  // 2. Highlight Layer Visibility
+  // Hide highlight layer at low zoom levels
   if (highlightLayer.value) {
     if (zoom < 7) {
       highlightLayer.value.setStyle({ opacity: 0, fillOpacity: 0 })
@@ -142,17 +135,14 @@ const handleZoomUpdates = () => {
   }
 }
 
-// SIMPLE: Create ALL markers ONCE (like Leaflet tutorial)
+// Create all film markers once (never removed, only shown/hidden)
 const createAllMarkers = () => {
   if (!map.value || !L) return
-
-  console.log('📍 Creating ALL film markers once...')
 
   filmsData.films.forEach((film: Film) => {
     film.locations.forEach((location) => {
       if (!location.isPrimary) return
 
-      // Create custom icon
       const icon = L.divIcon({
         className: 'custom-film-marker',
         html: `<div class="film-marker-content" style="background-image: url('${film.poster}'); box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);"></div>`,
@@ -161,29 +151,20 @@ const createAllMarkers = () => {
         popupAnchor: [0, -60]
       })
 
-      // Create marker (simple, like tutorial)
       const coords = [location.coordinates[1], location.coordinates[0]]
       const marker = L.marker(coords, { icon })
         .on('click', () => selectFilm(film, location))
         .addTo(map.value)
 
-      // Store for show/hide
       allFilmMarkers.set(film.id, marker)
-
-      console.log(`  ✅ Created marker for ${film.title.en}`)
     })
   })
 
-  console.log(`✅ Total markers created: ${allFilmMarkers.size}`)
-
-  // Initial visibility based on timeline
   updateMarkerVisibility()
 }
 
-// SIMPLE: Just show/hide existing markers (no removing!)
+// Toggle marker visibility based on timeline filter
 const updateMarkerVisibility = () => {
-  console.log('👁️ Updating marker visibility for', filteredFilms.value.length, 'films')
-
   const filteredIds = new Set(filteredFilms.value.map(f => f.id))
 
   allFilmMarkers.forEach((marker, filmId) => {
@@ -198,28 +179,24 @@ const updateMarkerVisibility = () => {
 
 const selectFilm = (film: Film, location: Location) => {
   selectedFilm.value = film
-  
-  // Remove existing highlight
+
   if (highlightLayer.value) {
     map.value.removeLayer(highlightLayer.value)
   }
 
-  // Determine radius based on location type
-  let radius = 5000 // Default 5km for city
-  if (location.type === 'region') radius = 30000 // 30km
-  if (location.type === 'country') radius = 200000 // 200km
+  // Determine highlight radius based on location type
+  const radiusMap = { city: 5000, region: 30000, country: 200000 }
+  const radius = radiusMap[location.type] || 5000
 
-  // Create highlight circle (Combat Zone)
   highlightLayer.value = L.circle([location.coordinates[1], location.coordinates[0]], {
     color: '#ef4444',
     fillColor: '#ef4444',
     fillOpacity: 0.2,
     weight: 1,
     className: 'combat-zone-pulse',
-    radius: radius
+    radius
   }).addTo(map.value)
 
-  // Fly to location with high zoom (city level)
   map.value.flyTo([location.coordinates[1], location.coordinates[0]], 12, {
     duration: 2.0,
     easeLinearity: 0.25
@@ -228,14 +205,10 @@ const selectFilm = (film: Film, location: Location) => {
 
 const resetView = () => {
   if (!map.value) return
-  
+
   const center = map.value.getCenter()
-  // Rough longitude check: > 60 is Asia, else Europe
-  if (center.lng > 60) {
-    map.value.flyTo(ASIA_CENTER, MAP_ZOOM, { duration: 1.5 })
-  } else {
-    map.value.flyTo(MAP_CENTER, MAP_ZOOM, { duration: 1.5 })
-  }
+  const targetCenter = center.lng > 60 ? ASIA_CENTER : MAP_CENTER
+  map.value.flyTo(targetCenter, MAP_ZOOM, { duration: 1.5 })
 }
 
 const openModal = () => {
@@ -246,30 +219,29 @@ const closeModal = () => {
   isModalOpen.value = false
 }
 
-// WASD Logic
+// WASD keyboard navigation
 const handleKeyDown = (e: KeyboardEvent) => {
   const key = e.key.toLowerCase()
-  keysPressed[key] = true
-  if (['w', 'a', 's', 'd'].includes(key)) e.preventDefault()
+  if (['w', 'a', 's', 'd'].includes(key)) {
+    keysPressed[key] = true
+    e.preventDefault()
+  }
 }
 
 const handleKeyUp = (e: KeyboardEvent) => {
-  const key = e.key.toLowerCase()
-  keysPressed[key] = false
+  keysPressed[e.key.toLowerCase()] = false
 }
 
 const animateMap = () => {
   if (!map.value) return
-  let dx = 0
-  let dy = 0
-  if (keysPressed['w']) dy -= PAN_SPEED
-  if (keysPressed['s']) dy += PAN_SPEED
-  if (keysPressed['a']) dx -= PAN_SPEED
-  if (keysPressed['d']) dx += PAN_SPEED
+
+  const dx = (keysPressed['d'] ? PAN_SPEED : 0) - (keysPressed['a'] ? PAN_SPEED : 0)
+  const dy = (keysPressed['s'] ? PAN_SPEED : 0) - (keysPressed['w'] ? PAN_SPEED : 0)
 
   if (dx !== 0 || dy !== 0) {
     map.value.panBy([dx, dy], { animate: false })
   }
+
   animationFrameId = requestAnimationFrame(animateMap)
 }
 </script>
