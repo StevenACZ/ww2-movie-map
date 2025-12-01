@@ -168,7 +168,7 @@ const handleStart = () => {
 }
 
 .icon {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .checkbox-container {

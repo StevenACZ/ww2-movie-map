@@ -84,45 +84,51 @@ watch([startYear, endYear], () => {
 
 <style scoped>
 .timeline-container {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   background: rgba(30, 30, 35, 0.95);
   border: 2px solid rgba(139, 69, 19, 0.6);
   border-radius: 8px;
-  padding: 16px 20px;
-  min-width: 280px;
+  padding: 24px 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   z-index: 1000;
   font-family: "Courier New", monospace;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 90%;
+  max-width: 700px;
 }
 
 .timeline-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
 }
 
 .timeline-header h3 {
   color: #d4af37;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .reset-btn {
   background: rgba(139, 69, 19, 0.4);
   border: 1px solid rgba(139, 69, 19, 0.6);
   color: #d4af37;
-  padding: 4px 12px;
+  padding: 6px 16px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 12px;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .reset-btn:hover {
@@ -132,27 +138,29 @@ watch([startYear, endYear], () => {
 
 .year-display {
   text-align: center;
-  margin-bottom: 16px;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   color: #d4af37;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
 }
 
 .year-label {
   display: inline-block;
-  min-width: 60px;
+  min-width: 80px;
 }
 
 .separator {
-  margin: 0 8px;
+  margin: 0 12px;
   color: rgba(212, 175, 55, 0.5);
 }
 
 .slider-container {
   position: relative;
-  height: 40px;
-  margin-bottom: 8px;
+  height: 50px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .slider-track {
@@ -160,25 +168,25 @@ watch([startYear, endYear], () => {
   top: 50%;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 6px;
   background: rgba(139, 69, 19, 0.3);
   transform: translateY(-50%);
   pointer-events: none;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .slider-range {
   position: absolute;
   height: 100%;
   background: linear-gradient(90deg, #8b4513, #d4af37);
-  border-radius: 2px;
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
 }
 
 .slider {
   position: absolute;
   width: 100%;
-  height: 4px;
+  height: 6px;
   -webkit-appearance: none;
   appearance: none;
   background: transparent;
@@ -191,37 +199,39 @@ watch([startYear, endYear], () => {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   background: #d4af37;
   cursor: pointer;
   border-radius: 50%;
   pointer-events: all;
-  border: 2px solid rgba(30, 30, 35, 0.9);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(30, 30, 35, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease;
 }
 
 .slider::-webkit-slider-thumb:hover {
   background: #f4cf5f;
-  transform: scale(1.15);
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
 }
 
 .slider::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   background: #d4af37;
   cursor: pointer;
   border-radius: 50%;
   pointer-events: all;
-  border: 2px solid rgba(30, 30, 35, 0.9);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(30, 30, 35, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease;
 }
 
 .slider::-moz-range-thumb:hover {
   background: #f4cf5f;
-  transform: scale(1.15);
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
 }
 
 .slider-end {
@@ -239,12 +249,17 @@ watch([startYear, endYear], () => {
 .year-markers {
   display: flex;
   justify-content: space-between;
-  color: rgba(212, 175, 55, 0.6);
-  font-size: 11px;
-  padding: 0 2px;
+  color: rgba(212, 175, 55, 0.7);
+  font-size: 13px;
+  padding: 0 4px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  font-weight: 600;
 }
 
 .year-marker {
   font-family: "Courier New", monospace;
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
 }
 </style>

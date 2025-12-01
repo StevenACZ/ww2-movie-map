@@ -83,7 +83,7 @@ onMounted(async () => {
     maxZoom: 20,
   }).addTo(map.value);
 
-  L.control.zoom({ position: "bottomright" }).addTo(map.value);
+  L.control.zoom({ position: "topleft" }).addTo(map.value);
 
   // Create all film markers once
   createAllMarkers();
@@ -271,24 +271,55 @@ const animateMap = () => {
 /* Reset View Button */
 .reset-view-btn {
   position: absolute;
-  bottom: 95px;
-  right: 12px;
-  width: 30px;
-  height: 30px;
-  background: #fff;
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  top: 150px;
+  left: 11px;
+  width: 34px;
+  height: 34px;
+  background: rgba(30, 30, 35, 0.95);
+  border: 2px solid rgba(139, 69, 19, 0.6);
   cursor: pointer;
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
-  transition: background-color 0.2s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+  border-radius: 4px;
 }
 
 .reset-view-btn:hover {
-  background-color: #f4f4f4;
+  background: rgba(139, 69, 19, 0.6);
+  border-color: #d4af37;
+}
+
+/* Leaflet Zoom Controls Custom Styles */
+.leaflet-control-zoom {
+  border: 2px solid rgba(139, 69, 19, 0.6) !important;
+  border-radius: 4px !important;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+  margin-top: 70px !important;
+}
+
+.leaflet-control-zoom a {
+  background-color: rgba(30, 30, 35, 0.95) !important;
+  color: #d4af37 !important;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.4) !important;
+  font-weight: bold;
+  transition: all 0.2s ease !important;
+  width: 30px !important;
+  height: 30px !important;
+  line-height: 30px !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: rgba(139, 69, 19, 0.6) !important;
+  color: #f4cf5f !important;
+}
+
+.leaflet-control-zoom a:last-child {
+  border-bottom: none !important;
 }
 
 /* Marker Styles */

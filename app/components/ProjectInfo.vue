@@ -66,14 +66,14 @@ const closeInfo = () => {
 .project-info-container {
   position: absolute;
   top: 20px;
-  left: 20px;
+  left: 11px;
   z-index: 1000;
   font-family: "Courier New", monospace;
 }
 
 .info-btn {
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background: rgba(30, 30, 35, 0.9);
   border: 2px solid #8b4513;
@@ -89,7 +89,7 @@ const closeInfo = () => {
 
 .info-btn:hover {
   background: rgba(139, 69, 19, 0.8);
-  transform: scale(1.1);
+  border-color: #d4af37;
 }
 
 .info-panel {
@@ -193,5 +193,9 @@ const closeInfo = () => {
 .fade-leave-to {
   opacity: 0;
   transform: translateY(-10px);
+}
+
+.icon {
+  font-size: 14px;
 }
 </style>
