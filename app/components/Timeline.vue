@@ -1,14 +1,15 @@
 <template>
   <div class="timeline-container">
     <div class="timeline-header">
-      <h3>TIMELINE</h3>
-      <button @click="reset" class="reset-btn">Reset</button>
-    </div>
+      <h3>TIMELINE:</h3>
 
-    <div class="year-display">
-      <span class="year-label">{{ startYear }}</span>
-      <span class="separator">-</span>
-      <span class="year-label">{{ endYear }}</span>
+      <div class="year-display">
+        <span class="year-label">{{ startYear }}</span>
+        <span class="separator">-</span>
+        <span class="year-label">{{ endYear }}</span>
+      </div>
+
+      <button @click="reset" class="reset-btn">Reset</button>
     </div>
 
     <div class="slider-container">
@@ -118,6 +119,20 @@ watch([startYear, endYear], () => {
   letter-spacing: 2px;
 }
 
+.year-display {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #d4af37;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.year-label {
+  display: inline-block;
+  min-width: 80px;
+}
+
 .reset-btn {
   background: rgba(139, 69, 19, 0.4);
   border: 1px solid rgba(139, 69, 19, 0.6);
@@ -134,20 +149,6 @@ watch([startYear, endYear], () => {
 .reset-btn:hover {
   background: rgba(139, 69, 19, 0.6);
   border-color: #d4af37;
-}
-
-.year-display {
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  color: #d4af37;
-  letter-spacing: 4px;
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
-}
-
-.year-label {
-  display: inline-block;
-  min-width: 80px;
 }
 
 .separator {
