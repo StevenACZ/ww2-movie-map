@@ -116,12 +116,14 @@ onUnmounted(() => {
 // Watch for changes in filtered films and update markers
 watch(filteredFilms, () => {
   updateMarkers()
-}, { deep: true })
+})
 
 const handleZoomUpdates = () => {
   if (!map.value) return
   const zoom = map.value.getZoom()
-  
+
+  console.log('🔍 Zoom level:', zoom)
+
   // 1. Marker Scaling
   // Base scale 1 at zoom 4, increasing by 0.15 per zoom level
   const scale = 1 + (zoom - 4) * 0.15
@@ -142,8 +144,9 @@ const handleZoomUpdates = () => {
 }
 
 const updateMarkers = () => {
-  if (!markerLayerGroup) return
-  
+  if (!map.value || !markerLayerGroup) return
+
+  // Simply clear existing markers and re-add them
   markerLayerGroup.clearLayers()
   addFilmMarkers()
 }
