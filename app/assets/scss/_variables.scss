@@ -2,13 +2,21 @@
 // VARIABLES GLOBALES - WW2 Movie Map
 // =====================================================
 
-// COLORES PRINCIPALES
+// COLORES PRINCIPALES (Neutral Redesign)
 // ----------------------------------------------------
-$gold: #d4af37;
-$gold-light: #f4cf5f;
-$gold-dark: #b8941f;
-$brown: #8b4513;
-$brown-dark: #654321;
+$beige: #c9b896;
+$beige-light: #d4c5a9;
+$beige-dark: #a89676;
+$gray: #9ca3af;
+$gray-light: #d1d5db;
+$gray-dark: #6b7280;
+
+// Aliases for backward compatibility
+$gold: $beige;
+$gold-light: $beige-light;
+$gold-dark: $beige-dark;
+$brown: $gray-dark;
+$brown-dark: darken($gray-dark, 10%);
 
 // COLORES DE FONDO
 // ----------------------------------------------------
@@ -68,6 +76,7 @@ $z-base: 1;
 $z-dropdown: 10;
 $z-sticky: 100;
 $z-fixed: 500;
+$z-header: 800;
 $z-modal-backdrop: 900;
 $z-modal: 1000;
 $z-popover: 1100;

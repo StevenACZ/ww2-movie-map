@@ -342,8 +342,8 @@ const animateMap = () => {
 /* Reset View Button */
 .reset-view-btn {
   position: absolute;
-  top: 150px;
-  left: 11px;
+  top: 150px; /* Below info button */
+  left: 10px;
   width: 34px;
   height: 34px;
   background: $bg-dark;
@@ -370,7 +370,7 @@ const animateMap = () => {
   border-radius: 4px !important;
   overflow: hidden;
   box-shadow: $shadow-sm !important;
-  margin-top: 70px !important;
+  margin-top: 80px !important;
 
   a {
     background-color: $bg-dark !important;
@@ -439,7 +439,7 @@ const animateMap = () => {
 /* Film Hover Tooltip (appears on hover) */
 .film-hover-tooltip {
   position: absolute;
-  top: 20px;
+  top: 90px;
   left: 50%;
   transform: translateX(-50%);
   z-index: $z-tooltip;
@@ -474,7 +474,7 @@ const animateMap = () => {
 /* Film Info Tooltip (appears on click) */
 .film-info-tooltip {
   position: absolute;
-  top: 20px;
+  top: 90px;
   left: 50%;
   transform: translateX(-50%);
   z-index: $z-popover;

@@ -106,23 +106,22 @@ watch([startYear, endYear], () => {
 .timeline {
   &-container {
     position: fixed;
-    bottom: -125px; /* Hidden by default */
+    bottom: -130px; /* Hidden by default */
     left: 50%;
     transform: translateX(-50%);
-    background: $bg-dark;
-    border: $border-width solid rgba($brown, 0.6);
-    border-radius: $border-radius-sm;
+    background: rgba(20, 25, 30, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
     padding: $spacing-lg $spacing-xl;
-    box-shadow: $shadow-md;
     backdrop-filter: blur(10px);
     z-index: $z-modal;
-    font-family: "Courier New", monospace;
+    font-family: "Inter", sans-serif;
     display: flex;
     flex-direction: column;
     gap: $spacing-md;
     width: 90%;
     max-width: 800px;
-    transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth slide up */
+    transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     &:hover {
       bottom: 30px; /* Show on hover */
@@ -135,9 +134,9 @@ watch([startYear, endYear], () => {
     align-items: center;
 
     h3 {
-      color: $gold;
+      color: $beige;
       font-size: 14px;
-      font-weight: bold;
+      font-weight: 700;
       margin: 0;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -149,10 +148,9 @@ watch([startYear, endYear], () => {
   &-display {
     text-align: center;
     font-size: 28px;
-    font-weight: bold;
-    color: $gold;
+    font-weight: 700;
+    color: $beige;
     letter-spacing: 6px;
-    text-shadow: 0 0 10px rgba($gold, 0.4);
   }
 
   &-label {
@@ -177,28 +175,27 @@ watch([startYear, endYear], () => {
   }
 
   &-number {
-    font-family: "Courier New", monospace;
-    color: $gold;
+    font-family: "Inter", sans-serif;
+    color: $beige;
     font-size: 15px;
-    font-weight: 700;
-    text-shadow: 0 0 5px rgba($gold, 0.3);
+    font-weight: 600;
     margin-bottom: 2px;
   }
 
   &-event {
     font-family: "Inter", sans-serif;
-    color: rgba($gold-light, 0.7);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 10px;
     font-style: italic;
     line-height: 1.2;
-    white-space: normal; /* Allow text wrapping */
+    white-space: normal;
   }
 }
 
 .reset-btn {
-  background: rgba($brown, 0.4);
-  border: 1px solid rgba($brown, 0.6);
-  color: $gold;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
   padding: 6px $spacing-md;
   border-radius: 4px;
   cursor: pointer;
@@ -209,14 +206,15 @@ watch([startYear, endYear], () => {
   font-weight: 600;
 
   &:hover {
-    background: rgba($brown, 0.6);
-    border-color: $gold;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.9);
   }
 }
 
 .separator {
   margin: 0 $spacing-md;
-  color: rgba($gold, 0.5);
+  color: rgba($beige, 0.6);
 }
 
 .slider {
@@ -233,7 +231,7 @@ watch([startYear, endYear], () => {
     left: 0;
     right: 0;
     height: 6px;
-    background: rgba($brown, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     transform: translateY(-50%);
     pointer-events: none;
     border-radius: 3px;
@@ -242,9 +240,9 @@ watch([startYear, endYear], () => {
   &-range {
     position: absolute;
     height: 100%;
-    background: linear-gradient(90deg, $brown, $gold);
+    background: linear-gradient(90deg, rgba($beige-dark, 0.8), $beige);
     border-radius: 3px;
-    box-shadow: 0 0 15px rgba($gold, 0.6);
+    box-shadow: 0 0 15px rgba($beige, 0.4);
   }
 }
 
@@ -265,36 +263,36 @@ watch([startYear, endYear], () => {
     appearance: none;
     width: 22px;
     height: 22px;
-    background: $gold;
+    background: $beige;
     cursor: pointer;
     border-radius: 50%;
     pointer-events: all;
-    border: 3px solid $bg-dark;
-    box-shadow: $shadow-sm;
+    border: 3px solid rgba(20, 25, 30, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     transition: all $transition-fast;
 
     &:hover {
-      background: $gold-light;
+      background: $beige-light;
       transform: scale(1.2);
-      box-shadow: $shadow-glow;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     }
   }
 
   &::-moz-range-thumb {
     width: 22px;
     height: 22px;
-    background: $gold;
+    background: $beige;
     cursor: pointer;
     border-radius: 50%;
     pointer-events: all;
-    border: 3px solid $bg-dark;
-    box-shadow: $shadow-sm;
+    border: 3px solid rgba(20, 25, 30, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     transition: all $transition-fast;
 
     &:hover {
-      background: $gold-light;
+      background: $beige-light;
       transform: scale(1.2);
-      box-shadow: $shadow-glow;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     }
   }
 }
