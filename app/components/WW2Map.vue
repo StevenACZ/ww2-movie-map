@@ -362,7 +362,7 @@ const animateMap = () => {
 /* Reset View Button */
 .reset-view-btn {
   position: absolute;
-  top: 150px; /* Below info button */
+  top: 160px; /* Below info button */
   left: 10px;
   width: 38px;
   height: 38px;
@@ -390,7 +390,6 @@ const animateMap = () => {
       rgba($beige-dark, 0.2) 100%
     );
     border-color: rgba($beige, 0.5);
-    transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5),
                 0 0 20px rgba($beige, 0.2);
   }
