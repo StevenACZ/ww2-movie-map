@@ -9,7 +9,7 @@
     <!-- Film Hover Tooltip (on hover) -->
     <Transition name="fade">
       <div v-if="hoveredFilm && !selectedFilm" class="film-hover-tooltip">
-        <h3 class="film-title">{{ hoveredFilm.title.en }}</h3>
+        <h3 class="film-title">{{ hoveredFilm.title }}</h3>
         <p class="film-year">{{ hoveredFilm.year }}</p>
       </div>
     </Transition>
@@ -20,7 +20,7 @@
         <button class="close-tooltip" @click="clearSelection" aria-label="Close">
           ✕
         </button>
-        <h3 class="film-title">{{ selectedFilm.title.en }}</h3>
+        <h3 class="film-title">{{ selectedFilm.title }}</h3>
         <p class="film-year">{{ selectedFilm.year }}</p>
       </div>
     </Transition>

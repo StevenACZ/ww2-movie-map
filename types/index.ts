@@ -7,10 +7,7 @@ export interface Location {
 
 export interface Film {
   id: string;
-  title: {
-    en: string;
-    es: string;
-  };
+  title: string;
   year: number;
   eventYears: {
     start: number;
@@ -19,10 +16,7 @@ export interface Film {
   imdbRating: number;
   country: string;
   poster: string;
-  synopsis: {
-    en: string;
-    es: string;
-  };
+  synopsis: string;
   locations: Location[];
 }
 

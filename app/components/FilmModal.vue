@@ -33,7 +33,7 @@
       <div class="w-full md:w-1/3 h-64 md:h-auto relative">
         <img
           :src="film.poster"
-          :alt="film.title.en"
+          :alt="film.title"
           class="w-full h-full object-cover"
         />
         <div
@@ -45,14 +45,8 @@
       <div class="w-full md:w-2/3 p-8 overflow-y-auto text-stone-300">
         <div class="mb-6">
           <h2 class="text-3xl md:text-4xl font-bold text-white font-serif mb-2">
-            {{ film.title.en }}
+            {{ film.title }}
           </h2>
-          <h3
-            v-if="film.title.es !== film.title.en"
-            class="text-xl text-stone-500 font-serif italic"
-          >
-            {{ film.title.es }}
-          </h3>
         </div>
 
         <div class="flex flex-wrap gap-4 mb-6 text-sm">
@@ -85,7 +79,7 @@
             >
               Synopsis
             </h4>
-            <p class="leading-relaxed text-lg">{{ film.synopsis.en }}</p>
+            <p class="leading-relaxed text-lg">{{ film.synopsis }}</p>
           </div>
 
           <div>
