@@ -2,26 +2,26 @@
   <header class="app-header">
     <div class="header-content">
       <!-- Logo -->
-      <div class="logo">
+      <NuxtLink to="/" class="logo">
         <span class="logo-ww2">WW2</span>
         <span class="logo-text">MAP FILMS</span>
-      </div>
+      </NuxtLink>
 
       <!-- Navigation -->
       <nav class="nav-menu">
-        <button class="nav-item active">
+        <NuxtLink to="/" class="nav-item" :class="{ active: currentRoute === '/' }">
           <span class="nav-icon">🗺️</span>
           <span class="nav-text">MAP</span>
-        </button>
-        <button class="nav-item">
+        </NuxtLink>
+        <NuxtLink to="/films" class="nav-item" :class="{ active: currentRoute === '/films' }">
           <span class="nav-icon">🎬</span>
           <span class="nav-text">FILMS</span>
-        </button>
-        <button class="nav-item">
+        </NuxtLink>
+        <button class="nav-item" disabled>
           <span class="nav-icon">⏱️</span>
           <span class="nav-text">TIMELINE</span>
         </button>
-        <button class="nav-item">
+        <button class="nav-item" disabled>
           <span class="nav-icon">ℹ️</span>
           <span class="nav-text">ABOUT</span>
         </button>
@@ -31,7 +31,11 @@
 </template>
 
 <script setup lang="ts">
-// No functionality yet - just the UI
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+const currentRoute = computed(() => route.path);
 </script>
 
 <style lang="scss" scoped>
@@ -72,6 +76,7 @@
   font-family: 'Inter', sans-serif;
   cursor: pointer;
   transition: opacity $transition-fast;
+  text-decoration: none;
 
   &:hover {
     opacity: 0.8;
@@ -118,6 +123,7 @@
   transition: all $transition-normal;
   position: relative;
   height: 100%;
+  text-decoration: none;
 
   .nav-icon {
     display: none;
@@ -135,7 +141,7 @@
     transition: width $transition-normal;
   }
 
-  &:hover {
+  &:hover:not([disabled]) {
     color: rgba(255, 255, 255, 0.95);
     transform: translateY(-1px);
 
@@ -150,6 +156,15 @@
     &::after {
       width: 100%;
       background: linear-gradient(90deg, transparent, $beige, transparent);
+    }
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+    cursor: not-allowed;
+    
+    &:hover {
+      transform: none;
     }
   }
 }
