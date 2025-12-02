@@ -61,11 +61,15 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch } from "vue";
+import { useRoute } from "vue-router";
 import type { Film, Location } from "../../types";
 import FilmModal from "./FilmModal.vue";
 import SelectedFilm from "./SelectedFilm.vue";
 import Timeline from "./Timeline.vue";
 import { useTimeline } from "../composables/useTimeline";
+
+// Get route for query params
+const route = useRoute();
 
 // Get filtered films from timeline
 const { filteredFilms } = useTimeline();
@@ -136,7 +140,32 @@ onMounted(async () => {
   handleZoomUpdates();
 
   animateMap();
+
+  // Check for filmId in URL query params
+  handleFilmIdFromUrl();
 });
+
+/**
+ * Handle filmId from URL query parameter
+ * Automatically selects and flies to the film if filmId is present
+ */
+const handleFilmIdFromUrl = () => {
+  const filmId = route.query.filmId as string;
+  if (filmId) {
+    // Find the film in the data
+    const film = filmsData.films.find((f) => f.id === filmId);
+    if (film) {
+      // Find the primary location
+      const primaryLocation = film.locations.find((loc) => loc.isPrimary);
+      if (primaryLocation) {
+        // Wait a bit for map to be fully ready
+        setTimeout(() => {
+          selectFilm(film as Film, primaryLocation as Location);
+        }, 500);
+      }
+    }
+  }
+};
 
 onUnmounted(() => {
   window.removeEventListener("keydown", handleKeyDown);
@@ -362,7 +391,7 @@ const animateMap = () => {
 /* Reset View Button */
 .reset-view-btn {
   position: absolute;
-  top: 150px; /* Below info button */
+  top: 160px; /* Below info button */
   left: 10px;
   width: 38px;
   height: 38px;
@@ -390,7 +419,6 @@ const animateMap = () => {
       rgba($beige-dark, 0.2) 100%
     );
     border-color: rgba($beige, 0.5);
-    transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5),
                 0 0 20px rgba($beige, 0.2);
   }

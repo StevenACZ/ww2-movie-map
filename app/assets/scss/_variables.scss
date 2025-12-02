@@ -2,6 +2,8 @@
 // VARIABLES GLOBALES - WW2 Movie Map
 // =====================================================
 
+@use 'sass:color';
+
 // COLORES PRINCIPALES (Neutral Redesign)
 // ----------------------------------------------------
 $beige: #c9b896;
@@ -16,7 +18,7 @@ $gold: $beige;
 $gold-light: $beige-light;
 $gold-dark: $beige-dark;
 $brown: $gray-dark;
-$brown-dark: darken($gray-dark, 10%);
+$brown-dark: color.adjust($gray-dark, $lightness: -10%);
 
 // COLORES DE FONDO
 // ----------------------------------------------------

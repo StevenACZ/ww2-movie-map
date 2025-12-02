@@ -2,7 +2,7 @@
   <div>
     <NuxtRouteAnnouncer />
     <AppHeader />
-    <WW2Map />
+    <NuxtPage />
     <WelcomeModal v-if="showWelcome" @close="handleWelcomeClose" />
   </div>
 </template>
@@ -39,6 +39,5 @@ html,
 body,
 #__nuxt {
   height: 100%;
-  overflow: hidden;
 }
 </style>
