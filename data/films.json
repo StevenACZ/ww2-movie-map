@@ -13,7 +13,7 @@
       },
       "imdbRating": 7.5,
       "country": "Germany",
-      "poster": "https://image.tmdb.org/t/p/w500/qLV3qW9c7tqLqX8qX8qX8qX8q.jpg",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/3/3d/Stalingrad_film.jpg",
       "synopsis": {
         "en": "German soldiers face the brutal reality of the Battle of Stalingrad during World War II.",
         "es": "Soldados alemanes enfrentan la brutal realidad de la Batalla de Stalingrado durante la Segunda Guerra Mundial."
@@ -21,7 +21,7 @@
       "locations": [
         {
           "name": "Stalingrad",
-          "coordinates": [44.516, 48.708],
+          "coordinates": [44.6, 48.75],
           "type": "city",
           "isPrimary": true
         }
@@ -298,6 +298,201 @@
         {
           "name": "Midway Atoll",
           "coordinates": [-177.3761, 28.2072],
+          "type": "region",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "the-captain-2017",
+      "title": {
+        "en": "The Captain",
+        "es": "El Capitán"
+      },
+      "year": 2017,
+      "eventYears": {
+        "start": 1945,
+        "end": 1945
+      },
+      "imdbRating": 7.4,
+      "country": "Germany",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/82/The_Captain_2017_film_poster.jpg",
+      "synopsis": {
+        "en": "In the final moments of World War II, a young German soldier fighting for survival finds a Nazi captain's uniform. Impersonating an officer, the man quickly takes on the monstrous identity of the perpetrators he is trying to escape from.",
+        "es": "En los momentos finales de la Segunda Guerra Mundial, un joven soldado alemán que lucha por sobrevivir encuentra el uniforme de un capitán nazi. Haciéndose pasar por un oficial, el hombre asume rápidamente la monstruosa identidad de los perpetradores de los que intenta escapar."
+      },
+      "locations": [
+        {
+          "name": "Görlitz",
+          "coordinates": [14.9885, 51.1552],
+          "type": "city",
+          "isPrimary": true
+        },
+        {
+          "name": "Wrocław",
+          "coordinates": [17.0385, 51.1079],
+          "type": "city",
+          "isPrimary": false
+        }
+      ]
+    },
+    {
+      "id": "narvik-2022",
+      "title": {
+        "en": "Narvik",
+        "es": "Narvik"
+      },
+      "year": 2022,
+      "eventYears": {
+        "start": 1940,
+        "end": 1940
+      },
+      "imdbRating": 6.6,
+      "country": "Norway",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Narvik_film_poster.jpg/220px-Narvik_film_poster.jpg",
+      "synopsis": {
+        "en": "April 1940. The eyes of the world are on Narvik, a small town in northern Norway, a source of the iron ore needed for Hitler's war machine. Through two months of fierce winter warfare, the German leader is dealt with his first defeat.",
+        "es": "Abril de 1940. Los ojos del mundo están puestos en Narvik, una pequeña ciudad en el norte de Noruega, fuente del mineral de hierro necesario para la maquinaria de guerra de Hitler. A través de dos meses de feroz guerra invernal, el líder alemán sufre su primera derrota."
+      },
+      "locations": [
+        {
+          "name": "Narvik",
+          "coordinates": [17.4272, 68.4385],
+          "type": "city",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "enemy-at-the-gates-2001",
+      "title": {
+        "en": "Enemy at the Gates",
+        "es": "Enemigo a las Puertas"
+      },
+      "year": 2001,
+      "eventYears": {
+        "start": 1942,
+        "end": 1943
+      },
+      "imdbRating": 7.6,
+      "country": "United States",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/ab/Enemy_at_the_gates_poster.jpg",
+      "synopsis": {
+        "en": "A Russian and a German sniper play a game of cat-and-mouse during the Battle of Stalingrad.",
+        "es": "Un francotirador ruso y uno alemán juegan al gato y al ratón durante la Batalla de Stalingrado."
+      },
+      "locations": [
+        {
+          "name": "Stalingrad",
+          "coordinates": [44.516, 48.708],
+          "type": "city",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "das-boot-1981",
+      "title": {
+        "en": "Das Boot",
+        "es": "El Submarino"
+      },
+      "year": 1981,
+      "eventYears": {
+        "start": 1941,
+        "end": 1941
+      },
+      "imdbRating": 8.3,
+      "country": "West Germany",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/6/66/Das_Boot_poster.jpg",
+      "synopsis": {
+        "en": "The claustrophobic world of a WWII German U-boat; boredom, filth and sheer terror.",
+        "es": "El mundo claustrofóbico de un submarino alemán de la Segunda Guerra Mundial; aburrimiento, suciedad y puro terror."
+      },
+      "locations": [
+        {
+          "name": "La Rochelle",
+          "coordinates": [-1.2133, 46.1591],
+          "type": "city",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "the-forgotten-battle-2020",
+      "title": {
+        "en": "The Forgotten Battle",
+        "es": "La Batalla Olvidada"
+      },
+      "year": 2020,
+      "eventYears": {
+        "start": 1944,
+        "end": 1944
+      },
+      "imdbRating": 7.1,
+      "country": "Netherlands",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/6/62/The_Forgotten_Battle_poster.jpg",
+      "synopsis": {
+        "en": "A British glider pilot, a Dutch boy fighting on the German side and a Dutch female resistance member all end up involved in the Battle of the Scheldt. Their choices differ, but their goal is the same: freedom.",
+        "es": "Un piloto de planeador británico, un chico holandés que lucha en el bando alemán y una miembro de la resistencia holandesa terminan involucrados en la Batalla del Escalda. Sus elecciones difieren, pero su objetivo es el mismo: la libertad."
+      },
+      "locations": [
+        {
+          "name": "Walcheren",
+          "coordinates": [3.5833, 51.5333],
+          "type": "region",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "tuntematon-sotilas-2017",
+      "title": {
+        "en": "Unknown Soldier",
+        "es": "El Soldado Desconocido"
+      },
+      "year": 2017,
+      "eventYears": {
+        "start": 1941,
+        "end": 1944
+      },
+      "imdbRating": 7.8,
+      "country": "Finland",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/0/02/Tuntematon_sotilas_2017_poster.jpg",
+      "synopsis": {
+        "en": "A film adaptation of Väinö Linna's best selling novel The Unknown Soldier (1954) and the novel's unedited manuscript, Sotaromaani.",
+        "es": "Una adaptación cinematográfica de la novela más vendida de Väinö Linna, El soldado desconocido (1954) y el manuscrito inédito de la novela, Sotaromaani."
+      },
+      "locations": [
+        {
+          "name": "Karelia",
+          "coordinates": [30.5, 61.5],
+          "type": "region",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "come-and-see-1985",
+      "title": {
+        "en": "Come and See",
+        "es": "Ven y Mira"
+      },
+      "year": 1985,
+      "eventYears": {
+        "start": 1943,
+        "end": 1943
+      },
+      "imdbRating": 8.4,
+      "country": "Soviet Union",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/a1/Come_and_See_poster.jpg",
+      "synopsis": {
+        "en": "After finding an old rifle, a young boy joins the Soviet resistance movement against ruthless German forces and experiences the horrors of World War II.",
+        "es": "Después de encontrar un viejo rifle, un joven se une al movimiento de resistencia soviético contra las despiadadas fuerzas alemanas y experimenta los horrores de la Segunda Guerra Mundial."
+      },
+      "locations": [
+        {
+          "name": "Belarus",
+          "coordinates": [27.5667, 53.9],
           "type": "region",
           "isPrimary": true
         }
