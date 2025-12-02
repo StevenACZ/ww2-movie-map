@@ -364,47 +364,73 @@ const animateMap = () => {
   position: absolute;
   top: 150px; /* Below info button */
   left: 10px;
-  width: 34px;
-  height: 34px;
-  background: $bg-dark;
-  border: $border-width solid rgba($brown, 0.6);
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 30, 35, 0.9) 0%,
+    rgba(20, 25, 30, 0.95) 100%
+  );
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
   cursor: pointer;
   z-index: $z-modal;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  box-shadow: $shadow-sm;
-  transition: all $transition-fast;
-  border-radius: 4px;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all $transition-normal;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
 
   &:hover {
-    background: rgba($brown, 0.6);
-    border-color: $gold;
+    background: linear-gradient(
+      135deg,
+      rgba($beige, 0.15) 0%,
+      rgba($beige-dark, 0.2) 100%
+    );
+    border-color: rgba($beige, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba($beige, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
 
 /* Leaflet Zoom Controls Custom Styles */
 .leaflet-control-zoom {
-  border: $border-width solid rgba($brown, 0.6) !important;
-  border-radius: 4px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 8px !important;
   overflow: hidden;
-  box-shadow: $shadow-sm !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
   margin-top: 80px !important;
+  backdrop-filter: blur(10px);
 
   a {
-    background-color: $bg-dark !important;
-    color: $gold !important;
-    border-bottom: 1px solid rgba($brown, 0.4) !important;
+    background: linear-gradient(
+      135deg,
+      rgba(30, 30, 35, 0.9) 0%,
+      rgba(20, 25, 30, 0.95) 100%
+    ) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     font-weight: bold;
-    transition: all $transition-fast !important;
-    width: 30px !important;
-    height: 30px !important;
-    line-height: 30px !important;
+    transition: all $transition-normal !important;
+    width: 34px !important;
+    height: 34px !important;
+    line-height: 34px !important;
 
     &:hover {
-      background-color: rgba($brown, 0.6) !important;
-      color: $gold-light !important;
+      background: linear-gradient(
+        135deg,
+        rgba($beige, 0.15) 0%,
+        rgba($beige-dark, 0.2) 100%
+      ) !important;
+      color: $beige !important;
+      transform: scale(1.05);
     }
 
     &:last-child {
@@ -424,17 +450,21 @@ const animateMap = () => {
   height: 100%;
   background-size: cover;
   background-position: center;
-  border-radius: 4px;
-  border: 2px solid #fff;
-  transition: transform 0.1s linear, box-shadow $transition-fast;
+  border-radius: 6px;
+  border: 2.5px solid rgba(255, 255, 255, 0.9);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
   cursor: pointer;
   transform: scale(var(--marker-scale));
   transform-origin: bottom center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 
   &:hover {
-    transform: scale(calc(var(--marker-scale) * 1.2));
-    box-shadow: 0 0 20px rgba($gold, 0.9) !important;
-    border-color: $gold;
+    transform: scale(calc(var(--marker-scale) * 1.25));
+    box-shadow: 0 0 30px rgba($beige, 0.9),
+                0 8px 24px rgba(0, 0, 0, 0.7) !important;
+    border-color: $beige;
     z-index: $z-modal;
   }
 }
@@ -463,31 +493,40 @@ const animateMap = () => {
   left: 50%;
   transform: translateX(-50%);
   z-index: $z-tooltip;
-  background: linear-gradient(135deg, rgba($bg-dark, 0.95) 0%, rgba($bg-darker, 0.95) 100%);
-  border: 2px solid $gold;
-  border-radius: 8px;
-  padding: 12px 24px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), 0 0 15px rgba($gold, 0.4);
-  backdrop-filter: blur(10px);
-  min-width: 250px;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 25, 30, 0.98) 0%,
+    rgba(15, 20, 25, 0.96) 100%
+  );
+  border: 2px solid rgba($beige, 0.6);
+  border-radius: 10px;
+  padding: 14px 28px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8),
+              0 0 20px rgba($beige, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  min-width: 280px;
   text-align: center;
   pointer-events: none;
 
   .film-title {
     font-family: 'Cinzel', serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
-    color: $gold;
-    margin: 0 0 4px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: $beige;
+    margin: 0 0 6px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8),
+                 0 0 20px rgba($beige, 0.4);
+    letter-spacing: 0.5px;
   }
 
   .film-year {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    color: $gold-light;
+    color: rgba(255, 255, 255, 0.8);
     margin: 0;
     font-weight: 500;
+    letter-spacing: 2px;
   }
 }
 
@@ -499,12 +538,17 @@ const animateMap = () => {
   width: 500px;
   max-width: calc(100vw - 60px);
   z-index: $z-popover;
-  background: rgba(20, 25, 30, 0.98);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 25, 30, 0.98) 0%,
+    rgba(15, 20, 25, 0.96) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(15px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.9),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(24px) saturate(180%);
 }
 
 .close-btn {

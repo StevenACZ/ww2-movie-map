@@ -109,11 +109,15 @@ watch([startYear, endYear], () => {
     bottom: -130px; /* Hidden by default */
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(20, 25, 30, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+    background: linear-gradient(
+      180deg,
+      rgba(20, 25, 30, 0.98) 0%,
+      rgba(15, 20, 25, 0.96) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
     padding: $spacing-lg $spacing-xl;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px) saturate(180%);
     z-index: $z-modal;
     font-family: "Inter", sans-serif;
     display: flex;
@@ -121,10 +125,13 @@ watch([startYear, endYear], () => {
     gap: $spacing-md;
     width: 90%;
     max-width: 800px;
-    transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.4s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 
     &:hover {
       bottom: 30px; /* Show on hover */
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
     }
   }
 
@@ -193,22 +200,28 @@ watch([startYear, endYear], () => {
 }
 
 .reset-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.7);
-  padding: 6px $spacing-md;
-  border-radius: 4px;
+  padding: 8px $spacing-md;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 12px;
   transition: all $transition-normal;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   font-weight: 600;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.4);
-    color: rgba(255, 255, 255, 0.9);
+    background: rgba($beige, 0.15);
+    border-color: rgba($beige, 0.5);
+    color: $beige;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
 

@@ -44,10 +44,15 @@
   left: 0;
   right: 0;
   z-index: $z-header;
-  background: rgba(20, 25, 30, 0.95);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    180deg,
+    rgba(20, 25, 30, 0.98) 0%,
+    rgba(15, 20, 25, 0.96) 100%
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(180%);
   padding: 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
 .header-content {
@@ -107,10 +112,10 @@
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all $transition-fast;
+  transition: all $transition-normal;
   position: relative;
   height: 100%;
 
@@ -122,22 +127,29 @@
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: transparent;
-    transition: background $transition-fast;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, $beige, transparent);
+    transition: width $transition-normal;
   }
 
   &:hover {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-1px);
+
+    &::after {
+      width: 100%;
+    }
   }
 
   &.active {
-    color: rgba(255, 255, 255, 1);
+    color: $beige;
 
     &::after {
-      background: rgba(255, 255, 255, 1);
+      width: 100%;
+      background: linear-gradient(90deg, transparent, $beige, transparent);
     }
   }
 }
