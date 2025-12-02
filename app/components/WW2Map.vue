@@ -15,13 +15,33 @@
     </Transition>
 
     <!-- Film Info Tooltip (on click) -->
-    <Transition name="fade">
-      <div v-if="selectedFilm" class="film-info-tooltip">
-        <button class="close-tooltip" @click="clearSelection" aria-label="Close">
+    <Transition name="slide-in">
+      <div v-if="selectedFilm" class="film-info-panel">
+        <button class="close-btn" @click="clearSelection" aria-label="Close">
           ✕
         </button>
-        <h3 class="film-title">{{ selectedFilm.title }}</h3>
-        <p class="film-year">{{ selectedFilm.year }}</p>
+        
+        <div class="film-info-content">
+          <!-- Poster -->
+          <div class="film-poster">
+            <img :src="selectedFilm.poster" :alt="selectedFilm.title" />
+          </div>
+          
+          <!-- Info -->
+          <div class="film-details">
+            <h2 class="film-title">{{ selectedFilm.title }}</h2>
+            <p class="film-year">{{ selectedFilm.year }}</p>
+            
+            <p class="film-synopsis">{{ selectedFilm.synopsis }}</p>
+            
+            <div class="film-meta">
+              <span class="film-rating">
+                <span class="rating-label">⭐</span>
+                <span class="rating-value">{{ selectedFilm.imdbRating }}/10</span>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </Transition>
 
@@ -471,60 +491,185 @@ const animateMap = () => {
   }
 }
 
-/* Film Info Tooltip (appears on click) */
-.film-info-tooltip {
-  position: absolute;
+/* Film Info Panel (appears on click) - Top Right */
+.film-info-panel {
+  position: fixed;
   top: 90px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 25px;
+  width: 500px;
+  max-width: calc(100vw - 60px);
   z-index: $z-popover;
-  background: linear-gradient(135deg, rgba($bg-dark, 0.98) 0%, rgba($bg-dark, 0.95) 100%);
-  border: 2px solid $gold;
+  background: rgba(20, 25, 30, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
-  padding: 20px 50px 20px 30px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 20px rgba($gold, 0.3);
-  backdrop-filter: blur(10px);
-  min-width: 300px;
-  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(15px);
+}
 
-  .close-tooltip {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: none;
-    color: $gold;
-    font-size: 20px;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all $transition-fast;
-    border-radius: 4px;
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-fast;
+  z-index: 10;
+  border-radius: 4px;
 
-    &:hover {
-      background: rgba($gold, 0.2);
-      color: $gold-light;
-    }
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 1);
   }
+}
+
+.film-info-content {
+  display: flex;
+  gap: $spacing-lg;
+  padding: $spacing-lg;
+}
+
+.film-poster {
+  flex-shrink: 0;
+  width: 160px;
+  height: 240px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.film-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  padding-right: $spacing-xl;
+  min-width: 0;
 
   .film-title {
-    font-family: 'Cinzel', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: $gold;
-    margin: 0 0 8px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: $beige;
+    margin: 0;
+    line-height: 1.2;
   }
 
   .film-year {
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    color: $gold-light;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
     margin: 0;
     font-weight: 500;
+  }
+
+  .film-synopsis {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin: $spacing-sm 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.film-meta {
+  display: flex;
+  gap: $spacing-md;
+  margin-top: auto;
+  margin-bottom: 5px;
+  padding-top: $spacing-sm;
+}
+
+.film-rating {
+  display: flex;
+  align-items: baseline;
+  gap: $spacing-xs;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: $beige;
+
+  .rating-label {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .rating-value {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Slide-in Transition */
+.slide-in-enter-active,
+.slide-in-leave-active {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slide-in-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-in-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-in-enter-to,
+.slide-in-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .film-info-panel {
+    top: 70px;
+    right: 15px;
+    left: 15px;
+    width: auto;
+    max-width: none;
+  }
+
+  .film-info-content {
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  .film-poster {
+    width: 120px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .film-details {
+    padding-right: 0;
+
+    .film-title {
+      font-size: 20px;
+    }
+
+    .film-synopsis {
+      -webkit-line-clamp: 4;
+    }
   }
 }
 
