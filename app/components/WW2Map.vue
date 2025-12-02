@@ -112,6 +112,7 @@ onMounted(async () => {
   window.addEventListener("keydown", handleKeyDown);
   window.addEventListener("keyup", handleKeyUp);
   map.value.on("zoom", handleZoomUpdates);
+  map.value.on("click", clearSelection); // Clear selection when clicking on map
   handleZoomUpdates();
 
   animateMap();
@@ -123,6 +124,7 @@ onUnmounted(() => {
   if (animationFrameId) cancelAnimationFrame(animationFrameId);
   if (map.value) {
     map.value.off("zoom", handleZoomUpdates);
+    map.value.off("click", clearSelection);
     map.value.remove();
   }
 });
@@ -265,6 +267,7 @@ const selectFilm = (film: Film, location: Location) => {
 const resetView = () => {
   if (!map.value) return;
 
+  clearSelection(); // Clear selection when resetting view
   const center = map.value.getCenter();
   const targetCenter = center.lng > 60 ? ASIA_CENTER : MAP_CENTER;
   map.value.flyTo(targetCenter, MAP_ZOOM, { duration: 1.5 });
