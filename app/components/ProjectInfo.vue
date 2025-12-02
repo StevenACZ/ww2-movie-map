@@ -1,5 +1,8 @@
 <template>
   <div class="project-info-container">
+    <!-- Overlay for closing on click outside -->
+    <div v-if="isOpen" class="overlay" @click="closeInfo"></div>
+
     <button
       class="info-btn"
       @click="toggleInfo"
@@ -8,7 +11,7 @@
       <span class="icon">ℹ️</span>
     </button>
 
-    <Transition name="fade">
+    <Transition name="slide-left">
       <div v-if="isOpen" class="info-panel">
         <div class="panel-header">
           <h3>PROJECT INFO</h3>
@@ -23,17 +26,19 @@
 
           <div class="links">
             <a
-              href="https://github.com/yourusername/ww2-movie-map"
+              href="https://github.com/StevenACZ/ww2-movie-map"
               target="_blank"
               rel="noopener noreferrer"
               class="link-item"
             >
               <span class="link-icon">📂</span> GitHub Repository
             </a>
-            <a href="#" class="link-item">
-              <span class="link-icon">📄</span> Documentation
-            </a>
-            <a href="#" class="link-item">
+            <a
+              href="https://github.com/StevenACZ/ww2-movie-map/issues"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link-item"
+            >
               <span class="link-icon">💬</span> Feedback
             </a>
           </div>
@@ -98,7 +103,7 @@ const closeInfo = () => {
 .info {
   &-panel {
     position: absolute;
-    top: 50px;
+    top: 46px;
     left: 0;
     width: 300px;
     background: $bg-dark;
@@ -197,16 +202,26 @@ const closeInfo = () => {
 }
 
 // Transitions
-.fade {
+.slide-left {
   &-enter-active,
   &-leave-active {
-    transition: opacity $transition-fast, transform $transition-fast;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
   &-enter-from,
   &-leave-to {
+    transform: translateX(-20px);
     opacity: 0;
-    transform: translateY(-10px);
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Behind the panel but capturing clicks */
+  cursor: default;
 }
 </style>

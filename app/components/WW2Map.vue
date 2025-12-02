@@ -6,6 +6,25 @@
       🌍
     </button>
 
+    <!-- Film Hover Tooltip (on hover) -->
+    <Transition name="fade">
+      <div v-if="hoveredFilm && !selectedFilm" class="film-hover-tooltip">
+        <h3 class="film-title">{{ hoveredFilm.title }}</h3>
+        <p class="film-year">{{ hoveredFilm.year }}</p>
+      </div>
+    </Transition>
+
+    <!-- Film Info Tooltip (on click) -->
+    <Transition name="fade">
+      <div v-if="selectedFilm" class="film-info-tooltip">
+        <button class="close-tooltip" @click="clearSelection" aria-label="Close">
+          ✕
+        </button>
+        <h3 class="film-title">{{ selectedFilm.title }}</h3>
+        <p class="film-year">{{ selectedFilm.year }}</p>
+      </div>
+    </Transition>
+
     <!-- UI Components -->
     <Timeline />
 
@@ -39,6 +58,7 @@ const map = ref<any>(null);
 
 // State
 const selectedFilm = ref<Film | null>(null);
+const hoveredFilm = ref<Film | null>(null);
 const isModalOpen = ref(false);
 const allFilmMarkers = new Map(); // Map<filmId, marker> - created once, never removed
 const highlightLayer = ref<any>(null);
@@ -92,6 +112,7 @@ onMounted(async () => {
   window.addEventListener("keydown", handleKeyDown);
   window.addEventListener("keyup", handleKeyUp);
   map.value.on("zoom", handleZoomUpdates);
+  map.value.on("click", clearSelection); // Clear selection when clicking on map
   handleZoomUpdates();
 
   animateMap();
@@ -103,6 +124,7 @@ onUnmounted(() => {
   if (animationFrameId) cancelAnimationFrame(animationFrameId);
   if (map.value) {
     map.value.off("zoom", handleZoomUpdates);
+    map.value.off("click", clearSelection);
     map.value.remove();
   }
 });
@@ -140,7 +162,8 @@ const handleZoomUpdates = () => {
 const createAllMarkers = () => {
   if (!map.value || !L) return;
 
-  filmsData.films.forEach((film: Film) => {
+  // Reverse to give earlier films higher z-index
+  filmsData.films.forEach((film: Film, filmIndex: number) => {
     film.locations.forEach((location) => {
       if (!location.isPrimary) return;
 
@@ -153,9 +176,29 @@ const createAllMarkers = () => {
       });
 
       const coords = [location.coordinates[1], location.coordinates[0]];
-      const marker = L.marker(coords, { icon })
+      // Give higher z-index to earlier films (reverse order)
+      const zIndexOffset = (filmsData.films.length - filmIndex) * 100;
+      const marker = L.marker(coords, { 
+        icon,
+        zIndexOffset 
+      })
         .on("click", () => selectFilm(film, location))
         .addTo(map.value);
+
+      // Add hover events to the marker's DOM element after Vue updates DOM
+      setTimeout(() => {
+        const markerElement = marker.getElement();
+        if (markerElement) {
+          markerElement.addEventListener("mouseenter", () => {
+            console.log("Hover IN:", film.title);
+            hoverFilm(film);
+          });
+          markerElement.addEventListener("mouseleave", () => {
+            console.log("Hover OUT");
+            unhoverFilm();
+          });
+        }
+      }, 100);
 
       allFilmMarkers.set(film.id, marker);
     });
@@ -178,8 +221,22 @@ const updateMarkerVisibility = () => {
   });
 };
 
+const hoverFilm = (film: Film) => {
+  console.log("hoverFilm called", film.title, "selectedFilm:", selectedFilm.value);
+  if (!selectedFilm.value) {
+    hoveredFilm.value = film;
+    console.log("hoveredFilm set to:", hoveredFilm.value?.title);
+  }
+};
+
+const unhoverFilm = () => {
+  console.log("unhoverFilm called");
+  hoveredFilm.value = null;
+};
+
 const selectFilm = (film: Film, location: Location) => {
   selectedFilm.value = film;
+  hoveredFilm.value = null; // Clear hover when clicking
 
   if (highlightLayer.value) {
     map.value.removeLayer(highlightLayer.value);
@@ -210,9 +267,18 @@ const selectFilm = (film: Film, location: Location) => {
 const resetView = () => {
   if (!map.value) return;
 
+  clearSelection(); // Clear selection when resetting view
   const center = map.value.getCenter();
   const targetCenter = center.lng > 60 ? ASIA_CENTER : MAP_CENTER;
   map.value.flyTo(targetCenter, MAP_ZOOM, { duration: 1.5 });
+};
+
+const clearSelection = () => {
+  selectedFilm.value = null;
+  if (highlightLayer.value) {
+    map.value.removeLayer(highlightLayer.value);
+    highlightLayer.value = null;
+  }
 };
 
 const openModal = () => {
@@ -368,5 +434,115 @@ const animateMap = () => {
   50% {
     opacity: 0.6;
   }
+}
+
+/* Film Hover Tooltip (appears on hover) */
+.film-hover-tooltip {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: $z-tooltip;
+  background: linear-gradient(135deg, rgba($bg-dark, 0.95) 0%, rgba($bg-darker, 0.95) 100%);
+  border: 2px solid $gold;
+  border-radius: 8px;
+  padding: 12px 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), 0 0 15px rgba($gold, 0.4);
+  backdrop-filter: blur(10px);
+  min-width: 250px;
+  text-align: center;
+  pointer-events: none;
+
+  .film-title {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: $gold;
+    margin: 0 0 4px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .film-year {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: $gold-light;
+    margin: 0;
+    font-weight: 500;
+  }
+}
+
+/* Film Info Tooltip (appears on click) */
+.film-info-tooltip {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: $z-popover;
+  background: linear-gradient(135deg, rgba($bg-dark, 0.98) 0%, rgba($bg-dark, 0.95) 100%);
+  border: 2px solid $gold;
+  border-radius: 8px;
+  padding: 20px 50px 20px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 20px rgba($gold, 0.3);
+  backdrop-filter: blur(10px);
+  min-width: 300px;
+  text-align: center;
+
+  .close-tooltip {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: $gold;
+    font-size: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all $transition-fast;
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba($gold, 0.2);
+      color: $gold-light;
+    }
+  }
+
+  .film-title {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: $gold;
+    margin: 0 0 8px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .film-year {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: $gold-light;
+    margin: 0;
+    font-weight: 500;
+  }
+}
+
+/* Fade Transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 </style>

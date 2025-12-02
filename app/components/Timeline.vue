@@ -9,7 +9,7 @@
         <span class="year-label">{{ endYear }}</span>
       </div>
 
-      <button @click="reset" class="reset-btn">Reset</button>
+      <button @click="reset" class="reset-btn">RESET</button>
     </div>
 
     <div class="slider-container">
@@ -35,9 +35,14 @@
     </div>
 
     <div class="year-markers">
-      <span v-for="year in yearMarkers" :key="year" class="year-marker">
-        {{ year }}
-      </span>
+      <div
+        v-for="yearData in yearMarkers"
+        :key="yearData.year"
+        class="year-marker"
+      >
+        <div class="year-number">{{ yearData.year }}</div>
+        <div class="year-event" v-html="yearData.event"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -51,7 +56,18 @@ const { startYear, endYear, setYearRange, resetYearRange } = useTimeline();
 const localStartYear = ref(startYear.value);
 const localEndYear = ref(endYear.value);
 
-const yearMarkers = [1936, 1938, 1940, 1942, 1944, 1945];
+const yearMarkers = [
+  { year: 1936, event: "Spanish<br>Civil War" },
+  { year: 1937, event: "" },
+  { year: 1938, event: "Anschluss" },
+  { year: 1939, event: "War Begins" },
+  { year: 1940, event: "" },
+  { year: 1941, event: "Pearl Harbor" },
+  { year: 1942, event: "Midway" },
+  { year: 1943, event: "" },
+  { year: 1944, event: "D-Day" },
+  { year: 1945, event: "War Ends" },
+];
 
 const rangeStyle = computed(() => {
   const min = 1936;
@@ -90,7 +106,7 @@ watch([startYear, endYear], () => {
 .timeline {
   &-container {
     position: fixed;
-    bottom: 30px;
+    bottom: -125px; /* Hidden by default */
     left: 50%;
     transform: translateX(-50%);
     background: $bg-dark;
@@ -105,7 +121,12 @@ watch([startYear, endYear], () => {
     flex-direction: column;
     gap: $spacing-md;
     width: 90%;
-    max-width: 700px;
+    max-width: 800px;
+    transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth slide up */
+
+    &:hover {
+      bottom: 30px; /* Show on hover */
+    }
   }
 
   &-header {
@@ -127,33 +148,50 @@ watch([startYear, endYear], () => {
 .year {
   &-display {
     text-align: center;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     color: $gold;
-    letter-spacing: 4px;
-    text-shadow: 0 0 10px rgba($gold, 0.3);
+    letter-spacing: 6px;
+    text-shadow: 0 0 10px rgba($gold, 0.4);
   }
 
   &-label {
     display: inline-block;
-    min-width: 80px;
+    min-width: 85px;
   }
 
   &-markers {
-    display: flex;
-    justify-content: space-between;
-    color: rgba($gold, 0.7);
-    font-size: 13px;
-    padding: 0 $spacing-xs;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
-    font-weight: 600;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0;
+    width: 107%;
+    box-sizing: border-box;
+    margin: 0 -25px;
   }
 
   &-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &-number {
     font-family: "Courier New", monospace;
+    color: $gold;
+    font-size: 15px;
+    font-weight: 700;
     text-shadow: 0 0 5px rgba($gold, 0.3);
+    margin-bottom: 2px;
+  }
+
+  &-event {
+    font-family: "Inter", sans-serif;
+    color: rgba($gold-light, 0.7);
+    font-size: 10px;
+    font-style: italic;
+    line-height: 1.2;
+    white-space: normal; /* Allow text wrapping */
   }
 }
 
@@ -168,6 +206,7 @@ watch([startYear, endYear], () => {
   transition: all $transition-normal;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 600;
 
   &:hover {
     background: rgba($brown, 0.6);
@@ -186,7 +225,6 @@ watch([startYear, endYear], () => {
     height: 50px;
     margin: 0 auto;
     width: 100%;
-    max-width: 1200px;
   }
 
   &-track {

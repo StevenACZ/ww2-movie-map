@@ -9,13 +9,13 @@
       >
         <img
           :src="film.poster"
-          :alt="film.title.en"
+          :alt="film.title"
           class="w-full h-full object-cover"
         />
       </div>
       <div>
         <h3 class="text-white font-bold font-serif leading-tight mb-1">
-          {{ film.title.en }}
+          {{ film.title }}
         </h3>
         <p class="text-stone-400 text-sm mb-2">
           {{ film.year }} • {{ film.country }}
