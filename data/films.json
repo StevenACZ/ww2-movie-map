@@ -167,12 +167,12 @@
       "synopsis": "A group of Russian soldiers escape from German captivity in a half-destroyed T-34 tank.",
       "locations": [
         {
-          "name": "Thuringia",
+          "name": "Ohrdruf",
           "coordinates": [
-            11,
-            50.9
+            10.7417,
+            50.8283
           ],
-          "type": "region",
+          "type": "city",
           "isPrimary": true
         }
       ]
@@ -287,22 +287,13 @@
       "synopsis": "In the final moments of World War II, a young German soldier fighting for survival finds a Nazi captain's uniform. Impersonating an officer, the man quickly takes on the monstrous identity of the perpetrators he is trying to escape from.",
       "locations": [
         {
-          "name": "Görlitz",
+          "name": "Emslandlager",
           "coordinates": [
-            14.9885,
-            51.1552
+            7.3,
+            53.05
           ],
-          "type": "city",
+          "type": "region",
           "isPrimary": true
-        },
-        {
-          "name": "Wrocław",
-          "coordinates": [
-            17.0385,
-            51.1079
-          ],
-          "type": "city",
-          "isPrimary": false
         }
       ]
     },
@@ -416,12 +407,12 @@
       "synopsis": "A film adaptation of Väinö Linna's best selling novel The Unknown Soldier (1954) and the novel's unedited manuscript, Sotaromaani.",
       "locations": [
         {
-          "name": "Karelia",
+          "name": "Petrozavodsk",
           "coordinates": [
-            30.5,
-            61.5
+            34.35,
+            61.78
           ],
-          "type": "region",
+          "type": "city",
           "isPrimary": true
         }
       ]
@@ -440,10 +431,10 @@
       "synopsis": "After finding an old rifle, a young boy joins the Soviet resistance movement against ruthless German forces and experiences the horrors of World War II.",
       "locations": [
         {
-          "name": "Belarus",
+          "name": "Khatyn",
           "coordinates": [
-            27.5667,
-            53.9
+            27.945,
+            54.335
           ],
           "type": "region",
           "isPrimary": true
@@ -521,12 +512,12 @@
       "synopsis": "A grizzled tank commander makes tough decisions as he and his crew fight their way across Germany in April 1945.",
       "locations": [
         {
-          "name": "Germany",
+          "name": "Weser River",
           "coordinates": [
-            10.4515,
-            51.1657
+            9.35,
+            52.1
           ],
-          "type": "country",
+          "type": "region",
           "isPrimary": true
         }
       ]
@@ -617,12 +608,12 @@
       "synopsis": "The story of Field Marshal Erwin Rommel's involvement in the North African campaign and the conspiracy to assassinate Adolf Hitler.",
       "locations": [
         {
-          "name": "North Africa",
+          "name": "El Alamein",
           "coordinates": [
-            17.2283,
-            26.3351
+            28.95,
+            30.83
           ],
-          "type": "region",
+          "type": "city",
           "isPrimary": true
         },
         {
