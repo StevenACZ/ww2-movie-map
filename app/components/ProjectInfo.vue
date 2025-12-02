@@ -73,7 +73,7 @@ const closeInfo = () => {
 
 .project-info-container {
   position: absolute;
-  top: $spacing-lg;
+  top: 80px; /* Below header */
   left: 11px;
   z-index: $z-modal;
   font-family: "Courier New", monospace;

@@ -15,13 +15,33 @@
     </Transition>
 
     <!-- Film Info Tooltip (on click) -->
-    <Transition name="fade">
-      <div v-if="selectedFilm" class="film-info-tooltip">
-        <button class="close-tooltip" @click="clearSelection" aria-label="Close">
+    <Transition name="slide-in">
+      <div v-if="selectedFilm" class="film-info-panel">
+        <button class="close-btn" @click="clearSelection" aria-label="Close">
           ✕
         </button>
-        <h3 class="film-title">{{ selectedFilm.title }}</h3>
-        <p class="film-year">{{ selectedFilm.year }}</p>
+        
+        <div class="film-info-content">
+          <!-- Poster -->
+          <div class="film-poster">
+            <img :src="selectedFilm.poster" :alt="selectedFilm.title" />
+          </div>
+          
+          <!-- Info -->
+          <div class="film-details">
+            <h2 class="film-title">{{ selectedFilm.title }}</h2>
+            <p class="film-year">{{ selectedFilm.year }}</p>
+            
+            <p class="film-synopsis">{{ selectedFilm.synopsis }}</p>
+            
+            <div class="film-meta">
+              <span class="film-rating">
+                <span class="rating-label">⭐</span>
+                <span class="rating-value">{{ selectedFilm.imdbRating }}/10</span>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </Transition>
 
@@ -342,49 +362,75 @@ const animateMap = () => {
 /* Reset View Button */
 .reset-view-btn {
   position: absolute;
-  top: 150px;
-  left: 11px;
-  width: 34px;
-  height: 34px;
-  background: $bg-dark;
-  border: $border-width solid rgba($brown, 0.6);
+  top: 150px; /* Below info button */
+  left: 10px;
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 30, 35, 0.9) 0%,
+    rgba(20, 25, 30, 0.95) 100%
+  );
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
   cursor: pointer;
   z-index: $z-modal;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  box-shadow: $shadow-sm;
-  transition: all $transition-fast;
-  border-radius: 4px;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all $transition-normal;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
 
   &:hover {
-    background: rgba($brown, 0.6);
-    border-color: $gold;
+    background: linear-gradient(
+      135deg,
+      rgba($beige, 0.15) 0%,
+      rgba($beige-dark, 0.2) 100%
+    );
+    border-color: rgba($beige, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba($beige, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
 
 /* Leaflet Zoom Controls Custom Styles */
 .leaflet-control-zoom {
-  border: $border-width solid rgba($brown, 0.6) !important;
-  border-radius: 4px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 8px !important;
   overflow: hidden;
-  box-shadow: $shadow-sm !important;
-  margin-top: 70px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  margin-top: 80px !important;
+  backdrop-filter: blur(10px);
 
   a {
-    background-color: $bg-dark !important;
-    color: $gold !important;
-    border-bottom: 1px solid rgba($brown, 0.4) !important;
+    background: linear-gradient(
+      135deg,
+      rgba(30, 30, 35, 0.9) 0%,
+      rgba(20, 25, 30, 0.95) 100%
+    ) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     font-weight: bold;
-    transition: all $transition-fast !important;
-    width: 30px !important;
-    height: 30px !important;
-    line-height: 30px !important;
+    transition: all $transition-normal !important;
+    width: 34px !important;
+    height: 34px !important;
+    line-height: 34px !important;
 
     &:hover {
-      background-color: rgba($brown, 0.6) !important;
-      color: $gold-light !important;
+      background: linear-gradient(
+        135deg,
+        rgba($beige, 0.15) 0%,
+        rgba($beige-dark, 0.2) 100%
+      ) !important;
+      color: $beige !important;
+      transform: scale(1.05);
     }
 
     &:last-child {
@@ -404,17 +450,21 @@ const animateMap = () => {
   height: 100%;
   background-size: cover;
   background-position: center;
-  border-radius: 4px;
-  border: 2px solid #fff;
-  transition: transform 0.1s linear, box-shadow $transition-fast;
+  border-radius: 6px;
+  border: 2.5px solid rgba(255, 255, 255, 0.9);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
   cursor: pointer;
   transform: scale(var(--marker-scale));
   transform-origin: bottom center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 
   &:hover {
-    transform: scale(calc(var(--marker-scale) * 1.2));
-    box-shadow: 0 0 20px rgba($gold, 0.9) !important;
-    border-color: $gold;
+    transform: scale(calc(var(--marker-scale) * 1.25));
+    box-shadow: 0 0 30px rgba($beige, 0.9),
+                0 8px 24px rgba(0, 0, 0, 0.7) !important;
+    border-color: $beige;
     z-index: $z-modal;
   }
 }
@@ -439,92 +489,231 @@ const animateMap = () => {
 /* Film Hover Tooltip (appears on hover) */
 .film-hover-tooltip {
   position: absolute;
-  top: 20px;
+  top: 90px;
   left: 50%;
   transform: translateX(-50%);
   z-index: $z-tooltip;
-  background: linear-gradient(135deg, rgba($bg-dark, 0.95) 0%, rgba($bg-darker, 0.95) 100%);
-  border: 2px solid $gold;
-  border-radius: 8px;
-  padding: 12px 24px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), 0 0 15px rgba($gold, 0.4);
-  backdrop-filter: blur(10px);
-  min-width: 250px;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 25, 30, 0.98) 0%,
+    rgba(15, 20, 25, 0.96) 100%
+  );
+  border: 2px solid rgba($beige, 0.6);
+  border-radius: 10px;
+  padding: 14px 28px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8),
+              0 0 20px rgba($beige, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  min-width: 280px;
   text-align: center;
   pointer-events: none;
 
   .film-title {
     font-family: 'Cinzel', serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
-    color: $gold;
-    margin: 0 0 4px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: $beige;
+    margin: 0 0 6px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8),
+                 0 0 20px rgba($beige, 0.4);
+    letter-spacing: 0.5px;
   }
 
   .film-year {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    color: $gold-light;
+    color: rgba(255, 255, 255, 0.8);
     margin: 0;
     font-weight: 500;
+    letter-spacing: 2px;
   }
 }
 
-/* Film Info Tooltip (appears on click) */
-.film-info-tooltip {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+/* Film Info Panel (appears on click) - Top Right */
+.film-info-panel {
+  position: fixed;
+  top: 90px;
+  right: 25px;
+  width: 500px;
+  max-width: calc(100vw - 60px);
   z-index: $z-popover;
-  background: linear-gradient(135deg, rgba($bg-dark, 0.98) 0%, rgba($bg-dark, 0.95) 100%);
-  border: 2px solid $gold;
-  border-radius: 8px;
-  padding: 20px 50px 20px 30px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 20px rgba($gold, 0.3);
-  backdrop-filter: blur(10px);
-  min-width: 300px;
-  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 25, 30, 0.98) 0%,
+    rgba(15, 20, 25, 0.96) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.9),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(24px) saturate(180%);
+}
 
-  .close-tooltip {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: none;
-    color: $gold;
-    font-size: 20px;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all $transition-fast;
-    border-radius: 4px;
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-fast;
+  z-index: 10;
+  border-radius: 4px;
 
-    &:hover {
-      background: rgba($gold, 0.2);
-      color: $gold-light;
-    }
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 1);
   }
+}
+
+.film-info-content {
+  display: flex;
+  gap: $spacing-lg;
+  padding: $spacing-lg;
+}
+
+.film-poster {
+  flex-shrink: 0;
+  width: 160px;
+  height: 240px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.film-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  padding-right: $spacing-xl;
+  min-width: 0;
 
   .film-title {
-    font-family: 'Cinzel', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: $gold;
-    margin: 0 0 8px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: $beige;
+    margin: 0;
+    line-height: 1.2;
   }
 
   .film-year {
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    color: $gold-light;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
     margin: 0;
     font-weight: 500;
+  }
+
+  .film-synopsis {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin: $spacing-sm 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.film-meta {
+  display: flex;
+  gap: $spacing-md;
+  margin-top: auto;
+  margin-bottom: 5px;
+  padding-top: $spacing-sm;
+}
+
+.film-rating {
+  display: flex;
+  align-items: baseline;
+  gap: $spacing-xs;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: $beige;
+
+  .rating-label {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .rating-value {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Slide-in Transition */
+.slide-in-enter-active,
+.slide-in-leave-active {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slide-in-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-in-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-in-enter-to,
+.slide-in-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .film-info-panel {
+    top: 70px;
+    right: 15px;
+    left: 15px;
+    width: auto;
+    max-width: none;
+  }
+
+  .film-info-content {
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  .film-poster {
+    width: 120px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .film-details {
+    padding-right: 0;
+
+    .film-title {
+      font-size: 20px;
+    }
+
+    .film-synopsis {
+      -webkit-line-clamp: 4;
+    }
   }
 }
 
