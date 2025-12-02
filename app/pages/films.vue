@@ -144,13 +144,29 @@
                 v-for="loc in film.locations"
                 :key="loc.name"
                 class="location-item"
+                @click="viewOnMap(film.id)"
+                title="View on Map"
               >
                 <span
                   class="location-dot"
                   :class="{ primary: loc.isPrimary }"
                 ></span>
                 <span class="location-name">{{ loc.name }}</span>
-                <span class="location-type">{{ loc.type }}</span>
+                <!-- <span class="location-type">{{ loc.type }}</span> -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="location-map-icon"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                  />
+                </svg>
               </li>
             </ul>
           </div>
@@ -187,8 +203,11 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import { useRouter } from 'vue-router';
 import type { Film } from '../../types';
 import filmsData from '../../data/films.json';
+
+const router = useRouter();
 
 // State
 const searchQuery = ref('');
@@ -230,6 +249,13 @@ const filteredFilms = computed(() => {
 const getWikipediaUrl = (title: string) => {
   const formattedTitle = title.replace(/ /g, '_');
   return `https://en.wikipedia.org/wiki/${formattedTitle}`;
+};
+
+const viewOnMap = (filmId: string) => {
+  router.push({
+    path: '/',
+    query: { filmId }
+  });
 };
 </script>
 
@@ -544,12 +570,34 @@ const getWikipediaUrl = (title: string) => {
 .location-item {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   padding: 4px 8px;
   background: rgba($beige, 0.1);
   border: 1px solid rgba($beige, 0.2);
   border-radius: $border-radius-sm;
   font-size: 0.75rem;
+  cursor: pointer;
+  transition: $transition-fast;
+  padding-right: 6px;
+
+  &:hover {
+    background: rgba($beige, 0.2);
+    border-color: rgba($beige, 0.4);
+    
+    .location-map-icon {
+      opacity: 1;
+      transform: scale(1.1);
+      color: $beige;
+    }
+  }
+}
+
+.location-map-icon {
+  width: 12px;
+  height: 12px;
+  opacity: 0.4;
+  transition: all $transition-fast;
+  color: $text-muted;
 }
 
 .location-dot {
@@ -567,12 +615,6 @@ const getWikipediaUrl = (title: string) => {
 .location-name {
   color: $text-primary;
   font-weight: 500;
-}
-
-.location-type {
-  color: $text-muted;
-  font-size: 0.625rem;
-  text-transform: uppercase;
 }
 
 /* ===== ACTIONS ===== */

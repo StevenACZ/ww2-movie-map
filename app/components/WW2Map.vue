@@ -61,11 +61,15 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch } from "vue";
+import { useRoute } from "vue-router";
 import type { Film, Location } from "../../types";
 import FilmModal from "./FilmModal.vue";
 import SelectedFilm from "./SelectedFilm.vue";
 import Timeline from "./Timeline.vue";
 import { useTimeline } from "../composables/useTimeline";
+
+// Get route for query params
+const route = useRoute();
 
 // Get filtered films from timeline
 const { filteredFilms } = useTimeline();
@@ -136,7 +140,32 @@ onMounted(async () => {
   handleZoomUpdates();
 
   animateMap();
+
+  // Check for filmId in URL query params
+  handleFilmIdFromUrl();
 });
+
+/**
+ * Handle filmId from URL query parameter
+ * Automatically selects and flies to the film if filmId is present
+ */
+const handleFilmIdFromUrl = () => {
+  const filmId = route.query.filmId as string;
+  if (filmId) {
+    // Find the film in the data
+    const film = filmsData.films.find((f) => f.id === filmId);
+    if (film) {
+      // Find the primary location
+      const primaryLocation = film.locations.find((loc) => loc.isPrimary);
+      if (primaryLocation) {
+        // Wait a bit for map to be fully ready
+        setTimeout(() => {
+          selectFilm(film as Film, primaryLocation as Location);
+        }, 500);
+      }
+    }
+  }
+};
 
 onUnmounted(() => {
   window.removeEventListener("keydown", handleKeyDown);
