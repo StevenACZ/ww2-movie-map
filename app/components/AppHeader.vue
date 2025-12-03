@@ -17,10 +17,10 @@
           <span class="nav-icon">🎬</span>
           <span class="nav-text">FILMS</span>
         </NuxtLink>
-        <button class="nav-item" disabled>
+        <NuxtLink to="/timeline" class="nav-item" :class="{ active: currentRoute === '/timeline' }">
           <span class="nav-icon">⏱️</span>
           <span class="nav-text">TIMELINE</span>
-        </button>
+        </NuxtLink>
         <button class="nav-item" disabled>
           <span class="nav-icon">ℹ️</span>
           <span class="nav-text">ABOUT</span>

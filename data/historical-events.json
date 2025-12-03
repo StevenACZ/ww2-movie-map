@@ -1,0 +1,46 @@
+{
+  "events": [
+    {
+      "id": "invasion-poland",
+      "title": "Invasion of Poland",
+      "date": "1939-09-01",
+      "description": "Germany invades Poland, marking the beginning of World War II in Europe.",
+      "icon": "🪖"
+    },
+    {
+      "id": "pearl-harbor",
+      "title": "Attack on Pearl Harbor",
+      "date": "1941-12-07",
+      "description": "Japan launches surprise attack on Pearl Harbor, bringing the US into WWII.",
+      "icon": "⚓"
+    },
+    {
+      "id": "stalingrad",
+      "title": "Battle of Stalingrad",
+      "date": "1942-08-23",
+      "description": "One of the deadliest battles in history begins.",
+      "icon": "⚔️"
+    },
+    {
+      "id": "d-day",
+      "title": "D-Day Normandy",
+      "date": "1944-06-06",
+      "description": "Allied forces land on the beaches of Normandy, France.",
+      "icon": "🎖️"
+    },
+    {
+      "id": "berlin-falls",
+      "title": "Fall of Berlin",
+      "date": "1945-05-02",
+      "description": "Soviet forces capture Berlin, ending the war in Europe.",
+      "icon": "🏛️"
+    },
+    {
+      "id": "hiroshima",
+      "title": "Atomic Bombing of Hiroshima",
+      "date": "1945-08-06",
+      "description": "First atomic bomb dropped on Hiroshima, Japan.",
+      "icon": "☢️"
+    }
+  ]
+}

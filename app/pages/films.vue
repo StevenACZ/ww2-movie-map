@@ -1,13 +1,22 @@
 <template>
   <div class="films-page">
+    <!-- Background Elements -->
+    <div class="world-map-bg"></div>
+    <div class="grid-pattern"></div>
+
     <!-- Header -->
     <header class="page-header">
-      <div class="header-content">
-        <h1 class="page-title">WW2 Films Collection</h1>
-        <p class="page-subtitle">Explore World War II through cinema</p>
-      </div>
+      <span class="collection-badge">{{ filteredFilms.length }} Films</span>
+      <h1 class="page-title">Film Collection</h1>
+      <h2 class="page-subtitle">World War II Through Cinema</h2>
+      <p class="page-description">
+        Explore iconic films depicting the events, battles, and human stories of
+        the Second World War
+      </p>
+    </header>
 
-      <!-- Search and Filter -->
+    <!-- Search and Filter Controls -->
+    <div class="controls-wrapper">
       <div class="controls">
         <div class="search-box">
           <svg
@@ -27,135 +36,128 @@
           <input
             v-model="searchQuery"
             type="text"
-            placeholder="Search films..."
+            placeholder="Search by title, country, or synopsis..."
             class="search-input"
           />
+          <button
+            v-if="searchQuery"
+            class="clear-search"
+            @click="searchQuery = ''"
+          >
+            ×
+          </button>
         </div>
 
-        <select v-model="sortBy" class="sort-select">
-          <option value="year">Sort by Year</option>
-          <option value="title">Sort by Title</option>
-          <option value="rating">Sort by Rating</option>
-        </select>
+        <div class="filter-group">
+          <button
+            v-for="option in sortOptions"
+            :key="option.value"
+            class="filter-btn"
+            :class="{ active: sortBy === option.value }"
+            @click="sortBy = option.value"
+          >
+            {{ option.label }}
+          </button>
+        </div>
       </div>
-    </header>
+    </div>
 
-    <!-- Films List -->
+    <!-- Films Grid -->
     <div class="films-container">
-      <div v-if="filteredFilms.length === 0" class="no-results">
-        <p>No films found</p>
-      </div>
-
-      <article
-        v-for="film in filteredFilms"
-        :key="film.id"
-        class="film-card"
-      >
-        <!-- Poster -->
-        <div class="poster-container">
-          <img
-            :src="film.poster"
-            :alt="film.title"
-            class="poster-image"
-            loading="lazy"
-          />
-          <div class="poster-overlay">
-            <div class="rating-badge">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="star-icon"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                />
-              </svg>
-              <span>{{ film.imdbRating }}</span>
-            </div>
-          </div>
+      <TransitionGroup name="film-card">
+        <div
+          v-if="filteredFilms.length === 0"
+          key="no-results"
+          class="no-results"
+        >
+          <div class="no-results-icon">🎬</div>
+          <p class="no-results-text">No films found</p>
+          <p class="no-results-hint">Try adjusting your search</p>
         </div>
 
-        <!-- Info -->
-        <div class="film-info">
-          <div class="film-header">
-            <h2 class="film-title">{{ film.title }}</h2>
-            <div class="film-meta">
-              <span class="meta-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="meta-icon"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                {{ film.year }}
-              </span>
-              <span class="meta-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="meta-icon"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                {{ film.country }}
-              </span>
-              <span class="meta-item event-years">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="meta-icon"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                {{ film.eventYears.start }}-{{ film.eventYears.end }}
-              </span>
+        <article
+          v-for="(film, index) in filteredFilms"
+          :key="film.id"
+          class="film-card"
+          :style="{ '--delay': index * 0.05 + 's' }"
+        >
+          <!-- Poster Section -->
+          <div class="poster-section">
+            <img
+              :src="film.poster"
+              :alt="film.title"
+              class="poster-image"
+              loading="lazy"
+            />
+            <div class="poster-overlay">
+              <div class="rating-badge">
+                <span class="star">⭐</span>
+                <span class="rating-value">{{ film.imdbRating }}</span>
+              </div>
+              <div class="year-badge">{{ film.year }}</div>
             </div>
           </div>
 
-          <p class="film-synopsis">{{ film.synopsis }}</p>
+          <!-- Content Section -->
+          <div class="content-section">
+            <div class="content-header">
+              <h3 class="film-title">{{ film.title }}</h3>
+              <div class="film-meta">
+                <span class="meta-country">{{ film.country }}</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-period"
+                  >{{ film.eventYears.start }}-{{ film.eventYears.end }}</span
+                >
+              </div>
+            </div>
 
-          <div class="film-locations">
-            <h4 class="locations-title">Locations</h4>
-            <ul class="locations-list">
-              <li
-                v-for="loc in film.locations"
-                :key="loc.name"
-                class="location-item"
-                @click="viewOnMap(film.id)"
-                title="View on Map"
-              >
-                <span
-                  class="location-dot"
+            <p class="film-synopsis">{{ film.synopsis }}</p>
+
+            <!-- Locations -->
+            <div class="locations-section">
+              <div class="locations-header">
+                <span class="locations-icon">📍</span>
+                <span class="locations-label">Filming Locations</span>
+              </div>
+              <div class="locations-list">
+                <button
+                  v-for="loc in film.locations"
+                  :key="loc.name"
+                  class="location-tag"
                   :class="{ primary: loc.isPrimary }"
-                ></span>
-                <span class="location-name">{{ loc.name }}</span>
-                <!-- <span class="location-type">{{ loc.type }}</span> -->
+                  @click="viewOnMap(film.id)"
+                >
+                  {{ loc.name }}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="map-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="actions-section">
+              <a
+                :href="getWikipediaUrl(film.title)"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="action-btn wiki-btn"
+              >
+                <span>Wikipedia</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="location-map-icon"
+                  class="action-icon"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -164,54 +166,68 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                   />
                 </svg>
-              </li>
-            </ul>
+              </a>
+              <button class="action-btn map-btn" @click="viewOnMap(film.id)">
+                <span>View on Map</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="action-icon"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
+        </article>
+      </TransitionGroup>
+    </div>
 
-          <div class="film-actions">
-            <a
-              :href="getWikipediaUrl(film.title)"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="wiki-button"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="button-icon"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-              View on Wikipedia
-            </a>
-          </div>
-        </div>
-      </article>
+    <!-- Results Info -->
+    <div class="results-info">
+      <span class="info-text">
+        Showing {{ filteredFilms.length }} of {{ totalFilms }} films
+      </span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-import { useRouter } from 'vue-router';
-import type { Film } from '../../types';
-import filmsData from '../../data/films.json';
+import { ref, computed } from "vue";
+import { useRouter } from "vue-router";
+import type { Film } from "../../types";
+import filmsData from "../../data/films.json";
 
 const router = useRouter();
 
 // State
-const searchQuery = ref('');
-const sortBy = ref('year');
+const searchQuery = ref("");
+const sortBy = ref("rating");
+
+const sortOptions = [
+  { value: "rating", label: "Top Rated" },
+  { value: "year", label: "Newest" },
+  { value: "title", label: "A-Z" },
+  { value: "period", label: "War Period" },
+];
+
+const totalFilms = filmsData.films.length;
 
 // Computed
 const filteredFilms = computed(() => {
@@ -231,12 +247,14 @@ const filteredFilms = computed(() => {
   // Sort
   films.sort((a, b) => {
     switch (sortBy.value) {
-      case 'year':
+      case "year":
         return b.year - a.year;
-      case 'title':
+      case "title":
         return a.title.localeCompare(b.title);
-      case 'rating':
+      case "rating":
         return b.imdbRating - a.imdbRating;
+      case "period":
+        return a.eventYears.start - b.eventYears.start;
       default:
         return 0;
     }
@@ -247,206 +265,286 @@ const filteredFilms = computed(() => {
 
 // Methods
 const getWikipediaUrl = (title: string) => {
-  const formattedTitle = title.replace(/ /g, '_');
+  const formattedTitle = title.replace(/ /g, "_");
   return `https://en.wikipedia.org/wiki/${formattedTitle}`;
 };
 
 const viewOnMap = (filmId: string) => {
   router.push({
-    path: '/',
-    query: { filmId }
+    path: "/",
+    query: { filmId },
   });
 };
 </script>
 
-<style lang="scss" scoped>
-@use '@/assets/scss/variables' as *;
-@use '@/assets/scss/mixins' as *;
-
+<style scoped>
 .films-page {
   min-height: 100vh;
-  background: $bg-darker;
-  padding: 100px $spacing-lg $spacing-2xl;
+  background: linear-gradient(135deg, #0a0f1a 0%, #0f172a 50%, #1a1f2e 100%);
+  color: white;
+  font-family: "DM Sans", "Inter", sans-serif;
+  position: relative;
+  padding: 120px 24px 100px;
+}
 
-  @media (max-width: 768px) {
-    padding: 80px $spacing-md $spacing-xl;
-  }
+.world-map-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.03;
+  pointer-events: none;
+  filter: invert(1);
+}
+
+.grid-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
 }
 
 /* ===== HEADER ===== */
 .page-header {
-  max-width: 1600px;
-  margin: 0 auto $spacing-2xl;
+  text-align: center;
+  margin-bottom: 48px;
+  position: relative;
+  z-index: 10;
 }
 
-.header-content {
-  margin-bottom: $spacing-xl;
-  text-align: center;
+.collection-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fcd34d;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
 .page-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: $beige;
-  margin-bottom: $spacing-sm;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: serif;
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
 }
 
 .page-subtitle {
-  font-size: 1.125rem;
-  color: $text-muted;
+  font-size: 1.5rem;
   font-weight: 300;
+  margin: 0 0 16px 0;
+  color: #94a3b8;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.page-description {
+  color: #64748b;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* ===== CONTROLS ===== */
+.controls-wrapper {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  position: relative;
+  z-index: 10;
+}
+
 .controls {
   display: flex;
-  gap: $spacing-md;
+  gap: 16px;
   align-items: center;
   flex-wrap: wrap;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+  justify-content: center;
 }
 
 .search-box {
   flex: 1;
+  max-width: 400px;
+  min-width: 280px;
   position: relative;
-  min-width: 250px;
 }
 
 .search-icon {
   position: absolute;
-  left: $spacing-md;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  color: $gray;
+  color: #64748b;
   pointer-events: none;
 }
 
 .search-input {
   width: 100%;
-  padding: $spacing-md $spacing-md $spacing-md 48px;
-  background: $bg-card;
-  border: 2px solid rgba($beige, 0.2);
-  border-radius: $border-radius-md;
-  color: $text-primary;
-  font-size: 1rem;
-  transition: $transition-normal;
-
-  &::placeholder {
-    color: $text-muted;
-  }
-
-  &:focus {
-    outline: none;
-    border-color: rgba($beige, 0.5);
-    background: rgba($bg-card, 1);
-  }
+  padding: 14px 40px 14px 48px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
-.sort-select {
-  padding: $spacing-md $spacing-xl $spacing-md $spacing-lg;
-  background: $bg-card;
-  border: 2px solid rgba($beige, 0.2);
-  border-radius: $border-radius-md;
-  color: $text-primary;
-  font-size: 1rem;
+.search-input::placeholder {
+  color: #64748b;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.1);
+}
+
+.clear-search {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #94a3b8;
+  font-size: 16px;
   cursor: pointer;
-  transition: $transition-normal;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23c9b896'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right $spacing-md center;
-  background-size: 20px;
-
-  &:focus {
-    outline: none;
-    border-color: rgba($beige, 0.5);
-  }
-
-  option {
-    background: $bg-darker;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
 }
 
-/* ===== FILMS CONTAINER ===== */
+.clear-search:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.filter-group {
+  display: flex;
+  gap: 4px;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.filter-btn {
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  color: #94a3b8;
+}
+
+.filter-btn.active {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fcd34d;
+}
+
+/* ===== FILMS GRID ===== */
 .films-container {
-  max-width: 1800px;
+  max-width: 1600px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: $spacing-lg;
-
-  @media (max-width: 1400px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  position: relative;
+  z-index: 10;
 }
 
 .no-results {
   grid-column: 1 / -1;
   text-align: center;
-  padding: $spacing-2xl;
-  color: $text-muted;
-  font-size: 1.25rem;
+  padding: 80px 24px;
+}
+
+.no-results-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.no-results-text {
+  font-size: 1.5rem;
+  color: #94a3b8;
+  margin: 0 0 8px 0;
+}
+
+.no-results-hint {
+  color: #64748b;
+  margin: 0;
 }
 
 /* ===== FILM CARD ===== */
 .film-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
-  background: $bg-card;
-  border: 2px solid rgba($beige, 0.15);
-  border-radius: $border-radius-lg;
-  overflow: hidden;
-  transition: $transition-normal;
-  height: 100%;
-
-  &:hover {
-    border-color: rgba($beige, 0.4);
-    box-shadow: $shadow-lg, 0 0 30px rgba($beige, 0.15);
-  }
 }
 
-/* ===== POSTER ===== */
-.poster-container {
-  position: relative;
-  width: 100%;
-  height: 320px;
-  flex-shrink: 0;
-  overflow: hidden;
+.film-card:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(245, 158, 11, 0.1);
+}
 
-  @media (max-width: 768px) {
-    height: 280px;
-  }
+/* ===== POSTER SECTION ===== */
+.poster-section {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
 }
 
 .poster-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: $transition-slow;
+  transition: transform 0.5s ease;
+}
 
-  .film-card:hover & {
-    transform: scale(1.05);
-  }
+.film-card:hover .poster-image {
+  transform: scale(1.08);
 }
 
 .poster-overlay {
@@ -454,218 +552,288 @@ const viewOnMap = (filmId: string) => {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
+    rgba(10, 15, 26, 1) 0%,
+    rgba(10, 15, 26, 0.4) 40%,
     transparent 100%
   );
   display: flex;
-  align-items: flex-end;
-  padding: $spacing-md;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px;
 }
 
 .rating-badge {
   display: flex;
   align-items: center;
-  gap: $spacing-xs;
-  background: rgba($beige, 0.9);
-  color: $bg-darker;
-  padding: $spacing-xs $spacing-sm;
-  border-radius: $border-radius-sm;
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.star {
+  font-size: 0.85rem;
+}
+
+.rating-value {
+  color: #fcd34d;
   font-weight: 700;
-  font-size: 0.875rem;
-  backdrop-filter: blur(8px);
+  font-size: 0.9rem;
 }
 
-.star-icon {
-  width: 16px;
-  height: 16px;
+.year-badge {
+  background: rgba(239, 68, 68, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: white;
 }
 
-/* ===== FILM INFO ===== */
-.film-info {
-  flex: 1;
-  padding: $spacing-md;
+/* ===== CONTENT SECTION ===== */
+.content-section {
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: $spacing-sm;
-  min-width: 0;
+  gap: 16px;
+  flex: 1;
 }
 
-.film-header {
-  margin-bottom: $spacing-xs;
+.content-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .film-title {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: $beige;
-  margin-bottom: $spacing-xs;
-  font-family: serif;
+  color: white;
+  margin: 0;
   line-height: 1.3;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
 }
 
 .film-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: $spacing-xs;
-  color: $text-secondary;
-  font-size: 0.75rem;
-}
-
-.meta-item {
-  display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #94a3b8;
 }
 
-.meta-icon {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
+.meta-divider {
+  opacity: 0.5;
 }
 
-.event-years {
-  color: $beige-light;
+.meta-period {
+  color: #fcd34d;
   font-weight: 600;
 }
 
 .film-synopsis {
-  color: $text-secondary;
+  color: #94a3b8;
+  font-size: 0.9rem;
   line-height: 1.6;
-  font-size: 0.875rem;
-  flex: 1;
+  margin: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* ===== LOCATIONS ===== */
-.film-locations {
+/* ===== LOCATIONS SECTION ===== */
+.locations-section {
   margin-top: auto;
 }
 
-.locations-title {
-  font-size: 0.625rem;
+.locations-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.locations-icon {
+  font-size: 0.85rem;
+}
+
+.locations-label {
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: $gray;
-  margin-bottom: 6px;
+  color: #64748b;
   font-weight: 600;
 }
 
 .locations-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  gap: 8px;
 }
 
-.location-item {
+.location-tag {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 8px;
-  background: rgba($beige, 0.1);
-  border: 1px solid rgba($beige, 0.2);
-  border-radius: $border-radius-sm;
-  font-size: 0.75rem;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 0.8rem;
   cursor: pointer;
-  transition: $transition-fast;
-  padding-right: 6px;
-
-  &:hover {
-    background: rgba($beige, 0.2);
-    border-color: rgba($beige, 0.4);
-    
-    .location-map-icon {
-      opacity: 1;
-      transform: scale(1.1);
-      color: $beige;
-    }
-  }
+  transition: all 0.2s ease;
 }
 
-.location-map-icon {
-  width: 12px;
-  height: 12px;
-  opacity: 0.4;
-  transition: all $transition-fast;
-  color: $text-muted;
+.location-tag:hover {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.3);
 }
 
-.location-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: $gray;
-  flex-shrink: 0;
-
-  &.primary {
-    background: $danger;
-  }
+.location-tag.primary {
+  border-color: rgba(239, 68, 68, 0.3);
 }
 
-.location-name {
-  color: $text-primary;
-  font-weight: 500;
+.location-tag.primary:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.5);
 }
 
-/* ===== ACTIONS ===== */
-.film-actions {
-  margin-top: $spacing-sm;
-  padding-top: 16px;
-  border-top: 1px solid rgba($beige, 0.1);
-}
-
-.wiki-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: $spacing-xs $spacing-md;
-  background: linear-gradient(
-    135deg,
-    rgba($beige, 0.15) 0%,
-    rgba($beige, 0.1) 100%
-  );
-  border: 2px solid rgba($beige, 0.3);
-  border-radius: $border-radius-md;
-  color: $beige;
-  font-weight: 600;
-  font-size: 0.75rem;
-  text-decoration: none;
-  transition: $transition-normal;
-  cursor: pointer;
-
-  &:hover {
-    background: linear-gradient(
-      135deg,
-      rgba($beige, 0.25) 0%,
-      rgba($beige, 0.2) 100%
-    );
-    border-color: rgba($beige, 0.5);
-    box-shadow: 0 4px 12px rgba($beige, 0.2);
-  }
-
-  &:active {
-    transform: scale(0.98);
-  }
-}
-
-.button-icon {
+.map-icon {
   width: 14px;
   height: 14px;
-  flex-shrink: 0;
+  opacity: 0.5;
+  transition: all 0.2s ease;
 }
 
-/* Custom scrollbar */
-* {
-  @include custom-scrollbar;
+.location-tag:hover .map-icon {
+  opacity: 1;
+}
+
+/* ===== ACTIONS SECTION ===== */
+.actions-section {
+  display: flex;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.wiki-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+.wiki-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.map-btn {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fcd34d;
+}
+
+.map-btn:hover {
+  background: rgba(245, 158, 11, 0.25);
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+}
+
+.action-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===== RESULTS INFO ===== */
+.results-info {
+  text-align: center;
+  margin-top: 48px;
+  position: relative;
+  z-index: 10;
+}
+
+.info-text {
+  font-size: 0.85rem;
+  color: #64748b;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== ANIMATIONS ===== */
+.film-card-enter-active {
+  transition: all 0.4s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+.film-card-leave-active {
+  transition: all 0.3s ease;
+}
+
+.film-card-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.film-card-leave-to {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .films-page {
+    padding: 100px 16px 80px;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: none;
+  }
+
+  .filter-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .films-container {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
