@@ -1,14 +1,14 @@
 <template>
-  <header class="app-header">
+  <header class="app-header" :class="{ 'menu-open': isMenuOpen }">
     <div class="header-content">
       <!-- Logo -->
-      <NuxtLink to="/" class="logo">
+      <NuxtLink to="/" class="logo" @click="closeMenu">
         <span class="logo-ww2">WW2</span>
         <span class="logo-text">MAP FILMS</span>
       </NuxtLink>
 
-      <!-- Navigation -->
-      <nav class="nav-menu">
+      <!-- Desktop Navigation -->
+      <nav class="nav-menu desktop-nav">
         <NuxtLink to="/" class="nav-item" :class="{ active: currentRoute === '/' }">
           <span class="nav-icon">🗺️</span>
           <span class="nav-text">MAP</span>
@@ -26,16 +26,124 @@
           <span class="nav-text">ABOUT</span>
         </NuxtLink>
       </nav>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button 
+        class="hamburger-btn" 
+        @click="toggleMenu"
+        :aria-expanded="isMenuOpen"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
     </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <Transition name="fade">
+      <div v-if="isMenuOpen" class="mobile-overlay" @click="closeMenu"></div>
+    </Transition>
+
+    <!-- Mobile Navigation Menu -->
+    <Transition name="slide-down">
+      <nav v-if="isMenuOpen" class="mobile-nav">
+        <NuxtLink 
+          to="/" 
+          class="mobile-nav-item" 
+          :class="{ active: currentRoute === '/' }"
+          @click="closeMenu"
+        >
+          <span class="mobile-nav-icon">🗺️</span>
+          <span class="mobile-nav-text">Map</span>
+          <span class="mobile-nav-desc">Explore WW2 films on the map</span>
+        </NuxtLink>
+        <NuxtLink 
+          to="/films" 
+          class="mobile-nav-item" 
+          :class="{ active: currentRoute === '/films' }"
+          @click="closeMenu"
+        >
+          <span class="mobile-nav-icon">🎬</span>
+          <span class="mobile-nav-text">Films</span>
+          <span class="mobile-nav-desc">Browse film collection</span>
+        </NuxtLink>
+        <NuxtLink 
+          to="/timeline" 
+          class="mobile-nav-item" 
+          :class="{ active: currentRoute === '/timeline' }"
+          @click="closeMenu"
+        >
+          <span class="mobile-nav-icon">⏱️</span>
+          <span class="mobile-nav-text">Timeline</span>
+          <span class="mobile-nav-desc">Events & film releases</span>
+        </NuxtLink>
+        <NuxtLink 
+          to="/about" 
+          class="mobile-nav-item" 
+          :class="{ active: currentRoute === '/about' }"
+          @click="closeMenu"
+        >
+          <span class="mobile-nav-icon">ℹ️</span>
+          <span class="mobile-nav-text">About</span>
+          <span class="mobile-nav-desc">Project information</span>
+        </NuxtLink>
+      </nav>
+    </Transition>
   </header>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const currentRoute = computed(() => route.path);
+const isMenuOpen = ref(false);
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+  if (isMenuOpen.value) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+};
+
+const closeMenu = () => {
+  isMenuOpen.value = false;
+  document.body.style.overflow = '';
+};
+
+// Close menu on route change
+watch(currentRoute, () => {
+  closeMenu();
+});
+
+// Close menu on escape key
+const handleEscape = (e: KeyboardEvent) => {
+  if (e.key === 'Escape' && isMenuOpen.value) {
+    closeMenu();
+  }
+};
+
+// Close menu on resize to desktop
+const handleResize = () => {
+  if (window.innerWidth > 768 && isMenuOpen.value) {
+    closeMenu();
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('keydown', handleEscape);
+  window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleEscape);
+  window.removeEventListener('resize', handleResize);
+  document.body.style.overflow = '';
+});
 </script>
 
 <style lang="scss" scoped>
@@ -66,6 +174,16 @@ const currentRoute = computed(() => route.path);
   padding: 0 $spacing-xl;
   max-width: 100%;
   margin: 0 auto;
+  height: 60px;
+
+  @include mobile {
+    padding: 0 $spacing-md;
+    height: 56px;
+  }
+
+  @include mobile-small {
+    padding: 0 $spacing-sm;
+  }
 }
 
 // Logo
@@ -88,6 +206,14 @@ const currentRoute = computed(() => route.path);
   font-weight: 700;
   color: $beige;
   letter-spacing: 0px;
+
+  @include mobile {
+    font-size: 20px;
+  }
+
+  @include mobile-small {
+    font-size: 18px;
+  }
 }
 
 .logo-text {
@@ -96,14 +222,26 @@ const currentRoute = computed(() => route.path);
   color: rgba(255, 255, 255, 0.9);
   letter-spacing: 0px;
   text-transform: uppercase;
+
+  @include mobile {
+    font-size: 20px;
+  }
+
+  @include mobile-small {
+    font-size: 18px;
+  }
 }
 
-// Navigation
-.nav-menu {
+// Desktop Navigation
+.desktop-nav {
   display: flex;
   align-items: center;
   gap: $spacing-xl;
   height: 100%;
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .nav-item {
@@ -158,54 +296,176 @@ const currentRoute = computed(() => route.path);
       background: linear-gradient(90deg, transparent, $beige, transparent);
     }
   }
-
-  &[disabled] {
-    opacity: 0.3;
-    cursor: not-allowed;
-    
-    &:hover {
-      transform: none;
-    }
-  }
 }
 
 .nav-text {
   font-size: 14px;
 }
 
-// Responsive
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    gap: $spacing-md;
-    padding: $spacing-md;
+// Hamburger Button
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: $z-modal + 10;
+
+  @include mobile {
+    display: flex;
+  }
+}
+
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transform-origin: center;
+
+  &:nth-child(1) {
+    margin-bottom: 6px;
   }
 
-  .nav-menu {
-    width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  &:nth-child(2) {
+    margin-bottom: 6px;
+  }
+}
+
+// Hamburger Animation when open
+.menu-open {
+  .hamburger-line {
+    &:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+      background: $beige;
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    &:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+      background: $beige;
+    }
+  }
+}
+
+// Mobile Overlay
+.mobile-overlay {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: $z-modal;
+  backdrop-filter: blur(4px);
+}
+
+// Mobile Navigation
+.mobile-nav {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 25, 30, 0.98) 0%,
+    rgba(15, 20, 25, 0.96) 100%
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(180%);
+  z-index: $z-modal + 5;
+  padding: $spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.mobile-nav-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: $border-radius-md;
+  text-decoration: none;
+  transition: all $transition-normal;
+
+  &:hover, &:active {
+    background: rgba($beige, 0.1);
+    border-color: rgba($beige, 0.3);
   }
 
-  .nav-item {
-    padding: $spacing-xs $spacing-md;
-    font-size: 12px;
-  }
+  &.active {
+    background: rgba($beige, 0.15);
+    border-color: rgba($beige, 0.4);
 
-  .nav-text {
+    .mobile-nav-text {
+      color: $beige;
+    }
+  }
+}
+
+.mobile-nav-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.mobile-nav-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: $text-primary;
+}
+
+.mobile-nav-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: $text-muted;
+  margin-left: auto;
+
+  @include mobile-small {
     display: none;
   }
+}
 
-  .nav-icon {
-    display: block !important;
-  }
+// Transitions
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
 
-  .logo-ww2 {
-    font-size: 20px;
-  }
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 
-  .logo-text {
-    font-size: 20px;
-  }
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              opacity 0.3s ease;
+}
+
+.slide-down-enter-from,
+.slide-down-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.slide-down-enter-to,
+.slide-down-leave-from {
+  transform: translateY(0);
+  opacity: 1;
 }
 </style>

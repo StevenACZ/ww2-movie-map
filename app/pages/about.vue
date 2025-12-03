@@ -191,6 +191,14 @@
   font-family: "Inter", sans-serif;
   position: relative;
   padding: 120px $spacing-lg 80px;
+
+  @include mobile {
+    padding: 80px $spacing-md 60px;
+  }
+
+  @include mobile-small {
+    padding: 70px $spacing-sm 40px;
+  }
 }
 
 .world-map-bg {
@@ -234,6 +242,10 @@
 .hero-section {
   text-align: center;
   margin-bottom: $spacing-2xl;
+
+  @include mobile {
+    margin-bottom: $spacing-xl;
+  }
 }
 
 .logo-showcase {
@@ -241,6 +253,13 @@
   align-items: baseline;
   gap: $spacing-sm;
   margin-bottom: $spacing-md;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include mobile {
+    gap: $spacing-xs;
+    margin-bottom: $spacing-sm;
+  }
 }
 
 .logo-ww2 {
@@ -249,6 +268,15 @@
   color: $beige;
   letter-spacing: -2px;
   text-shadow: 0 0 40px rgba($beige, 0.3);
+
+  @include mobile {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+
+  @include mobile-small {
+    font-size: 2rem;
+  }
 }
 
 .logo-text {
@@ -256,6 +284,15 @@
   font-weight: 300;
   color: $gray;
   letter-spacing: 2px;
+
+  @include mobile {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  @include mobile-small {
+    font-size: 2rem;
+  }
 }
 
 .tagline {
@@ -264,11 +301,25 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   margin: 0;
+
+  @include mobile {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+
+  @include mobile-small {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
 }
 
 // ===== CONTENT SECTIONS =====
 .content-section {
   margin-bottom: $spacing-2xl;
+
+  @include mobile {
+    margin-bottom: $spacing-xl;
+  }
 }
 
 .section-title {
@@ -278,6 +329,15 @@
   margin: 0 0 $spacing-md 0;
   text-align: center;
   letter-spacing: -0.5px;
+
+  @include mobile {
+    font-size: 1.35rem;
+    margin-bottom: $spacing-sm;
+  }
+
+  @include mobile-small {
+    font-size: 1.2rem;
+  }
 }
 
 .section-text {
@@ -286,6 +346,15 @@
   line-height: 1.8;
   text-align: center;
   margin: 0;
+
+  @include mobile {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  @include mobile-small {
+    font-size: 0.9rem;
+  }
 
   strong {
     color: $beige;
@@ -299,6 +368,12 @@
   grid-template-columns: repeat(3, 1fr);
   gap: $spacing-md;
   margin-top: $spacing-lg;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-sm;
+    margin-top: $spacing-md;
+  }
 }
 
 .feature-card {
@@ -309,10 +384,22 @@
   text-align: center;
   transition: all $transition-normal;
 
+  @include mobile {
+    padding: $spacing-md;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: $spacing-md;
+  }
+
   &:hover {
     border-color: rgba($beige, 0.3);
     transform: translateY(-4px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    @include mobile {
+      transform: none;
+    }
   }
 }
 
@@ -321,6 +408,13 @@
   height: 48px;
   margin: 0 auto $spacing-md;
   color: $beige;
+
+  @include mobile {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    flex-shrink: 0;
+  }
 
   svg {
     width: 100%;
@@ -333,6 +427,11 @@
   font-weight: 600;
   color: $text-primary;
   margin: 0 0 $spacing-sm 0;
+
+  @include mobile {
+    font-size: 0.95rem;
+    margin: 0 0 $spacing-xs 0;
+  }
 }
 
 .feature-card p {
@@ -340,6 +439,10 @@
   color: $text-muted;
   margin: 0;
   line-height: 1.5;
+
+  @include mobile {
+    font-size: 0.8rem;
+  }
 }
 
 // ===== RECOMMENDATIONS =====
@@ -361,12 +464,24 @@
   font-weight: 600;
   text-decoration: none;
   transition: all $transition-normal;
+  @include touch-target;
+
+  @include mobile {
+    padding: 14px $spacing-lg;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+  }
 
   &:hover {
     background: rgba($beige, 0.25);
     border-color: $beige;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba($beige, 0.2);
+
+    @include mobile {
+      transform: none;
+    }
   }
 }
 
@@ -390,6 +505,10 @@
     transparent
   );
   margin: $spacing-2xl 0;
+
+  @include mobile {
+    margin: $spacing-xl 0;
+  }
 }
 
 // ===== CREDITS SECTION =====
@@ -406,6 +525,11 @@
   border-radius: $border-radius-lg;
   padding: $spacing-md $spacing-xl;
   margin-bottom: $spacing-xl;
+
+  @include mobile {
+    padding: $spacing-md;
+    margin-bottom: $spacing-lg;
+  }
 }
 
 .creator-avatar {
@@ -414,6 +538,11 @@
   border: 2px solid rgba($beige, 0.3);
   border-radius: 50%;
   object-fit: cover;
+
+  @include mobile {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .creator-info {
@@ -425,12 +554,20 @@
   font-weight: 700;
   color: $text-primary;
   margin: 0;
+
+  @include mobile {
+    font-size: 1.1rem;
+  }
 }
 
 .creator-role {
   font-size: 0.9rem;
   color: $text-muted;
   margin: $spacing-xs 0 0 0;
+
+  @include mobile {
+    font-size: 0.85rem;
+  }
 }
 
 // ===== LINKS GRID =====
@@ -450,6 +587,11 @@
   padding: $spacing-md $spacing-lg;
   text-decoration: none;
   transition: all $transition-normal;
+
+  @include mobile {
+    padding: $spacing-md;
+    gap: $spacing-sm;
+  }
 
   &:hover {
     border-color: rgba($beige, 0.3);
@@ -475,9 +617,19 @@
   justify-content: center;
   flex-shrink: 0;
 
+  @include mobile {
+    width: 40px;
+    height: 40px;
+  }
+
   svg {
     width: 22px;
     height: 22px;
+
+    @include mobile {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &.github-icon {
@@ -499,6 +651,7 @@
 .link-content {
   flex: 1;
   text-align: left;
+  min-width: 0;
 }
 
 .link-label {
@@ -506,6 +659,10 @@
   font-size: 1rem;
   font-weight: 600;
   color: $text-primary;
+
+  @include mobile {
+    font-size: 0.95rem;
+  }
 }
 
 .link-url {
@@ -513,6 +670,10 @@
   font-size: 0.85rem;
   color: $text-muted;
   margin-top: 2px;
+
+  @include mobile {
+    font-size: 0.8rem;
+  }
 }
 
 .link-arrow {
@@ -521,6 +682,7 @@
   color: $text-muted;
   opacity: 0.5;
   transition: all $transition-fast;
+  flex-shrink: 0;
 }
 
 // ===== FOOTER =====
@@ -528,6 +690,11 @@
   text-align: center;
   margin-top: $spacing-2xl;
   padding-top: $spacing-xl;
+
+  @include mobile {
+    margin-top: $spacing-xl;
+    padding-top: $spacing-lg;
+  }
 }
 
 .footer-quote {
@@ -536,60 +703,23 @@
   color: $text-secondary;
   margin: 0 0 $spacing-sm 0;
   line-height: 1.6;
+
+  @include mobile {
+    font-size: 0.95rem;
+  }
+
+  @include mobile-small {
+    font-size: 0.9rem;
+  }
 }
 
 .footer-author {
   font-size: 0.9rem;
   color: $text-muted;
   margin: 0;
-}
 
-// ===== RESPONSIVE =====
-@include mobile {
-  .about-page {
-    padding: 100px $spacing-md 60px;
-  }
-
-  .logo-ww2,
-  .logo-text {
-    font-size: 2.5rem;
-  }
-
-  .tagline {
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .section-text {
-    font-size: 1rem;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: $spacing-md;
-  }
-
-  .creator-card {
-    padding: $spacing-md;
-  }
-
-  .link-card {
-    padding: $spacing-md;
-  }
-
-  .link-icon {
-    width: 40px;
-    height: 40px;
-
-    svg {
-      width: 18px;
-      height: 18px;
-    }
+  @include mobile {
+    font-size: 0.85rem;
   }
 }
 </style>
-

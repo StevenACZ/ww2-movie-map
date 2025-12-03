@@ -98,7 +98,13 @@ let animationFrameId: number | null = null;
 const MAP_CENTER: [number, number] = [50, 15]; // Europe center
 const ASIA_CENTER: [number, number] = [25, 120]; // Asia center
 const MAP_ZOOM = 4;
+const MOBILE_ZOOM = 3; // Slightly zoomed out on mobile
 const PAN_SPEED = 10;
+
+// Check if mobile
+const isMobile = () => {
+  return typeof window !== 'undefined' && window.innerWidth <= 768;
+};
 
 /**
  * Initialize Leaflet and create map
@@ -110,13 +116,18 @@ onMounted(async () => {
   L = leafletModule.default || leafletModule;
   await import("leaflet/dist/leaflet.css");
 
-  // Initialize map
+  // Initialize map with mobile-friendly settings
+  const initialZoom = isMobile() ? MOBILE_ZOOM : MAP_ZOOM;
+  
   map.value = L.map("map", {
     center: MAP_CENTER,
-    zoom: MAP_ZOOM,
+    zoom: initialZoom,
     zoomControl: false,
     attributionControl: true,
     keyboard: false,
+    tap: true, // Better touch handling
+    touchZoom: true,
+    dragging: true,
   });
 
   // Add CartoDB Dark Matter tile layer
@@ -187,13 +198,14 @@ const handleZoomUpdates = () => {
   if (!map.value) return;
   const zoom = map.value.getZoom();
 
-  // Marker scaling based on zoom level
-  const scale = 1 + (zoom - 4) * 0.15;
+  // Marker scaling based on zoom level - smaller on mobile
+  const baseScale = isMobile() ? 0.8 : 1;
+  const scale = baseScale + (zoom - 4) * 0.15;
   const mapContainer = document.querySelector(".map-container") as HTMLElement;
   if (mapContainer) {
     mapContainer.style.setProperty(
       "--marker-scale",
-      Math.max(1, scale).toString()
+      Math.max(0.7, scale).toString()
     );
   }
 
@@ -211,6 +223,10 @@ const handleZoomUpdates = () => {
 const createAllMarkers = () => {
   if (!map.value || !L) return;
 
+  // Adjust marker size for mobile
+  const markerWidth = isMobile() ? 32 : 40;
+  const markerHeight = isMobile() ? 48 : 60;
+
   // Reverse to give earlier films higher z-index
   filmsData.films.forEach((film: Film, filmIndex: number) => {
     film.locations.forEach((location) => {
@@ -219,9 +235,9 @@ const createAllMarkers = () => {
       const icon = L.divIcon({
         className: "custom-film-marker",
         html: `<div class="film-marker-content" style="background-image: url('${film.poster}'); box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);"></div>`,
-        iconSize: [40, 60],
-        iconAnchor: [20, 60],
-        popupAnchor: [0, -60],
+        iconSize: [markerWidth, markerHeight],
+        iconAnchor: [markerWidth / 2, markerHeight],
+        popupAnchor: [0, -markerHeight],
       });
 
       const coords = [location.coordinates[1], location.coordinates[0]];
@@ -307,7 +323,10 @@ const selectFilm = (film: Film, location: Location) => {
     }
   ).addTo(map.value);
 
-  map.value.flyTo([location.coordinates[1], location.coordinates[0]], 12, {
+  // Adjust zoom level for mobile
+  const targetZoom = isMobile() ? 10 : 12;
+  
+  map.value.flyTo([location.coordinates[1], location.coordinates[0]], targetZoom, {
     duration: 2.0,
     easeLinearity: 0.25,
   });
@@ -319,7 +338,8 @@ const resetView = () => {
   clearSelection(); // Clear selection when resetting view
   const center = map.value.getCenter();
   const targetCenter = center.lng > 60 ? ASIA_CENTER : MAP_CENTER;
-  map.value.flyTo(targetCenter, MAP_ZOOM, { duration: 1.5 });
+  const targetZoom = isMobile() ? MOBILE_ZOOM : MAP_ZOOM;
+  map.value.flyTo(targetCenter, targetZoom, { duration: 1.5 });
 };
 
 const clearSelection = () => {
@@ -426,6 +446,12 @@ const animateMap = () => {
   &:active {
     transform: translateY(0);
   }
+
+  @include mobile {
+    top: 130px;
+    width: 44px;
+    height: 44px;
+  }
 }
 
 /* Leaflet Zoom Controls Custom Styles */
@@ -436,6 +462,10 @@ const animateMap = () => {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
   margin-top: 80px !important;
   backdrop-filter: blur(10px);
+
+  @include mobile {
+    margin-top: 70px !important;
+  }
 
   a {
     background: linear-gradient(
@@ -450,6 +480,12 @@ const animateMap = () => {
     width: 34px !important;
     height: 34px !important;
     line-height: 34px !important;
+
+    @include mobile {
+      width: 40px !important;
+      height: 40px !important;
+      line-height: 40px !important;
+    }
 
     &:hover {
       background: linear-gradient(
@@ -487,6 +523,11 @@ const animateMap = () => {
   transform: scale(var(--marker-scale));
   transform-origin: bottom center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+  @include mobile {
+    border-width: 2px;
+    border-radius: 4px;
+  }
 
   &:hover {
     transform: scale(calc(var(--marker-scale) * 1.25));
@@ -537,6 +578,13 @@ const animateMap = () => {
   text-align: center;
   pointer-events: none;
 
+  @include mobile {
+    top: 70px;
+    min-width: 200px;
+    max-width: calc(100vw - 40px);
+    padding: 10px 16px;
+  }
+
   .film-title {
     font-family: 'Cinzel', serif;
     font-size: 22px;
@@ -546,6 +594,10 @@ const animateMap = () => {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8),
                  0 0 20px rgba($beige, 0.4);
     letter-spacing: 0.5px;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   .film-year {
@@ -555,6 +607,10 @@ const animateMap = () => {
     margin: 0;
     font-weight: 500;
     letter-spacing: 2px;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 }
 
@@ -577,6 +633,22 @@ const animateMap = () => {
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.9),
               inset 0 1px 0 rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(24px) saturate(180%);
+
+  @include mobile {
+    top: auto;
+    bottom: 180px;
+    left: $spacing-sm;
+    right: $spacing-sm;
+    width: auto;
+    max-width: none;
+    max-height: 280px;
+    border-radius: 16px;
+  }
+
+  @include mobile-small {
+    bottom: 160px;
+    max-height: 250px;
+  }
 }
 
 .close-btn {
@@ -597,6 +669,12 @@ const animateMap = () => {
   z-index: 10;
   border-radius: 4px;
 
+  @include mobile {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
   &:hover {
     background: rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 1);
@@ -607,6 +685,11 @@ const animateMap = () => {
   display: flex;
   gap: $spacing-lg;
   padding: $spacing-lg;
+
+  @include mobile {
+    gap: $spacing-md;
+    padding: $spacing-md;
+  }
 }
 
 .film-poster {
@@ -616,6 +699,17 @@ const animateMap = () => {
   border-radius: 6px;
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.1);
+
+  @include mobile {
+    width: 90px;
+    height: 135px;
+    border-radius: 8px;
+  }
+
+  @include mobile-small {
+    width: 80px;
+    height: 120px;
+  }
 
   img {
     width: 100%;
@@ -632,6 +726,11 @@ const animateMap = () => {
   padding-right: $spacing-xl;
   min-width: 0;
 
+  @include mobile {
+    padding-right: $spacing-md;
+    gap: $spacing-xs;
+  }
+
   .film-title {
     font-family: 'Inter', sans-serif;
     font-size: 24px;
@@ -639,6 +738,14 @@ const animateMap = () => {
     color: $beige;
     margin: 0;
     line-height: 1.2;
+
+    @include mobile {
+      font-size: 18px;
+    }
+
+    @include mobile-small {
+      font-size: 16px;
+    }
   }
 
   .film-year {
@@ -647,6 +754,10 @@ const animateMap = () => {
     color: rgba(255, 255, 255, 0.6);
     margin: 0;
     font-weight: 500;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   .film-synopsis {
@@ -659,6 +770,13 @@ const animateMap = () => {
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+
+    @include mobile {
+      font-size: 13px;
+      line-height: 1.5;
+      -webkit-line-clamp: 3;
+      margin: $spacing-xs 0;
+    }
   }
 }
 
@@ -668,6 +786,10 @@ const animateMap = () => {
   margin-top: auto;
   margin-bottom: 5px;
   padding-top: $spacing-sm;
+
+  @include mobile {
+    padding-top: $spacing-xs;
+  }
 }
 
 .film-rating {
@@ -679,9 +801,17 @@ const animateMap = () => {
   font-weight: 600;
   color: $beige;
 
+  @include mobile {
+    font-size: 14px;
+  }
+
   .rating-label {
     font-size: 20px;
     line-height: 1;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   .rating-value {
@@ -698,50 +828,28 @@ const animateMap = () => {
 .slide-in-enter-from {
   transform: translateX(100%);
   opacity: 0;
+
+  @include mobile {
+    transform: translateY(100%);
+  }
 }
 
 .slide-in-leave-to {
   transform: translateX(100%);
   opacity: 0;
+
+  @include mobile {
+    transform: translateY(100%);
+  }
 }
 
 .slide-in-enter-to,
 .slide-in-leave-from {
   transform: translateX(0);
   opacity: 1;
-}
 
-/* Responsive */
-@media (max-width: 768px) {
-  .film-info-panel {
-    top: 70px;
-    right: 15px;
-    left: 15px;
-    width: auto;
-    max-width: none;
-  }
-
-  .film-info-content {
-    flex-direction: column;
-    gap: $spacing-md;
-  }
-
-  .film-poster {
-    width: 120px;
-    height: 180px;
-    margin: 0 auto;
-  }
-
-  .film-details {
-    padding-right: 0;
-
-    .film-title {
-      font-size: 20px;
-    }
-
-    .film-synopsis {
-      -webkit-line-clamp: 4;
-    }
+  @include mobile {
+    transform: translateY(0);
   }
 }
 
