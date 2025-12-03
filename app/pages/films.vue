@@ -278,8 +278,8 @@ const viewOnMap = (filmId: string) => {
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/scss/variables' as *;
-@use '@/assets/scss/mixins' as *;
+@use "@/assets/scss/variables" as *;
+@use "@/assets/scss/mixins" as *;
 
 .films-page {
   min-height: 100vh;
@@ -290,7 +290,7 @@ const viewOnMap = (filmId: string) => {
     rgba(25, 30, 35, 0.95) 100%
   );
   color: $text-primary;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   position: relative;
   padding: 120px $spacing-lg 100px;
 }
@@ -351,7 +351,11 @@ const viewOnMap = (filmId: string) => {
   font-size: 3.5rem;
   font-weight: 800;
   margin: 0 0 $spacing-sm 0;
-  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.85) 100%);
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.85) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
