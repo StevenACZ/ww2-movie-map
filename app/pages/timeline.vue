@@ -29,7 +29,56 @@
       </div>
     </div>
 
-    <div class="timeline-container" ref="timelineContainer">
+    <!-- Mobile Timeline (Card-based) -->
+    <div class="mobile-timeline" v-if="isMobile">
+      <TransitionGroup name="mobile-card">
+        <!-- Events -->
+        <div
+          v-for="event in mobileTimelineItems.events"
+          :key="'event-' + event.id"
+          class="mobile-timeline-card event-card"
+        >
+          <div class="mobile-card-icon">{{ event.icon || "⚔️" }}</div>
+          <div class="mobile-card-content">
+            <span class="mobile-card-date">{{ formatDate(event.date) }}</span>
+            <h3>{{ event.title }}</h3>
+          </div>
+          <div class="mobile-card-badge event-badge">Event</div>
+        </div>
+
+        <!-- Films -->
+        <div
+          v-for="film in mobileTimelineItems.films"
+          :key="'film-' + film.id"
+          class="mobile-timeline-card film-card"
+          @click="toggleFilmPopup(film)"
+        >
+          <div class="mobile-card-icon">🎬</div>
+          <div class="mobile-card-content">
+            <span class="mobile-card-date">
+              {{ film.year }} • {{ formatEventPeriod(film) }}
+            </span>
+            <h3>{{ film.title }}</h3>
+          </div>
+          <div class="mobile-card-badge film-badge">Film</div>
+        </div>
+      </TransitionGroup>
+
+      <!-- Empty State -->
+      <div
+        v-if="
+          mobileTimelineItems.events.length === 0 &&
+          mobileTimelineItems.films.length === 0
+        "
+        class="empty-state"
+      >
+        <span class="empty-icon">📅</span>
+        <p>No events or films in this period</p>
+      </div>
+    </div>
+
+    <!-- Desktop Timeline -->
+    <div class="timeline-container" ref="timelineContainer" v-if="!isMobile">
       <!-- Timeline Axis (Center) -->
       <div class="timeline-axis">
         <div class="axis-line"></div>
@@ -149,6 +198,39 @@
       </div>
     </div>
 
+    <!-- Mobile Film Popup Modal -->
+    <Transition name="modal">
+      <div
+        v-if="mobileSelectedFilm"
+        class="mobile-film-modal"
+        @click.self="mobileSelectedFilm = null"
+      >
+        <div class="mobile-modal-content">
+          <button class="mobile-modal-close" @click="mobileSelectedFilm = null">
+            ×
+          </button>
+          <div class="mobile-modal-body">
+            <img
+              :src="mobileSelectedFilm.poster"
+              :alt="mobileSelectedFilm.title"
+              class="mobile-modal-poster"
+            />
+            <div class="mobile-modal-info">
+              <h3>{{ mobileSelectedFilm.title }}</h3>
+              <p class="mobile-modal-year">{{ mobileSelectedFilm.year }}</p>
+              <div class="mobile-modal-meta">
+                <span class="imdb-rating"
+                  >⭐ {{ mobileSelectedFilm.imdbRating }}</span
+                >
+                <span class="country">{{ mobileSelectedFilm.country }}</span>
+              </div>
+              <p class="mobile-modal-desc">{{ mobileSelectedFilm.synopsis }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Transition>
+
     <!-- Bottom Navigation -->
     <div class="timeline-nav">
       <button
@@ -196,7 +278,9 @@ import { ref, computed, onMounted, onUnmounted } from "vue";
 const events = ref([]);
 const films = ref([]);
 const selectedFilm = ref(null);
+const mobileSelectedFilm = ref(null);
 const currentPeriodIndex = ref(0); // Start with first period (1936-1938)
+const isMobile = ref(false);
 
 // Películas seleccionadas para mostrar en el timeline (IDs del JSON principal)
 const timelineFilmIds = [
@@ -235,8 +319,27 @@ const visibleYears = computed(() => {
   return arr;
 });
 
+// Mobile timeline items (sorted by date)
+const mobileTimelineItems = computed(() => {
+  const filteredEvents = positionedEvents.value;
+  const filteredFilms = positionedFilms.value;
+
+  return {
+    events: filteredEvents,
+    films: filteredFilms,
+  };
+});
+
+// Check mobile
+const checkMobile = () => {
+  isMobile.value = window.innerWidth <= 768;
+};
+
 // Load data
 onMounted(async () => {
+  checkMobile();
+  window.addEventListener("resize", checkMobile);
+
   try {
     const eventsResponse = await fetch("/data/historical-events.json");
     const eventsData = await eventsResponse.json();
@@ -278,6 +381,7 @@ const handleClickOutside = (event) => {
 // Limpiar event listener
 onUnmounted(() => {
   document.removeEventListener("click", handleClickOutside);
+  window.removeEventListener("resize", checkMobile);
 });
 
 // Positioning Logic - Cálculo preciso basado en fecha exacta
@@ -468,6 +572,10 @@ const formatEventPeriod = (film) => {
 const selectFilm = (film) => {
   selectedFilm.value = selectedFilm.value?.id === film.id ? null : film;
 };
+
+const toggleFilmPopup = (film) => {
+  mobileSelectedFilm.value = film;
+};
 </script>
 
 <style lang="scss" scoped>
@@ -487,6 +595,11 @@ const selectFilm = (film) => {
   overflow-x: hidden;
   position: relative;
   padding-top: 120px;
+
+  @include mobile {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
 }
 
 .world-map-bg {
@@ -526,6 +639,11 @@ const selectFilm = (film) => {
   z-index: $z-dropdown;
   padding: 0 $spacing-lg;
 
+  @include mobile {
+    margin-bottom: $spacing-lg;
+    padding: 0 $spacing-md;
+  }
+
   h1 {
     font-size: 3rem;
     font-weight: 800;
@@ -539,6 +657,14 @@ const selectFilm = (film) => {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -1px;
+
+    @include mobile {
+      font-size: 1.75rem;
+    }
+
+    @include mobile-small {
+      font-size: 1.5rem;
+    }
   }
 
   h2 {
@@ -548,6 +674,11 @@ const selectFilm = (film) => {
     color: $text-secondary;
     letter-spacing: 4px;
     text-transform: uppercase;
+
+    @include mobile {
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
   }
 }
 
@@ -562,12 +693,23 @@ const selectFilm = (film) => {
   color: $beige;
   letter-spacing: 2px;
   margin-bottom: $spacing-md;
+
+  @include mobile {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    letter-spacing: 1px;
+  }
 }
 
 .subtitle {
   color: $text-muted;
   font-size: 1rem;
   margin: 0;
+
+  @include mobile {
+    font-size: 0.85rem;
+    display: none;
+  }
 }
 
 // Legend
@@ -578,6 +720,11 @@ const selectFilm = (film) => {
   margin-bottom: $spacing-lg;
   position: relative;
   z-index: $z-dropdown;
+
+  @include mobile {
+    gap: $spacing-lg;
+    margin-bottom: $spacing-md;
+  }
 }
 
 .legend-item {
@@ -586,12 +733,22 @@ const selectFilm = (film) => {
   gap: $spacing-sm;
   font-size: 0.85rem;
   color: $text-secondary;
+
+  @include mobile {
+    font-size: 0.75rem;
+    gap: $spacing-xs;
+  }
 }
 
 .legend-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
+
+  @include mobile {
+    width: 10px;
+    height: 10px;
+  }
 
   &.event-dot {
     background: $danger;
@@ -604,6 +761,224 @@ const selectFilm = (film) => {
   }
 }
 
+// ===== MOBILE TIMELINE =====
+.mobile-timeline {
+  display: none;
+  padding: 0 $spacing-md;
+  padding-bottom: 80px;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.mobile-timeline-card {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  background: $bg-card;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: $border-radius-md;
+  margin-bottom: $spacing-sm;
+  transition: all $transition-normal;
+
+  &.event-card {
+    border-left: 3px solid $danger;
+
+    .mobile-card-icon {
+      background: rgba($danger, 0.15);
+      color: #fca5a5;
+    }
+  }
+
+  &.film-card {
+    border-left: 3px solid $beige;
+    cursor: pointer;
+
+    .mobile-card-icon {
+      background: rgba($beige, 0.15);
+      color: $beige;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+.mobile-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: $border-radius-sm;
+  @include flex-center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.mobile-card-content {
+  flex: 1;
+  min-width: 0;
+
+  h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+    color: $text-primary;
+    @include line-clamp(1);
+  }
+}
+
+.mobile-card-date {
+  font-size: 0.75rem;
+  color: $text-muted;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.mobile-card-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  &.event-badge {
+    background: rgba($danger, 0.2);
+    color: #fca5a5;
+  }
+
+  &.film-badge {
+    background: rgba($beige, 0.2);
+    color: $beige;
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px $spacing-lg;
+  color: $text-muted;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: $spacing-md;
+  opacity: 0.5;
+}
+
+// ===== MOBILE FILM MODAL =====
+.mobile-film-modal {
+  @include fixed-fill;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: $z-modal;
+  @include flex-center;
+  padding: $spacing-md;
+  backdrop-filter: blur(8px);
+}
+
+.mobile-modal-content {
+  background: $bg-dark;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: $border-radius-lg;
+  width: 100%;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.mobile-modal-close {
+  position: absolute;
+  top: $spacing-sm;
+  right: $spacing-sm;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: $text-primary;
+  font-size: 1.5rem;
+  @include flex-center;
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.mobile-modal-body {
+  padding: $spacing-lg;
+}
+
+.mobile-modal-poster {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: $border-radius-md;
+  margin-bottom: $spacing-md;
+}
+
+.mobile-modal-info {
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 $spacing-xs 0;
+    color: $text-primary;
+  }
+}
+
+.mobile-modal-year {
+  font-size: 0.9rem;
+  color: $beige;
+  margin: 0 0 $spacing-sm 0;
+}
+
+.mobile-modal-meta {
+  display: flex;
+  gap: $spacing-md;
+  margin-bottom: $spacing-md;
+  font-size: 0.85rem;
+
+  .imdb-rating {
+    color: $beige;
+    font-weight: 600;
+  }
+
+  .country {
+    color: $text-secondary;
+  }
+}
+
+.mobile-modal-desc {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Modal Transitions
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.3s ease;
+
+  .mobile-modal-content {
+    transition: transform 0.3s ease;
+  }
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+
+  .mobile-modal-content {
+    transform: translateY(20px) scale(0.95);
+  }
+}
+
+// ===== DESKTOP TIMELINE =====
 .timeline-container {
   position: relative;
   height: 700px;
@@ -612,6 +987,10 @@ const selectFilm = (film) => {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include mobile {
+    display: none;
+  }
 }
 
 // Axis
@@ -761,18 +1140,29 @@ const selectFilm = (film) => {
     color: $beige-light;
   }
 
-  &.active .card-body {
-    background: rgba($beige, 0.15);
-    box-shadow: 0 0 30px rgba($beige, 0.3);
-    border-color: $beige-light;
-  }
-
-  &:hover {
+  // Hover state (only when not active)
+  &:hover:not(.active) {
     z-index: 50 !important;
 
     .card-body {
       transform: scale(1.05);
       box-shadow: 0 10px 40px rgba($beige, 0.5);
+    }
+  }
+
+  // Active state - always on top
+  &.active {
+    z-index: 9999 !important; // Ensure active card with popup is above everything
+
+    .card-body {
+      background: rgba($beige, 0.15);
+      box-shadow: 0 0 30px rgba($beige, 0.3);
+      border-color: $beige-light;
+    }
+
+    // Keep z-index even on hover when active
+    &:hover {
+      z-index: 9999 !important;
     }
   }
 }
@@ -799,7 +1189,7 @@ const selectFilm = (film) => {
 }
 
 // Event Connectors (Top)
-.event-card {
+.events-section .event-card {
   .connector-line {
     top: 100%;
     transform-origin: top;
@@ -813,7 +1203,7 @@ const selectFilm = (film) => {
 }
 
 // Film Connectors (Bottom)
-.film-card {
+.films-section .film-card {
   .connector-line {
     bottom: 100%;
     transform-origin: bottom;
@@ -838,7 +1228,7 @@ const selectFilm = (film) => {
   border-radius: $border-radius-lg;
   padding: $spacing-md;
   box-shadow: $shadow-lg;
-  z-index: $z-modal;
+  z-index: 9999; // Higher than timeline-nav to appear above it
   backdrop-filter: blur(20px);
   animation: fadeIn $transition-normal ease;
 }
@@ -886,11 +1276,7 @@ const selectFilm = (film) => {
   color: $text-secondary;
   margin-bottom: 12px;
   line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  @include line-clamp(3);
 }
 
 .popup-actions {
@@ -943,6 +1329,16 @@ const selectFilm = (film) => {
   gap: $spacing-sm;
   z-index: $z-modal;
   box-shadow: $shadow-lg;
+
+  @include mobile {
+    bottom: 20px;
+    left: $spacing-sm;
+    right: $spacing-sm;
+    transform: none;
+    padding: 4px;
+    gap: 4px;
+    @include safe-area-bottom;
+  }
 }
 
 .nav-btn {
@@ -958,6 +1354,11 @@ const selectFilm = (film) => {
   align-items: center;
   justify-content: center;
   transition: all $transition-fast;
+
+  @include mobile {
+    width: 44px;
+    height: 44px;
+  }
 
   &:hover:not(:disabled) {
     background: rgba(255, 255, 255, 0.1);
@@ -978,6 +1379,11 @@ const selectFilm = (film) => {
 .year-ranges {
   display: flex;
   gap: $spacing-xs;
+
+  @include mobile {
+    flex: 1;
+    gap: 2px;
+  }
 }
 
 .range-btn {
@@ -992,6 +1398,17 @@ const selectFilm = (film) => {
   background: transparent;
   border: none;
   overflow: hidden;
+
+  @include mobile {
+    flex: 1;
+    padding: 10px 8px;
+    font-size: 0.75rem;
+  }
+
+  @include mobile-small {
+    font-size: 0.7rem;
+    padding: 10px 4px;
+  }
 
   &:hover {
     color: $text-secondary;
@@ -1024,6 +1441,10 @@ const selectFilm = (film) => {
   position: relative;
   z-index: $z-base;
   letter-spacing: 1px;
+
+  @include mobile {
+    letter-spacing: 0;
+  }
 }
 
 // Period info
@@ -1033,6 +1454,10 @@ const selectFilm = (film) => {
   left: 50%;
   transform: translateX(-50%);
   z-index: $z-sticky;
+
+  @include mobile {
+    bottom: 95px;
+  }
 }
 
 .info-text {
@@ -1042,6 +1467,11 @@ const selectFilm = (film) => {
   padding: 6px 14px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.05);
+
+  @include mobile {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+  }
 }
 
 // Card Transitions
@@ -1059,6 +1489,22 @@ const selectFilm = (film) => {
 .card-leave-to {
   opacity: 0;
   transform: translateX(-50%) translateY(-20px);
+}
+
+// Mobile Card Transitions
+.mobile-card-enter-active,
+.mobile-card-leave-active {
+  transition: all 0.3s ease;
+}
+
+.mobile-card-enter-from {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.mobile-card-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
 }
 
 // Popup Transitions

@@ -170,22 +170,127 @@
   white-space: nowrap;
 }
 
+// MIXIN: Line Clamp
+// ----------------------------------------------------
+@mixin line-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 // MIXIN: Responsive Breakpoints
 // ----------------------------------------------------
+
+// Extra small devices (iPhone SE, 320px - 375px)
+@mixin mobile-small {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+// Small devices (phones, 376px - 480px)
+@mixin mobile-xs {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+// Mobile devices (phones, up to 768px)
 @mixin mobile {
   @media (max-width: 768px) {
     @content;
   }
 }
 
+// Tablet devices (768px - 1024px)
 @mixin tablet {
   @media (min-width: 769px) and (max-width: 1024px) {
     @content;
   }
 }
 
+// Desktop devices (1025px+)
 @mixin desktop {
   @media (min-width: 1025px) {
     @content;
   }
+}
+
+// Large desktop (1440px+)
+@mixin desktop-large {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+// Touch devices
+@mixin touch-device {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
+// Landscape orientation on mobile
+@mixin mobile-landscape {
+  @media (max-height: 500px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+// MIXIN: Safe Area Padding (for notched devices)
+// ----------------------------------------------------
+@mixin safe-area-padding($property: padding) {
+  #{$property}-top: env(safe-area-inset-top);
+  #{$property}-right: env(safe-area-inset-right);
+  #{$property}-bottom: env(safe-area-inset-bottom);
+  #{$property}-left: env(safe-area-inset-left);
+}
+
+@mixin safe-area-bottom {
+  padding-bottom: calc($spacing-md + env(safe-area-inset-bottom, 0px));
+}
+
+// MIXIN: Touch-friendly tap targets
+// ----------------------------------------------------
+@mixin touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+// MIXIN: Flex center
+// ----------------------------------------------------
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// MIXIN: Flex between
+// ----------------------------------------------------
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// MIXIN: Absolute fill
+// ----------------------------------------------------
+@mixin absolute-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// MIXIN: Fixed fill
+// ----------------------------------------------------
+@mixin fixed-fill {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

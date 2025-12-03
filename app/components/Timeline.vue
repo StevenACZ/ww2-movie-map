@@ -1,5 +1,10 @@
 <template>
-  <div class="timeline-container">
+  <div class="timeline-container" :class="{ 'is-expanded': isExpanded }">
+    <!-- Mobile Toggle Button -->
+    <button class="timeline-toggle" @click="toggleExpanded" aria-label="Toggle timeline">
+      <span class="toggle-icon">{{ isExpanded ? '▼' : '▲' }}</span>
+    </button>
+
     <div class="timeline-header">
       <h3>TIMELINE:</h3>
 
@@ -36,7 +41,7 @@
 
     <div class="year-markers">
       <div
-        v-for="yearData in yearMarkers"
+        v-for="yearData in displayedYearMarkers"
         :key="yearData.year"
         class="year-marker"
       >
@@ -48,13 +53,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from "vue";
+import { ref, computed, watch, onMounted, onUnmounted } from "vue";
 import { useTimeline } from "~/composables/useTimeline";
 
 const { startYear, endYear, setYearRange, resetYearRange } = useTimeline();
 
 const localStartYear = ref(startYear.value);
 const localEndYear = ref(endYear.value);
+const isExpanded = ref(false);
+const isMobile = ref(false);
 
 const yearMarkers = [
   { year: 1936, event: "Spanish<br>Civil War" },
@@ -68,6 +75,20 @@ const yearMarkers = [
   { year: 1944, event: "D-Day" },
   { year: 1945, event: "War Ends" },
 ];
+
+// Simplified year markers for mobile (only key years)
+const mobileYearMarkers = [
+  { year: 1936, event: "" },
+  { year: 1939, event: "War<br>Begins" },
+  { year: 1941, event: "Pearl<br>Harbor" },
+  { year: 1944, event: "D-Day" },
+  { year: 1945, event: "War<br>Ends" },
+];
+
+// Use simplified markers on mobile
+const displayedYearMarkers = computed(() => {
+  return isMobile.value ? mobileYearMarkers : yearMarkers;
+});
 
 const rangeStyle = computed(() => {
   const min = 1936;
@@ -91,6 +112,27 @@ const reset = () => {
   localStartYear.value = 1936;
   localEndYear.value = 1945;
 };
+
+const toggleExpanded = () => {
+  isExpanded.value = !isExpanded.value;
+};
+
+const checkMobile = () => {
+  isMobile.value = window.innerWidth <= 768;
+  // Auto-collapse on desktop
+  if (!isMobile.value) {
+    isExpanded.value = false;
+  }
+};
+
+onMounted(() => {
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', checkMobile);
+});
 
 // Sync with composable state
 watch([startYear, endYear], () => {
@@ -133,12 +175,73 @@ watch([startYear, endYear], () => {
       bottom: 30px; /* Show on hover */
       box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
     }
+
+    @include mobile {
+      bottom: -150px;
+      left: $spacing-sm;
+      right: $spacing-sm;
+      transform: none;
+      width: auto;
+      max-width: none;
+      padding: $spacing-md;
+      border-radius: 16px 16px 0 0;
+      border-bottom: none;
+      gap: $spacing-sm;
+
+      &:hover {
+        bottom: -150px; // Disable hover on mobile
+      }
+
+      &.is-expanded {
+        bottom: 0 !important;
+      }
+    }
+
+    @include mobile-small {
+      padding: $spacing-sm;
+    }
+  }
+
+  &-toggle {
+    display: none;
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 32px;
+    background: linear-gradient(
+      180deg,
+      rgba(20, 25, 30, 0.98) 0%,
+      rgba(15, 20, 25, 0.96) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    cursor: pointer;
+    @include flex-center;
+    color: $beige;
+    font-size: 12px;
+    transition: all $transition-normal;
+
+    @include mobile {
+      display: flex;
+    }
+
+    &:hover {
+      background: rgba($beige, 0.1);
+    }
   }
 
   &-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      flex-wrap: wrap;
+      gap: $spacing-sm;
+    }
 
     h3 {
       color: $beige;
@@ -147,6 +250,11 @@ watch([startYear, endYear], () => {
       margin: 0;
       text-transform: uppercase;
       letter-spacing: 2px;
+
+      @include mobile {
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
     }
   }
 }
@@ -158,11 +266,27 @@ watch([startYear, endYear], () => {
     font-weight: 700;
     color: $beige;
     letter-spacing: 6px;
+
+    @include mobile {
+      font-size: 22px;
+      letter-spacing: 4px;
+      order: -1;
+      width: 100%;
+    }
+
+    @include mobile-small {
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
   }
 
   &-label {
     display: inline-block;
     min-width: 85px;
+
+    @include mobile {
+      min-width: 60px;
+    }
   }
 
   &-markers {
@@ -172,6 +296,12 @@ watch([startYear, endYear], () => {
     width: 107%;
     box-sizing: border-box;
     margin: 0 -25px;
+
+    @include mobile {
+      grid-template-columns: repeat(5, 1fr);
+      width: 100%;
+      margin: 0;
+    }
   }
 
   &-marker {
@@ -187,6 +317,14 @@ watch([startYear, endYear], () => {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 2px;
+
+    @include mobile {
+      font-size: 12px;
+    }
+
+    @include mobile-small {
+      font-size: 11px;
+    }
   }
 
   &-event {
@@ -196,6 +334,14 @@ watch([startYear, endYear], () => {
     font-style: italic;
     line-height: 1.2;
     white-space: normal;
+
+    @include mobile {
+      font-size: 9px;
+    }
+
+    @include mobile-small {
+      font-size: 8px;
+    }
   }
 }
 
@@ -211,6 +357,14 @@ watch([startYear, endYear], () => {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 600;
+  @include touch-target;
+
+  @include mobile {
+    padding: 6px 12px;
+    font-size: 11px;
+    min-height: 36px;
+    min-width: auto;
+  }
 
   &:hover {
     background: rgba($beige, 0.15);
@@ -228,6 +382,10 @@ watch([startYear, endYear], () => {
 .separator {
   margin: 0 $spacing-md;
   color: rgba($beige, 0.6);
+
+  @include mobile {
+    margin: 0 $spacing-sm;
+  }
 }
 
 .slider {
@@ -236,6 +394,10 @@ watch([startYear, endYear], () => {
     height: 50px;
     margin: 0 auto;
     width: 100%;
+
+    @include mobile {
+      height: 44px;
+    }
   }
 
   &-track {
@@ -248,6 +410,11 @@ watch([startYear, endYear], () => {
     transform: translateY(-50%);
     pointer-events: none;
     border-radius: 3px;
+
+    @include mobile {
+      height: 8px;
+      border-radius: 4px;
+    }
   }
 
   &-range {
@@ -256,6 +423,10 @@ watch([startYear, endYear], () => {
     background: linear-gradient(90deg, rgba($beige-dark, 0.8), $beige);
     border-radius: 3px;
     box-shadow: 0 0 15px rgba($beige, 0.4);
+
+    @include mobile {
+      border-radius: 4px;
+    }
   }
 }
 
@@ -271,6 +442,10 @@ watch([startYear, endYear], () => {
   top: 50%;
   transform: translateY(-50%);
 
+  @include mobile {
+    height: 8px;
+  }
+
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -283,6 +458,12 @@ watch([startYear, endYear], () => {
     border: 3px solid rgba(20, 25, 30, 0.95);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     transition: all $transition-fast;
+
+    @include mobile {
+      width: 28px;
+      height: 28px;
+      border-width: 3px;
+    }
 
     &:hover {
       background: $beige-light;
@@ -301,6 +482,12 @@ watch([startYear, endYear], () => {
     border: 3px solid rgba(20, 25, 30, 0.95);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     transition: all $transition-fast;
+
+    @include mobile {
+      width: 28px;
+      height: 28px;
+      border-width: 3px;
+    }
 
     &:hover {
       background: $beige-light;

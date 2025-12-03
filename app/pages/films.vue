@@ -293,6 +293,14 @@ const viewOnMap = (filmId: string) => {
   font-family: "Inter", sans-serif;
   position: relative;
   padding: 120px $spacing-lg 100px;
+
+  @include mobile {
+    padding: 80px $spacing-md 60px;
+  }
+
+  @include mobile-small {
+    padding: 70px $spacing-sm 40px;
+  }
 }
 
 .world-map-bg {
@@ -331,6 +339,10 @@ const viewOnMap = (filmId: string) => {
   margin-bottom: $spacing-2xl;
   position: relative;
   z-index: $z-dropdown;
+
+  @include mobile {
+    margin-bottom: $spacing-lg;
+  }
 }
 
 .collection-badge {
@@ -345,6 +357,13 @@ const viewOnMap = (filmId: string) => {
   letter-spacing: 2px;
   margin-bottom: $spacing-md;
   text-transform: uppercase;
+
+  @include mobile {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    letter-spacing: 1px;
+    margin-bottom: $spacing-sm;
+  }
 }
 
 .page-title {
@@ -360,6 +379,14 @@ const viewOnMap = (filmId: string) => {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -1px;
+
+  @include mobile {
+    font-size: 2rem;
+  }
+
+  @include mobile-small {
+    font-size: 1.75rem;
+  }
 }
 
 .page-subtitle {
@@ -369,6 +396,17 @@ const viewOnMap = (filmId: string) => {
   color: $text-secondary;
   letter-spacing: 4px;
   text-transform: uppercase;
+
+  @include mobile {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: $spacing-sm;
+  }
+
+  @include mobile-small {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
 }
 
 .page-description {
@@ -377,6 +415,16 @@ const viewOnMap = (filmId: string) => {
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
+
+  @include mobile {
+    font-size: 0.9rem;
+    padding: 0 $spacing-sm;
+  }
+
+  @include mobile-small {
+    font-size: 0.85rem;
+    display: none; // Hide on very small screens to save space
+  }
 }
 
 // ===== CONTROLS =====
@@ -385,6 +433,10 @@ const viewOnMap = (filmId: string) => {
   margin: 0 auto 40px;
   position: relative;
   z-index: $z-dropdown;
+
+  @include mobile {
+    margin-bottom: $spacing-lg;
+  }
 }
 
 .controls {
@@ -393,6 +445,11 @@ const viewOnMap = (filmId: string) => {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+
+  @include mobile {
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
 }
 
 .search-box {
@@ -400,6 +457,12 @@ const viewOnMap = (filmId: string) => {
   max-width: 400px;
   min-width: 280px;
   position: relative;
+
+  @include mobile {
+    width: 100%;
+    max-width: none;
+    min-width: auto;
+  }
 }
 
 .search-icon {
@@ -411,6 +474,12 @@ const viewOnMap = (filmId: string) => {
   height: 20px;
   color: $text-muted;
   pointer-events: none;
+
+  @include mobile {
+    width: 18px;
+    height: 18px;
+    left: 12px;
+  }
 }
 
 .search-input {
@@ -424,8 +493,18 @@ const viewOnMap = (filmId: string) => {
   transition: all $transition-normal;
   backdrop-filter: blur(10px);
 
+  @include mobile {
+    padding: 12px 36px 12px 40px;
+    font-size: 16px; // Prevent zoom on iOS
+    border-radius: 12px;
+  }
+
   &::placeholder {
     color: $text-muted;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &:focus {
@@ -453,6 +532,11 @@ const viewOnMap = (filmId: string) => {
   justify-content: center;
   transition: all $transition-fast;
 
+  @include mobile {
+    width: 28px;
+    height: 28px;
+  }
+
   &:hover {
     background: rgba(255, 255, 255, 0.2);
     color: $text-primary;
@@ -467,6 +551,21 @@ const viewOnMap = (filmId: string) => {
   border-radius: $border-radius-md;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+
+  @include mobile {
+    width: 100%;
+    justify-content: stretch;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px;
+
+    // Hide scrollbar
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 .filter-btn {
@@ -479,6 +578,19 @@ const viewOnMap = (filmId: string) => {
   font-weight: 500;
   cursor: pointer;
   transition: all $transition-fast;
+  white-space: nowrap;
+
+  @include mobile {
+    flex: 1;
+    padding: 10px 8px;
+    font-size: 0.8rem;
+    min-width: fit-content;
+  }
+
+  @include mobile-small {
+    font-size: 0.75rem;
+    padding: 8px 6px;
+  }
 
   &:hover {
     color: $text-secondary;
@@ -499,24 +611,41 @@ const viewOnMap = (filmId: string) => {
   gap: $spacing-lg;
   position: relative;
   z-index: $z-dropdown;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
 }
 
 .no-results {
   grid-column: 1 / -1;
   text-align: center;
   padding: 80px $spacing-lg;
+
+  @include mobile {
+    padding: 60px $spacing-md;
+  }
 }
 
 .no-results-icon {
   font-size: 4rem;
   margin-bottom: $spacing-md;
   opacity: 0.5;
+
+  @include mobile {
+    font-size: 3rem;
+  }
 }
 
 .no-results-text {
   font-size: 1.5rem;
   color: $text-secondary;
   margin: 0 0 $spacing-sm 0;
+
+  @include mobile {
+    font-size: 1.25rem;
+  }
 }
 
 .no-results-hint {
@@ -535,6 +664,10 @@ const viewOnMap = (filmId: string) => {
   display: flex;
   flex-direction: column;
 
+  @include mobile {
+    border-radius: $border-radius-md;
+  }
+
   &:hover {
     border-color: rgba($beige, 0.3);
     box-shadow: $shadow-lg, 0 0 40px rgba($beige, 0.1);
@@ -546,6 +679,14 @@ const viewOnMap = (filmId: string) => {
   position: relative;
   height: 280px;
   overflow: hidden;
+
+  @include mobile {
+    height: 220px;
+  }
+
+  @include mobile-small {
+    height: 200px;
+  }
 }
 
 .poster-image {
@@ -572,6 +713,10 @@ const viewOnMap = (filmId: string) => {
   justify-content: space-between;
   align-items: flex-start;
   padding: 12px;
+
+  @include mobile {
+    padding: 10px;
+  }
 }
 
 .rating-badge {
@@ -583,16 +728,28 @@ const viewOnMap = (filmId: string) => {
   padding: 6px 10px;
   border-radius: $border-radius-sm;
   border: 1px solid rgba(255, 255, 255, 0.1);
+
+  @include mobile {
+    padding: 5px 8px;
+  }
 }
 
 .star {
   font-size: 0.85rem;
+
+  @include mobile {
+    font-size: 0.8rem;
+  }
 }
 
 .rating-value {
   color: $beige;
   font-weight: 700;
   font-size: 0.9rem;
+
+  @include mobile {
+    font-size: 0.85rem;
+  }
 }
 
 .year-badge {
@@ -603,6 +760,11 @@ const viewOnMap = (filmId: string) => {
   font-weight: 600;
   font-size: 0.85rem;
   color: $text-primary;
+
+  @include mobile {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
 }
 
 // ===== CONTENT SECTION =====
@@ -612,12 +774,21 @@ const viewOnMap = (filmId: string) => {
   flex-direction: column;
   gap: $spacing-md;
   flex: 1;
+
+  @include mobile {
+    padding: $spacing-md;
+    gap: $spacing-sm;
+  }
 }
 
 .content-header {
   display: flex;
   flex-direction: column;
   gap: $spacing-sm;
+
+  @include mobile {
+    gap: $spacing-xs;
+  }
 }
 
 .film-title {
@@ -626,6 +797,10 @@ const viewOnMap = (filmId: string) => {
   color: $text-primary;
   margin: 0;
   line-height: 1.3;
+
+  @include mobile {
+    font-size: 1.1rem;
+  }
 }
 
 .film-meta {
@@ -634,6 +809,12 @@ const viewOnMap = (filmId: string) => {
   gap: $spacing-sm;
   font-size: 0.85rem;
   color: $text-secondary;
+  flex-wrap: wrap;
+
+  @include mobile {
+    font-size: 0.8rem;
+    gap: $spacing-xs;
+  }
 }
 
 .meta-divider {
@@ -650,11 +831,14 @@ const viewOnMap = (filmId: string) => {
   font-size: 0.9rem;
   line-height: 1.6;
   margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  @include line-clamp(3);
+
+  @include mobile {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
 }
 
 // ===== LOCATIONS SECTION =====
@@ -667,6 +851,10 @@ const viewOnMap = (filmId: string) => {
   align-items: center;
   gap: 6px;
   margin-bottom: 10px;
+
+  @include mobile {
+    margin-bottom: 8px;
+  }
 }
 
 .locations-icon {
@@ -679,12 +867,20 @@ const viewOnMap = (filmId: string) => {
   letter-spacing: 1px;
   color: $text-muted;
   font-weight: 600;
+
+  @include mobile {
+    font-size: 0.7rem;
+  }
 }
 
 .locations-list {
   display: flex;
   flex-wrap: wrap;
   gap: $spacing-sm;
+
+  @include mobile {
+    gap: 6px;
+  }
 }
 
 .location-tag {
@@ -699,6 +895,11 @@ const viewOnMap = (filmId: string) => {
   font-size: 0.8rem;
   cursor: pointer;
   transition: all $transition-fast;
+
+  @include mobile {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
 
   &:hover {
     background: rgba($beige, 0.15);
@@ -721,6 +922,11 @@ const viewOnMap = (filmId: string) => {
   opacity: 0.5;
   transition: all $transition-fast;
 
+  @include mobile {
+    width: 12px;
+    height: 12px;
+  }
+
   .location-tag:hover & {
     opacity: 1;
   }
@@ -732,6 +938,11 @@ const viewOnMap = (filmId: string) => {
   gap: 10px;
   padding-top: $spacing-md;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  @include mobile {
+    padding-top: $spacing-sm;
+    gap: 8px;
+  }
 }
 
 .action-btn {
@@ -747,6 +958,13 @@ const viewOnMap = (filmId: string) => {
   cursor: pointer;
   transition: all $transition-fast;
   text-decoration: none;
+  @include touch-target;
+
+  @include mobile {
+    padding: 12px;
+    font-size: 0.8rem;
+    min-height: 44px;
+  }
 }
 
 .wiki-btn {
@@ -775,6 +993,11 @@ const viewOnMap = (filmId: string) => {
 .action-icon {
   width: 16px;
   height: 16px;
+
+  @include mobile {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 // ===== RESULTS INFO =====
@@ -783,6 +1006,10 @@ const viewOnMap = (filmId: string) => {
   margin-top: $spacing-2xl;
   position: relative;
   z-index: $z-dropdown;
+
+  @include mobile {
+    margin-top: $spacing-lg;
+  }
 }
 
 .info-text {
@@ -792,6 +1019,11 @@ const viewOnMap = (filmId: string) => {
   padding: $spacing-sm $spacing-lg;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.05);
+
+  @include mobile {
+    font-size: 0.8rem;
+    padding: $spacing-sm $spacing-md;
+  }
 }
 
 // ===== ANIMATIONS =====
@@ -812,40 +1044,5 @@ const viewOnMap = (filmId: string) => {
 .film-card-leave-to {
   opacity: 0;
   transform: scale(0.95);
-}
-
-// ===== RESPONSIVE =====
-@include mobile {
-  .films-page {
-    padding: 100px $spacing-md 80px;
-  }
-
-  .page-title {
-    font-size: 2.5rem;
-  }
-
-  .page-subtitle {
-    font-size: 1rem;
-    letter-spacing: 2px;
-  }
-
-  .controls {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .search-box {
-    width: 100%;
-    max-width: none;
-  }
-
-  .filter-group {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .films-container {
-    grid-template-columns: 1fr;
-  }
 }
 </style>
