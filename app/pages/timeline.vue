@@ -5,7 +5,7 @@
     
     <div class="header-content">
       <h1>Interactive Timeline: The War and Cinema</h1>
-      <p>Explore key historical events and related film releases from 1939 to 1945.</p>
+      <p>Explore key historical events and related film releases from {{ visibleStartYear }} to {{ visibleEndYear }}.</p>
     </div>
 
     <div class="timeline-container" ref="timelineContainer">
@@ -16,7 +16,7 @@
         
         <!-- Year Markers -->
         <div 
-          v-for="year in years" 
+          v-for="year in visibleYears" 
           :key="year"
           class="year-marker"
           :style="{ left: getYearPosition(year) + '%' }"
@@ -26,13 +26,13 @@
         </div>
       </div>
 
-      <!-- Events Section (Top of Axis) -->
-      <div class="timeline-layer events-layer">
+      <!-- Events Section (Top Half) -->
+      <div class="timeline-section events-section">
         <div 
           v-for="(event, index) in positionedEvents" 
           :key="event.id"
           class="timeline-card event-card"
-          :style="{ left: event.position + '%', bottom: 'calc(50% + ' + event.distance + 'px)' }"
+          :style="{ left: event.position + '%', bottom: event.offsetY + 'px' }"
         >
           <div class="card-body">
             <div class="card-icon-wrapper">
@@ -44,24 +44,24 @@
             </div>
           </div>
           <!-- Connector (Down to axis) -->
-          <div class="connector-line" :style="{ height: event.distance + 'px' }"></div>
-          <div class="timeline-dot" :style="{ top: 'calc(100% + ' + event.distance + 'px)' }"></div>
+          <div class="connector-line" :style="{ height: event.connectorHeight + 'px' }"></div>
+          <div class="timeline-dot"></div>
         </div>
       </div>
 
-      <!-- Films Section (Bottom of Axis) -->
-      <div class="timeline-layer films-layer">
+      <!-- Films Section (Bottom Half) -->
+      <div class="timeline-section films-section">
         <div 
           v-for="(film, index) in positionedFilms" 
           :key="film.id"
           class="timeline-card film-card"
           :class="{ 'active': selectedFilm?.id === film.id }"
-          :style="{ left: film.position + '%', top: 'calc(50% + ' + film.distance + 'px)' }"
+          :style="{ left: film.position + '%', top: film.offsetY + 'px' }"
           @click.stop="selectFilm(film)"
         >
           <!-- Connector (Up to axis) -->
-          <div class="connector-line" :style="{ height: film.distance + 'px' }"></div>
-          <div class="timeline-dot" :style="{ bottom: 'calc(100% + ' + film.distance + 'px)' }"></div>
+          <div class="timeline-dot"></div>
+          <div class="connector-line" :style="{ height: film.connectorHeight + 'px' }"></div>
           
           <div class="card-body">
             <div class="card-icon-wrapper">
@@ -94,13 +94,19 @@
 
     <!-- Bottom Navigation -->
     <div class="timeline-nav">
-      <button class="nav-btn prev">‹</button>
+      <button class="nav-btn prev" @click="prevPeriod" :disabled="currentPeriodIndex === 0">‹</button>
       <div class="year-ranges">
-        <span class="range">1939</span>
-        <span class="range active">1940-1942</span>
-        <span class="range">1943-1945</span>
+        <span 
+          v-for="(period, index) in periods" 
+          :key="index"
+          class="range" 
+          :class="{ active: currentPeriodIndex === index }"
+          @click="setPeriod(index)"
+        >
+          {{ period.label }}
+        </span>
       </div>
-      <button class="nav-btn next">›</button>
+      <button class="nav-btn next" @click="nextPeriod" :disabled="currentPeriodIndex === periods.length - 1">›</button>
     </div>
   </div>
 </template>
@@ -112,16 +118,23 @@ import { ref, computed, onMounted } from 'vue'
 const events = ref([])
 const films = ref([])
 const selectedFilm = ref(null)
+const currentPeriodIndex = ref(0) // Start with first period (1939-1941)
 
-// Constants
-const START_YEAR = 1939
-const END_YEAR = 1945
-const TOTAL_YEARS = END_YEAR - START_YEAR
+// Periods Configuration
+const periods = [
+  { label: '1939-1941', start: 1939, end: 1941 },
+  { label: '1942-1943', start: 1942, end: 1943 },
+  { label: '1944-1945', start: 1944, end: 1945 }
+]
 
-// Generate years array
-const years = computed(() => {
+const visibleStartYear = computed(() => periods[currentPeriodIndex.value].start)
+const visibleEndYear = computed(() => periods[currentPeriodIndex.value].end)
+const totalVisibleYears = computed(() => visibleEndYear.value - visibleStartYear.value + 1)
+
+// Generate visible years array
+const visibleYears = computed(() => {
   const arr = []
-  for (let y = START_YEAR; y <= END_YEAR; y++) {
+  for (let y = visibleStartYear.value; y <= visibleEndYear.value; y++) {
     arr.push(y)
   }
   return arr
@@ -146,54 +159,101 @@ onMounted(async () => {
 const calculatePosition = (dateString) => {
   const date = new Date(dateString)
   const year = date.getFullYear()
+  
+  // More permissive filtering to handle edge cases
+  if (year < visibleStartYear.value || year > visibleEndYear.value) return -999
+  
   const month = date.getMonth()
   const day = date.getDate()
   
-  const yearProgress = year - START_YEAR
+  const yearProgress = year - visibleStartYear.value
   const monthProgress = month / 12
   const dayProgress = day / 365
   
-  const totalProgress = (yearProgress + monthProgress + dayProgress) / TOTAL_YEARS
-  return 5 + (totalProgress * 90)
+  const divisor = totalVisibleYears.value > 0 ? totalVisibleYears.value : 1
+  const totalProgress = (yearProgress + monthProgress + dayProgress) / divisor
+  
+  return 10 + (totalProgress * 80)
 }
 
 const getYearPosition = (year) => {
-  return 5 + (((year - START_YEAR) / TOTAL_YEARS) * 90)
+  const yearProgress = year - visibleStartYear.value
+  const divisor = totalVisibleYears.value > 0 ? totalVisibleYears.value : 1
+  return 10 + ((yearProgress / divisor) * 80)
+}
+
+// Navigation Methods
+const nextPeriod = () => {
+  if (currentPeriodIndex.value < periods.length - 1) {
+    currentPeriodIndex.value++
+  }
+}
+
+const prevPeriod = () => {
+  if (currentPeriodIndex.value > 0) {
+    currentPeriodIndex.value--
+  }
+}
+
+const setPeriod = (index) => {
+  currentPeriodIndex.value = index
 }
 
 // Collision Detection & Spacing
 const resolveCollisions = (items) => {
   if (items.length === 0) return []
   
-  const result = items.map((item, index) => ({
+  // Filter visible items first
+  const visibleItems = items.filter(item => item.position > -10 && item.position < 110)
+  
+  const result = visibleItems.map((item, index) => ({
     ...item,
-    distance: 0, // Distance from axis
+    offsetY: 0,
+    connectorHeight: 40, // Initial connector height
     level: 0
   }))
   
+  // Sort by position (left to right)
   result.sort((a, b) => a.position - b.position)
   
-  const minDistance = 18 // % width of card
+  // Minimum distance between cards (in percentage) to trigger a level change
+  const minDistance = 22 
   
   for (let i = 0; i < result.length; i++) {
     let currentLevel = 0
     let hasCollision = true
     
-    while (hasCollision && currentLevel < 4) {
+    // Try to find the lowest level that doesn't collide with previous neighbors
+    while (hasCollision && currentLevel < 5) { // Limit levels to prevent infinite loop
       hasCollision = false
+      
+      // Look back at previous items to check for overlap
       for (let j = 0; j < i; j++) {
         const distance = Math.abs(result[i].position - result[j].position)
+        
+        // If they are close horizontally AND on the same level, it's a collision
         if (distance < minDistance && result[j].level === currentLevel) {
           hasCollision = true
           break
         }
       }
-      if (hasCollision) currentLevel++
+      
+      if (hasCollision) {
+        currentLevel++
+      }
     }
     
     result[i].level = currentLevel
-    // Base distance from axis is 40px, each level adds 100px
-    result[i].distance = 40 + (currentLevel * 100)
+    
+    // Calculate POSITIVE offset (distance from axis)
+    // CSS will handle direction (bottom for events, top for films)
+    const baseDistance = 40 // Initial distance from axis for level 0
+    const levelStep = 100 // Additional distance for each subsequent level
+    
+    const totalDistance = baseDistance + (currentLevel * levelStep)
+    
+    result[i].offsetY = totalDistance
+    result[i].connectorHeight = totalDistance
   }
   
   return result
@@ -240,7 +300,7 @@ const selectFilm = (film) => {
 <style scoped>
 .timeline-page {
   min-height: 100vh;
-  background-color: #0f172a;
+  background-color: #0f172a; /* Dark Slate */
   color: white;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
@@ -286,9 +346,12 @@ const selectFilm = (film) => {
 
 .timeline-container {
   position: relative;
-  height: 700px; /* Increased height for better spacing */
+  height: 700px;
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Axis */
@@ -330,6 +393,25 @@ const selectFilm = (film) => {
   font-weight: 500;
 }
 
+/* Timeline Sections */
+.timeline-section {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Each section takes half the container height */
+  overflow: visible; /* Allow cards to extend beyond section bounds */
+}
+
+.events-section {
+  top: 0;
+  /* Events align to bottom of this section (the axis) */
+}
+
+.films-section {
+  top: 50%;
+  /* Films align to top of this section (the axis) */
+}
+
 /* Cards Common */
 .timeline-card {
   position: absolute;
@@ -337,7 +419,7 @@ const selectFilm = (film) => {
   transform: translateX(-50%);
   z-index: 10;
   cursor: pointer;
-  transition: all 0.3s ease;
+  /* Removed transition from wrapper to prevent connector scaling */
 }
 
 .card-body {
@@ -348,6 +430,7 @@ const selectFilm = (film) => {
   backdrop-filter: blur(10px);
   border: 1px solid;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition only on body */
   position: relative;
   z-index: 2;
 }
@@ -380,8 +463,8 @@ const selectFilm = (film) => {
 
 /* Event Cards (Red) */
 .event-card .card-body {
-  background: rgba(69, 10, 10, 0.8);
-  border-color: #ef4444;
+  background: rgba(69, 10, 10, 0.8); /* Red 950/900 */
+  border-color: #ef4444; /* Red 500 */
 }
 
 .event-card .card-icon-wrapper {
@@ -393,15 +476,20 @@ const selectFilm = (film) => {
   color: #fca5a5;
 }
 
+/* Hover Effect - Only scales card body */
 .event-card:hover {
   z-index: 50;
-  transform: translateX(-50%) scale(1.05);
+}
+
+.event-card:hover .card-body {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(231, 76, 60, 0.6);
 }
 
 /* Film Cards (Gold) */
 .film-card .card-body {
-  background: rgba(66, 32, 6, 0.8);
-  border-color: #f59e0b;
+  background: rgba(66, 32, 6, 0.8); /* Amber 950 */
+  border-color: #f59e0b; /* Amber 500 */
 }
 
 .film-card .card-icon-wrapper {
@@ -419,9 +507,14 @@ const selectFilm = (film) => {
   border-color: #fbbf24;
 }
 
+/* Hover Effect - Only scales card body */
 .film-card:hover {
   z-index: 50;
-  transform: translateX(-50%) scale(1.05);
+}
+
+.film-card:hover .card-body {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(245, 158, 11, 0.6);
 }
 
 /* Connectors */
@@ -431,7 +524,6 @@ const selectFilm = (film) => {
   width: 1px;
   background: rgba(255, 255, 255, 0.3);
   transform: translateX(-50%);
-  z-index: 1;
 }
 
 .timeline-dot {
@@ -440,26 +532,30 @@ const selectFilm = (film) => {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  transform: translateX(-50%) translateY(-50%); /* Center on axis */
+  transform: translateX(-50%);
   z-index: 5;
 }
 
-/* Event Connectors (Down from card) */
+/* Event Connectors (Top) */
 .event-card .connector-line {
-  top: 100%;
+  top: 100%; /* Position at the bottom of the card */
+  transform-origin: top; /* Grow downwards */
 }
 
 .event-card .timeline-dot {
+  top: 100%; /* Position at the bottom of the card */
   background: #ef4444;
   box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
 }
 
-/* Film Connectors (Up from card) */
+/* Film Connectors (Bottom) */
 .film-card .connector-line {
-  bottom: 100%;
+  bottom: 100%; /* Position at the top of the card */
+  transform-origin: bottom; /* Grow upwards */
 }
 
 .film-card .timeline-dot {
+  bottom: 100%; /* Position at the top of the card */
   background: #f59e0b;
   box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
 }
@@ -467,7 +563,7 @@ const selectFilm = (film) => {
 /* Popup Modal */
 .film-popup {
   position: absolute;
-  bottom: 110%;
+  top: 110%; /* Below the card */
   left: 50%;
   transform: translateX(-50%);
   width: 320px;
@@ -582,6 +678,11 @@ const selectFilm = (film) => {
   font-size: 1.2rem;
   cursor: pointer;
   padding: 0 12px;
+}
+
+.nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .year-ranges {
