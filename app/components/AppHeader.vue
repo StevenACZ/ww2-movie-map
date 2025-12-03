@@ -21,10 +21,10 @@
           <span class="nav-icon">⏱️</span>
           <span class="nav-text">TIMELINE</span>
         </NuxtLink>
-        <button class="nav-item" disabled>
+        <NuxtLink to="/about" class="nav-item" :class="{ active: currentRoute === '/about' }">
           <span class="nav-icon">ℹ️</span>
           <span class="nav-text">ABOUT</span>
-        </button>
+        </NuxtLink>
       </nav>
     </div>
   </header>
