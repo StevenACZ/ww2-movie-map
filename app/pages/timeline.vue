@@ -470,12 +470,20 @@ const selectFilm = (film) => {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '@/assets/scss/variables' as *;
+@use '@/assets/scss/mixins' as *;
+
 .timeline-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0f1a 0%, #0f172a 50%, #1a1f2e 100%);
-  color: white;
-  font-family: "DM Sans", "Inter", sans-serif;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 25, 30, 0.98) 0%,
+    rgba(15, 20, 25, 0.96) 50%,
+    rgba(25, 30, 35, 0.95) 100%
+  );
+  color: $text-primary;
+  font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   position: relative;
   padding-top: 120px;
@@ -515,81 +523,81 @@ const selectFilm = (film) => {
   text-align: center;
   margin-bottom: 40px;
   position: relative;
-  z-index: 10;
-  padding: 0 20px;
+  z-index: $z-dropdown;
+  padding: 0 $spacing-lg;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 $spacing-xs 0;
+    background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.85) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0 0 12px 0;
+    color: $text-secondary;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
 }
 
 .period-badge {
   display: inline-block;
-  padding: 6px 16px;
-  background: rgba(245, 158, 11, 0.15);
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 6px $spacing-md;
+  background: rgba($beige, 0.12);
+  border: 1px solid rgba($beige, 0.25);
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #fcd34d;
+  color: $beige;
   letter-spacing: 2px;
-  margin-bottom: 16px;
-}
-
-.header-content h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin: 0 0 4px 0;
-  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -1px;
-}
-
-.header-content h2 {
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin: 0 0 12px 0;
-  color: #94a3b8;
-  letter-spacing: 4px;
-  text-transform: uppercase;
+  margin-bottom: $spacing-md;
 }
 
 .subtitle {
-  color: #64748b;
+  color: $text-muted;
   font-size: 1rem;
   margin: 0;
 }
 
-/* Legend */
+// Legend
 .legend {
   display: flex;
   justify-content: center;
-  gap: 32px;
-  margin-bottom: 20px;
+  gap: $spacing-xl;
+  margin-bottom: $spacing-lg;
   position: relative;
-  z-index: 10;
+  z-index: $z-dropdown;
 }
 
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: $spacing-sm;
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: $text-secondary;
 }
 
 .legend-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-}
 
-.legend-dot.event-dot {
-  background: #ef4444;
-  box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
-}
+  &.event-dot {
+    background: $danger;
+    box-shadow: 0 0 10px rgba($danger, 0.5);
+  }
 
-.legend-dot.film-dot {
-  background: #f59e0b;
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+  &.film-dot {
+    background: $beige;
+    box-shadow: 0 0 10px rgba($beige, 0.5);
+  }
 }
 
 .timeline-container {
@@ -602,14 +610,14 @@ const selectFilm = (film) => {
   justify-content: center;
 }
 
-/* Axis */
+// Axis
 .timeline-axis {
   position: absolute;
   top: 50%;
   left: 0;
   width: 100%;
   height: 2px;
-  z-index: 1;
+  z-index: $z-base;
   transform: translateY(-50%);
 }
 
@@ -632,52 +640,49 @@ const selectFilm = (film) => {
   width: 1px;
   height: 20px;
   background: rgba(255, 255, 255, 0.3);
-  margin-bottom: 8px;
+  margin-bottom: $spacing-sm;
 }
 
 .year-label {
-  color: #94a3b8;
+  color: $text-secondary;
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-/* Timeline Sections */
+// Timeline Sections
 .timeline-section {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 50%; /* Each section takes half the container height */
-  overflow: visible; /* Allow cards to extend beyond section bounds */
+  height: 50%;
+  overflow: visible;
 }
 
 .events-section {
   top: 0;
-  /* Events align to bottom of this section (the axis) */
 }
 
 .films-section {
   top: 50%;
-  /* Films align to top of this section (the axis) */
 }
 
-/* Cards Common */
+// Cards Common
 .timeline-card {
   position: absolute;
   width: 220px;
   transform: translateX(-50%);
   cursor: pointer;
-  /* z-index se asigna dinámicamente basado en el nivel */
 }
 
 .card-body {
   display: flex;
   align-items: center;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: $border-radius-md;
   backdrop-filter: blur(10px);
   border: 1px solid;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition only on body */
+  box-shadow: $shadow-md;
+  transition: transform $transition-normal, box-shadow $transition-normal;
   position: relative;
   z-index: 2;
 }
@@ -685,7 +690,7 @@ const selectFilm = (film) => {
 .card-icon-wrapper {
   width: 40px;
   height: 40px;
-  border-radius: 8px;
+  border-radius: $border-radius-sm;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -694,77 +699,81 @@ const selectFilm = (film) => {
   flex-shrink: 0;
 }
 
-.card-text h3 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin: 0;
-  line-height: 1.2;
-  color: white;
+.card-text {
+  h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+    color: $text-primary;
+  }
 }
 
 .card-date {
   font-size: 0.75rem;
-  margin: 4px 0 0 0;
+  margin: $spacing-xs 0 0 0;
   opacity: 0.8;
 }
 
-/* Event Cards (Red) */
-.event-card .card-body {
-  background: rgba(69, 10, 10, 0.8); /* Red 950/900 */
-  border-color: #ef4444; /* Red 500 */
+// Event Cards (Red)
+.event-card {
+  .card-body {
+    background: rgba(69, 10, 10, 0.8);
+    border-color: $danger;
+  }
+
+  .card-icon-wrapper {
+    background: rgba($danger, 0.2);
+    color: #fca5a5;
+  }
+
+  .card-date {
+    color: #fca5a5;
+  }
+
+  &:hover {
+    z-index: 50 !important;
+
+    .card-body {
+      transform: scale(1.05);
+      box-shadow: 0 10px 40px rgba($danger, 0.6);
+    }
+  }
 }
 
-.event-card .card-icon-wrapper {
-  background: rgba(239, 68, 68, 0.2);
-  color: #fca5a5;
+// Film Cards (Beige - colores apagados)
+.film-card {
+  .card-body {
+    background: rgba(50, 40, 30, 0.85);
+    border-color: $beige;
+  }
+
+  .card-icon-wrapper {
+    background: rgba($beige, 0.2);
+    color: $beige-light;
+  }
+
+  .card-date {
+    color: $beige-light;
+  }
+
+  &.active .card-body {
+    background: rgba($beige, 0.15);
+    box-shadow: 0 0 30px rgba($beige, 0.3);
+    border-color: $beige-light;
+  }
+
+  &:hover {
+    z-index: 50 !important;
+
+    .card-body {
+      transform: scale(1.05);
+      box-shadow: 0 10px 40px rgba($beige, 0.5);
+    }
+  }
 }
 
-.event-card .card-date {
-  color: #fca5a5;
-}
-
-/* Hover Effect - Only scales card body */
-.event-card:hover {
-  z-index: 50 !important;
-}
-
-.event-card:hover .card-body {
-  transform: scale(1.05);
-  box-shadow: 0 10px 40px rgba(231, 76, 60, 0.6);
-}
-
-/* Film Cards (Gold) */
-.film-card .card-body {
-  background: rgba(66, 32, 6, 0.8); /* Amber 950 */
-  border-color: #f59e0b; /* Amber 500 */
-}
-
-.film-card .card-icon-wrapper {
-  background: rgba(245, 158, 11, 0.2);
-  color: #fcd34d;
-}
-
-.film-card .card-date {
-  color: #fcd34d;
-}
-
-.film-card.active .card-body {
-  background: rgba(245, 158, 11, 0.15);
-  box-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
-  border-color: #fbbf24;
-}
-
-/* Hover Effect - Only scales card body */
-.film-card:hover {
-  z-index: 50 !important;
-}
-
-.film-card:hover .card-body {
-  transform: scale(1.05);
-  box-shadow: 0 10px 40px rgba(245, 158, 11, 0.6);
-}
-
-/* Connectors - z-index bajo para que queden detrás de otras cards */
+// Connectors
 .connector-line {
   position: absolute;
   left: 50%;
@@ -782,86 +791,95 @@ const selectFilm = (film) => {
   height: 8px;
   border-radius: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: $z-base;
 }
 
-/* Event Connectors (Top) */
-.event-card .connector-line {
-  top: 100%; /* Position at the bottom of the card */
-  transform-origin: top; /* Grow downwards */
+// Event Connectors (Top)
+.event-card {
+  .connector-line {
+    top: 100%;
+    transform-origin: top;
+  }
+
+  .timeline-dot {
+    top: 100%;
+    background: $danger;
+    box-shadow: 0 0 10px rgba($danger, 0.8);
+  }
 }
 
-.event-card .timeline-dot {
-  top: 100%; /* Position at the bottom of the card */
-  background: #ef4444;
-  box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+// Film Connectors (Bottom)
+.film-card {
+  .connector-line {
+    bottom: 100%;
+    transform-origin: bottom;
+  }
+
+  .timeline-dot {
+    bottom: 100%;
+    background: $beige;
+    box-shadow: 0 0 10px rgba($beige, 0.8);
+  }
 }
 
-/* Film Connectors (Bottom) */
-.film-card .connector-line {
-  bottom: 100%; /* Position at the top of the card */
-  transform-origin: bottom; /* Grow upwards */
-}
-
-.film-card .timeline-dot {
-  bottom: 100%; /* Position at the top of the card */
-  background: #f59e0b;
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
-}
-
-/* Popup Modal */
+// Popup Modal
 .film-popup {
   position: absolute;
-  top: 110%; /* Below the card */
+  top: 110%;
   left: 50%;
   transform: translateX(-50%);
   width: 320px;
-  background: rgba(30, 41, 59, 0.95);
+  background: $bg-dark;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  z-index: 100;
+  border-radius: $border-radius-lg;
+  padding: $spacing-md;
+  box-shadow: $shadow-lg;
+  z-index: $z-modal;
   backdrop-filter: blur(20px);
-  animation: fadeIn 0.3s ease;
+  animation: fadeIn $transition-normal ease;
 }
 
 .close-btn {
   position: absolute;
-  top: 8px;
+  top: $spacing-sm;
   right: 12px;
   background: none;
   border: none;
-  color: #94a3b8;
+  color: $text-secondary;
   font-size: 1.5rem;
   cursor: pointer;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $text-primary;
+  }
 }
 
 .popup-content {
   display: flex;
-  gap: 16px;
+  gap: $spacing-md;
 }
 
 .popup-poster {
   width: 80px;
   height: 120px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: $border-radius-sm;
 }
 
 .popup-info {
   flex: 1;
-}
 
-.popup-info h4 {
-  margin: 0 0 8px 0;
-  font-size: 1rem;
-  color: white;
+  h4 {
+    margin: 0 0 $spacing-sm 0;
+    font-size: 1rem;
+    color: $text-primary;
+  }
 }
 
 .popup-desc {
   font-size: 0.75rem;
-  color: #cbd5e1;
+  color: $text-secondary;
   margin-bottom: 12px;
   line-height: 1.4;
   display: -webkit-box;
@@ -873,7 +891,7 @@ const selectFilm = (film) => {
 
 .popup-actions {
   display: flex;
-  gap: 8px;
+  gap: $spacing-sm;
 }
 
 .btn-primary,
@@ -884,145 +902,145 @@ const selectFilm = (film) => {
   font-weight: 600;
   cursor: pointer;
   border: none;
-  transition: all 0.2s;
+  transition: all $transition-fast;
 }
 
 .btn-primary {
-  background: white;
-  color: #0f172a;
-}
+  background: $beige;
+  color: $bg-darker;
 
-.btn-primary:hover {
-  background: #e2e8f0;
+  &:hover {
+    background: $beige-light;
+  }
 }
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.1);
-  color: white;
+  color: $text-primary;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
 }
 
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* Bottom Nav */
+// Bottom Nav
 .timeline-nav {
   position: fixed;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(10, 15, 26, 0.9);
+  background: $bg-dark;
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 6px;
-  border-radius: 16px;
+  border-radius: $border-radius-lg;
   display: flex;
   align-items: center;
-  gap: 8px;
-  z-index: 100;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  gap: $spacing-sm;
+  z-index: $z-modal;
+  box-shadow: $shadow-lg;
 }
 
 .nav-btn {
   width: 40px;
   height: 40px;
-  border-radius: 12px;
+  border-radius: $border-radius-md;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #94a3b8;
+  color: $text-secondary;
   font-size: 1.4rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
-}
+  transition: all $transition-fast;
 
-.nav-btn:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  transform: scale(1.05);
-}
+  &:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    color: $text-primary;
+    transform: scale(1.05);
+  }
 
-.nav-btn:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
 
-.nav-btn .arrow {
-  line-height: 1;
+  .arrow {
+    line-height: 1;
+  }
 }
 
 .year-ranges {
   display: flex;
-  gap: 4px;
+  gap: $spacing-xs;
 }
 
 .range-btn {
   position: relative;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 10px $spacing-lg;
+  border-radius: $border-radius-sm;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #64748b;
+  color: $text-muted;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all $transition-normal;
   background: transparent;
   border: none;
   overflow: hidden;
-}
 
-.range-btn:hover {
-  color: #94a3b8;
-  background: rgba(255, 255, 255, 0.03);
-}
+  &:hover {
+    color: $text-secondary;
+    background: rgba(255, 255, 255, 0.03);
+  }
 
-.range-btn.active {
-  color: white;
-  background: rgba(245, 158, 11, 0.15);
-}
+  &.active {
+    color: $text-primary;
+    background: rgba($beige, 0.15);
 
-.range-btn.active .range-indicator {
-  transform: scaleX(1);
+    .range-indicator {
+      transform: scaleX(1);
+    }
+  }
 }
 
 .range-indicator {
   position: absolute;
-  bottom: 4px;
+  bottom: $spacing-xs;
   left: 20%;
   right: 20%;
   height: 2px;
-  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  background: linear-gradient(90deg, $beige, $beige-light);
   border-radius: 2px;
   transform: scaleX(0);
-  transition: transform 0.3s ease;
+  transition: transform $transition-normal;
 }
 
 .range-label {
   position: relative;
-  z-index: 1;
+  z-index: $z-base;
   letter-spacing: 1px;
 }
 
-/* Period info */
+// Period info
 .period-info {
   position: fixed;
   bottom: 90px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 99;
+  z-index: $z-sticky;
 }
 
 .info-text {
   font-size: 0.8rem;
-  color: #64748b;
-  background: rgba(10, 15, 26, 0.8);
+  color: $text-muted;
+  background: $bg-dark;
   padding: 6px 14px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Card Transitions */
+// Card Transitions
 .card-enter-active,
 .card-leave-active {
   transition: all 0.4s ease;
@@ -1039,10 +1057,10 @@ const selectFilm = (film) => {
   transform: translateX(-50%) translateY(-20px);
 }
 
-/* Popup Transitions */
+// Popup Transitions
 .popup-enter-active,
 .popup-leave-active {
-  transition: all 0.3s ease;
+  transition: all $transition-normal;
 }
 
 .popup-enter-from,
@@ -1062,13 +1080,13 @@ const selectFilm = (film) => {
   }
 }
 
-/* Event period styling for films */
+// Event period styling for films
 .event-period {
   font-size: 0.7rem;
   opacity: 0.7;
 }
 
-/* Popup enhancements */
+// Popup enhancements
 .popup-meta {
   display: flex;
   gap: 12px;
@@ -1077,11 +1095,11 @@ const selectFilm = (film) => {
 }
 
 .imdb-rating {
-  color: #fcd34d;
+  color: $beige;
   font-weight: 600;
 }
 
 .country {
-  color: #94a3b8;
+  color: $text-secondary;
 }
 </style>
