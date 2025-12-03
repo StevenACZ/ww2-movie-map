@@ -433,7 +433,7 @@ const animateMap = () => {
   );
   border: 1.5px solid rgba(255, 255, 255, 0.15);
   cursor: pointer;
-  z-index: $z-modal;
+  z-index: 500;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -464,6 +464,16 @@ const animateMap = () => {
   }
 }
 
+/* Leaflet Controls - z-index bajo para no interferir con el menú móvil */
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 500 !important;
+}
+
+.leaflet-control {
+  z-index: 500 !important;
+}
+
 /* Leaflet Zoom Controls Custom Styles */
 .leaflet-control-zoom {
   border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
@@ -472,6 +482,7 @@ const animateMap = () => {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
   margin-top: 80px !important;
   backdrop-filter: blur(10px);
+  z-index: 500 !important;
 
   @include mobile {
     margin-top: 70px !important;
