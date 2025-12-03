@@ -17,7 +17,6 @@
 
       <!-- Mission Section -->
       <section class="content-section mission-section">
-        <div class="section-icon">🎯</div>
         <h2 class="section-title">Our Purpose</h2>
         <p class="section-text">
           This project was born from the desire to raise awareness and provide knowledge 
@@ -33,17 +32,29 @@
         <h2 class="section-title">What You'll Discover</h2>
         <div class="features-grid">
           <div class="feature-card">
-            <span class="feature-icon">🗺️</span>
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+            </div>
             <h3>Interactive Map</h3>
             <p>Explore filming locations and historical sites across the globe</p>
           </div>
           <div class="feature-card">
-            <span class="feature-icon">🎬</span>
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+              </svg>
+            </div>
             <h3>Film Collection</h3>
             <p>Curated selection of the most impactful WW2 films ever made</p>
           </div>
           <div class="feature-card">
-            <span class="feature-icon">⏱️</span>
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
             <h3>Historical Timeline</h3>
             <p>Navigate through key events and their cinematic representations</p>
           </div>
@@ -52,7 +63,6 @@
 
       <!-- Recommendations Section -->
       <section class="content-section recommendations-section">
-        <div class="section-icon">🍿</div>
         <h2 class="section-title">Must-Watch Films</h2>
         <p class="section-text">
           Whether you're a history enthusiast or simply looking for powerful storytelling, 
@@ -75,9 +85,12 @@
       <section class="content-section credits-section">
         <h2 class="section-title">Created By</h2>
         <div class="creator-card">
-          <div class="creator-avatar">
-            <span>👨‍💻</span>
-          </div>
+          <!-- TODO: Reemplazar con tu foto real de GitHub/perfil -->
+          <img 
+            src="https://github.com/StevenACZ.png" 
+            alt="StevenACZ" 
+            class="creator-avatar"
+          />
           <div class="creator-info">
             <h3 class="creator-name">StevenACZ</h3>
             <p class="creator-role">Full-Stack Developer</p>
@@ -258,12 +271,6 @@
   margin-bottom: $spacing-2xl;
 }
 
-.section-icon {
-  font-size: 2.5rem;
-  margin-bottom: $spacing-md;
-  text-align: center;
-}
-
 .section-title {
   font-size: 1.75rem;
   font-weight: 700;
@@ -310,9 +317,15 @@
 }
 
 .feature-icon {
-  font-size: 2rem;
-  display: block;
-  margin-bottom: $spacing-sm;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto $spacing-md;
+  color: $beige;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .feature-card h3 {
@@ -398,13 +411,9 @@
 .creator-avatar {
   width: 56px;
   height: 56px;
-  background: rgba($beige, 0.15);
   border: 2px solid rgba($beige, 0.3);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
+  object-fit: cover;
 }
 
 .creator-info {
