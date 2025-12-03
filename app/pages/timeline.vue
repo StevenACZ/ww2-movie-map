@@ -187,24 +187,6 @@
                     <p class="popup-desc">{{ film.synopsis }}</p>
                     <div class="popup-actions">
                       <a
-                        v-if="film.trailerUrl"
-                        :href="film.trailerUrl"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-primary"
-                      >
-                        ▶ Watch Trailer
-                      </a>
-                      <a
-                        v-if="film.imdbUrl"
-                        :href="film.imdbUrl"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-imdb"
-                      >
-                        IMDb
-                      </a>
-                      <a
                         v-if="film.wikipediaUrl"
                         :href="film.wikipediaUrl"
                         target="_blank"
@@ -251,24 +233,6 @@
               </div>
               <p class="mobile-modal-desc">{{ mobileSelectedFilm.synopsis }}</p>
               <div class="mobile-modal-actions">
-                <a
-                  v-if="mobileSelectedFilm.trailerUrl"
-                  :href="mobileSelectedFilm.trailerUrl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="mobile-btn mobile-btn-trailer"
-                >
-                  ▶ Trailer
-                </a>
-                <a
-                  v-if="mobileSelectedFilm.imdbUrl"
-                  :href="mobileSelectedFilm.imdbUrl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="mobile-btn mobile-btn-imdb"
-                >
-                  IMDb
-                </a>
                 <a
                   v-if="mobileSelectedFilm.wikipediaUrl"
                   :href="mobileSelectedFilm.wikipediaUrl"
