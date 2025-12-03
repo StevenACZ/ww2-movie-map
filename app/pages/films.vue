@@ -65,7 +65,11 @@
     <!-- Films Grid -->
     <div class="films-container">
       <TransitionGroup name="film-card">
-        <div v-if="filteredFilms.length === 0" key="no-results" class="no-results">
+        <div
+          v-if="filteredFilms.length === 0"
+          key="no-results"
+          class="no-results"
+        >
           <div class="no-results-icon">🎬</div>
           <p class="no-results-text">No films found</p>
           <p class="no-results-hint">Try adjusting your search</p>
@@ -522,7 +526,6 @@ const viewOnMap = (filmId: string) => {
 
 .film-card:hover {
   border-color: rgba(245, 158, 11, 0.3);
-  transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(245, 158, 11, 0.1);
 }
 
