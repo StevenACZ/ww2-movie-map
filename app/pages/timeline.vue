@@ -33,8 +33,8 @@
     <div class="mobile-timeline" v-if="isMobile">
       <TransitionGroup name="mobile-card">
         <!-- Events -->
-        <div 
-          v-for="event in mobileTimelineItems.events" 
+        <div
+          v-for="event in mobileTimelineItems.events"
           :key="'event-' + event.id"
           class="mobile-timeline-card event-card"
         >
@@ -47,8 +47,8 @@
         </div>
 
         <!-- Films -->
-        <div 
-          v-for="film in mobileTimelineItems.films" 
+        <div
+          v-for="film in mobileTimelineItems.films"
           :key="'film-' + film.id"
           class="mobile-timeline-card film-card"
           @click="toggleFilmPopup(film)"
@@ -65,7 +65,13 @@
       </TransitionGroup>
 
       <!-- Empty State -->
-      <div v-if="mobileTimelineItems.events.length === 0 && mobileTimelineItems.films.length === 0" class="empty-state">
+      <div
+        v-if="
+          mobileTimelineItems.events.length === 0 &&
+          mobileTimelineItems.films.length === 0
+        "
+        class="empty-state"
+      >
         <span class="empty-icon">📅</span>
         <p>No events or films in this period</p>
       </div>
@@ -194,16 +200,28 @@
 
     <!-- Mobile Film Popup Modal -->
     <Transition name="modal">
-      <div v-if="mobileSelectedFilm" class="mobile-film-modal" @click.self="mobileSelectedFilm = null">
+      <div
+        v-if="mobileSelectedFilm"
+        class="mobile-film-modal"
+        @click.self="mobileSelectedFilm = null"
+      >
         <div class="mobile-modal-content">
-          <button class="mobile-modal-close" @click="mobileSelectedFilm = null">×</button>
+          <button class="mobile-modal-close" @click="mobileSelectedFilm = null">
+            ×
+          </button>
           <div class="mobile-modal-body">
-            <img :src="mobileSelectedFilm.poster" :alt="mobileSelectedFilm.title" class="mobile-modal-poster" />
+            <img
+              :src="mobileSelectedFilm.poster"
+              :alt="mobileSelectedFilm.title"
+              class="mobile-modal-poster"
+            />
             <div class="mobile-modal-info">
               <h3>{{ mobileSelectedFilm.title }}</h3>
               <p class="mobile-modal-year">{{ mobileSelectedFilm.year }}</p>
               <div class="mobile-modal-meta">
-                <span class="imdb-rating">⭐ {{ mobileSelectedFilm.imdbRating }}</span>
+                <span class="imdb-rating"
+                  >⭐ {{ mobileSelectedFilm.imdbRating }}</span
+                >
                 <span class="country">{{ mobileSelectedFilm.country }}</span>
               </div>
               <p class="mobile-modal-desc">{{ mobileSelectedFilm.synopsis }}</p>
@@ -305,10 +323,10 @@ const visibleYears = computed(() => {
 const mobileTimelineItems = computed(() => {
   const filteredEvents = positionedEvents.value;
   const filteredFilms = positionedFilms.value;
-  
+
   return {
     events: filteredEvents,
-    films: filteredFilms
+    films: filteredFilms,
   };
 });
 
@@ -320,7 +338,7 @@ const checkMobile = () => {
 // Load data
 onMounted(async () => {
   checkMobile();
-  window.addEventListener('resize', checkMobile);
+  window.addEventListener("resize", checkMobile);
 
   try {
     const eventsResponse = await fetch("/data/historical-events.json");
@@ -363,7 +381,7 @@ const handleClickOutside = (event) => {
 // Limpiar event listener
 onUnmounted(() => {
   document.removeEventListener("click", handleClickOutside);
-  window.removeEventListener('resize', checkMobile);
+  window.removeEventListener("resize", checkMobile);
 });
 
 // Positioning Logic - Cálculo preciso basado en fecha exacta
