@@ -471,8 +471,8 @@ const selectFilm = (film) => {
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/scss/variables' as *;
-@use '@/assets/scss/mixins' as *;
+@use "@/assets/scss/variables" as *;
+@use "@/assets/scss/mixins" as *;
 
 .timeline-page {
   min-height: 100vh;
@@ -483,7 +483,7 @@ const selectFilm = (film) => {
     rgba(25, 30, 35, 0.95) 100%
   );
   color: $text-primary;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   overflow-x: hidden;
   position: relative;
   padding-top: 120px;
@@ -530,7 +530,11 @@ const selectFilm = (film) => {
     font-size: 3rem;
     font-weight: 800;
     margin: 0 0 $spacing-xs 0;
-    background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.85) 100%);
+    background: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0.85) 100%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1025,7 +1029,7 @@ const selectFilm = (film) => {
 // Period info
 .period-info {
   position: fixed;
-  bottom: 90px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
   z-index: $z-sticky;
