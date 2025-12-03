@@ -266,7 +266,9 @@
       <!-- Footer Quote -->
       <footer class="about-footer">
         <blockquote class="footer-quote">
-          <p>"Those who cannot remember the past are condemned to repeat it."</p>
+          <p>
+            "Those who cannot remember the past are condemned to repeat it."
+          </p>
           <cite class="footer-author">— George Santayana</cite>
         </blockquote>
       </footer>
@@ -277,60 +279,61 @@
 <script setup lang="ts">
 // SEO Configuration for About Page
 useSeoMeta({
-  title: 'About',
-  ogTitle: 'About WW2 Film Map - Exploring World War II Through Cinema',
-  description: 'Learn about WW2 Film Map, an interactive project exploring World War II through cinema. Discover our mission to educate about the largest conflict in human history through film.',
-  ogDescription: 'Discover the mission behind WW2 Film Map - an interactive project exploring World War II history through iconic cinema.',
-  ogUrl: 'https://ww2.stevenacz.com/about',
-  ogImage: 'https://ww2.stevenacz.com/og-image.png',
-  twitterCard: 'summary_large_image',
-  twitterTitle: 'About WW2 Film Map',
-  twitterDescription: 'Learn about our mission to explore World War II history through cinema.',
-  twitterImage: 'https://ww2.stevenacz.com/og-image.png',
+  title: "About",
+  ogTitle: "About WW2 Film Map - Exploring World War II Through Cinema",
+  description:
+    "Learn about WW2 Film Map, an interactive project exploring World War II through cinema. Discover our mission to educate about the largest conflict in human history through film.",
+  ogDescription:
+    "Discover the mission behind WW2 Film Map - an interactive project exploring World War II history through iconic cinema.",
+  ogUrl: "https://ww2.stevenacz.com/about",
+  ogImage: "https://ww2.stevenacz.com/og-image.png",
+  twitterCard: "summary_large_image",
+  twitterTitle: "About WW2 Film Map",
+  twitterDescription:
+    "Learn about our mission to explore World War II history through cinema.",
+  twitterImage: "https://ww2.stevenacz.com/og-image.png",
 });
 
 // Canonical URL and Structured Data
 useHead({
-  link: [
-    { rel: 'canonical', href: 'https://ww2.stevenacz.com/about' }
-  ],
+  link: [{ rel: "canonical", href: "https://ww2.stevenacz.com/about" }],
   script: [
     {
-      type: 'application/ld+json',
+      type: "application/ld+json",
       innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'AboutPage',
-        'name': 'About WW2 Film Map',
-        'description': 'An interactive project exploring World War II history through cinema, featuring an interactive map and timeline of WW2 films.',
-        'url': 'https://ww2.stevenacz.com/about',
-        'isPartOf': {
-          '@type': 'WebSite',
-          'name': 'WW2 Film Map',
-          'url': 'https://ww2.stevenacz.com'
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        name: "About WW2 Film Map",
+        description:
+          "An interactive project exploring World War II history through cinema, featuring an interactive map and timeline of WW2 films.",
+        url: "https://ww2.stevenacz.com/about",
+        isPartOf: {
+          "@type": "WebSite",
+          name: "WW2 Film Map",
+          url: "https://ww2.stevenacz.com",
         },
-        'mainEntity': {
-          '@type': 'WebApplication',
-          'name': 'WW2 Film Map',
-          'applicationCategory': 'Education',
-          'operatingSystem': 'Web Browser',
-          'description': 'Interactive web application for exploring World War II films and history',
-          'author': {
-            '@type': 'Person',
-            'name': 'StevenACZ',
-            'url': 'https://github.com/StevenACZ',
-            'sameAs': [
-              'https://github.com/StevenACZ'
-            ]
+        mainEntity: {
+          "@type": "WebApplication",
+          name: "WW2 Film Map",
+          applicationCategory: "Education",
+          operatingSystem: "Web Browser",
+          description:
+            "Interactive web application for exploring World War II films and history",
+          author: {
+            "@type": "Person",
+            name: "StevenACZ",
+            url: "https://github.com/StevenACZ",
+            sameAs: ["https://github.com/StevenACZ"],
           },
-          'offers': {
-            '@type': 'Offer',
-            'price': '0',
-            'priceCurrency': 'USD'
-          }
-        }
-      })
-    }
-  ]
+          offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "USD",
+          },
+        },
+      }),
+    },
+  ],
 });
 </script>
 

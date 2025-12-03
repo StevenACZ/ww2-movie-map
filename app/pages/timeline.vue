@@ -276,54 +276,57 @@ import { ref, computed, onMounted, onUnmounted } from "vue";
 
 // SEO Configuration for Timeline Page
 useSeoMeta({
-  title: 'WW2 Interactive Timeline',
-  ogTitle: 'World War II Timeline - Historical Events & Films (1936-1945)',
-  description: 'Navigate through World War II with our interactive timeline. Explore key historical events from 1936-1945 and discover the films that bring these stories to life.',
-  ogDescription: 'Interactive WW2 timeline showing key historical events and related films from 1936-1945. Explore D-Day, Pearl Harbor, and more.',
-  ogUrl: 'https://ww2.stevenacz.com/timeline',
-  ogImage: 'https://ww2.stevenacz.com/og-image.png',
-  twitterCard: 'summary_large_image',
-  twitterTitle: 'WW2 Interactive Timeline - Events & Films',
-  twitterDescription: 'Explore World War II events and related films in an interactive timeline from 1936-1945.',
-  twitterImage: 'https://ww2.stevenacz.com/og-image.png',
+  title: "WW2 Interactive Timeline",
+  ogTitle: "World War II Timeline - Historical Events & Films (1936-1945)",
+  description:
+    "Navigate through World War II with our interactive timeline. Explore key historical events from 1936-1945 and discover the films that bring these stories to life.",
+  ogDescription:
+    "Interactive WW2 timeline showing key historical events and related films from 1936-1945. Explore D-Day, Pearl Harbor, and more.",
+  ogUrl: "https://ww2.stevenacz.com/timeline",
+  ogImage: "https://ww2.stevenacz.com/og-image.png",
+  twitterCard: "summary_large_image",
+  twitterTitle: "WW2 Interactive Timeline - Events & Films",
+  twitterDescription:
+    "Explore World War II events and related films in an interactive timeline from 1936-1945.",
+  twitterImage: "https://ww2.stevenacz.com/og-image.png",
 });
 
 // Canonical URL and Structured Data
 useHead({
-  link: [
-    { rel: 'canonical', href: 'https://ww2.stevenacz.com/timeline' }
-  ],
+  link: [{ rel: "canonical", href: "https://ww2.stevenacz.com/timeline" }],
   script: [
     {
-      type: 'application/ld+json',
+      type: "application/ld+json",
       innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'WebPage',
-        'name': 'World War II Interactive Timeline',
-        'description': 'Interactive timeline exploring key events of World War II (1936-1945) and related cinema.',
-        'url': 'https://ww2.stevenacz.com/timeline',
-        'isPartOf': {
-          '@type': 'WebSite',
-          'name': 'WW2 Film Map',
-          'url': 'https://ww2.stevenacz.com'
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "World War II Interactive Timeline",
+        description:
+          "Interactive timeline exploring key events of World War II (1936-1945) and related cinema.",
+        url: "https://ww2.stevenacz.com/timeline",
+        isPartOf: {
+          "@type": "WebSite",
+          name: "WW2 Film Map",
+          url: "https://ww2.stevenacz.com",
         },
-        'about': {
-          '@type': 'HistoricalEvent',
-          'name': 'World War II',
-          'startDate': '1939-09-01',
-          'endDate': '1945-09-02',
-          'description': 'The Second World War, a global conflict from 1939 to 1945',
-          'sameAs': 'https://en.wikipedia.org/wiki/World_War_II'
+        about: {
+          "@type": "HistoricalEvent",
+          name: "World War II",
+          startDate: "1939-09-01",
+          endDate: "1945-09-02",
+          description:
+            "The Second World War, a global conflict from 1939 to 1945",
+          sameAs: "https://en.wikipedia.org/wiki/World_War_II",
         },
-        'mainEntity': {
-          '@type': 'ItemList',
-          'name': 'WW2 Timeline Events',
-          'description': 'Chronological list of significant World War II events',
-          'itemListOrder': 'https://schema.org/ItemListOrderAscending'
-        }
-      })
-    }
-  ]
+        mainEntity: {
+          "@type": "ItemList",
+          name: "WW2 Timeline Events",
+          description: "Chronological list of significant World War II events",
+          itemListOrder: "https://schema.org/ItemListOrderAscending",
+        },
+      }),
+    },
+  ],
 });
 
 // State
