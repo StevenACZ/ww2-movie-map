@@ -1140,10 +1140,14 @@ const toggleFilmPopup = (film) => {
     color: $beige-light;
   }
 
-  &.active .card-body {
-    background: rgba($beige, 0.15);
-    box-shadow: 0 0 30px rgba($beige, 0.3);
-    border-color: $beige-light;
+  &.active {
+    z-index: 9999 !important; // Ensure active card with popup is above everything
+
+    .card-body {
+      background: rgba($beige, 0.15);
+      box-shadow: 0 0 30px rgba($beige, 0.3);
+      border-color: $beige-light;
+    }
   }
 
   &:hover {
@@ -1217,7 +1221,7 @@ const toggleFilmPopup = (film) => {
   border-radius: $border-radius-lg;
   padding: $spacing-md;
   box-shadow: $shadow-lg;
-  z-index: $z-modal;
+  z-index: 9999; // Higher than timeline-nav to appear above it
   backdrop-filter: blur(20px);
   animation: fadeIn $transition-normal ease;
 }
