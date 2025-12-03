@@ -10,19 +10,15 @@
       <!-- Desktop Navigation -->
       <nav class="nav-menu desktop-nav">
         <NuxtLink to="/" class="nav-item" :class="{ active: currentRoute === '/' }">
-          <span class="nav-icon">🗺️</span>
           <span class="nav-text">MAP</span>
         </NuxtLink>
         <NuxtLink to="/films" class="nav-item" :class="{ active: currentRoute === '/films' }">
-          <span class="nav-icon">🎬</span>
           <span class="nav-text">FILMS</span>
         </NuxtLink>
         <NuxtLink to="/timeline" class="nav-item" :class="{ active: currentRoute === '/timeline' }">
-          <span class="nav-icon">⏱️</span>
           <span class="nav-text">TIMELINE</span>
         </NuxtLink>
         <NuxtLink to="/about" class="nav-item" :class="{ active: currentRoute === '/about' }">
-          <span class="nav-icon">ℹ️</span>
           <span class="nav-text">ABOUT</span>
         </NuxtLink>
       </nav>
@@ -54,7 +50,11 @@
           :class="{ active: currentRoute === '/' }"
           @click="closeMenu"
         >
-          <span class="mobile-nav-icon">🗺️</span>
+          <span class="mobile-nav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+            </svg>
+          </span>
           <span class="mobile-nav-text">Map</span>
           <span class="mobile-nav-desc">Explore WW2 films on the map</span>
         </NuxtLink>
@@ -64,7 +64,11 @@
           :class="{ active: currentRoute === '/films' }"
           @click="closeMenu"
         >
-          <span class="mobile-nav-icon">🎬</span>
+          <span class="mobile-nav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+            </svg>
+          </span>
           <span class="mobile-nav-text">Films</span>
           <span class="mobile-nav-desc">Browse film collection</span>
         </NuxtLink>
@@ -74,7 +78,11 @@
           :class="{ active: currentRoute === '/timeline' }"
           @click="closeMenu"
         >
-          <span class="mobile-nav-icon">⏱️</span>
+          <span class="mobile-nav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </span>
           <span class="mobile-nav-text">Timeline</span>
           <span class="mobile-nav-desc">Events & film releases</span>
         </NuxtLink>
@@ -84,7 +92,11 @@
           :class="{ active: currentRoute === '/about' }"
           @click="closeMenu"
         >
-          <span class="mobile-nav-icon">ℹ️</span>
+          <span class="mobile-nav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </span>
           <span class="mobile-nav-text">About</span>
           <span class="mobile-nav-desc">Project information</span>
         </NuxtLink>
@@ -94,8 +106,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
-import { useRoute } from 'vue-router';
+import { ref, computed, watch, onMounted, onUnmounted } from "vue";
+import { useRoute } from "vue-router";
 
 const route = useRoute();
 const currentRoute = computed(() => route.path);
@@ -104,15 +116,15 @@ const isMenuOpen = ref(false);
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
   if (isMenuOpen.value) {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   } else {
-    document.body.style.overflow = '';
+    document.body.style.overflow = "";
   }
 };
 
 const closeMenu = () => {
   isMenuOpen.value = false;
-  document.body.style.overflow = '';
+  document.body.style.overflow = "";
 };
 
 // Close menu on route change
@@ -122,7 +134,7 @@ watch(currentRoute, () => {
 
 // Close menu on escape key
 const handleEscape = (e: KeyboardEvent) => {
-  if (e.key === 'Escape' && isMenuOpen.value) {
+  if (e.key === "Escape" && isMenuOpen.value) {
     closeMenu();
   }
 };
@@ -135,20 +147,20 @@ const handleResize = () => {
 };
 
 onMounted(() => {
-  window.addEventListener('keydown', handleEscape);
-  window.addEventListener('resize', handleResize);
+  window.addEventListener("keydown", handleEscape);
+  window.addEventListener("resize", handleResize);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('keydown', handleEscape);
-  window.removeEventListener('resize', handleResize);
-  document.body.style.overflow = '';
+  window.removeEventListener("keydown", handleEscape);
+  window.removeEventListener("resize", handleResize);
+  document.body.style.overflow = "";
 });
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/scss/variables' as *;
-@use '@/assets/scss/mixins' as *;
+@use "@/assets/scss/variables" as *;
+@use "@/assets/scss/mixins" as *;
 
 .app-header {
   position: fixed;
@@ -191,7 +203,7 @@ onUnmounted(() => {
   display: flex;
   align-items: baseline;
   gap: $spacing-xs;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   cursor: pointer;
   transition: opacity $transition-fast;
   text-decoration: none;
@@ -252,7 +264,7 @@ onUnmounted(() => {
   border: none;
   color: rgba(255, 255, 255, 0.6);
   padding: $spacing-lg 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -263,12 +275,8 @@ onUnmounted(() => {
   height: 100%;
   text-decoration: none;
 
-  .nav-icon {
-    display: none;
-  }
-
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -314,7 +322,7 @@ onUnmounted(() => {
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: $z-modal + 10;
+  z-index: 9999;
 
   @include mobile {
     display: flex;
@@ -359,19 +367,19 @@ onUnmounted(() => {
   }
 }
 
-// Mobile Overlay
+// Mobile Overlay - z-index muy alto para estar encima de todo
 .mobile-overlay {
   position: fixed;
   top: 56px;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: $z-modal;
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9000;
+  backdrop-filter: blur(8px);
 }
 
-// Mobile Navigation
+// Mobile Navigation - z-index muy alto
 .mobile-nav {
   position: fixed;
   top: 56px;
@@ -379,12 +387,12 @@ onUnmounted(() => {
   right: 0;
   background: linear-gradient(
     180deg,
-    rgba(20, 25, 30, 0.98) 0%,
-    rgba(15, 20, 25, 0.96) 100%
+    rgba(20, 25, 30, 0.99) 0%,
+    rgba(15, 20, 25, 0.98) 100%
   );
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(20px) saturate(180%);
-  z-index: $z-modal + 5;
+  z-index: 9500;
   padding: $spacing-md;
   display: flex;
   flex-direction: column;
@@ -402,7 +410,8 @@ onUnmounted(() => {
   text-decoration: none;
   transition: all $transition-normal;
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background: rgba($beige, 0.1);
     border-color: rgba($beige, 0.3);
   }
@@ -414,23 +423,34 @@ onUnmounted(() => {
     .mobile-nav-text {
       color: $beige;
     }
+
+    .mobile-nav-icon {
+      color: $beige;
+    }
   }
 }
 
 .mobile-nav-icon {
-  font-size: 24px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
+  color: $text-secondary;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .mobile-nav-text {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: $text-primary;
 }
 
 .mobile-nav-desc {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 12px;
   color: $text-muted;
   margin-left: auto;
@@ -453,8 +473,8 @@ onUnmounted(() => {
 
 .slide-down-enter-active,
 .slide-down-leave-active {
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              opacity 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.3s ease;
 }
 
 .slide-down-enter-from,

@@ -20,24 +20,26 @@
         <button class="close-btn" @click="clearSelection" aria-label="Close">
           ✕
         </button>
-        
+
         <div class="film-info-content">
           <!-- Poster -->
           <div class="film-poster">
             <img :src="selectedFilm.poster" :alt="selectedFilm.title" />
           </div>
-          
+
           <!-- Info -->
           <div class="film-details">
             <h2 class="film-title">{{ selectedFilm.title }}</h2>
             <p class="film-year">{{ selectedFilm.year }}</p>
-            
+
             <p class="film-synopsis">{{ selectedFilm.synopsis }}</p>
-            
+
             <div class="film-meta">
               <span class="film-rating">
                 <span class="rating-label">⭐</span>
-                <span class="rating-value">{{ selectedFilm.imdbRating }}/10</span>
+                <span class="rating-value"
+                  >{{ selectedFilm.imdbRating }}/10</span
+                >
               </span>
             </div>
           </div>
@@ -103,7 +105,7 @@ const PAN_SPEED = 10;
 
 // Check if mobile
 const isMobile = () => {
-  return typeof window !== 'undefined' && window.innerWidth <= 768;
+  return typeof window !== "undefined" && window.innerWidth <= 768;
 };
 
 /**
@@ -118,7 +120,7 @@ onMounted(async () => {
 
   // Initialize map with mobile-friendly settings
   const initialZoom = isMobile() ? MOBILE_ZOOM : MAP_ZOOM;
-  
+
   map.value = L.map("map", {
     center: MAP_CENTER,
     zoom: initialZoom,
@@ -243,9 +245,9 @@ const createAllMarkers = () => {
       const coords = [location.coordinates[1], location.coordinates[0]];
       // Give higher z-index to earlier films (reverse order)
       const zIndexOffset = (filmsData.films.length - filmIndex) * 100;
-      const marker = L.marker(coords, { 
+      const marker = L.marker(coords, {
         icon,
-        zIndexOffset 
+        zIndexOffset,
       })
         .on("click", () => selectFilm(film, location))
         .addTo(map.value);
@@ -287,7 +289,12 @@ const updateMarkerVisibility = () => {
 };
 
 const hoverFilm = (film: Film) => {
-  console.log("hoverFilm called", film.title, "selectedFilm:", selectedFilm.value);
+  console.log(
+    "hoverFilm called",
+    film.title,
+    "selectedFilm:",
+    selectedFilm.value
+  );
   if (!selectedFilm.value) {
     hoveredFilm.value = film;
     console.log("hoveredFilm set to:", hoveredFilm.value?.title);
@@ -311,7 +318,7 @@ const selectFilm = (film: Film, location: Location) => {
   const radiusMap = { city: 5000, region: 30000, country: 200000 };
   const radius = radiusMap[location.type] || 5000;
 
-    highlightLayer.value = L.circle(
+  highlightLayer.value = L.circle(
     [location.coordinates[1], location.coordinates[0]],
     {
       color: "#dc2626",
@@ -325,11 +332,15 @@ const selectFilm = (film: Film, location: Location) => {
 
   // Adjust zoom level for mobile
   const targetZoom = isMobile() ? 10 : 12;
-  
-  map.value.flyTo([location.coordinates[1], location.coordinates[0]], targetZoom, {
-    duration: 2.0,
-    easeLinearity: 0.25,
-  });
+
+  map.value.flyTo(
+    [location.coordinates[1], location.coordinates[0]],
+    targetZoom,
+    {
+      duration: 2.0,
+      easeLinearity: 0.25,
+    }
+  );
 };
 
 const resetView = () => {
@@ -388,8 +399,8 @@ const animateMap = () => {
 </script>
 
 <style lang="scss">
-@use '@/assets/scss/variables' as *;
-@use '@/assets/scss/mixins' as *;
+@use "@/assets/scss/variables" as *;
+@use "@/assets/scss/mixins" as *;
 
 .map {
   &-container {
@@ -439,8 +450,7 @@ const animateMap = () => {
       rgba($beige-dark, 0.2) 100%
     );
     border-color: rgba($beige, 0.5);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5),
-                0 0 20px rgba($beige, 0.2);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba($beige, 0.2);
   }
 
   &:active {
@@ -448,7 +458,7 @@ const animateMap = () => {
   }
 
   @include mobile {
-    top: 130px;
+    top: 160px;
     width: 44px;
     height: 44px;
   }
@@ -517,8 +527,7 @@ const animateMap = () => {
   border-radius: 6px;
   border: 2.5px solid rgba(255, 255, 255, 0.9);
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
-              box-shadow 0.3s ease,
-              border-color 0.3s ease;
+    box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
   transform: scale(var(--marker-scale));
   transform-origin: bottom center;
@@ -531,8 +540,7 @@ const animateMap = () => {
 
   &:hover {
     transform: scale(calc(var(--marker-scale) * 1.25));
-    box-shadow: 0 0 30px rgba($beige, 0.9),
-                0 8px 24px rgba(0, 0, 0, 0.7) !important;
+    box-shadow: 0 0 30px rgba($beige, 0.9), 0 8px 24px rgba(0, 0, 0, 0.7) !important;
     border-color: $beige;
     z-index: $z-modal;
   }
@@ -570,9 +578,8 @@ const animateMap = () => {
   border: 2px solid rgba($beige, 0.6);
   border-radius: 10px;
   padding: 14px 28px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8),
-              0 0 20px rgba($beige, 0.3),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba($beige, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px) saturate(180%);
   min-width: 280px;
   text-align: center;
@@ -586,13 +593,12 @@ const animateMap = () => {
   }
 
   .film-title {
-    font-family: 'Cinzel', serif;
+    font-family: "Cinzel", serif;
     font-size: 22px;
     font-weight: 700;
     color: $beige;
     margin: 0 0 6px 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8),
-                 0 0 20px rgba($beige, 0.4);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba($beige, 0.4);
     letter-spacing: 0.5px;
 
     @include mobile {
@@ -601,7 +607,7 @@ const animateMap = () => {
   }
 
   .film-year {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
     margin: 0;
@@ -631,7 +637,7 @@ const animateMap = () => {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.9),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(24px) saturate(180%);
 
   @include mobile {
@@ -732,7 +738,7 @@ const animateMap = () => {
   }
 
   .film-title {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: $beige;
@@ -749,7 +755,7 @@ const animateMap = () => {
   }
 
   .film-year {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.6);
     margin: 0;
@@ -761,7 +767,7 @@ const animateMap = () => {
   }
 
   .film-synopsis {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 14px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
@@ -796,7 +802,7 @@ const animateMap = () => {
   display: flex;
   align-items: baseline;
   gap: $spacing-xs;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: $beige;
