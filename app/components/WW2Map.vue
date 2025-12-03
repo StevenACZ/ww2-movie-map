@@ -42,6 +42,31 @@
                 >
               </span>
             </div>
+
+            <!-- Action Buttons -->
+            <div class="film-actions">
+              <a
+                v-if="selectedFilm.trailerUrl"
+                :href="selectedFilm.trailerUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="film-action-btn trailer-btn"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                Trailer
+              </a>
+              <a
+                v-if="selectedFilm.imdbUrl"
+                :href="selectedFilm.imdbUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="film-action-btn imdb-btn"
+              >
+                IMDb
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -833,6 +858,78 @@ const animateMap = () => {
 
   .rating-value {
     color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Film Action Buttons */
+.film-actions {
+  display: flex;
+  gap: $spacing-sm;
+  margin-top: $spacing-sm;
+  flex-wrap: wrap;
+
+  @include mobile {
+    gap: $spacing-xs;
+    margin-top: $spacing-xs;
+  }
+}
+
+.film-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all $transition-fast;
+  cursor: pointer;
+
+  @include mobile {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .action-icon {
+    width: 16px;
+    height: 16px;
+
+    @include mobile {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  &.trailer-btn {
+    background: rgba(220, 38, 38, 0.15);
+    border-color: rgba(220, 38, 38, 0.3);
+    color: #fca5a5;
+
+    &:hover {
+      background: rgba(220, 38, 38, 0.25);
+      border-color: rgba(220, 38, 38, 0.5);
+    }
+  }
+
+  &.imdb-btn {
+    background: rgba(234, 179, 8, 0.15);
+    border-color: rgba(234, 179, 8, 0.3);
+    color: #fde047;
+
+    &:hover {
+      background: rgba(234, 179, 8, 0.25);
+      border-color: rgba(234, 179, 8, 0.5);
+    }
   }
 }
 
