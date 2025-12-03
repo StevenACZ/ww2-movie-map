@@ -8,6 +8,7 @@
         "start": 1942,
         "end": 1943
       },
+      "eventDate": "1942-09-13",
       "imdbRating": 7.5,
       "country": "Germany",
       "poster": "https://upload.wikimedia.org/wikipedia/en/3/3d/Stalingrad_film.jpg",
@@ -32,6 +33,7 @@
         "start": 1944,
         "end": 1944
       },
+      "eventDate": "1944-06-06",
       "imdbRating": 8.6,
       "country": "United States",
       "poster": "https://upload.wikimedia.org/wikipedia/en/a/ac/Saving_Private_Ryan_poster.jpg",
@@ -65,6 +67,7 @@
         "start": 1940,
         "end": 1940
       },
+      "eventDate": "1940-05-26",
       "imdbRating": 7.8,
       "country": "United Kingdom",
       "poster": "https://image.tmdb.org/t/p/w500/ebSnODDg9lbsMIaWg2uAbjn7TO5.jpg",
@@ -89,6 +92,7 @@
         "start": 1939,
         "end": 1945
       },
+      "eventDate": "1942-03-01",
       "imdbRating": 9,
       "country": "United States",
       "poster": "https://image.tmdb.org/t/p/w500/c8Ass7acuOe4za6DhSattE359gr.jpg",
@@ -113,6 +117,7 @@
         "start": 1939,
         "end": 1945
       },
+      "eventDate": "1943-04-19",
       "imdbRating": 8.5,
       "country": "France",
       "poster": "https://upload.wikimedia.org/wikipedia/en/a/a6/The_Pianist_movie.jpg",
@@ -137,6 +142,7 @@
         "start": 1945,
         "end": 1945
       },
+      "eventDate": "1945-04-30",
       "imdbRating": 8.2,
       "country": "Germany",
       "poster": "https://upload.wikimedia.org/wikipedia/en/d/dc/Der_Untergang_Downfall_poster.png",
@@ -185,6 +191,7 @@
         "start": 1937,
         "end": 1937
       },
+      "eventDate": "1937-10-26",
       "imdbRating": 6.8,
       "country": "China",
       "poster": "https://upload.wikimedia.org/wikipedia/en/a/af/The_Eight_Hundred.jpg",
@@ -233,6 +240,7 @@
         "start": 1941,
         "end": 1941
       },
+      "eventDate": "1941-12-07",
       "imdbRating": 7.5,
       "country": "USA/Japan",
       "poster": "https://upload.wikimedia.org/wikipedia/en/1/1a/ToraToraTora1970.png",
@@ -353,6 +361,7 @@
         "start": 1941,
         "end": 1941
       },
+      "eventDate": "1941-10-28",
       "imdbRating": 8.3,
       "country": "West Germany",
       "poster": "https://upload.wikimedia.org/wikipedia/en/a/a3/Das_boot_ver1.jpg",
@@ -425,6 +434,7 @@
         "start": 1943,
         "end": 1943
       },
+      "eventDate": "1943-03-22",
       "imdbRating": 8.4,
       "country": "Soviet Union",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDlkZmVkZDAtZGFmMS00OWIzLWJkY2YtNWE5NjNhNjhiZGE3XkEyXkFqcGc@._V1_FMjpg_UY1658_.jpg",
@@ -578,6 +588,7 @@
         "start": 1945,
         "end": 1945
       },
+      "eventDate": "1945-05-05",
       "imdbRating": 8.1,
       "country": "USA",
       "poster": "https://upload.wikimedia.org/wikipedia/en/8/8a/Hacksaw_Ridge_poster.png",
