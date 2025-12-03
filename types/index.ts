@@ -13,11 +13,16 @@ export interface Film {
     start: number;
     end: number;
   };
+  eventDate?: string;
   imdbRating: number;
   country: string;
   poster: string;
   synopsis: string;
   locations: Location[];
+  // External links
+  wikipediaUrl?: string;
+  imdbUrl?: string;
+  trailerUrl?: string;
 }
 
 export interface FilmsData {

@@ -273,6 +273,8 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
+import filmsData from "../../data/films.json";
+import eventsData from "../../data/historical-events.json";
 
 // SEO Configuration for Timeline Page
 useSeoMeta({
@@ -390,25 +392,16 @@ const checkMobile = () => {
   isMobile.value = window.innerWidth <= 768;
 };
 
-// Load data
-onMounted(async () => {
+// Load data from imported JSON files
+onMounted(() => {
   checkMobile();
   window.addEventListener("resize", checkMobile);
 
-  try {
-    const eventsResponse = await fetch("/data/historical-events.json");
-    const eventsData = await eventsResponse.json();
-    events.value = eventsData.events;
-
-    // Usar el JSON principal de películas y filtrar las que queremos en el timeline
-    const filmsResponse = await fetch("/data/films.json");
-    const filmsData = await filmsResponse.json();
-    films.value = filmsData.films.filter((film) =>
-      timelineFilmIds.includes(film.id)
-    );
-  } catch (error) {
-    console.error("Error loading data:", error);
-  }
+  // Usar datos importados directamente (eliminados duplicados en public/data/)
+  events.value = eventsData.events;
+  films.value = filmsData.films.filter((film) =>
+    timelineFilmIds.includes(film.id)
+  );
 
   // Click outside handler para cerrar el modal
   document.addEventListener("click", handleClickOutside);

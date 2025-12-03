@@ -16,14 +16,14 @@
       "locations": [
         {
           "name": "Stalingrad",
-          "coordinates": [
-            44.6,
-            48.75
-          ],
+          "coordinates": [44.6, 48.75],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Stalingrad_(1993_film)",
+      "imdbUrl": "https://www.imdb.com/title/tt0108211/",
+      "trailerUrl": "https://www.youtube.com/watch?v=Ag7p0P1_NkI"
     },
     {
       "id": "saving-private-ryan-1998",
@@ -41,23 +41,20 @@
       "locations": [
         {
           "name": "Normandy",
-          "coordinates": [
-            -0.3707,
-            49.399
-          ],
+          "coordinates": [-0.3707, 49.399],
           "type": "region",
           "isPrimary": true
         },
         {
           "name": "Omaha Beach",
-          "coordinates": [
-            -0.8776,
-            49.3711
-          ],
+          "coordinates": [-0.8776, 49.3711],
           "type": "city",
           "isPrimary": false
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Saving_Private_Ryan",
+      "imdbUrl": "https://www.imdb.com/title/tt0120815/",
+      "trailerUrl": "https://www.youtube.com/watch?v=zwhP5b4tD6g"
     },
     {
       "id": "dunkirk-2017",
@@ -75,14 +72,14 @@
       "locations": [
         {
           "name": "Dunkirk",
-          "coordinates": [
-            2.3767,
-            51.0343
-          ],
+          "coordinates": [2.3767, 51.0343],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunkirk_(2017_film)",
+      "imdbUrl": "https://www.imdb.com/title/tt5013056/",
+      "trailerUrl": "https://www.youtube.com/watch?v=F-eMt3SrfFU"
     },
     {
       "id": "schindlers-list-1993",
@@ -100,14 +97,14 @@
       "locations": [
         {
           "name": "Kraków",
-          "coordinates": [
-            19.9449,
-            50.0647
-          ],
+          "coordinates": [19.9449, 50.0647],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Schindler%27s_List",
+      "imdbUrl": "https://www.imdb.com/title/tt0108052/",
+      "trailerUrl": "https://www.youtube.com/watch?v=gG22XNhtnoY"
     },
     {
       "id": "the-pianist-2002",
@@ -125,14 +122,14 @@
       "locations": [
         {
           "name": "Warsaw",
-          "coordinates": [
-            21.0122,
-            52.2297
-          ],
+          "coordinates": [21.0122, 52.2297],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Pianist_(2002_film)",
+      "imdbUrl": "https://www.imdb.com/title/tt0253474/",
+      "trailerUrl": "https://www.youtube.com/watch?v=u_jE7-6Ps8o"
     },
     {
       "id": "downfall-2004",
@@ -150,14 +147,14 @@
       "locations": [
         {
           "name": "Berlin",
-          "coordinates": [
-            13.405,
-            52.52
-          ],
+          "coordinates": [13.405, 52.52],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Downfall_(2004_film)",
+      "imdbUrl": "https://www.imdb.com/title/tt0363163/",
+      "trailerUrl": "https://www.youtube.com/watch?v=xBWmkwaTQ0k"
     },
     {
       "id": "t-34-2019",
@@ -174,14 +171,14 @@
       "locations": [
         {
           "name": "Ohrdruf",
-          "coordinates": [
-            10.7417,
-            50.8283
-          ],
+          "coordinates": [10.7417, 50.8283],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/T-34_(film)",
+      "imdbUrl": "https://www.imdb.com/title/tt6720150/",
+      "trailerUrl": "https://www.youtube.com/watch?v=dcq8-HBMpP8"
     },
     {
       "id": "the-eight-hundred-2020",
@@ -199,14 +196,14 @@
       "locations": [
         {
           "name": "Shanghai",
-          "coordinates": [
-            121.4737,
-            31.2304
-          ],
+          "coordinates": [121.4737, 31.2304],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Eight_Hundred",
+      "imdbUrl": "https://www.imdb.com/title/tt10614820/",
+      "trailerUrl": "https://www.youtube.com/watch?v=nKRQM4U5Fsc"
     },
     {
       "id": "letters-from-iwo-jima-2006",
@@ -223,14 +220,14 @@
       "locations": [
         {
           "name": "Iwo Jima",
-          "coordinates": [
-            141.3283,
-            24.7833
-          ],
+          "coordinates": [141.3283, 24.7833],
           "type": "region",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Letters_from_Iwo_Jima",
+      "imdbUrl": "https://www.imdb.com/title/tt0498380/",
+      "trailerUrl": "https://www.youtube.com/watch?v=HJVadHKbbvs"
     },
     {
       "id": "tora-tora-tora-1970",
@@ -248,14 +245,14 @@
       "locations": [
         {
           "name": "Pearl Harbor",
-          "coordinates": [
-            -157.9485,
-            21.3642
-          ],
+          "coordinates": [-157.9485, 21.3642],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Tora!_Tora!_Tora!",
+      "imdbUrl": "https://www.imdb.com/title/tt0066473/",
+      "trailerUrl": "https://www.youtube.com/watch?v=rwGfwG-a9Ig"
     },
     {
       "id": "midway-2019",
@@ -272,14 +269,14 @@
       "locations": [
         {
           "name": "Midway Atoll",
-          "coordinates": [
-            -177.3761,
-            28.2072
-          ],
+          "coordinates": [-177.3761, 28.2072],
           "type": "region",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Midway_(2019_film)",
+      "imdbUrl": "https://www.imdb.com/title/tt6924650/",
+      "trailerUrl": "https://www.youtube.com/watch?v=l9laReRAYFk"
     },
     {
       "id": "the-captain-2017",
@@ -296,14 +293,14 @@
       "locations": [
         {
           "name": "Emslandlager",
-          "coordinates": [
-            7.3,
-            53.05
-          ],
+          "coordinates": [7.3, 53.05],
           "type": "region",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Captain_(2017_film)",
+      "imdbUrl": "https://www.imdb.com/title/tt6763170/",
+      "trailerUrl": "https://www.youtube.com/watch?v=crr-v7HtKz0"
     },
     {
       "id": "narvik-2022",
@@ -320,14 +317,14 @@
       "locations": [
         {
           "name": "Narvik",
-          "coordinates": [
-            17.4272,
-            68.4385
-          ],
+          "coordinates": [17.4272, 68.4385],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Narvik_(film)",
+      "imdbUrl": "https://www.imdb.com/title/tt12930252/",
+      "trailerUrl": "https://www.youtube.com/watch?v=BT2yJT1wYSI"
     },
     {
       "id": "enemy-at-the-gates-2001",
@@ -344,14 +341,14 @@
       "locations": [
         {
           "name": "Stalingrad",
-          "coordinates": [
-            44.516,
-            48.708
-          ],
+          "coordinates": [44.516, 48.708],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Enemy_at_the_Gates",
+      "imdbUrl": "https://www.imdb.com/title/tt0215750/",
+      "trailerUrl": "https://www.youtube.com/watch?v=4O-sMh_DO6I"
     },
     {
       "id": "das-boot-1981",
@@ -369,14 +366,14 @@
       "locations": [
         {
           "name": "La Rochelle",
-          "coordinates": [
-            -1.2133,
-            46.1591
-          ],
+          "coordinates": [-1.2133, 46.1591],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Das_Boot",
+      "imdbUrl": "https://www.imdb.com/title/tt0082096/",
+      "trailerUrl": "https://www.youtube.com/watch?v=lhlABhDTq3Y"
     },
     {
       "id": "the-forgotten-battle-2020",
@@ -393,14 +390,14 @@
       "locations": [
         {
           "name": "Walcheren",
-          "coordinates": [
-            3.5833,
-            51.5333
-          ],
+          "coordinates": [3.5833, 51.5333],
           "type": "region",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Forgotten_Battle",
+      "imdbUrl": "https://www.imdb.com/title/tt10342730/",
+      "trailerUrl": "https://www.youtube.com/watch?v=J8lh6f7D_h4"
     },
     {
       "id": "tuntematon-sotilas-2017",
@@ -417,14 +414,14 @@
       "locations": [
         {
           "name": "Petrozavodsk",
-          "coordinates": [
-            34.35,
-            61.78
-          ],
+          "coordinates": [34.35, 61.78],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Unknown_Soldier_(2017_film)",
+      "imdbUrl": "https://www.imdb.com/title/tt4065552/",
+      "trailerUrl": "https://www.youtube.com/watch?v=JCpcVQl_0P0"
     },
     {
       "id": "come-and-see-1985",
@@ -442,14 +439,14 @@
       "locations": [
         {
           "name": "Khatyn",
-          "coordinates": [
-            27.945,
-            54.335
-          ],
+          "coordinates": [27.945, 54.335],
           "type": "region",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Come_and_See",
+      "imdbUrl": "https://www.imdb.com/title/tt0091251/",
+      "trailerUrl": "https://www.youtube.com/watch?v=UkkJPqCdoD0"
     },
     {
       "id": "patton-1970",
@@ -466,23 +463,20 @@
       "locations": [
         {
           "name": "Tunisia",
-          "coordinates": [
-            9.5375,
-            33.8869
-          ],
+          "coordinates": [9.5375, 33.8869],
           "type": "region",
           "isPrimary": true
         },
         {
           "name": "Sicily",
-          "coordinates": [
-            14.0153,
-            37.5999
-          ],
+          "coordinates": [14.0153, 37.5999],
           "type": "region",
           "isPrimary": false
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Patton_(film)",
+      "imdbUrl": "https://www.imdb.com/title/tt0066206/",
+      "trailerUrl": "https://www.youtube.com/watch?v=qdGU6Ljo8AE"
     },
     {
       "id": "battle-of-the-bulge-1965",
@@ -499,14 +493,14 @@
       "locations": [
         {
           "name": "Ardennes",
-          "coordinates": [
-            5.7833,
-            50.25
-          ],
+          "coordinates": [5.7833, 50.25],
           "type": "region",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Battle_of_the_Bulge_(1965_film)",
+      "imdbUrl": "https://www.imdb.com/title/tt0058947/",
+      "trailerUrl": "https://www.youtube.com/watch?v=hLJUvIkEo8s"
     },
     {
       "id": "fury-2014",
@@ -523,14 +517,14 @@
       "locations": [
         {
           "name": "Weser River",
-          "coordinates": [
-            9.35,
-            52.1
-          ],
+          "coordinates": [9.35, 52.1],
           "type": "region",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Fury_(2014_film)",
+      "imdbUrl": "https://www.imdb.com/title/tt2713180/",
+      "trailerUrl": "https://www.youtube.com/watch?v=q94n3eWOWXM"
     },
     {
       "id": "inglourious-basterds-2009",
@@ -547,14 +541,14 @@
       "locations": [
         {
           "name": "Paris",
-          "coordinates": [
-            2.3522,
-            48.8566
-          ],
+          "coordinates": [2.3522, 48.8566],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Inglourious_Basterds",
+      "imdbUrl": "https://www.imdb.com/title/tt0361748/",
+      "trailerUrl": "https://www.youtube.com/watch?v=KnrRy6kSFF0"
     },
     {
       "id": "darkest-hour-2017",
@@ -571,14 +565,14 @@
       "locations": [
         {
           "name": "London",
-          "coordinates": [
-            -0.1278,
-            51.5074
-          ],
+          "coordinates": [-0.1278, 51.5074],
           "type": "city",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Darkest_Hour_(film)",
+      "imdbUrl": "https://www.imdb.com/title/tt4555426/",
+      "trailerUrl": "https://www.youtube.com/watch?v=LtJ60u7SUSw"
     },
     {
       "id": "hacksaw-ridge-2016",
@@ -596,14 +590,14 @@
       "locations": [
         {
           "name": "Okinawa",
-          "coordinates": [
-            127.6809,
-            26.2124
-          ],
+          "coordinates": [127.6809, 26.2124],
           "type": "region",
           "isPrimary": true
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Hacksaw_Ridge",
+      "imdbUrl": "https://www.imdb.com/title/tt2119532/",
+      "trailerUrl": "https://www.youtube.com/watch?v=s2-1hz1juBI"
     },
     {
       "id": "the-desert-fox-1951",
@@ -620,23 +614,20 @@
       "locations": [
         {
           "name": "El Alamein",
-          "coordinates": [
-            28.95,
-            30.83
-          ],
+          "coordinates": [28.95, 30.83],
           "type": "city",
           "isPrimary": true
         },
         {
           "name": "Normandy",
-          "coordinates": [
-            -0.3707,
-            49.399
-          ],
+          "coordinates": [-0.3707, 49.399],
           "type": "region",
           "isPrimary": false
         }
-      ]
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Desert_Fox:_The_Story_of_Rommel",
+      "imdbUrl": "https://www.imdb.com/title/tt0043437/",
+      "trailerUrl": "https://www.youtube.com/watch?v=3GNqsNwOXG0"
     }
   ]
 }
