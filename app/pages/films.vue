@@ -277,14 +277,22 @@ const viewOnMap = (filmId: string) => {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@use "@/assets/scss/variables" as *;
+@use "@/assets/scss/mixins" as *;
+
 .films-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0f1a 0%, #0f172a 50%, #1a1f2e 100%);
-  color: white;
-  font-family: "DM Sans", "Inter", sans-serif;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 25, 30, 0.98) 0%,
+    rgba(15, 20, 25, 0.96) 50%,
+    rgba(25, 30, 35, 0.95) 100%
+  );
+  color: $text-primary;
+  font-family: "Inter", sans-serif;
   position: relative;
-  padding: 120px 24px 100px;
+  padding: 120px $spacing-lg 100px;
 }
 
 .world-map-bg {
@@ -317,33 +325,37 @@ const viewOnMap = (filmId: string) => {
   pointer-events: none;
 }
 
-/* ===== HEADER ===== */
+// ===== HEADER =====
 .page-header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: $spacing-2xl;
   position: relative;
-  z-index: 10;
+  z-index: $z-dropdown;
 }
 
 .collection-badge {
   display: inline-block;
-  padding: 6px 16px;
-  background: rgba(245, 158, 11, 0.15);
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 6px $spacing-md;
+  background: rgba($beige, 0.12);
+  border: 1px solid rgba($beige, 0.25);
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #fcd34d;
+  color: $beige;
   letter-spacing: 2px;
-  margin-bottom: 16px;
+  margin-bottom: $spacing-md;
   text-transform: uppercase;
 }
 
 .page-title {
   font-size: 3.5rem;
   font-weight: 800;
-  margin: 0 0 8px 0;
-  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  margin: 0 0 $spacing-sm 0;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.85) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -353,31 +365,31 @@ const viewOnMap = (filmId: string) => {
 .page-subtitle {
   font-size: 1.5rem;
   font-weight: 300;
-  margin: 0 0 16px 0;
-  color: #94a3b8;
+  margin: 0 0 $spacing-md 0;
+  color: $text-secondary;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
 
 .page-description {
-  color: #64748b;
+  color: $text-muted;
   font-size: 1rem;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
-/* ===== CONTROLS ===== */
+// ===== CONTROLS =====
 .controls-wrapper {
   max-width: 1200px;
   margin: 0 auto 40px;
   position: relative;
-  z-index: 10;
+  z-index: $z-dropdown;
 }
 
 .controls {
   display: flex;
-  gap: 16px;
+  gap: $spacing-md;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
@@ -392,35 +404,35 @@ const viewOnMap = (filmId: string) => {
 
 .search-icon {
   position: absolute;
-  left: 16px;
+  left: $spacing-md;
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  color: #64748b;
+  color: $text-muted;
   pointer-events: none;
 }
 
 .search-input {
   width: 100%;
   padding: 14px 40px 14px 48px;
-  background: rgba(15, 23, 42, 0.8);
+  background: $bg-card;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  color: white;
+  border-radius: $border-radius-md;
+  color: $text-primary;
   font-size: 0.95rem;
-  transition: all 0.3s ease;
+  transition: all $transition-normal;
   backdrop-filter: blur(10px);
-}
 
-.search-input::placeholder {
-  color: #64748b;
-}
+  &::placeholder {
+    color: $text-muted;
+  }
 
-.search-input:focus {
-  outline: none;
-  border-color: rgba(245, 158, 11, 0.5);
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.1);
+  &:focus {
+    outline: none;
+    border-color: rgba($beige, 0.5);
+    box-shadow: 0 0 20px rgba($beige, 0.1);
+  }
 }
 
 .clear-search {
@@ -433,103 +445,103 @@ const viewOnMap = (filmId: string) => {
   border: none;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  color: #94a3b8;
+  color: $text-secondary;
   font-size: 16px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
-}
+  transition: all $transition-fast;
 
-.clear-search:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: $text-primary;
+  }
 }
 
 .filter-group {
   display: flex;
-  gap: 4px;
-  background: rgba(15, 23, 42, 0.8);
-  padding: 4px;
-  border-radius: 12px;
+  gap: $spacing-xs;
+  background: $bg-card;
+  padding: $spacing-xs;
+  border-radius: $border-radius-md;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
 }
 
 .filter-btn {
-  padding: 10px 16px;
+  padding: 10px $spacing-md;
   background: transparent;
   border: none;
-  border-radius: 8px;
-  color: #64748b;
+  border-radius: $border-radius-sm;
+  color: $text-muted;
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all $transition-fast;
+
+  &:hover {
+    color: $text-secondary;
+  }
+
+  &.active {
+    background: rgba($beige, 0.15);
+    color: $beige;
+  }
 }
 
-.filter-btn:hover {
-  color: #94a3b8;
-}
-
-.filter-btn.active {
-  background: rgba(245, 158, 11, 0.15);
-  color: #fcd34d;
-}
-
-/* ===== FILMS GRID ===== */
+// ===== FILMS GRID =====
 .films-container {
   max-width: 1600px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 24px;
+  gap: $spacing-lg;
   position: relative;
-  z-index: 10;
+  z-index: $z-dropdown;
 }
 
 .no-results {
   grid-column: 1 / -1;
   text-align: center;
-  padding: 80px 24px;
+  padding: 80px $spacing-lg;
 }
 
 .no-results-icon {
   font-size: 4rem;
-  margin-bottom: 16px;
+  margin-bottom: $spacing-md;
   opacity: 0.5;
 }
 
 .no-results-text {
   font-size: 1.5rem;
-  color: #94a3b8;
-  margin: 0 0 8px 0;
+  color: $text-secondary;
+  margin: 0 0 $spacing-sm 0;
 }
 
 .no-results-hint {
-  color: #64748b;
+  color: $text-muted;
   margin: 0;
 }
 
-/* ===== FILM CARD ===== */
+// ===== FILM CARD =====
 .film-card {
-  background: rgba(15, 23, 42, 0.6);
+  background: $bg-card;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+  border-radius: $border-radius-lg;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all $transition-normal;
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
+
+  &:hover {
+    border-color: rgba($beige, 0.3);
+    box-shadow: $shadow-lg, 0 0 40px rgba($beige, 0.1);
+  }
 }
 
-.film-card:hover {
-  border-color: rgba(245, 158, 11, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(245, 158, 11, 0.1);
-}
-
-/* ===== POSTER SECTION ===== */
+// ===== POSTER SECTION =====
 .poster-section {
   position: relative;
   height: 280px;
@@ -540,11 +552,11 @@ const viewOnMap = (filmId: string) => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
+  transition: transform $transition-slow;
 
-.film-card:hover .poster-image {
-  transform: scale(1.08);
+  .film-card:hover & {
+    transform: scale(1.08);
+  }
 }
 
 .poster-overlay {
@@ -552,8 +564,8 @@ const viewOnMap = (filmId: string) => {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(10, 15, 26, 1) 0%,
-    rgba(10, 15, 26, 0.4) 40%,
+    rgba(20, 25, 30, 1) 0%,
+    rgba(20, 25, 30, 0.4) 40%,
     transparent 100%
   );
   display: flex;
@@ -565,11 +577,11 @@ const viewOnMap = (filmId: string) => {
 .rating-badge {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: $spacing-xs;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
   padding: 6px 10px;
-  border-radius: 8px;
+  border-radius: $border-radius-sm;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -578,40 +590,40 @@ const viewOnMap = (filmId: string) => {
 }
 
 .rating-value {
-  color: #fcd34d;
+  color: $beige;
   font-weight: 700;
   font-size: 0.9rem;
 }
 
 .year-badge {
-  background: rgba(239, 68, 68, 0.8);
+  background: rgba($danger, 0.8);
   backdrop-filter: blur(10px);
   padding: 6px 12px;
-  border-radius: 8px;
+  border-radius: $border-radius-sm;
   font-weight: 600;
   font-size: 0.85rem;
-  color: white;
+  color: $text-primary;
 }
 
-/* ===== CONTENT SECTION ===== */
+// ===== CONTENT SECTION =====
 .content-section {
-  padding: 20px;
+  padding: $spacing-lg;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: $spacing-md;
   flex: 1;
 }
 
 .content-header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: $spacing-sm;
 }
 
 .film-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: white;
+  color: $text-primary;
   margin: 0;
   line-height: 1.3;
 }
@@ -619,9 +631,9 @@ const viewOnMap = (filmId: string) => {
 .film-meta {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: $spacing-sm;
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: $text-secondary;
 }
 
 .meta-divider {
@@ -629,12 +641,12 @@ const viewOnMap = (filmId: string) => {
 }
 
 .meta-period {
-  color: #fcd34d;
+  color: $beige;
   font-weight: 600;
 }
 
 .film-synopsis {
-  color: #94a3b8;
+  color: $text-secondary;
   font-size: 0.9rem;
   line-height: 1.6;
   margin: 0;
@@ -645,7 +657,7 @@ const viewOnMap = (filmId: string) => {
   overflow: hidden;
 }
 
-/* ===== LOCATIONS SECTION ===== */
+// ===== LOCATIONS SECTION =====
 .locations-section {
   margin-top: auto;
 }
@@ -665,14 +677,14 @@ const viewOnMap = (filmId: string) => {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #64748b;
+  color: $text-muted;
   font-weight: 600;
 }
 
 .locations-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: $spacing-sm;
 }
 
 .location-tag {
@@ -682,43 +694,43 @@ const viewOnMap = (filmId: string) => {
   padding: 6px 12px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  color: #e2e8f0;
+  border-radius: $border-radius-sm;
+  color: $text-primary;
   font-size: 0.8rem;
   cursor: pointer;
-  transition: all 0.2s ease;
-}
+  transition: all $transition-fast;
 
-.location-tag:hover {
-  background: rgba(245, 158, 11, 0.15);
-  border-color: rgba(245, 158, 11, 0.3);
-}
+  &:hover {
+    background: rgba($beige, 0.15);
+    border-color: rgba($beige, 0.3);
+  }
 
-.location-tag.primary {
-  border-color: rgba(239, 68, 68, 0.3);
-}
+  &.primary {
+    border-color: rgba($danger, 0.3);
 
-.location-tag.primary:hover {
-  background: rgba(239, 68, 68, 0.15);
-  border-color: rgba(239, 68, 68, 0.5);
+    &:hover {
+      background: rgba($danger, 0.15);
+      border-color: rgba($danger, 0.5);
+    }
+  }
 }
 
 .map-icon {
   width: 14px;
   height: 14px;
   opacity: 0.5;
-  transition: all 0.2s ease;
+  transition: all $transition-fast;
+
+  .location-tag:hover & {
+    opacity: 1;
+  }
 }
 
-.location-tag:hover .map-icon {
-  opacity: 1;
-}
-
-/* ===== ACTIONS SECTION ===== */
+// ===== ACTIONS SECTION =====
 .actions-section {
   display: flex;
   gap: 10px;
-  padding-top: 16px;
+  padding-top: $spacing-md;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -728,36 +740,36 @@ const viewOnMap = (filmId: string) => {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 10px 16px;
-  border-radius: 10px;
+  padding: 10px $spacing-md;
+  border-radius: $border-radius-sm;
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all $transition-fast;
   text-decoration: none;
 }
 
 .wiki-btn {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #e2e8f0;
-}
+  color: $text-primary;
 
-.wiki-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
 }
 
 .map-btn {
-  background: rgba(245, 158, 11, 0.15);
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  color: #fcd34d;
-}
+  background: rgba($beige, 0.15);
+  border: 1px solid rgba($beige, 0.3);
+  color: $beige;
 
-.map-btn:hover {
-  background: rgba(245, 158, 11, 0.25);
-  border-color: rgba(245, 158, 11, 0.5);
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+  &:hover {
+    background: rgba($beige, 0.25);
+    border-color: rgba($beige, 0.5);
+    box-shadow: 0 4px 15px rgba($beige, 0.2);
+  }
 }
 
 .action-icon {
@@ -765,31 +777,31 @@ const viewOnMap = (filmId: string) => {
   height: 16px;
 }
 
-/* ===== RESULTS INFO ===== */
+// ===== RESULTS INFO =====
 .results-info {
   text-align: center;
-  margin-top: 48px;
+  margin-top: $spacing-2xl;
   position: relative;
-  z-index: 10;
+  z-index: $z-dropdown;
 }
 
 .info-text {
   font-size: 0.85rem;
-  color: #64748b;
-  background: rgba(15, 23, 42, 0.8);
-  padding: 8px 20px;
+  color: $text-muted;
+  background: $bg-card;
+  padding: $spacing-sm $spacing-lg;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* ===== ANIMATIONS ===== */
+// ===== ANIMATIONS =====
 .film-card-enter-active {
   transition: all 0.4s ease;
   transition-delay: var(--delay, 0s);
 }
 
 .film-card-leave-active {
-  transition: all 0.3s ease;
+  transition: all $transition-normal;
 }
 
 .film-card-enter-from {
@@ -802,10 +814,10 @@ const viewOnMap = (filmId: string) => {
   transform: scale(0.95);
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+// ===== RESPONSIVE =====
+@include mobile {
   .films-page {
-    padding: 100px 16px 80px;
+    padding: 100px $spacing-md 80px;
   }
 
   .page-title {
