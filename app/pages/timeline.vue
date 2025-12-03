@@ -1140,6 +1140,17 @@ const toggleFilmPopup = (film) => {
     color: $beige-light;
   }
 
+  // Hover state (only when not active)
+  &:hover:not(.active) {
+    z-index: 50 !important;
+
+    .card-body {
+      transform: scale(1.05);
+      box-shadow: 0 10px 40px rgba($beige, 0.5);
+    }
+  }
+
+  // Active state - always on top
   &.active {
     z-index: 9999 !important; // Ensure active card with popup is above everything
 
@@ -1148,14 +1159,10 @@ const toggleFilmPopup = (film) => {
       box-shadow: 0 0 30px rgba($beige, 0.3);
       border-color: $beige-light;
     }
-  }
 
-  &:hover {
-    z-index: 50 !important;
-
-    .card-body {
-      transform: scale(1.05);
-      box-shadow: 0 10px 40px rgba($beige, 0.5);
+    // Keep z-index even on hover when active
+    &:hover {
+      z-index: 9999 !important;
     }
   }
 }
