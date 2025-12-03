@@ -1445,7 +1445,7 @@ const toggleFilmPopup = (film) => {
   z-index: $z-sticky;
 
   @include mobile {
-    bottom: 85px;
+    bottom: 95px;
   }
 }
 

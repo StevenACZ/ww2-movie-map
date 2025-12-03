@@ -837,6 +837,7 @@ const viewOnMap = (filmId: string) => {
     font-size: 0.85rem;
     line-height: 1.5;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
   }
 }
 
