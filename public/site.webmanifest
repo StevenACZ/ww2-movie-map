@@ -1,0 +1,62 @@
+{
+  "name": "WW2 Film Map - Interactive World War II Cinema Experience",
+  "short_name": "WW2 Film Map",
+  "description": "Explore World War II through cinema with our interactive map and timeline. Discover iconic WW2 films, filming locations, and historical events.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#14191e",
+  "theme_color": "#14191e",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["entertainment", "education", "reference"],
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "apple touch icon"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Film Collection",
+      "short_name": "Films",
+      "description": "Browse WW2 films collection",
+      "url": "/films",
+      "icons": []
+    },
+    {
+      "name": "Timeline",
+      "short_name": "Timeline",
+      "description": "Explore WW2 events and films timeline",
+      "url": "/timeline",
+      "icons": []
+    },
+    {
+      "name": "About",
+      "short_name": "About",
+      "description": "Learn about this project",
+      "url": "/about",
+      "icons": []
+    }
+  ]
+}
+

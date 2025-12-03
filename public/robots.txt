@@ -1,2 +1,36 @@
-User-Agent: *
-Disallow:
+# WW2 Film Map - Robots.txt
+# https://ww2.stevenacz.com
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ww2.stevenacz.com/sitemap.xml
+
+# Googlebot specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bingbot specific rules
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Disallow development and internal paths
+User-agent: *
+Disallow: /_nuxt/builds/
+Disallow: /api/
+
+# Allow important assets
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.ico$
+
+# Host directive
+Host: https://ww2.stevenacz.com

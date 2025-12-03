@@ -1,11 +1,11 @@
 <template>
-  <div class="about-page">
+  <main class="about-page" role="main" aria-label="About WW2 Film Map">
     <!-- Background Elements -->
-    <div class="world-map-bg"></div>
-    <div class="grid-pattern"></div>
+    <div class="world-map-bg" aria-hidden="true"></div>
+    <div class="grid-pattern" aria-hidden="true"></div>
 
     <!-- Main Content -->
-    <div class="about-container">
+    <article class="about-container">
       <!-- Hero Section with Logo -->
       <header class="hero-section">
         <div class="logo-showcase">
@@ -265,17 +265,76 @@
 
       <!-- Footer Quote -->
       <footer class="about-footer">
-        <p class="footer-quote">
-          "Those who cannot remember the past are condemned to repeat it."
-        </p>
-        <p class="footer-author">— George Santayana</p>
+        <blockquote class="footer-quote">
+          <p>
+            "Those who cannot remember the past are condemned to repeat it."
+          </p>
+          <cite class="footer-author">— George Santayana</cite>
+        </blockquote>
       </footer>
-    </div>
-  </div>
+    </article>
+  </main>
 </template>
 
 <script setup lang="ts">
-// No additional script needed for this static page
+// SEO Configuration for About Page
+useSeoMeta({
+  title: "About",
+  ogTitle: "About WW2 Film Map - Exploring World War II Through Cinema",
+  description:
+    "Learn about WW2 Film Map, an interactive project exploring World War II through cinema. Discover our mission to educate about the largest conflict in human history through film.",
+  ogDescription:
+    "Discover the mission behind WW2 Film Map - an interactive project exploring World War II history through iconic cinema.",
+  ogUrl: "https://ww2.stevenacz.com/about",
+  ogImage: "https://ww2.stevenacz.com/og-image.png",
+  twitterCard: "summary_large_image",
+  twitterTitle: "About WW2 Film Map",
+  twitterDescription:
+    "Learn about our mission to explore World War II history through cinema.",
+  twitterImage: "https://ww2.stevenacz.com/og-image.png",
+});
+
+// Canonical URL and Structured Data
+useHead({
+  link: [{ rel: "canonical", href: "https://ww2.stevenacz.com/about" }],
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        name: "About WW2 Film Map",
+        description:
+          "An interactive project exploring World War II history through cinema, featuring an interactive map and timeline of WW2 films.",
+        url: "https://ww2.stevenacz.com/about",
+        isPartOf: {
+          "@type": "WebSite",
+          name: "WW2 Film Map",
+          url: "https://ww2.stevenacz.com",
+        },
+        mainEntity: {
+          "@type": "WebApplication",
+          name: "WW2 Film Map",
+          applicationCategory: "Education",
+          operatingSystem: "Web Browser",
+          description:
+            "Interactive web application for exploring World War II films and history",
+          author: {
+            "@type": "Person",
+            name: "StevenACZ",
+            url: "https://github.com/StevenACZ",
+            sameAs: ["https://github.com/StevenACZ"],
+          },
+          offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "USD",
+          },
+        },
+      }),
+    },
+  ],
+});
 </script>
 
 <style lang="scss" scoped>
@@ -801,25 +860,32 @@
 }
 
 .footer-quote {
-  font-size: 1.1rem;
-  font-style: italic;
-  color: $text-secondary;
-  margin: 0 0 $spacing-sm 0;
-  line-height: 1.6;
+  margin: 0;
+  border: none;
+  padding: 0;
 
-  @include mobile {
-    font-size: 0.95rem;
-  }
+  p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: $text-secondary;
+    margin: 0 0 $spacing-sm 0;
+    line-height: 1.6;
 
-  @include mobile-small {
-    font-size: 0.9rem;
+    @include mobile {
+      font-size: 0.95rem;
+    }
+
+    @include mobile-small {
+      font-size: 0.9rem;
+    }
   }
 }
 
 .footer-author {
   font-size: 0.9rem;
   color: $text-muted;
-  margin: 0;
+  font-style: normal;
+  display: block;
 
   @include mobile {
     font-size: 0.85rem;
