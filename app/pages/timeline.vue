@@ -645,6 +645,7 @@ const toggleFilmPopup = (film) => {
 </script>
 
 <style lang="scss" scoped>
+@use "sass:color";
 @use "@/assets/scss/variables" as *;
 @use "@/assets/scss/mixins" as *;
 
@@ -1417,7 +1418,7 @@ const toggleFilmPopup = (film) => {
   text-decoration: none;
 
   &:hover {
-    background: lighten($danger, 5%);
+    background: color.adjust($danger, $lightness: 5%);
   }
 }
 
