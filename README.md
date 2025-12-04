@@ -4,7 +4,7 @@
 
 An interactive experience that maps iconic WW2 films to their historical locations and timelines. Discover how cinema has captured the most significant events of 1936-1945.
 
-![Project Preview](https://ww2.stevenacz.com/og-image.png)
+![Project Preview](public/og-image.png)
 
 ## ✨ Features
 
