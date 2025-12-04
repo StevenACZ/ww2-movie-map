@@ -1,75 +1,62 @@
-# Nuxt Minimal Starter
+# 🎬 WW2 Film Map
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**Explore World War II through the lens of cinema.**
 
-## Setup
+An interactive experience that maps iconic WW2 films to their historical locations and timelines. Discover how cinema has captured the most significant events of 1939-1945.
 
-Make sure to install dependencies:
+![Project Preview](https://ww2.stevenacz.com/og-image.png)
 
-```bash
-# npm
-npm install
+## ✨ Features
 
-# pnpm
-pnpm install
+- 🗺️ **Interactive Map**: Navigate through a global map of film locations and historical battlefields.
+- ⏳ **Dynamic Timeline**: Visualize the parallel progression of the war and the films that depict it.
+- 🎥 **Curated Film Collection**: A detailed library of masterpieces like *Saving Private Ryan*, *Schindler's List*, and *Dunkirk*.
+- 📱 **Fully Responsive**: Seamless experience across desktop, tablet, and mobile devices.
+- 🔍 **SEO Optimized**: Built with modern web standards for maximum visibility.
 
-# yarn
-yarn install
+## 🛠️ Tech Stack
 
-# bun
-bun install
-```
+Built with the latest web technologies for performance and scalability.
 
-## Development Server
+![Nuxt](https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxt.js&logoColor=00DC82)
+![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=Leaflet&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-Start the development server on `http://localhost:3000`:
+## 🚀 Getting Started
 
-```bash
-# npm
-npm run dev
+Follow these simple steps to run the project locally.
 
-# pnpm
-pnpm dev
+### Prerequisites
 
-# yarn
-yarn dev
+- Node.js (Latest LTS version recommended)
+- npm, pnpm, or yarn
 
-# bun
-bun run dev
-```
+### Installation
 
-## Production
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/StevenACZ/ww2-movie-map.git
+   cd ww2-movie-map
+   ```
 
-Build the application for production:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-```bash
-# npm
-npm run build
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-# pnpm
-pnpm build
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-# yarn
-yarn build
+## 📄 License
 
-# bun
-bun run build
-```
+This project is open source and available under the [MIT License](LICENSE).
 
-Locally preview production build:
+---
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+*Created by [StevenACZ](https://github.com/StevenACZ)*
