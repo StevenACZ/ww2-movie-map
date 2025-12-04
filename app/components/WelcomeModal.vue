@@ -15,13 +15,15 @@
         <div class="instructions">
           <h3>HOW TO NAVIGATE</h3>
           <ul>
-            <li>
+            <li class="desktop-only">
               <span class="key">W</span><span class="key">A</span
               ><span class="key">S</span><span class="key">D</span> to move the
               map
             </li>
             <li>
-              <span class="icon">🖱️</span> Click markers to view film details
+              <span class="icon">📍</span> 
+              <span class="desktop-only">Click markers to view film details</span>
+              <span class="mobile-only">Tap markers to view film details</span>
             </li>
             <li>
               <span class="icon">⏱️</span> Use the timeline to filter by year
@@ -75,6 +77,21 @@ const handleStart = () => {
 @use '@/assets/scss/variables' as *;
 @use '@/assets/scss/mixins' as *;
 
+// Visibility utilities
+.desktop-only {
+  display: inline;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+  @media (max-width: 768px) {
+    display: inline;
+  }
+}
+
 .modal {
   &-overlay {
     @include modal-overlay;
@@ -92,6 +109,13 @@ const handleStart = () => {
     font-family: "Courier New", monospace;
     color: $text-secondary;
     @include fade-in;
+
+    @media (max-width: 768px) {
+      width: 95%;
+      max-width: 400px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
   }
 
   &-header {
@@ -106,17 +130,34 @@ const handleStart = () => {
       font-size: 24px;
       letter-spacing: 2px;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        letter-spacing: 1.5px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: $spacing-md;
     }
   }
 
   &-body {
     padding: 30px;
+
+    @media (max-width: 768px) {
+      padding: $spacing-md;
+    }
   }
 
   &-footer {
     padding: $spacing-lg;
     text-align: center;
     border-top: 1px solid rgba($brown, 0.3);
+
+    @media (max-width: 768px) {
+      padding: $spacing-md;
+    }
   }
 }
 
@@ -126,6 +167,12 @@ const handleStart = () => {
   margin-bottom: 30px;
   text-align: center;
   color: #ccc;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: $spacing-md;
+  }
 }
 
 .instructions {
@@ -135,6 +182,11 @@ const handleStart = () => {
   border: 1px solid rgba($brown, 0.3);
   margin-bottom: 30px;
 
+  @media (max-width: 768px) {
+    padding: $spacing-md;
+    margin-bottom: $spacing-md;
+  }
+
   h3 {
     color: $gold;
     font-size: 14px;
@@ -142,6 +194,11 @@ const handleStart = () => {
     margin-bottom: $spacing-md;
     text-transform: uppercase;
     letter-spacing: 1px;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+      margin-bottom: $spacing-sm;
+    }
   }
 
   ul {
@@ -155,6 +212,12 @@ const handleStart = () => {
     display: flex;
     align-items: center;
     gap: $spacing-sm;
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+      margin-bottom: 8px;
+      gap: 6px;
+    }
   }
 }
 
@@ -167,10 +230,19 @@ const handleStart = () => {
   font-weight: bold;
   color: $text-primary;
   box-shadow: 0 2px 0 #111;
+
+  @media (max-width: 768px) {
+    padding: 2px 5px;
+    font-size: 10px;
+  }
 }
 
 .icon {
   font-size: 15px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .checkbox {
@@ -178,6 +250,10 @@ const handleStart = () => {
     display: flex;
     justify-content: center;
     margin-top: $spacing-lg;
+
+    @media (max-width: 768px) {
+      margin-top: $spacing-md;
+    }
   }
 
   &-label {
@@ -187,6 +263,10 @@ const handleStart = () => {
     user-select: none;
     color: #aaa;
     font-size: 14px;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
 
     input {
       position: absolute;
@@ -218,6 +298,13 @@ const handleStart = () => {
         border: solid #1a1a1a;
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
+
+        @media (max-width: 768px) {
+          left: 4px;
+          top: 1px;
+          width: 4px;
+          height: 8px;
+        }
       }
     }
   }
@@ -231,6 +318,12 @@ const handleStart = () => {
   margin-right: $spacing-sm;
   position: relative;
   transition: all $transition-fast;
+
+  @media (max-width: 768px) {
+    height: 16px;
+    width: 16px;
+    margin-right: 6px;
+  }
 
   &:after {
     content: "";
@@ -252,6 +345,12 @@ const handleStart = () => {
   letter-spacing: 1px;
   transition: all $transition-fast;
   box-shadow: $shadow-md;
+
+  @media (max-width: 768px) {
+    padding: $spacing-sm $spacing-lg;
+    font-size: 14px;
+    width: 100%;
+  }
 
   &:hover {
     transform: translateY(-2px);

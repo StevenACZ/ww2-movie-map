@@ -1467,7 +1467,6 @@ const toggleFilmPopup = (film) => {
     transform: none;
     padding: 4px;
     gap: 4px;
-    @include safe-area-bottom;
   }
 }
 
