@@ -678,7 +678,7 @@ const animateMap = () => {
 
   @include mobile {
     top: auto;
-    bottom: 180px;
+    bottom: 100px;
     left: $spacing-sm;
     right: $spacing-sm;
     width: auto;
@@ -688,7 +688,7 @@ const animateMap = () => {
   }
 
   @include mobile-small {
-    bottom: 160px;
+    bottom: 70px;
     max-height: 250px;
   }
 }
