@@ -5,6 +5,11 @@ export default defineNuxtConfig({
 
   modules: ["@nuxtjs/sitemap"],
 
+  // Sitemap configuration
+  sitemap: {
+    xsl: false, // Disable XSL stylesheet to avoid Vue attribute conflicts in browser
+  },
+
   // Site URL for sitemap and SEO
   site: {
     url: "https://ww2.stevenacz.com",
