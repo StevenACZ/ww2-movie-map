@@ -56,7 +56,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:image",
-          content: "https://ww2.stevenacz.com/og-image.png",
+          content: "https://ww2.stevenacz.com/og-image.jpg",
         },
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
@@ -82,7 +82,7 @@ export default defineNuxtConfig({
         },
         {
           name: "twitter:image",
-          content: "https://ww2.stevenacz.com/og-image.png",
+          content: "https://ww2.stevenacz.com/og-image.jpg",
         },
         {
           name: "twitter:image:alt",

@@ -111,43 +111,6 @@
               </li>
             </ul>
           </div>
-
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap gap-3 pt-4 border-t border-stone-700/50">
-            <a
-              v-if="film.trailerUrl"
-              :href="film.trailerUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex-1 min-w-[120px] flex items-center justify-center gap-2 px-4 py-3 bg-red-600/80 hover:bg-red-600 border border-red-500/50 rounded-lg text-white font-semibold text-sm transition-all"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-              Watch Trailer
-            </a>
-            <a
-              v-if="film.imdbUrl"
-              :href="film.imdbUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex-1 min-w-[120px] flex items-center justify-center gap-2 px-4 py-3 bg-yellow-600/20 hover:bg-yellow-600/30 border border-yellow-600/50 rounded-lg text-yellow-500 font-semibold text-sm transition-all"
-            >
-              <span class="font-bold">IMDb</span>
-            </a>
-            <a
-              v-if="film.wikipediaUrl"
-              :href="film.wikipediaUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex-1 min-w-[120px] flex items-center justify-center gap-2 px-4 py-3 bg-stone-700/50 hover:bg-stone-700 border border-stone-600 rounded-lg text-stone-300 font-semibold text-sm transition-all"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-              Wikipedia
-            </a>
-          </div>
         </div>
       </div>
     </div>
