@@ -186,15 +186,8 @@
                     </p>
                     <p class="popup-desc">{{ film.synopsis }}</p>
                     <div class="popup-actions">
-                      <a
-                        v-if="film.wikipediaUrl"
-                        :href="film.wikipediaUrl"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-secondary"
-                      >
-                        Wikipedia →
-                      </a>
+                      <button class="btn-primary">Watch Trailer</button>
+                      <button class="btn-secondary">View Details</button>
                     </div>
                   </div>
                 </div>
@@ -232,17 +225,6 @@
                 <span class="country">{{ mobileSelectedFilm.country }}</span>
               </div>
               <p class="mobile-modal-desc">{{ mobileSelectedFilm.synopsis }}</p>
-              <div class="mobile-modal-actions">
-                <a
-                  v-if="mobileSelectedFilm.wikipediaUrl"
-                  :href="mobileSelectedFilm.wikipediaUrl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="mobile-btn mobile-btn-wiki"
-                >
-                  Wiki →
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -645,7 +627,6 @@ const toggleFilmPopup = (film) => {
 </script>
 
 <style lang="scss" scoped>
-@use "sass:color";
 @use "@/assets/scss/variables" as *;
 @use "@/assets/scss/mixins" as *;
 
@@ -1026,56 +1007,6 @@ const toggleFilmPopup = (film) => {
   margin: 0;
 }
 
-.mobile-modal-actions {
-  display: flex;
-  gap: 8px;
-  margin-top: 16px;
-  flex-wrap: wrap;
-}
-
-.mobile-btn {
-  flex: 1;
-  min-width: 70px;
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  transition: all $transition-fast;
-}
-
-.mobile-btn-trailer {
-  background: rgba($danger, 0.2);
-  color: #ff6b6b;
-  border: 1px solid rgba($danger, 0.3);
-
-  &:hover {
-    background: rgba($danger, 0.3);
-  }
-}
-
-.mobile-btn-imdb {
-  background: rgba(245, 197, 24, 0.2);
-  color: #f5c518;
-  border: 1px solid rgba(245, 197, 24, 0.3);
-  font-weight: 800;
-
-  &:hover {
-    background: rgba(245, 197, 24, 0.3);
-  }
-}
-
-.mobile-btn-wiki {
-  background: rgba(255, 255, 255, 0.1);
-  color: $text-primary;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-}
-
 // Modal Transitions
 .modal-enter-active,
 .modal-leave-active {
@@ -1413,33 +1344,20 @@ const toggleFilmPopup = (film) => {
 }
 
 .btn-primary {
-  background: $danger;
-  color: white;
-  text-decoration: none;
+  background: $beige;
+  color: $bg-darker;
 
   &:hover {
-    background: color.adjust($danger, $lightness: 5%);
+    background: $beige-light;
   }
 }
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.1);
   color: $text-primary;
-  text-decoration: none;
 
   &:hover {
     background: rgba(255, 255, 255, 0.2);
-  }
-}
-
-.btn-imdb {
-  background: rgba(245, 197, 24, 0.2);
-  color: #f5c518;
-  font-weight: 800;
-  text-decoration: none;
-
-  &:hover {
-    background: rgba(245, 197, 24, 0.3);
   }
 }
 
@@ -1467,6 +1385,7 @@ const toggleFilmPopup = (film) => {
     transform: none;
     padding: 4px;
     gap: 4px;
+    @include safe-area-bottom;
   }
 }
 

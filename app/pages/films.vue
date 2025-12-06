@@ -163,39 +163,35 @@
             <!-- Actions -->
             <div class="actions-section">
               <a
-                v-if="film.trailerUrl"
-                :href="film.trailerUrl"
+                :href="getWikipediaUrl(film.title)"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="action-btn trailer-btn"
-                :aria-label="`Watch ${film.title} trailer`"
+                class="action-btn wiki-btn"
+                :aria-label="`Read about ${film.title} on Wikipedia`"
               >
+                <span>Wikipedia</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="action-icon"
+                  fill="none"
                   viewBox="0 0 24 24"
-                  fill="currentColor"
+                  stroke="currentColor"
                   aria-hidden="true"
                 >
-                  <path d="M8 5v14l11-7z"/>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
                 </svg>
-                <span>Trailer</span>
-              </a>
-              <a
-                v-if="film.imdbUrl"
-                :href="film.imdbUrl"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="action-btn imdb-btn"
-                :aria-label="`View ${film.title} on IMDb`"
-              >
-                <span class="imdb-logo">IMDb</span>
               </a>
               <button 
                 class="action-btn map-btn" 
                 @click="viewOnMap(film.id)"
                 :aria-label="`View ${film.title} on map`"
               >
+                <span>View on Map</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="action-icon"
@@ -217,7 +213,6 @@
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span>Map</span>
               </button>
             </div>
           </div>
@@ -338,6 +333,11 @@ const filteredFilms = computed(() => {
 });
 
 // Methods
+const getWikipediaUrl = (title: string) => {
+  const formattedTitle = title.replace(/ /g, "_");
+  return `https://en.wikipedia.org/wiki/${formattedTitle}`;
+};
+
 const viewOnMap = (filmId: string) => {
   router.push({
     path: "/",
@@ -1033,36 +1033,6 @@ const viewOnMap = (filmId: string) => {
     padding: 12px;
     font-size: 0.8rem;
     min-height: 44px;
-  }
-}
-
-.trailer-btn {
-  background: rgba($danger, 0.2);
-  border: 1px solid rgba($danger, 0.4);
-  color: #ff6b6b;
-
-  &:hover {
-    background: rgba($danger, 0.3);
-    border-color: rgba($danger, 0.6);
-    box-shadow: 0 4px 15px rgba($danger, 0.2);
-  }
-}
-
-.imdb-btn {
-  background: rgba(245, 197, 24, 0.15);
-  border: 1px solid rgba(245, 197, 24, 0.3);
-  color: #f5c518;
-
-  .imdb-logo {
-    font-weight: 800;
-    font-size: 0.8rem;
-    letter-spacing: -0.5px;
-  }
-
-  &:hover {
-    background: rgba(245, 197, 24, 0.25);
-    border-color: rgba(245, 197, 24, 0.5);
-    box-shadow: 0 4px 15px rgba(245, 197, 24, 0.2);
   }
 }
 
