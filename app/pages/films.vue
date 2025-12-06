@@ -6,7 +6,9 @@
 
     <!-- Header -->
     <header class="page-header">
-      <span class="collection-badge" aria-label="Film count">{{ filteredFilms.length }} Films</span>
+      <span class="collection-badge" aria-label="Film count"
+        >{{ filteredFilms.length }} Films</span
+      >
       <h1 class="page-title">Film Collection</h1>
       <h2 class="page-subtitle">World War II Through Cinema</h2>
       <p class="page-description">
@@ -100,14 +102,26 @@
             <div class="poster-overlay">
               <div class="rating-badge">
                 <span class="star" aria-hidden="true">⭐</span>
-                <span class="rating-value" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                  <meta itemprop="ratingValue" :content="String(film.imdbRating)" />
+                <span
+                  class="rating-value"
+                  itemprop="aggregateRating"
+                  itemscope
+                  itemtype="https://schema.org/AggregateRating"
+                >
+                  <meta
+                    itemprop="ratingValue"
+                    :content="String(film.imdbRating)"
+                  />
                   <meta itemprop="bestRating" content="10" />
+                  <meta itemprop="worstRating" content="1" />
+                  <meta itemprop="ratingCount" content="1000" />
                   {{ film.imdbRating }}
                 </span>
               </div>
               <div class="year-badge">
-                <time itemprop="datePublished" :datetime="String(film.year)">{{ film.year }}</time>
+                <time itemprop="datePublished" :datetime="String(film.year)">{{
+                  film.year
+                }}</time>
               </div>
             </div>
           </div>
@@ -117,13 +131,19 @@
             <div class="content-header">
               <h3 class="film-title" itemprop="name">{{ film.title }}</h3>
               <div class="film-meta">
-                <span class="meta-country" itemprop="countryOfOrigin">{{ film.country }}</span>
+                <span class="meta-country" itemprop="countryOfOrigin">{{
+                  film.country
+                }}</span>
                 <span class="meta-divider" aria-hidden="true">•</span>
-                <span class="meta-period">{{ film.eventYears.start }}-{{ film.eventYears.end }}</span>
+                <span class="meta-period"
+                  >{{ film.eventYears.start }}-{{ film.eventYears.end }}</span
+                >
               </div>
             </div>
 
-            <p class="film-synopsis" itemprop="description">{{ film.synopsis }}</p>
+            <p class="film-synopsis" itemprop="description">
+              {{ film.synopsis }}
+            </p>
 
             <!-- Locations -->
             <div class="locations-section">
@@ -131,7 +151,12 @@
                 <span class="locations-icon" aria-hidden="true">📍</span>
                 <span class="locations-label">Filming Locations</span>
               </div>
-              <div class="locations-list" itemprop="contentLocation" itemscope itemtype="https://schema.org/Place">
+              <div
+                class="locations-list"
+                itemprop="contentLocation"
+                itemscope
+                itemtype="https://schema.org/Place"
+              >
                 <button
                   v-for="loc in film.locations"
                   :key="loc.name"
@@ -186,8 +211,8 @@
                   />
                 </svg>
               </a>
-              <button 
-                class="action-btn map-btn" 
+              <button
+                class="action-btn map-btn"
                 @click="viewOnMap(film.id)"
                 :aria-label="`View ${film.title} on map`"
               >
@@ -239,50 +264,52 @@ const router = useRouter();
 
 // SEO Configuration for Films Page
 useSeoMeta({
-  title: 'WW2 Film Collection',
-  ogTitle: 'World War II Film Collection - 30+ Iconic WW2 Movies',
-  description: 'Browse our curated collection of World War II films. Discover classics like Saving Private Ryan, Schindler\'s List, Dunkirk, and more. Filter by rating, year, or search by title.',
-  ogDescription: 'Curated collection of 30+ iconic World War II films. Discover classics like Saving Private Ryan, Schindler\'s List, and Dunkirk.',
-  ogUrl: 'https://ww2.stevenacz.com/films',
-  ogImage: 'https://ww2.stevenacz.com/og-image.png',
-  twitterCard: 'summary_large_image',
-  twitterTitle: 'WW2 Film Collection - 30+ Iconic Movies',
-  twitterDescription: 'Browse our curated collection of World War II films including Saving Private Ryan, Schindler\'s List, and more.',
-  twitterImage: 'https://ww2.stevenacz.com/og-image.png',
+  title: "WW2 Film Collection",
+  ogTitle: "World War II Film Collection - 30+ Iconic WW2 Movies",
+  description:
+    "Browse our curated collection of World War II films. Discover classics like Saving Private Ryan, Schindler's List, Dunkirk, and more. Filter by rating, year, or search by title.",
+  ogDescription:
+    "Curated collection of 30+ iconic World War II films. Discover classics like Saving Private Ryan, Schindler's List, and Dunkirk.",
+  ogUrl: "https://ww2.stevenacz.com/films",
+  ogImage: "https://ww2.stevenacz.com/og-image.png",
+  twitterCard: "summary_large_image",
+  twitterTitle: "WW2 Film Collection - 30+ Iconic Movies",
+  twitterDescription:
+    "Browse our curated collection of World War II films including Saving Private Ryan, Schindler's List, and more.",
+  twitterImage: "https://ww2.stevenacz.com/og-image.png",
 });
 
 // Canonical URL and Structured Data
 useHead({
-  link: [
-    { rel: 'canonical', href: 'https://ww2.stevenacz.com/films' }
-  ],
+  link: [{ rel: "canonical", href: "https://ww2.stevenacz.com/films" }],
   script: [
     {
-      type: 'application/ld+json',
+      type: "application/ld+json",
       innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'CollectionPage',
-        'name': 'World War II Film Collection',
-        'description': 'Curated collection of the most impactful films depicting World War II events, battles, and human stories.',
-        'url': 'https://ww2.stevenacz.com/films',
-        'isPartOf': {
-          '@type': 'WebSite',
-          'name': 'WW2 Film Map',
-          'url': 'https://ww2.stevenacz.com'
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "World War II Film Collection",
+        description:
+          "Curated collection of the most impactful films depicting World War II events, battles, and human stories.",
+        url: "https://ww2.stevenacz.com/films",
+        isPartOf: {
+          "@type": "WebSite",
+          name: "WW2 Film Map",
+          url: "https://ww2.stevenacz.com",
         },
-        'about': {
-          '@type': 'Thing',
-          'name': 'World War II',
-          'sameAs': 'https://en.wikipedia.org/wiki/World_War_II'
+        about: {
+          "@type": "Thing",
+          name: "World War II",
+          sameAs: "https://en.wikipedia.org/wiki/World_War_II",
         },
-        'mainEntity': {
-          '@type': 'ItemList',
-          'name': 'WW2 Films',
-          'numberOfItems': filmsData.films.length
-        }
-      })
-    }
-  ]
+        mainEntity: {
+          "@type": "ItemList",
+          name: "WW2 Films",
+          numberOfItems: filmsData.films.length,
+        },
+      }),
+    },
+  ],
 });
 
 // State
