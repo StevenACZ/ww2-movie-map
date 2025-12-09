@@ -30,8 +30,7 @@ Follow these simple steps to run the project locally.
 
 ### Prerequisites
 
-- Node.js (Latest LTS version recommended)
-- npm, pnpm, or yarn
+- [Bun](https://bun.sh/) (recommended) or Node.js
 
 ### Installation
 
@@ -43,12 +42,12 @@ Follow these simple steps to run the project locally.
 
 2. **Install dependencies**
    ```bash
-   npm install
+   bun install
    ```
 
 3. **Start the development server**
    ```bash
-   npm run dev
+   bun run dev
    ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.

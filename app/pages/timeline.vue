@@ -336,7 +336,7 @@ const events = ref([]);
 const films = ref([]);
 const selectedFilm = ref(null);
 const mobileSelectedFilm = ref(null);
-const currentPeriodIndex = ref(0); // Start with first period (1936-1938)
+const currentPeriodIndex = ref(2); // Start with last period (1942-1945) - more content visible by default
 const isMobile = ref(false);
 
 // Películas seleccionadas para mostrar en el timeline (IDs del JSON principal)
