@@ -33,35 +33,21 @@
     <div class="mobile-timeline" v-if="isMobile">
       <TransitionGroup name="mobile-card">
         <!-- Events -->
-        <div
+        <TimelineMobileCard
           v-for="event in mobileTimelineItems.events"
           :key="'event-' + event.id"
-          class="mobile-timeline-card event-card"
-        >
-          <div class="mobile-card-icon">{{ event.icon || "⚔️" }}</div>
-          <div class="mobile-card-content">
-            <span class="mobile-card-date">{{ formatDate(event.date) }}</span>
-            <h3>{{ event.title }}</h3>
-          </div>
-          <div class="mobile-card-badge event-badge">Event</div>
-        </div>
+          :item="event"
+          type="event"
+        />
 
         <!-- Films -->
-        <div
+        <TimelineMobileCard
           v-for="film in mobileTimelineItems.films"
           :key="'film-' + film.id"
-          class="mobile-timeline-card film-card"
-          @click="toggleFilmPopup(film)"
-        >
-          <div class="mobile-card-icon">🎬</div>
-          <div class="mobile-card-content">
-            <span class="mobile-card-date">
-              {{ film.year }} • {{ formatEventPeriod(film) }}
-            </span>
-            <h3>{{ film.title }}</h3>
-          </div>
-          <div class="mobile-card-badge film-badge">Film</div>
-        </div>
+          :item="film"
+          type="film"
+          @select="toggleFilmPopup"
+        />
       </TransitionGroup>
 
       <!-- Empty State -->
@@ -98,202 +84,45 @@
       <!-- Events Section (Top Half) -->
       <div class="timeline-section events-section">
         <TransitionGroup name="card">
-          <div
+          <TimelineEventCard
             v-for="(event, index) in positionedEvents"
             :key="event.id"
-            class="timeline-card event-card"
-            :style="{
-              left: event.position + '%',
-              bottom: event.offsetY + 'px',
-              '--delay': index * 0.05 + 's',
-              zIndex: 20 - event.level,
-            }"
-          >
-            <div class="card-body">
-              <div class="card-icon-wrapper">
-                <span class="card-icon">{{ event.icon || "⚔️" }}</span>
-              </div>
-              <div class="card-text">
-                <h3>{{ event.title }}</h3>
-                <p class="card-date">{{ formatDate(event.date) }}</p>
-              </div>
-            </div>
-            <!-- Connector (Down to axis) -->
-            <div
-              class="connector-line"
-              :style="{ height: event.connectorHeight + 'px' }"
-            ></div>
-            <div class="timeline-dot"></div>
-          </div>
+            :event="event"
+            :index="index"
+          />
         </TransitionGroup>
       </div>
 
       <!-- Films Section (Bottom Half) -->
       <div class="timeline-section films-section">
         <TransitionGroup name="card">
-          <div
+          <TimelineFilmCard
             v-for="(film, index) in positionedFilms"
             :key="film.id"
-            class="timeline-card film-card"
-            :class="{ active: selectedFilm?.id === film.id }"
-            :style="{
-              left: film.position + '%',
-              top: film.offsetY + 'px',
-              '--delay': index * 0.05 + 's',
-              zIndex: 20 - film.level,
-            }"
-            @click.stop="selectFilm(film)"
-          >
-            <!-- Connector (Up to axis) -->
-            <div class="timeline-dot"></div>
-            <div
-              class="connector-line"
-              :style="{ height: film.connectorHeight + 'px' }"
-            ></div>
-
-            <div class="card-body">
-              <div class="card-icon-wrapper">
-                <span class="card-icon">🎬</span>
-              </div>
-              <div class="card-text">
-                <h3>{{ film.title }}</h3>
-                <p class="card-date">
-                  {{ film.year }}
-                  <span class="event-period"
-                    >• {{ formatEventPeriod(film) }}</span
-                  >
-                </p>
-              </div>
-            </div>
-
-            <!-- Detail Popup -->
-            <Transition name="popup">
-              <div v-if="selectedFilm?.id === film.id" class="film-popup">
-                <button class="close-btn" @click.stop="selectedFilm = null">
-                  ×
-                </button>
-                <div class="popup-content">
-                  <img
-                    :src="film.poster"
-                    :alt="film.title"
-                    class="popup-poster"
-                  />
-                  <div class="popup-info">
-                    <h4>{{ film.title }} ({{ film.year }})</h4>
-                    <p class="popup-meta">
-                      <span class="imdb-rating">⭐ {{ film.imdbRating }}</span>
-                      <span class="country">{{ film.country }}</span>
-                    </p>
-                    <p class="popup-desc">{{ film.synopsis }}</p>
-                    <div class="popup-actions">
-                      <button
-                        v-if="film.trailerUrl"
-                        class="btn-primary"
-                        @click.stop="openTrailer(film)"
-                      >
-                        Watch Trailer
-                      </button>
-                      <a
-                        v-if="film.imdbUrl"
-                        :href="film.imdbUrl"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-secondary"
-                      >
-                        View Details
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Transition>
-          </div>
+            :film="film"
+            :index="index"
+            :is-selected="selectedFilm?.id === film.id"
+            @select="selectFilm"
+            @open-trailer="openTrailer"
+          />
         </TransitionGroup>
       </div>
     </div>
 
     <!-- Mobile Film Popup Modal -->
-    <Transition name="modal">
-      <div
-        v-if="mobileSelectedFilm"
-        class="mobile-film-modal"
-        @click.self="mobileSelectedFilm = null"
-      >
-        <div class="mobile-modal-content">
-          <button class="mobile-modal-close" @click="mobileSelectedFilm = null">
-            ×
-          </button>
-          <div class="mobile-modal-body">
-            <img
-              :src="mobileSelectedFilm.poster"
-              :alt="mobileSelectedFilm.title"
-              class="mobile-modal-poster"
-            />
-            <div class="mobile-modal-info">
-              <h3>{{ mobileSelectedFilm.title }}</h3>
-              <p class="mobile-modal-year">{{ mobileSelectedFilm.year }}</p>
-              <div class="mobile-modal-meta">
-                <span class="imdb-rating"
-                  >⭐ {{ mobileSelectedFilm.imdbRating }}</span
-                >
-                <span class="country">{{ mobileSelectedFilm.country }}</span>
-              </div>
-              <p class="mobile-modal-desc">{{ mobileSelectedFilm.synopsis }}</p>
-              <div class="mobile-modal-actions">
-                <a
-                  v-if="mobileSelectedFilm.trailerUrl"
-                  :href="mobileSelectedFilm.trailerUrl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn-primary"
-                >
-                  Watch Trailer
-                </a>
-                <a
-                  v-if="mobileSelectedFilm.imdbUrl"
-                  :href="mobileSelectedFilm.imdbUrl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn-secondary"
-                >
-                  View Details
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Transition>
+    <TimelineMobileModal
+      :film="mobileSelectedFilm"
+      @close="mobileSelectedFilm = null"
+    />
 
     <!-- Bottom Navigation -->
-    <div class="timeline-nav">
-      <button
-        class="nav-btn prev"
-        @click="prevPeriod"
-        :disabled="currentPeriodIndex === 0"
-      >
-        <span class="arrow">‹</span>
-      </button>
-      <div class="year-ranges">
-        <button
-          v-for="(period, index) in periods"
-          :key="index"
-          class="range-btn"
-          :class="{ active: currentPeriodIndex === index }"
-          @click="setPeriod(index)"
-        >
-          <span class="range-label">{{ period.label }}</span>
-          <span class="range-indicator"></span>
-        </button>
-      </div>
-      <button
-        class="nav-btn next"
-        @click="nextPeriod"
-        :disabled="currentPeriodIndex === periods.length - 1"
-      >
-        <span class="arrow">›</span>
-      </button>
-    </div>
+    <TimelineNav
+      :periods="periods"
+      :current-index="currentPeriodIndex"
+      @prev="prevPeriod"
+      @next="nextPeriod"
+      @set-period="setPeriod"
+    />
 
     <!-- Period info tooltip -->
     <footer class="period-info" role="status" aria-live="polite">
@@ -313,10 +142,26 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from "vue";
+import { useTimelinePositioning } from "../composables/useTimelinePositioning";
+import type { Film } from "../../types";
+import type {
+  HistoricalEvent,
+  TimelinePeriod,
+  PositionedFilm,
+} from "../../types/timeline";
+
+// Import JSON data
 import filmsData from "../../data/films.json";
 import eventsData from "../../data/historical-events.json";
+
+// Import components
+import TimelineEventCard from "../components/timeline/TimelineEventCard.vue";
+import TimelineFilmCard from "../components/timeline/TimelineFilmCard.vue";
+import TimelineMobileCard from "../components/timeline/TimelineMobileCard.vue";
+import TimelineMobileModal from "../components/timeline/TimelineMobileModal.vue";
+import TimelineNav from "../components/timeline/TimelineNav.vue";
 
 // SEO Configuration for Timeline Page
 useSeoMeta({
@@ -374,11 +219,11 @@ useHead({
 });
 
 // State
-const events = ref([]);
-const films = ref([]);
-const selectedFilm = ref(null);
-const mobileSelectedFilm = ref(null);
-const currentPeriodIndex = ref(2); // Start with last period (1942-1945) - more content visible by default
+const events = ref<HistoricalEvent[]>([]);
+const films = ref<Film[]>([]);
+const selectedFilm = ref<PositionedFilm | null>(null);
+const mobileSelectedFilm = ref<PositionedFilm | null>(null);
+const currentPeriodIndex = ref(2); // Start with last period (1942-1945)
 const isMobile = ref(false);
 
 // Trailer Modal State
@@ -386,53 +231,46 @@ const isTrailerOpen = ref(false);
 const activeTrailerUrl = ref("");
 const activeFilmTitle = ref("");
 
-// Películas seleccionadas para mostrar en el timeline (IDs del JSON principal)
+// Films to display on timeline (selected IDs from main JSON)
 const timelineFilmIds = [
-  "the-eight-hundred-2020", // 1937
-  "dunkirk-2017", // 1940
-  "das-boot-1981", // 1941
-  "tora-tora-tora-1970", // 1941 Pearl Harbor
-  "schindlers-list-1993", // 1942
-  "come-and-see-1985", // 1943
-  "saving-private-ryan-1998", // 1944 D-Day
-  "downfall-2004", // 1945
-  "hacksaw-ridge-2016", // 1945
+  "the-eight-hundred-2020",
+  "dunkirk-2017",
+  "das-boot-1981",
+  "tora-tora-tora-1970",
+  "schindlers-list-1993",
+  "come-and-see-1985",
+  "saving-private-ryan-1998",
+  "downfall-2004",
+  "hacksaw-ridge-2016",
 ];
 
-// Periods Configuration - 3 años por cada slide
-const periods = [
+// Periods Configuration - 3 years per slide
+const periods: TimelinePeriod[] = [
   { label: "1936-1938", start: 1936, end: 1938 },
   { label: "1939-1941", start: 1939, end: 1941 },
   { label: "1942-1945", start: 1942, end: 1945 },
 ];
 
-const visibleStartYear = computed(
-  () => periods[currentPeriodIndex.value].start
-);
-const visibleEndYear = computed(() => periods[currentPeriodIndex.value].end);
-const totalVisibleYears = computed(
-  () => visibleEndYear.value - visibleStartYear.value + 1
-);
-
-// Generate visible years array
-const visibleYears = computed(() => {
-  const arr = [];
-  for (let y = visibleStartYear.value; y <= visibleEndYear.value; y++) {
-    arr.push(y);
-  }
-  return arr;
+// Use the timeline positioning composable
+const {
+  visibleStartYear,
+  visibleEndYear,
+  visibleYears,
+  getYearPosition,
+  positionedEvents,
+  positionedFilms,
+} = useTimelinePositioning({
+  events,
+  films,
+  currentPeriodIndex,
+  periods,
 });
 
 // Mobile timeline items (sorted by date)
-const mobileTimelineItems = computed(() => {
-  const filteredEvents = positionedEvents.value;
-  const filteredFilms = positionedFilms.value;
-
-  return {
-    events: filteredEvents,
-    films: filteredFilms,
-  };
-});
+const mobileTimelineItems = computed(() => ({
+  events: positionedEvents.value,
+  films: positionedFilms.value,
+}));
 
 // Check mobile
 const checkMobile = () => {
@@ -444,85 +282,40 @@ onMounted(() => {
   checkMobile();
   window.addEventListener("resize", checkMobile);
 
-  // Usar datos importados directamente (eliminados duplicados en public/data/)
-  events.value = eventsData.events;
-  films.value = filmsData.films.filter((film) =>
+  // Use imported data directly
+  events.value = eventsData.events as HistoricalEvent[];
+  films.value = filmsData.films.filter((film: Film) =>
     timelineFilmIds.includes(film.id)
   );
 
-  // Click outside handler para cerrar el modal
+  // Click outside handler to close modal
   document.addEventListener("click", handleClickOutside);
 });
 
-// Cerrar modal al hacer click afuera
-const handleClickOutside = (event) => {
+// Close modal when clicking outside
+const handleClickOutside = (event: MouseEvent) => {
   if (selectedFilm.value) {
     const popup = document.querySelector(".film-popup");
     const filmCards = document.querySelectorAll(".film-card");
 
     let clickedOnCard = false;
     filmCards.forEach((card) => {
-      if (card.contains(event.target)) {
+      if (card.contains(event.target as Node)) {
         clickedOnCard = true;
       }
     });
 
-    if (!clickedOnCard && popup && !popup.contains(event.target)) {
+    if (!clickedOnCard && popup && !popup.contains(event.target as Node)) {
       selectedFilm.value = null;
     }
   }
 };
 
-// Limpiar event listener
+// Cleanup event listeners
 onUnmounted(() => {
   document.removeEventListener("click", handleClickOutside);
   window.removeEventListener("resize", checkMobile);
 });
-
-// Positioning Logic - Cálculo preciso basado en fecha exacta
-const calculatePosition = (dateString) => {
-  const date = new Date(dateString);
-  const year = date.getFullYear();
-
-  // Filtrar elementos fuera del rango visible
-  if (year < visibleStartYear.value || year > visibleEndYear.value) return -999;
-
-  const month = date.getMonth(); // 0-11
-  const day = date.getDate(); // 1-31
-
-  // Calcular el número total de días desde el inicio del período visible
-  const startOfRange = new Date(visibleStartYear.value, 0, 1); // 1 de enero del año inicial
-  const endOfRange = new Date(visibleEndYear.value + 1, 0, 1); // 1 de enero del siguiente año después del final
-
-  const totalDaysInRange = (endOfRange - startOfRange) / (1000 * 60 * 60 * 24);
-  const daysFromStart = (date - startOfRange) / (1000 * 60 * 60 * 24);
-
-  // Calcular el porcentaje de progreso dentro del rango
-  const progress = daysFromStart / totalDaysInRange;
-
-  // El timeline ocupa del 5% al 95% del ancho (dejando márgenes)
-  const marginLeft = 5;
-  const usableWidth = 90;
-
-  return marginLeft + progress * usableWidth;
-};
-
-const getYearPosition = (year) => {
-  // Calcular posición del marcador del año (inicio del año)
-  const startOfRange = new Date(visibleStartYear.value, 0, 1);
-  const endOfRange = new Date(visibleEndYear.value + 1, 0, 1);
-  const yearDate = new Date(year, 0, 1);
-
-  const totalDaysInRange = (endOfRange - startOfRange) / (1000 * 60 * 60 * 24);
-  const daysFromStart = (yearDate - startOfRange) / (1000 * 60 * 60 * 24);
-
-  const progress = daysFromStart / totalDaysInRange;
-
-  const marginLeft = 5;
-  const usableWidth = 90;
-
-  return marginLeft + progress * usableWidth;
-};
 
 // Navigation Methods
 const nextPeriod = () => {
@@ -537,152 +330,27 @@ const prevPeriod = () => {
   }
 };
 
-const setPeriod = (index) => {
+const setPeriod = (index: number) => {
   currentPeriodIndex.value = index;
 };
 
-// Collision Detection & Spacing
-const resolveCollisions = (items) => {
-  if (items.length === 0) return [];
-
-  // Filter visible items first
-  const visibleItems = items.filter(
-    (item) => item.position > -10 && item.position < 110
-  );
-
-  const result = visibleItems.map((item, index) => ({
-    ...item,
-    offsetY: 0,
-    connectorHeight: 40, // Initial connector height
-    level: 0,
-  }));
-
-  // Sort by position (left to right)
-  result.sort((a, b) => a.position - b.position);
-
-  // Minimum distance between cards (in percentage) to trigger a level change
-  const minDistance = 22;
-
-  for (let i = 0; i < result.length; i++) {
-    let currentLevel = 0;
-    let hasCollision = true;
-
-    // Try to find the lowest level that doesn't collide with previous neighbors
-    while (hasCollision && currentLevel < 5) {
-      // Limit levels to prevent infinite loop
-      hasCollision = false;
-
-      // Look back at previous items to check for overlap
-      for (let j = 0; j < i; j++) {
-        const distance = Math.abs(result[i].position - result[j].position);
-
-        // If they are close horizontally AND on the same level, it's a collision
-        if (distance < minDistance && result[j].level === currentLevel) {
-          hasCollision = true;
-          break;
-        }
-      }
-
-      if (hasCollision) {
-        currentLevel++;
-      }
-    }
-
-    result[i].level = currentLevel;
-
-    // Calculate POSITIVE offset (distance from axis)
-    // CSS will handle direction (bottom for events, top for films)
-    const baseDistance = 40; // Initial distance from axis for level 0
-    const levelStep = 100; // Additional distance for each subsequent level
-
-    const totalDistance = baseDistance + currentLevel * levelStep;
-
-    result[i].offsetY = totalDistance;
-    result[i].connectorHeight = totalDistance;
-  }
-
-  return result;
-};
-
-const positionedEvents = computed(() => {
-  const positioned = events.value.map((event) => ({
-    ...event,
-    position: calculatePosition(event.date),
-  }));
-  return resolveCollisions(positioned);
-});
-
-const positionedFilms = computed(() => {
-  const positioned = films.value.map((film) => {
-    // Usar fecha específica del evento si está disponible, sino calcular el punto medio
-    let eventDate;
-
-    if (film.eventDate) {
-      // Si tiene fecha específica del evento
-      eventDate = film.eventDate;
-    } else {
-      // Calcular el punto medio del período del evento
-      const startYear = film.eventYears.start;
-      const endYear = film.eventYears.end;
-
-      if (startYear === endYear) {
-        // Si es un solo año, posicionar a mitad del año
-        eventDate = `${startYear}-06-15`;
-      } else {
-        // Calcular punto medio entre inicio y fin
-        const midYear = (startYear + endYear) / 2;
-        const year = Math.floor(midYear);
-        const monthProgress = (midYear - year) * 12;
-        const month = Math.floor(monthProgress) + 1;
-        eventDate = `${year}-${String(month).padStart(2, "0")}-15`;
-      }
-    }
-
-    return {
-      ...film,
-      position: calculatePosition(eventDate),
-      displayEventDate: eventDate,
-    };
-  });
-  return resolveCollisions(positioned);
-});
-
-// Formatters
-const formatDate = (dateString) => {
-  const options = { month: "short", day: "numeric", year: "numeric" };
-  return new Date(dateString).toLocaleDateString("en-US", options);
-};
-
-const formatFilmDate = (film) => {
-  return film.year;
-};
-
-const formatEventPeriod = (film) => {
-  if (film.eventYears.start === film.eventYears.end) {
-    return film.eventYears.start;
-  }
-  return `${film.eventYears.start}-${film.eventYears.end}`;
-};
-
-const selectFilm = (film) => {
+// Film selection
+const selectFilm = (film: PositionedFilm) => {
   selectedFilm.value = selectedFilm.value?.id === film.id ? null : film;
 };
 
-const toggleFilmPopup = (film) => {
+const toggleFilmPopup = (film: PositionedFilm) => {
   mobileSelectedFilm.value = film;
 };
 
-// Open trailer - Desktop shows modal, Mobile redirects to YouTube
-const openTrailer = (film) => {
+// Trailer handling - Desktop shows modal, Mobile redirects to YouTube
+const openTrailer = (film: PositionedFilm) => {
   if (isMobile.value) {
-    // Mobile: redirect to YouTube app/website
     window.open(film.trailerUrl, "_blank");
   } else {
-    // Desktop: open theater mode modal
-    activeTrailerUrl.value = film.trailerUrl;
+    activeTrailerUrl.value = film.trailerUrl || "";
     activeFilmTitle.value = `${film.title} (${film.year})`;
     isTrailerOpen.value = true;
-    // Close the film popup
     selectedFilm.value = null;
   }
 };
@@ -877,7 +545,7 @@ const closeTrailer = () => {
   }
 }
 
-// ===== MOBILE TIMELINE =====
+// Mobile Timeline
 .mobile-timeline {
   display: none;
   padding: 0 $spacing-md;
@@ -885,89 +553,6 @@ const closeTrailer = () => {
 
   @include mobile {
     display: block;
-  }
-}
-
-.mobile-timeline-card {
-  display: flex;
-  align-items: center;
-  gap: $spacing-md;
-  padding: $spacing-md;
-  background: $bg-card;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: $border-radius-md;
-  margin-bottom: $spacing-sm;
-  transition: all $transition-normal;
-
-  &.event-card {
-    border-left: 3px solid $danger;
-
-    .mobile-card-icon {
-      background: rgba($danger, 0.15);
-      color: #fca5a5;
-    }
-  }
-
-  &.film-card {
-    border-left: 3px solid $beige;
-    cursor: pointer;
-
-    .mobile-card-icon {
-      background: rgba($beige, 0.15);
-      color: $beige;
-    }
-
-    &:active {
-      transform: scale(0.98);
-    }
-  }
-}
-
-.mobile-card-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: $border-radius-sm;
-  @include flex-center;
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-
-.mobile-card-content {
-  flex: 1;
-  min-width: 0;
-
-  h3 {
-    font-size: 0.95rem;
-    font-weight: 600;
-    margin: 0;
-    color: $text-primary;
-    @include line-clamp(1);
-  }
-}
-
-.mobile-card-date {
-  font-size: 0.75rem;
-  color: $text-muted;
-  display: block;
-  margin-bottom: 2px;
-}
-
-.mobile-card-badge {
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-
-  &.event-badge {
-    background: rgba($danger, 0.2);
-    color: #fca5a5;
-  }
-
-  &.film-badge {
-    background: rgba($beige, 0.2);
-    color: $beige;
   }
 }
 
@@ -984,123 +569,7 @@ const closeTrailer = () => {
   opacity: 0.5;
 }
 
-// ===== MOBILE FILM MODAL =====
-.mobile-film-modal {
-  @include fixed-fill;
-  background: rgba(0, 0, 0, 0.85);
-  z-index: $z-modal;
-  @include flex-center;
-  padding: $spacing-md;
-  backdrop-filter: blur(8px);
-}
-
-.mobile-modal-content {
-  background: $bg-dark;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: $border-radius-lg;
-  width: 100%;
-  max-width: 400px;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-}
-
-.mobile-modal-close {
-  position: absolute;
-  top: $spacing-sm;
-  right: $spacing-sm;
-  width: 36px;
-  height: 36px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  border-radius: 50%;
-  color: $text-primary;
-  font-size: 1.5rem;
-  @include flex-center;
-  cursor: pointer;
-  z-index: 10;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-}
-
-.mobile-modal-body {
-  padding: $spacing-lg;
-}
-
-.mobile-modal-poster {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: $border-radius-md;
-  margin-bottom: $spacing-md;
-}
-
-.mobile-modal-info {
-  h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin: 0 0 $spacing-xs 0;
-    color: $text-primary;
-  }
-}
-
-.mobile-modal-year {
-  font-size: 0.9rem;
-  color: $beige;
-  margin: 0 0 $spacing-sm 0;
-}
-
-.mobile-modal-meta {
-  display: flex;
-  gap: $spacing-md;
-  margin-bottom: $spacing-md;
-  font-size: 0.85rem;
-
-  .imdb-rating {
-    color: $beige;
-    font-weight: 600;
-  }
-
-  .country {
-    color: $text-secondary;
-  }
-}
-
-.mobile-modal-desc {
-  font-size: 0.9rem;
-  color: $text-secondary;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.mobile-modal-actions {
-  display: flex;
-  gap: $spacing-sm;
-  margin-top: $spacing-md;
-}
-
-// Modal Transitions
-.modal-enter-active,
-.modal-leave-active {
-  transition: opacity 0.3s ease;
-
-  .mobile-modal-content {
-    transition: transform 0.3s ease;
-  }
-}
-
-.modal-enter-from,
-.modal-leave-to {
-  opacity: 0;
-
-  .mobile-modal-content {
-    transform: translateY(20px) scale(0.95);
-  }
-}
-
-// ===== DESKTOP TIMELINE =====
+// Desktop Timeline
 .timeline-container {
   position: relative;
   height: 700px;
@@ -1171,414 +640,6 @@ const closeTrailer = () => {
   top: 50%;
 }
 
-// Cards Common
-.timeline-card {
-  position: absolute;
-  width: 220px;
-  transform: translateX(-50%);
-  cursor: pointer;
-}
-
-.card-body {
-  display: flex;
-  align-items: center;
-  padding: 12px;
-  border-radius: $border-radius-md;
-  backdrop-filter: blur(10px);
-  border: 1px solid;
-  box-shadow: $shadow-md;
-  transition: transform $transition-normal, box-shadow $transition-normal;
-  position: relative;
-  z-index: 2;
-}
-
-.card-icon-wrapper {
-  width: 40px;
-  height: 40px;
-  border-radius: $border-radius-sm;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 12px;
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-
-.card-text {
-  h3 {
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin: 0;
-    line-height: 1.2;
-    color: $text-primary;
-  }
-}
-
-.card-date {
-  font-size: 0.75rem;
-  margin: $spacing-xs 0 0 0;
-  opacity: 0.8;
-}
-
-// Event Cards (Red)
-.event-card {
-  .card-body {
-    background: rgba(69, 10, 10, 0.8);
-    border-color: $danger;
-  }
-
-  .card-icon-wrapper {
-    background: rgba($danger, 0.2);
-    color: #fca5a5;
-  }
-
-  .card-date {
-    color: #fca5a5;
-  }
-
-  &:hover {
-    z-index: 50 !important;
-
-    .card-body {
-      transform: scale(1.05);
-      box-shadow: 0 10px 40px rgba($danger, 0.6);
-    }
-  }
-}
-
-// Film Cards (Beige - colores apagados)
-.film-card {
-  .card-body {
-    background: rgba(50, 40, 30, 0.85);
-    border-color: $beige;
-  }
-
-  .card-icon-wrapper {
-    background: rgba($beige, 0.2);
-    color: $beige-light;
-  }
-
-  .card-date {
-    color: $beige-light;
-  }
-
-  // Hover state (only when not active)
-  &:hover:not(.active) {
-    z-index: 50 !important;
-
-    .card-body {
-      transform: scale(1.05);
-      box-shadow: 0 10px 40px rgba($beige, 0.5);
-    }
-  }
-
-  // Active state - always on top
-  &.active {
-    z-index: 9999 !important; // Ensure active card with popup is above everything
-
-    .card-body {
-      background: rgba($beige, 0.15);
-      box-shadow: 0 0 30px rgba($beige, 0.3);
-      border-color: $beige-light;
-    }
-
-    // Keep z-index even on hover when active
-    &:hover {
-      z-index: 9999 !important;
-    }
-  }
-}
-
-// Connectors
-.connector-line {
-  position: absolute;
-  left: 50%;
-  width: 1px;
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateX(-50%);
-  z-index: -1;
-  pointer-events: none;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  z-index: $z-base;
-}
-
-// Event Connectors (Top)
-.events-section .event-card {
-  .connector-line {
-    top: 100%;
-    transform-origin: top;
-  }
-
-  .timeline-dot {
-    top: 100%;
-    background: $danger;
-    box-shadow: 0 0 10px rgba($danger, 0.8);
-  }
-}
-
-// Film Connectors (Bottom)
-.films-section .film-card {
-  .connector-line {
-    bottom: 100%;
-    transform-origin: bottom;
-  }
-
-  .timeline-dot {
-    bottom: 100%;
-    background: $beige;
-    box-shadow: 0 0 10px rgba($beige, 0.8);
-  }
-}
-
-// Popup Modal
-.film-popup {
-  position: absolute;
-  top: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 320px;
-  background: $bg-dark;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: $border-radius-lg;
-  padding: $spacing-md;
-  box-shadow: $shadow-lg;
-  z-index: 9999; // Higher than timeline-nav to appear above it
-  backdrop-filter: blur(20px);
-  animation: fadeIn $transition-normal ease;
-}
-
-.close-btn {
-  position: absolute;
-  top: $spacing-sm;
-  right: 12px;
-  background: none;
-  border: none;
-  color: $text-secondary;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: color $transition-fast;
-
-  &:hover {
-    color: $text-primary;
-  }
-}
-
-.popup-content {
-  display: flex;
-  gap: $spacing-md;
-}
-
-.popup-poster {
-  width: 80px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: $border-radius-sm;
-}
-
-.popup-info {
-  flex: 1;
-
-  h4 {
-    margin: 0 0 $spacing-sm 0;
-    font-size: 1rem;
-    color: $text-primary;
-  }
-}
-
-.popup-desc {
-  font-size: 0.75rem;
-  color: $text-secondary;
-  margin-bottom: 12px;
-  line-height: 1.4;
-  @include line-clamp(3);
-}
-
-.popup-actions {
-  display: flex;
-  gap: $spacing-sm;
-  margin-top: $spacing-sm;
-}
-
-.btn-primary,
-.btn-secondary {
-  flex: 1;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-  transition: all $transition-fast;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.btn-primary {
-  background: $beige;
-  color: $bg-darker;
-
-  &:hover {
-    background: $beige-light;
-    transform: translateY(-1px);
-  }
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: $text-primary;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-1px);
-  }
-}
-
-// Bottom Nav
-.timeline-nav {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: $bg-dark;
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 6px;
-  border-radius: $border-radius-lg;
-  display: flex;
-  align-items: center;
-  gap: $spacing-sm;
-  z-index: $z-modal;
-  box-shadow: $shadow-lg;
-
-  @include mobile {
-    bottom: 20px;
-    left: $spacing-sm;
-    right: $spacing-sm;
-    transform: none;
-    padding: 4px;
-    gap: 4px;
-    @include safe-area-bottom;
-  }
-}
-
-.nav-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: $border-radius-md;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: $text-secondary;
-  font-size: 1.4rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all $transition-fast;
-
-  @include mobile {
-    width: 44px;
-    height: 44px;
-  }
-
-  &:hover:not(:disabled) {
-    background: rgba(255, 255, 255, 0.1);
-    color: $text-primary;
-    transform: scale(1.05);
-  }
-
-  &:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-  }
-
-  .arrow {
-    line-height: 1;
-  }
-}
-
-.year-ranges {
-  display: flex;
-  gap: $spacing-xs;
-
-  @include mobile {
-    flex: 1;
-    gap: 2px;
-  }
-}
-
-.range-btn {
-  position: relative;
-  padding: 10px $spacing-lg;
-  border-radius: $border-radius-sm;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: $text-muted;
-  cursor: pointer;
-  transition: all $transition-normal;
-  background: transparent;
-  border: none;
-  overflow: hidden;
-
-  @include mobile {
-    flex: 1;
-    padding: 10px 8px;
-    font-size: 0.75rem;
-  }
-
-  @include mobile-small {
-    font-size: 0.7rem;
-    padding: 10px 4px;
-  }
-
-  &:hover {
-    color: $text-secondary;
-    background: rgba(255, 255, 255, 0.03);
-  }
-
-  &.active {
-    color: $text-primary;
-    background: rgba($beige, 0.15);
-
-    .range-indicator {
-      transform: scaleX(1);
-    }
-  }
-}
-
-.range-indicator {
-  position: absolute;
-  bottom: $spacing-xs;
-  left: 20%;
-  right: 20%;
-  height: 2px;
-  background: linear-gradient(90deg, $beige, $beige-light);
-  border-radius: 2px;
-  transform: scaleX(0);
-  transition: transform $transition-normal;
-}
-
-.range-label {
-  position: relative;
-  z-index: $z-base;
-  letter-spacing: 1px;
-
-  @include mobile {
-    letter-spacing: 0;
-  }
-}
-
 // Period info
 .period-info {
   position: fixed;
@@ -1637,51 +698,5 @@ const closeTrailer = () => {
 .mobile-card-leave-to {
   opacity: 0;
   transform: translateX(20px);
-}
-
-// Popup Transitions
-.popup-enter-active,
-.popup-leave-active {
-  transition: all $transition-normal;
-}
-
-.popup-enter-from,
-.popup-leave-to {
-  opacity: 0;
-  transform: translateX(-50%) translateY(10px) scale(0.95);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-}
-
-// Event period styling for films
-.event-period {
-  font-size: 0.7rem;
-  opacity: 0.7;
-}
-
-// Popup enhancements
-.popup-meta {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 10px;
-  font-size: 0.8rem;
-}
-
-.imdb-rating {
-  color: $beige;
-  font-weight: 600;
-}
-
-.country {
-  color: $text-secondary;
 }
 </style>

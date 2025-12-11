@@ -9,20 +9,56 @@ dist
 # Node dependencies
 node_modules
 
+# Package manager locks (except primary)
+pnpm-lock.yaml
+yarn.lock
+# bun.lock - keep this as primary
+
 # Logs
 logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Misc
 .DS_Store
 .fleet
 .idea
+.vscode
+*.swp
+*.swo
+*~
 
 # Local env files
 .env
 .env.*
 !.env.example
 
-# Claude Code settings
+# AI/Editor settings
 .claude/
 CLAUDE.md
+.cursor/
+.aider*
+.copilot/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Build artifacts
+*.tsbuildinfo
+
+# Package manager stores
+.pnpm-store/
