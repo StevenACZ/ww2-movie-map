@@ -186,8 +186,24 @@
                     </p>
                     <p class="popup-desc">{{ film.synopsis }}</p>
                     <div class="popup-actions">
-                      <button class="btn-primary">Watch Trailer</button>
-                      <button class="btn-secondary">View Details</button>
+                      <a
+                        v-if="film.trailerUrl"
+                        :href="film.trailerUrl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-primary"
+                      >
+                        Watch Trailer
+                      </a>
+                      <a
+                        v-if="film.imdbUrl"
+                        :href="film.imdbUrl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-secondary"
+                      >
+                        View Details
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -225,6 +241,26 @@
                 <span class="country">{{ mobileSelectedFilm.country }}</span>
               </div>
               <p class="mobile-modal-desc">{{ mobileSelectedFilm.synopsis }}</p>
+              <div class="mobile-modal-actions">
+                <a
+                  v-if="mobileSelectedFilm.trailerUrl"
+                  :href="mobileSelectedFilm.trailerUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-primary"
+                >
+                  Watch Trailer
+                </a>
+                <a
+                  v-if="mobileSelectedFilm.imdbUrl"
+                  :href="mobileSelectedFilm.imdbUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-secondary"
+                >
+                  View Details
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1007,6 +1043,12 @@ const toggleFilmPopup = (film) => {
   margin: 0;
 }
 
+.mobile-modal-actions {
+  display: flex;
+  gap: $spacing-sm;
+  margin-top: $spacing-md;
+}
+
 // Modal Transitions
 .modal-enter-active,
 .modal-leave-active {
@@ -1330,17 +1372,24 @@ const toggleFilmPopup = (film) => {
 .popup-actions {
   display: flex;
   gap: $spacing-sm;
+  margin-top: $spacing-sm;
 }
 
 .btn-primary,
 .btn-secondary {
-  padding: 6px 12px;
+  flex: 1;
+  padding: 8px 12px;
   border-radius: 6px;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   cursor: pointer;
   border: none;
   transition: all $transition-fast;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .btn-primary {
@@ -1349,15 +1398,18 @@ const toggleFilmPopup = (film) => {
 
   &:hover {
     background: $beige-light;
+    transform: translateY(-1px);
   }
 }
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.1);
   color: $text-primary;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
   &:hover {
     background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
   }
 }
 
