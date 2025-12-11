@@ -3,8 +3,15 @@
     <div id="map" class="map z-0"></div>
 
     <button class="reset-view-btn" @click="resetView" aria-label="Reset View">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="reset-icon">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="reset-icon"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+        />
       </svg>
     </button>
 
@@ -47,18 +54,21 @@
 
             <!-- Action Buttons -->
             <div class="film-actions">
-              <a
+              <button
                 v-if="selectedFilm.trailerUrl"
-                :href="selectedFilm.trailerUrl"
-                target="_blank"
-                rel="noopener noreferrer"
                 class="film-action-btn trailer-btn"
+                @click="openTrailer(selectedFilm)"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" class="action-icon" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="action-icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M8 5v14l11-7z" />
                 </svg>
                 Trailer
-              </a>
+              </button>
               <a
                 v-if="selectedFilm.imdbUrl"
                 :href="selectedFilm.imdbUrl"
@@ -84,6 +94,14 @@
       :film="selectedFilm"
       :is-open="isModalOpen"
       @close="closeModal"
+    />
+
+    <!-- Trailer Modal (Desktop Only) -->
+    <TrailerModal
+      :is-open="isTrailerOpen"
+      :trailer-url="activeTrailerUrl"
+      :film-title="activeFilmTitle"
+      @close="closeTrailer"
     />
   </div>
 </template>
@@ -113,6 +131,9 @@ const map = ref<any>(null);
 const selectedFilm = ref<Film | null>(null);
 const hoveredFilm = ref<Film | null>(null);
 const isModalOpen = ref(false);
+const isTrailerOpen = ref(false);
+const activeTrailerUrl = ref("");
+const activeFilmTitle = ref("");
 const allFilmMarkers = new Map(); // Map<filmId, marker> - created once, never removed
 const highlightLayer = ref<any>(null);
 
@@ -172,7 +193,7 @@ onMounted(async () => {
   // Bounds cover from Americas to Asia/Pacific
   const worldBounds = L.latLngBounds(
     L.latLng(-60, -180), // Southwest corner
-    L.latLng(85, 180)    // Northeast corner
+    L.latLng(85, 180) // Northeast corner
   );
   map.value.setMaxBounds(worldBounds);
   map.value.options.maxBoundsViscosity = 1.0; // Solid boundary
@@ -403,6 +424,27 @@ const openModal = () => {
 
 const closeModal = () => {
   isModalOpen.value = false;
+};
+
+// Open trailer - Desktop shows modal, Mobile redirects to YouTube
+const openTrailer = (film: Film) => {
+  if (!film.trailerUrl) return;
+
+  if (isMobile()) {
+    // Mobile: redirect to YouTube app/website
+    window.open(film.trailerUrl, "_blank");
+  } else {
+    // Desktop: open theater mode modal
+    activeTrailerUrl.value = film.trailerUrl;
+    activeFilmTitle.value = `${film.title} (${film.year})`;
+    isTrailerOpen.value = true;
+  }
+};
+
+const closeTrailer = () => {
+  isTrailerOpen.value = false;
+  activeTrailerUrl.value = "";
+  activeFilmTitle.value = "";
 };
 
 // WASD keyboard navigation
