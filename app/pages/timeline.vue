@@ -186,15 +186,13 @@
                     </p>
                     <p class="popup-desc">{{ film.synopsis }}</p>
                     <div class="popup-actions">
-                      <a
+                      <button
                         v-if="film.trailerUrl"
-                        :href="film.trailerUrl"
-                        target="_blank"
-                        rel="noopener noreferrer"
                         class="btn-primary"
+                        @click.stop="openTrailer(film)"
                       >
                         Watch Trailer
-                      </a>
+                      </button>
                       <a
                         v-if="film.imdbUrl"
                         :href="film.imdbUrl"
@@ -304,6 +302,14 @@
         {{ positionedFilms.length }} films
       </span>
     </footer>
+
+    <!-- Trailer Modal (Desktop Only) -->
+    <TrailerModal
+      :is-open="isTrailerOpen"
+      :trailer-url="activeTrailerUrl"
+      :film-title="activeFilmTitle"
+      @close="closeTrailer"
+    />
   </main>
 </template>
 
@@ -374,6 +380,11 @@ const selectedFilm = ref(null);
 const mobileSelectedFilm = ref(null);
 const currentPeriodIndex = ref(2); // Start with last period (1942-1945) - more content visible by default
 const isMobile = ref(false);
+
+// Trailer Modal State
+const isTrailerOpen = ref(false);
+const activeTrailerUrl = ref("");
+const activeFilmTitle = ref("");
 
 // Películas seleccionadas para mostrar en el timeline (IDs del JSON principal)
 const timelineFilmIds = [
@@ -659,6 +670,27 @@ const selectFilm = (film) => {
 
 const toggleFilmPopup = (film) => {
   mobileSelectedFilm.value = film;
+};
+
+// Open trailer - Desktop shows modal, Mobile redirects to YouTube
+const openTrailer = (film) => {
+  if (isMobile.value) {
+    // Mobile: redirect to YouTube app/website
+    window.open(film.trailerUrl, "_blank");
+  } else {
+    // Desktop: open theater mode modal
+    activeTrailerUrl.value = film.trailerUrl;
+    activeFilmTitle.value = `${film.title} (${film.year})`;
+    isTrailerOpen.value = true;
+    // Close the film popup
+    selectedFilm.value = null;
+  }
+};
+
+const closeTrailer = () => {
+  isTrailerOpen.value = false;
+  activeTrailerUrl.value = "";
+  activeFilmTitle.value = "";
 };
 </script>
 
