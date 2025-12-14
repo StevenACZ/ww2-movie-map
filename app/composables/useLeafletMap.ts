@@ -104,11 +104,15 @@ export const useLeafletMap = ({
       film.locations.forEach((location) => {
         if (!location.isPrimary) return;
 
+        // Offset the anchor to position poster to the right of the location
+        // This prevents the poster from covering city/location names on the map
+        const anchorOffsetX = isMobile() ? markerWidth + 5 : markerWidth + 10;
+
         const icon = L.divIcon({
           className: "custom-film-marker",
           html: `<div class="film-marker-content" style="background-image: url('${film.poster}'); box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);"></div>`,
           iconSize: [markerWidth, markerHeight],
-          iconAnchor: [markerWidth / 2, markerHeight],
+          iconAnchor: [anchorOffsetX, markerHeight],
           popupAnchor: [0, -markerHeight],
         });
 

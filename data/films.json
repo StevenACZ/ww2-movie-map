@@ -640,25 +640,19 @@
       "eventDate": "1943-05-17",
       "imdbRating": 6.9,
       "country": "United Kingdom",
-      "poster": "https://upload.wikimedia.org/wikipedia/en/d/d9/Memphis_belle_poster.jpg",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjQ3MzVlNzQtMDkyZi00ZDI2LTg5NTQtZmYwOGRhZDU1YWFkXkEyXkFqcGc@._V1_FMjpg_UY770_.jpg",
       "synopsis": "In 1943, the crew of a B-17 bomber stationed in England embarks on their 25th and final mission over Germany, hoping to become the first American bomber crew to complete their tour of duty and return home.",
       "locations": [
         {
-          "name": "Bremen",
-          "coordinates": [8.8017, 53.0793],
+          "name": "Lorient",
+          "coordinates": [-3.3667, 47.75],
           "type": "city",
           "isPrimary": true
-        },
-        {
-          "name": "RAF Binbrook",
-          "coordinates": [-0.1944, 53.4558],
-          "type": "city",
-          "isPrimary": false
         }
       ],
-      "wikipediaUrl": "https://en.wikipedia.org/wiki/Memphis_Belle_(1990_film)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Memphis_Belle_(film)",
       "imdbUrl": "https://www.imdb.com/title/tt0100133/",
-      "trailerUrl": "https://www.youtube.com/watch?v=m8GR1DHXXfE"
+      "trailerUrl": "https://www.youtube.com/watch?v=aHx9aYgUg3c"
     },
     {
       "id": "unbroken-2014",
@@ -671,7 +665,7 @@
       "eventDate": "1943-05-27",
       "imdbRating": 7.2,
       "country": "United States",
-      "poster": "https://upload.wikimedia.org/wikipedia/en/d/d7/Unbroken_poster.jpg",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTY3ODg2OTgyOF5BMl5BanBnXkFtZTgwODk1OTAwMzE@._V1_FMjpg_UY2048_.jpg",
       "synopsis": "After a near-fatal plane crash in WWII, Olympian Louis Zamperini spends 47 days drifting in the Pacific Ocean before being captured by the Japanese Navy and enduring years of brutal treatment as a prisoner of war.",
       "locations": [
         {
@@ -681,9 +675,9 @@
           "isPrimary": true
         },
         {
-          "name": "Tokyo",
-          "coordinates": [139.6917, 35.6895],
-          "type": "city",
+          "name": "Kwajalein",
+          "coordinates": [167.7333, 8.7167],
+          "type": "region",
           "isPrimary": false
         },
         {
@@ -695,7 +689,192 @@
       ],
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Unbroken_(film)",
       "imdbUrl": "https://www.imdb.com/title/tt1809398/",
-      "trailerUrl": "https://www.youtube.com/watch?v=XGogp5GNlGY"
+      "trailerUrl": "https://www.youtube.com/watch?v=XrjJbl7kRrI"
+    },
+    {
+      "id": "greyhound-2020",
+      "title": "Greyhound",
+      "year": 2020,
+      "eventYears": {
+        "start": 1942,
+        "end": 1942
+      },
+      "eventDate": "1942-02-01",
+      "imdbRating": 7.0,
+      "country": "United States",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTU3YzY0NjktMmRhMC00MzYyLWI0YmUtZGJkMzJjMWYwZDZkXkEyXkFqcGc@._V1_FMjpg_UY1010_.jpg",
+      "synopsis": "Commander Ernest Krause leads a convoy of 37 Allied ships across the treacherous North Atlantic while being pursued by a German U-boat wolfpack during the Battle of the Atlantic.",
+      "locations": [
+        {
+          "name": "North Atlantic",
+          "coordinates": [-40.0, 50.0],
+          "type": "region",
+          "isPrimary": true
+        }
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Greyhound_(film)",
+      "imdbUrl": "https://www.imdb.com/title/tt6048922/",
+      "trailerUrl": "https://www.youtube.com/watch?v=eyzxu26-Wqk"
+    },
+    {
+      "id": "masters-of-the-air-2024",
+      "title": "Masters of the Air",
+      "year": 2024,
+      "eventYears": {
+        "start": 1943,
+        "end": 1945
+      },
+      "eventDate": "1943-06-25",
+      "imdbRating": 7.8,
+      "country": "United States",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzViZjM3ZTUtZDdiZS00MDUzLTgxZjYtYmUwNDNlNWRiYmY4XkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
+      "synopsis": "The story of the 100th Bomb Group, known as the 'Bloody Hundredth', who conducted dangerous daylight bombing raids over Nazi-occupied Europe during World War II.",
+      "locations": [
+        {
+          "name": "Thorpe Abbotts",
+          "coordinates": [1.1833, 52.3667],
+          "type": "city",
+          "isPrimary": true
+        },
+        {
+          "name": "Regensburg",
+          "coordinates": [12.1016, 49.0134],
+          "type": "city",
+          "isPrimary": false
+        },
+        {
+          "name": "Münster",
+          "coordinates": [7.6261, 51.9607],
+          "type": "city",
+          "isPrimary": false
+        },
+        {
+          "name": "Berlin",
+          "coordinates": [13.405, 52.52],
+          "type": "city",
+          "isPrimary": false
+        }
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Masters_of_the_Air",
+      "imdbUrl": "https://www.imdb.com/title/tt2640044/",
+      "trailerUrl": "https://www.youtube.com/watch?v=lA-1JCRguZ0"
+    },
+    {
+      "id": "band-of-brothers-2001",
+      "title": "Band of Brothers",
+      "year": 2001,
+      "eventYears": {
+        "start": 1944,
+        "end": 1945
+      },
+      "eventDate": "1944-06-06",
+      "imdbRating": 9.4,
+      "country": "United States",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTQ3NTdmOTEtZTRmMi00NTg5LWI5NmUtYTNiOTc0ZmNkODU0XkEyXkFqcGc@._V1_FMjpg_UY1426_.jpg",
+      "synopsis": "The story of Easy Company, 506th Regiment of the 101st Airborne Division, from their training in the United States through their participation in major WWII battles including D-Day, Operation Market Garden, and the Battle of the Bulge.",
+      "locations": [
+        {
+          "name": "Brecourt Manor",
+          "coordinates": [-1.2147, 49.4103],
+          "type": "city",
+          "isPrimary": false
+        },
+        {
+          "name": "Carentan",
+          "coordinates": [-1.2428, 49.3036],
+          "type": "city",
+          "isPrimary": false
+        },
+        {
+          "name": "Bastogne",
+          "coordinates": [5.7167, 50.0],
+          "type": "city",
+          "isPrimary": true
+        },
+        {
+          "name": "Berchtesgaden",
+          "coordinates": [13.0047, 47.6308],
+          "type": "city",
+          "isPrimary": false
+        }
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Band_of_Brothers_(miniseries)",
+      "imdbUrl": "https://www.imdb.com/title/tt0185906/",
+      "trailerUrl": "https://www.youtube.com/watch?v=KKRBAFlN5ww"
+    },
+    {
+      "id": "the-pacific-2010",
+      "title": "The Pacific",
+      "year": 2010,
+      "eventYears": {
+        "start": 1942,
+        "end": 1945
+      },
+      "eventDate": "1942-08-07",
+      "imdbRating": 8.3,
+      "country": "United States",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGFjYTZmYjEtZDI3MS00MGVhLWI5NDQtY2QwZTcwNjUwMTA2XkEyXkFqcGc@._V1_FMjpg_UY3105_.jpg",
+      "synopsis": "The story of three Marines—Robert Leckie, Eugene Sledge, and John Basilone—and their experiences in the Pacific Theater during WWII, from Guadalcanal to Peleliu, Iwo Jima, and Okinawa.",
+      "locations": [
+        {
+          "name": "Guadalcanal",
+          "coordinates": [160.0, -9.5],
+          "type": "region",
+          "isPrimary": true
+        },
+        {
+          "name": "Peleliu",
+          "coordinates": [134.2333, 7.0],
+          "type": "region",
+          "isPrimary": false
+        },
+        {
+          "name": "Okinawa",
+          "coordinates": [127.6809, 26.2124],
+          "type": "region",
+          "isPrimary": false
+        },
+        {
+          "name": "Iwo Jima",
+          "coordinates": [141.3283, 24.7833],
+          "type": "region",
+          "isPrimary": false
+        }
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Pacific_(miniseries)",
+      "imdbUrl": "https://www.imdb.com/title/tt0374463/",
+      "trailerUrl": "https://www.youtube.com/watch?v=Q1fXW-dU1Cc"
+    },
+    {
+      "id": "generation-war-2013",
+      "title": "Generation War",
+      "year": 2013,
+      "eventYears": {
+        "start": 1941,
+        "end": 1945
+      },
+      "eventDate": "1941-06-22",
+      "imdbRating": 8.4,
+      "country": "Germany",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTYwMzIyMjg5M15BMl5BanBnXkFtZTgwNzM1NjI2MDE@._V1_FMjpg_UY1778_.jpg",
+      "synopsis": "Five German friends in Berlin in 1941 face drastically different fates as the war progresses: two brothers fight on the Eastern Front, one volunteers as a nurse, one becomes entangled with the SS, and one faces persecution as a Jew.",
+      "locations": [
+        {
+          "name": "Berlin",
+          "coordinates": [13.405, 52.52],
+          "type": "city",
+          "isPrimary": false
+        },
+        {
+          "name": "Eastern Front",
+          "coordinates": [30.0, 52.0],
+          "type": "region",
+          "isPrimary": true
+        }
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Generation_War",
+      "imdbUrl": "https://www.imdb.com/title/tt1883092/",
+      "trailerUrl": "https://www.youtube.com/watch?v=TmyGPX23px4"
     }
   ]
 }
