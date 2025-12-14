@@ -628,6 +628,74 @@
       "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Desert_Fox:_The_Story_of_Rommel",
       "imdbUrl": "https://www.imdb.com/title/tt0043461/",
       "trailerUrl": "https://www.youtube.com/watch?v=DNky81BF7kI"
+    },
+    {
+      "id": "memphis-belle-1990",
+      "title": "Memphis Belle",
+      "year": 1990,
+      "eventYears": {
+        "start": 1943,
+        "end": 1943
+      },
+      "eventDate": "1943-05-17",
+      "imdbRating": 6.9,
+      "country": "United Kingdom",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/d9/Memphis_belle_poster.jpg",
+      "synopsis": "In 1943, the crew of a B-17 bomber stationed in England embarks on their 25th and final mission over Germany, hoping to become the first American bomber crew to complete their tour of duty and return home.",
+      "locations": [
+        {
+          "name": "Bremen",
+          "coordinates": [8.8017, 53.0793],
+          "type": "city",
+          "isPrimary": true
+        },
+        {
+          "name": "RAF Binbrook",
+          "coordinates": [-0.1944, 53.4558],
+          "type": "city",
+          "isPrimary": false
+        }
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Memphis_Belle_(1990_film)",
+      "imdbUrl": "https://www.imdb.com/title/tt0100133/",
+      "trailerUrl": "https://www.youtube.com/watch?v=m8GR1DHXXfE"
+    },
+    {
+      "id": "unbroken-2014",
+      "title": "Unbroken",
+      "year": 2014,
+      "eventYears": {
+        "start": 1943,
+        "end": 1945
+      },
+      "eventDate": "1943-05-27",
+      "imdbRating": 7.2,
+      "country": "United States",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/d7/Unbroken_poster.jpg",
+      "synopsis": "After a near-fatal plane crash in WWII, Olympian Louis Zamperini spends 47 days drifting in the Pacific Ocean before being captured by the Japanese Navy and enduring years of brutal treatment as a prisoner of war.",
+      "locations": [
+        {
+          "name": "Pacific Ocean",
+          "coordinates": [-160.0, 10.0],
+          "type": "region",
+          "isPrimary": true
+        },
+        {
+          "name": "Tokyo",
+          "coordinates": [139.6917, 35.6895],
+          "type": "city",
+          "isPrimary": false
+        },
+        {
+          "name": "Naoetsu POW Camp",
+          "coordinates": [138.2442, 37.1667],
+          "type": "city",
+          "isPrimary": false
+        }
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Unbroken_(film)",
+      "imdbUrl": "https://www.imdb.com/title/tt1809398/",
+      "trailerUrl": "https://www.youtube.com/watch?v=XGogp5GNlGY"
     }
   ]
 }
