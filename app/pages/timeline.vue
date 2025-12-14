@@ -235,6 +235,7 @@ const activeFilmTitle = ref("");
 const timelineFilmIds = [
   "the-eight-hundred-2020",
   "dunkirk-2017",
+  "battle-of-britain-1969",
   "das-boot-1981",
   "tora-tora-tora-1970",
   "schindlers-list-1993",
@@ -284,7 +285,7 @@ onMounted(() => {
 
   // Use imported data directly
   events.value = eventsData.events as HistoricalEvent[];
-  films.value = filmsData.films.filter((film: Film) =>
+  films.value = (filmsData.films as unknown as Film[]).filter((film) =>
     timelineFilmIds.includes(film.id)
   );
 

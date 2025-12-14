@@ -1,4 +1,4 @@
-import { ref, onMounted, onUnmounted, watch } from "vue";
+import { ref, watch } from "vue";
 import type { Ref } from "vue";
 import type { Film, Location } from "../../types";
 
