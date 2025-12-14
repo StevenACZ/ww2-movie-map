@@ -875,6 +875,93 @@
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Generation_War",
       "imdbUrl": "https://www.imdb.com/title/tt1883092/",
       "trailerUrl": "https://www.youtube.com/watch?v=TmyGPX23px4"
+    },
+    {
+      "id": "battle-of-britain-1969",
+      "title": "Battle of Britain",
+      "year": 1969,
+      "eventYears": {
+        "start": 1940,
+        "end": 1940
+      },
+      "eventDate": "1940-07-10",
+      "imdbRating": 7.0,
+      "country": "United Kingdom",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTRhZDBlZGEtMjdjYy00Y2NiLTk2YzYtMjUwNTkxNWJhZjkxXkEyXkFqcGc@._V1_FMjpg_UY1200_.jpg",
+      "synopsis": "The aerial battle between the Royal Air Force and the German Luftwaffe over British skies in the summer of 1940, showcasing spectacular dogfights and the defense of Britain against Nazi invasion.",
+      "locations": [
+        {
+          "name": "RAF Bentley Priory",
+          "coordinates": [-0.3186, 51.6167],
+          "type": "city",
+          "isPrimary": true
+        },
+        {
+          "name": "English Channel",
+          "coordinates": [0.5, 50.8],
+          "type": "region",
+          "isPrimary": false
+        }
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Battle_of_Britain_(film)",
+      "imdbUrl": "https://www.imdb.com/title/tt0064072/",
+      "trailerUrl": "https://www.youtube.com/watch?v=4d86cHhp65Y"
+    },
+    {
+      "id": "empire-of-the-sun-1987",
+      "title": "Empire of the Sun",
+      "year": 1987,
+      "eventYears": {
+        "start": 1941,
+        "end": 1945
+      },
+      "eventDate": "1941-12-08",
+      "imdbRating": 7.7,
+      "country": "United States",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMWY2NjdkYzEtYWZhZS00YTdhLWJhMGQtZjkxZjZkODQyYWY5XkEyXkFqcGc@._V1_FMjpg_UY1500_.jpg",
+      "synopsis": "A young British boy is separated from his family during the Japanese invasion of Shanghai and must learn to survive in a Japanese internment camp during World War II.",
+      "locations": [
+        {
+          "name": "Waibaidu Bridge",
+          "coordinates": [121.492, 31.246],
+          "type": "city",
+          "isPrimary": true
+        },
+        {
+          "name": "Longhua Internment Camp",
+          "coordinates": [121.45, 31.1667],
+          "type": "city",
+          "isPrimary": false
+        }
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Empire_of_the_Sun_(film)",
+      "imdbUrl": "https://www.imdb.com/title/tt0092965/",
+      "trailerUrl": "https://www.youtube.com/watch?v=i_WiDVA1kLY"
+    },
+    {
+      "id": "the-flowers-of-war-2011",
+      "title": "The Flowers of War",
+      "year": 2011,
+      "eventYears": {
+        "start": 1937,
+        "end": 1937
+      },
+      "eventDate": "1937-12-13",
+      "imdbRating": 7.5,
+      "country": "China",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjE3OTUzODA3Ml5BMl5BanBnXkFtZTcwNDk5NTUyNw@@._V1_FMjpg_UY1481_.jpg",
+      "synopsis": "An American mortician takes refuge in a Catholic church during the Nanjing Massacre and becomes the protector of a group of schoolgirls and courtesans against the Japanese army.",
+      "locations": [
+        {
+          "name": "Nanjing",
+          "coordinates": [118.7969, 32.0603],
+          "type": "city",
+          "isPrimary": true
+        }
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Flowers_of_War",
+      "imdbUrl": "https://www.imdb.com/title/tt1410063/",
+      "trailerUrl": "https://www.youtube.com/watch?v=cj2uhyfVNmQ"
     }
   ]
 }
