@@ -227,6 +227,11 @@ export default defineNuxtConfig({
       routes: ["/", "/films", "/timeline", "/about"],
     },
     compressPublicAssets: true,
+    // Output to dist folder for easier deployment
+    output: {
+      dir: "dist",
+      publicDir: "dist/public",
+    },
   },
 
   // Enable SSR for better SEO
