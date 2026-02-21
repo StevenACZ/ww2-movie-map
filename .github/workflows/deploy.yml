@@ -118,10 +118,12 @@ jobs:
             echo "output_dir=.output/public/public" >> "$GITHUB_OUTPUT"
           elif [ -f .output/public/index.html ] || [ -d .output/public/_nuxt ]; then
             echo "output_dir=.output/public" >> "$GITHUB_OUTPUT"
+          elif [ -f dist/public/index.html ]; then
+            echo "output_dir=dist/public" >> "$GITHUB_OUTPUT"
           elif [ -d dist ]; then
             echo "output_dir=dist" >> "$GITHUB_OUTPUT"
           else
-            echo "Build output not found (.output/public/public, .output/public or dist)."
+            echo "Build output not found (.output/public/public, .output/public, dist/public or dist)."
             exit 1
           fi
 
