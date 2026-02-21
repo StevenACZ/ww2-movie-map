@@ -1,0 +1,178 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-${{ github.repository }}
+      cancel-in-progress: true
+    env:
+      SSH_HOST: ${{ secrets.SSH_HOST }}
+      SSH_USER: ${{ secrets.SSH_USER }}
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      SSH_PORT: ${{ secrets.SSH_PORT }}
+      DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Detect package manager
+        id: pm
+        run: |
+          if [ -f bun.lock ] || [ -f bun.lockb ]; then
+            echo "manager=bun" >> "$GITHUB_OUTPUT"
+          elif [ -f package-lock.json ]; then
+            echo "manager=npm" >> "$GITHUB_OUTPUT"
+          else
+            echo "No supported lockfile found (bun.lock, bun.lockb, package-lock.json)."
+            exit 1
+          fi
+
+      - name: Install dependencies
+        run: |
+          if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
+            bun install --frozen-lockfile
+          else
+            npm ci
+          fi
+
+      - name: Format check (optional)
+        run: |
+          if node -e "const s=require('./package.json').scripts||{}; process.exit(s['format:check'] ? 0 : 1)"; then
+            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
+              bun run format:check
+            else
+              npm run format:check
+            fi
+          elif node -e "const s=require('./package.json').scripts||{}; process.exit(s.format ? 0 : 1)"; then
+            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
+              bun run format
+            else
+              npm run format
+            fi
+            if [ -n "$(git status --porcelain)" ]; then
+              echo "Formatting produced changes. Commit formatted files first."
+              git status --short
+              exit 1
+            fi
+          else
+            echo "No format script found. Skipping."
+          fi
+
+      - name: Lint (optional)
+        run: |
+          if node -e "const s=require('./package.json').scripts||{}; process.exit(s.lint ? 0 : 1)"; then
+            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
+              bun run lint
+            else
+              npm run lint
+            fi
+          else
+            echo "No lint script found. Skipping."
+          fi
+
+      - name: Typecheck (optional)
+        run: |
+          if node -e "const s=require('./package.json').scripts||{}; process.exit(s.typecheck ? 0 : 1)"; then
+            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
+              bun run typecheck
+            else
+              npm run typecheck
+            fi
+          else
+            echo "No typecheck script found. Skipping."
+          fi
+
+      - name: Tests (optional)
+        run: |
+          if node -e "const s=require('./package.json').scripts||{}; process.exit(s['test:run'] ? 0 : 1)"; then
+            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
+              bun run test:run
+            else
+              npm run test:run
+            fi
+          else
+            echo "No test:run script found. Skipping."
+          fi
+
+      - name: Build
+        id: build
+        run: |
+          if node -e "const s=require('./package.json').scripts||{}; process.exit(s.generate ? 0 : 1)"; then
+            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
+              bun run generate
+            else
+              npm run generate
+            fi
+          else
+            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
+              bun run build
+            else
+              npm run build
+            fi
+          fi
+
+          if [ -d .output/public ]; then
+            echo "output_dir=.output/public" >> "$GITHUB_OUTPUT"
+          elif [ -d dist ]; then
+            echo "output_dir=dist" >> "$GITHUB_OUTPUT"
+          else
+            echo "Build output not found (.output/public or dist)."
+            exit 1
+          fi
+
+      - name: Validate deployment secrets
+        run: |
+          if [ -z "$SSH_HOST" ]; then
+            echo "Missing secret: SSH_HOST"
+            exit 1
+          fi
+          if [ -z "$SSH_USER" ]; then
+            echo "Missing secret: SSH_USER"
+            exit 1
+          fi
+          if [ -z "$SSH_PRIVATE_KEY" ]; then
+            echo "Missing secret: SSH_PRIVATE_KEY"
+            exit 1
+          fi
+          if [ -z "$DEPLOY_PATH" ]; then
+            echo "Missing secret: DEPLOY_PATH"
+            exit 1
+          fi
+          if [ "$DEPLOY_PATH" = "/" ]; then
+            echo "DEPLOY_PATH cannot be /."
+            exit 1
+          fi
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          port="${SSH_PORT:-22}"
+          ssh-keyscan -H -p "$port" "$SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Deploy to VPS via rsync
+        run: |
+          port="${SSH_PORT:-22}"
+          output_dir="${{ steps.build.outputs.output_dir }}"
+
+          ssh -i ~/.ssh/deploy_key -p "$port" "$SSH_USER@$SSH_HOST" "mkdir -p '$DEPLOY_PATH'"
+
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key -p $port" \
+            "$output_dir/" \
+            "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
