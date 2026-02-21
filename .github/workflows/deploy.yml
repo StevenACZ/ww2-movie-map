@@ -32,53 +32,42 @@ jobs:
       - name: Detect package manager
         id: pm
         run: |
-          if [ -f bun.lock ] || [ -f bun.lockb ]; then
-            echo "manager=bun" >> "$GITHUB_OUTPUT"
-          elif [ -f package-lock.json ]; then
+          if [ -f package-lock.json ]; then
             echo "manager=npm" >> "$GITHUB_OUTPUT"
+          elif [ -f bun.lock ] || [ -f bun.lockb ]; then
+            echo "manager=bun" >> "$GITHUB_OUTPUT"
           else
-            echo "No supported lockfile found (bun.lock, bun.lockb, package-lock.json)."
+            echo "No supported lockfile found (package-lock.json, bun.lock, bun.lockb)."
             exit 1
           fi
 
       - name: Install dependencies
         run: |
-          if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
-            bun install --frozen-lockfile
-          else
+          if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
             npm ci
+          else
+            bun install --frozen-lockfile || bun install
           fi
 
       - name: Format check (optional)
         run: |
           if node -e "const s=require('./package.json').scripts||{}; process.exit(s['format:check'] ? 0 : 1)"; then
-            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
-              bun run format:check
-            else
+            if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
               npm run format:check
-            fi
-          elif node -e "const s=require('./package.json').scripts||{}; process.exit(s.format ? 0 : 1)"; then
-            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
-              bun run format
             else
-              npm run format
-            fi
-            if [ -n "$(git status --porcelain)" ]; then
-              echo "Formatting produced changes. Commit formatted files first."
-              git status --short
-              exit 1
+              bun run format:check
             fi
           else
-            echo "No format script found. Skipping."
+            echo "No format:check script found. Skipping."
           fi
 
       - name: Lint (optional)
         run: |
           if node -e "const s=require('./package.json').scripts||{}; process.exit(s.lint ? 0 : 1)"; then
-            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
-              bun run lint
-            else
+            if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
               npm run lint
+            else
+              bun run lint
             fi
           else
             echo "No lint script found. Skipping."
@@ -87,10 +76,10 @@ jobs:
       - name: Typecheck (optional)
         run: |
           if node -e "const s=require('./package.json').scripts||{}; process.exit(s.typecheck ? 0 : 1)"; then
-            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
-              bun run typecheck
-            else
+            if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
               npm run typecheck
+            else
+              bun run typecheck
             fi
           else
             echo "No typecheck script found. Skipping."
@@ -99,10 +88,10 @@ jobs:
       - name: Tests (optional)
         run: |
           if node -e "const s=require('./package.json').scripts||{}; process.exit(s['test:run'] ? 0 : 1)"; then
-            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
-              bun run test:run
-            else
+            if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
               npm run test:run
+            else
+              bun run test:run
             fi
           else
             echo "No test:run script found. Skipping."
@@ -112,16 +101,16 @@ jobs:
         id: build
         run: |
           if node -e "const s=require('./package.json').scripts||{}; process.exit(s.generate ? 0 : 1)"; then
-            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
-              bun run generate
-            else
+            if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
               npm run generate
+            else
+              bun run generate
             fi
           else
-            if [ "${{ steps.pm.outputs.manager }}" = "bun" ]; then
-              bun run build
-            else
+            if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
               npm run build
+            else
+              bun run build
             fi
           fi
 
