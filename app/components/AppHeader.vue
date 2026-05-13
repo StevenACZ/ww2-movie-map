@@ -9,23 +9,39 @@
 
       <!-- Desktop Navigation -->
       <nav class="nav-menu desktop-nav">
-        <NuxtLink to="/" class="nav-item" :class="{ active: currentRoute === '/' }">
+        <NuxtLink
+          to="/"
+          class="nav-item"
+          :class="{ active: currentRoute === '/' }"
+        >
           <span class="nav-text">MAP</span>
         </NuxtLink>
-        <NuxtLink to="/films" class="nav-item" :class="{ active: currentRoute === '/films' }">
+        <NuxtLink
+          to="/films"
+          class="nav-item"
+          :class="{ active: currentRoute === '/films' }"
+        >
           <span class="nav-text">FILMS</span>
         </NuxtLink>
-        <NuxtLink to="/timeline" class="nav-item" :class="{ active: currentRoute === '/timeline' }">
+        <NuxtLink
+          to="/timeline"
+          class="nav-item"
+          :class="{ active: currentRoute === '/timeline' }"
+        >
           <span class="nav-text">TIMELINE</span>
         </NuxtLink>
-        <NuxtLink to="/about" class="nav-item" :class="{ active: currentRoute === '/about' }">
+        <NuxtLink
+          to="/about"
+          class="nav-item"
+          :class="{ active: currentRoute === '/about' }"
+        >
           <span class="nav-text">ABOUT</span>
         </NuxtLink>
       </nav>
 
       <!-- Hamburger Button (Mobile) -->
-      <button 
-        class="hamburger-btn" 
+      <button
+        class="hamburger-btn"
         @click="toggleMenu"
         :aria-expanded="isMenuOpen"
         aria-label="Toggle navigation menu"
@@ -44,57 +60,97 @@
     <!-- Mobile Navigation Menu -->
     <Transition name="slide-down">
       <nav v-if="isMenuOpen" class="mobile-nav">
-        <NuxtLink 
-          to="/" 
-          class="mobile-nav-item" 
+        <NuxtLink
+          to="/"
+          class="mobile-nav-item"
           :class="{ active: currentRoute === '/' }"
           @click="closeMenu"
         >
           <span class="mobile-nav-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+              />
             </svg>
           </span>
           <span class="mobile-nav-text">Map</span>
           <span class="mobile-nav-desc">Explore WW2 films on the map</span>
         </NuxtLink>
-        <NuxtLink 
-          to="/films" 
-          class="mobile-nav-item" 
+        <NuxtLink
+          to="/films"
+          class="mobile-nav-item"
           :class="{ active: currentRoute === '/films' }"
           @click="closeMenu"
         >
           <span class="mobile-nav-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"
+              />
             </svg>
           </span>
           <span class="mobile-nav-text">Films</span>
           <span class="mobile-nav-desc">Browse film collection</span>
         </NuxtLink>
-        <NuxtLink 
-          to="/timeline" 
-          class="mobile-nav-item" 
+        <NuxtLink
+          to="/timeline"
+          class="mobile-nav-item"
           :class="{ active: currentRoute === '/timeline' }"
           @click="closeMenu"
         >
           <span class="mobile-nav-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
             </svg>
           </span>
           <span class="mobile-nav-text">Timeline</span>
           <span class="mobile-nav-desc">Events & film releases</span>
         </NuxtLink>
-        <NuxtLink 
-          to="/about" 
-          class="mobile-nav-item" 
+        <NuxtLink
+          to="/about"
+          class="mobile-nav-item"
           :class="{ active: currentRoute === '/about' }"
           @click="closeMenu"
         >
           <span class="mobile-nav-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
             </svg>
           </span>
           <span class="mobile-nav-text">About</span>
@@ -473,7 +529,8 @@ onUnmounted(() => {
 
 .slide-down-enter-active,
 .slide-down-leave-active {
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     opacity 0.3s ease;
 }
 

@@ -68,8 +68,8 @@ const closeInfo = () => {
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/scss/variables' as *;
-@use '@/assets/scss/mixins' as *;
+@use "@/assets/scss/variables" as *;
+@use "@/assets/scss/mixins" as *;
 
 .project-info-container {
   position: absolute;
@@ -205,7 +205,9 @@ const closeInfo = () => {
 .slide-left {
   &-enter-active,
   &-leave-active {
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
   }
 
   &-enter-from,

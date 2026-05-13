@@ -1,8 +1,12 @@
 <template>
   <div class="timeline-container" :class="{ 'is-expanded': isExpanded }">
     <!-- Mobile Toggle Button -->
-    <button class="timeline-toggle" @click="toggleExpanded" aria-label="Toggle timeline">
-      <span class="toggle-icon">{{ isExpanded ? '▼' : '▲' }}</span>
+    <button
+      class="timeline-toggle"
+      @click="toggleExpanded"
+      aria-label="Toggle timeline"
+    >
+      <span class="toggle-icon">{{ isExpanded ? "▼" : "▲" }}</span>
     </button>
 
     <div class="timeline-header">
@@ -127,11 +131,11 @@ const checkMobile = () => {
 
 onMounted(() => {
   checkMobile();
-  window.addEventListener('resize', checkMobile);
+  window.addEventListener("resize", checkMobile);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('resize', checkMobile);
+  window.removeEventListener("resize", checkMobile);
 });
 
 // Sync with composable state
@@ -142,8 +146,8 @@ watch([startYear, endYear], () => {
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/scss/variables' as *;
-@use '@/assets/scss/mixins' as *;
+@use "@/assets/scss/variables" as *;
+@use "@/assets/scss/mixins" as *;
 
 .timeline {
   &-container {
@@ -167,8 +171,9 @@ watch([startYear, endYear], () => {
     gap: $spacing-md;
     width: 90%;
     max-width: 800px;
-    transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.4s ease;
+    transition:
+      bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      box-shadow 0.4s ease;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 
     &:hover {

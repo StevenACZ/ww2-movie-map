@@ -172,12 +172,12 @@ useSeoMeta({
   ogDescription:
     "Interactive WW2 timeline showing key historical events and related films from 1936-1945. Explore D-Day, Pearl Harbor, and more.",
   ogUrl: "https://ww2.stevenacz.com/timeline",
-  ogImage: "https://ww2.stevenacz.com/og-image.png",
+  ogImage: "https://ww2.stevenacz.com/og-image.jpg",
   twitterCard: "summary_large_image",
   twitterTitle: "WW2 Interactive Timeline - Events & Films",
   twitterDescription:
     "Explore World War II events and related films in an interactive timeline from 1936-1945.",
-  twitterImage: "https://ww2.stevenacz.com/og-image.png",
+  twitterImage: "https://ww2.stevenacz.com/og-image.jpg",
 });
 
 // Canonical URL and Structured Data
@@ -286,7 +286,7 @@ onMounted(() => {
   // Use imported data directly
   events.value = eventsData.events as HistoricalEvent[];
   films.value = (filmsData.films as unknown as Film[]).filter((film) =>
-    timelineFilmIds.includes(film.id)
+    timelineFilmIds.includes(film.id),
   );
 
   // Click outside handler to close modal
@@ -408,10 +408,8 @@ const closeTrailer = () => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.02) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 50px 50px;
   pointer-events: none;

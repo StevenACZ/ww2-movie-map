@@ -193,7 +193,9 @@ const wikipediaUrl = computed(() => {
 
   &:hover {
     border-color: rgba($beige, 0.3);
-    box-shadow: $shadow-lg, 0 0 40px rgba($beige, 0.1);
+    box-shadow:
+      $shadow-lg,
+      0 0 40px rgba($beige, 0.1);
   }
 }
 

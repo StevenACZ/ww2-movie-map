@@ -33,7 +33,9 @@ defineProps<{
   border: 2px solid rgba($beige, 0.6);
   border-radius: 10px;
   padding: 14px 28px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba($beige, 0.3),
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba($beige, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px) saturate(180%);
   min-width: 280px;
@@ -53,7 +55,9 @@ defineProps<{
     font-weight: 700;
     color: $beige;
     margin: 0 0 6px 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba($beige, 0.4);
+    text-shadow:
+      2px 2px 8px rgba(0, 0, 0, 0.8),
+      0 0 20px rgba($beige, 0.4);
     letter-spacing: 0.5px;
 
     @include mobile {
@@ -78,7 +82,9 @@ defineProps<{
 // Fade Transition
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .fade-enter-from,

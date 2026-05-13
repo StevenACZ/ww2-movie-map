@@ -271,6 +271,16 @@
           </p>
           <cite class="footer-author">— George Santayana</cite>
         </blockquote>
+        <p class="portfolio-link">
+          Created by
+          <a
+            href="https://stevenacz.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            stevenacz.com
+          </a>
+        </p>
       </footer>
     </article>
   </main>
@@ -286,12 +296,12 @@ useSeoMeta({
   ogDescription:
     "Discover the mission behind WW2 Film Map - an interactive project exploring World War II history through iconic cinema.",
   ogUrl: "https://ww2.stevenacz.com/about",
-  ogImage: "https://ww2.stevenacz.com/og-image.png",
+  ogImage: "https://ww2.stevenacz.com/og-image.jpg",
   twitterCard: "summary_large_image",
   twitterTitle: "About WW2 Film Map",
   twitterDescription:
     "Learn about our mission to explore World War II history through cinema.",
-  twitterImage: "https://ww2.stevenacz.com/og-image.png",
+  twitterImage: "https://ww2.stevenacz.com/og-image.jpg",
 });
 
 // Canonical URL and Structured Data
@@ -322,8 +332,8 @@ useHead({
           author: {
             "@type": "Person",
             name: "StevenACZ",
-            url: "https://github.com/StevenACZ",
-            sameAs: ["https://github.com/StevenACZ"],
+            url: "https://stevenacz.com",
+            sameAs: ["https://stevenacz.com", "https://github.com/StevenACZ"],
           },
           offers: {
             "@type": "Offer",
@@ -338,6 +348,7 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
+@use "sass:color";
 @use "@/assets/scss/variables" as *;
 @use "@/assets/scss/mixins" as *;
 
@@ -384,10 +395,8 @@ useHead({
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.02) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 50px 50px;
   pointer-events: none;
@@ -889,6 +898,24 @@ useHead({
 
   @include mobile {
     font-size: 0.85rem;
+  }
+}
+
+.portfolio-link {
+  margin-top: $spacing-md;
+  font-size: 0.95rem;
+  color: $text-secondary;
+
+  a {
+    color: $beige;
+    text-decoration: none;
+    border-bottom: 1px solid rgba($beige, 0.5);
+    transition: all $transition-fast;
+
+    &:hover {
+      color: color.adjust($beige, $lightness: 8%);
+      border-bottom-color: rgba($beige, 0.85);
+    }
   }
 }
 </style>

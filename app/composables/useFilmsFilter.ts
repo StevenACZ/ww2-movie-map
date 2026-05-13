@@ -32,7 +32,7 @@ export const useFilmsFilter = ({ films }: UseFilmsFilterOptions) => {
         (film) =>
           film.title.toLowerCase().includes(query) ||
           film.synopsis.toLowerCase().includes(query) ||
-          film.country.toLowerCase().includes(query)
+          film.country.toLowerCase().includes(query),
       );
     }
 

@@ -64,7 +64,9 @@ const formatDate = (dateString: string): string => {
   backdrop-filter: blur(10px);
   border: 1px solid;
   box-shadow: $shadow-md;
-  transition: transform $transition-normal, box-shadow $transition-normal;
+  transition:
+    transform $transition-normal,
+    box-shadow $transition-normal;
   position: relative;
   z-index: 2;
 }

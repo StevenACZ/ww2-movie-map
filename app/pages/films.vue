@@ -79,12 +79,12 @@ useSeoMeta({
   ogDescription:
     "Curated collection of 30+ iconic World War II films. Discover classics like Saving Private Ryan, Schindler's List, and Dunkirk.",
   ogUrl: "https://ww2.stevenacz.com/films",
-  ogImage: "https://ww2.stevenacz.com/og-image.png",
+  ogImage: "https://ww2.stevenacz.com/og-image.jpg",
   twitterCard: "summary_large_image",
   twitterTitle: "WW2 Film Collection - 30+ Iconic Movies",
   twitterDescription:
     "Browse our curated collection of World War II films including Saving Private Ryan, Schindler's List, and more.",
-  twitterImage: "https://ww2.stevenacz.com/og-image.png",
+  twitterImage: "https://ww2.stevenacz.com/og-image.jpg",
 });
 
 // Canonical URL and Structured Data
@@ -183,10 +183,8 @@ const viewOnMap = (filmId: string) => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.02) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 50px 50px;
   pointer-events: none;
