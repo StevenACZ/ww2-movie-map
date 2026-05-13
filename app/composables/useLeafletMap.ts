@@ -69,7 +69,7 @@ export const useLeafletMap = ({
         subdomains: "abcd",
         maxZoom: 20,
         noWrap: true,
-      }
+      },
     ).addTo(map.value);
 
     // Set max bounds
@@ -127,10 +127,10 @@ export const useLeafletMap = ({
           const markerElement = marker.getElement();
           if (markerElement) {
             markerElement.addEventListener("mouseenter", () =>
-              onFilmHover(film)
+              onFilmHover(film),
             );
             markerElement.addEventListener("mouseleave", () =>
-              onFilmHover(null)
+              onFilmHover(null),
             );
           }
         }, 100);
@@ -167,12 +167,12 @@ export const useLeafletMap = ({
     const baseScale = isMobile() ? 0.8 : 1;
     const scale = baseScale + (zoom - 4) * 0.15;
     const mapContainer = document.querySelector(
-      ".map-container"
+      ".map-container",
     ) as HTMLElement;
     if (mapContainer) {
       mapContainer.style.setProperty(
         "--marker-scale",
-        Math.max(0.7, scale).toString()
+        Math.max(0.7, scale).toString(),
       );
     }
 
@@ -211,7 +211,7 @@ export const useLeafletMap = ({
         weight: 1,
         className: "combat-zone-pulse",
         radius,
-      }
+      },
     ).addTo(map.value);
 
     const targetZoom = isMobile() ? 10 : 12;
@@ -219,7 +219,7 @@ export const useLeafletMap = ({
     map.value.flyTo(
       [location.coordinates[1], location.coordinates[0]],
       targetZoom,
-      { duration: 2.0, easeLinearity: 0.25 }
+      { duration: 2.0, easeLinearity: 0.25 },
     );
   };
 

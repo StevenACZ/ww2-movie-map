@@ -38,7 +38,15 @@
               :src="embedUrl"
               :title="`${filmTitle} Trailer`"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
               class="trailer-iframe"
@@ -121,7 +129,7 @@ watch(
     } else {
       document.body.style.overflow = "";
     }
-  }
+  },
 );
 
 // Add escape key listener on mount
@@ -211,7 +219,9 @@ onUnmounted(() => {
   background: #000;
   border-radius: $border-radius-lg;
   overflow: hidden;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.8), 0 0 100px rgba($beige, 0.1);
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.8),
+    0 0 100px rgba($beige, 0.1);
 }
 
 .trailer-iframe {
@@ -250,7 +260,8 @@ onUnmounted(() => {
   transition: opacity 0.4s ease;
 
   .trailer-modal-content {
-    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+    transition:
+      transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
       opacity 0.4s ease;
   }
 }
@@ -259,7 +270,9 @@ onUnmounted(() => {
   transition: opacity 0.3s ease;
 
   .trailer-modal-content {
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
   }
 }
 

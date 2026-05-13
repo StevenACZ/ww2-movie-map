@@ -15,19 +15,27 @@ interface UseTimelinePositioningOptions {
   periods: TimelinePeriod[];
 }
 
+const fallbackPeriod: TimelinePeriod = {
+  label: "1936-1945",
+  start: 1936,
+  end: 1945,
+};
+
 export const useTimelinePositioning = ({
   events,
   films,
   currentPeriodIndex,
   periods,
 }: UseTimelinePositioningOptions) => {
-  // Computed values for current period
-  const visibleStartYear = computed(
-    () => periods[currentPeriodIndex.value].start
+  const currentPeriod = computed(
+    () => periods[currentPeriodIndex.value] ?? periods[0] ?? fallbackPeriod,
   );
-  const visibleEndYear = computed(() => periods[currentPeriodIndex.value].end);
+
+  // Computed values for current period
+  const visibleStartYear = computed(() => currentPeriod.value.start);
+  const visibleEndYear = computed(() => currentPeriod.value.end);
   const totalVisibleYears = computed(
-    () => visibleEndYear.value - visibleStartYear.value + 1
+    () => visibleEndYear.value - visibleStartYear.value + 1,
   );
 
   // Generate visible years array
@@ -96,13 +104,13 @@ export const useTimelinePositioning = ({
    * Uses level-based stacking to prevent overlaps
    */
   const resolveCollisions = <T extends { position: number }>(
-    items: T[]
+    items: T[],
   ): (T & { offsetY: number; connectorHeight: number; level: number })[] => {
     if (items.length === 0) return [];
 
     // Filter visible items first
     const visibleItems = items.filter(
-      (item) => item.position > -10 && item.position < 110
+      (item) => item.position > -10 && item.position < 110,
     );
 
     const result = visibleItems.map((item) => ({
@@ -119,6 +127,9 @@ export const useTimelinePositioning = ({
     const minDistance = 22;
 
     for (let i = 0; i < result.length; i++) {
+      const current = result[i];
+      if (!current) continue;
+
       let currentLevel = 0;
       let hasCollision = true;
 
@@ -128,10 +139,13 @@ export const useTimelinePositioning = ({
 
         // Look back at previous items to check for overlap
         for (let j = 0; j < i; j++) {
-          const distance = Math.abs(result[i].position - result[j].position);
+          const previous = result[j];
+          if (!previous) continue;
+
+          const distance = Math.abs(current.position - previous.position);
 
           // If they are close horizontally AND on the same level, it's a collision
-          if (distance < minDistance && result[j].level === currentLevel) {
+          if (distance < minDistance && previous.level === currentLevel) {
             hasCollision = true;
             break;
           }
@@ -142,15 +156,15 @@ export const useTimelinePositioning = ({
         }
       }
 
-      result[i].level = currentLevel;
+      current.level = currentLevel;
 
       // Calculate POSITIVE offset (distance from axis)
       const baseDistance = 40;
       const levelStep = 100;
       const totalDistance = baseDistance + currentLevel * levelStep;
 
-      result[i].offsetY = totalDistance;
-      result[i].connectorHeight = totalDistance;
+      current.offsetY = totalDistance;
+      current.connectorHeight = totalDistance;
     }
 
     return result;

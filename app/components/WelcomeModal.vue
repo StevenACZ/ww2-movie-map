@@ -21,8 +21,10 @@
               map
             </li>
             <li>
-              <span class="icon">📍</span> 
-              <span class="desktop-only">Click markers to view film details</span>
+              <span class="icon">📍</span>
+              <span class="desktop-only"
+                >Click markers to view film details</span
+              >
               <span class="mobile-only">Tap markers to view film details</span>
             </li>
             <li>
@@ -74,8 +76,8 @@ const handleStart = () => {
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/scss/variables' as *;
-@use '@/assets/scss/mixins' as *;
+@use "@/assets/scss/variables" as *;
+@use "@/assets/scss/mixins" as *;
 
 // Visibility utilities
 .desktop-only {

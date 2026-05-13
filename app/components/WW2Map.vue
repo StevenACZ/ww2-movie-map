@@ -230,7 +230,9 @@ const closeTrailer = () => {
       rgba($beige-dark, 0.2) 100%
     );
     border-color: rgba($beige, 0.5);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba($beige, 0.2);
+    box-shadow:
+      0 6px 16px rgba(0, 0, 0, 0.5),
+      0 0 20px rgba($beige, 0.2);
 
     .reset-icon {
       transform: rotate(20deg);
@@ -320,8 +322,10 @@ const closeTrailer = () => {
   background-position: center;
   border-radius: 6px;
   border: 2.5px solid rgba(255, 255, 255, 0.9);
-  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
-    box-shadow 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
   cursor: pointer;
   transform: scale(var(--marker-scale));
   transform-origin: bottom center;
@@ -334,7 +338,9 @@ const closeTrailer = () => {
 
   &:hover {
     transform: scale(calc(var(--marker-scale) * 1.25));
-    box-shadow: 0 0 30px rgba($beige, 0.9), 0 8px 24px rgba(0, 0, 0, 0.7) !important;
+    box-shadow:
+      0 0 30px rgba($beige, 0.9),
+      0 8px 24px rgba(0, 0, 0, 0.7) !important;
     border-color: $beige;
     z-index: $z-modal;
   }

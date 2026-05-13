@@ -22,7 +22,7 @@
           @input="
             $emit(
               'update:searchQuery',
-              ($event.target as HTMLInputElement).value
+              ($event.target as HTMLInputElement).value,
             )
           "
           type="search"

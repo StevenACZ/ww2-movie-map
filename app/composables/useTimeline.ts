@@ -1,6 +1,8 @@
 import { ref, computed } from "vue";
-import type { Film } from "../types";
-import filmsData from "../data/films.json";
+import type { Film, FilmsData } from "../../types";
+import filmsDataJson from "../../data/films.json";
+
+const filmsData = filmsDataJson as FilmsData;
 
 const startYear = ref(1936);
 const endYear = ref(1945);

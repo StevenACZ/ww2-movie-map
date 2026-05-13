@@ -4,7 +4,7 @@
 
 An interactive experience that maps iconic WW2 films to their historical locations and timelines. Discover how cinema has captured the most significant events of 1936-1945.
 
-![Project Preview](public/og-image.png)
+![Project Preview](public/og-image.jpg)
 
 ## ✨ Features
 
@@ -13,6 +13,14 @@ An interactive experience that maps iconic WW2 films to their historical locatio
 - 🎥 **Curated Film Collection**: A detailed library of masterpieces like _Saving Private Ryan_, _Schindler's List_, and _Dunkirk_.
 - 📱 **Fully Responsive**: Seamless experience across desktop, tablet, and mobile devices.
 - 🔍 **SEO Optimized**: Built with modern web standards for maximum visibility.
+
+## SEO & Performance
+
+- SSR-enabled Nuxt app with crawlable route output.
+- Structured data with `application/ld+json` and schema graph coverage.
+- Sitemap generation enabled via `@nuxtjs/sitemap`.
+- Strict Content Security Policy tuned for real image/map/trailer sources.
+- Production build optimization through Nuxt/Nitro prerender + static asset compression.
 
 ## 🛠️ Tech Stack
 

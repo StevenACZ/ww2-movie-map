@@ -90,7 +90,8 @@ defineEmits<{
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.9),
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.9),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(24px) saturate(180%);
 
@@ -353,7 +354,9 @@ defineEmits<{
 // Slide-in Transition
 .slide-in-enter-active,
 .slide-in-leave-active {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .slide-in-enter-from {
