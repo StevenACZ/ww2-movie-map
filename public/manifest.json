@@ -9,6 +9,7 @@
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
+  "dir": "ltr",
   "categories": ["entertainment", "education", "reference"],
   "icons": [
     {
