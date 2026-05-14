@@ -61,3 +61,7 @@ ehthumbs.db
 
 # Package manager stores
 .pnpm-store/
+
+# Local documentation
+docs/
+Docs/

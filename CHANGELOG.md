@@ -1,16 +1,12 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+## Unreleased
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+- Updated Nuxt/Vue/Nuxt UI/Sass dependencies to the current 2026 line.
+- Kept `AGENTS.md` as the public maintenance guide and `CLAUDE.md` as a pointer.
+- Ignored local `docs/` notes.
 
-## [Unreleased]
+## 2026-05-13
 
-### Added
-
-- SEO and security hardening baseline (CSP, JSON-LD graph consistency, manifest alias).
-
-### Changed
-
-- Unified social image references to real public asset (`/og-image.jpg`).
+- Added SEO/security hardening baseline with CSP, JSON-LD consistency, and manifest alias.
+- Unified social image references to the real public `/og-image.jpg` asset.
