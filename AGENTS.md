@@ -1,75 +1,36 @@
-# WW2 Movie Map - Development Guide
+# WW2 Movie Map Guide
 
 ## Scope
 
-This repository contains the public Nuxt application for WW2 Movie Map. Keep changes production-safe, historically focused, accessible, and free of private infrastructure details.
+Public Nuxt app for WW2 Movie Map. Keep it production-safe, historically focused, accessible, and free of private infrastructure details.
 
 ## Security and Privacy
 
 - Never commit secrets, tokens, private keys, internal IPs, environment dumps, local machine paths, or private deployment notes.
-- Keep repository documentation public-safe.
+- Keep `AGENTS.md`, `CLAUDE.md`, `README.md`, and `CHANGELOG.md` public-safe.
+- Keep local/private notes in ignored `docs/`.
 - Do not add external scripts, embeds, fonts, map providers, or analytics without updating the CSP and documenting the reason.
 - Use only public HTTPS URLs for film, map, trailer, and metadata references.
 
 ## Project Overview
 
-| Field           | Value                                                                  |
-| --------------- | ---------------------------------------------------------------------- |
-| Name            | WW2 Movie Map                                                          |
-| Production URL  | `https://ww2.stevenacz.com`                                            |
-| Repository      | `https://github.com/StevenACZ/ww2-movie-map`                           |
-| Framework       | Nuxt 4.x                                                               |
-| Purpose         | Interactive map, film collection, and timeline for World War II cinema |
-| Package manager | Bun preferred; npm scripts are also available                          |
+| Field   | Value                                                                  |
+| ------- | ---------------------------------------------------------------------- |
+| URL     | `https://ww2.stevenacz.com`                                            |
+| Repo    | `https://github.com/StevenACZ/ww2-movie-map`                           |
+| Stack   | Nuxt 4, Vue 3, TypeScript, SCSS, Leaflet, `@nuxtjs/sitemap`            |
+| Purpose | Interactive map, film collection, and timeline for World War II cinema |
 
-## Tech Stack
+## Structure
 
-- Nuxt 4 with Vue 3
-- TypeScript
-- SCSS with shared variables and mixins
-- Leaflet for the interactive map
-- `@nuxtjs/sitemap` for sitemap generation
-
-## Project Structure
-
-```text
-ww2-movie-map/
-├── app/
-│   ├── app.vue
-│   ├── components/
-│   │   ├── AppHeader.vue
-│   │   ├── WW2Map.vue
-│   │   ├── Timeline.vue
-│   │   ├── FilmModal.vue
-│   │   ├── TrailerModal.vue
-│   │   ├── timeline/
-│   │   ├── films/
-│   │   └── map/
-│   ├── composables/
-│   │   ├── useTimeline.ts
-│   │   ├── useTimelinePositioning.ts
-│   │   ├── useFilmsFilter.ts
-│   │   └── useLeafletMap.ts
-│   └── pages/
-│       ├── index.vue
-│       ├── films.vue
-│       ├── timeline.vue
-│       └── about.vue
-├── data/
-│   ├── films.json
-│   └── historical-events.json
-├── types/
-│   ├── index.ts
-│   └── timeline.ts
-├── public/
-│   ├── favicon.ico
-│   ├── manifest.json
-│   ├── site.webmanifest
-│   ├── og-image.jpg
-│   └── robots.txt
-├── nuxt.config.ts
-└── package.json
-```
+- `app/pages/`: home, films, timeline, and about pages.
+- `app/components/`: map, film, trailer, timeline, and shared UI.
+- `app/composables/`: filtering, Leaflet map, and timeline logic.
+- `data/films.json`: canonical film data.
+- `data/historical-events.json`: canonical timeline events.
+- `types/`: shared TypeScript types.
+- `public/`: icons, manifest files, OG image, robots.
+- `nuxt.config.ts`: SEO, CSP, sitemap, and global metadata.
 
 ## Commands
 
@@ -84,7 +45,7 @@ bun run generate
 bun run preview
 ```
 
-Do not commit generated `.output/`, `.nuxt/`, or `dist/` output.
+Use Bun because this repo tracks `bun.lock`. Do not commit generated `.output/`, `.nuxt/`, `dist/`, local docs, or env files.
 
 ## Key Features
 
@@ -96,34 +57,7 @@ Do not commit generated `.output/`, `.nuxt/`, or `dist/` output.
 
 ## Data Model
 
-Film data lives in `data/films.json` and should match the shared TypeScript types in `types/index.ts`.
-
-```ts
-interface Film {
-  id: string;
-  title: string;
-  year: number;
-  eventYears: { start: number; end: number };
-  eventDate?: string;
-  imdbRating: number;
-  country: string;
-  poster: string;
-  synopsis: string;
-  locations: Location[];
-  wikipediaUrl?: string;
-  imdbUrl?: string;
-  trailerUrl?: string;
-}
-```
-
-```ts
-interface Location {
-  name: string;
-  coordinates: [number, number];
-  type: "city" | "region" | "country";
-  isPrimary: boolean;
-}
-```
+Film data lives in `data/films.json` and must match `types/index.ts`. Locations use `[number, number]` coordinates and public HTTPS URLs only.
 
 ## SEO and Structured Data
 
@@ -150,6 +84,7 @@ bun run format:check
 bun run typecheck
 bun run build
 bun run generate
+bun audit
 ```
 
 For SEO work, inspect generated output for:
@@ -164,5 +99,4 @@ For SEO work, inspect generated output for:
 ## Git Safety
 
 - Use conventional commits.
-- Ask before staging, committing, pushing, creating PRs, or merging unless the user has already granted explicit permission for the current task.
 - Do not use destructive git operations unless explicitly requested.
