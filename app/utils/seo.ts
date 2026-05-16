@@ -35,7 +35,11 @@ export const SITE_ROUTES = [
 
 export function canonicalUrl(path: string): string {
   if (path === "/") return `${SITE_URL}/`;
-  return `${SITE_URL}${path}`;
+  // The static host serves directory-style URLs and 301-redirects the
+  // non-slash form, so canonical URLs must carry the trailing slash to
+  // match the URL Google actually indexes.
+  const normalized = path.endsWith("/") ? path : `${path}/`;
+  return `${SITE_URL}${normalized}`;
 }
 
 export function buildPageSeo({
@@ -102,7 +106,7 @@ export function siteGraph() {
           "@type": "SearchAction",
           target: {
             "@type": "EntryPoint",
-            urlTemplate: `${SITE_URL}/films?search={search_term_string}`,
+            urlTemplate: `${SITE_URL}/films/?search={search_term_string}`,
           },
           "query-input": "required name=search_term_string",
         },
