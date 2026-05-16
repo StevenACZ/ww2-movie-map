@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const siteUrl = "https://ww2.stevenacz.com";
+const homeUrl = `${siteUrl}/`;
 const ogImageUrl = `${siteUrl}/og-image.jpg`;
 
 const contentSecurityPolicy = [
@@ -49,9 +50,11 @@ export default defineNuxtConfig({
     xsl: false, // Disable XSL stylesheet to avoid Vue attribute conflicts in browser
   },
 
-  // Site URL for sitemap and SEO
+  // Site URL for sitemap and SEO. trailingSlash keeps generated sitemap
+  // URLs aligned with the directory-style URLs the host serves.
   site: {
     url: siteUrl,
+    trailingSlash: true,
   },
 
   app: {
@@ -96,7 +99,7 @@ export default defineNuxtConfig({
 
         // Open Graph / Facebook
         { property: "og:type", content: "website" },
-        { property: "og:url", content: siteUrl },
+        { property: "og:url", content: homeUrl },
         {
           property: "og:title",
           content: "WW2 Film Map - Interactive World War II Cinema Experience",
@@ -122,7 +125,7 @@ export default defineNuxtConfig({
 
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:url", content: siteUrl },
+        { name: "twitter:url", content: homeUrl },
         {
           name: "twitter:title",
           content: "WW2 Film Map - Interactive World War II Cinema Experience",
