@@ -59,10 +59,15 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from "vue-router";
 import { useFilmsFilter, sortOptions } from "../composables/useFilmsFilter";
 import type { Film } from "../../types";
 import filmsData from "../../data/films.json";
+import {
+  buildPageSeo,
+  canonicalUrl,
+  jsonLdScript,
+  SITE_URL,
+} from "~/utils/seo";
 
 // Import components
 import FilmSearchControls from "../components/films/FilmSearchControls.vue";
@@ -70,62 +75,76 @@ import FilmCard from "../components/films/FilmCard.vue";
 
 const router = useRouter();
 
-// SEO Configuration for Films Page
-useSeoMeta({
-  title: "WW2 Film Collection",
-  ogTitle: "World War II Film Collection - 30+ Iconic WW2 Movies",
-  description:
-    "Browse our curated collection of World War II films. Discover classics like Saving Private Ryan, Schindler's List, Dunkirk, and more. Filter by rating, year, or search by title.",
-  ogDescription:
-    "Curated collection of 30+ iconic World War II films. Discover classics like Saving Private Ryan, Schindler's List, and Dunkirk.",
-  ogUrl: "https://ww2.stevenacz.com/films",
-  ogImage: "https://ww2.stevenacz.com/og-image.jpg",
-  twitterCard: "summary_large_image",
-  twitterTitle: "WW2 Film Collection - 30+ Iconic Movies",
-  twitterDescription:
-    "Browse our curated collection of World War II films including Saving Private Ryan, Schindler's List, and more.",
-  twitterImage: "https://ww2.stevenacz.com/og-image.jpg",
-});
+const films = filmsData.films as Film[];
 
-// Canonical URL and Structured Data
+useSeoMeta(
+  buildPageSeo({
+    path: "/films",
+    title: "WW2 Film Collection",
+    ogTitle: `World War II Film Collection - ${films.length} Movies`,
+    description:
+      "Browse a curated collection of World War II films including Saving Private Ryan, Schindler's List, Dunkirk, Das Boot, and more. Search by title, year, rating, or location.",
+    ogDescription:
+      "Browse a curated collection of World War II films with ratings, locations, dates, and map links.",
+  }),
+);
+
 useHead({
-  link: [{ rel: "canonical", href: "https://ww2.stevenacz.com/films" }],
+  link: [{ rel: "canonical", href: canonicalUrl("/films") }],
   script: [
-    {
-      type: "application/ld+json",
-      innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        name: "World War II Film Collection",
-        description:
-          "Curated collection of the most impactful films depicting World War II events, battles, and human stories.",
-        url: "https://ww2.stevenacz.com/films",
-        isPartOf: {
-          "@type": "WebSite",
-          name: "WW2 Film Map",
-          url: "https://ww2.stevenacz.com",
-        },
-        about: {
-          "@type": "Thing",
-          name: "World War II",
-          sameAs: "https://en.wikipedia.org/wiki/World_War_II",
-        },
-        mainEntity: {
-          "@type": "ItemList",
-          name: "WW2 Films",
-          numberOfItems: filmsData.films.length,
-        },
-      }),
-    },
+    jsonLdScript({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${SITE_URL}/films#collection`,
+      name: "World War II Film Collection",
+      description:
+        "Curated collection of films depicting World War II events, battles, and human stories.",
+      url: canonicalUrl("/films"),
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: {
+        "@type": "Thing",
+        name: "World War II",
+        sameAs: "https://en.wikipedia.org/wiki/World_War_II",
+      },
+      mainEntity: {
+        "@type": "ItemList",
+        "@id": `${SITE_URL}/films#item-list`,
+        name: "WW2 Films",
+        numberOfItems: films.length,
+        itemListElement: films.map((film, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: `${canonicalUrl("/")}?filmId=${encodeURIComponent(film.id)}`,
+          item: {
+            "@type": "Movie",
+            name: film.title,
+            datePublished: String(film.year),
+            description: film.synopsis,
+            image: film.poster,
+            countryOfOrigin: film.country,
+            sameAs: [film.wikipediaUrl, film.imdbUrl].filter(Boolean),
+            contentLocation: film.locations.map((location) => ({
+              "@type": "Place",
+              name: location.name,
+              geo: {
+                "@type": "GeoCoordinates",
+                longitude: location.coordinates[0],
+                latitude: location.coordinates[1],
+              },
+            })),
+          },
+        })),
+      },
+    }),
   ],
 });
 
 // Use the films filter composable
 const { searchQuery, sortBy, filteredFilms, clearSearch } = useFilmsFilter({
-  films: filmsData.films as Film[],
+  films,
 });
 
-const totalFilms = filmsData.films.length;
+const totalFilms = films.length;
 
 // Navigation to map
 const viewOnMap = (filmId: string) => {

@@ -49,43 +49,51 @@ jobs:
             bun install --frozen-lockfile || bun install
           fi
 
-      - name: Format check (optional)
+      - name: Format check
         run: |
           if node -e "const s=require('./package.json').scripts||{}; process.exit(s['format:check'] ? 0 : 1)"; then
             if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
-              npm run format:check || echo "Format check failed, continuing deploy."
+              npm run format:check
             else
-              bun run format:check || echo "Format check failed, continuing deploy."
+              bun run format:check
             fi
           else
             echo "No format:check script found. Skipping."
           fi
 
-      - name: Lint (optional)
+      - name: Lint
         run: |
           if node -e "const s=require('./package.json').scripts||{}; process.exit(s.lint ? 0 : 1)"; then
             if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
-              npm run lint || echo "Lint failed, continuing deploy."
+              npm run lint
             else
-              bun run lint || echo "Lint failed, continuing deploy."
+              bun run lint
             fi
           else
             echo "No lint script found. Skipping."
           fi
 
-      - name: Typecheck (optional)
+      - name: Typecheck
         run: |
           if node -e "const s=require('./package.json').scripts||{}; process.exit(s.typecheck ? 0 : 1)"; then
             if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
-              npm run typecheck || echo "Typecheck failed, continuing deploy."
+              npm run typecheck
             else
-              bun run typecheck || echo "Typecheck failed, continuing deploy."
+              bun run typecheck
             fi
           else
             echo "No typecheck script found. Skipping."
           fi
 
-      - name: Tests (optional)
+      - name: Dependency audit
+        run: |
+          if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
+            npm audit --audit-level=high
+          else
+            bun audit
+          fi
+
+      - name: Tests
         run: |
           if node -e "const s=require('./package.json').scripts||{}; process.exit(s['test:run'] ? 0 : 1)"; then
             if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then

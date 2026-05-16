@@ -287,62 +287,55 @@
 </template>
 
 <script setup lang="ts">
-// SEO Configuration for About Page
-useSeoMeta({
-  title: "About",
-  ogTitle: "About WW2 Film Map - Exploring World War II Through Cinema",
-  description:
-    "Learn about WW2 Film Map, an interactive project exploring World War II through cinema. Discover our mission to educate about the largest conflict in human history through film.",
-  ogDescription:
-    "Discover the mission behind WW2 Film Map - an interactive project exploring World War II history through iconic cinema.",
-  ogUrl: "https://ww2.stevenacz.com/about",
-  ogImage: "https://ww2.stevenacz.com/og-image.jpg",
-  twitterCard: "summary_large_image",
-  twitterTitle: "About WW2 Film Map",
-  twitterDescription:
-    "Learn about our mission to explore World War II history through cinema.",
-  twitterImage: "https://ww2.stevenacz.com/og-image.jpg",
-});
+import {
+  buildPageSeo,
+  canonicalUrl,
+  jsonLdScript,
+  SITE_URL,
+} from "~/utils/seo";
 
-// Canonical URL and Structured Data
+useSeoMeta(
+  buildPageSeo({
+    path: "/about",
+    title: "About",
+    ogTitle: "About WW2 Film Map - World War II Through Cinema",
+    description:
+      "Learn about WW2 Film Map, a free interactive project that connects World War II history, film locations, and a curated cinema timeline.",
+    ogDescription:
+      "Learn about the mission behind WW2 Film Map and the public cinema-history project by StevenACZ.",
+  }),
+);
+
 useHead({
-  link: [{ rel: "canonical", href: "https://ww2.stevenacz.com/about" }],
+  link: [{ rel: "canonical", href: canonicalUrl("/about") }],
   script: [
-    {
-      type: "application/ld+json",
-      innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "AboutPage",
-        name: "About WW2 Film Map",
+    jsonLdScript({
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "@id": `${SITE_URL}/about#page`,
+      name: "About WW2 Film Map",
+      description:
+        "An interactive project exploring World War II history through cinema, featuring a map, film collection, and timeline.",
+      url: canonicalUrl("/about"),
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      mainEntity: {
+        "@type": "WebApplication",
+        "@id": `${SITE_URL}/#webapp`,
+        name: "WW2 Film Map",
+        applicationCategory: "EducationalApplication",
+        operatingSystem: "Web Browser",
+        isAccessibleForFree: true,
         description:
-          "An interactive project exploring World War II history through cinema, featuring an interactive map and timeline of WW2 films.",
-        url: "https://ww2.stevenacz.com/about",
-        isPartOf: {
-          "@type": "WebSite",
-          name: "WW2 Film Map",
-          url: "https://ww2.stevenacz.com",
+          "Interactive web application for exploring World War II films, locations, and historical events.",
+        author: { "@id": `${SITE_URL}/#person` },
+        creator: { "@id": `${SITE_URL}/#person` },
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
         },
-        mainEntity: {
-          "@type": "WebApplication",
-          name: "WW2 Film Map",
-          applicationCategory: "Education",
-          operatingSystem: "Web Browser",
-          description:
-            "Interactive web application for exploring World War II films and history",
-          author: {
-            "@type": "Person",
-            name: "StevenACZ",
-            url: "https://stevenacz.com",
-            sameAs: ["https://stevenacz.com", "https://github.com/StevenACZ"],
-          },
-          offers: {
-            "@type": "Offer",
-            price: "0",
-            priceCurrency: "USD",
-          },
-        },
-      }),
-    },
+      },
+    }),
   ],
 });
 </script>

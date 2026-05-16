@@ -2,7 +2,12 @@
 
 ## Unreleased
 
-- Updated Nuxt/Vue/Nuxt UI/Sass dependencies to the current 2026 line.
+- Improved page-level SEO metadata, canonical URLs, structured data, robots, manifests, and PWA icons.
+- Hardened external content handling for trailers, map marker images, CSP, `target="_blank"` links, and audit coverage.
+- Removed unused direct dependencies and pinned the patched `devalue` release through package overrides.
+- Tightened the deployment workflow so available quality checks fail the deploy when they fail.
+- Updated README and agent maintenance guidance for the current Nuxt/Vue static deployment flow.
+- Updated Nuxt/Vue/Sass dependencies to the current 2026 line.
 - Kept `AGENTS.md` as the public maintenance guide and `CLAUDE.md` as a pointer.
 - Ignored local `docs/` notes.
 

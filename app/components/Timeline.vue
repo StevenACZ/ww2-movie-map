@@ -50,7 +50,9 @@
         class="year-marker"
       >
         <div class="year-number">{{ yearData.year }}</div>
-        <div class="year-event" v-html="yearData.event"></div>
+        <div class="year-event">
+          <span v-for="line in yearData.event" :key="line">{{ line }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -68,25 +70,25 @@ const isExpanded = ref(false);
 const isMobile = ref(false);
 
 const yearMarkers = [
-  { year: 1936, event: "Spanish<br>Civil War" },
-  { year: 1937, event: "" },
-  { year: 1938, event: "Anschluss" },
-  { year: 1939, event: "War Begins" },
-  { year: 1940, event: "" },
-  { year: 1941, event: "Pearl Harbor" },
-  { year: 1942, event: "Midway" },
-  { year: 1943, event: "" },
-  { year: 1944, event: "D-Day" },
-  { year: 1945, event: "War Ends" },
+  { year: 1936, event: ["Spanish", "Civil War"] },
+  { year: 1937, event: [] },
+  { year: 1938, event: ["Anschluss"] },
+  { year: 1939, event: ["War Begins"] },
+  { year: 1940, event: [] },
+  { year: 1941, event: ["Pearl Harbor"] },
+  { year: 1942, event: ["Midway"] },
+  { year: 1943, event: [] },
+  { year: 1944, event: ["D-Day"] },
+  { year: 1945, event: ["War Ends"] },
 ];
 
 // Simplified year markers for mobile (only key years)
 const mobileYearMarkers = [
-  { year: 1936, event: "" },
-  { year: 1939, event: "War<br>Begins" },
-  { year: 1941, event: "Pearl<br>Harbor" },
-  { year: 1944, event: "D-Day" },
-  { year: 1945, event: "War<br>Ends" },
+  { year: 1936, event: [] },
+  { year: 1939, event: ["War", "Begins"] },
+  { year: 1941, event: ["Pearl", "Harbor"] },
+  { year: 1944, event: ["D-Day"] },
+  { year: 1945, event: ["War", "Ends"] },
 ];
 
 // Use simplified markers on mobile
@@ -339,6 +341,10 @@ watch([startYear, endYear], () => {
     font-style: italic;
     line-height: 1.2;
     white-space: normal;
+
+    span {
+      display: block;
+    }
 
     @include mobile {
       font-size: 9px;

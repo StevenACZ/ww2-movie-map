@@ -5,6 +5,7 @@ export interface HistoricalEvent {
   id: string;
   date: string;
   title: string;
+  description: string;
   icon?: string;
 }
 

@@ -1,0 +1,130 @@
+export const SITE_URL = "https://ww2.stevenacz.com";
+export const SITE_NAME = "WW2 Film Map";
+export const SITE_TITLE =
+  "WW2 Film Map - Interactive World War II Cinema Experience";
+export const DEFAULT_DESCRIPTION =
+  "Explore World War II through cinema with an interactive map, curated film collection, and historical timeline covering key events from 1936 to 1945.";
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+export const DEFAULT_OG_IMAGE_WIDTH = 4304;
+export const DEFAULT_OG_IMAGE_HEIGHT = 2558;
+export const DEFAULT_OG_IMAGE_ALT =
+  "WW2 Film Map showing World War II cinema locations and historical context";
+
+export const SITE_ROUTES = [
+  {
+    path: "/",
+    name: "Map",
+    description: "Interactive map of World War II films and locations.",
+  },
+  {
+    path: "/films",
+    name: "Films",
+    description: "Curated World War II film collection.",
+  },
+  {
+    path: "/timeline",
+    name: "Timeline",
+    description: "Interactive World War II timeline with films and events.",
+  },
+  {
+    path: "/about",
+    name: "About",
+    description: "Project purpose, credits, and source links.",
+  },
+] as const;
+
+export function canonicalUrl(path: string): string {
+  if (path === "/") return `${SITE_URL}/`;
+  return `${SITE_URL}${path}`;
+}
+
+export function buildPageSeo({
+  path,
+  title,
+  description,
+  ogTitle,
+  ogDescription,
+  imageAlt = DEFAULT_OG_IMAGE_ALT,
+}: {
+  path: string;
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  imageAlt?: string;
+}) {
+  const url = canonicalUrl(path);
+
+  return {
+    title,
+    description,
+    ogType: "website",
+    ogTitle: ogTitle ?? title,
+    ogDescription: ogDescription ?? description,
+    ogUrl: url,
+    ogSiteName: SITE_NAME,
+    ogLocale: "en_US",
+    ogImage: DEFAULT_OG_IMAGE,
+    ogImageAlt: imageAlt,
+    ogImageWidth: DEFAULT_OG_IMAGE_WIDTH,
+    ogImageHeight: DEFAULT_OG_IMAGE_HEIGHT,
+    twitterCard: "summary_large_image",
+    twitterTitle: ogTitle ?? title,
+    twitterDescription: ogDescription ?? description,
+    twitterImage: DEFAULT_OG_IMAGE,
+    twitterImageAlt: imageAlt,
+    twitterCreator: "@StevenACZ",
+  } as const;
+}
+
+export function jsonLdScript(graph: unknown) {
+  return {
+    type: "application/ld+json",
+    innerHTML: JSON.stringify(graph),
+  };
+}
+
+export function siteGraph() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: `${SITE_URL}/`,
+        name: SITE_NAME,
+        alternateName: "World War II Film Map",
+        description: DEFAULT_DESCRIPTION,
+        inLanguage: "en",
+        publisher: { "@id": `${SITE_URL}/#person` },
+        creator: { "@id": `${SITE_URL}/#person` },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: `${SITE_URL}/films?search={search_term_string}`,
+          },
+          "query-input": "required name=search_term_string",
+        },
+      },
+      {
+        "@type": "Person",
+        "@id": `${SITE_URL}/#person`,
+        name: "Steven Coaila Zaa",
+        alternateName: "StevenACZ",
+        url: "https://stevenacz.com",
+        sameAs: ["https://stevenacz.com", "https://github.com/StevenACZ"],
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${SITE_URL}/#breadcrumbs`,
+        itemListElement: SITE_ROUTES.map((route, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: route.name,
+          item: canonicalUrl(route.path),
+        })),
+      },
+    ],
+  };
+}

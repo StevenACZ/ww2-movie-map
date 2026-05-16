@@ -10,8 +10,13 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import WelcomeModal from "~/components/WelcomeModal.vue";
+import { jsonLdScript, siteGraph } from "~/utils/seo";
 
 const showWelcome = ref(false);
+
+useHead({
+  script: [jsonLdScript(siteGraph())],
+});
 
 onMounted(() => {
   const seen = localStorage.getItem("welcome_seen");
