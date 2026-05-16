@@ -155,6 +155,12 @@ import type {
 // Import JSON data
 import filmsData from "../../data/films.json";
 import eventsData from "../../data/historical-events.json";
+import {
+  buildPageSeo,
+  canonicalUrl,
+  jsonLdScript,
+  SITE_URL,
+} from "~/utils/seo";
 
 // Import components
 import TimelineEventCard from "../components/timeline/TimelineEventCard.vue";
@@ -163,73 +169,8 @@ import TimelineMobileCard from "../components/timeline/TimelineMobileCard.vue";
 import TimelineMobileModal from "../components/timeline/TimelineMobileModal.vue";
 import TimelineNav from "../components/timeline/TimelineNav.vue";
 
-// SEO Configuration for Timeline Page
-useSeoMeta({
-  title: "WW2 Interactive Timeline",
-  ogTitle: "World War II Timeline - Historical Events & Films (1936-1945)",
-  description:
-    "Navigate through World War II with our interactive timeline. Explore key historical events from 1936-1945 and discover the films that bring these stories to life.",
-  ogDescription:
-    "Interactive WW2 timeline showing key historical events and related films from 1936-1945. Explore D-Day, Pearl Harbor, and more.",
-  ogUrl: "https://ww2.stevenacz.com/timeline",
-  ogImage: "https://ww2.stevenacz.com/og-image.jpg",
-  twitterCard: "summary_large_image",
-  twitterTitle: "WW2 Interactive Timeline - Events & Films",
-  twitterDescription:
-    "Explore World War II events and related films in an interactive timeline from 1936-1945.",
-  twitterImage: "https://ww2.stevenacz.com/og-image.jpg",
-});
-
-// Canonical URL and Structured Data
-useHead({
-  link: [{ rel: "canonical", href: "https://ww2.stevenacz.com/timeline" }],
-  script: [
-    {
-      type: "application/ld+json",
-      innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: "World War II Interactive Timeline",
-        description:
-          "Interactive timeline exploring key events of World War II (1936-1945) and related cinema.",
-        url: "https://ww2.stevenacz.com/timeline",
-        isPartOf: {
-          "@type": "WebSite",
-          name: "WW2 Film Map",
-          url: "https://ww2.stevenacz.com",
-        },
-        about: {
-          "@type": "HistoricalEvent",
-          name: "World War II",
-          startDate: "1939-09-01",
-          endDate: "1945-09-02",
-          description:
-            "The Second World War, a global conflict from 1939 to 1945",
-          sameAs: "https://en.wikipedia.org/wiki/World_War_II",
-        },
-        mainEntity: {
-          "@type": "ItemList",
-          name: "WW2 Timeline Events",
-          description: "Chronological list of significant World War II events",
-          itemListOrder: "https://schema.org/ItemListOrderAscending",
-        },
-      }),
-    },
-  ],
-});
-
-// State
-const events = ref<HistoricalEvent[]>([]);
-const films = ref<Film[]>([]);
-const selectedFilm = ref<PositionedFilm | null>(null);
-const mobileSelectedFilm = ref<PositionedFilm | null>(null);
-const currentPeriodIndex = ref(2); // Start with last period (1942-1945)
-const isMobile = ref(false);
-
-// Trailer Modal State
-const isTrailerOpen = ref(false);
-const activeTrailerUrl = ref("");
-const activeFilmTitle = ref("");
+const allEvents = eventsData.events as HistoricalEvent[];
+const allFilms = filmsData.films as unknown as Film[];
 
 // Films to display on timeline (selected IDs from main JSON)
 const timelineFilmIds = [
@@ -244,6 +185,74 @@ const timelineFilmIds = [
   "downfall-2004",
   "hacksaw-ridge-2016",
 ];
+
+useSeoMeta(
+  buildPageSeo({
+    path: "/timeline",
+    title: "WW2 Interactive Timeline",
+    ogTitle: "World War II Timeline - Historical Events & Films",
+    description:
+      "Navigate a World War II timeline from 1936 to 1945. Explore key historical events and the films that portray them, from the Spanish Civil War to the end of the Pacific War.",
+    ogDescription:
+      "Explore key World War II events and related films in an interactive timeline from 1936 to 1945.",
+  }),
+);
+
+useHead({
+  link: [{ rel: "canonical", href: canonicalUrl("/timeline") }],
+  script: [
+    jsonLdScript({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/timeline#page`,
+      name: "World War II Interactive Timeline",
+      description:
+        "Interactive timeline exploring key events of World War II and related cinema from 1936 to 1945.",
+      url: canonicalUrl("/timeline"),
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: {
+        "@type": "HistoricalEvent",
+        name: "World War II",
+        startDate: "1939-09-01",
+        endDate: "1945-09-02",
+        description:
+          "The Second World War, a global conflict from 1939 to 1945.",
+        sameAs: "https://en.wikipedia.org/wiki/World_War_II",
+      },
+      mainEntity: {
+        "@type": "ItemList",
+        name: "WW2 Timeline Events",
+        itemListOrder: "https://schema.org/ItemListOrderAscending",
+        numberOfItems: allEvents.length,
+        itemListElement: allEvents.map((event, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "CreativeWork",
+            name: event.title,
+            description: event.description,
+            temporalCoverage: event.date,
+          },
+        })),
+      },
+    }),
+  ],
+});
+
+// State
+const events = ref<HistoricalEvent[]>(allEvents);
+const films = ref<Film[]>(
+  allFilms.filter((film) => timelineFilmIds.includes(film.id)),
+);
+const selectedFilm = ref<PositionedFilm | null>(null);
+const mobileSelectedFilm = ref<PositionedFilm | null>(null);
+const currentPeriodIndex = ref(2); // Start with last period (1942-1945)
+const isMobile = ref(false);
+
+// Trailer Modal State
+const isTrailerOpen = ref(false);
+const activeTrailerUrl = ref("");
+const activeFilmTitle = ref("");
 
 // Periods Configuration - 3 years per slide
 const periods: TimelinePeriod[] = [
@@ -282,12 +291,6 @@ const checkMobile = () => {
 onMounted(() => {
   checkMobile();
   window.addEventListener("resize", checkMobile);
-
-  // Use imported data directly
-  events.value = eventsData.events as HistoricalEvent[];
-  films.value = (filmsData.films as unknown as Film[]).filter((film) =>
-    timelineFilmIds.includes(film.id),
-  );
 
   // Click outside handler to close modal
   document.addEventListener("click", handleClickOutside);
@@ -347,7 +350,7 @@ const toggleFilmPopup = (film: PositionedFilm) => {
 // Trailer handling - Desktop shows modal, Mobile redirects to YouTube
 const openTrailer = (film: PositionedFilm) => {
   if (isMobile.value) {
-    window.open(film.trailerUrl, "_blank");
+    window.open(film.trailerUrl, "_blank", "noopener,noreferrer");
   } else {
     activeTrailerUrl.value = film.trailerUrl || "";
     activeFilmTitle.value = `${film.title} (${film.year})`;

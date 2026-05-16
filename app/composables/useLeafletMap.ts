@@ -8,6 +8,24 @@ export const MAP_ZOOM = 4;
 export const MOBILE_ZOOM = 3;
 export const PAN_SPEED = 10;
 
+const allowedPosterHosts = new Set([
+  "upload.wikimedia.org",
+  "image.tmdb.org",
+  "m.media-amazon.com",
+  "timespacewarps.files.wordpress.com",
+]);
+
+const getSafePosterUrl = (rawUrl: string): string => {
+  try {
+    const url = new URL(rawUrl);
+    if (url.protocol !== "https:") return "";
+    if (!allowedPosterHosts.has(url.hostname)) return "";
+    return url.href.replace(/'/g, "%27");
+  } catch {
+    return "";
+  }
+};
+
 // Check if mobile
 export const isMobile = (): boolean => {
   return typeof window !== "undefined" && window.innerWidth <= 768;
@@ -107,10 +125,11 @@ export const useLeafletMap = ({
         // Offset the anchor to position poster to the right of the location
         // This prevents the poster from covering city/location names on the map
         const anchorOffsetX = isMobile() ? markerWidth + 5 : markerWidth + 10;
+        const posterUrl = getSafePosterUrl(film.poster);
 
         const icon = L.divIcon({
           className: "custom-film-marker",
-          html: `<div class="film-marker-content" style="background-image: url('${film.poster}'); box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);"></div>`,
+          html: `<div class="film-marker-content" style="background-image: url('${posterUrl}'); box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);"></div>`,
           iconSize: [markerWidth, markerHeight],
           iconAnchor: [anchorOffsetX, markerHeight],
           popupAnchor: [0, -markerHeight],

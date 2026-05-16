@@ -1,97 +1,88 @@
-# 🎬 WW2 Film Map
+# WW2 Film Map
 
 **Explore World War II through the lens of cinema.**
 
-An interactive experience that maps iconic WW2 films to their historical locations and timelines. Discover how cinema has captured the most significant events of 1936-1945.
+WW2 Film Map is a public Nuxt application that connects World War II films with the places, years, and historical events they depict. The site is built as a fast, crawlable static experience for maps, film discovery, and timeline exploration.
 
 ![Project Preview](public/og-image.jpg)
 
-## ✨ Features
+## Production
 
-- 🗺️ **Interactive Map**: Navigate through a global map of film locations and historical battlefields.
-- ⏳ **Dynamic Timeline**: Visualize the parallel progression of the war and the films that depict it.
-- 🎥 **Curated Film Collection**: A detailed library of masterpieces like _Saving Private Ryan_, _Schindler's List_, and _Dunkirk_.
-- 📱 **Fully Responsive**: Seamless experience across desktop, tablet, and mobile devices.
-- 🔍 **SEO Optimized**: Built with modern web standards for maximum visibility.
+- URL: `https://ww2.stevenacz.com`
+- Repository: `https://github.com/StevenACZ/ww2-movie-map`
+
+## Features
+
+- Interactive Leaflet map with film locations and historical context.
+- Curated film collection with search, sorting, metadata, and trailers.
+- World War II timeline from 1936 to 1945 with linked films.
+- Responsive Nuxt/Vue interface for desktop and mobile.
+- Page-level SEO metadata, canonical URLs, sitemap, manifests, and structured data.
 
 ## SEO & Performance
 
-- SSR-enabled Nuxt app with crawlable route output.
-- Structured data with `application/ld+json` and schema graph coverage.
-- Sitemap generation enabled via `@nuxtjs/sitemap`.
-- Strict Content Security Policy tuned for real image/map/trailer sources.
-- Production build optimization through Nuxt/Nitro prerender + static asset compression.
+- Static generation through `bun run generate`.
+- Shared SEO helpers in `app/utils/seo.ts`.
+- Global and page-level JSON-LD rendered as `application/ld+json`.
+- `@nuxtjs/sitemap` publishes `sitemap.xml` for the production domain.
+- `robots.txt`, `manifest.json`, and `site.webmanifest` are committed under `public/`.
+- Content Security Policy is configured in `nuxt.config.ts` for the real image, map, and trailer sources used by the app.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-Built with the latest web technologies for performance and scalability.
+- Nuxt 4
+- Vue 3
+- TypeScript
+- SCSS
+- Leaflet
+- Bun
 
-![Nuxt](https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxt.js&logoColor=00DC82)
-![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
-![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=Leaflet&logoColor=white)
-![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Bun](https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white)
-
-## 🚀 Getting Started
-
-Follow these simple steps to run the project locally.
+## Getting Started
 
 ### Prerequisites
 
 - [Bun](https://bun.sh/) (required)
 
-### Installation
+### Local Development
 
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/StevenACZ/ww2-movie-map.git
-   cd ww2-movie-map
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   bun install
-   ```
-
-3. **Start the development server**
-   ```bash
-   bun run dev
-   ```
+```bash
+bun install
+bun run dev
+```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-## 📦 Build
-
-To create a production build:
+## Commands
 
 ```bash
+bun run format
+bun run format:check
+bun run typecheck
 bun run build
+bun run generate
+bun audit
 ```
 
-The build output will be in the `dist/` folder:
+## Deployment
 
-- `dist/public/` - Static files for deployment
-- `dist/server/` - Node.js server (for SSR hosting)
+Production deploys are handled by GitHub Actions on pushes to `main`.
 
-### Preview production build
+The deploy workflow:
 
-```bash
-bun run preview
-```
+- installs dependencies with Bun,
+- runs format/typecheck/audit checks when available,
+- generates the static site,
+- deploys the generated public output to the configured VPS path with `rsync`.
 
-## 🌐 Deployment
+## Project Structure
 
-For static hosting (Cloudflare Pages, Netlify, Vercel), deploy the contents of `dist/public/`.
+- `app/pages/`: home, film collection, timeline, and about pages.
+- `app/components/`: map, film cards, trailer modal, timeline, and shared UI.
+- `app/composables/`: Leaflet map and timeline logic.
+- `app/utils/seo.ts`: shared SEO, canonical URL, and JSON-LD helpers.
+- `data/`: public film and historical event data.
+- `public/`: icons, manifests, robots, security policy contact, and social image.
 
-For SSR hosting, use the full `dist/` folder with Node.js.
-
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
-
----
-
-_Created by [StevenACZ](https://github.com/StevenACZ)_

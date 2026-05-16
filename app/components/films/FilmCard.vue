@@ -11,24 +11,17 @@
         :src="film.poster"
         :alt="`${film.title} movie poster`"
         class="poster-image"
-        loading="lazy"
+        :loading="index < 3 ? 'eager' : 'lazy'"
+        :fetchpriority="index < 3 ? 'high' : 'auto'"
+        decoding="async"
+        width="300"
+        height="450"
         itemprop="image"
       />
       <div class="poster-overlay">
         <div class="rating-badge">
           <span class="star" aria-hidden="true">⭐</span>
-          <span
-            class="rating-value"
-            itemprop="aggregateRating"
-            itemscope
-            itemtype="https://schema.org/AggregateRating"
-          >
-            <meta itemprop="ratingValue" :content="String(film.imdbRating)" />
-            <meta itemprop="bestRating" content="10" />
-            <meta itemprop="worstRating" content="1" />
-            <meta itemprop="ratingCount" content="1000" />
-            {{ film.imdbRating }}
-          </span>
+          <span class="rating-value">{{ film.imdbRating }}</span>
         </div>
         <div class="year-badge">
           <time itemprop="datePublished" :datetime="String(film.year)">
@@ -168,6 +161,8 @@ defineEmits<{
 }>();
 
 const wikipediaUrl = computed(() => {
+  if (props.film.wikipediaUrl) return props.film.wikipediaUrl;
+
   const formattedTitle = props.film.title.replace(/ /g, "_");
   return `https://en.wikipedia.org/wiki/${formattedTitle}`;
 });

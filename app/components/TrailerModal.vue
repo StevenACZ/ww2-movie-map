@@ -78,32 +78,39 @@ const emit = defineEmits<{
   close: [];
 }>();
 
-// Convert YouTube URL to embed URL
+const youtubeHosts = new Set([
+  "www.youtube.com",
+  "youtube.com",
+  "m.youtube.com",
+  "youtu.be",
+  "www.youtube-nocookie.com",
+]);
+
+const extractYouTubeVideoId = (rawUrl: string): string => {
+  try {
+    const url = new URL(rawUrl);
+    if (!youtubeHosts.has(url.hostname)) return "";
+
+    if (url.hostname === "youtu.be") {
+      return url.pathname.split("/").filter(Boolean)[0] ?? "";
+    }
+
+    if (url.pathname.startsWith("/embed/")) {
+      return url.pathname.split("/").filter(Boolean)[1] ?? "";
+    }
+
+    return url.searchParams.get("v") ?? "";
+  } catch {
+    return "";
+  }
+};
+
+// Convert YouTube URL to privacy-enhanced embed URL.
 const embedUrl = computed(() => {
-  if (!props.trailerUrl) return "";
-
-  // Handle different YouTube URL formats
-  const url = props.trailerUrl;
-
-  // Format: https://www.youtube.com/watch?v=VIDEO_ID
-  let videoId = "";
-
-  if (url.includes("watch?v=")) {
-    const urlParams = new URL(url).searchParams;
-    videoId = urlParams.get("v") || "";
-  }
-  // Format: https://youtu.be/VIDEO_ID
-  else if (url.includes("youtu.be/")) {
-    videoId = url.split("youtu.be/")[1]?.split("?")[0] || "";
-  }
-  // Format: https://www.youtube.com/embed/VIDEO_ID
-  else if (url.includes("/embed/")) {
-    return url; // Already in embed format
-  }
+  const videoId = extractYouTubeVideoId(props.trailerUrl);
 
   if (videoId) {
-    // Add autoplay and other parameters for cinematic experience
-    return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+    return `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
   }
 
   return "";

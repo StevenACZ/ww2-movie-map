@@ -163,7 +163,6 @@
 
 <script setup lang="ts">
 import { ref, computed, watch, onMounted, onUnmounted } from "vue";
-import { useRoute } from "vue-router";
 
 const route = useRoute();
 const currentRoute = computed(() => route.path);

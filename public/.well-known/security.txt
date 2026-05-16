@@ -1,0 +1,3 @@
+Contact: https://github.com/StevenACZ/ww2-movie-map/issues
+Preferred-Languages: en, es
+Canonical: https://ww2.stevenacz.com/.well-known/security.txt

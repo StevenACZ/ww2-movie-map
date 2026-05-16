@@ -18,8 +18,11 @@ const contentSecurityPolicy = [
   ].join(" "),
   "font-src 'self' data:",
   "connect-src 'self' https://cloudflareinsights.com",
-  "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com",
+  "frame-src 'self' https://www.youtube-nocookie.com",
   "object-src 'none'",
+  "media-src 'none'",
+  "worker-src 'self' blob:",
+  "manifest-src 'self'",
   "base-uri 'self'",
   "form-action 'self'",
   "frame-ancestors 'none'",
@@ -28,7 +31,7 @@ const contentSecurityPolicy = [
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   modules: ["@nuxtjs/sitemap"],
 
@@ -59,21 +62,19 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Explore World War II through cinema with our interactive map and timeline. Discover iconic WW2 films, filming locations, and historical events from 1939-1945.",
+            "Explore World War II through cinema with an interactive map, curated film collection, and historical timeline covering key events from 1936 to 1945.",
         },
         // SEO Meta Tags
-        { name: "author", content: "StevenACZ" },
+        { name: "author", content: "Steven Coaila Zaa" },
+        { name: "creator", content: "StevenACZ" },
+        { name: "publisher", content: "StevenACZ" },
+        { name: "referrer", content: "strict-origin-when-cross-origin" },
         {
           name: "robots",
           content:
             "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
         },
         { name: "googlebot", content: "index, follow" },
-        {
-          name: "keywords",
-          content:
-            "WW2 films, World War 2 movies, WWII cinema, war movies, historical films, Saving Private Ryan, Schindlers List, Dunkirk, war movie map, WW2 timeline, Second World War films",
-        },
         { name: "theme-color", content: "#14191e" },
         { name: "color-scheme", content: "dark" },
         { name: "format-detection", content: "telephone=no" },
@@ -88,7 +89,7 @@ export default defineNuxtConfig({
         {
           property: "og:description",
           content:
-            "Explore World War II through cinema with our interactive map and timeline. Discover iconic WW2 films, filming locations, and historical events.",
+            "Explore World War II through cinema with an interactive map, curated film collection, and historical timeline.",
         },
         {
           property: "og:image",
@@ -99,7 +100,7 @@ export default defineNuxtConfig({
         {
           property: "og:image:alt",
           content:
-            "WW2 Film Map - Interactive map showing World War II films and their locations",
+            "WW2 Film Map showing World War II cinema locations and historical context",
         },
         { property: "og:site_name", content: "WW2 Film Map" },
         { property: "og:locale", content: "en_US" },
@@ -114,7 +115,7 @@ export default defineNuxtConfig({
         {
           name: "twitter:description",
           content:
-            "Explore World War II through cinema with our interactive map and timeline. Discover iconic WW2 films and their filming locations.",
+            "Explore World War II through cinema with an interactive map, curated film collection, and historical timeline.",
         },
         {
           name: "twitter:image",
@@ -122,7 +123,8 @@ export default defineNuxtConfig({
         },
         {
           name: "twitter:image:alt",
-          content: "WW2 Film Map - Interactive map showing World War II films",
+          content:
+            "WW2 Film Map showing World War II cinema locations and historical context",
         },
         { name: "twitter:creator", content: "@StevenACZ" },
 
@@ -158,135 +160,28 @@ export default defineNuxtConfig({
         },
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "manifest", href: "/manifest.json" },
-        { rel: "canonical", href: siteUrl },
+        { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
         // Preconnect for performance
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "preconnect",
-          href: "https://fonts.gstatic.com",
+          href: "https://upload.wikimedia.org",
+          crossorigin: "",
+        },
+        {
+          rel: "preconnect",
+          href: "https://image.tmdb.org",
+          crossorigin: "",
+        },
+        {
+          rel: "preconnect",
+          href: "https://m.media-amazon.com",
           crossorigin: "",
         },
         // DNS prefetch for external resources
-        { rel: "dns-prefetch", href: "https://upload.wikimedia.org" },
-      ],
-      script: [
-        // Structured Data - WebSite Schema
-        {
-          type: "application/ld+json",
-          innerHTML: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "WebSite",
-                "@id": `${siteUrl}/#website`,
-                name: "WW2 Film Map",
-                alternateName: "World War 2 Film Map",
-                url: siteUrl,
-                description:
-                  "Interactive map and timeline exploring World War II through cinema. Discover iconic WW2 films, filming locations, and historical events from 1939-1945.",
-                inLanguage: "en",
-                author: {
-                  "@id": `${siteUrl}/#person`,
-                },
-                publisher: {
-                  "@id": `${siteUrl}/#person`,
-                },
-                potentialAction: {
-                  "@type": "SearchAction",
-                  target: {
-                    "@type": "EntryPoint",
-                    urlTemplate: `${siteUrl}/films?search={search_term_string}`,
-                  },
-                  "query-input": "required name=search_term_string",
-                },
-              },
-              {
-                "@type": "Person",
-                "@id": `${siteUrl}/#person`,
-                name: "StevenACZ",
-                url: "https://stevenacz.com",
-                sameAs: [
-                  "https://stevenacz.com",
-                  "https://github.com/StevenACZ",
-                ],
-              },
-              {
-                "@type": "BreadcrumbList",
-                "@id": `${siteUrl}/#breadcrumbs`,
-                itemListElement: [
-                  {
-                    "@type": "ListItem",
-                    position: 1,
-                    name: "Map",
-                    item: siteUrl,
-                  },
-                  {
-                    "@type": "ListItem",
-                    position: 2,
-                    name: "Films",
-                    item: `${siteUrl}/films`,
-                  },
-                  {
-                    "@type": "ListItem",
-                    position: 3,
-                    name: "Timeline",
-                    item: `${siteUrl}/timeline`,
-                  },
-                  {
-                    "@type": "ListItem",
-                    position: 4,
-                    name: "About",
-                    item: `${siteUrl}/about`,
-                  },
-                ],
-              },
-              {
-                "@type": "ItemList",
-                "@id": `${siteUrl}/films#item-list`,
-                name: "World War II Films Collection",
-                description:
-                  "Curated collection of the most impactful films depicting World War II",
-                url: `${siteUrl}/films`,
-                numberOfItems: 30,
-                itemListElement: [
-                  {
-                    "@type": "ListItem",
-                    position: 1,
-                    item: {
-                      "@type": "Movie",
-                      name: "Saving Private Ryan",
-                      datePublished: "1998",
-                      director: { "@type": "Person", name: "Steven Spielberg" },
-                    },
-                  },
-                  {
-                    "@type": "ListItem",
-                    position: 2,
-                    item: {
-                      "@type": "Movie",
-                      name: "Schindler's List",
-                      datePublished: "1993",
-                      director: { "@type": "Person", name: "Steven Spielberg" },
-                    },
-                  },
-                  {
-                    "@type": "ListItem",
-                    position: 3,
-                    item: {
-                      "@type": "Movie",
-                      name: "Dunkirk",
-                      datePublished: "2017",
-                      director: {
-                        "@type": "Person",
-                        name: "Christopher Nolan",
-                      },
-                    },
-                  },
-                ],
-              },
-            ],
-          }),
-        },
+        { rel: "dns-prefetch", href: "https://static.cloudflareinsights.com" },
+        { rel: "dns-prefetch", href: "https://cloudflareinsights.com" },
+        { rel: "dns-prefetch", href: "https://www.youtube-nocookie.com" },
+        { rel: "dns-prefetch", href: "https://a.basemaps.cartocdn.com" },
       ],
     },
   },

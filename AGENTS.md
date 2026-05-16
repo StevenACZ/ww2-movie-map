@@ -18,7 +18,7 @@ Public Nuxt app for WW2 Movie Map. Keep it production-safe, historically focused
 | ------- | ---------------------------------------------------------------------- |
 | URL     | `https://ww2.stevenacz.com`                                            |
 | Repo    | `https://github.com/StevenACZ/ww2-movie-map`                           |
-| Stack   | Nuxt 4, Vue 3, TypeScript, SCSS, Leaflet, `@nuxtjs/sitemap`            |
+| Stack   | Nuxt 4, Vue 3, TypeScript, SCSS, Leaflet, Bun, `@nuxtjs/sitemap`       |
 | Purpose | Interactive map, film collection, and timeline for World War II cinema |
 
 ## Structure
@@ -26,11 +26,12 @@ Public Nuxt app for WW2 Movie Map. Keep it production-safe, historically focused
 - `app/pages/`: home, films, timeline, and about pages.
 - `app/components/`: map, film, trailer, timeline, and shared UI.
 - `app/composables/`: filtering, Leaflet map, and timeline logic.
+- `app/utils/seo.ts`: canonical URL, page SEO, and JSON-LD helpers.
 - `data/films.json`: canonical film data.
 - `data/historical-events.json`: canonical timeline events.
 - `types/`: shared TypeScript types.
-- `public/`: icons, manifest files, OG image, robots.
-- `nuxt.config.ts`: SEO, CSP, sitemap, and global metadata.
+- `public/`: icons, manifest files, OG image, robots, and security policy contact.
+- `nuxt.config.ts`: CSP, sitemap, app head defaults, and build/runtime configuration.
 
 ## Commands
 
@@ -61,12 +62,19 @@ Film data lives in `data/films.json` and must match `types/index.ts`. Locations 
 
 ## SEO and Structured Data
 
-- `nuxt.config.ts` is the source of truth for global metadata, site URL, CSP, manifest links, and the shared JSON-LD graph.
-- Page components use `useSeoMeta()` and `useHead()` for page-specific title, description, canonical URL, and Open Graph details.
-- Keep structured data consolidated and non-conflicting: `WebSite`, `Person`, `BreadcrumbList`, and `ItemList`.
+- `app/utils/seo.ts` is the source of truth for site URL, canonical URL generation, page SEO defaults, and JSON-LD helpers.
+- `nuxt.config.ts` owns CSP, sitemap configuration, manifest links, app defaults, and security headers.
+- Page components use `useSeoMeta()` and `useHead()` for page-specific title, description, canonical URL, Open Graph details, and page JSON-LD.
+- Keep structured data truthful and non-conflicting. Do not add fake ratings, reviews, awards, availability, event attendance, or claims that are not present in the public data.
 - Use `public/og-image.jpg` for social previews unless a real replacement asset is committed.
 - Keep `public/manifest.json` and `public/site.webmanifest` aligned while both are published.
 - Keep `robots.txt` and generated sitemap URLs aligned with the production domain.
+
+## External Content Rules
+
+- Use `https://www.youtube-nocookie.com` for embedded trailers.
+- Any new external image, map, media, or API host must be added deliberately to the CSP in `nuxt.config.ts`.
+- Any URL rendered into HTML/CSS must come from public HTTPS data and should be validated or allowlisted when it can reach attributes, embeds, or inline styles.
 
 ## Styling Guidelines
 
@@ -90,13 +98,17 @@ bun audit
 For SEO work, inspect generated output for:
 
 - `application/ld+json`
+- canonical URL
 - description and Open Graph metadata
 - CSP meta tag
 - valid `manifest.json`
 - valid sitemap XML
 - real social preview image
 
+For release work, also verify GitHub Actions after pushing to `main` and check the production URL after the deploy finishes.
+
 ## Git Safety
 
 - Use conventional commits.
 - Do not use destructive git operations unless explicitly requested.
+- Do not mention AI tools or automated authorship in commits, PRs, changelogs, or release notes.

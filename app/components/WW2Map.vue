@@ -53,7 +53,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import { useRoute } from "vue-router";
 import type { Film, Location } from "../../types";
 import { useLeafletMap, isMobile } from "../composables/useLeafletMap";
 import { useTimeline } from "../composables/useTimeline";
@@ -108,7 +107,9 @@ const { initializeMap, flyToLocation, clearHighlight, resetView, cleanup } =
 
 // Handle filmId from URL query parameter
 const handleFilmIdFromUrl = () => {
-  const filmId = route.query.filmId as string;
+  const filmId = Array.isArray(route.query.filmId)
+    ? route.query.filmId[0]
+    : route.query.filmId;
   if (filmId) {
     const film = filmsData.films.find((f) => f.id === filmId);
     if (film) {
@@ -157,7 +158,7 @@ const openTrailer = (film: Film) => {
   if (!film.trailerUrl) return;
 
   if (isMobile()) {
-    window.open(film.trailerUrl, "_blank");
+    window.open(film.trailerUrl, "_blank", "noopener,noreferrer");
   } else {
     activeTrailerUrl.value = film.trailerUrl;
     activeFilmTitle.value = `${film.title} (${film.year})`;
