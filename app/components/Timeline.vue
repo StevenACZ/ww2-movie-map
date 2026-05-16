@@ -10,7 +10,7 @@
     </button>
 
     <div class="timeline-header">
-      <h3>TIMELINE:</h3>
+      <p class="timeline-title">TIMELINE:</p>
 
       <div class="year-display">
         <span class="year-label">{{ startYear }}</span>
@@ -31,6 +31,7 @@
         min="1936"
         max="1945"
         class="slider slider-start"
+        aria-label="Filter films from start year"
         @input="updateRange"
       />
       <input
@@ -39,6 +40,7 @@
         min="1936"
         max="1945"
         class="slider slider-end"
+        aria-label="Filter films until end year"
         @input="updateRange"
       />
     </div>
@@ -250,7 +252,7 @@ watch([startYear, endYear], () => {
       gap: $spacing-sm;
     }
 
-    h3 {
+    .timeline-title {
       color: $beige;
       font-size: 14px;
       font-weight: 700;
