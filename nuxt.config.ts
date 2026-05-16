@@ -11,7 +11,7 @@ const contentSecurityPolicy = [
     "https://upload.wikimedia.org",
     "https://image.tmdb.org",
     "https://m.media-amazon.com",
-    "https://timespacewarps.files.wordpress.com",
+    "https://timespacewarps.wordpress.com",
     "https://github.com",
     "https://avatars.githubusercontent.com",
     "https://*.basemaps.cartocdn.com",
@@ -25,7 +25,8 @@ const contentSecurityPolicy = [
   "manifest-src 'self'",
   "base-uri 'self'",
   "form-action 'self'",
-  "frame-ancestors 'none'",
+  // frame-ancestors is ignored in a <meta> CSP; clickjacking is enforced
+  // via the X-Frame-Options: DENY header in public/.htaccess.
   "upgrade-insecure-requests",
 ].join("; ");
 
@@ -34,6 +35,14 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
 
   modules: ["@nuxtjs/sitemap"],
+
+  // Load all component CSS via <link> instead of inlining only the styles
+  // used during SSR. Components rendered exclusively on the client (modals
+  // gated by localStorage, etc.) would otherwise lose their scoped styles
+  // because their CSS is never inlined nor linked on the prerendered pages.
+  features: {
+    inlineStyles: false,
+  },
 
   // Sitemap configuration
   sitemap: {
@@ -49,6 +58,7 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: {
         lang: "en",
+        dir: "ltr",
       },
       title: "WW2 Film Map - Interactive World War II Cinema Experience",
       titleTemplate: "%s | WW2 Film Map",
@@ -63,6 +73,11 @@ export default defineNuxtConfig({
           name: "description",
           content:
             "Explore World War II through cinema with an interactive map, curated film collection, and historical timeline covering key events from 1936 to 1945.",
+        },
+        {
+          name: "keywords",
+          content:
+            "WW2 films, World War II movies, WW2 movie map, war film locations, World War 2 timeline, WW2 cinema, historical war movies, war films map, World War II in film",
         },
         // SEO Meta Tags
         { name: "author", content: "Steven Coaila Zaa" },
@@ -127,6 +142,7 @@ export default defineNuxtConfig({
             "WW2 Film Map showing World War II cinema locations and historical context",
         },
         { name: "twitter:creator", content: "@StevenACZ" },
+        { name: "twitter:site", content: "@StevenACZ" },
 
         // Additional SEO
         { name: "application-name", content: "WW2 Film Map" },

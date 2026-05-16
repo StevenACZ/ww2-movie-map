@@ -12,7 +12,7 @@
           <span class="logo-ww2">WW2</span>
           <span class="logo-text">MAP FILMS</span>
         </div>
-        <p class="tagline">Exploring World War II Through Cinema</p>
+        <h1 class="tagline">Exploring World War II Through Cinema</h1>
       </header>
 
       <!-- Mission Section -->
@@ -133,11 +133,15 @@
       <section class="content-section credits-section">
         <h2 class="section-title">Created By</h2>
         <div class="creator-card">
-          <!-- TODO: Reemplazar con tu foto real de GitHub/perfil -->
           <img
             src="https://github.com/StevenACZ.png"
-            alt="StevenACZ"
+            alt="StevenACZ — creator of WW2 Film Map"
             class="creator-avatar"
+            width="56"
+            height="56"
+            loading="lazy"
+            decoding="async"
+            referrerpolicy="no-referrer"
           />
           <div class="creator-info">
             <h3 class="creator-name">StevenACZ</h3>

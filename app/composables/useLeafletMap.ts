@@ -12,7 +12,7 @@ const allowedPosterHosts = new Set([
   "upload.wikimedia.org",
   "image.tmdb.org",
   "m.media-amazon.com",
-  "timespacewarps.files.wordpress.com",
+  "timespacewarps.wordpress.com",
 ]);
 
 const getSafePosterUrl = (rawUrl: string): string => {
