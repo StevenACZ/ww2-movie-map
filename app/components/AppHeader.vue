@@ -17,21 +17,21 @@
           <span class="nav-text">MAP</span>
         </NuxtLink>
         <NuxtLink
-          to="/films"
+          to="/films/"
           class="nav-item"
           :class="{ active: currentRoute === '/films' }"
         >
           <span class="nav-text">FILMS</span>
         </NuxtLink>
         <NuxtLink
-          to="/timeline"
+          to="/timeline/"
           class="nav-item"
           :class="{ active: currentRoute === '/timeline' }"
         >
           <span class="nav-text">TIMELINE</span>
         </NuxtLink>
         <NuxtLink
-          to="/about"
+          to="/about/"
           class="nav-item"
           :class="{ active: currentRoute === '/about' }"
         >
@@ -85,7 +85,7 @@
           <span class="mobile-nav-desc">Explore WW2 films on the map</span>
         </NuxtLink>
         <NuxtLink
-          to="/films"
+          to="/films/"
           class="mobile-nav-item"
           :class="{ active: currentRoute === '/films' }"
           @click="closeMenu"
@@ -109,7 +109,7 @@
           <span class="mobile-nav-desc">Browse film collection</span>
         </NuxtLink>
         <NuxtLink
-          to="/timeline"
+          to="/timeline/"
           class="mobile-nav-item"
           :class="{ active: currentRoute === '/timeline' }"
           @click="closeMenu"
@@ -133,7 +133,7 @@
           <span class="mobile-nav-desc">Events & film releases</span>
         </NuxtLink>
         <NuxtLink
-          to="/about"
+          to="/about/"
           class="mobile-nav-item"
           :class="{ active: currentRoute === '/about' }"
           @click="closeMenu"
@@ -165,7 +165,9 @@
 import { ref, computed, watch, onMounted, onUnmounted } from "vue";
 
 const route = useRoute();
-const currentRoute = computed(() => route.path);
+// Normalize the trailing slash so active state still matches the trailing-slash
+// nav links (the host serves directory-style URLs, e.g. /films/).
+const currentRoute = computed(() => route.path.replace(/\/+$/, "") || "/");
 const isMenuOpen = ref(false);
 
 const toggleMenu = () => {
