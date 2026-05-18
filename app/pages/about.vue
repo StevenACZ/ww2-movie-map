@@ -107,7 +107,7 @@
           battlefield — immerse yourself in stories of courage, sacrifice, and
           humanity.
         </p>
-        <NuxtLink to="/films" class="explore-btn">
+        <NuxtLink to="/films/" class="explore-btn">
           <span>Explore Films</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
