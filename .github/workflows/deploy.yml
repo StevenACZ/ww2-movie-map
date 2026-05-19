@@ -12,14 +12,14 @@ jobs:
       group: deploy-${{ github.repository }}
       cancel-in-progress: true
     env:
-      SSH_HOST: ${{ secrets.SSH_HOST }}
-      SSH_USER: ${{ secrets.SSH_USER }}
+      SSH_HOST: ${{ vars.SSH_HOST }}
+      SSH_USER: ${{ vars.SSH_USER }}
       SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      SSH_PORT: ${{ secrets.SSH_PORT }}
-      DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+      SSH_PORT: ${{ vars.SSH_PORT }}
+      DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Setup Node
         uses: actions/setup-node@v5
@@ -135,14 +135,14 @@ jobs:
             exit 1
           fi
 
-      - name: Validate deployment secrets
+      - name: Validate deployment configuration
         run: |
           if [ -z "$SSH_HOST" ]; then
-            echo "Missing secret: SSH_HOST"
+            echo "Missing variable: SSH_HOST"
             exit 1
           fi
           if [ -z "$SSH_USER" ]; then
-            echo "Missing secret: SSH_USER"
+            echo "Missing variable: SSH_USER"
             exit 1
           fi
           if [ -z "$SSH_PRIVATE_KEY" ]; then
@@ -150,7 +150,7 @@ jobs:
             exit 1
           fi
           if [ -z "$DEPLOY_PATH" ]; then
-            echo "Missing secret: DEPLOY_PATH"
+            echo "Missing variable: DEPLOY_PATH"
             exit 1
           fi
           if [ "$DEPLOY_PATH" = "/" ]; then
@@ -173,7 +173,7 @@ jobs:
 
           ssh -i ~/.ssh/deploy_key -p "$port" "$SSH_USER@$SSH_HOST" "mkdir -p '$DEPLOY_PATH'"
 
-          rsync -avz --delete \
+          rsync -avz --delete --chmod=D755,F644 \
             -e "ssh -i ~/.ssh/deploy_key -p $port" \
             "$output_dir/" \
             "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
