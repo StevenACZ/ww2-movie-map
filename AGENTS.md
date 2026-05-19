@@ -66,7 +66,7 @@ Film data lives in `data/films.json` and must match `types/index.ts`. Locations 
 - `nuxt.config.ts` owns CSP, sitemap configuration, manifest links, app defaults, and security headers.
 - Page components use `useSeoMeta()` and `useHead()` for page-specific title, description, canonical URL, Open Graph details, and page JSON-LD.
 - Keep structured data truthful and non-conflicting. Do not add fake ratings, reviews, awards, availability, event attendance, or claims that are not present in the public data.
-- Use `public/og-image.jpg` for social previews unless a real replacement asset is committed.
+- Use `public/og-image-20260518.png` for social previews unless a newer real replacement asset is committed.
 - Keep `public/manifest.json` and `public/site.webmanifest` aligned while both are published.
 - Keep `robots.txt` and generated sitemap URLs aligned with the production domain.
 

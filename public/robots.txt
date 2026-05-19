@@ -6,4 +6,44 @@ Allow: /
 Disallow: /api/
 Disallow: /_nuxt/builds/
 
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/builds/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/builds/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/builds/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/builds/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/builds/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/builds/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/builds/
+
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/builds/
+
 Sitemap: https://ww2.stevenacz.com/sitemap.xml

@@ -4,7 +4,7 @@
 
 WW2 Film Map is a public Nuxt application that connects World War II films with the places, years, and historical events they depict. The site is built as a fast, crawlable static experience for maps, film discovery, and timeline exploration.
 
-![Project Preview](public/og-image.jpg)
+![Project Preview](public/og-image-20260518.png)
 
 ## Production
 

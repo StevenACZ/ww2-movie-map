@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Improved page-level SEO metadata, canonical URLs, structured data, robots, manifests, and PWA icons.
+- Added a 1200x630 social preview image for richer search and sharing cards.
 - Hardened external content handling for trailers, map marker images, CSP, `target="_blank"` links, and audit coverage.
 - Removed unused direct dependencies and pinned the patched `devalue` release through package overrides.
 - Tightened the deployment workflow so available quality checks fail the deploy when they fail.
@@ -14,4 +15,4 @@
 ## 2026-05-13
 
 - Added SEO/security hardening baseline with CSP, JSON-LD consistency, and manifest alias.
-- Unified social image references to the real public `/og-image.jpg` asset.
+- Unified social image references to the real public OG asset.
