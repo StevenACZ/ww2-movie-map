@@ -43,9 +43,9 @@
   ],
   "screenshots": [
     {
-      "src": "/og-image.jpg",
-      "sizes": "4304x2558",
-      "type": "image/jpeg",
+      "src": "/og-image-20260518.png",
+      "sizes": "1200x630",
+      "type": "image/png",
       "form_factor": "wide",
       "label": "WW2 Film Map interactive map preview"
     }

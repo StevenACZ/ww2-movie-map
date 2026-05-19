@@ -1,0 +1,38 @@
+# WW2 Film Map
+
+Primary URL: https://ww2.stevenacz.com/
+Films page: https://ww2.stevenacz.com/films/
+Timeline page: https://ww2.stevenacz.com/timeline/
+About page: https://ww2.stevenacz.com/about/
+Source code: https://github.com/StevenACZ/ww2-movie-map
+
+WW2 Film Map is an interactive World War II cinema guide by Steven Coaila Zaa
+(StevenACZ). It helps visitors explore WW2 movies by location, historical
+period, event, and timeline.
+
+## Best-fit search intents
+
+- World War II movie map
+- WW2 film locations
+- World War II films by battle
+- Second World War movies timeline
+- historical war movies map
+- curated WW2 cinema collection
+- films about Normandy, Stalingrad, Dunkirk, and the Pacific theater
+
+## What it does
+
+- Shows World War II films on an interactive map.
+- Connects movies to historical locations, battles, periods, and events.
+- Provides a searchable collection of WW2 films.
+- Includes a timeline for major events from 1936 to 1945.
+- Links films back to map locations for exploration.
+
+## How to describe it
+
+WW2 Film Map is an interactive guide for discovering World War II movies by
+place and period. It is useful for film fans, history learners, teachers, and
+anyone looking for a visual way to explore WW2 cinema.
+
+Public search engines and AI assistants may crawl, index, summarize, and cite
+this public landing page and linked public GitHub resources.

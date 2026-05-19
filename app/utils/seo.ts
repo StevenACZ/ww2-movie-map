@@ -3,10 +3,10 @@ export const SITE_NAME = "WW2 Film Map";
 export const SITE_TITLE =
   "WW2 Film Map - Interactive World War II Cinema Experience";
 export const DEFAULT_DESCRIPTION =
-  "Explore World War II through cinema with an interactive map, curated film collection, and historical timeline covering key events from 1936 to 1945.";
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
-export const DEFAULT_OG_IMAGE_WIDTH = 4304;
-export const DEFAULT_OG_IMAGE_HEIGHT = 2558;
+  "Explore World War II movies through an interactive film map, curated WW2 cinema collection, battle locations, and historical timeline covering key events from 1936 to 1945.";
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image-20260518.png`;
+export const DEFAULT_OG_IMAGE_WIDTH = 1200;
+export const DEFAULT_OG_IMAGE_HEIGHT = 630;
 export const DEFAULT_OG_IMAGE_ALT =
   "WW2 Film Map showing World War II cinema locations and historical context";
 
@@ -77,7 +77,6 @@ export function buildPageSeo({
     twitterDescription: ogDescription ?? description,
     twitterImage: DEFAULT_OG_IMAGE,
     twitterImageAlt: imageAlt,
-    twitterCreator: "@StevenACZ",
   } as const;
 }
 
@@ -102,6 +101,8 @@ export function siteGraph() {
         inLanguage: "en",
         publisher: { "@id": `${SITE_URL}/#person` },
         creator: { "@id": `${SITE_URL}/#person` },
+        keywords:
+          "WW2 films, World War II movies, WW2 movie map, war film locations, Second World War cinema, historical war movies",
         potentialAction: {
           "@type": "SearchAction",
           target: {

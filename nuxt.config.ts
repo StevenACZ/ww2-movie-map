@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const siteUrl = "https://ww2.stevenacz.com";
 const homeUrl = `${siteUrl}/`;
-const ogImageUrl = `${siteUrl}/og-image.jpg`;
+const ogImageUrl = `${siteUrl}/og-image-20260518.png`;
 
 const contentSecurityPolicy = [
   "default-src 'self'",
@@ -75,12 +75,12 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Explore World War II through cinema with an interactive map, curated film collection, and historical timeline covering key events from 1936 to 1945.",
+            "Explore World War II movies through an interactive film map, curated WW2 cinema collection, and historical timeline covering events from 1936 to 1945.",
         },
         {
           name: "keywords",
           content:
-            "WW2 films, World War II movies, WW2 movie map, war film locations, World War 2 timeline, WW2 cinema, historical war movies, war films map, World War II in film",
+            "WW2 films, World War II movies, WW2 movie map, World War II film map, war film locations, World War 2 timeline, WW2 cinema, historical war movies, Second World War movies, films about WW2 battles",
         },
         // SEO Meta Tags
         { name: "author", content: "Steven Coaila Zaa" },
@@ -107,14 +107,14 @@ export default defineNuxtConfig({
         {
           property: "og:description",
           content:
-            "Explore World War II through cinema with an interactive map, curated film collection, and historical timeline.",
+            "Explore World War II movies through an interactive map, curated film collection, battle locations, and historical timeline.",
         },
         {
           property: "og:image",
           content: ogImageUrl,
         },
-        { property: "og:image:width", content: "4304" },
-        { property: "og:image:height", content: "2558" },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
         {
           property: "og:image:alt",
           content:
@@ -133,7 +133,7 @@ export default defineNuxtConfig({
         {
           name: "twitter:description",
           content:
-            "Explore World War II through cinema with an interactive map, curated film collection, and historical timeline.",
+            "Explore World War II movies through an interactive film map, curated WW2 cinema collection, and timeline.",
         },
         {
           name: "twitter:image",
@@ -144,8 +144,6 @@ export default defineNuxtConfig({
           content:
             "WW2 Film Map showing World War II cinema locations and historical context",
         },
-        { name: "twitter:creator", content: "@StevenACZ" },
-        { name: "twitter:site", content: "@StevenACZ" },
 
         // Additional SEO
         { name: "application-name", content: "WW2 Film Map" },
@@ -180,6 +178,12 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "manifest", href: "/manifest.json" },
         { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
+        {
+          rel: "alternate",
+          type: "text/markdown",
+          title: "AI-readable WW2 Film Map summary",
+          href: "/llms.txt",
+        },
         // Preconnect for performance
         {
           rel: "preconnect",

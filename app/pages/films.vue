@@ -73,6 +73,7 @@ import {
 import FilmSearchControls from "../components/films/FilmSearchControls.vue";
 import FilmCard from "../components/films/FilmCard.vue";
 
+const route = useRoute();
 const router = useRouter();
 
 const films = filmsData.films as Film[];
@@ -142,6 +143,24 @@ useHead({
 // Use the films filter composable
 const { searchQuery, sortBy, filteredFilms, clearSearch } = useFilmsFilter({
   films,
+});
+
+const initialSearch =
+  typeof route.query.search === "string" ? route.query.search : "";
+if (initialSearch) {
+  searchQuery.value = initialSearch;
+}
+
+watch(searchQuery, async (value) => {
+  const nextQuery = { ...route.query };
+
+  if (value.trim()) {
+    nextQuery.search = value.trim();
+  } else {
+    delete nextQuery.search;
+  }
+
+  await router.replace({ path: "/films/", query: nextQuery });
 });
 
 const totalFilms = films.length;
