@@ -115,9 +115,10 @@ useHead({
         itemListElement: films.map((film, index) => ({
           "@type": "ListItem",
           position: index + 1,
-          url: `${canonicalUrl("/")}?filmId=${encodeURIComponent(film.id)}`,
+          url: `${canonicalUrl("/films")}#${encodeURIComponent(film.id)}`,
           item: {
             "@type": "Movie",
+            "@id": `${canonicalUrl("/films")}#movie-${encodeURIComponent(film.id)}`,
             name: film.title,
             datePublished: String(film.year),
             description: film.synopsis,
