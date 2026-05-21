@@ -103,14 +103,6 @@ export function siteGraph() {
         creator: { "@id": `${SITE_URL}/#person` },
         keywords:
           "WW2 films, World War II movies, WW2 movie map, war film locations, Second World War cinema, historical war movies",
-        potentialAction: {
-          "@type": "SearchAction",
-          target: {
-            "@type": "EntryPoint",
-            urlTemplate: `${SITE_URL}/films/?search={search_term_string}`,
-          },
-          "query-input": "required name=search_term_string",
-        },
       },
       {
         "@type": "Person",
