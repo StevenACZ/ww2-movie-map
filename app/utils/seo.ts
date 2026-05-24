@@ -110,7 +110,11 @@ export function siteGraph() {
         name: "Steven Coaila Zaa",
         alternateName: "StevenACZ",
         url: "https://stevenacz.com",
-        sameAs: ["https://stevenacz.com", "https://github.com/StevenACZ"],
+        sameAs: [
+          "https://stevenacz.com",
+          "https://github.com/StevenACZ",
+          "https://x.com/StevenACZ",
+        ],
       },
       {
         "@type": "BreadcrumbList",

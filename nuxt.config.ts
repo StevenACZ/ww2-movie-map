@@ -125,6 +125,8 @@ export default defineNuxtConfig({
 
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:site", content: "@StevenACZ" },
+        { name: "twitter:creator", content: "@StevenACZ" },
         { name: "twitter:url", content: homeUrl },
         {
           name: "twitter:title",
