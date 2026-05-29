@@ -182,12 +182,7 @@ const viewOnMap = (filmId: string) => {
 
 .films-page {
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 25, 30, 0.98) 0%,
-    rgba(15, 20, 25, 0.96) 50%,
-    rgba(25, 30, 35, 0.95) 100%
-  );
+  background: $bg-page;
   color: $text-primary;
   font-family: "Inter", sans-serif;
   position: relative;
@@ -267,14 +262,7 @@ const viewOnMap = (filmId: string) => {
   font-size: 3.5rem;
   font-weight: 800;
   margin: 0 0 $spacing-sm 0;
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0.85) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: $text-primary;
   letter-spacing: -1px;
 
   @include mobile {
