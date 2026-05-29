@@ -21,7 +21,7 @@
               map
             </li>
             <li>
-              <span class="icon">📍</span>
+              <span class="icon"><MapPinIcon /></span>
               <span class="desktop-only"
                 >Click markers to view film details</span
               >
@@ -55,6 +55,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import MapPinIcon from "./icons/MapPinIcon.vue";
 
 const emit = defineEmits(["close"]);
 
@@ -240,7 +241,14 @@ const handleStart = () => {
 }
 
 .icon {
+  display: inline-flex;
+  align-items: center;
   font-size: 15px;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
 
   @media (max-width: 768px) {
     font-size: 14px;

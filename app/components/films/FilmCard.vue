@@ -51,7 +51,7 @@
       <!-- Locations -->
       <div class="locations-section">
         <div class="locations-header">
-          <span class="locations-icon" aria-hidden="true">📍</span>
+          <span class="locations-icon" aria-hidden="true"><MapPinIcon /></span>
           <span class="locations-label">Filming Locations</span>
         </div>
         <div
@@ -150,6 +150,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import type { Film } from "../../../types";
+import MapPinIcon from "../icons/MapPinIcon.vue";
 
 const props = defineProps<{
   film: Film;
@@ -378,7 +379,15 @@ const wikipediaUrl = computed(() => {
 }
 
 .locations-icon {
+  display: inline-flex;
+  align-items: center;
   font-size: 0.85rem;
+  color: $danger;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
 }
 
 .locations-label {
