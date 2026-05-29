@@ -25,6 +25,7 @@ Public Nuxt app for WW2 Movie Map. Keep it production-safe, historically focused
 
 - `app/pages/`: home, films, timeline, and about pages.
 - `app/components/`: map, film, trailer, timeline, and shared UI.
+- `app/components/icons/`: Lucide-style inline SVG icon components (no emoji iconography).
 - `app/composables/`: filtering, Leaflet map, and timeline logic.
 - `app/utils/seo.ts`: canonical URL, page SEO, and JSON-LD helpers.
 - `data/films.json`: canonical film data.
@@ -80,6 +81,10 @@ Film data lives in `data/films.json` and must match `types/index.ts`. Locations 
 
 - Shared SCSS variables live in `app/assets/scss/_variables.scss`.
 - Shared responsive helpers live in `app/assets/scss/_mixins.scss`.
+- The visual identity uses solid surface tokens (`$bg-page`, `$surface`, `$surface-border`); the old beige/gold gradients are flattened to solid color. Do not reintroduce decorative gradients.
+- Icons are inline SVG components under `app/components/icons/`. Do not use emoji as UI icons.
+- Wrap micro-interactions so `prefers-reduced-motion: reduce` disables them (global guard lives in `app/app.vue`).
+- Recompress raster assets in `public/` (oxipng) and lazy-load below-the-fold images.
 - Keep component styles scoped when possible.
 - Aim to keep components focused. Extract subcomponents when a file becomes difficult to scan.
 
@@ -105,7 +110,7 @@ For SEO work, inspect generated output for:
 - valid sitemap XML
 - real social preview image
 
-For release work, also verify GitHub Actions after pushing to `main` and check the production URL after the deploy finishes.
+For release work, also verify GitHub Actions after pushing to `main` and check the production URL after the deploy finishes. The deploy workflow runs on Node 22, only deploys when SSH config is present, and self-validates the live site with `curl` after rsync.
 
 ## Git Safety
 

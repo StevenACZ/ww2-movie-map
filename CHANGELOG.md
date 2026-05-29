@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-05-28
+
+- Replaced all emoji iconography with Lucide-style inline SVG icon components under `app/components/icons/`.
+- Flattened the beige/gold gradients to a solid-color identity with new surface tokens and softened panel, map-control, and page surfaces.
+- Added a `prefers-reduced-motion` guard and subtle film-card lift micro-interaction.
+- Recompressed PWA icons and the OG image with oxipng and lazy-loaded film poster images in modals and panels.
+- Gated the deploy on SSH config, added a post-deploy live-site validation, and bumped CI to Node 22.
+
 ## Unreleased
 
 - Improved page-level SEO metadata, canonical URLs, structured data, robots, manifests, and PWA icons.
