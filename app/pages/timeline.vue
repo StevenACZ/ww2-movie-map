@@ -58,7 +58,7 @@
         "
         class="empty-state"
       >
-        <span class="empty-icon">📅</span>
+        <CalendarIcon class="empty-icon" />
         <p>No events or films in this period</p>
       </div>
     </div>
@@ -168,6 +168,7 @@ import TimelineFilmCard from "../components/timeline/TimelineFilmCard.vue";
 import TimelineMobileCard from "../components/timeline/TimelineMobileCard.vue";
 import TimelineMobileModal from "../components/timeline/TimelineMobileModal.vue";
 import TimelineNav from "../components/timeline/TimelineNav.vue";
+import CalendarIcon from "../components/icons/CalendarIcon.vue";
 
 const allEvents = eventsData.events as HistoricalEvent[];
 const allFilms = filmsData.films as unknown as Film[];
@@ -553,9 +554,10 @@ const closeTrailer = () => {
 }
 
 .empty-icon {
-  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
   display: block;
-  margin-bottom: $spacing-md;
+  margin: 0 auto $spacing-md;
   opacity: 0.5;
 }
 

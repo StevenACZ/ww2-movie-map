@@ -6,7 +6,8 @@
   >
     <div class="mobile-card-icon">
       <FilmIcon v-if="type === 'film'" />
-      <template v-else>{{ icon }}</template>
+      <template v-else-if="eventIcon">{{ eventIcon }}</template>
+      <SwordsIcon v-else />
     </div>
     <div class="mobile-card-content">
       <span class="mobile-card-date">{{ dateLabel }}</span>
@@ -25,6 +26,7 @@
 import { computed } from "vue";
 import type { PositionedEvent, PositionedFilm } from "../../../types/timeline";
 import FilmIcon from "../icons/FilmIcon.vue";
+import SwordsIcon from "../icons/SwordsIcon.vue";
 
 const props = defineProps<{
   item: PositionedEvent | PositionedFilm;
@@ -36,8 +38,8 @@ const emit = defineEmits<{
 }>();
 
 // Computed properties for display
-const icon = computed(() => {
-  return (props.item as PositionedEvent).icon || "⚔️";
+const eventIcon = computed(() => {
+  return (props.item as PositionedEvent).icon;
 });
 
 const title = computed(() => props.item.title);

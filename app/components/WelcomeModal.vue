@@ -28,7 +28,8 @@
               <span class="mobile-only">Tap markers to view film details</span>
             </li>
             <li>
-              <span class="icon">⏱️</span> Use the timeline to filter by year
+              <span class="icon"><ClockIcon /></span> Use the timeline to filter
+              by year
             </li>
           </ul>
         </div>
@@ -56,6 +57,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import MapPinIcon from "./icons/MapPinIcon.vue";
+import ClockIcon from "./icons/ClockIcon.vue";
 
 const emit = defineEmits(["close"]);
 

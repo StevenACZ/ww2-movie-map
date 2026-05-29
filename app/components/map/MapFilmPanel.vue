@@ -25,7 +25,7 @@
 
           <div class="film-meta">
             <span class="film-rating">
-              <span class="rating-label">⭐</span>
+              <StarIcon class="rating-label" />
               <span class="rating-value">{{ film.imdbRating }}/10</span>
             </span>
           </div>
@@ -65,6 +65,7 @@
 
 <script setup lang="ts">
 import type { Film } from "../../../types";
+import StarIcon from "../icons/StarIcon.vue";
 
 defineProps<{
   film: Film | null;
@@ -268,11 +269,12 @@ defineEmits<{
   }
 
   .rating-label {
-    font-size: 20px;
-    line-height: 1;
+    width: 18px;
+    height: 18px;
 
     @include mobile {
-      font-size: 16px;
+      width: 15px;
+      height: 15px;
     }
   }
 

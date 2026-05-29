@@ -45,7 +45,9 @@
           <div class="popup-info">
             <h4>{{ film.title }} ({{ film.year }})</h4>
             <p class="popup-meta">
-              <span class="imdb-rating">⭐ {{ film.imdbRating }}</span>
+              <span class="imdb-rating"
+                ><StarIcon class="rating-star" /> {{ film.imdbRating }}</span
+              >
               <span class="country">{{ film.country }}</span>
             </p>
             <p class="popup-desc">{{ film.synopsis }}</p>
@@ -77,6 +79,7 @@
 <script setup lang="ts">
 import type { PositionedFilm } from "../../../types/timeline";
 import FilmIcon from "../icons/FilmIcon.vue";
+import StarIcon from "../icons/StarIcon.vue";
 
 const props = defineProps<{
   film: PositionedFilm;
@@ -292,6 +295,12 @@ const formatEventPeriod = (film: PositionedFilm): string => {
 .imdb-rating {
   color: $beige;
   font-weight: 600;
+
+  .rating-star {
+    width: 0.8rem;
+    height: 0.8rem;
+    vertical-align: -1px;
+  }
 }
 
 .country {

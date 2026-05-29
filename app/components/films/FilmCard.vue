@@ -20,7 +20,7 @@
       />
       <div class="poster-overlay">
         <div class="rating-badge">
-          <span class="star" aria-hidden="true">⭐</span>
+          <StarIcon class="star" />
           <span class="rating-value">{{ film.imdbRating }}</span>
         </div>
         <div class="year-badge">
@@ -151,6 +151,7 @@
 import { computed } from "vue";
 import type { Film } from "../../../types";
 import MapPinIcon from "../icons/MapPinIcon.vue";
+import StarIcon from "../icons/StarIcon.vue";
 
 const props = defineProps<{
   film: Film;
@@ -257,10 +258,13 @@ const wikipediaUrl = computed(() => {
 }
 
 .star {
-  font-size: 0.85rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  color: $beige;
 
   @include mobile {
-    font-size: 0.8rem;
+    width: 0.8rem;
+    height: 0.8rem;
   }
 }
 
