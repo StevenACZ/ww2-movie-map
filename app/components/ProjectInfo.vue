@@ -8,7 +8,7 @@
       @click="toggleInfo"
       aria-label="Project Information"
     >
-      <span class="icon">ℹ️</span>
+      <span class="icon"><InfoIcon /></span>
     </button>
 
     <Transition name="slide-left">
@@ -31,7 +31,8 @@
               rel="noopener noreferrer"
               class="link-item"
             >
-              <span class="link-icon">📂</span> GitHub Repository
+              <span class="link-icon"><FolderOpenIcon /></span> GitHub
+              Repository
             </a>
             <a
               href="https://github.com/StevenACZ/ww2-movie-map/issues"
@@ -39,7 +40,7 @@
               rel="noopener noreferrer"
               class="link-item"
             >
-              <span class="link-icon">💬</span> Feedback
+              <span class="link-icon"><MessageCircleIcon /></span> Feedback
             </a>
           </div>
 
@@ -55,6 +56,9 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import InfoIcon from "./icons/InfoIcon.vue";
+import FolderOpenIcon from "./icons/FolderOpenIcon.vue";
+import MessageCircleIcon from "./icons/MessageCircleIcon.vue";
 
 const isOpen = ref(false);
 
@@ -198,7 +202,24 @@ const closeInfo = () => {
 }
 
 .icon {
+  display: inline-flex;
+  align-items: center;
   font-size: 14px;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.link-icon {
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 // Transitions
