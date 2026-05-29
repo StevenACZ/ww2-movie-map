@@ -343,7 +343,7 @@ const handleStart = () => {
 }
 
 .start-btn {
-  background: linear-gradient(to bottom, $gold, $gold-dark);
+  background: $gold;
   color: #1a1a1a;
   border: none;
   padding: $spacing-md $spacing-xl;
@@ -365,7 +365,7 @@ const handleStart = () => {
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba($gold, 0.4);
-    background: linear-gradient(to bottom, $gold-light, #c4a32a);
+    background: $gold-light;
   }
 
   &:active {

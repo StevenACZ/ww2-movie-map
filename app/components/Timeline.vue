@@ -425,7 +425,7 @@ watch([startYear, endYear], () => {
   &-range {
     position: absolute;
     height: 100%;
-    background: linear-gradient(90deg, rgba($beige-dark, 0.8), $beige);
+    background: $beige;
     border-radius: 3px;
     box-shadow: 0 0 15px rgba($beige, 0.4);
 

@@ -171,7 +171,7 @@ const emit = defineEmits<{
   left: 20%;
   right: 20%;
   height: 2px;
-  background: linear-gradient(90deg, $beige, $beige-light);
+  background: $beige;
   border-radius: 2px;
   transform: scaleX(0);
   transition: transform $transition-normal;
