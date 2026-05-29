@@ -392,12 +392,7 @@ useHead({
 
 .about-page {
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 25, 30, 0.98) 0%,
-    rgba(15, 20, 25, 0.96) 50%,
-    rgba(25, 30, 35, 0.95) 100%
-  );
+  background: $bg-page;
   color: $text-primary;
   font-family: "Inter", sans-serif;
   position: relative;

@@ -35,6 +35,8 @@
           :src="film.poster"
           :alt="film.title"
           class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
         />
         <div
           class="absolute inset-0 bg-gradient-to-t from-stone-900 to-transparent md:bg-gradient-to-r"

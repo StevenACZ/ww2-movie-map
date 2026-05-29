@@ -201,11 +201,7 @@ const closeTrailer = () => {
   left: 10px;
   width: 38px;
   height: 38px;
-  background: linear-gradient(
-    135deg,
-    rgba(30, 30, 35, 0.9) 0%,
-    rgba(20, 25, 30, 0.95) 100%
-  );
+  background: $surface;
   border: 1.5px solid rgba(255, 255, 255, 0.15);
   cursor: pointer;
   z-index: 500;
@@ -225,11 +221,7 @@ const closeTrailer = () => {
   }
 
   &:hover {
-    background: linear-gradient(
-      135deg,
-      rgba($beige, 0.15) 0%,
-      rgba($beige-dark, 0.2) 100%
-    );
+    background: rgba($beige, 0.15);
     border-color: rgba($beige, 0.5);
     box-shadow:
       0 6px 16px rgba(0, 0, 0, 0.5),
@@ -276,11 +268,7 @@ const closeTrailer = () => {
   }
 
   a {
-    background: linear-gradient(
-      135deg,
-      rgba(30, 30, 35, 0.9) 0%,
-      rgba(20, 25, 30, 0.95) 100%
-    ) !important;
+    background: $surface !important;
     color: rgba(255, 255, 255, 0.8) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     font-weight: bold;
@@ -296,11 +284,7 @@ const closeTrailer = () => {
     }
 
     &:hover {
-      background: linear-gradient(
-        135deg,
-        rgba($beige, 0.15) 0%,
-        rgba($beige-dark, 0.2) 100%
-      ) !important;
+      background: rgba($beige, 0.15) !important;
       color: $beige !important;
     }
 

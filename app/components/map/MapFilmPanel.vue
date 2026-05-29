@@ -8,7 +8,12 @@
       <div class="film-info-content">
         <!-- Poster -->
         <div class="film-poster">
-          <img :src="film.poster" :alt="film.title" />
+          <img
+            :src="film.poster"
+            :alt="film.title"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <!-- Info -->
@@ -20,7 +25,7 @@
 
           <div class="film-meta">
             <span class="film-rating">
-              <span class="rating-label">⭐</span>
+              <StarIcon class="rating-label" />
               <span class="rating-value">{{ film.imdbRating }}/10</span>
             </span>
           </div>
@@ -60,6 +65,7 @@
 
 <script setup lang="ts">
 import type { Film } from "../../../types";
+import StarIcon from "../icons/StarIcon.vue";
 
 defineProps<{
   film: Film | null;
@@ -82,12 +88,8 @@ defineEmits<{
   width: 500px;
   max-width: calc(100vw - 60px);
   z-index: $z-popover;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 25, 30, 0.98) 0%,
-    rgba(15, 20, 25, 0.96) 100%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: $surface;
+  border: 1px solid $surface-border;
   border-radius: 12px;
   overflow: hidden;
   box-shadow:
@@ -267,11 +269,12 @@ defineEmits<{
   }
 
   .rating-label {
-    font-size: 20px;
-    line-height: 1;
+    width: 18px;
+    height: 18px;
 
     @include mobile {
-      font-size: 16px;
+      width: 15px;
+      height: 15px;
     }
   }
 

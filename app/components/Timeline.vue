@@ -159,12 +159,8 @@ watch([startYear, endYear], () => {
     bottom: -130px; /* Hidden by default */
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(
-      180deg,
-      rgba(20, 25, 30, 0.98) 0%,
-      rgba(15, 20, 25, 0.96) 100%
-    );
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: $surface;
+    border: 1px solid $surface-border;
     border-radius: 12px;
     padding: $spacing-lg $spacing-xl;
     backdrop-filter: blur(20px) saturate(180%);
@@ -219,12 +215,8 @@ watch([startYear, endYear], () => {
     transform: translateX(-50%);
     width: 60px;
     height: 32px;
-    background: linear-gradient(
-      180deg,
-      rgba(20, 25, 30, 0.98) 0%,
-      rgba(15, 20, 25, 0.96) 100%
-    );
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: $surface;
+    border: 1px solid $surface-border;
     border-bottom: none;
     border-radius: 12px 12px 0 0;
     cursor: pointer;
@@ -433,7 +425,7 @@ watch([startYear, endYear], () => {
   &-range {
     position: absolute;
     height: 100%;
-    background: linear-gradient(90deg, rgba($beige-dark, 0.8), $beige);
+    background: $beige;
     border-radius: 3px;
     box-shadow: 0 0 15px rgba($beige, 0.4);
 

@@ -34,7 +34,7 @@
           class="no-results"
           role="status"
         >
-          <div class="no-results-icon" aria-hidden="true">🎬</div>
+          <div class="no-results-icon" aria-hidden="true"><FilmIcon /></div>
           <p class="no-results-text">No films found</p>
           <p class="no-results-hint">Try adjusting your search</p>
         </div>
@@ -72,6 +72,7 @@ import {
 // Import components
 import FilmSearchControls from "../components/films/FilmSearchControls.vue";
 import FilmCard from "../components/films/FilmCard.vue";
+import FilmIcon from "../components/icons/FilmIcon.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -181,12 +182,7 @@ const viewOnMap = (filmId: string) => {
 
 .films-page {
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 25, 30, 0.98) 0%,
-    rgba(15, 20, 25, 0.96) 50%,
-    rgba(25, 30, 35, 0.95) 100%
-  );
+  background: $bg-page;
   color: $text-primary;
   font-family: "Inter", sans-serif;
   position: relative;
@@ -266,14 +262,7 @@ const viewOnMap = (filmId: string) => {
   font-size: 3.5rem;
   font-weight: 800;
   margin: 0 0 $spacing-sm 0;
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0.85) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: $text-primary;
   letter-spacing: -1px;
 
   @include mobile {
@@ -354,8 +343,18 @@ const viewOnMap = (filmId: string) => {
   margin-bottom: $spacing-md;
   opacity: 0.5;
 
+  svg {
+    width: 4rem;
+    height: 4rem;
+  }
+
   @include mobile {
     font-size: 3rem;
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 }
 

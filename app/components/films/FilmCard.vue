@@ -20,7 +20,7 @@
       />
       <div class="poster-overlay">
         <div class="rating-badge">
-          <span class="star" aria-hidden="true">⭐</span>
+          <StarIcon class="star" />
           <span class="rating-value">{{ film.imdbRating }}</span>
         </div>
         <div class="year-badge">
@@ -51,7 +51,7 @@
       <!-- Locations -->
       <div class="locations-section">
         <div class="locations-header">
-          <span class="locations-icon" aria-hidden="true">📍</span>
+          <span class="locations-icon" aria-hidden="true"><MapPinIcon /></span>
           <span class="locations-label">Filming Locations</span>
         </div>
         <div
@@ -150,6 +150,8 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import type { Film } from "../../../types";
+import MapPinIcon from "../icons/MapPinIcon.vue";
+import StarIcon from "../icons/StarIcon.vue";
 
 const props = defineProps<{
   film: Film;
@@ -188,6 +190,7 @@ const wikipediaUrl = computed(() => {
 
   &:hover {
     border-color: rgba($beige, 0.3);
+    transform: translateY(-4px);
     box-shadow:
       $shadow-lg,
       0 0 40px rgba($beige, 0.1);
@@ -255,10 +258,13 @@ const wikipediaUrl = computed(() => {
 }
 
 .star {
-  font-size: 0.85rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  color: $beige;
 
   @include mobile {
-    font-size: 0.8rem;
+    width: 0.8rem;
+    height: 0.8rem;
   }
 }
 
@@ -378,7 +384,15 @@ const wikipediaUrl = computed(() => {
 }
 
 .locations-icon {
+  display: inline-flex;
+  align-items: center;
   font-size: 0.85rem;
+  color: $danger;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
 }
 
 .locations-label {

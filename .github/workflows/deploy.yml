@@ -17,6 +17,7 @@ jobs:
       SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       SSH_PORT: ${{ vars.SSH_PORT }}
       DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+      PRODUCTION_URL: https://ww2.stevenacz.com
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
@@ -24,7 +25,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -136,29 +137,35 @@ jobs:
           fi
 
       - name: Validate deployment configuration
+        id: deploy_config
         run: |
+          ready=true
+
           if [ -z "$SSH_HOST" ]; then
             echo "Missing variable: SSH_HOST"
-            exit 1
+            ready=false
           fi
           if [ -z "$SSH_USER" ]; then
             echo "Missing variable: SSH_USER"
-            exit 1
+            ready=false
           fi
           if [ -z "$SSH_PRIVATE_KEY" ]; then
             echo "Missing secret: SSH_PRIVATE_KEY"
-            exit 1
+            ready=false
           fi
           if [ -z "$DEPLOY_PATH" ]; then
             echo "Missing variable: DEPLOY_PATH"
-            exit 1
+            ready=false
           fi
           if [ "$DEPLOY_PATH" = "/" ]; then
             echo "DEPLOY_PATH cannot be /."
             exit 1
           fi
 
+          echo "ready=$ready" >> "$GITHUB_OUTPUT"
+
       - name: Setup SSH key
+        if: steps.deploy_config.outputs.ready == 'true'
         run: |
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
@@ -167,6 +174,7 @@ jobs:
           ssh-keyscan -H -p "$port" "$SSH_HOST" >> ~/.ssh/known_hosts
 
       - name: Deploy to VPS via rsync
+        if: steps.deploy_config.outputs.ready == 'true'
         run: |
           port="${SSH_PORT:-22}"
           output_dir="${{ steps.build.outputs.output_dir }}"
@@ -177,3 +185,17 @@ jobs:
             -e "ssh -i ~/.ssh/deploy_key -p $port" \
             "$output_dir/" \
             "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
+
+      - name: Validate deployed site
+        if: steps.deploy_config.outputs.ready == 'true'
+        run: |
+          curl -fsSL "$PRODUCTION_URL" > /tmp/live.html
+          if ! grep -q "WW2 Film Map" /tmp/live.html; then
+            echo "Live site validation failed after deploy."
+            exit 1
+          fi
+
+      - name: Deployment skipped
+        if: steps.deploy_config.outputs.ready != 'true'
+        run: |
+          echo "Build completed. Configure SSH_HOST, SSH_USER, SSH_PORT, DEPLOY_PATH, and SSH_PRIVATE_KEY to enable rsync deploys."

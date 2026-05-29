@@ -10,7 +10,8 @@
   >
     <div class="card-body">
       <div class="card-icon-wrapper">
-        <span class="card-icon">{{ event.icon || "⚔️" }}</span>
+        <span v-if="event.icon" class="card-icon">{{ event.icon }}</span>
+        <SwordsIcon v-else class="card-icon" />
       </div>
       <div class="card-text">
         <h3>{{ event.title }}</h3>
@@ -28,6 +29,7 @@
 
 <script setup lang="ts">
 import type { PositionedEvent } from "../../../types/timeline";
+import SwordsIcon from "../icons/SwordsIcon.vue";
 
 const props = defineProps<{
   event: PositionedEvent;
@@ -81,6 +83,11 @@ const formatDate = (dateString: string): string => {
   margin-right: 12px;
   font-size: 1.2rem;
   flex-shrink: 0;
+}
+
+svg.card-icon {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .card-text {

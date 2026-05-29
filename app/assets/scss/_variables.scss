@@ -27,6 +27,11 @@ $bg-darker: rgba(20, 20, 25, 0.98);
 $bg-overlay: rgba(0, 0, 0, 0.85);
 $bg-card: rgba(40, 40, 45, 0.9);
 
+// Solid page and surface (replaces the old diagonal panel gradients)
+$bg-page: #14191e;
+$surface: rgba(20, 25, 30, 0.98);
+$surface-border: rgba(255, 255, 255, 0.12);
+
 // COLORES DE TEXTO
 // ----------------------------------------------------
 $text-primary: #ffffff;
@@ -90,8 +95,10 @@ $timeline-height: 120px;
 $modal-max-width: 900px;
 $info-panel-width: 400px;
 
-// GRADIENTES
+// SUPERFICIES SOLIDAS
 // ----------------------------------------------------
-$gradient-gold: linear-gradient(135deg, $gold 0%, $gold-light 100%);
-$gradient-brown: linear-gradient(135deg, $brown 0%, $brown-dark 100%);
-$gradient-dark: linear-gradient(180deg, $bg-dark 0%, $bg-darker 100%);
+// Kept as variables for the few callers that still reference them; the old
+// diagonal gradients were flattened to solids as part of the visual cleanup.
+$gradient-gold: $gold;
+$gradient-brown: $brown;
+$gradient-dark: $bg-darker;

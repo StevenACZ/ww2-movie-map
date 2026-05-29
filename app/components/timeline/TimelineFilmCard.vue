@@ -19,7 +19,7 @@
 
     <div class="card-body">
       <div class="card-icon-wrapper">
-        <span class="card-icon">🎬</span>
+        <FilmIcon class="card-icon" />
       </div>
       <div class="card-text">
         <h3>{{ film.title }}</h3>
@@ -35,11 +35,19 @@
       <div v-if="isSelected" class="film-popup">
         <button class="close-btn" @click.stop="emit('select', film)">×</button>
         <div class="popup-content">
-          <img :src="film.poster" :alt="film.title" class="popup-poster" />
+          <img
+            :src="film.poster"
+            :alt="film.title"
+            class="popup-poster"
+            loading="lazy"
+            decoding="async"
+          />
           <div class="popup-info">
             <h4>{{ film.title }} ({{ film.year }})</h4>
             <p class="popup-meta">
-              <span class="imdb-rating">⭐ {{ film.imdbRating }}</span>
+              <span class="imdb-rating"
+                ><StarIcon class="rating-star" /> {{ film.imdbRating }}</span
+              >
               <span class="country">{{ film.country }}</span>
             </p>
             <p class="popup-desc">{{ film.synopsis }}</p>
@@ -70,6 +78,8 @@
 
 <script setup lang="ts">
 import type { PositionedFilm } from "../../../types/timeline";
+import FilmIcon from "../icons/FilmIcon.vue";
+import StarIcon from "../icons/StarIcon.vue";
 
 const props = defineProps<{
   film: PositionedFilm;
@@ -127,6 +137,11 @@ const formatEventPeriod = (film: PositionedFilm): string => {
   margin-right: 12px;
   font-size: 1.2rem;
   flex-shrink: 0;
+}
+
+.card-icon {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .card-text {
@@ -280,6 +295,12 @@ const formatEventPeriod = (film: PositionedFilm): string => {
 .imdb-rating {
   color: $beige;
   font-weight: 600;
+
+  .rating-star {
+    width: 0.8rem;
+    height: 0.8rem;
+    vertical-align: -1px;
+  }
 }
 
 .country {

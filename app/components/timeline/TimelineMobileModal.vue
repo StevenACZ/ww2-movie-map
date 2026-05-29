@@ -8,12 +8,16 @@
             :src="film.poster"
             :alt="film.title"
             class="mobile-modal-poster"
+            loading="lazy"
+            decoding="async"
           />
           <div class="mobile-modal-info">
             <h3>{{ film.title }}</h3>
             <p class="mobile-modal-year">{{ film.year }}</p>
             <div class="mobile-modal-meta">
-              <span class="imdb-rating">⭐ {{ film.imdbRating }}</span>
+              <span class="imdb-rating"
+                ><StarIcon class="rating-star" /> {{ film.imdbRating }}</span
+              >
               <span class="country">{{ film.country }}</span>
             </div>
             <p class="mobile-modal-desc">{{ film.synopsis }}</p>
@@ -46,6 +50,7 @@
 
 <script setup lang="ts">
 import type { PositionedFilm } from "../../../types/timeline";
+import StarIcon from "../icons/StarIcon.vue";
 
 defineProps<{
   film: PositionedFilm | null;
@@ -136,6 +141,12 @@ const emit = defineEmits<{
   .imdb-rating {
     color: $beige;
     font-weight: 600;
+
+    .rating-star {
+      width: 0.85rem;
+      height: 0.85rem;
+      vertical-align: -1px;
+    }
   }
 
   .country {

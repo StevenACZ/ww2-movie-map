@@ -58,7 +58,7 @@
         "
         class="empty-state"
       >
-        <span class="empty-icon">📅</span>
+        <CalendarIcon class="empty-icon" />
         <p>No events or films in this period</p>
       </div>
     </div>
@@ -168,6 +168,7 @@ import TimelineFilmCard from "../components/timeline/TimelineFilmCard.vue";
 import TimelineMobileCard from "../components/timeline/TimelineMobileCard.vue";
 import TimelineMobileModal from "../components/timeline/TimelineMobileModal.vue";
 import TimelineNav from "../components/timeline/TimelineNav.vue";
+import CalendarIcon from "../components/icons/CalendarIcon.vue";
 
 const allEvents = eventsData.events as HistoricalEvent[];
 const allFilms = filmsData.films as unknown as Film[];
@@ -372,12 +373,7 @@ const closeTrailer = () => {
 
 .timeline-page {
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 25, 30, 0.98) 0%,
-    rgba(15, 20, 25, 0.96) 50%,
-    rgba(25, 30, 35, 0.95) 100%
-  );
+  background: $bg-page;
   color: $text-primary;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
@@ -434,14 +430,7 @@ const closeTrailer = () => {
     font-size: 3rem;
     font-weight: 800;
     margin: 0 0 $spacing-xs 0;
-    background: linear-gradient(
-      135deg,
-      #ffffff 0%,
-      rgba(255, 255, 255, 0.85) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $text-primary;
     letter-spacing: -1px;
 
     @include mobile {
@@ -565,9 +554,10 @@ const closeTrailer = () => {
 }
 
 .empty-icon {
-  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
   display: block;
-  margin-bottom: $spacing-md;
+  margin: 0 auto $spacing-md;
   opacity: 0.5;
 }
 

@@ -21,14 +21,15 @@
               map
             </li>
             <li>
-              <span class="icon">📍</span>
+              <span class="icon"><MapPinIcon /></span>
               <span class="desktop-only"
                 >Click markers to view film details</span
               >
               <span class="mobile-only">Tap markers to view film details</span>
             </li>
             <li>
-              <span class="icon">⏱️</span> Use the timeline to filter by year
+              <span class="icon"><ClockIcon /></span> Use the timeline to filter
+              by year
             </li>
           </ul>
         </div>
@@ -55,6 +56,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import MapPinIcon from "./icons/MapPinIcon.vue";
+import ClockIcon from "./icons/ClockIcon.vue";
 
 const emit = defineEmits(["close"]);
 
@@ -240,7 +243,14 @@ const handleStart = () => {
 }
 
 .icon {
+  display: inline-flex;
+  align-items: center;
   font-size: 15px;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
 
   @media (max-width: 768px) {
     font-size: 14px;
@@ -335,7 +345,7 @@ const handleStart = () => {
 }
 
 .start-btn {
-  background: linear-gradient(to bottom, $gold, $gold-dark);
+  background: $gold;
   color: #1a1a1a;
   border: none;
   padding: $spacing-md $spacing-xl;
@@ -357,7 +367,7 @@ const handleStart = () => {
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba($gold, 0.4);
-    background: linear-gradient(to bottom, $gold-light, #c4a32a);
+    background: $gold-light;
   }
 
   &:active {
