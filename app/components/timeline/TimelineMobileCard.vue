@@ -4,7 +4,10 @@
     :class="[type === 'event' ? 'event-card' : 'film-card']"
     @click="handleClick"
   >
-    <div class="mobile-card-icon">{{ icon }}</div>
+    <div class="mobile-card-icon">
+      <FilmIcon v-if="type === 'film'" />
+      <template v-else>{{ icon }}</template>
+    </div>
     <div class="mobile-card-content">
       <span class="mobile-card-date">{{ dateLabel }}</span>
       <h3>{{ title }}</h3>
@@ -21,6 +24,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import type { PositionedEvent, PositionedFilm } from "../../../types/timeline";
+import FilmIcon from "../icons/FilmIcon.vue";
 
 const props = defineProps<{
   item: PositionedEvent | PositionedFilm;
@@ -33,10 +37,7 @@ const emit = defineEmits<{
 
 // Computed properties for display
 const icon = computed(() => {
-  if (props.type === "event") {
-    return (props.item as PositionedEvent).icon || "⚔️";
-  }
-  return "🎬";
+  return (props.item as PositionedEvent).icon || "⚔️";
 });
 
 const title = computed(() => props.item.title);
@@ -122,6 +123,11 @@ const handleClick = () => {
   @include flex-center;
   font-size: 1.2rem;
   flex-shrink: 0;
+
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
 }
 
 .mobile-card-content {

@@ -34,7 +34,7 @@
           class="no-results"
           role="status"
         >
-          <div class="no-results-icon" aria-hidden="true">🎬</div>
+          <div class="no-results-icon" aria-hidden="true"><FilmIcon /></div>
           <p class="no-results-text">No films found</p>
           <p class="no-results-hint">Try adjusting your search</p>
         </div>
@@ -72,6 +72,7 @@ import {
 // Import components
 import FilmSearchControls from "../components/films/FilmSearchControls.vue";
 import FilmCard from "../components/films/FilmCard.vue";
+import FilmIcon from "../components/icons/FilmIcon.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -354,8 +355,18 @@ const viewOnMap = (filmId: string) => {
   margin-bottom: $spacing-md;
   opacity: 0.5;
 
+  svg {
+    width: 4rem;
+    height: 4rem;
+  }
+
   @include mobile {
     font-size: 3rem;
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 }
 
