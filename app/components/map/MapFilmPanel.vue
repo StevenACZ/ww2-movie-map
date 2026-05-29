@@ -87,12 +87,8 @@ defineEmits<{
   width: 500px;
   max-width: calc(100vw - 60px);
   z-index: $z-popover;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 25, 30, 0.98) 0%,
-    rgba(15, 20, 25, 0.96) 100%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: $surface;
+  border: 1px solid $surface-border;
   border-radius: 12px;
   overflow: hidden;
   box-shadow:

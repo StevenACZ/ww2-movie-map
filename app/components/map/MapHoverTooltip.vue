@@ -25,11 +25,7 @@ defineProps<{
   left: 50%;
   transform: translateX(-50%);
   z-index: $z-tooltip;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 25, 30, 0.98) 0%,
-    rgba(15, 20, 25, 0.96) 100%
-  );
+  background: $surface;
   border: 2px solid rgba($beige, 0.6);
   border-radius: 10px;
   padding: 14px 28px;

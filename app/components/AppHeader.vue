@@ -225,12 +225,8 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   z-index: $z-header;
-  background: linear-gradient(
-    180deg,
-    rgba(20, 25, 30, 0.98) 0%,
-    rgba(15, 20, 25, 0.96) 100%
-  );
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: $surface;
+  border-bottom: 1px solid $surface-border;
   backdrop-filter: blur(20px) saturate(180%);
   padding: 0;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
@@ -442,12 +438,8 @@ onUnmounted(() => {
   top: 56px;
   left: 0;
   right: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(20, 25, 30, 0.99) 0%,
-    rgba(15, 20, 25, 0.98) 100%
-  );
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: $surface;
+  border-bottom: 1px solid $surface-border;
   backdrop-filter: blur(20px) saturate(180%);
   z-index: 9500;
   padding: $spacing-md;
