@@ -8,6 +8,8 @@
             :src="film.poster"
             :alt="film.title"
             class="mobile-modal-poster"
+            loading="lazy"
+            decoding="async"
           />
           <div class="mobile-modal-info">
             <h3>{{ film.title }}</h3>

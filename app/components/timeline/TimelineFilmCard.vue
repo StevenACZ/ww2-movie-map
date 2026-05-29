@@ -35,7 +35,13 @@
       <div v-if="isSelected" class="film-popup">
         <button class="close-btn" @click.stop="emit('select', film)">×</button>
         <div class="popup-content">
-          <img :src="film.poster" :alt="film.title" class="popup-poster" />
+          <img
+            :src="film.poster"
+            :alt="film.title"
+            class="popup-poster"
+            loading="lazy"
+            decoding="async"
+          />
           <div class="popup-info">
             <h4>{{ film.title }} ({{ film.year }})</h4>
             <p class="popup-meta">

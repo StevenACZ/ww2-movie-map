@@ -8,7 +8,12 @@
       <div class="film-info-content">
         <!-- Poster -->
         <div class="film-poster">
-          <img :src="film.poster" :alt="film.title" />
+          <img
+            :src="film.poster"
+            :alt="film.title"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <!-- Info -->
