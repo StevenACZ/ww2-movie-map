@@ -56,6 +56,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 import type { Film, Location } from "../../types";
 import { useLeafletMap, isMobile } from "../composables/useLeafletMap";
 import { useTimeline } from "../composables/useTimeline";
+import { decodeUrlValue } from "~/utils/seo";
 
 // Import components
 import FilmModal from "./FilmModal.vue";
@@ -67,8 +68,9 @@ import MapFilmPanel from "./map/MapFilmPanel.vue";
 // Import film data
 import filmsData from "../../data/films.json";
 
-// Get route for query params
+// Get route for query/hash params
 const route = useRoute();
+const router = useRouter();
 
 // Get filtered films from timeline
 const { filteredFilms } = useTimeline();
@@ -105,14 +107,26 @@ const { initializeMap, flyToLocation, clearHighlight, resetView, cleanup } =
     onFilmHover: handleFilmHover,
   });
 
-// Handle filmId from URL query parameter
+// Handle filmId from URL query/hash parameter
 const handleFilmIdFromUrl = () => {
-  const filmId = Array.isArray(route.query.filmId)
+  const queryFilmId = Array.isArray(route.query.filmId)
     ? route.query.filmId[0]
     : route.query.filmId;
+  const hashFilmId = route.hash.startsWith("#film-")
+    ? decodeUrlValue(route.hash.slice("#film-".length))
+    : "";
+  const filmId = queryFilmId || hashFilmId;
+
   if (filmId) {
     const film = filmsData.films.find((f) => f.id === filmId);
     if (film) {
+      if (typeof queryFilmId === "string") {
+        void router.replace({
+          path: "/",
+          hash: `#film-${encodeURIComponent(queryFilmId)}`,
+        });
+      }
+
       const primaryLocation = film.locations.find((loc) => loc.isPrimary);
       if (primaryLocation) {
         setTimeout(() => {

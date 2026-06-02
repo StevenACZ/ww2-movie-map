@@ -13,16 +13,21 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import WW2Map from "~/components/WW2Map.vue";
 import {
   buildPageSeo,
   canonicalUrl,
   jsonLdScript,
+  robotsForQuery,
   SITE_URL,
 } from "~/utils/seo";
 
-useSeoMeta(
-  buildPageSeo({
+const route = useRoute();
+const queryAwareRobots = computed(() => robotsForQuery(route.query));
+
+useSeoMeta({
+  ...buildPageSeo({
     path: "/",
     title: "Interactive WW2 Film Map",
     ogTitle: "WW2 Film Map - Explore World War II Films by Location",
@@ -31,9 +36,14 @@ useSeoMeta(
     ogDescription:
       "Discover World War II films plotted on an interactive map, from Normandy and Stalingrad to the Pacific theater.",
   }),
-);
+});
 
 useHead({
+  meta: [
+    { name: "robots", content: queryAwareRobots },
+    { name: "googlebot", content: queryAwareRobots },
+    { name: "twitter:url", content: canonicalUrl("/") },
+  ],
   link: [{ rel: "canonical", href: canonicalUrl("/") }],
   script: [
     jsonLdScript({
