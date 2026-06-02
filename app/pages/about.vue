@@ -352,6 +352,7 @@ useSeoMeta(
 );
 
 useHead({
+  meta: [{ name: "twitter:url", content: canonicalUrl("/about") }],
   link: [{ rel: "canonical", href: canonicalUrl("/about") }],
   script: [
     jsonLdScript({

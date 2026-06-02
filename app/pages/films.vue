@@ -59,13 +59,16 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import { useFilmsFilter, sortOptions } from "../composables/useFilmsFilter";
 import type { Film } from "../../types";
 import filmsData from "../../data/films.json";
 import {
   buildPageSeo,
   canonicalUrl,
+  decodeUrlValue,
   jsonLdScript,
+  robotsForQuery,
   SITE_URL,
 } from "~/utils/seo";
 
@@ -78,9 +81,10 @@ const route = useRoute();
 const router = useRouter();
 
 const films = filmsData.films as Film[];
+const queryAwareRobots = computed(() => robotsForQuery(route.query));
 
-useSeoMeta(
-  buildPageSeo({
+useSeoMeta({
+  ...buildPageSeo({
     path: "/films",
     title: "WW2 Film Collection",
     ogTitle: `World War II Film Collection - ${films.length} Movies`,
@@ -89,9 +93,14 @@ useSeoMeta(
     ogDescription:
       "Browse a curated collection of World War II films with ratings, locations, dates, and map links.",
   }),
-);
+});
 
 useHead({
+  meta: [
+    { name: "robots", content: queryAwareRobots },
+    { name: "googlebot", content: queryAwareRobots },
+    { name: "twitter:url", content: canonicalUrl("/films") },
+  ],
   link: [{ rel: "canonical", href: canonicalUrl("/films") }],
   script: [
     jsonLdScript({
@@ -147,23 +156,41 @@ const { searchQuery, sortBy, filteredFilms, clearSearch } = useFilmsFilter({
   films,
 });
 
-const initialSearch =
-  typeof route.query.search === "string" ? route.query.search : "";
-if (initialSearch) {
-  searchQuery.value = initialSearch;
-}
+const searchHashPrefix = "#search=";
+const searchFromRoute = () => {
+  const querySearch = Array.isArray(route.query.search)
+    ? route.query.search[0]
+    : route.query.search;
 
-watch(searchQuery, async (value) => {
-  const nextQuery = { ...route.query };
-
-  if (value.trim()) {
-    nextQuery.search = value.trim();
-  } else {
-    delete nextQuery.search;
+  if (typeof querySearch === "string") {
+    return querySearch;
   }
 
-  await router.replace({ path: "/films/", query: nextQuery });
+  return route.hash.startsWith(searchHashPrefix)
+    ? decodeUrlValue(route.hash.slice(searchHashPrefix.length))
+    : "";
+};
+
+watch(searchQuery, async (value) => {
+  const trimmed = value.trim();
+
+  await router.replace({
+    path: "/films/",
+    hash: trimmed ? `${searchHashPrefix}${encodeURIComponent(trimmed)}` : "",
+  });
 });
+
+watch(
+  () => [route.query.search, route.hash],
+  () => {
+    const nextSearch = searchFromRoute();
+
+    if (nextSearch !== searchQuery.value) {
+      searchQuery.value = nextSearch;
+    }
+  },
+  { immediate: true },
+);
 
 const totalFilms = films.length;
 
@@ -171,7 +198,7 @@ const totalFilms = films.length;
 const viewOnMap = (filmId: string) => {
   router.push({
     path: "/",
-    query: { filmId },
+    hash: `#film-${encodeURIComponent(filmId)}`,
   });
 };
 </script>

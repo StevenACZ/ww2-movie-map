@@ -9,6 +9,9 @@ export const DEFAULT_OG_IMAGE_WIDTH = 1200;
 export const DEFAULT_OG_IMAGE_HEIGHT = 630;
 export const DEFAULT_OG_IMAGE_ALT =
   "WW2 Film Map showing World War II cinema locations and historical context";
+export const INDEXABLE_ROBOTS =
+  "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
+export const NOINDEX_FOLLOW_ROBOTS = "noindex, follow";
 
 export const SITE_ROUTES = [
   {
@@ -40,6 +43,20 @@ export function canonicalUrl(path: string): string {
   // match the URL Google actually indexes.
   const normalized = path.endsWith("/") ? path : `${path}/`;
   return `${SITE_URL}${normalized}`;
+}
+
+export function robotsForQuery(query: Record<string, unknown>): string {
+  return Object.keys(query).length > 0
+    ? NOINDEX_FOLLOW_ROBOTS
+    : INDEXABLE_ROBOTS;
+}
+
+export function decodeUrlValue(value: string): string {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
 }
 
 export function buildPageSeo({
