@@ -25,6 +25,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import type { PositionedEvent, PositionedFilm } from "../../../types/timeline";
+import { formatHistoricalDate } from "../../utils/timelineDates";
 import FilmIcon from "../icons/FilmIcon.vue";
 import SwordsIcon from "../icons/SwordsIcon.vue";
 
@@ -53,14 +54,8 @@ const dateLabel = computed(() => {
   return `${film.year} • ${formatEventPeriod(film)}`;
 });
 
-// Date formatter
 const formatDate = (dateString: string): string => {
-  const options: Intl.DateTimeFormatOptions = {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  };
-  return new Date(dateString).toLocaleDateString("en-US", options);
+  return formatHistoricalDate(dateString);
 };
 
 // Format event period display

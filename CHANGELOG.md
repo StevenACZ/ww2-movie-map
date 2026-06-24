@@ -19,6 +19,10 @@ The format is based on [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.
 - Kept `AGENTS.md` as the public maintenance guide and `CLAUDE.md` as a pointer.
 - Ignored local `docs/` notes.
 
+### Fixed
+
+- Stabilized timeline date rendering across server and browser time zones to avoid hydration mismatches.
+
 ### Security
 
 - Hardened external content handling for trailers, map marker images, CSP, `target="_blank"` links, and audit coverage.

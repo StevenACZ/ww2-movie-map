@@ -7,6 +7,10 @@ import type {
   PositionedEvent,
   PositionedFilm,
 } from "../../types/timeline";
+import {
+  getUtcYearStartTime,
+  parseHistoricalDateUtc,
+} from "../utils/timelineDates";
 
 interface UseTimelinePositioningOptions {
   events: Ref<HistoricalEvent[]>;
@@ -52,21 +56,21 @@ export const useTimelinePositioning = ({
    * Uses precise date calculation for accurate timeline placement
    */
   const calculatePosition = (dateString: string): number => {
-    const date = new Date(dateString);
-    const year = date.getFullYear();
+    const date = parseHistoricalDateUtc(dateString);
+    const year = date.getUTCFullYear();
 
     // Filter items outside the visible range
     if (year < visibleStartYear.value || year > visibleEndYear.value)
       return -999;
 
     // Calculate total days from the start of the visible range
-    const startOfRange = new Date(visibleStartYear.value, 0, 1);
-    const endOfRange = new Date(visibleEndYear.value + 1, 0, 1);
+    const startOfRange = getUtcYearStartTime(visibleStartYear.value);
+    const endOfRange = getUtcYearStartTime(visibleEndYear.value + 1);
 
     const totalDaysInRange =
-      (endOfRange.getTime() - startOfRange.getTime()) / (1000 * 60 * 60 * 24);
+      (endOfRange - startOfRange) / (1000 * 60 * 60 * 24);
     const daysFromStart =
-      (date.getTime() - startOfRange.getTime()) / (1000 * 60 * 60 * 24);
+      (date.getTime() - startOfRange) / (1000 * 60 * 60 * 24);
 
     // Calculate progress percentage within the range
     const progress = daysFromStart / totalDaysInRange;
@@ -82,14 +86,13 @@ export const useTimelinePositioning = ({
    * Calculate position for year markers
    */
   const getYearPosition = (year: number): number => {
-    const startOfRange = new Date(visibleStartYear.value, 0, 1);
-    const endOfRange = new Date(visibleEndYear.value + 1, 0, 1);
-    const yearDate = new Date(year, 0, 1);
+    const startOfRange = getUtcYearStartTime(visibleStartYear.value);
+    const endOfRange = getUtcYearStartTime(visibleEndYear.value + 1);
+    const yearDate = getUtcYearStartTime(year);
 
     const totalDaysInRange =
-      (endOfRange.getTime() - startOfRange.getTime()) / (1000 * 60 * 60 * 24);
-    const daysFromStart =
-      (yearDate.getTime() - startOfRange.getTime()) / (1000 * 60 * 60 * 24);
+      (endOfRange - startOfRange) / (1000 * 60 * 60 * 24);
+    const daysFromStart = (yearDate - startOfRange) / (1000 * 60 * 60 * 24);
 
     const progress = daysFromStart / totalDaysInRange;
 
