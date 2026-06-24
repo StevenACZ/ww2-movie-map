@@ -29,6 +29,7 @@
 
 <script setup lang="ts">
 import type { PositionedEvent } from "../../../types/timeline";
+import { formatHistoricalDate } from "../../utils/timelineDates";
 import SwordsIcon from "../icons/SwordsIcon.vue";
 
 const props = defineProps<{
@@ -36,14 +37,8 @@ const props = defineProps<{
   index: number;
 }>();
 
-// Date formatter
 const formatDate = (dateString: string): string => {
-  const options: Intl.DateTimeFormatOptions = {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  };
-  return new Date(dateString).toLocaleDateString("en-US", options);
+  return formatHistoricalDate(dateString);
 };
 </script>
 
