@@ -10,17 +10,17 @@ permissions:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, X64, prod-lan, ww2-movie-map]
     concurrency:
       group: deploy-${{ github.repository }}
       cancel-in-progress: true
     env:
       SSH_HOST: ${{ vars.SSH_HOST }}
       SSH_USER: ${{ vars.SSH_USER }}
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       SSH_PORT: ${{ vars.SSH_PORT }}
       DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
       SSH_KNOWN_HOSTS: ${{ vars.SSH_KNOWN_HOSTS }}
+      LOCAL_SSH_KEY: /home/steven/.ssh/prod_vps_deploy
       PRODUCTION_URL: https://ww2.stevenacz.com
     steps:
       - name: Checkout code
@@ -153,8 +153,8 @@ jobs:
             echo "Missing variable: SSH_USER"
             ready=false
           fi
-          if [ -z "$SSH_PRIVATE_KEY" ]; then
-            echo "Missing secret: SSH_PRIVATE_KEY"
+          if [ ! -f "$LOCAL_SSH_KEY" ]; then
+            echo "Missing local runner deploy key: $LOCAL_SSH_KEY"
             ready=false
           fi
           if [ -z "$DEPLOY_PATH" ]; then
@@ -179,7 +179,7 @@ jobs:
         if: steps.deploy_config.outputs.ready == 'true'
         run: |
           mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          cp "$LOCAL_SSH_KEY" ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           port="${SSH_PORT:-22}"
           : "${SSH_KNOWN_HOSTS:?Set SSH_KNOWN_HOSTS repo variable}"
@@ -211,4 +211,4 @@ jobs:
       - name: Deployment skipped
         if: steps.deploy_config.outputs.ready != 'true'
         run: |
-          echo "Build completed. Configure SSH_HOST, SSH_USER, SSH_PORT, DEPLOY_PATH, and SSH_PRIVATE_KEY to enable rsync deploys."
+          echo "Build completed. Configure SSH_HOST, SSH_USER, SSH_PORT, DEPLOY_PATH, SSH_KNOWN_HOSTS, and the local runner deploy key to enable rsync deploys."
