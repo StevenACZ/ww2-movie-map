@@ -32,14 +32,14 @@ export const useTimelinePositioning = ({
   periods,
 }: UseTimelinePositioningOptions) => {
   const currentPeriod = computed(
-    () => periods[currentPeriodIndex.value] ?? periods[0] ?? fallbackPeriod,
+    () => periods[currentPeriodIndex.value] ?? periods[0] ?? fallbackPeriod
   );
 
   // Computed values for current period
   const visibleStartYear = computed(() => currentPeriod.value.start);
   const visibleEndYear = computed(() => currentPeriod.value.end);
   const totalVisibleYears = computed(
-    () => visibleEndYear.value - visibleStartYear.value + 1,
+    () => visibleEndYear.value - visibleStartYear.value + 1
   );
 
   // Generate visible years array
@@ -107,13 +107,13 @@ export const useTimelinePositioning = ({
    * Uses level-based stacking to prevent overlaps
    */
   const resolveCollisions = <T extends { position: number }>(
-    items: T[],
+    items: T[]
   ): (T & { offsetY: number; connectorHeight: number; level: number })[] => {
     if (items.length === 0) return [];
 
     // Filter visible items first
     const visibleItems = items.filter(
-      (item) => item.position > -10 && item.position < 110,
+      (item) => item.position > -10 && item.position < 110
     );
 
     const result = visibleItems.map((item) => ({

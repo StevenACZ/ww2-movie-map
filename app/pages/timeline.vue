@@ -196,7 +196,7 @@ useSeoMeta(
       "Navigate a World War II timeline from 1936 to 1945. Explore key historical events and the films that portray them, from the Spanish Civil War to the end of the Pacific War.",
     ogDescription:
       "Explore key World War II events and related films in an interactive timeline from 1936 to 1945.",
-  }),
+  })
 );
 
 useHead({
@@ -244,7 +244,7 @@ useHead({
 // State
 const events = ref<HistoricalEvent[]>(allEvents);
 const films = ref<Film[]>(
-  allFilms.filter((film) => timelineFilmIds.includes(film.id)),
+  allFilms.filter((film) => timelineFilmIds.includes(film.id))
 );
 const selectedFilm = ref<PositionedFilm | null>(null);
 const mobileSelectedFilm = ref<PositionedFilm | null>(null);

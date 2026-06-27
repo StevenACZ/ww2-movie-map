@@ -348,7 +348,7 @@ useSeoMeta(
       "Learn about WW2 Film Map, a free interactive project that connects World War II history, film locations, and a curated cinema timeline.",
     ogDescription:
       "Learn about the mission behind WW2 Film Map and the public cinema-history project by StevenACZ.",
-  }),
+  })
 );
 
 useHead({

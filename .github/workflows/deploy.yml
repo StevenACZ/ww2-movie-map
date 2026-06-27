@@ -20,7 +20,8 @@ jobs:
       SSH_PORT: ${{ vars.SSH_PORT }}
       DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
       SSH_KNOWN_HOSTS: ${{ vars.SSH_KNOWN_HOSTS }}
-      LOCAL_SSH_KEY: /home/steven/.ssh/prod_vps_deploy
+      LOCAL_SSH_KEY: ${{ vars.LOCAL_SSH_KEY_PATH }}
+      DEPLOY_PATH_PREFIX: ${{ vars.DEPLOY_PATH_PREFIX }}
       PRODUCTION_URL: https://ww2.stevenacz.com
     steps:
       - name: Checkout code
@@ -153,8 +154,11 @@ jobs:
             echo "Missing variable: SSH_USER"
             ready=false
           fi
-          if [ ! -f "$LOCAL_SSH_KEY" ]; then
-            echo "Missing local runner deploy key: $LOCAL_SSH_KEY"
+          if [ -z "$LOCAL_SSH_KEY" ]; then
+            echo "Missing variable: LOCAL_SSH_KEY_PATH"
+            ready=false
+          elif [ ! -f "$LOCAL_SSH_KEY" ]; then
+            echo "Missing deploy key file."
             ready=false
           fi
           if [ -z "$DEPLOY_PATH" ]; then
@@ -165,10 +169,12 @@ jobs:
             echo "DEPLOY_PATH cannot be /."
             exit 1
           fi
-          case "$DEPLOY_PATH" in
-            /home/steven/applications/*) : ;;
-            *) echo "DEPLOY_PATH must be under /home/steven/applications/"; exit 1 ;;
-          esac
+          if [ -n "$DEPLOY_PATH_PREFIX" ]; then
+            case "$DEPLOY_PATH" in
+              "$DEPLOY_PATH_PREFIX"/*) : ;;
+              *) echo "DEPLOY_PATH must be under the configured prefix."; exit 1 ;;
+            esac
+          fi
           case "$DEPLOY_PATH" in
             *..*) echo "DEPLOY_PATH must not contain '..'"; exit 1 ;;
           esac
@@ -186,7 +192,7 @@ jobs:
           echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
-      - name: Deploy to VPS via rsync
+      - name: Deploy to production host
         if: steps.deploy_config.outputs.ready == 'true'
         run: |
           port="${SSH_PORT:-22}"
@@ -211,4 +217,4 @@ jobs:
       - name: Deployment skipped
         if: steps.deploy_config.outputs.ready != 'true'
         run: |
-          echo "Build completed. Configure SSH_HOST, SSH_USER, SSH_PORT, DEPLOY_PATH, SSH_KNOWN_HOSTS, and the local runner deploy key to enable rsync deploys."
+          echo "Build completed. Configure SSH_HOST, SSH_USER, SSH_PORT, DEPLOY_PATH, SSH_KNOWN_HOSTS, LOCAL_SSH_KEY_PATH, and DEPLOY_PATH_PREFIX to enable deploys."
