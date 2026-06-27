@@ -12,6 +12,12 @@ Public Nuxt app for WW2 Movie Map. Keep it production-safe, historically focused
 - Do not add external scripts, embeds, fonts, map providers, or analytics without updating the CSP and documenting the reason.
 - Use only public HTTPS URLs for film, map, trailer, and metadata references.
 
+## Assistant Surface
+
+- `AGENTS.md` is the source of truth for repo guidance.
+- `CLAUDE.md` must stay a one-line pointer: `@AGENTS.md`.
+- Do not add repo-local `.agents/skills/` or `.claude/skills/` unless a reusable WW2 Movie Map workflow genuinely needs a custom skill. If skills are added later, `.agents/skills/` is canonical and `.claude/skills/*` must be symlinks to it.
+
 ## Project Overview
 
 | Field   | Value                                                                  |
@@ -93,12 +99,11 @@ Film data lives in `data/films.json` and must match `types/index.ts`. Locations 
 Before marking work complete, run:
 
 ```bash
-bun run format:check
-bun run typecheck
-bun run build
-bun run generate
-bun audit
+bun run format
+bun run verify
 ```
+
+Run the same verification before any commit or push. `bun run verify` expands to formatting check, Nuxt typecheck, build, static generation, and dependency audit.
 
 For SEO work, inspect generated output for:
 

@@ -12,6 +12,7 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
+- Standardized frontend repository tooling, assistant guidance, formatting configuration, and verification scripts.
 - Improved page-level SEO metadata, canonical URLs, structured data, robots, manifests, and PWA icons.
 - Updated README and agent maintenance guidance for the current Nuxt/Vue static deployment flow.
 - Updated Nuxt, Vue, `@nuxtjs/sitemap`, Sass, and related build dependencies to patched current releases.

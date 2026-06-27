@@ -13,7 +13,7 @@ export const parseHistoricalDateUtc = (dateString: string): Date => {
   }
 
   return new Date(
-    Date.UTC(Number(match[1]!), Number(match[2]!) - 1, Number(match[3]!)),
+    Date.UTC(Number(match[1]!), Number(match[2]!) - 1, Number(match[3]!))
   );
 };
 

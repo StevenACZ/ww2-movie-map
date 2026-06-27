@@ -136,7 +136,7 @@ watch(
     } else {
       document.body.style.overflow = "";
     }
-  },
+  }
 );
 
 // Add escape key listener on mount

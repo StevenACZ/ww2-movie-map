@@ -61,6 +61,7 @@ bun run typecheck
 bun run build
 bun run generate
 bun audit
+bun run verify
 ```
 
 ## Deployment
@@ -70,9 +71,9 @@ Production deploys are handled by GitHub Actions on pushes to `main`.
 The deploy workflow:
 
 - installs dependencies with Bun,
-- runs format/typecheck/audit checks when available,
+- runs strict format/typecheck/audit checks when available,
 - generates the static site,
-- deploys the generated public output to the configured VPS path with `rsync`.
+- publishes the generated public output to the configured production target.
 
 ## Project Structure
 

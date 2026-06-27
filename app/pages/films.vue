@@ -189,7 +189,7 @@ watch(
       searchQuery.value = nextSearch;
     }
   },
-  { immediate: true },
+  { immediate: true }
 );
 
 const totalFilms = films.length;
