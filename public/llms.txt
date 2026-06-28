@@ -5,7 +5,6 @@ Films page: https://ww2.stevenacz.com/films/
 Timeline page: https://ww2.stevenacz.com/timeline/
 About page: https://ww2.stevenacz.com/about/
 Source code: https://github.com/StevenACZ/ww2-movie-map
-X: https://x.com/StevenACZ
 
 WW2 Film Map is an interactive World War II cinema guide by Steven Coaila Zaa
 (StevenACZ). It helps visitors explore WW2 movies by location, historical

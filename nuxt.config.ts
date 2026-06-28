@@ -123,30 +123,6 @@ export default defineNuxtConfig({
         { property: "og:site_name", content: "WW2 Film Map" },
         { property: "og:locale", content: "en_US" },
 
-        // Twitter Card
-        { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:site", content: "@StevenACZ" },
-        { name: "twitter:creator", content: "@StevenACZ" },
-        { name: "twitter:url", content: homeUrl },
-        {
-          name: "twitter:title",
-          content: "WW2 Film Map - Interactive World War II Cinema Experience",
-        },
-        {
-          name: "twitter:description",
-          content:
-            "Explore World War II movies through an interactive film map, curated WW2 cinema collection, and timeline.",
-        },
-        {
-          name: "twitter:image",
-          content: ogImageUrl,
-        },
-        {
-          name: "twitter:image:alt",
-          content:
-            "WW2 Film Map showing World War II cinema locations and historical context",
-        },
-
         // Additional SEO
         { name: "application-name", content: "WW2 Film Map" },
         { name: "apple-mobile-web-app-title", content: "WW2 Film Map" },

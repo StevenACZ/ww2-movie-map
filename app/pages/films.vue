@@ -99,7 +99,6 @@ useHead({
   meta: [
     { name: "robots", content: queryAwareRobots },
     { name: "googlebot", content: queryAwareRobots },
-    { name: "twitter:url", content: canonicalUrl("/films") },
   ],
   link: [{ rel: "canonical", href: canonicalUrl("/films") }],
   script: [

@@ -89,11 +89,6 @@ export function buildPageSeo({
     ogImageAlt: imageAlt,
     ogImageWidth: DEFAULT_OG_IMAGE_WIDTH,
     ogImageHeight: DEFAULT_OG_IMAGE_HEIGHT,
-    twitterCard: "summary_large_image",
-    twitterTitle: ogTitle ?? title,
-    twitterDescription: ogDescription ?? description,
-    twitterImage: DEFAULT_OG_IMAGE,
-    twitterImageAlt: imageAlt,
   } as const;
 }
 
@@ -127,11 +122,7 @@ export function siteGraph() {
         name: "Steven Coaila Zaa",
         alternateName: "StevenACZ",
         url: "https://stevenacz.com",
-        sameAs: [
-          "https://stevenacz.com",
-          "https://github.com/StevenACZ",
-          "https://x.com/StevenACZ",
-        ],
+        sameAs: ["https://stevenacz.com", "https://github.com/StevenACZ"],
       },
       {
         "@type": "BreadcrumbList",
