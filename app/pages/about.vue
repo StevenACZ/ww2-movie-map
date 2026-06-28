@@ -184,47 +184,6 @@
           </a>
 
           <a
-            href="https://x.com/StevenACZ"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link-card"
-          >
-            <div class="link-icon x-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 4l16 16M20 4L4 20"
-                />
-              </svg>
-            </div>
-            <div class="link-content">
-              <span class="link-label">X Profile</span>
-              <span class="link-url">@StevenACZ</span>
-            </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="link-arrow"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
-          </a>
-
-          <a
             href="https://github.com/StevenACZ/ww2-movie-map"
             target="_blank"
             rel="noopener noreferrer"
@@ -352,7 +311,6 @@ useSeoMeta(
 );
 
 useHead({
-  meta: [{ name: "twitter:url", content: canonicalUrl("/about") }],
   link: [{ rel: "canonical", href: canonicalUrl("/about") }],
   script: [
     jsonLdScript({
@@ -840,11 +798,6 @@ useHead({
   &.github-icon {
     background: rgba(255, 255, 255, 0.1);
     color: $text-primary;
-  }
-
-  &.x-icon {
-    background: rgba($info, 0.15);
-    color: $info;
   }
 
   &.code-icon {

@@ -42,7 +42,6 @@ useHead({
   meta: [
     { name: "robots", content: queryAwareRobots },
     { name: "googlebot", content: queryAwareRobots },
-    { name: "twitter:url", content: canonicalUrl("/") },
   ],
   link: [{ rel: "canonical", href: canonicalUrl("/") }],
   script: [

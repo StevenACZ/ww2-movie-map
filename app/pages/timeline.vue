@@ -200,7 +200,6 @@ useSeoMeta(
 );
 
 useHead({
-  meta: [{ name: "twitter:url", content: canonicalUrl("/timeline") }],
   link: [{ rel: "canonical", href: canonicalUrl("/timeline") }],
   script: [
     jsonLdScript({
