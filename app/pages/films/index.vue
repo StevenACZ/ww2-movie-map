@@ -60,9 +60,9 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { useFilmsFilter, sortOptions } from "../composables/useFilmsFilter";
-import type { Film } from "../../types";
-import filmsData from "../../data/films.json";
+import { useFilmsFilter, sortOptions } from "../../composables/useFilmsFilter";
+import type { Film } from "../../../types";
+import filmsData from "../../../data/films.json";
 import {
   buildPageSeo,
   canonicalUrl,
@@ -73,9 +73,9 @@ import {
 } from "~/utils/seo";
 
 // Import components
-import FilmSearchControls from "../components/films/FilmSearchControls.vue";
-import FilmCard from "../components/films/FilmCard.vue";
-import FilmIcon from "../components/icons/FilmIcon.vue";
+import FilmSearchControls from "../../components/films/FilmSearchControls.vue";
+import FilmCard from "../../components/films/FilmCard.vue";
+import FilmIcon from "../../components/icons/FilmIcon.vue";
 
 const route = useRoute();
 const router = useRouter();
