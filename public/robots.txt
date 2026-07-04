@@ -5,6 +5,8 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /_nuxt/builds/
+# Cloudflare internal endpoints (email-protection, RUM) — not real pages
+Disallow: /cdn-cgi/
 
 User-agent: OAI-SearchBot
 Allow: /
