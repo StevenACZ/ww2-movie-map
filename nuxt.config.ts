@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import filmsData from "./data/films.json";
+
 const siteUrl = "https://ww2.stevenacz.com";
 const homeUrl = `${siteUrl}/`;
 const ogImageUrl = `${siteUrl}/og-image-20260518.png`;
@@ -191,7 +193,13 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ["/", "/films", "/timeline", "/about"],
+      routes: [
+        "/",
+        "/films",
+        "/timeline",
+        "/about",
+        ...filmsData.films.map((film) => `/films/${film.id}`),
+      ],
     },
     compressPublicAssets: true,
     // Output to dist folder for easier deployment

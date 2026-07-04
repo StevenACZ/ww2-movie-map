@@ -6,7 +6,11 @@
     itemtype="https://schema.org/Movie"
   >
     <!-- Poster Section -->
-    <div class="poster-section">
+    <NuxtLink
+      :to="detailPath"
+      class="poster-section"
+      :aria-label="`${film.title} film details`"
+    >
       <img
         :src="film.poster"
         :alt="`${film.title} movie poster`"
@@ -29,12 +33,16 @@
           </time>
         </div>
       </div>
-    </div>
+    </NuxtLink>
 
     <!-- Content Section -->
     <div class="content-section">
       <div class="content-header">
-        <h3 class="film-title" itemprop="name">{{ film.title }}</h3>
+        <h3 class="film-title" itemprop="name">
+          <NuxtLink :to="detailPath" class="title-link">{{
+            film.title
+          }}</NuxtLink>
+        </h3>
         <div class="film-meta">
           <span class="meta-country" itemprop="countryOfOrigin">{{
             film.country
@@ -90,6 +98,13 @@
 
       <!-- Actions -->
       <div class="actions-section">
+        <NuxtLink
+          :to="detailPath"
+          class="action-btn details-btn"
+          :aria-label="`${film.title} details, locations, and trailer`"
+        >
+          <span>Details</span>
+        </NuxtLink>
         <a
           :href="wikipediaUrl"
           target="_blank"
@@ -158,6 +173,8 @@ const props = defineProps<{
   index: number;
 }>();
 
+const detailPath = computed(() => `/films/${props.film.id}/`);
+
 defineEmits<{
   (e: "viewOnMap", filmId: string): void;
 }>();
@@ -200,8 +217,11 @@ const wikipediaUrl = computed(() => {
 // Poster Section
 .poster-section {
   position: relative;
+  display: block;
   height: 280px;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
 
   @include mobile {
     height: 220px;
@@ -323,6 +343,16 @@ const wikipediaUrl = computed(() => {
   color: $text-primary;
   margin: 0;
   line-height: 1.3;
+
+  .title-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $beige;
+    }
+  }
 
   @include mobile {
     font-size: 1.1rem;
@@ -501,7 +531,8 @@ const wikipediaUrl = computed(() => {
   }
 }
 
-.wiki-btn {
+.wiki-btn,
+.details-btn {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: $text-primary;

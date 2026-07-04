@@ -214,6 +214,21 @@ jobs:
             exit 1
           fi
 
+          # SEO-critical endpoints: robots.txt and the sitemap it declares
+          # must return 200 with valid content after deploy.
+          curl -fsSL "$PRODUCTION_URL/robots.txt" > /tmp/robots.txt
+          sitemap_url=$(grep -i "^Sitemap:" /tmp/robots.txt | head -1 | awk '{print $2}' | tr -d "\r")
+          if [ -z "$sitemap_url" ]; then
+            echo "robots.txt missing Sitemap declaration."
+            exit 1
+          fi
+
+          curl -fsSL "$sitemap_url" > /tmp/sitemap.xml
+          if ! grep -qE "<(urlset|sitemapindex)" /tmp/sitemap.xml; then
+            echo "Sitemap did not return valid XML."
+            exit 1
+          fi
+
       - name: Deployment skipped
         if: steps.deploy_config.outputs.ready != 'true'
         run: |
