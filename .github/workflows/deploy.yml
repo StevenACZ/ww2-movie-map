@@ -11,9 +11,10 @@ permissions:
 jobs:
   deploy:
     runs-on: [self-hosted, Linux, X64, prod-lan, ww2-movie-map]
+    timeout-minutes: 20
     concurrency:
       group: deploy-${{ github.repository }}
-      cancel-in-progress: true
+      cancel-in-progress: false
     env:
       SSH_HOST: ${{ vars.SSH_HOST }}
       SSH_USER: ${{ vars.SSH_USER }}
@@ -200,7 +201,8 @@ jobs:
 
           ssh -i ~/.ssh/deploy_key -p "$port" "$SSH_USER@$SSH_HOST" "mkdir -p '$DEPLOY_PATH'"
 
-          rsync -avz --delete --chmod=D755,F644 \
+          rsync -avz --delete --delete-delay --delay-updates \
+            --chmod=D755,F644 \
             -e "ssh -i ~/.ssh/deploy_key -p $port" \
             "$output_dir/" \
             "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
@@ -208,23 +210,23 @@ jobs:
       - name: Validate deployed site
         if: steps.deploy_config.outputs.ready == 'true'
         run: |
-          curl -fsSL "$PRODUCTION_URL" > /tmp/live.html
-          if ! grep -q "WW2 Film Map" /tmp/live.html; then
+          curl -fsSL "$PRODUCTION_URL" > "$RUNNER_TEMP/live.html"
+          if ! grep -q "WW2 Film Map" "$RUNNER_TEMP/live.html"; then
             echo "Live site validation failed after deploy."
             exit 1
           fi
 
           # SEO-critical endpoints: robots.txt and the sitemap it declares
           # must return 200 with valid content after deploy.
-          curl -fsSL "$PRODUCTION_URL/robots.txt" > /tmp/robots.txt
-          sitemap_url=$(grep -i "^Sitemap:" /tmp/robots.txt | head -1 | awk '{print $2}' | tr -d "\r")
+          curl -fsSL "$PRODUCTION_URL/robots.txt" > "$RUNNER_TEMP/robots.txt"
+          sitemap_url=$(grep -i "^Sitemap:" "$RUNNER_TEMP/robots.txt" | head -1 | awk '{print $2}' | tr -d "\r")
           if [ -z "$sitemap_url" ]; then
             echo "robots.txt missing Sitemap declaration."
             exit 1
           fi
 
-          curl -fsSL "$sitemap_url" > /tmp/sitemap.xml
-          if ! grep -qE "<(urlset|sitemapindex)" /tmp/sitemap.xml; then
+          curl -fsSL "$sitemap_url" > "$RUNNER_TEMP/sitemap.xml"
+          if ! grep -qE "<(urlset|sitemapindex)" "$RUNNER_TEMP/sitemap.xml"; then
             echo "Sitemap did not return valid XML."
             exit 1
           fi

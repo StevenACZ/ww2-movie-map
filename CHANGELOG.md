@@ -23,6 +23,7 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Fixed
 
 - Stabilized timeline date rendering across server and browser time zones to avoid hydration mismatches.
+- Hardened the deploy workflow so a superseded run cannot leave the live docroot half-synced, post-deploy validation cannot pass against another site, and a hung run cannot hold the concurrency group.
 
 ### Security
 
