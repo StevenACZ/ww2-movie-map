@@ -11,6 +11,7 @@ permissions:
 jobs:
   deploy:
     runs-on: [self-hosted, Linux, X64, prod-lan, ww2-movie-map]
+    timeout-minutes: 20
     concurrency:
       group: deploy-${{ github.repository }}
       cancel-in-progress: false
@@ -200,7 +201,8 @@ jobs:
 
           ssh -i ~/.ssh/deploy_key -p "$port" "$SSH_USER@$SSH_HOST" "mkdir -p '$DEPLOY_PATH'"
 
-          rsync -avz --delete --chmod=D755,F644 \
+          rsync -avz --delete --delete-delay --delay-updates \
+            --chmod=D755,F644 \
             -e "ssh -i ~/.ssh/deploy_key -p $port" \
             "$output_dir/" \
             "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
