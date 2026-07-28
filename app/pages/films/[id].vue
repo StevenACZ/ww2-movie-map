@@ -67,6 +67,13 @@
             <h2 id="events-heading" class="section-heading">
               Historical setting
             </h2>
+            <p
+              v-for="paragraph in film.historicalContext ?? []"
+              :key="paragraph.slice(0, 40)"
+              class="setting-text"
+            >
+              {{ paragraph }}
+            </p>
             <p class="setting-text">
               The events portrayed in {{ film.title }} take place in
               <strong>{{ eventPeriod }}</strong

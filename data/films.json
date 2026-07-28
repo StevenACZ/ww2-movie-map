@@ -13,6 +13,10 @@
       "country": "Germany",
       "poster": "https://upload.wikimedia.org/wikipedia/en/3/3d/Stalingrad_film.jpg",
       "synopsis": "German soldiers face the brutal reality of the Battle of Stalingrad during World War II.",
+      "historicalContext": [
+        "Joseph Vilsmaier's Stalingrad follows a German assault-engineer platoon pulled from the Italian coast in the summer of 1942 and thrown into the fight for the city on the Volga, where the Wehrmacht's 6th Army wore itself down in house-to-house combat against determined Soviet defenders.",
+        "After the Soviet counter-offensive, Operation Uranus, closed the ring in November 1942, roughly a quarter of a million Axis soldiers were trapped in the pocket without adequate winter clothing or supplies; the starving remnants of the 6th Army surrendered in early February 1943. Told from the perspective of ordinary soldiers, the film stands as one of German cinema's most unflinching anti-war statements about the Eastern Front."
+      ],
       "locations": [
         {
           "name": "Stalingrad",
@@ -94,6 +98,10 @@
       "country": "United States",
       "poster": "https://image.tmdb.org/t/p/w500/c8Ass7acuOe4za6DhSattE359gr.jpg",
       "synopsis": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+      "historicalContext": [
+        "Steven Spielberg's Schindler's List dramatizes the true story of Oskar Schindler, a German industrialist and Nazi Party member who protected more than a thousand Jewish workers by employing them in his Kraków enamelware factory and later moving them to a munitions plant in Brünnlitz. The film passes through the liquidation of the Kraków ghetto and the Płaszów forced-labor camp commanded by Amon Göth.",
+        "Adapted from Thomas Keneally's book Schindler's Ark and shot largely in black and white on location in Kraków, the film won seven Academy Awards, including Best Picture and Spielberg's first win for Best Director. Schindler was later recognized by Yad Vashem as Righteous Among the Nations."
+      ],
       "locations": [
         {
           "name": "Kraków",
@@ -119,6 +127,10 @@
       "country": "France",
       "poster": "https://upload.wikimedia.org/wikipedia/en/a/a6/The_Pianist_movie.jpg",
       "synopsis": "A Polish Jewish radio station pianist sees Warsaw change gradually as World War II begins.",
+      "historicalContext": [
+        "The Pianist is Roman Polanski's adaptation of Władysław Szpilman's memoir. Szpilman, a celebrated pianist on Polish radio, survived the German occupation of Warsaw from the first bombs of 1939 through the sealing of the Warsaw Ghetto, the deportation of his entire family to Treblinka, and years spent hiding in the ruined city.",
+        "From his hiding places Szpilman witnesses the Warsaw Ghetto Uprising of 1943 and the citywide Warsaw Uprising of 1944; near the war's end he was discovered — and quietly helped — by the German officer Wilm Hosenfeld. The film won the Palme d'Or and three Academy Awards, with Adrien Brody becoming the youngest Best Actor winner and Polanski, himself a child survivor of the Kraków ghetto, taking Best Director."
+      ],
       "locations": [
         {
           "name": "Warsaw",
@@ -460,6 +472,10 @@
       "country": "USA",
       "poster": "https://upload.wikimedia.org/wikipedia/en/f/f2/70_patton.jpg",
       "synopsis": "The World War II phase of the controversial American General George S. Patton, from his leadership in North Africa, through the invasion of Sicily, and the liberation of France and Germany.",
+      "historicalContext": [
+        "Patton follows General George S. Patton from his arrival in North Africa after the American defeat at Kasserine Pass, through the victory at El Guettar and the race across Sicily, to the slapping incidents that nearly ended his career, his service as a decoy before the Normandy landings, and the Third Army's drive across France that relieved Bastogne during the Battle of the Bulge.",
+        "Released in 1970 with a screenplay co-written by Francis Ford Coppola and Edmund H. North, the film opens with its famous monologue delivered before an enormous American flag and won seven Academy Awards, including Best Picture; George C. Scott won — and declined — the Best Actor award for his portrayal."
+      ],
       "locations": [
         {
           "name": "Tunisia",
@@ -704,6 +720,10 @@
       "country": "United States",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTU3YzY0NjktMmRhMC00MzYyLWI0YmUtZGJkMzJjMWYwZDZkXkEyXkFqcGc@._V1_FMjpg_UY1010_.jpg",
       "synopsis": "Commander Ernest Krause leads a convoy of 37 Allied ships across the treacherous North Atlantic while being pursued by a German U-boat wolfpack during the Battle of the Atlantic.",
+      "historicalContext": [
+        "Greyhound adapts C. S. Forester's 1955 novel The Good Shepherd, with Tom Hanks writing the screenplay and starring as Commander Ernest Krause, a first-time escort commander aboard the destroyer USS Keeling, call sign Greyhound. The story unfolds in early 1942, at the height of the Battle of the Atlantic, as an Allied convoy crosses the \"Black Pit\" — the mid-ocean gap beyond the reach of friendly air cover — shadowed by a German U-boat wolfpack.",
+        "The film compresses the escort war into a few sleepless days: sonar contacts, depth-charge runs, dwindling fuel and ammunition, and the constant arithmetic of guarding thirty-seven merchant ships with only four escorts. Scenes were filmed aboard USS Kidd, a preserved Fletcher-class destroyer, and the picture premiered on Apple TV+ in July 2020 after the pandemic cancelled its theatrical release."
+      ],
       "locations": [
         {
           "name": "North Atlantic",

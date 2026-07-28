@@ -8,6 +8,7 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Added curated historical context paragraphs to the Greyhound, Stalingrad, The Pianist, Patton, and Schindler's List film pages.
 - Added a 1200x630 social preview image for richer search and sharing cards.
 
 ### Changed
