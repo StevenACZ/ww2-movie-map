@@ -18,6 +18,7 @@ export interface Film {
   country: string;
   poster: string;
   synopsis: string;
+  historicalContext?: string[];
   locations: Location[];
   // External links
   wikipediaUrl?: string;
