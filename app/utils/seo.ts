@@ -96,7 +96,7 @@ export function jsonLdScript(graph: unknown) {
   return {
     type: "application/ld+json",
     innerHTML: JSON.stringify(graph),
-  };
+  } as const;
 }
 
 export function siteGraph() {

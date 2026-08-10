@@ -16,13 +16,15 @@
   "dependencies": {
     "@nuxtjs/sitemap": "^8.2.1",
     "leaflet": "^1.9.4",
-    "nuxt": "^4.4.8",
+    "nuxt": "^4.5.1",
     "vue": "^3.5.38"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.21",
     "prettier": "^3.8.4",
-    "sass": "^1.101.0"
+    "sass": "^1.101.0",
+    "typescript": "^6",
+    "vue-tsc": "^3.3.9"
   },
   "overrides": {
     "@babel/core": "7.29.7",
@@ -35,6 +37,7 @@
     "launch-editor": "2.14.1",
     "lodash": "4.18.1",
     "minimatch": "10.2.5",
+    "nanoid": "3.3.17",
     "picomatch": "4.0.4",
     "postcss": "8.5.23",
     "rollup": "4.60.3",
