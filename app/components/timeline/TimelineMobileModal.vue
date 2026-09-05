@@ -1,8 +1,23 @@
 <template>
   <Transition name="modal">
-    <div v-if="film" class="mobile-film-modal" @click.self="emit('close')">
+    <div
+      v-if="film"
+      ref="dialog"
+      class="mobile-film-modal"
+      role="dialog"
+      aria-modal="true"
+      :aria-label="film.title"
+      tabindex="-1"
+      @click.self="emit('close')"
+    >
       <div class="mobile-modal-content">
-        <button class="mobile-modal-close" @click="emit('close')">×</button>
+        <button
+          class="mobile-modal-close"
+          aria-label="Close film details"
+          @click="emit('close')"
+        >
+          ×
+        </button>
         <div class="mobile-modal-body">
           <img
             :src="film.poster"
@@ -49,16 +64,21 @@
 </template>
 
 <script setup lang="ts">
+import { useDialogFocus } from "~/composables/useDialogFocus";
 import type { PositionedFilm } from "../../../types/timeline";
 import StarIcon from "../icons/StarIcon.vue";
 
-defineProps<{
+const props = defineProps<{
   film: PositionedFilm | null;
 }>();
 
 const emit = defineEmits<{
   (e: "close"): void;
 }>();
+const dialog = useDialogFocus(
+  () => props.film !== null,
+  () => emit("close")
+);
 </script>
 
 <style lang="scss" scoped>
@@ -204,8 +224,6 @@ const emit = defineEmits<{
     transform: translateY(-1px);
   }
 }
-
-// Modal Transitions
 .modal-enter-active,
 .modal-leave-active {
   transition: opacity 0.3s ease;
