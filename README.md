@@ -83,7 +83,3 @@ The deploy workflow:
 - `app/utils/seo.ts`: shared SEO, canonical URL, and JSON-LD helpers.
 - `data/`: public film and historical event data.
 - `public/`: icons, manifests, robots, security policy contact, and social image.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).

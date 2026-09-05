@@ -1,9 +1,7 @@
 import { ref, watch } from "vue";
 import type { Ref } from "vue";
 import type { Film, Location } from "../../types";
-
-// Map configuration constants
-export const MAP_CENTER: [number, number] = [50, 15]; // Europe center
+export const MAP_CENTER: [number, number] = [50, 15];
 export const MAP_ZOOM = 4;
 export const MOBILE_ZOOM = 3;
 export const PAN_SPEED = 10;
@@ -25,8 +23,6 @@ const getSafePosterUrl = (rawUrl: string): string => {
     return "";
   }
 };
-
-// Check if mobile
 export const isMobile = (): boolean => {
   return typeof window !== "undefined" && window.innerWidth <= 768;
 };
@@ -50,14 +46,9 @@ export const useLeafletMap = ({
   const highlightLayer = ref<any>(null);
   const allFilmMarkers = new Map<string, any>();
   let L: any = null;
-
-  // WASD navigation state
   const keysPressed: Record<string, boolean> = {};
   let animationFrameId: number | null = null;
 
-  /**
-   * Initialize Leaflet and create map
-   */
   const initializeMap = async () => {
     if (typeof window === "undefined") return;
 
@@ -77,8 +68,6 @@ export const useLeafletMap = ({
       touchZoom: true,
       dragging: true,
     });
-
-    // Add CartoDB Dark Matter tile layer
     L.tileLayer(
       "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
       {
@@ -89,29 +78,21 @@ export const useLeafletMap = ({
         noWrap: true,
       }
     ).addTo(map.value);
-
-    // Set max bounds
     const worldBounds = L.latLngBounds(L.latLng(-60, -180), L.latLng(85, 180));
     map.value.setMaxBounds(worldBounds);
     map.value.options.maxBoundsViscosity = 1.0;
 
     L.control.zoom({ position: "topleft" }).addTo(map.value);
-
-    // Create markers
     createAllMarkers();
-
-    // Event listeners
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("keyup", handleKeyUp);
+    window.addEventListener("blur", stopNavigation);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    document.addEventListener("focusin", handleFocusChange);
     map.value.on("zoom", handleZoomUpdates);
     handleZoomUpdates();
-
-    animateMap();
   };
 
-  /**
-   * Create all film markers
-   */
   const createAllMarkers = () => {
     if (!map.value || !L) return;
 
@@ -121,9 +102,6 @@ export const useLeafletMap = ({
     films.forEach((film, filmIndex) => {
       film.locations.forEach((location) => {
         if (!location.isPrimary) return;
-
-        // Offset the anchor to position poster to the right of the location
-        // This prevents the poster from covering city/location names on the map
         const anchorOffsetX = isMobile() ? markerWidth + 5 : markerWidth + 10;
         const posterUrl = getSafePosterUrl(film.poster);
 
@@ -137,11 +115,13 @@ export const useLeafletMap = ({
 
         const coords = [location.coordinates[1], location.coordinates[0]];
         const zIndexOffset = (films.length - filmIndex) * 100;
-        const marker = L.marker(coords, { icon, zIndexOffset })
+        const marker = L.marker(coords, {
+          icon,
+          zIndexOffset,
+          title: film.title,
+        })
           .on("click", () => onFilmSelect(film, location))
           .addTo(map.value);
-
-        // Hover events
         setTimeout(() => {
           const markerElement = marker.getElement();
           if (markerElement) {
@@ -161,9 +141,6 @@ export const useLeafletMap = ({
     updateMarkerVisibility();
   };
 
-  /**
-   * Update marker visibility based on filtered films
-   */
   const updateMarkerVisibility = () => {
     const filteredIds = new Set(filteredFilms.value.map((f) => f.id));
 
@@ -176,9 +153,6 @@ export const useLeafletMap = ({
     });
   };
 
-  /**
-   * Handle zoom level changes
-   */
   const handleZoomUpdates = () => {
     if (!map.value) return;
     const zoom = map.value.getZoom();
@@ -204,9 +178,6 @@ export const useLeafletMap = ({
     }
   };
 
-  /**
-   * Fly to a location and show highlight
-   */
   const flyToLocation = (location: Location) => {
     if (!map.value || !L) return;
 
@@ -242,9 +213,6 @@ export const useLeafletMap = ({
     );
   };
 
-  /**
-   * Clear highlight layer
-   */
   const clearHighlight = () => {
     if (highlightLayer.value && map.value) {
       map.value.removeLayer(highlightLayer.value);
@@ -252,51 +220,97 @@ export const useLeafletMap = ({
     }
   };
 
-  /**
-   * Reset view to initial state
-   */
   const resetView = () => {
     if (!map.value) return;
     const targetZoom = isMobile() ? 4 : 5;
     map.value.flyTo(map.value.getCenter(), targetZoom, { duration: 1.0 });
   };
 
-  // WASD keyboard navigation
-  const handleKeyDown = (e: KeyboardEvent) => {
-    const key = e.key.toLowerCase();
-    if (["w", "a", "s", "d"].includes(key)) {
-      keysPressed[key] = true;
-      e.preventDefault();
-    }
+  const navigationBlocked = (target: EventTarget | null) =>
+    document.hidden ||
+    (target instanceof HTMLElement &&
+      (target.isContentEditable ||
+        Boolean(target.closest("input, textarea, select, [role=dialog]")))) ||
+    Array.from(
+      document.querySelectorAll<HTMLElement>('[aria-modal="true"]')
+    ).some((element) => element.getClientRects().length > 0);
+
+  const hasMovement = () =>
+    Boolean(keysPressed["d"]) !== Boolean(keysPressed["a"]) ||
+    Boolean(keysPressed["s"]) !== Boolean(keysPressed["w"]);
+
+  const stopFrame = () => {
+    if (animationFrameId !== null) cancelAnimationFrame(animationFrameId);
+    animationFrameId = null;
   };
 
-  const handleKeyUp = (e: KeyboardEvent) => {
-    keysPressed[e.key.toLowerCase()] = false;
+  const stopNavigation = () => {
+    for (const key of Object.keys(keysPressed)) delete keysPressed[key];
+    stopFrame();
   };
 
   const animateMap = () => {
-    if (!map.value) return;
-
+    animationFrameId = null;
+    if (!map.value || navigationBlocked(document.activeElement)) {
+      stopNavigation();
+      return;
+    }
+    if (!hasMovement()) return;
     const dx =
       (keysPressed["d"] ? PAN_SPEED : 0) - (keysPressed["a"] ? PAN_SPEED : 0);
     const dy =
       (keysPressed["s"] ? PAN_SPEED : 0) - (keysPressed["w"] ? PAN_SPEED : 0);
-
-    if (dx !== 0 || dy !== 0) {
-      map.value.panBy([dx, dy], { animate: false });
-    }
-
+    map.value.panBy([dx, dy], { animate: false });
     animationFrameId = requestAnimationFrame(animateMap);
   };
 
-  // Watch for filtered films changes
-  watch(filteredFilms, updateMarkerVisibility);
+  const scheduleNavigation = () => {
+    if (!hasMovement()) stopFrame();
+    else if (animationFrameId === null) {
+      animationFrameId = requestAnimationFrame(animateMap);
+    }
+  };
 
-  // Cleanup
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (
+      event.defaultPrevented ||
+      event.ctrlKey ||
+      event.metaKey ||
+      event.altKey ||
+      event.shiftKey ||
+      event.isComposing ||
+      navigationBlocked(event.target)
+    ) {
+      stopNavigation();
+      return;
+    }
+    const key = event.key.toLowerCase();
+    if (!["w", "a", "s", "d"].includes(key)) return;
+    keysPressed[key] = true;
+    event.preventDefault();
+    scheduleNavigation();
+  };
+
+  const handleKeyUp = (event: KeyboardEvent) => {
+    delete keysPressed[event.key.toLowerCase()];
+    scheduleNavigation();
+  };
+
+  const handleVisibilityChange = () => {
+    if (document.hidden) stopNavigation();
+  };
+
+  const handleFocusChange = (event: FocusEvent) => {
+    if (navigationBlocked(event.target)) stopNavigation();
+  };
+  watch(filteredFilms, updateMarkerVisibility);
   const cleanup = () => {
     window.removeEventListener("keydown", handleKeyDown);
     window.removeEventListener("keyup", handleKeyUp);
-    if (animationFrameId) cancelAnimationFrame(animationFrameId);
+    window.removeEventListener("blur", stopNavigation);
+    document.removeEventListener("visibilitychange", handleVisibilityChange);
+    document.removeEventListener("focusin", handleFocusChange);
+    stopNavigation();
     if (map.value) {
       map.value.off("zoom", handleZoomUpdates);
       map.value.remove();

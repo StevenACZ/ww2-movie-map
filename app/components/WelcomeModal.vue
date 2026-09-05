@@ -1,8 +1,16 @@
 <template>
-  <div class="modal-overlay" @click.self="$emit('close')">
+  <div
+    ref="dialog"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="welcome-title"
+    tabindex="-1"
+    @click.self="handleStart"
+  >
     <div class="modal-content">
       <div class="modal-header">
-        <h2>WELCOME TO WW2 MOVIE MAP</h2>
+        <h2 id="welcome-title">WELCOME TO WW2 MOVIE MAP</h2>
       </div>
 
       <div class="modal-body">
@@ -36,11 +44,7 @@
 
         <div class="checkbox-container">
           <label class="checkbox-label">
-            <input
-              type="checkbox"
-              v-model="dontShowAgain"
-              @change="handleCheckboxChange"
-            />
+            <input type="checkbox" v-model="dontShowAgain" />
             <span class="checkmark"></span>
             Don't show this again
           </label>
@@ -56,6 +60,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { useDialogFocus } from "~/composables/useDialogFocus";
 import MapPinIcon from "./icons/MapPinIcon.vue";
 import ClockIcon from "./icons/ClockIcon.vue";
 
@@ -63,26 +68,16 @@ const emit = defineEmits(["close"]);
 
 const dontShowAgain = ref(false);
 
-const handleCheckboxChange = () => {
-  // Logic handled in parent or here?
-  // Plan said: "If 'Don't show again' is selected, set localStorage.setItem('welcome_seen', 'true')"
-  // It's cleaner to pass the preference to the parent or handle it here.
-  // Let's pass the preference when closing or handle it in the parent based on a prop/event?
-  // Actually, the plan said "Handle close event: If 'Don't show again' is selected...".
-  // So I will just emit close with the value, or let the parent read the state if I bound it?
-  // Simpler: Just emit 'close' with the payload of the checkbox state.
-};
-
 const handleStart = () => {
   emit("close", dontShowAgain.value);
 };
+
+const dialog = useDialogFocus(() => true, handleStart);
 </script>
 
 <style lang="scss" scoped>
 @use "@/assets/scss/variables" as *;
 @use "@/assets/scss/mixins" as *;
-
-// Visibility utilities
 .desktop-only {
   display: inline;
   @media (max-width: 768px) {
@@ -100,7 +95,7 @@ const handleStart = () => {
 .modal {
   &-overlay {
     @include modal-overlay;
-    z-index: 2000; // Mayor que timeline
+    z-index: 2000;
   }
 
   &-content {
@@ -286,6 +281,11 @@ const handleStart = () => {
       cursor: pointer;
       height: 0;
       width: 0;
+
+      &:focus-visible ~ .checkmark {
+        outline: 2px solid $gold;
+        outline-offset: 3px;
+      }
 
       &:checked ~ .checkmark {
         background-color: $gold;

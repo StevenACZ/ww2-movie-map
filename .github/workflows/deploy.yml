@@ -35,6 +35,8 @@ jobs:
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
+        with:
+          bun-version: 1.4.1
 
       - name: Detect package manager
         id: pm
@@ -53,7 +55,7 @@ jobs:
           if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
             npm ci
           else
-            bun install --frozen-lockfile || bun install
+            bun install --frozen-lockfile
           fi
 
       - name: Format check

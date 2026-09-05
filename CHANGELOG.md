@@ -23,6 +23,12 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+- Film markers expose their titles to keyboard and assistive-technology users.
+
+- Made welcome, trailer, and mobile film dialogs keyboard-accessible with named dialogs, managed focus, and Escape dismissal.
+- Kept map WASD navigation clear of browser shortcuts and dialogs, stopped movement on focus loss, and removed idle animation frames.
+- Removed the README license claim and link because no license file is published in the repository.
+
 - Stabilized timeline date rendering across server and browser time zones to avoid hydration mismatches.
 - Hardened the deploy workflow so a superseded run cannot leave the live docroot half-synced, post-deploy validation cannot pass against another site, and a hung run cannot hold the concurrency group.
 

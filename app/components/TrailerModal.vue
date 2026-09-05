@@ -3,6 +3,8 @@
     <Transition name="theater">
       <div
         v-if="isOpen"
+        ref="dialog"
+        tabindex="-1"
         class="trailer-modal-overlay"
         @click.self="closeModal"
         role="dialog"
@@ -10,7 +12,6 @@
         :aria-label="`Trailer for ${filmTitle}`"
       >
         <div class="trailer-modal-content">
-          <!-- Close Button -->
           <button
             class="trailer-close-btn"
             @click="closeModal"
@@ -30,8 +31,6 @@
               />
             </svg>
           </button>
-
-          <!-- Video Container -->
           <div class="trailer-video-container">
             <iframe
               v-if="embedUrl"
@@ -52,8 +51,6 @@
               class="trailer-iframe"
             ></iframe>
           </div>
-
-          <!-- Film Title -->
           <div class="trailer-info">
             <h3 class="trailer-title">{{ filmTitle }}</h3>
             <p class="trailer-subtitle">Official Trailer</p>
@@ -65,7 +62,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed, watch, onMounted, onUnmounted } from "vue";
+import { computed } from "vue";
+import { useDialogFocus } from "~/composables/useDialogFocus";
 
 interface Props {
   isOpen: boolean;
@@ -104,8 +102,6 @@ const extractYouTubeVideoId = (rawUrl: string): string => {
     return "";
   }
 };
-
-// Convert YouTube URL to privacy-enhanced embed URL.
 const embedUrl = computed(() => {
   const videoId = extractYouTubeVideoId(props.trailerUrl);
 
@@ -120,43 +116,12 @@ const closeModal = () => {
   emit("close");
 };
 
-// Handle escape key
-const handleEscape = (e: KeyboardEvent) => {
-  if (e.key === "Escape" && props.isOpen) {
-    closeModal();
-  }
-};
-
-// Prevent body scroll when modal is open
-watch(
-  () => props.isOpen,
-  (isOpen) => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-  }
-);
-
-// Add escape key listener on mount
-onMounted(() => {
-  document.addEventListener("keydown", handleEscape);
-});
-
-// Remove escape key listener on unmount
-onUnmounted(() => {
-  document.removeEventListener("keydown", handleEscape);
-  // Ensure body scroll is restored
-  document.body.style.overflow = "";
-});
+const dialog = useDialogFocus(() => props.isOpen, closeModal);
 </script>
 
 <style lang="scss" scoped>
 @use "@/assets/scss/variables" as *;
 @use "@/assets/scss/mixins" as *;
-
-// Theater mode overlay
 .trailer-modal-overlay {
   position: fixed;
   inset: 0;
@@ -167,8 +132,6 @@ onUnmounted(() => {
   justify-content: center;
   padding: $spacing-xl;
   cursor: pointer;
-
-  // Subtle theater curtain gradient
   &::before {
     content: "";
     position: absolute;
@@ -188,8 +151,6 @@ onUnmounted(() => {
   max-width: 1000px;
   cursor: default;
 }
-
-// Close button
 .trailer-close-btn {
   position: absolute;
   top: -50px;
@@ -217,8 +178,6 @@ onUnmounted(() => {
     transform: scale(1.1);
   }
 }
-
-// Video container with 16:9 aspect ratio
 .trailer-video-container {
   position: relative;
   width: 100%;
@@ -238,8 +197,6 @@ onUnmounted(() => {
   width: 100%;
   height: 100%;
 }
-
-// Film info below video
 .trailer-info {
   text-align: center;
   margin-top: $spacing-lg;
@@ -260,9 +217,6 @@ onUnmounted(() => {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
-// ===== THEATER TRANSITION =====
-// Cinematic entrance animation
 .theater-enter-active {
   transition: opacity 0.4s ease;
 
