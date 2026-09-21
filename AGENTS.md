@@ -7,7 +7,7 @@ Public Nuxt app for WW2 Movie Map. Keep it production-safe, historically focused
 ## Security and Privacy
 
 - Never commit secrets, tokens, private keys, internal IPs, environment dumps, local machine paths, or private deployment notes.
-- Keep `AGENTS.md`, `CLAUDE.md`, `README.md`, and `CHANGELOG.md` public-safe.
+- Keep `AGENTS.md`, `README.md`, and `CHANGELOG.md` public-safe.
 - Keep local/private notes in ignored `docs/`.
 - Do not add external scripts, embeds, fonts, map providers, or analytics without updating the CSP and documenting the reason.
 - Use only public HTTPS URLs for film, map, trailer, and metadata references.
@@ -15,7 +15,7 @@ Public Nuxt app for WW2 Movie Map. Keep it production-safe, historically focused
 ## Assistant Surface
 
 - `AGENTS.md` is the source of truth for repo guidance.
-- `CLAUDE.md` must stay a one-line pointer: `@AGENTS.md`.
+- Claude Code 2.1.277+ reads `AGENTS.md` directly; no project bridge is needed.
 - Do not add repo-local `.agents/skills/` or `.claude/skills/` unless a reusable WW2 Movie Map workflow genuinely needs a custom skill. If skills are added later, `.agents/skills/` is canonical and `.claude/skills/*` must be symlinks to it.
 
 ## Project Overview
