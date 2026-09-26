@@ -1,0 +1,375 @@
+export const YEARS = ["1914", "1920", "1930", "1938", "1945"] as const;
+export type Year = (typeof YEARS)[number];
+
+export const SOURCE_URL =
+  "https://raw.githubusercontent.com/aourednik/historical-basemaps/master/geojson";
+export const LICENSE_URL =
+  "https://raw.githubusercontent.com/aourednik/historical-basemaps/master/LICENSE";
+
+const BRITISH_WEST_INDIES = [
+  "Anguilla",
+  "Antigua and Barbuda",
+  "Bahamas",
+  "Barbados",
+  "Dominica",
+  "Grenada",
+  "Jamaica",
+  "Jamaica (UK)",
+  "Montserrat",
+  "Saint Kitts and Nevis",
+  "Saint Lucia",
+  "Saint Vincent and the Grenadines",
+  "Trinidad",
+  "Turks and Caicos Islands",
+];
+
+const GROUPS: Record<string, string[]> = {
+  "british-west-indies": BRITISH_WEST_INDIES,
+  "saudi-arabia": [
+    "Arabia (Nejd)",
+    "Emirate of Bin Shal'an",
+    "Hejaz",
+    "Hail",
+    "Saudi Arabia",
+  ],
+  "french-west-indies": [
+    "Guadeloupe",
+    "Martinique",
+    "Martinique (France)",
+    "Saint Barthelemy",
+    "Saint Martin",
+  ],
+  "french-equatorial-africa": [
+    "French Equatorial Africa",
+    "Congo (France)",
+    "Chad",
+    "Gabon",
+    "Congo",
+    "Central African Republic",
+  ],
+  "french-indochina": [
+    "French Indochina",
+    "French Indo-China",
+    "Annam",
+    "Cochin China",
+    "Tonkin",
+    "Laos",
+    "Cambodia",
+  ],
+  "french-west-africa": [
+    "French West Africa",
+    "Mali",
+    "Niger",
+    "Senegal",
+    "Mauritania",
+    "Guinea",
+    "Ivory Coast",
+    "Burkina Faso",
+    "Benin",
+  ],
+  germany: [
+    "German Empire",
+    "Germany",
+    "East Prussia",
+    "Germany (France)",
+    "Germany (Soviet)",
+    "Germany (UK)",
+    "Germany (USA)",
+    "Saar Protectorate",
+  ],
+  libya: [
+    "Libya",
+    "Libya (IT)",
+    "Cyraneica (UK Lybia)",
+    "Tripolitana (UK Lybia)",
+    "Fezzan (Frech Lybia)",
+  ],
+  china: ["Manchu Empire", "Chinese Warlords", "Chinese warlords", "China"],
+  "dutch-east-indies": [
+    "Netherlands Indies",
+    "Dutch East Indies",
+    "Indonesia",
+    "Dutch Guinea",
+  ],
+  rhodesia: [
+    "Rhodesia",
+    "Zambia",
+    "Zimbabwe",
+    "Northern Rhodesia",
+    "Southern Rhodesia",
+  ],
+  ussr: [
+    "USSR",
+    "Armenia",
+    "Azerbaijan",
+    "Georgia",
+    "Far Eastern SSR",
+    "South Russia",
+    "Ukraine",
+    "White Russia",
+  ],
+  turkey: ["Ottoman Sultanate", "Republic of Turkey", "Turkey"],
+  "british-raj": ["British Raj", "India", "Bangladesh", "Pakistan"],
+  "south-africa": ["South Africa", "Union of South Africa", "Walbis Bay"],
+  "belgian-congo": ["Belgian Congo", "Zaire (Belgium)", "Zaire"],
+  "ruanda-urundi": ["Rwanda (Belgium)", "Burundi", "Rwanda"],
+  "spanish-sahara": ["Rio De Oro", "Spanish Sahara", "Western Sahara"],
+  "portuguese-guinea": [
+    "Portuguese Guinea",
+    "Guinea-Bissau",
+    "Guinea-Bissau (Portugal)",
+  ],
+  thailand: ["Rattanakosin Kingdom", "Siam", "Thailand"],
+  oman: [
+    "British Protectorate",
+    "Muscat and Oman",
+    "Oman (British Raj)",
+    "Oman",
+  ],
+  ethiopia: ["Abyssinia", "Ethiopia", "Ethiopia (Italy)"],
+  sudan: ["Anglo-Egyptian Sudan", "Sudan"],
+  kenya: ["British East Africa", "Kenya"],
+  japan: ["Empire of Japan", "Japan (USA)"],
+  italy: ["Italy", "Kingdom of Italy", "Dodecanese Islands"],
+  uk: ["United Kingdom of Great Britain and Ireland", "United Kingdom"],
+  usa: ["United States"],
+  russia: ["Russian Empire", "Sakhalin (RU)"],
+  iran: ["Persia", "Iran"],
+  ceylon: ["Ceylon", "Sri Lanka"],
+  chile: ["Chile", "Rapa Nui"],
+  algeria: ["Algeria", "Algeria (France)"],
+  angola: ["Angola", "Angola (Portugal)"],
+  mozambique: ["Mozambique", "Mozambique (Portugal)"],
+  eritrea: ["Eritrea", "Eritrea (Italy)"],
+  morocco: ["Morocco", "Morocco (France)"],
+  nyasaland: ["Malawi", "Nyasaland"],
+  "british-malaya": ["Malaya", "Malaysia"],
+  "french-somaliland": ["Djibouti", "French Somaliland"],
+  "french-cameroons": ["French Cameroons", "Cameroon"],
+  "gold-coast": ["Gold Coast", "Ghana"],
+  "south-west-africa": ["German South-West Africa", "Namibia"],
+  "italian-somaliland": ["Italian Somaliland", "Somalia"],
+  palestine: ["Mandatory Palestine (GB)", "Israel"],
+  iraq: ["Mesopotamia (GB)", "Iraq"],
+  syria: ["Syria (France)", "Syria"],
+  "trucial-states": ["Trucial Oman", "United Arab Emirates"],
+  aden: ["Yemen", "Yemen (UK)"],
+  korea: ["Korea (USA)", "Korea (USSR)"],
+  nigeria: ["Nigeria", "Southern Cameroon"],
+  togoland: ["Togoland", "Togo"],
+  "dominican-republic": ["Dominican Republic"],
+  "el-salvador": ["El Salvador"],
+  "costa-rica": ["Costa Rica"],
+  "new-zealand": ["New Zealand"],
+  "new-guinea": ["Papua New Guinea"],
+  "british-honduras": ["Belize"],
+  "british-guiana": ["Guyana"],
+  "british-somaliland": ["British Somaliland"],
+  bechuanaland: ["Botswana"],
+  basutoland: ["Lesotho"],
+  gambia: ["Gambia, The"],
+  "german-east-africa": ["German E. Africa (Tanganyika)"],
+  tanganyika: ["Tanzania, United Republic of"],
+  "hong-kong": ["Hong Kong"],
+  madagascar: ["Madagascar (France)"],
+  "netherlands-antilles": ["Netherlands Antilles"],
+  "puerto-rico": ["Puerto Rico"],
+  "us-virgin-islands": ["United States Virgin Islands"],
+  "american-samoa": ["American Samoa"],
+  "wallis-and-futuna": ["Wallis and Futuna Islands"],
+  "ottoman-empire": ["Ottoman Empire"],
+  "austria-hungary": ["Austro-Hungarian Empire"],
+  "spanish-guinea": ["Equatorial Guinea"],
+  "spanish-morocco": ["Spanish Morocco"],
+  "sierra-leone": ["Sierra Leone"],
+  "french-guiana": ["French Guiana"],
+  newfoundland: ["Dominion of Newfoundland"],
+  transjordan: ["Jordan"],
+  "gilbert-and-ellice": ["Gilbert and Ellice Islands"],
+  "new-caledonia": ["New Caledonia"],
+  "new-hebrides": ["New Hebrides"],
+  "south-seas-mandate": ["Saipan"],
+};
+
+const SELF = [
+  "Afghanistan",
+  "Albania",
+  "Andorra",
+  "Argentina",
+  "Australia",
+  "Austria",
+  "Belgium",
+  "Bhutan",
+  "Bolivia",
+  "Brazil",
+  "Brunei",
+  "Bulgaria",
+  "Burma",
+  "Canada",
+  "Colombia",
+  "Cuba",
+  "Czechoslovakia",
+  "Danzig",
+  "Denmark",
+  "Ecuador",
+  "Egypt",
+  "Estonia",
+  "Fiji",
+  "Finland",
+  "France",
+  "Greece",
+  "Guam",
+  "Guatemala",
+  "Haiti",
+  "Honduras",
+  "Hungary",
+  "Iceland",
+  "Ireland",
+  "Kamerun",
+  "Kuwait",
+  "Latvia",
+  "Lebanon",
+  "Liberia",
+  "Lithuania",
+  "Luxembourg",
+  "Malta",
+  "Manchuria",
+  "Mexico",
+  "Mongolia",
+  "Montenegro",
+  "Nepal",
+  "Netherlands",
+  "Nicaragua",
+  "Niue",
+  "Norway",
+  "Panama",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Samoa",
+  "Serbia",
+  "Spain",
+  "Suriname",
+  "Swaziland",
+  "Sweden",
+  "Switzerland",
+  "Taiwan",
+  "Tibet",
+  "Tonga",
+  "Tunisia",
+  "Uganda",
+  "Uruguay",
+  "Venezuela",
+  "Xinjiang",
+  "Yugoslavia",
+];
+
+export const DROP_NAMES = new Set(["Antarctica"]);
+
+export const NAME_TO_ID: Record<string, string> = Object.fromEntries([
+  ...SELF.map((name) => [name, name.toLowerCase()]),
+  ...Object.entries(GROUPS).flatMap(([id, names]) =>
+    names.map((name) => [name, id])
+  ),
+]);
+
+export const YEAR_NAME_TO_ID: Partial<Record<Year, Record<string, string>>> = {
+  "1914": { Armenia: "russia", Azerbaijan: "russia", Georgia: "russia" },
+  "1938": { India: "oman" },
+};
+
+export type Box = [number, number, number, number];
+
+export const EMPTY_OVERRIDES: { years: Year[]; box: Box; id: string }[] = [
+  { years: ["1914"], box: [26.2, 35.3, 28.5, 37.4], id: "italy" },
+  { years: ["1914"], box: [24, 37.5, 27, 40.3], id: "greece" },
+  { years: [...YEARS], box: [19, 59.7, 21.2, 60.6], id: "finland" },
+  { years: ["1938"], box: [155, -12.5, 163, -5], id: "solomon-islands" },
+  { years: ["1938"], box: [130, 0, 170, 12], id: "south-seas-mandate" },
+  { years: ["1938"], box: [166, 19, 167.2, 19.6], id: "wake-island" },
+];
+
+export const EMPTY_NEAREST_MAX_DEG = 6;
+export const EMPTY_DROP_BELOW_LAT = -60;
+
+export const PART_SPLITS: {
+  years: Year[];
+  from: string;
+  box: Box;
+  to: string;
+}[] = [
+  {
+    years: ["1914", "1920", "1930", "1938", "1945"],
+    from: "denmark",
+    box: [-75, 58, -10, 84],
+    to: "greenland",
+  },
+  {
+    years: ["1938"],
+    from: "denmark",
+    box: [-25, 62.5, -12, 67],
+    to: "iceland",
+  },
+  {
+    years: ["1920", "1930"],
+    from: "uk",
+    box: [-10.8, 51.3, -5.3, 55.5],
+    to: "ireland",
+  },
+];
+
+export const BORROWS: {
+  year: Year;
+  fromYear: Year;
+  names: string[];
+  id: string;
+  host?: string;
+}[] = [
+  ...(["1920", "1930", "1938", "1945"] as const).map((year) => ({
+    year,
+    fromYear: "1914" as const,
+    names: ["Malta"],
+    id: "malta",
+  })),
+  {
+    year: "1938",
+    fromYear: "1945",
+    names: ["Burma"],
+    id: "burma",
+    host: "british-raj",
+  },
+  {
+    year: "1938",
+    fromYear: "1945",
+    names: ["Manchuria"],
+    id: "manchuria",
+    host: "japan",
+  },
+];
+
+export const ISLANDS: Record<string, [number, number]> = {
+  Malta: [14.43, 35.88],
+  Sicily: [14.2, 37.5],
+  Crete: [24.9, 35.2],
+  Cyprus: [33.2, 35.0],
+  Oahu: [-157.98, 21.47],
+  "Iwo Jima": [141.32, 24.78],
+  "Chichi Jima (Bonin)": [142.19, 27.08],
+  Okinawa: [127.8, 26.4],
+  Guadalcanal: [160.0, -9.6],
+  Midway: [-177.37, 28.21],
+  Wake: [166.63, 19.29],
+  Tinian: [145.63, 15.0],
+  Saipan: [145.75, 15.18],
+  Singapore: [103.82, 1.35],
+  "Hong Kong": [114.18, 22.3],
+  Corregidor: [120.57, 14.38],
+  Kiska: [177.5, 51.97],
+  Attu: [173.2, 52.9],
+};
+
+export const ISLAND_NEAR_DEG = 0.25;

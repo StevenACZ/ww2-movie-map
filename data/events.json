@@ -1,0 +1,2293 @@
+{
+  "events": [
+    {
+      "id": "sarajevo-assassination",
+      "date": "1914-06-28",
+      "era": "ww1",
+      "category": "politics",
+      "title": {
+        "en": "Assassination in Sarajevo",
+        "es": "Atentado de Sarajevo"
+      },
+      "summary": {
+        "en": "Bosnian Serb student Gavrilo Princip shot Archduke Franz Ferdinand, heir to Austria-Hungary, and his wife Sophie in Sarajevo. Vienna blamed Serbia, and the alliance system turned a regional crisis into a continental one.",
+        "es": "El estudiante bosnio serbio Gavrilo Princip mató a tiros al archiduque Francisco Fernando, heredero de Austria-Hungría, y a su esposa Sofía en Sarajevo. Viena culpó a Serbia y el sistema de alianzas convirtió una crisis regional en una crisis continental."
+      },
+      "coordinates": [18.429, 43.8577],
+      "place": {
+        "en": "Sarajevo, Bosnia",
+        "es": "Sarajevo, Bosnia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Assassination_of_Archduke_Franz_Ferdinand",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Atentado_de_Sarajevo",
+      "major": true
+    },
+    {
+      "id": "ww1-outbreak",
+      "date": "1914-07-28",
+      "era": "ww1",
+      "category": "war",
+      "title": {
+        "en": "Austria-Hungary declares war on Serbia",
+        "es": "Austria-Hungría declara la guerra a Serbia"
+      },
+      "summary": {
+        "en": "After a month of ultimatums known as the July Crisis, Austria-Hungary declared war on Serbia. Within a week Russia, Germany, France and Britain were drawn in, and Germany's invasion of neutral Belgium brought Britain into the First World War.",
+        "es": "Tras un mes de ultimátums conocido como la crisis de julio, Austria-Hungría declaró la guerra a Serbia. En una semana Rusia, Alemania, Francia y el Reino Unido entraron en el conflicto, y la invasión alemana de la neutral Bélgica sumó a los británicos a la Primera Guerra Mundial."
+      },
+      "coordinates": [16.3725, 48.2083],
+      "place": {
+        "en": "Vienna, Austria-Hungary",
+        "es": "Viena, Austria-Hungría"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/July_Crisis",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Crisis_de_julio",
+      "major": true
+    },
+    {
+      "id": "battle-of-tannenberg",
+      "date": "1914-08-26",
+      "endDate": "1914-08-30",
+      "era": "ww1",
+      "category": "battle",
+      "title": {
+        "en": "Battle of Tannenberg",
+        "es": "Batalla de Tannenberg"
+      },
+      "summary": {
+        "en": "German forces under Hindenburg and Ludendorff encircled and destroyed the Russian Second Army in East Prussia. The victory ended Russia's early invasion of Germany and made both commanders national heroes.",
+        "es": "Las fuerzas alemanas de Hindenburg y Ludendorff cercaron y destruyeron al Segundo Ejército ruso en Prusia Oriental. La victoria frenó la invasión rusa inicial de Alemania y convirtió a ambos comandantes en héroes nacionales."
+      },
+      "coordinates": [20.2833, 53.5833],
+      "place": {
+        "en": "Tannenberg (Olsztynek), East Prussia",
+        "es": "Tannenberg (Olsztynek), Prusia Oriental"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Tannenberg",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Tannenberg_(1914)"
+    },
+    {
+      "id": "first-battle-of-the-marne",
+      "date": "1914-09-05",
+      "endDate": "1914-09-12",
+      "era": "ww1",
+      "category": "battle",
+      "title": {
+        "en": "First Battle of the Marne",
+        "es": "Primera batalla del Marne"
+      },
+      "summary": {
+        "en": "French and British troops halted the German advance just east of Paris and pushed it back to the Aisne. Germany's plan for a quick victory in the west failed, and both sides dug the trenches that would define the Western Front for four years.",
+        "es": "Tropas francesas y británicas detuvieron el avance alemán al este de París y lo hicieron retroceder hasta el Aisne. Fracasó el plan alemán de una victoria rápida en el oeste y ambos bandos cavaron las trincheras que marcarían el Frente Occidental durante cuatro años."
+      },
+      "coordinates": [2.8878, 48.9594],
+      "place": {
+        "en": "Marne River, near Meaux, France",
+        "es": "Río Marne, cerca de Meaux, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/First_Battle_of_the_Marne",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Primera_batalla_del_Marne",
+      "major": true
+    },
+    {
+      "id": "second-battle-of-ypres",
+      "date": "1915-04-22",
+      "endDate": "1915-05-25",
+      "era": "ww1",
+      "category": "technology",
+      "title": {
+        "en": "Poison gas at Ypres",
+        "es": "Gas venenoso en Ypres"
+      },
+      "summary": {
+        "en": "At Ypres the German army released chlorine gas on a large scale for the first time, opening a gap in the Allied line. Chemical weapons soon spread to every army and became a lasting symbol of the war's horror.",
+        "es": "En Ypres el ejército alemán liberó cloro a gran escala por primera vez y abrió una brecha en la línea aliada. Las armas químicas pronto se extendieron a todos los ejércitos y se volvieron un símbolo duradero del horror de la guerra."
+      },
+      "coordinates": [2.885, 50.8508],
+      "place": {
+        "en": "Ypres, Belgium",
+        "es": "Ypres, Bélgica"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Second_Battle_of_Ypres",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Segunda_batalla_de_Ypres"
+    },
+    {
+      "id": "gallipoli-campaign",
+      "date": "1915-04-25",
+      "endDate": "1916-01-09",
+      "era": "ww1",
+      "category": "battle",
+      "title": {
+        "en": "Gallipoli landings",
+        "es": "Desembarco en Galípoli"
+      },
+      "summary": {
+        "en": "British, French, Australian and New Zealand troops landed on the Gallipoli Peninsula to open the Dardanelles and knock the Ottoman Empire out of the war. Ottoman defenders held the heights, and after heavy losses the Allies evacuated in January 1916.",
+        "es": "Tropas británicas, francesas, australianas y neozelandesas desembarcaron en la península de Galípoli para abrir los Dardanelos y sacar al Imperio otomano de la guerra. Los defensores otomanos resistieron en las alturas y, tras grandes pérdidas, los Aliados se retiraron en enero de 1916."
+      },
+      "coordinates": [26.45, 40.35],
+      "place": {
+        "en": "Gallipoli Peninsula, Ottoman Empire",
+        "es": "Península de Galípoli, Imperio otomano"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Gallipoli_campaign",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Gal%C3%ADpoli"
+    },
+    {
+      "id": "sinking-of-the-lusitania",
+      "date": "1915-05-07",
+      "era": "ww1",
+      "category": "naval",
+      "title": {
+        "en": "Sinking of the Lusitania",
+        "es": "Hundimiento del Lusitania"
+      },
+      "summary": {
+        "en": "A German U-boat torpedoed the British liner RMS Lusitania off the coast of Ireland, killing nearly 1,200 people, among them 128 Americans. The outrage turned opinion in the United States against Germany.",
+        "es": "Un submarino alemán torpedeó al transatlántico británico RMS Lusitania frente a la costa de Irlanda y murieron casi 1200 personas, entre ellas 128 estadounidenses. La indignación volcó a la opinión pública de Estados Unidos contra Alemania."
+      },
+      "coordinates": [-8.525, 51.6167],
+      "place": {
+        "en": "Off the Old Head of Kinsale, Ireland",
+        "es": "Frente al cabo Old Head of Kinsale, Irlanda"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Sinking_of_RMS_Lusitania",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Hundimiento_del_RMS_Lusitania"
+    },
+    {
+      "id": "battle-of-verdun",
+      "date": "1916-02-21",
+      "endDate": "1916-12-18",
+      "era": "ww1",
+      "category": "battle",
+      "title": {
+        "en": "Battle of Verdun",
+        "es": "Batalla de Verdún"
+      },
+      "summary": {
+        "en": "Germany attacked the fortress city of Verdun to bleed the French army dry. Ten months of shelling around the same few hills cost hundreds of thousands of lives on both sides, and Verdun became France's symbol of endurance.",
+        "es": "Alemania atacó la ciudad fortificada de Verdún para desangrar al ejército francés. Diez meses de bombardeos sobre las mismas colinas costaron cientos de miles de vidas en ambos bandos, y Verdún se convirtió en el símbolo francés de la resistencia."
+      },
+      "coordinates": [5.3828, 49.1597],
+      "place": {
+        "en": "Verdun, France",
+        "es": "Verdún, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Verdun",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Verd%C3%BAn"
+    },
+    {
+      "id": "battle-of-jutland",
+      "date": "1916-05-31",
+      "endDate": "1916-06-01",
+      "era": "ww1",
+      "category": "naval",
+      "title": {
+        "en": "Battle of Jutland",
+        "es": "Batalla de Jutlandia"
+      },
+      "summary": {
+        "en": "The British Grand Fleet and the German High Seas Fleet met in the largest naval battle of the war. Britain lost more ships, but the German fleet never again seriously challenged British control of the North Sea.",
+        "es": "La Gran Flota británica y la Flota de Alta Mar alemana se enfrentaron en la mayor batalla naval de la guerra. El Reino Unido perdió más barcos, pero la flota alemana nunca volvió a disputar en serio el control británico del mar del Norte."
+      },
+      "coordinates": [5.9, 56.7],
+      "place": {
+        "en": "North Sea, off Jutland",
+        "es": "Mar del Norte, frente a Jutlandia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Jutland",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Jutlandia"
+    },
+    {
+      "id": "battle-of-the-somme",
+      "date": "1916-07-01",
+      "endDate": "1916-11-18",
+      "era": "ww1",
+      "category": "battle",
+      "title": {
+        "en": "Battle of the Somme",
+        "es": "Batalla del Somme"
+      },
+      "summary": {
+        "en": "British and French armies attacked along the Somme to relieve Verdun. The British army suffered about 57,000 casualties on the first day alone, and after four and a half months the front had moved only a few kilometres.",
+        "es": "Los ejércitos británico y francés atacaron a lo largo del Somme para aliviar la presión sobre Verdún. Solo el primer día el ejército británico sufrió unas 57 000 bajas y, tras cuatro meses y medio, el frente apenas avanzó unos kilómetros."
+      },
+      "coordinates": [2.6522, 50.0019],
+      "place": {
+        "en": "Somme, France",
+        "es": "Somme, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Somme",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_del_Somme"
+    },
+    {
+      "id": "first-tanks-flers-courcelette",
+      "date": "1916-09-15",
+      "endDate": "1916-09-22",
+      "era": "ww1",
+      "category": "technology",
+      "title": {
+        "en": "First tanks in battle",
+        "es": "Primeros tanques en combate"
+      },
+      "summary": {
+        "en": "At Flers–Courcelette, during the Somme offensive, the British army sent tanks into combat for the first time. Few and unreliable, they still showed a way to cross trenches and barbed wire that would reshape warfare.",
+        "es": "En Flers-Courcelette, durante la ofensiva del Somme, el ejército británico llevó tanques al combate por primera vez. Eran pocos y poco fiables, pero mostraron una forma de cruzar trincheras y alambradas que transformaría la guerra."
+      },
+      "coordinates": [2.8214, 50.0486],
+      "place": {
+        "en": "Flers, Somme, France",
+        "es": "Flers, Somme, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Flers%E2%80%93Courcelette",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Flers-Courcelette"
+    },
+    {
+      "id": "zimmermann-telegram",
+      "date": "1917-03-01",
+      "era": "ww1",
+      "category": "diplomacy",
+      "title": {
+        "en": "Zimmermann Telegram made public",
+        "es": "Se publica el telegrama Zimmermann"
+      },
+      "summary": {
+        "en": "British codebreakers intercepted a German proposal offering Mexico an alliance and the return of Texas, New Mexico and Arizona if the United States entered the war. Its publication in the American press pushed the country toward war.",
+        "es": "Criptógrafos británicos interceptaron una propuesta alemana que ofrecía a México una alianza y la devolución de Texas, Nuevo México y Arizona si Estados Unidos entraba en la guerra. Su publicación en la prensa estadounidense empujó al país hacia el conflicto."
+      },
+      "coordinates": [-99.1359, 19.3538],
+      "place": {
+        "en": "Mexico City, Mexico",
+        "es": "Ciudad de México, México"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Zimmermann_telegram",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Telegrama_Zimmermann"
+    },
+    {
+      "id": "us-enters-ww1",
+      "date": "1917-04-06",
+      "era": "ww1",
+      "category": "politics",
+      "title": {
+        "en": "United States enters the war",
+        "es": "Estados Unidos entra en la guerra"
+      },
+      "summary": {
+        "en": "Angered by unrestricted submarine warfare and the Zimmermann Telegram, the US Congress declared war on Germany. Fresh American troops and resources tipped the balance toward the Allies in 1918.",
+        "es": "Indignado por la guerra submarina sin restricciones y el telegrama Zimmermann, el Congreso de Estados Unidos declaró la guerra a Alemania. Las nuevas tropas y los recursos estadounidenses inclinaron la balanza a favor de los Aliados en 1918."
+      },
+      "coordinates": [-77.0367, 38.895],
+      "place": {
+        "en": "Washington, D.C., United States",
+        "es": "Washington D. C., Estados Unidos"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/American_entry_into_World_War_I",
+      "major": true
+    },
+    {
+      "id": "battle-of-passchendaele",
+      "date": "1917-07-31",
+      "endDate": "1917-11-10",
+      "era": "ww1",
+      "category": "battle",
+      "title": {
+        "en": "Battle of Passchendaele",
+        "es": "Batalla de Passchendaele"
+      },
+      "summary": {
+        "en": "British and Commonwealth forces attacked east of Ypres toward the village of Passchendaele. Heavy rain turned the shell-torn ground into a sea of mud, and the small gains came at a terrible human cost.",
+        "es": "Fuerzas británicas y de la Commonwealth atacaron al este de Ypres hacia la aldea de Passchendaele. Las lluvias convirtieron el terreno destrozado por los obuses en un mar de barro, y los escasos avances tuvieron un costo humano terrible."
+      },
+      "coordinates": [3.0206, 50.9003],
+      "place": {
+        "en": "Passchendaele, Belgium",
+        "es": "Passendale, Bélgica"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Passchendaele",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Tercera_batalla_de_Ypres"
+    },
+    {
+      "id": "october-revolution",
+      "date": "1917-11-07",
+      "era": "ww1",
+      "category": "politics",
+      "title": {
+        "en": "October Revolution",
+        "es": "Revolución de Octubre"
+      },
+      "summary": {
+        "en": "Lenin's Bolsheviks seized power in Petrograd, overthrowing the Provisional Government that had replaced the tsar months earlier. The revolution took Russia out of the war and led to the first communist state.",
+        "es": "Los bolcheviques de Lenin tomaron el poder en Petrogrado y derrocaron al Gobierno Provisional que había reemplazado al zar meses antes. La revolución sacó a Rusia de la guerra y dio origen al primer Estado comunista."
+      },
+      "coordinates": [30.3139, 59.9403],
+      "place": {
+        "en": "Petrograd, Russia",
+        "es": "Petrogrado, Rusia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/October_Revolution",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Revoluci%C3%B3n_de_Octubre",
+      "major": true
+    },
+    {
+      "id": "russian-civil-war",
+      "date": "1917-11-07",
+      "endDate": "1922-10-25",
+      "era": "ww1",
+      "category": "war",
+      "title": {
+        "en": "Russian Civil War",
+        "es": "Guerra civil rusa"
+      },
+      "summary": {
+        "en": "The Bolshevik Red Army fought a coalition of anti-communist White forces, independence movements and foreign interventions. Millions died from fighting, terror and famine, and the Red victory led to the founding of the Soviet Union in 1922.",
+        "es": "El Ejército Rojo bolchevique luchó contra una coalición de fuerzas blancas anticomunistas, movimientos independentistas e intervenciones extranjeras. Millones murieron por los combates, el terror y el hambre, y la victoria roja llevó a la fundación de la Unión Soviética en 1922."
+      },
+      "coordinates": [37.6175, 55.7506],
+      "place": {
+        "en": "Moscow, Russia",
+        "es": "Moscú, Rusia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Russian_Civil_War",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Guerra_civil_rusa"
+    },
+    {
+      "id": "treaty-of-brest-litovsk",
+      "date": "1918-03-03",
+      "era": "ww1",
+      "category": "diplomacy",
+      "title": {
+        "en": "Treaty of Brest-Litovsk",
+        "es": "Tratado de Brest-Litovsk"
+      },
+      "summary": {
+        "en": "Soviet Russia signed a separate peace with the Central Powers, giving up Poland, the Baltic lands, Finland and Ukraine. Germany could now move divisions from the east to the Western Front for one last offensive.",
+        "es": "La Rusia soviética firmó una paz por separado con las Potencias Centrales y cedió Polonia, los territorios bálticos, Finlandia y Ucrania. Alemania pudo trasladar divisiones del este al Frente Occidental para una última ofensiva."
+      },
+      "coordinates": [23.6569, 52.0847],
+      "place": {
+        "en": "Brest-Litovsk",
+        "es": "Brest-Litovsk"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Treaty_of_Brest-Litovsk",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Tratado_de_Brest-Litovsk"
+    },
+    {
+      "id": "german-spring-offensive",
+      "date": "1918-03-21",
+      "endDate": "1918-07-18",
+      "era": "ww1",
+      "category": "battle",
+      "title": {
+        "en": "German Spring Offensive",
+        "es": "Ofensiva alemana de primavera"
+      },
+      "summary": {
+        "en": "Germany launched a series of massive attacks to win the war before American troops arrived in strength. The offensives gained more ground than any attack since 1914 but exhausted the German army without breaking the Allies.",
+        "es": "Alemania lanzó una serie de ataques masivos para ganar la guerra antes de que llegaran las tropas estadounidenses en gran número. Las ofensivas ganaron más terreno que cualquier ataque desde 1914, pero agotaron al ejército alemán sin quebrar a los Aliados."
+      },
+      "coordinates": [3.2856, 49.8478],
+      "place": {
+        "en": "Saint-Quentin, France",
+        "es": "San Quintín, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/German_spring_offensive",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Kaiserschlacht"
+    },
+    {
+      "id": "hundred-days-offensive",
+      "date": "1918-08-08",
+      "endDate": "1918-11-11",
+      "era": "ww1",
+      "category": "battle",
+      "title": {
+        "en": "Hundred Days Offensive",
+        "es": "Ofensiva de los Cien Días"
+      },
+      "summary": {
+        "en": "Starting at Amiens, Allied armies combined infantry, tanks, artillery and aircraft in a series of attacks that broke the German lines. Germany's generals concluded the war was lost and pressed for an armistice.",
+        "es": "Desde Amiens, los ejércitos aliados combinaron infantería, tanques, artillería y aviones en una serie de ataques que rompieron las líneas alemanas. Los generales alemanes concluyeron que la guerra estaba perdida y presionaron por un armisticio."
+      },
+      "coordinates": [2.2978, 49.8919],
+      "place": {
+        "en": "Amiens, France",
+        "es": "Amiens, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Hundred_Days_Offensive",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Ofensiva_de_los_Cien_D%C3%ADas"
+    },
+    {
+      "id": "armistice-1918",
+      "date": "1918-11-11",
+      "era": "ww1",
+      "category": "diplomacy",
+      "title": {
+        "en": "Armistice ends the fighting",
+        "es": "El armisticio pone fin a los combates"
+      },
+      "summary": {
+        "en": "Germany signed an armistice in a railway carriage in the Compiègne forest, and the guns fell silent at 11 a.m. More than 15 million people had died in the war, and the German Empire had collapsed days earlier.",
+        "es": "Alemania firmó el armisticio en un vagón de tren en el bosque de Compiègne y los cañones callaron a las 11 de la mañana. Más de 15 millones de personas habían muerto en la guerra, y el Imperio alemán se había derrumbado días antes."
+      },
+      "coordinates": [2.9064, 49.4272],
+      "place": {
+        "en": "Compiègne Forest, France",
+        "es": "Bosque de Compiègne, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Armistice_of_11_November_1918",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Armisticio_del_11_de_noviembre_de_1918",
+      "major": true
+    },
+    {
+      "id": "treaty-of-versailles",
+      "date": "1919-06-28",
+      "era": "interwar",
+      "category": "diplomacy",
+      "title": {
+        "en": "Treaty of Versailles",
+        "es": "Tratado de Versalles"
+      },
+      "summary": {
+        "en": "The victorious Allies imposed peace terms on Germany: loss of territory and colonies, disarmament, reparations and acceptance of responsibility for the war. Resentment of the treaty became a powerful tool for German nationalists, including Hitler.",
+        "es": "Los Aliados vencedores impusieron a Alemania sus condiciones de paz: pérdida de territorios y colonias, desarme, reparaciones y la aceptación de la responsabilidad por la guerra. El resentimiento contra el tratado se convirtió en un arma poderosa para los nacionalistas alemanes, incluido Hitler."
+      },
+      "coordinates": [2.1203, 48.8047],
+      "place": {
+        "en": "Palace of Versailles, France",
+        "es": "Palacio de Versalles, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Treaty_of_Versailles",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Tratado_de_Versalles_(1919)",
+      "major": true
+    },
+    {
+      "id": "league-of-nations",
+      "date": "1920-01-10",
+      "era": "interwar",
+      "category": "diplomacy",
+      "title": {
+        "en": "League of Nations founded",
+        "es": "Nace la Sociedad de las Naciones"
+      },
+      "summary": {
+        "en": "The first international organization for collective security came into being with the Treaty of Versailles. Without the United States and unable to enforce its decisions, it failed to stop the aggressions of the 1930s.",
+        "es": "La primera organización internacional de seguridad colectiva nació con la entrada en vigor del Tratado de Versalles. Sin Estados Unidos y sin medios para hacer cumplir sus decisiones, no logró frenar las agresiones de la década de 1930."
+      },
+      "coordinates": [6.15, 46.2],
+      "place": {
+        "en": "Geneva, Switzerland",
+        "es": "Ginebra, Suiza"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/League_of_Nations",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Sociedad_de_las_Naciones"
+    },
+    {
+      "id": "march-on-rome",
+      "date": "1922-10-28",
+      "endDate": "1922-10-31",
+      "era": "interwar",
+      "category": "politics",
+      "title": {
+        "en": "March on Rome",
+        "es": "Marcha sobre Roma"
+      },
+      "summary": {
+        "en": "Thousands of Blackshirts converged on Rome, and King Victor Emmanuel III chose to appoint Benito Mussolini prime minister instead of resisting. Within a few years Mussolini had turned Italy into a Fascist dictatorship.",
+        "es": "Miles de camisas negras avanzaron sobre Roma y el rey Víctor Manuel III prefirió nombrar primer ministro a Benito Mussolini antes que resistir. En pocos años Mussolini convirtió a Italia en una dictadura fascista."
+      },
+      "coordinates": [12.4828, 41.8931],
+      "place": {
+        "en": "Rome, Italy",
+        "es": "Roma, Italia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/March_on_Rome",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Marcha_sobre_Roma"
+    },
+    {
+      "id": "wall-street-crash",
+      "date": "1929-10-24",
+      "endDate": "1929-10-29",
+      "era": "interwar",
+      "category": "home-front",
+      "title": {
+        "en": "Wall Street Crash",
+        "es": "Crac de Wall Street"
+      },
+      "summary": {
+        "en": "Panic selling on the New York Stock Exchange wiped out fortunes between Black Thursday and Black Tuesday. The crash helped trigger the Great Depression, and mass unemployment fueled extremist movements, above all in Germany.",
+        "es": "Las ventas de pánico en la Bolsa de Nueva York acabaron con fortunas entre el Jueves Negro y el Martes Negro. El crac ayudó a desatar la Gran Depresión, y el desempleo masivo alimentó a los movimientos extremistas, sobre todo en Alemania."
+      },
+      "coordinates": [-74.0111, 40.7069],
+      "place": {
+        "en": "New York City, United States",
+        "es": "Nueva York, Estados Unidos"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Wall_Street_crash_of_1929",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Crac_del_29",
+      "major": true
+    },
+    {
+      "id": "mukden-incident",
+      "date": "1931-09-18",
+      "endDate": "1932-02-27",
+      "era": "interwar",
+      "category": "war",
+      "title": {
+        "en": "Japan invades Manchuria",
+        "es": "Japón invade Manchuria"
+      },
+      "summary": {
+        "en": "Japanese officers blew up a section of railway near Mukden and blamed Chinese troops, using it as a pretext to occupy Manchuria. Japan set up the puppet state of Manchukuo and left the League of Nations when it was condemned.",
+        "es": "Oficiales japoneses volaron un tramo de vía férrea cerca de Mukden y culparon a tropas chinas, un pretexto para ocupar Manchuria. Japón creó el Estado títere de Manchukuo y abandonó la Sociedad de las Naciones cuando fue condenado."
+      },
+      "coordinates": [123.4281, 41.8025],
+      "place": {
+        "en": "Mukden, Manchuria (today Shenyang)",
+        "es": "Mukden, Manchuria (hoy Shenyang)"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Japanese_invasion_of_Manchuria",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Invasi%C3%B3n_japonesa_de_Manchuria"
+    },
+    {
+      "id": "hitler-becomes-chancellor",
+      "date": "1933-01-30",
+      "era": "interwar",
+      "category": "politics",
+      "title": {
+        "en": "Hitler becomes chancellor",
+        "es": "Hitler llega a canciller"
+      },
+      "summary": {
+        "en": "President Hindenburg appointed Adolf Hitler chancellor of Germany, as conservatives believed they could control him. Within months the Nazis had abolished democracy, banned other parties and begun persecuting Jews and political opponents.",
+        "es": "El presidente Hindenburg nombró canciller de Alemania a Adolf Hitler, pues los conservadores creían que podrían controlarlo. En pocos meses los nazis abolieron la democracia, prohibieron los demás partidos y comenzaron a perseguir a judíos y opositores."
+      },
+      "coordinates": [13.3833, 52.5167],
+      "place": {
+        "en": "Berlin, Germany",
+        "es": "Berlín, Alemania"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Adolf_Hitler's_rise_to_power",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Ascenso_de_Adolf_Hitler_al_poder",
+      "major": true
+    },
+    {
+      "id": "reichstag-fire",
+      "date": "1933-02-27",
+      "era": "interwar",
+      "category": "politics",
+      "title": {
+        "en": "Reichstag fire",
+        "es": "Incendio del Reichstag"
+      },
+      "summary": {
+        "en": "The German parliament building in Berlin burned, and the Nazis blamed a communist plot. The next day an emergency decree suspended civil liberties, giving Hitler the legal basis to arrest opponents without trial.",
+        "es": "El edificio del Parlamento alemán en Berlín ardió y los nazis culparon a un complot comunista. Al día siguiente un decreto de emergencia suspendió las libertades civiles y le dio a Hitler la base legal para detener opositores sin juicio."
+      },
+      "coordinates": [13.3761, 52.5186],
+      "place": {
+        "en": "Reichstag, Berlin",
+        "es": "Reichstag, Berlín"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Reichstag_fire",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Incendio_del_Reichstag"
+    },
+    {
+      "id": "dachau-opens",
+      "date": "1933-03-22",
+      "era": "interwar",
+      "category": "holocaust",
+      "title": {
+        "en": "Dachau concentration camp opens",
+        "es": "Se abre el campo de Dachau"
+      },
+      "summary": {
+        "en": "The Nazis opened one of their first concentration camps at Dachau, near Munich, first for political prisoners. It became the model for the SS camp system, and at least 32,000 deaths were recorded there before its liberation in 1945.",
+        "es": "Los nazis abrieron en Dachau, cerca de Múnich, uno de sus primeros campos de concentración, al principio para presos políticos. Se convirtió en el modelo del sistema de campos de las SS, y allí se registraron al menos 32 000 muertes antes de su liberación en 1945."
+      },
+      "coordinates": [11.4683, 48.2699],
+      "place": {
+        "en": "Dachau, Germany",
+        "es": "Dachau, Alemania"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Dachau_concentration_camp",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Campo_de_concentraci%C3%B3n_de_Dachau"
+    },
+    {
+      "id": "night-of-the-long-knives",
+      "date": "1934-06-30",
+      "endDate": "1934-07-02",
+      "era": "interwar",
+      "category": "politics",
+      "title": {
+        "en": "Night of the Long Knives",
+        "es": "Noche de los cuchillos largos"
+      },
+      "summary": {
+        "en": "Hitler ordered the SS to murder the leadership of the SA, including Ernst Röhm, along with other rivals and critics. The purge won him the army's backing, and after Hindenburg's death that August he became Führer with absolute power.",
+        "es": "Hitler ordenó a las SS asesinar a la cúpula de las SA, incluido Ernst Röhm, junto con otros rivales y críticos. La purga le aseguró el apoyo del ejército y, tras la muerte de Hindenburg en agosto, se convirtió en Führer con poder absoluto."
+      },
+      "coordinates": [11.575, 48.1375],
+      "place": {
+        "en": "Munich, Germany",
+        "es": "Múnich, Alemania"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Night_of_the_Long_Knives",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Noche_de_los_cuchillos_largos"
+    },
+    {
+      "id": "nuremberg-laws",
+      "date": "1935-09-15",
+      "era": "interwar",
+      "category": "holocaust",
+      "title": {
+        "en": "Nuremberg Laws",
+        "es": "Leyes de Núremberg"
+      },
+      "summary": {
+        "en": "At a Nazi Party rally, the Reichstag passed laws that stripped German Jews of citizenship and banned marriage and relations with non-Jews. They gave legal form to racial persecution and paved the way for the Holocaust.",
+        "es": "Durante un congreso del Partido Nazi, el Reichstag aprobó leyes que despojaron de la ciudadanía a los judíos alemanes y prohibieron sus matrimonios y relaciones con no judíos. Dieron forma legal a la persecución racial y abrieron el camino al Holocausto."
+      },
+      "coordinates": [11.0775, 49.4539],
+      "place": {
+        "en": "Nuremberg, Germany",
+        "es": "Núremberg, Alemania"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Nuremberg_Laws",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Leyes_de_N%C3%BAremberg"
+    },
+    {
+      "id": "italy-invades-ethiopia",
+      "date": "1935-10-03",
+      "endDate": "1936-05-05",
+      "era": "interwar",
+      "category": "war",
+      "title": {
+        "en": "Italy invades Ethiopia",
+        "es": "Italia invade Etiopía"
+      },
+      "summary": {
+        "en": "Mussolini's army invaded Ethiopia, using aircraft and poison gas against its forces, and captured Addis Ababa in May 1936. The League of Nations' weak sanctions exposed its failure and drew Italy closer to Nazi Germany.",
+        "es": "El ejército de Mussolini invadió Etiopía, usando aviones y gas venenoso contra sus tropas, y tomó Adís Abeba en mayo de 1936. Las débiles sanciones de la Sociedad de las Naciones dejaron en evidencia su fracaso y acercaron a Italia a la Alemania nazi."
+      },
+      "coordinates": [38.7525, 9.0358],
+      "place": {
+        "en": "Addis Ababa, Ethiopia",
+        "es": "Adís Abeba, Etiopía"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Second_Italo-Ethiopian_War",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Segunda_guerra_italo-et%C3%ADope"
+    },
+    {
+      "id": "rhineland-remilitarization",
+      "date": "1936-03-07",
+      "era": "interwar",
+      "category": "politics",
+      "title": {
+        "en": "Remilitarization of the Rhineland",
+        "es": "Remilitarización de Renania"
+      },
+      "summary": {
+        "en": "German troops marched into the demilitarized Rhineland in open breach of the Treaty of Versailles. France and Britain did nothing, and Hitler concluded that the democracies would not fight to stop him.",
+        "es": "Tropas alemanas entraron en la Renania desmilitarizada, violando abiertamente el Tratado de Versalles. Francia y el Reino Unido no reaccionaron, y Hitler concluyó que las democracias no lucharían para detenerlo."
+      },
+      "coordinates": [6.9578, 50.9422],
+      "place": {
+        "en": "Cologne, Germany",
+        "es": "Colonia, Alemania"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Remilitarisation_of_the_Rhineland",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Remilitarizaci%C3%B3n_de_Renania"
+    },
+    {
+      "id": "spanish-civil-war",
+      "date": "1936-07-17",
+      "endDate": "1939-04-01",
+      "era": "interwar",
+      "category": "war",
+      "title": {
+        "en": "Spanish Civil War",
+        "es": "Guerra civil española"
+      },
+      "summary": {
+        "en": "A military uprising against the Spanish Republic split the country into two sides. Germany and Italy backed Franco's Nationalists and the Soviet Union aided the Republic, making Spain a testing ground for the next war; Franco won in 1939.",
+        "es": "Un levantamiento militar contra la República española dividió al país en dos bandos. Alemania e Italia apoyaron a los sublevados de Franco y la Unión Soviética ayudó a la República, lo que convirtió a España en un campo de pruebas de la guerra siguiente; Franco venció en 1939."
+      },
+      "coordinates": [-3.7033, 40.4169],
+      "place": {
+        "en": "Madrid, Spain",
+        "es": "Madrid, España"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Spanish_Civil_War",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Guerra_civil_espa%C3%B1ola",
+      "major": true
+    },
+    {
+      "id": "great-purge",
+      "date": "1936-08-19",
+      "endDate": "1938-11-17",
+      "era": "interwar",
+      "category": "politics",
+      "title": {
+        "en": "Stalin's Great Purge",
+        "es": "La Gran Purga de Stalin"
+      },
+      "summary": {
+        "en": "Stalin's regime staged show trials of old Bolsheviks and carried out mass arrests and executions across the Soviet Union. Hundreds of thousands were shot, and the purge of the officer corps weakened the Red Army before the war.",
+        "es": "El régimen de Stalin montó juicios espectáculo contra viejos bolcheviques y llevó a cabo detenciones y ejecuciones masivas en toda la Unión Soviética. Cientos de miles fueron fusilados, y la purga de la oficialidad debilitó al Ejército Rojo antes de la guerra."
+      },
+      "coordinates": [37.6175, 55.7506],
+      "place": {
+        "en": "Moscow, Soviet Union",
+        "es": "Moscú, Unión Soviética"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Great_Purge",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Gran_Purga"
+    },
+    {
+      "id": "bombing-of-guernica",
+      "date": "1937-04-26",
+      "era": "interwar",
+      "category": "air",
+      "title": {
+        "en": "Bombing of Guernica",
+        "es": "Bombardeo de Guernica"
+      },
+      "summary": {
+        "en": "Aircraft of Germany's Condor Legion and Italy's Aviazione Legionaria bombed the Basque town of Guernica on a market day. The attack on civilians shocked the world and inspired Picasso's painting Guernica.",
+        "es": "Aviones de la Legión Cóndor alemana y de la Aviación Legionaria italiana bombardearon la villa vasca de Guernica en un día de mercado. El ataque contra civiles conmocionó al mundo e inspiró el cuadro Guernica de Picasso."
+      },
+      "coordinates": [-2.6767, 43.3169],
+      "place": {
+        "en": "Guernica, Spain",
+        "es": "Guernica, España"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Bombing_of_Guernica",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Bombardeo_de_Guernica"
+    },
+    {
+      "id": "marco-polo-bridge-incident",
+      "date": "1937-07-07",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "Marco Polo Bridge Incident",
+        "es": "Incidente del puente de Marco Polo"
+      },
+      "summary": {
+        "en": "A night clash between Chinese and Japanese troops near Beijing escalated into full-scale war between China and Japan. The Second Sino-Japanese War became the Asian front of the Second World War and lasted until 1945.",
+        "es": "Un choque nocturno entre tropas chinas y japonesas cerca de Pekín escaló hasta una guerra total entre China y Japón. La segunda guerra sino-japonesa se convirtió en el frente asiático de la Segunda Guerra Mundial y duró hasta 1945."
+      },
+      "coordinates": [116.2129, 39.849],
+      "place": {
+        "en": "Marco Polo Bridge, near Beijing",
+        "es": "Puente de Marco Polo, cerca de Pekín"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Marco_Polo_Bridge_incident",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Incidente_del_Puente_de_Marco_Polo",
+      "major": true
+    },
+    {
+      "id": "nanjing-massacre",
+      "date": "1937-12-13",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "Nanjing Massacre",
+        "es": "Masacre de Nankín"
+      },
+      "summary": {
+        "en": "After capturing China's capital, Nanjing, Japanese troops murdered civilians and prisoners of war and committed mass rape over about six weeks. It remains one of the worst atrocities of the war and a lasting wound in relations between China and Japan.",
+        "es": "Tras capturar Nankín, la capital china, las tropas japonesas asesinaron a civiles y prisioneros de guerra y cometieron violaciones masivas durante unas seis semanas. Sigue siendo una de las peores atrocidades de la guerra y una herida abierta en las relaciones entre China y Japón."
+      },
+      "coordinates": [118.7789, 32.0608],
+      "place": {
+        "en": "Nanjing, China",
+        "es": "Nankín, China"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Nanjing_Massacre",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Masacre_de_Nank%C3%ADn"
+    },
+    {
+      "id": "anschluss",
+      "date": "1938-03-12",
+      "era": "interwar",
+      "category": "politics",
+      "title": {
+        "en": "Anschluss: Germany annexes Austria",
+        "es": "Anschluss: Alemania anexa Austria"
+      },
+      "summary": {
+        "en": "German troops crossed into Austria unopposed, and the country was absorbed into the Third Reich. Austrian Jews immediately faced violent persecution, and the annexation left Czechoslovakia surrounded on three sides.",
+        "es": "Tropas alemanas entraron en Austria sin resistencia y el país fue absorbido por el Tercer Reich. Los judíos austriacos sufrieron de inmediato una persecución violenta, y la anexión dejó a Checoslovaquia rodeada por tres lados."
+      },
+      "coordinates": [16.3725, 48.2083],
+      "place": {
+        "en": "Vienna, Austria",
+        "es": "Viena, Austria"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Anschluss",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Anschluss"
+    },
+    {
+      "id": "munich-agreement",
+      "date": "1938-09-30",
+      "era": "interwar",
+      "category": "diplomacy",
+      "title": {
+        "en": "Munich Agreement",
+        "es": "Acuerdos de Múnich"
+      },
+      "summary": {
+        "en": "Britain, France, Italy and Germany agreed, without Czechoslovakia at the table, to hand the Sudetenland to Hitler. Chamberlain promised 'peace for our time', but the appeasement only convinced Hitler that he could keep expanding.",
+        "es": "El Reino Unido, Francia, Italia y Alemania acordaron, sin Checoslovaquia en la mesa, entregar los Sudetes a Hitler. Chamberlain prometió «paz para nuestro tiempo», pero la política de apaciguamiento solo convenció a Hitler de que podía seguir expandiéndose."
+      },
+      "coordinates": [11.5678, 48.1461],
+      "place": {
+        "en": "Munich, Germany",
+        "es": "Múnich, Alemania"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Munich_Agreement",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Acuerdos_de_M%C3%BAnich",
+      "major": true
+    },
+    {
+      "id": "kristallnacht",
+      "date": "1938-11-09",
+      "endDate": "1938-11-10",
+      "era": "interwar",
+      "category": "holocaust",
+      "title": {
+        "en": "Kristallnacht",
+        "es": "Noche de los cristales rotos"
+      },
+      "summary": {
+        "en": "In a coordinated pogrom across Germany and Austria, Nazi mobs burned synagogues, smashed Jewish shops and homes and killed at least 91 Jews. About 30,000 Jewish men were sent to concentration camps, marking a shift toward open, violent persecution.",
+        "es": "En un pogromo coordinado en Alemania y Austria, turbas nazis incendiaron sinagogas, destrozaron tiendas y casas judías y mataron al menos a 91 judíos. Unos 30 000 hombres judíos fueron enviados a campos de concentración, un giro hacia la persecución abierta y violenta."
+      },
+      "coordinates": [13.3833, 52.5167],
+      "place": {
+        "en": "Berlin, Germany",
+        "es": "Berlín, Alemania"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Kristallnacht",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Noche_de_los_cristales_rotos"
+    },
+    {
+      "id": "occupation-of-czechoslovakia",
+      "date": "1939-03-15",
+      "era": "interwar",
+      "category": "war",
+      "title": {
+        "en": "Germany occupies Prague",
+        "es": "Alemania ocupa Praga"
+      },
+      "summary": {
+        "en": "Breaking the Munich Agreement, German troops occupied Bohemia and Moravia while Slovakia became a German satellite. The seizure of non-German lands ended appeasement, and Britain and France pledged to defend Poland.",
+        "es": "Rompiendo los Acuerdos de Múnich, tropas alemanas ocuparon Bohemia y Moravia mientras Eslovaquia se convertía en un satélite alemán. La toma de territorios no alemanes puso fin al apaciguamiento, y el Reino Unido y Francia se comprometieron a defender a Polonia."
+      },
+      "coordinates": [14.4214, 50.0875],
+      "place": {
+        "en": "Prague, Czechoslovakia",
+        "es": "Praga, Checoslovaquia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Occupation_of_Czechoslovakia_(1938%E2%80%931945)",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Ocupaci%C3%B3n_alemana_de_Checoslovaquia"
+    },
+    {
+      "id": "battles-of-khalkhin-gol",
+      "date": "1939-05-11",
+      "endDate": "1939-09-16",
+      "era": "interwar",
+      "category": "battle",
+      "title": {
+        "en": "Battles of Khalkhin Gol",
+        "es": "Batallas de Jaljin Gol"
+      },
+      "summary": {
+        "en": "Soviet and Mongolian forces under Georgy Zhukov defeated the Japanese army in a border war on the Mongolian steppe. The defeat turned Japan away from Siberia and toward Southeast Asia and the Pacific.",
+        "es": "Fuerzas soviéticas y mongolas al mando de Gueorgui Zhúkov derrotaron al ejército japonés en una guerra fronteriza en la estepa mongola. La derrota alejó a Japón de Siberia y lo orientó hacia el Sudeste Asiático y el Pacífico."
+      },
+      "coordinates": [118.59, 47.7303],
+      "place": {
+        "en": "Khalkhin Gol, Mongolia",
+        "es": "Jaljin Gol, Mongolia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battles_of_Khalkhin_Gol",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Jaljin_Gol"
+    },
+    {
+      "id": "molotov-ribbentrop-pact",
+      "date": "1939-08-23",
+      "era": "interwar",
+      "category": "diplomacy",
+      "title": {
+        "en": "Molotov–Ribbentrop Pact",
+        "es": "Pacto Ribbentrop-Mólotov"
+      },
+      "summary": {
+        "en": "Nazi Germany and the Soviet Union signed a non-aggression pact whose secret protocol divided Poland, the Baltic states and Finland into spheres of influence. Freed from the risk of a two-front war, Hitler invaded Poland a week later.",
+        "es": "La Alemania nazi y la Unión Soviética firmaron un pacto de no agresión cuyo protocolo secreto repartía Polonia, los países bálticos y Finlandia en esferas de influencia. Sin el riesgo de una guerra en dos frentes, Hitler invadió Polonia una semana después."
+      },
+      "coordinates": [37.6175, 55.7506],
+      "place": {
+        "en": "Moscow, Soviet Union",
+        "es": "Moscú, Unión Soviética"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Molotov%E2%80%93Ribbentrop_Pact",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Pacto_Ribbentrop-M%C3%B3lotov"
+    },
+    {
+      "id": "invasion-of-poland",
+      "date": "1939-09-01",
+      "endDate": "1939-10-06",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "Germany invades Poland",
+        "es": "Alemania invade Polonia"
+      },
+      "summary": {
+        "en": "Germany attacked Poland from the west, and on 3 September Britain and France declared war on Germany, starting the Second World War in Europe. The Soviet Union invaded from the east on 17 September, and Poland was partitioned within five weeks.",
+        "es": "Alemania atacó Polonia desde el oeste y el 3 de septiembre el Reino Unido y Francia le declararon la guerra, lo que dio inicio a la Segunda Guerra Mundial en Europa. La Unión Soviética invadió desde el este el 17 de septiembre, y Polonia quedó repartida en cinco semanas."
+      },
+      "coordinates": [18.6714, 54.4075],
+      "place": {
+        "en": "Westerplatte, Danzig",
+        "es": "Westerplatte, Dánzig"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Invasion_of_Poland",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Invasi%C3%B3n_alemana_de_Polonia_de_1939",
+      "major": true
+    },
+    {
+      "id": "battle-of-the-atlantic",
+      "date": "1939-09-03",
+      "endDate": "1945-05-08",
+      "era": "ww2",
+      "category": "naval",
+      "title": {
+        "en": "Battle of the Atlantic",
+        "es": "Batalla del Atlántico"
+      },
+      "summary": {
+        "en": "German U-boats hunted the convoys that carried food, fuel and weapons from the Americas to Britain. The longest continuous campaign of the war turned in the Allies' favour in 1943 thanks to radar, codebreaking and long-range aircraft.",
+        "es": "Los submarinos alemanes acosaron a los convoyes que llevaban alimentos, combustible y armas de América al Reino Unido. La campaña continua más larga de la guerra se inclinó a favor de los Aliados en 1943 gracias al radar, el descifrado de códigos y los aviones de largo alcance."
+      },
+      "coordinates": [-20, 53],
+      "place": {
+        "en": "North Atlantic Ocean",
+        "es": "Océano Atlántico Norte"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Atlantic",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_del_Atl%C3%A1ntico"
+    },
+    {
+      "id": "winter-war",
+      "date": "1939-11-30",
+      "endDate": "1940-03-13",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "Winter War",
+        "es": "Guerra de Invierno"
+      },
+      "summary": {
+        "en": "The Soviet Union invaded Finland after it refused to cede territory. Outnumbered Finnish troops resisted fiercely in the snow, and although Finland lost part of Karelia, the Red Army's poor showing convinced Hitler it could be beaten.",
+        "es": "La Unión Soviética invadió Finlandia después de que esta se negara a ceder territorio. Las tropas finlandesas, en inferioridad numérica, resistieron con fiereza en la nieve y, aunque Finlandia perdió parte de Carelia, el mal desempeño del Ejército Rojo convenció a Hitler de que podía vencerlo."
+      },
+      "coordinates": [29.9, 60.5],
+      "place": {
+        "en": "Karelian Isthmus, Finland",
+        "es": "Istmo de Carelia, Finlandia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Winter_War",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Guerra_de_Invierno"
+    },
+    {
+      "id": "battle-of-the-river-plate",
+      "date": "1939-12-13",
+      "endDate": "1939-12-17",
+      "era": "ww2",
+      "category": "naval",
+      "title": {
+        "en": "Battle of the River Plate",
+        "es": "Batalla del Río de la Plata"
+      },
+      "summary": {
+        "en": "Three British cruisers engaged the German pocket battleship Admiral Graf Spee off the coast of Uruguay in the first major naval battle of the war. Damaged, the Graf Spee took refuge in Montevideo and was scuttled by its own crew on 17 December.",
+        "es": "Tres cruceros británicos se enfrentaron al acorazado de bolsillo alemán Admiral Graf Spee frente a la costa de Uruguay, en la primera gran batalla naval de la guerra. Dañado, el Graf Spee se refugió en Montevideo y su propia tripulación lo hundió el 17 de diciembre."
+      },
+      "coordinates": [-54.9381, -34.9557],
+      "place": {
+        "en": "Off the Río de la Plata, Uruguay",
+        "es": "Frente al Río de la Plata, Uruguay"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_River_Plate",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_del_R%C3%ADo_de_la_Plata"
+    },
+    {
+      "id": "bletchley-bombe",
+      "date": "1940-03-18",
+      "era": "ww2",
+      "category": "technology",
+      "title": {
+        "en": "First Bombe at Bletchley Park",
+        "es": "Primera Bombe en Bletchley Park"
+      },
+      "summary": {
+        "en": "Building on Polish breakthroughs, Alan Turing and Gordon Welchman designed an electromechanical machine to find the daily Enigma settings, and the first was installed at Bletchley Park. The intelligence it produced, known as Ultra, helped the Allies in almost every theatre.",
+        "es": "A partir de los avances polacos, Alan Turing y Gordon Welchman diseñaron una máquina electromecánica para hallar la configuración diaria de Enigma, y la primera se instaló en Bletchley Park. La inteligencia obtenida, llamada Ultra, ayudó a los Aliados en casi todos los frentes."
+      },
+      "coordinates": [-0.7411, 51.9981],
+      "place": {
+        "en": "Bletchley Park, England",
+        "es": "Bletchley Park, Inglaterra"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Bombe",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Bombe"
+    },
+    {
+      "id": "norwegian-campaign",
+      "date": "1940-04-09",
+      "endDate": "1940-06-10",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "Germany invades Norway",
+        "es": "Alemania invade Noruega"
+      },
+      "summary": {
+        "en": "Germany invaded Denmark and Norway to secure Swedish iron ore shipped through Narvik and bases on the Atlantic. Allied landings failed, and the fiasco led to Neville Chamberlain's replacement by Winston Churchill.",
+        "es": "Alemania invadió Dinamarca y Noruega para asegurar el hierro sueco que salía por Narvik y bases en el Atlántico. Los desembarcos aliados fracasaron, y el fiasco llevó a que Winston Churchill reemplazara a Neville Chamberlain."
+      },
+      "coordinates": [17.406, 68.434],
+      "place": {
+        "en": "Narvik, Norway",
+        "es": "Narvik, Noruega"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Norwegian_campaign",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Campa%C3%B1a_de_Noruega"
+    },
+    {
+      "id": "battle-of-france",
+      "date": "1940-05-10",
+      "endDate": "1940-06-25",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "Fall of France",
+        "es": "Caída de Francia"
+      },
+      "summary": {
+        "en": "Germany invaded the Low Countries and sent its armoured divisions through the Ardennes, breaking through at Sedan and racing to the Channel. In six weeks France was defeated, a shock that left Britain standing alone.",
+        "es": "Alemania invadió los Países Bajos y Bélgica y lanzó sus divisiones blindadas a través de las Ardenas, rompió el frente en Sedán y corrió hacia el canal de la Mancha. En seis semanas Francia fue derrotada, un golpe que dejó al Reino Unido solo."
+      },
+      "coordinates": [4.9403, 49.7019],
+      "place": {
+        "en": "Sedan, France",
+        "es": "Sedán, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_France",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Francia",
+      "major": true
+    },
+    {
+      "id": "dunkirk-evacuation",
+      "date": "1940-05-26",
+      "endDate": "1940-06-04",
+      "era": "ww2",
+      "category": "naval",
+      "title": {
+        "en": "Dunkirk evacuation",
+        "es": "Evacuación de Dunkerque"
+      },
+      "summary": {
+        "en": "Trapped against the coast, more than 338,000 British and French soldiers were rescued by warships and hundreds of civilian 'little ships'. The army lost its equipment, but saving its men let Britain keep fighting.",
+        "es": "Acorralados contra la costa, más de 338 000 soldados británicos y franceses fueron rescatados por buques de guerra y cientos de pequeñas embarcaciones civiles. El ejército perdió su equipo, pero salvar a sus hombres permitió al Reino Unido seguir luchando."
+      },
+      "coordinates": [2.3764, 51.0378],
+      "place": {
+        "en": "Dunkirk, France",
+        "es": "Dunkerque, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Dunkirk_evacuation",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Operaci%C3%B3n_Dinamo"
+    },
+    {
+      "id": "armistice-1940",
+      "date": "1940-06-22",
+      "era": "ww2",
+      "category": "diplomacy",
+      "title": {
+        "en": "France signs armistice",
+        "es": "Francia firma el armisticio"
+      },
+      "summary": {
+        "en": "Hitler made France sign the armistice in the same railway carriage used for Germany's surrender in 1918. Germany occupied the north and the Atlantic coast, while the Vichy regime governed the south and collaborated with the occupiers.",
+        "es": "Hitler obligó a Francia a firmar el armisticio en el mismo vagón de tren usado para la rendición alemana de 1918. Alemania ocupó el norte y la costa atlántica, mientras el régimen de Vichy gobernaba el sur y colaboraba con los ocupantes."
+      },
+      "coordinates": [2.9064, 49.4272],
+      "place": {
+        "en": "Compiègne Forest, France",
+        "es": "Bosque de Compiègne, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Armistice_of_22_June_1940",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Armisticio_del_22_de_junio_de_1940"
+    },
+    {
+      "id": "battle-of-britain",
+      "date": "1940-07-10",
+      "endDate": "1940-10-31",
+      "era": "ww2",
+      "category": "air",
+      "title": {
+        "en": "Battle of Britain",
+        "es": "Batalla de Inglaterra"
+      },
+      "summary": {
+        "en": "The Luftwaffe tried to destroy the Royal Air Force as a prelude to invading Britain. Guided by the Chain Home radar network, RAF fighters inflicted losses Germany could not sustain, and the invasion was postponed indefinitely.",
+        "es": "La Luftwaffe intentó destruir a la Real Fuerza Aérea como paso previo a invadir el Reino Unido. Guiados por la red de radares Chain Home, los cazas de la RAF causaron pérdidas que Alemania no pudo sostener, y la invasión se aplazó indefinidamente."
+      },
+      "coordinates": [0.0325, 51.3308],
+      "place": {
+        "en": "Southern England",
+        "es": "Sur de Inglaterra"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Britain",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Inglaterra",
+      "major": true
+    },
+    {
+      "id": "the-blitz",
+      "date": "1940-09-07",
+      "endDate": "1941-05-16",
+      "era": "ww2",
+      "category": "air",
+      "title": {
+        "en": "The Blitz",
+        "es": "El Blitz"
+      },
+      "summary": {
+        "en": "Germany switched to bombing British cities, above all London, which was bombed on 56 of 57 consecutive days and nights. More than 40,000 civilians were killed, but industry kept working and public morale held.",
+        "es": "Alemania pasó a bombardear ciudades británicas, sobre todo Londres, que fue bombardeada en 56 de 57 días y noches seguidos. Murieron más de 40 000 civiles, pero la industria siguió funcionando y la moral de la población resistió."
+      },
+      "coordinates": [-0.1275, 51.5072],
+      "place": {
+        "en": "London, England",
+        "es": "Londres, Inglaterra"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/The_Blitz",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Blitz"
+    },
+    {
+      "id": "tizard-mission",
+      "date": "1940-09-12",
+      "era": "ww2",
+      "category": "technology",
+      "title": {
+        "en": "Radar secrets shared with the US",
+        "es": "Secretos del radar compartidos con EE. UU."
+      },
+      "summary": {
+        "en": "A British scientific mission led by Henry Tizard brought the cavity magnetron and other secrets to Washington. The magnetron made compact, precise radar possible, and American mass production put it on Allied ships and aircraft.",
+        "es": "Una misión científica británica encabezada por Henry Tizard llevó a Washington el magnetrón de cavidad y otros secretos. El magnetrón hizo posible un radar compacto y preciso, y la producción en masa estadounidense lo instaló en barcos y aviones aliados."
+      },
+      "coordinates": [-77.0367, 38.895],
+      "place": {
+        "en": "Washington, D.C., United States",
+        "es": "Washington D. C., Estados Unidos"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Tizard_Mission"
+    },
+    {
+      "id": "lend-lease",
+      "date": "1941-03-11",
+      "era": "ww2",
+      "category": "home-front",
+      "title": {
+        "en": "Lend-Lease Act",
+        "es": "Ley de Préstamo y Arriendo"
+      },
+      "summary": {
+        "en": "The still-neutral United States authorized supplying weapons, food and fuel to Britain and later to the Soviet Union and China, with payment deferred. America became the 'arsenal of democracy' months before entering the war.",
+        "es": "Estados Unidos, todavía neutral, autorizó el envío de armas, alimentos y combustible al Reino Unido y luego a la Unión Soviética y China, con pago diferido. El país se volvió el «arsenal de la democracia» meses antes de entrar en la guerra."
+      },
+      "coordinates": [-77.0367, 38.895],
+      "place": {
+        "en": "Washington, D.C., United States",
+        "es": "Washington D. C., Estados Unidos"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Lend-Lease",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Ley_de_Pr%C3%A9stamo_y_Arriendo"
+    },
+    {
+      "id": "operation-barbarossa",
+      "date": "1941-06-22",
+      "endDate": "1941-12-05",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "Operation Barbarossa",
+        "es": "Operación Barbarroja"
+      },
+      "summary": {
+        "en": "Germany and its allies invaded the Soviet Union with more than three million troops along a front from the Baltic to the Black Sea. The attack opened the largest and deadliest theatre of the war, and behind the front the mass murder of Soviet Jews began.",
+        "es": "Alemania y sus aliados invadieron la Unión Soviética con más de tres millones de soldados en un frente del Báltico al mar Negro. El ataque abrió el escenario más grande y mortífero de la guerra, y tras el frente comenzó el asesinato masivo de los judíos soviéticos."
+      },
+      "coordinates": [23.6528, 52.0833],
+      "place": {
+        "en": "Brest Fortress, Soviet Union",
+        "es": "Fortaleza de Brest, Unión Soviética"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Barbarossa",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Operaci%C3%B3n_Barbarroja",
+      "major": true
+    },
+    {
+      "id": "atlantic-charter",
+      "date": "1941-08-14",
+      "era": "ww2",
+      "category": "diplomacy",
+      "title": {
+        "en": "Atlantic Charter",
+        "es": "Carta del Atlántico"
+      },
+      "summary": {
+        "en": "Meeting on warships off Newfoundland, Roosevelt and Churchill set out shared goals for the postwar world, including self-determination and no territorial gains. The statement later became a basis for the United Nations.",
+        "es": "Reunidos en buques de guerra frente a Terranova, Roosevelt y Churchill fijaron objetivos comunes para la posguerra, como la autodeterminación y la renuncia a ganancias territoriales. La declaración fue luego una base de las Naciones Unidas."
+      },
+      "coordinates": [-54.2589, 47.2508],
+      "place": {
+        "en": "Placentia Bay, Newfoundland",
+        "es": "Bahía de Placentia, Terranova"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Atlantic_Charter",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Carta_del_Atl%C3%A1ntico"
+    },
+    {
+      "id": "siege-of-leningrad",
+      "date": "1941-09-08",
+      "endDate": "1944-01-27",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Siege of Leningrad",
+        "es": "Sitio de Leningrado"
+      },
+      "summary": {
+        "en": "German and Finnish forces cut Leningrad off from the rest of the Soviet Union for nearly 900 days. Hundreds of thousands of civilians died of starvation and cold, yet the city never surrendered.",
+        "es": "Fuerzas alemanas y finlandesas aislaron Leningrado del resto de la Unión Soviética durante casi 900 días. Cientos de miles de civiles murieron de hambre y frío, pero la ciudad nunca se rindió."
+      },
+      "coordinates": [30.3167, 59.95],
+      "place": {
+        "en": "Leningrad, Soviet Union",
+        "es": "Leningrado, Unión Soviética"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Siege_of_Leningrad",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Sitio_de_Leningrado"
+    },
+    {
+      "id": "babi-yar",
+      "date": "1941-09-29",
+      "endDate": "1941-09-30",
+      "era": "ww2",
+      "category": "holocaust",
+      "title": {
+        "en": "Babi Yar massacre",
+        "es": "Masacre de Babi Yar"
+      },
+      "summary": {
+        "en": "In two days, German SS and police units shot 33,771 Jews from Kyiv at the Babi Yar ravine. It was one of the largest single massacres of the Holocaust, part of the mass shootings that followed the invasion of the Soviet Union.",
+        "es": "En dos días, unidades de las SS y de la policía alemana fusilaron a 33 771 judíos de Kiev en el barranco de Babi Yar. Fue una de las mayores masacres individuales del Holocausto, parte de los fusilamientos masivos que siguieron a la invasión de la Unión Soviética."
+      },
+      "coordinates": [30.4489, 50.4714],
+      "place": {
+        "en": "Kyiv, Soviet Union",
+        "es": "Kiev, Unión Soviética"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Babi_Yar",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Babi_Yar"
+    },
+    {
+      "id": "battle-of-moscow",
+      "date": "1941-10-02",
+      "endDate": "1942-01-07",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Battle of Moscow",
+        "es": "Batalla de Moscú"
+      },
+      "summary": {
+        "en": "German armies drove on the Soviet capital and reached its outskirts in freezing weather. A Soviet counteroffensive in December, reinforced by troops from Siberia, pushed them back and ended hopes of a quick German victory.",
+        "es": "Los ejércitos alemanes avanzaron sobre la capital soviética y llegaron a sus afueras en medio de un frío extremo. Una contraofensiva soviética en diciembre, reforzada con tropas de Siberia, los hizo retroceder y acabó con la esperanza de una victoria alemana rápida."
+      },
+      "coordinates": [37.6175, 55.7506],
+      "place": {
+        "en": "Moscow, Soviet Union",
+        "es": "Moscú, Unión Soviética"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Moscow",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Mosc%C3%BA"
+    },
+    {
+      "id": "attack-on-pearl-harbor",
+      "date": "1941-12-07",
+      "era": "ww2",
+      "category": "naval",
+      "title": {
+        "en": "Attack on Pearl Harbor",
+        "es": "Ataque a Pearl Harbor"
+      },
+      "summary": {
+        "en": "Japanese carrier aircraft struck the US Pacific Fleet at Pearl Harbor, sinking or damaging eight battleships and killing more than 2,400 Americans. The United States declared war on Japan the next day, and Germany declared war on the US on 11 December.",
+        "es": "Aviones de portaaviones japoneses atacaron la Flota del Pacífico de Estados Unidos en Pearl Harbor, hundieron o dañaron ocho acorazados y mataron a más de 2400 estadounidenses. Estados Unidos declaró la guerra a Japón al día siguiente, y Alemania le declaró la guerra el 11 de diciembre."
+      },
+      "coordinates": [-157.9536, 21.3619],
+      "place": {
+        "en": "Pearl Harbor, Hawaii",
+        "es": "Pearl Harbor, Hawái"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Ataque_a_Pearl_Harbor",
+      "major": true
+    },
+    {
+      "id": "wannsee-conference",
+      "date": "1942-01-20",
+      "era": "ww2",
+      "category": "holocaust",
+      "title": {
+        "en": "Wannsee Conference",
+        "es": "Conferencia de Wannsee"
+      },
+      "summary": {
+        "en": "Senior Nazi officials met in a villa near Berlin, chaired by Reinhard Heydrich, to coordinate the 'Final Solution to the Jewish question'. The meeting organized the deportation of Europe's Jews to be murdered in the east.",
+        "es": "Altos funcionarios nazis se reunieron en una villa cerca de Berlín, presididos por Reinhard Heydrich, para coordinar la «solución final de la cuestión judía». La reunión organizó la deportación de los judíos de Europa para asesinarlos en el este."
+      },
+      "coordinates": [13.1656, 52.4331],
+      "place": {
+        "en": "Wannsee, Berlin",
+        "es": "Wannsee, Berlín"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Wannsee_Conference",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Conferencia_de_Wannsee"
+    },
+    {
+      "id": "fall-of-singapore",
+      "date": "1942-02-08",
+      "endDate": "1942-02-15",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Fall of Singapore",
+        "es": "Caída de Singapur"
+      },
+      "summary": {
+        "en": "Japanese forces crossed from Malaya and captured Singapore, Britain's main base in Asia. About 80,000 British, Indian and Australian troops surrendered, the largest British capitulation in history.",
+        "es": "Las fuerzas japonesas cruzaron desde Malasia y capturaron Singapur, la principal base británica en Asia. Unos 80 000 soldados británicos, indios y australianos se rindieron, la mayor capitulación de la historia británica."
+      },
+      "coordinates": [103.8, 1.3],
+      "place": {
+        "en": "Singapore",
+        "es": "Singapur"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Fall_of_Singapore",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Singapur"
+    },
+    {
+      "id": "executive-order-9066",
+      "date": "1942-02-19",
+      "era": "ww2",
+      "category": "home-front",
+      "title": {
+        "en": "Japanese American incarceration",
+        "es": "Encarcelamiento de japoneses estadounidenses"
+      },
+      "summary": {
+        "en": "President Roosevelt signed Executive Order 9066, which allowed the forced removal of more than 110,000 people of Japanese descent from the US West Coast. Most were American citizens held in camps for the rest of the war; the US government formally apologized in 1988.",
+        "es": "El presidente Roosevelt firmó la Orden Ejecutiva 9066, que permitió expulsar por la fuerza de la costa oeste de Estados Unidos a más de 110 000 personas de ascendencia japonesa. La mayoría eran ciudadanos estadounidenses recluidos en campos hasta el final de la guerra; el gobierno pidió perdón formalmente en 1988."
+      },
+      "coordinates": [-77.0367, 38.895],
+      "place": {
+        "en": "Washington, D.C., United States",
+        "es": "Washington D. C., Estados Unidos"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Executive_Order_9066",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Orden_Ejecutiva_9066"
+    },
+    {
+      "id": "battle-of-the-coral-sea",
+      "date": "1942-05-04",
+      "endDate": "1942-05-08",
+      "era": "ww2",
+      "category": "naval",
+      "title": {
+        "en": "Battle of the Coral Sea",
+        "es": "Batalla del mar del Coral"
+      },
+      "summary": {
+        "en": "In the first naval battle fought entirely by carrier aircraft, American and Australian forces turned back a Japanese invasion fleet headed for Port Moresby. It was the first check on Japan's expansion in the Pacific.",
+        "es": "En la primera batalla naval librada solo por aviones de portaaviones, fuerzas estadounidenses y australianas hicieron retroceder una flota de invasión japonesa rumbo a Port Moresby. Fue el primer freno a la expansión japonesa en el Pacífico."
+      },
+      "coordinates": [158, -18],
+      "place": {
+        "en": "Coral Sea",
+        "es": "Mar del Coral"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Coral_Sea",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_del_mar_del_Coral"
+    },
+    {
+      "id": "mexico-enters-war",
+      "date": "1942-05-22",
+      "era": "ww2",
+      "category": "politics",
+      "title": {
+        "en": "Mexico enters the war",
+        "es": "México entra en la guerra"
+      },
+      "summary": {
+        "en": "After German U-boats sank the Mexican tankers Potrero del Llano and Faja de Oro, Mexico declared war on the Axis. It supplied workers and raw materials to the Allies, and its Squadron 201 later flew combat missions in the Philippines.",
+        "es": "Después de que submarinos alemanes hundieran los buques petroleros mexicanos Potrero del Llano y Faja de Oro, México declaró la guerra al Eje. Aportó trabajadores y materias primas a los Aliados, y su Escuadrón 201 luego combatió en Filipinas."
+      },
+      "coordinates": [-99.1359, 19.3538],
+      "place": {
+        "en": "Mexico City, Mexico",
+        "es": "Ciudad de México, México"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Mexico_in_World_War_II"
+    },
+    {
+      "id": "battle-of-midway",
+      "date": "1942-06-04",
+      "endDate": "1942-06-07",
+      "era": "ww2",
+      "category": "naval",
+      "title": {
+        "en": "Battle of Midway",
+        "es": "Batalla de Midway"
+      },
+      "summary": {
+        "en": "Forewarned by codebreakers, US carrier aircraft sank four Japanese fleet carriers near Midway Atoll. Japan never recovered the loss, and the initiative in the Pacific passed to the United States.",
+        "es": "Alertados por sus criptógrafos, los aviones de portaaviones estadounidenses hundieron cuatro portaaviones japoneses cerca del atolón de Midway. Japón nunca se recuperó de la pérdida y la iniciativa en el Pacífico pasó a Estados Unidos."
+      },
+      "coordinates": [-177.35, 28.2075],
+      "place": {
+        "en": "Midway Atoll, Pacific Ocean",
+        "es": "Atolón de Midway, océano Pacífico"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Midway",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Midway",
+      "major": true
+    },
+    {
+      "id": "battle-of-stalingrad",
+      "date": "1942-07-17",
+      "endDate": "1943-02-02",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Battle of Stalingrad",
+        "es": "Batalla de Stalingrado"
+      },
+      "summary": {
+        "en": "German forces fought street by street for the city on the Volga, until a Soviet counteroffensive in November encircled the Sixth Army. Its surrender in February 1943 was Germany's first great defeat and a turning point of the war.",
+        "es": "Las fuerzas alemanas lucharon calle por calle por la ciudad a orillas del Volga, hasta que una contraofensiva soviética en noviembre cercó al Sexto Ejército. Su rendición en febrero de 1943 fue la primera gran derrota alemana y un punto de inflexión de la guerra."
+      },
+      "coordinates": [44.5147, 48.7086],
+      "place": {
+        "en": "Stalingrad, Soviet Union",
+        "es": "Stalingrado, Unión Soviética"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Stalingrad",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Stalingrado",
+      "major": true
+    },
+    {
+      "id": "treblinka",
+      "date": "1942-07-23",
+      "endDate": "1943-10-19",
+      "era": "ww2",
+      "category": "holocaust",
+      "title": {
+        "en": "Treblinka death camp begins killing",
+        "es": "Treblinka comienza a asesinar"
+      },
+      "summary": {
+        "en": "The Treblinka extermination camp in occupied Poland began operating as part of Operation Reinhard, receiving deportation trains from the Warsaw Ghetto. At least 700,000 and possibly as many as 900,000 Jews were murdered there in gas chambers.",
+        "es": "El campo de exterminio de Treblinka, en la Polonia ocupada, comenzó a funcionar como parte de la Operación Reinhard y recibió trenes de deportados del gueto de Varsovia. Al menos 700 000 judíos, y posiblemente hasta 900 000, fueron asesinados allí en cámaras de gas."
+      },
+      "coordinates": [22.0531, 52.6311],
+      "place": {
+        "en": "Treblinka, occupied Poland",
+        "es": "Treblinka, Polonia ocupada"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Treblinka_extermination_camp",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Campo_de_exterminio_de_Treblinka"
+    },
+    {
+      "id": "guadalcanal-campaign",
+      "date": "1942-08-07",
+      "endDate": "1943-02-09",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Guadalcanal campaign",
+        "es": "Campaña de Guadalcanal"
+      },
+      "summary": {
+        "en": "US Marines landed on Guadalcanal to seize a Japanese airfield under construction. Six months of fighting on land, at sea and in the air ended in Japan's withdrawal and began the Allied offensive in the Pacific.",
+        "es": "Los marines estadounidenses desembarcaron en Guadalcanal para tomar un aeródromo japonés en construcción. Seis meses de combates en tierra, mar y aire terminaron con la retirada japonesa e iniciaron la ofensiva aliada en el Pacífico."
+      },
+      "coordinates": [160.235, -9.59],
+      "place": {
+        "en": "Guadalcanal, Solomon Islands",
+        "es": "Guadalcanal, Islas Salomón"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Guadalcanal_campaign",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Campa%C3%B1a_de_Guadalcanal"
+    },
+    {
+      "id": "brazil-enters-war",
+      "date": "1942-08-22",
+      "era": "ww2",
+      "category": "politics",
+      "title": {
+        "en": "Brazil enters the war",
+        "es": "Brasil entra en la guerra"
+      },
+      "summary": {
+        "en": "After German submarines sank dozens of Brazilian merchant ships, Brazil declared war on Germany and Italy. It was the only South American country to send ground troops to Europe, where its Expeditionary Force fought in Italy in 1944 and 1945.",
+        "es": "Después de que submarinos alemanes hundieran decenas de barcos mercantes brasileños, Brasil declaró la guerra a Alemania e Italia. Fue el único país sudamericano que envió tropas terrestres a Europa, donde su Fuerza Expedicionaria combatió en Italia en 1944 y 1945."
+      },
+      "coordinates": [-43.2056, -22.9111],
+      "place": {
+        "en": "Rio de Janeiro, Brazil",
+        "es": "Río de Janeiro, Brasil"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Brazil_in_World_War_II",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Brasil_en_la_Segunda_Guerra_Mundial"
+    },
+    {
+      "id": "second-battle-of-el-alamein",
+      "date": "1942-10-23",
+      "endDate": "1942-11-04",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Second Battle of El Alamein",
+        "es": "Segunda batalla de El Alamein"
+      },
+      "summary": {
+        "en": "Montgomery's Eighth Army broke through Rommel's German and Italian forces in the Egyptian desert. The victory removed the threat to the Suez Canal and began the Axis retreat from North Africa.",
+        "es": "El Octavo Ejército de Montgomery rompió las líneas de las fuerzas alemanas e italianas de Rommel en el desierto egipcio. La victoria eliminó la amenaza sobre el canal de Suez e inició la retirada del Eje del norte de África."
+      },
+      "coordinates": [28.95, 30.8333],
+      "place": {
+        "en": "El Alamein, Egypt",
+        "es": "El Alamein, Egipto"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Second_Battle_of_El_Alamein",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Segunda_batalla_de_El_Alamein"
+    },
+    {
+      "id": "operation-torch",
+      "date": "1942-11-08",
+      "endDate": "1942-11-16",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "Operation Torch",
+        "es": "Operación Torch"
+      },
+      "summary": {
+        "en": "American and British troops landed in French Morocco and Algeria, the first large American ground operation against the Axis in the West. Together with El Alamein, it trapped Axis forces in Tunisia, where they surrendered in May 1943.",
+        "es": "Tropas estadounidenses y británicas desembarcaron en el Marruecos francés y Argelia, la primera gran operación terrestre estadounidense contra el Eje en Occidente. Junto con El Alamein, atrapó a las fuerzas del Eje en Túnez, donde se rindieron en mayo de 1943."
+      },
+      "coordinates": [-7.62, 33.5992],
+      "place": {
+        "en": "Casablanca, Morocco",
+        "es": "Casablanca, Marruecos"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Torch",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Operaci%C3%B3n_Torch"
+    },
+    {
+      "id": "chicago-pile-1",
+      "date": "1942-12-02",
+      "era": "ww2",
+      "category": "technology",
+      "title": {
+        "en": "First nuclear chain reaction",
+        "es": "Primera reacción nuclear en cadena"
+      },
+      "summary": {
+        "en": "Under a stadium at the University of Chicago, Enrico Fermi's team achieved the first self-sustaining nuclear chain reaction in the Chicago Pile-1 reactor. The experiment proved an atomic bomb was feasible and advanced the Manhattan Project.",
+        "es": "Bajo un estadio de la Universidad de Chicago, el equipo de Enrico Fermi logró la primera reacción nuclear en cadena autosostenida en el reactor Chicago Pile-1. El experimento demostró que una bomba atómica era factible e impulsó el Proyecto Manhattan."
+      },
+      "coordinates": [-87.5997, 41.7897],
+      "place": {
+        "en": "University of Chicago, United States",
+        "es": "Universidad de Chicago, Estados Unidos"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Chicago_Pile-1",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Chicago_Pile-1"
+    },
+    {
+      "id": "warsaw-ghetto-uprising",
+      "date": "1943-04-19",
+      "endDate": "1943-05-16",
+      "era": "ww2",
+      "category": "holocaust",
+      "title": {
+        "en": "Warsaw Ghetto Uprising",
+        "es": "Levantamiento del gueto de Varsovia"
+      },
+      "summary": {
+        "en": "When the SS entered to deport the remaining Jews, fighters of the ghetto took up arms and held out for almost a month. The Germans burned the ghetto block by block; it was the largest Jewish revolt of the Holocaust.",
+        "es": "Cuando las SS entraron para deportar a los judíos que quedaban, los combatientes del gueto tomaron las armas y resistieron casi un mes. Los alemanes incendiaron el gueto manzana por manzana; fue la mayor rebelión judía del Holocausto."
+      },
+      "coordinates": [20.9958, 52.2461],
+      "place": {
+        "en": "Warsaw Ghetto, occupied Poland",
+        "es": "Gueto de Varsovia, Polonia ocupada"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Warsaw_Ghetto_Uprising",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Levantamiento_del_gueto_de_Varsovia"
+    },
+    {
+      "id": "battle-of-kursk",
+      "date": "1943-07-05",
+      "endDate": "1943-08-23",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Battle of Kursk",
+        "es": "Batalla de Kursk"
+      },
+      "summary": {
+        "en": "Germany attacked the Kursk salient with massed tanks, but deep Soviet defences stopped the offensive within days. The Red Army then counterattacked, and after Kursk Germany never again launched a major offensive in the east.",
+        "es": "Alemania atacó el saliente de Kursk con una gran masa de tanques, pero las profundas defensas soviéticas detuvieron la ofensiva en pocos días. Luego el Ejército Rojo contraatacó y, después de Kursk, Alemania nunca volvió a lanzar una gran ofensiva en el este."
+      },
+      "coordinates": [36.1872, 51.7372],
+      "place": {
+        "en": "Kursk, Soviet Union",
+        "es": "Kursk, Unión Soviética"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Kursk",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Kursk",
+      "major": true
+    },
+    {
+      "id": "invasion-of-sicily",
+      "date": "1943-07-09",
+      "endDate": "1943-08-17",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "Allied invasion of Sicily",
+        "es": "Invasión aliada de Sicilia"
+      },
+      "summary": {
+        "en": "American and British forces landed in Sicily and took the island in five weeks. The invasion led to Mussolini's fall on 25 July and opened the way to the Italian mainland.",
+        "es": "Fuerzas estadounidenses y británicas desembarcaron en Sicilia y tomaron la isla en cinco semanas. La invasión provocó la caída de Mussolini el 25 de julio y abrió el camino hacia la Italia continental."
+      },
+      "coordinates": [14.25, 37.0667],
+      "place": {
+        "en": "Gela, Sicily",
+        "es": "Gela, Sicilia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Allied_invasion_of_Sicily",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Invasi%C3%B3n_aliada_de_Sicilia"
+    },
+    {
+      "id": "armistice-of-cassibile",
+      "date": "1943-09-03",
+      "endDate": "1943-09-08",
+      "era": "ww2",
+      "category": "diplomacy",
+      "title": {
+        "en": "Italy signs an armistice",
+        "es": "Italia firma el armisticio"
+      },
+      "summary": {
+        "en": "Italy secretly signed an armistice with the Allies at Cassibile, announced on 8 September. Germany immediately occupied most of the country and freed Mussolini, and Italy became a battlefield until 1945.",
+        "es": "Italia firmó en secreto un armisticio con los Aliados en Cassibile, anunciado el 8 de septiembre. Alemania ocupó de inmediato la mayor parte del país y liberó a Mussolini, e Italia se convirtió en campo de batalla hasta 1945."
+      },
+      "coordinates": [15.1975, 36.9764],
+      "place": {
+        "en": "Cassibile, Sicily",
+        "es": "Cassibile, Sicilia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Armistice_of_Cassibile",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Armisticio_entre_Italia_y_las_fuerzas_armadas_aliadas"
+    },
+    {
+      "id": "tehran-conference",
+      "date": "1943-11-28",
+      "endDate": "1943-12-01",
+      "era": "ww2",
+      "category": "diplomacy",
+      "title": {
+        "en": "Tehran Conference",
+        "es": "Conferencia de Teherán"
+      },
+      "summary": {
+        "en": "Roosevelt, Churchill and Stalin met together for the first time. They agreed that the Western Allies would open a second front in France in 1944, and Stalin promised to join the war against Japan after Germany's defeat.",
+        "es": "Roosevelt, Churchill y Stalin se reunieron juntos por primera vez. Acordaron que los Aliados occidentales abrirían un segundo frente en Francia en 1944, y Stalin prometió entrar en la guerra contra Japón tras la derrota de Alemania."
+      },
+      "coordinates": [51.3897, 35.6889],
+      "place": {
+        "en": "Tehran, Iran",
+        "es": "Teherán, Irán"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Tehran_Conference",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Conferencia_de_Teher%C3%A1n"
+    },
+    {
+      "id": "battle-of-monte-cassino",
+      "date": "1944-01-17",
+      "endDate": "1944-05-18",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Battle of Monte Cassino",
+        "es": "Batalla de Montecassino"
+      },
+      "summary": {
+        "en": "Allied armies made four assaults on the Gustav Line around Monte Cassino, and the historic abbey on its summit was destroyed by bombing. Polish troops finally took the ruins in May, opening the road to Rome.",
+        "es": "Los ejércitos aliados lanzaron cuatro asaltos contra la Línea Gustav en torno a Montecassino, y la histórica abadía de la cima fue destruida por los bombardeos. En mayo las tropas polacas tomaron por fin las ruinas y abrieron el camino hacia Roma."
+      },
+      "coordinates": [13.8139, 41.49],
+      "place": {
+        "en": "Monte Cassino, Italy",
+        "es": "Montecassino, Italia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Monte_Cassino",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Montecassino"
+    },
+    {
+      "id": "battle-of-imphal",
+      "date": "1944-03-08",
+      "endDate": "1944-07-03",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Battle of Imphal",
+        "es": "Batalla de Imfal"
+      },
+      "summary": {
+        "en": "Japan invaded northeast India, but British and Indian troops supplied by air held Imphal and Kohima. The Japanese army suffered its heaviest defeat to date, opening the way for the Allied reconquest of Burma.",
+        "es": "Japón invadió el noreste de la India, pero las tropas británicas e indias, abastecidas por aire, resistieron en Imfal y Kohima. El ejército japonés sufrió la peor derrota de su historia hasta entonces, lo que abrió el camino a la reconquista aliada de Birmania."
+      },
+      "coordinates": [93.95, 24.82],
+      "place": {
+        "en": "Imphal, India",
+        "es": "Imfal, India"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Imphal",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Imfal"
+    },
+    {
+      "id": "d-day",
+      "date": "1944-06-06",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "D-Day: Normandy landings",
+        "es": "Día D: desembarco de Normandía"
+      },
+      "summary": {
+        "en": "American, British, Canadian and other Allied troops landed on five Normandy beaches in the largest seaborne invasion in history. The long-awaited second front in the west began the liberation of Western Europe.",
+        "es": "Tropas estadounidenses, británicas, canadienses y de otros países aliados desembarcaron en cinco playas de Normandía en la mayor invasión marítima de la historia. El esperado segundo frente en el oeste dio inicio a la liberación de Europa Occidental."
+      },
+      "coordinates": [-0.8686, 49.3689],
+      "place": {
+        "en": "Normandy, France",
+        "es": "Normandía, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Normandy_landings",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Desembarco_de_Normandia",
+      "major": true
+    },
+    {
+      "id": "operation-bagration",
+      "date": "1944-06-22",
+      "endDate": "1944-08-19",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Operation Bagration",
+        "es": "Operación Bagratión"
+      },
+      "summary": {
+        "en": "The Red Army launched a massive offensive in Belarus that destroyed German Army Group Centre. It was Germany's worst defeat of the war, and Soviet forces advanced to the gates of Warsaw.",
+        "es": "El Ejército Rojo lanzó una ofensiva masiva en Bielorrusia que destruyó al Grupo de Ejércitos Centro alemán. Fue la peor derrota alemana de la guerra, y las fuerzas soviéticas avanzaron hasta las puertas de Varsovia."
+      },
+      "coordinates": [27.5618, 53.9022],
+      "place": {
+        "en": "Minsk, Belarus",
+        "es": "Minsk, Bielorrusia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Bagration",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Operaci%C3%B3n_Bagrati%C3%B3n"
+    },
+    {
+      "id": "warsaw-uprising",
+      "date": "1944-08-01",
+      "endDate": "1944-10-02",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Warsaw Uprising",
+        "es": "Alzamiento de Varsovia"
+      },
+      "summary": {
+        "en": "The Polish Home Army rose against the German occupiers to liberate Warsaw before the Red Army arrived. Without outside help, it was crushed after 63 days; between 150,000 and 200,000 civilians died and the Germans razed the city.",
+        "es": "El Ejército Nacional polaco se levantó contra los ocupantes alemanes para liberar Varsovia antes de la llegada del Ejército Rojo. Sin ayuda exterior, fue aplastado tras 63 días; murieron entre 150 000 y 200 000 civiles y los alemanes arrasaron la ciudad."
+      },
+      "coordinates": [21.0111, 52.23],
+      "place": {
+        "en": "Warsaw, occupied Poland",
+        "es": "Varsovia, Polonia ocupada"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Warsaw_Uprising",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Alzamiento_de_Varsovia"
+    },
+    {
+      "id": "liberation-of-paris",
+      "date": "1944-08-19",
+      "endDate": "1944-08-25",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "Liberation of Paris",
+        "es": "Liberación de París"
+      },
+      "summary": {
+        "en": "The French Resistance rose in Paris, and French and American troops entered the city six days later. The German commander surrendered on 25 August, and Charles de Gaulle returned to lead France.",
+        "es": "La Resistencia francesa se levantó en París, y seis días después entraron en la ciudad tropas francesas y estadounidenses. El comandante alemán se rindió el 25 de agosto y Charles de Gaulle volvió para dirigir Francia."
+      },
+      "coordinates": [2.3522, 48.8567],
+      "place": {
+        "en": "Paris, France",
+        "es": "París, Francia"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Liberation_of_Paris",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Liberaci%C3%B3n_de_Par%C3%ADs"
+    },
+    {
+      "id": "first-v2-attacks",
+      "date": "1944-09-08",
+      "era": "ww2",
+      "category": "technology",
+      "title": {
+        "en": "First V-2 rocket attacks",
+        "es": "Primeros ataques con cohetes V2"
+      },
+      "summary": {
+        "en": "Germany fired the V-2, the world's first long-range ballistic missile, at Paris and London. Thousands of civilians died in the attacks, and thousands of forced laborers died building the rockets; after the war the technology led to the space race.",
+        "es": "Alemania disparó contra París y Londres el V2, el primer misil balístico de largo alcance del mundo. Miles de civiles murieron en los ataques y miles de trabajadores forzados murieron construyendo los cohetes; tras la guerra, esa tecnología llevó a la carrera espacial."
+      },
+      "coordinates": [-0.2633, 51.4925],
+      "place": {
+        "en": "Chiswick, London",
+        "es": "Chiswick, Londres"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/V-2_rocket",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Cohete_V2"
+    },
+    {
+      "id": "operation-market-garden",
+      "date": "1944-09-17",
+      "endDate": "1944-09-25",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "Operation Market Garden",
+        "es": "Operación Market Garden"
+      },
+      "summary": {
+        "en": "Allied airborne divisions dropped into the Netherlands to seize bridges ahead of a ground advance into Germany. The final bridge at Arnhem proved 'a bridge too far', and hopes of ending the war by Christmas faded.",
+        "es": "Divisiones aerotransportadas aliadas se lanzaron sobre los Países Bajos para tomar puentes ante un avance terrestre hacia Alemania. El último puente, en Arnhem, resultó «un puente demasiado lejos» y se esfumó la esperanza de terminar la guerra antes de Navidad."
+      },
+      "coordinates": [5.9167, 51.9833],
+      "place": {
+        "en": "Arnhem, Netherlands",
+        "es": "Arnhem, Países Bajos"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Market_Garden",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Operaci%C3%B3n_Market-Garden"
+    },
+    {
+      "id": "battle-of-leyte-gulf",
+      "date": "1944-10-23",
+      "endDate": "1944-10-26",
+      "era": "ww2",
+      "category": "naval",
+      "title": {
+        "en": "Battle of Leyte Gulf",
+        "es": "Batalla del golfo de Leyte"
+      },
+      "summary": {
+        "en": "In what is often considered the largest naval battle in history, the US Navy defeated the Japanese fleet trying to stop the landings in the Philippines. Japan's navy never fought as a fleet again, and the first organized kamikaze attacks appeared.",
+        "es": "En la que suele considerarse la mayor batalla naval de la historia, la Armada de Estados Unidos derrotó a la flota japonesa que intentaba frenar los desembarcos en Filipinas. La marina japonesa nunca volvió a combatir como flota, y aparecieron los primeros ataques kamikaze organizados."
+      },
+      "coordinates": [125.4167, 10.8333],
+      "place": {
+        "en": "Leyte Gulf, Philippines",
+        "es": "Golfo de Leyte, Filipinas"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Leyte_Gulf",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_del_golfo_de_Leyte"
+    },
+    {
+      "id": "battle-of-the-bulge",
+      "date": "1944-12-16",
+      "endDate": "1945-01-28",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Battle of the Bulge",
+        "es": "Batalla de las Ardenas"
+      },
+      "summary": {
+        "en": "Germany launched a surprise winter offensive through the Ardennes to split the Allies and retake Antwerp. American troops held key points such as Bastogne, and the failure used up Germany's last reserves in the west.",
+        "es": "Alemania lanzó una ofensiva invernal sorpresa a través de las Ardenas para dividir a los Aliados y retomar Amberes. Las tropas estadounidenses resistieron en puntos clave como Bastoña, y el fracaso consumió las últimas reservas alemanas en el oeste."
+      },
+      "coordinates": [5.72, 50.0042],
+      "place": {
+        "en": "Bastogne, Belgium",
+        "es": "Bastoña, Bélgica"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Bulge",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_las_Ardenas"
+    },
+    {
+      "id": "liberation-of-auschwitz",
+      "date": "1945-01-27",
+      "era": "ww2",
+      "category": "holocaust",
+      "title": {
+        "en": "Liberation of Auschwitz",
+        "es": "Liberación de Auschwitz"
+      },
+      "summary": {
+        "en": "Soviet troops liberated Auschwitz, the largest Nazi camp, where about 1.1 million people were murdered, most of them Jews. The date is now International Holocaust Remembrance Day.",
+        "es": "Las tropas soviéticas liberaron Auschwitz, el mayor campo nazi, donde fueron asesinadas cerca de 1,1 millones de personas, en su mayoría judíos. La fecha es hoy el Día Internacional de Conmemoración de las Víctimas del Holocausto."
+      },
+      "coordinates": [19.1783, 50.0358],
+      "place": {
+        "en": "Oświęcim, occupied Poland",
+        "es": "Oświęcim, Polonia ocupada"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Auschwitz_concentration_camp",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Campo_de_concentraci%C3%B3n_de_Auschwitz",
+      "major": true
+    },
+    {
+      "id": "yalta-conference",
+      "date": "1945-02-04",
+      "endDate": "1945-02-11",
+      "era": "ww2",
+      "category": "diplomacy",
+      "title": {
+        "en": "Yalta Conference",
+        "es": "Conferencia de Yalta"
+      },
+      "summary": {
+        "en": "Roosevelt, Churchill and Stalin met in Crimea to plan Germany's defeat and the postwar order. They agreed to divide Germany into occupation zones and found the United Nations, while Soviet influence in Eastern Europe foreshadowed the Cold War.",
+        "es": "Roosevelt, Churchill y Stalin se reunieron en Crimea para planificar la derrota de Alemania y el orden de posguerra. Acordaron dividir Alemania en zonas de ocupación y fundar las Naciones Unidas, mientras la influencia soviética en Europa del Este anticipaba la Guerra Fría."
+      },
+      "coordinates": [34.1436, 44.4678],
+      "place": {
+        "en": "Livadia Palace, Yalta",
+        "es": "Palacio de Livadia, Yalta"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Yalta_Conference",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Conferencia_de_Yalta"
+    },
+    {
+      "id": "bombing-of-dresden",
+      "date": "1945-02-13",
+      "endDate": "1945-02-15",
+      "era": "ww2",
+      "category": "air",
+      "title": {
+        "en": "Bombing of Dresden",
+        "es": "Bombardeo de Dresde"
+      },
+      "summary": {
+        "en": "British and American bombers struck Dresden in four raids, creating a firestorm that destroyed the historic city centre. About 25,000 people were killed, and the raids remain among the most debated of the war.",
+        "es": "Bombarderos británicos y estadounidenses atacaron Dresde en cuatro incursiones y crearon una tormenta de fuego que destruyó el centro histórico. Murieron unas 25 000 personas, y esos ataques siguen entre los más debatidos de la guerra."
+      },
+      "coordinates": [13.7381, 51.0493],
+      "place": {
+        "en": "Dresden, Germany",
+        "es": "Dresde, Alemania"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Bombing_of_Dresden",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Bombardeo_de_Dresde"
+    },
+    {
+      "id": "battle-of-iwo-jima",
+      "date": "1945-02-19",
+      "endDate": "1945-03-26",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Battle of Iwo Jima",
+        "es": "Batalla de Iwo Jima"
+      },
+      "summary": {
+        "en": "US Marines fought for five weeks to take the small volcanic island from Japanese defenders dug into tunnels. Nearly all of the roughly 21,000 defenders died, and the flag raising on Mount Suribachi became an iconic image.",
+        "es": "Los marines estadounidenses lucharon cinco semanas para tomar la pequeña isla volcánica a los defensores japoneses atrincherados en túneles. Murieron casi todos los cerca de 21 000 defensores, y la bandera izada en el monte Suribachi se volvió una imagen icónica."
+      },
+      "coordinates": [141.32, 24.78],
+      "place": {
+        "en": "Iwo Jima, Japan",
+        "es": "Iwo Jima, Japón"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Iwo_Jima",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Iwo_Jima"
+    },
+    {
+      "id": "battle-of-okinawa",
+      "date": "1945-04-01",
+      "endDate": "1945-06-22",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Battle of Okinawa",
+        "es": "Batalla de Okinawa"
+      },
+      "summary": {
+        "en": "The largest amphibious assault in the Pacific brought US forces to Okinawa, on Japan's doorstep. Nearly three months of fighting and kamikaze attacks made it the bloodiest battle of the Pacific War, with heavy losses among Okinawan civilians, and shaped American plans for invading Japan.",
+        "es": "El mayor asalto anfibio del Pacífico llevó a las fuerzas estadounidenses a Okinawa, a las puertas de Japón. Casi tres meses de combates y ataques kamikaze la convirtieron en la batalla más sangrienta de la guerra del Pacífico, con grandes pérdidas entre los civiles de Okinawa, e influyeron en los planes estadounidenses para invadir Japón."
+      },
+      "coordinates": [127.95, 26.4833],
+      "place": {
+        "en": "Okinawa, Japan",
+        "es": "Okinawa, Japón"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Okinawa",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Okinawa"
+    },
+    {
+      "id": "battle-of-berlin",
+      "date": "1945-04-16",
+      "endDate": "1945-05-02",
+      "era": "ww2",
+      "category": "battle",
+      "title": {
+        "en": "Battle of Berlin",
+        "es": "Batalla de Berlín"
+      },
+      "summary": {
+        "en": "Soviet armies crossed the Oder and encircled Berlin, then fought street by street toward the city centre. The garrison surrendered on 2 May, and the Soviet flag over the Reichstag marked the end of Nazi Germany.",
+        "es": "Los ejércitos soviéticos cruzaron el Óder y cercaron Berlín, y luego lucharon calle por calle hacia el centro. La guarnición se rindió el 2 de mayo, y la bandera soviética sobre el Reichstag marcó el fin de la Alemania nazi."
+      },
+      "coordinates": [13.3833, 52.5167],
+      "place": {
+        "en": "Berlin, Germany",
+        "es": "Berlín, Alemania"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Berlin",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Berl%C3%ADn"
+    },
+    {
+      "id": "death-of-hitler",
+      "date": "1945-04-30",
+      "era": "ww2",
+      "category": "politics",
+      "title": {
+        "en": "Hitler's death",
+        "es": "Muerte de Hitler"
+      },
+      "summary": {
+        "en": "With Soviet troops a few hundred metres away, Adolf Hitler killed himself in his bunker beneath the Reich Chancellery. Admiral Dönitz succeeded him and within a week Germany surrendered.",
+        "es": "Con las tropas soviéticas a pocos cientos de metros, Adolf Hitler se suicidó en su búnker bajo la Cancillería del Reich. El almirante Dönitz lo sucedió y en menos de una semana Alemania se rindió."
+      },
+      "coordinates": [13.3815, 52.5125],
+      "place": {
+        "en": "Führerbunker, Berlin",
+        "es": "Führerbunker, Berlín"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Death_of_Adolf_Hitler",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Muerte_de_Adolf_Hitler"
+    },
+    {
+      "id": "ve-day",
+      "date": "1945-05-08",
+      "era": "ww2",
+      "category": "diplomacy",
+      "title": {
+        "en": "Victory in Europe Day",
+        "es": "Día de la Victoria en Europa"
+      },
+      "summary": {
+        "en": "Germany's unconditional surrender came into effect, ending the war in Europe after almost six years. Crowds celebrated across Allied countries, while the war against Japan continued in the Pacific and Asia.",
+        "es": "Entró en vigor la rendición incondicional de Alemania, que puso fin a la guerra en Europa tras casi seis años. Multitudes celebraron en los países aliados, mientras la guerra contra Japón continuaba en el Pacífico y Asia."
+      },
+      "coordinates": [13.5258, 52.4825],
+      "place": {
+        "en": "Karlshorst, Berlin",
+        "es": "Karlshorst, Berlín"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Victory_in_Europe_Day",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/D%C3%ADa_de_la_Victoria_en_Europa",
+      "major": true
+    },
+    {
+      "id": "un-charter-signed",
+      "date": "1945-06-26",
+      "era": "ww2",
+      "category": "diplomacy",
+      "title": {
+        "en": "United Nations Charter signed",
+        "es": "Se firma la Carta de la ONU"
+      },
+      "summary": {
+        "en": "Delegates of 50 nations signed the Charter of the United Nations in San Francisco. The new organization, meant to prevent another world war, came into existence that October.",
+        "es": "Delegados de 50 naciones firmaron la Carta de las Naciones Unidas en San Francisco. La nueva organización, pensada para evitar otra guerra mundial, empezó a existir en octubre de ese año."
+      },
+      "coordinates": [-122.421, 37.7786],
+      "place": {
+        "en": "San Francisco, United States",
+        "es": "San Francisco, Estados Unidos"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Charter_of_the_United_Nations",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Carta_de_las_Naciones_Unidas"
+    },
+    {
+      "id": "trinity-test",
+      "date": "1945-07-16",
+      "era": "ww2",
+      "category": "technology",
+      "title": {
+        "en": "Trinity: first atomic bomb test",
+        "es": "Trinity: primera prueba atómica"
+      },
+      "summary": {
+        "en": "The Manhattan Project detonated the first nuclear weapon in the New Mexico desert. Its success, reported to Truman at Potsdam, opened the nuclear age and made the atomic bombing of Japan possible weeks later.",
+        "es": "El Proyecto Manhattan detonó la primera arma nuclear en el desierto de Nuevo México. Su éxito, informado a Truman en Potsdam, abrió la era nuclear e hizo posible el bombardeo atómico de Japón semanas después."
+      },
+      "coordinates": [-106.4753, 33.6772],
+      "place": {
+        "en": "Trinity Site, New Mexico",
+        "es": "Sitio Trinity, Nuevo México"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Trinity_(nuclear_test)",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Prueba_Trinity"
+    },
+    {
+      "id": "potsdam-conference",
+      "date": "1945-07-17",
+      "endDate": "1945-08-02",
+      "era": "ww2",
+      "category": "diplomacy",
+      "title": {
+        "en": "Potsdam Conference",
+        "es": "Conferencia de Potsdam"
+      },
+      "summary": {
+        "en": "Truman, Stalin and Churchill, replaced midway by Clement Attlee, decided the occupation of Germany and its new borders. Their Potsdam Declaration called on Japan to surrender unconditionally or face 'prompt and utter destruction'.",
+        "es": "Truman, Stalin y Churchill, reemplazado a mitad de camino por Clement Attlee, decidieron la ocupación de Alemania y sus nuevas fronteras. Su Declaración de Potsdam exigió a Japón la rendición incondicional o afrontar una «destrucción rápida y total»."
+      },
+      "coordinates": [13.0708, 52.4192],
+      "place": {
+        "en": "Cecilienhof, Potsdam",
+        "es": "Cecilienhof, Potsdam"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Potsdam_Conference",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Conferencia_de_Potsdam"
+    },
+    {
+      "id": "atomic-bombing-of-hiroshima",
+      "date": "1945-08-06",
+      "era": "ww2",
+      "category": "air",
+      "title": {
+        "en": "Atomic bombing of Hiroshima",
+        "es": "Bombardeo atómico de Hiroshima"
+      },
+      "summary": {
+        "en": "The United States dropped an atomic bomb on Hiroshima, the first nuclear weapon used in war. Much of the city was destroyed instantly, and by the end of 1945 tens of thousands more had died of burns and radiation.",
+        "es": "Estados Unidos lanzó una bomba atómica sobre Hiroshima, la primera arma nuclear usada en una guerra. Gran parte de la ciudad quedó destruida al instante, y a fines de 1945 decenas de miles más habían muerto por quemaduras y radiación."
+      },
+      "coordinates": [132.4536, 34.3956],
+      "place": {
+        "en": "Hiroshima, Japan",
+        "es": "Hiroshima, Japón"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Bombardeos_at%C3%B3micos_de_Hiroshima_y_Nagasaki",
+      "major": true
+    },
+    {
+      "id": "atomic-bombing-of-nagasaki",
+      "date": "1945-08-09",
+      "era": "ww2",
+      "category": "air",
+      "title": {
+        "en": "Atomic bombing of Nagasaki",
+        "es": "Bombardeo atómico de Nagasaki"
+      },
+      "summary": {
+        "en": "Three days after Hiroshima, a second atomic bomb destroyed much of Nagasaki. It remains the last use of a nuclear weapon in war, and together with the Soviet entry into the war it pushed Japan's leaders toward surrender.",
+        "es": "Tres días después de Hiroshima, una segunda bomba atómica destruyó gran parte de Nagasaki. Sigue siendo el último uso de un arma nuclear en una guerra y, junto con la entrada soviética en el conflicto, empujó a los líderes japoneses hacia la rendición."
+      },
+      "coordinates": [129.8796, 32.7495],
+      "place": {
+        "en": "Nagasaki, Japan",
+        "es": "Nagasaki, Japón"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Bombardeos_at%C3%B3micos_de_Hiroshima_y_Nagasaki"
+    },
+    {
+      "id": "soviet-invasion-of-manchuria",
+      "date": "1945-08-09",
+      "endDate": "1945-09-02",
+      "era": "ww2",
+      "category": "war",
+      "title": {
+        "en": "Soviet invasion of Manchuria",
+        "es": "Invasión soviética de Manchuria"
+      },
+      "summary": {
+        "en": "Keeping the promise made at Yalta, the Soviet Union declared war on Japan and invaded Manchuria on three fronts. The Kwantung Army collapsed within days, and the loss of hope for Soviet mediation weighed on Japan's decision to surrender.",
+        "es": "Cumpliendo lo prometido en Yalta, la Unión Soviética declaró la guerra a Japón e invadió Manchuria por tres frentes. El Ejército de Kwantung se derrumbó en pocos días, y el fin de la esperanza de una mediación soviética pesó en la decisión japonesa de rendirse."
+      },
+      "coordinates": [126.6333, 45.75],
+      "place": {
+        "en": "Manchuria, China",
+        "es": "Manchuria, China"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Soviet_invasion_of_Manchuria",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Batalla_de_Manchuria"
+    },
+    {
+      "id": "surrender-of-japan",
+      "date": "1945-09-02",
+      "era": "ww2",
+      "category": "diplomacy",
+      "title": {
+        "en": "Japan surrenders",
+        "es": "Rendición de Japón"
+      },
+      "summary": {
+        "en": "Japanese representatives signed the instrument of surrender aboard the USS Missouri in Tokyo Bay, weeks after Emperor Hirohito announced it by radio. The ceremony formally ended the Second World War.",
+        "es": "Representantes japoneses firmaron el acta de rendición a bordo del USS Missouri en la bahía de Tokio, semanas después de que el emperador Hirohito la anunciara por radio. La ceremonia puso fin formalmente a la Segunda Guerra Mundial."
+      },
+      "coordinates": [139.76, 35.3547],
+      "place": {
+        "en": "USS Missouri, Tokyo Bay",
+        "es": "USS Missouri, bahía de Tokio"
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Surrender_of_Japan",
+      "wikipediaEs": "https://es.wikipedia.org/wiki/Rendici%C3%B3n_de_Jap%C3%B3n",
+      "major": true
+    }
+  ]
+}

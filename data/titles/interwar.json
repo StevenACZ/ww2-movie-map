@@ -1,0 +1,2744 @@
+{
+  "titles": [
+    {
+      "id": "doctor-zhivago-1965",
+      "kind": "film",
+      "title": "Doctor Zhivago",
+      "titleEs": "Doctor Zhivago",
+      "year": 1965,
+      "era": "interwar",
+      "period": {
+        "start": "1913",
+        "end": "1922"
+      },
+      "theaters": ["eastern-europe"],
+      "tags": ["civil-war", "romance"],
+      "gold": true,
+      "goldReason": {
+        "en": "Ranked #39 on the American Film Institute's 1998 list of the 100 greatest American films and winner of five Academy Awards.",
+        "es": "Ocupa el puesto 39 en la lista de 1998 del American Film Institute de las 100 mejores películas estadounidenses y ganó cinco premios Óscar."
+      },
+      "directors": ["David Lean"],
+      "countries": ["US", "IT"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 907,
+        "tmdbType": "movie",
+        "imdb": "tt0059113",
+        "wikidata": "Q323827"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Doctor_Zhivago_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Doctor_Zhivago_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "A Moscow doctor and poet is torn between his family and the woman he loves as world war, revolution and civil war carry him from the old capital to the snowbound Urals.",
+        "es": "Un médico y poeta de Moscú vive dividido entre su familia y la mujer que ama mientras la guerra mundial, la revolución y la guerra civil lo arrastran de la vieja capital a los Urales cubiertos de nieve."
+      },
+      "history": {
+        "en": [
+          "Based on Boris Pasternak's novel, which could not be published in the Soviet Union until 1988, the film spans the collapse of Tsarist Russia: the First World War, the two revolutions of 1917 and the Russian Civil War of 1917-1922, in which Red and White armies fought across the Urals and Siberia while terror, famine and epidemics killed millions.",
+          "David Lean compresses and romanticises those years. Strelnikov is a composite of ruthless Red commanders, and Yuriatin is a fictional town that Pasternak modelled on Perm, where he had lived in 1916. Filming in the USSR was impossible, so Moscow and the Urals were recreated mainly in Spain, with winter scenes shot in Finland and Canada."
+        ],
+        "es": [
+          "Basada en la novela de Borís Pasternak, que no pudo publicarse en la Unión Soviética hasta 1988, la película recorre el derrumbe de la Rusia zarista: la Primera Guerra Mundial, las dos revoluciones de 1917 y la guerra civil rusa de 1917-1922, en la que ejércitos rojos y blancos combatieron por los Urales y Siberia mientras el terror, el hambre y las epidemias mataban a millones.",
+          "David Lean condensa y romantiza esos años. Strélnikov combina rasgos de varios comandantes rojos implacables, y Yuriatin es un pueblo ficticio que Pasternak inspiró en Perm, donde vivió en 1916. Como era imposible filmar en la URSS, Moscú y los Urales se recrearon sobre todo en España, con escenas invernales rodadas en Finlandia y Canadá."
+        ]
+      },
+      "journey": [
+        {
+          "place": "moscow",
+          "name": {
+            "en": "Moscow",
+            "es": "Moscú"
+          },
+          "coordinates": [37.6178, 55.7517],
+          "date": "1913",
+          "kind": "city",
+          "story": {
+            "en": "Raised by the Gromeko family, Yuri becomes a doctor and poet, while young Lara is drawn into the orbit of a powerful older man.",
+            "es": "Criado por la familia Gromeko, Yuri se convierte en médico y poeta, mientras la joven Lara cae bajo la influencia de un hombre mayor y poderoso."
+          },
+          "history": {
+            "en": "Before 1914 Moscow was the empire's second city and a centre of the student and workers' protests that mounted police often broke up by force.",
+            "es": "Antes de 1914 Moscú era la segunda ciudad del imperio y un foco de protestas estudiantiles y obreras que la policía montada solía dispersar por la fuerza."
+          }
+        },
+        {
+          "place": "moscow",
+          "name": {
+            "en": "Moscow under the Bolsheviks",
+            "es": "Moscú bajo los bolcheviques"
+          },
+          "coordinates": [37.6178, 55.7517],
+          "date": "1918",
+          "kind": "home",
+          "story": {
+            "en": "Back from the front, Yuri finds his family home requisitioned and shared with strangers, and his poems suspect in the eyes of the new regime.",
+            "es": "De regreso del frente, Yuri encuentra la casa familiar requisada y compartida con desconocidos, y sus poemas bajo sospecha ante el nuevo régimen."
+          },
+          "history": {
+            "en": "The Bolsheviks moved the capital to Moscow in March 1918 and began splitting private homes into communal apartments.",
+            "es": "Los bolcheviques trasladaron la capital a Moscú en marzo de 1918 y empezaron a dividir las casas particulares en apartamentos comunales."
+          }
+        },
+        {
+          "place": "perm",
+          "name": {
+            "en": "Yuriatin (Perm), the Urals",
+            "es": "Yuriatin (Perm), los Urales"
+          },
+          "coordinates": [56.2489, 58.0139],
+          "date": "1919",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "The family takes refuge near the frozen estate of Varykino, and in the town of Yuriatin Yuri meets Lara again as the civil war closes in.",
+            "es": "La familia se refugia cerca de la finca helada de Varykino, y en el pueblo de Yuriatin Yuri vuelve a encontrarse con Lara mientras la guerra civil se acerca."
+          },
+          "history": {
+            "en": "Perm, Pasternak's model for Yuriatin, fell to Kolchak's Whites in December 1918 and was retaken by the Red Army in July 1919.",
+            "es": "Perm, el modelo de Pasternak para Yuriatin, cayó en manos de los blancos de Kolchak en diciembre de 1918 y el Ejército Rojo la recuperó en julio de 1919."
+          }
+        }
+      ]
+    },
+    {
+      "id": "reds-1981",
+      "kind": "film",
+      "title": "Reds",
+      "titleEs": "Rojos",
+      "year": 1981,
+      "era": "interwar",
+      "period": {
+        "start": "1915-12",
+        "end": "1920-10"
+      },
+      "theaters": ["americas", "eastern-europe"],
+      "tags": ["politics", "biography", "romance", "true-story"],
+      "gold": false,
+      "directors": ["Warren Beatty"],
+      "countries": ["US"],
+      "languages": ["en", "ru"],
+      "ids": {
+        "tmdb": 18254,
+        "tmdbType": "movie",
+        "imdb": "tt0082979",
+        "wikidata": "Q597239"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Reds_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Reds"
+      },
+      "synopsis": {
+        "en": "Journalists John Reed and Louise Bryant fall in love among American radicals and follow their ideals all the way to the Russian Revolution, where passion and politics pull them in opposite directions.",
+        "es": "Los periodistas John Reed y Louise Bryant se enamoran entre los radicales estadounidenses y siguen sus ideales hasta la Revolución rusa, donde la pasión y la política los empujan en direcciones opuestas."
+      },
+      "history": {
+        "en": [
+          "John Reed and Louise Bryant were real American reporters who reached Petrograd in September 1917 and witnessed the Bolshevik seizure of power that November. Reed's account, Ten Days That Shook the World (1919), became the most famous eyewitness book on the revolution; he then helped found the Communist Labor Party in the United States and returned to Soviet Russia to seek recognition from the Comintern.",
+          "Warren Beatty intercuts the drama with interviews of real witnesses such as Henry Miller and George Seldes. The film simplifies the feuds of the American left and dramatises Bryant's 1920 journey to rejoin Reed, which she made partly in disguise. Reed died of typhus in Moscow in October 1920 and was buried by the Kremlin wall."
+        ],
+        "es": [
+          "John Reed y Louise Bryant fueron periodistas estadounidenses reales que llegaron a Petrogrado en septiembre de 1917 y presenciaron la toma del poder bolchevique en noviembre. El relato de Reed, Diez días que estremecieron el mundo (1919), se convirtió en el testimonio más célebre de la revolución; después ayudó a fundar el Partido Comunista del Trabajo en Estados Unidos y regresó a la Rusia soviética en busca del reconocimiento de la Comintern.",
+          "Warren Beatty intercala el drama con entrevistas a testigos reales como Henry Miller y George Seldes. La película simplifica las disputas de la izquierda estadounidense y dramatiza el viaje de Bryant en 1920 para reunirse con Reed, que hizo en parte disfrazada. Reed murió de tifus en Moscú en octubre de 1920 y fue enterrado junto a la muralla del Kremlin."
+        ]
+      },
+      "journey": [
+        {
+          "place": "portland",
+          "name": {
+            "en": "Portland, Oregon",
+            "es": "Portland, Oregón"
+          },
+          "coordinates": [-122.6792, 45.515],
+          "date": "1915-12",
+          "kind": "city",
+          "story": {
+            "en": "Louise Bryant meets the radical journalist John Reed at a lecture and, dazzled by his idealism, decides to leave her marriage.",
+            "es": "Louise Bryant conoce al periodista radical John Reed en una conferencia y, deslumbrada por su idealismo, decide dejar su matrimonio."
+          },
+          "history": {
+            "en": "Reed, born in Portland, met Bryant there in December 1915, when she was married to a local dentist.",
+            "es": "Reed, nacido en Portland, conoció allí a Bryant en diciembre de 1915, cuando ella estaba casada con un dentista local."
+          }
+        },
+        {
+          "place": "new-york",
+          "name": {
+            "en": "Greenwich Village, New York",
+            "es": "Greenwich Village, Nueva York"
+          },
+          "coordinates": [-74.0028, 40.7336],
+          "date": "1916",
+          "kind": "city",
+          "story": {
+            "en": "In Greenwich Village the couple joins a circle of radicals and artists that includes Emma Goldman and Eugene O'Neill.",
+            "es": "En Greenwich Village la pareja se une a un círculo de radicales y artistas del que forman parte Emma Goldman y Eugene O'Neill."
+          },
+          "history": {
+            "en": "Before 1917 Greenwich Village was the capital of American bohemian radicalism and home of The Masses, the magazine Reed wrote for.",
+            "es": "Antes de 1917 Greenwich Village era la capital del radicalismo bohemio estadounidense y la sede de The Masses, la revista para la que escribía Reed."
+          }
+        },
+        {
+          "place": "provincetown",
+          "name": {
+            "en": "Provincetown, Massachusetts",
+            "es": "Provincetown, en Massachusetts"
+          },
+          "coordinates": [-70.1792, 42.0583],
+          "date": "1916-07",
+          "kind": "home",
+          "story": {
+            "en": "On Cape Cod they write, stage plays with friends and slip into a painful triangle with O'Neill.",
+            "es": "En Cape Cod escriben, montan obras con sus amigos y caen en un doloroso triángulo amoroso con O'Neill."
+          },
+          "history": {
+            "en": "In the summer of 1916 the Provincetown Players staged Eugene O'Neill's first play on a wharf in the town.",
+            "es": "En el verano de 1916 los Provincetown Players estrenaron la primera obra de Eugene O'Neill en un muelle del pueblo."
+          }
+        },
+        {
+          "place": "petrograd",
+          "name": {
+            "en": "Smolny Institute, Petrograd",
+            "es": "Instituto Smolny, Petrogrado"
+          },
+          "coordinates": [30.3964, 59.9464],
+          "date": "1917-11",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "Reunited as correspondents, Reed and Bryant are swept up in the October Revolution and the crowds singing the Internationale.",
+            "es": "Reunidos como corresponsales, Reed y Bryant quedan atrapados en la Revolución de Octubre y en las multitudes que cantan La Internacional."
+          },
+          "history": {
+            "en": "On 7 November 1917 the Bolsheviks directed their seizure of power from the Smolny Institute, which Reed described in Ten Days That Shook the World.",
+            "es": "El 7 de noviembre de 1917 los bolcheviques dirigieron la toma del poder desde el Instituto Smolny, que Reed describió en Diez días que estremecieron el mundo."
+          }
+        },
+        {
+          "place": "baku",
+          "name": {
+            "en": "Baku",
+            "es": "Bakú"
+          },
+          "coordinates": [49.8352, 40.3667],
+          "date": "1920-09",
+          "kind": "journey",
+          "story": {
+            "en": "Back in Soviet Russia to win recognition for his party, Reed is sent south on a propaganda train to a congress of the peoples of the East.",
+            "es": "De vuelta en la Rusia soviética para lograr el reconocimiento de su partido, Reed es enviado al sur en un tren de propaganda a un congreso de los pueblos de Oriente."
+          },
+          "history": {
+            "en": "The Comintern's Congress of the Peoples of the East met in Baku in September 1920, and Reed fell ill with typhus soon after attending.",
+            "es": "El Congreso de los Pueblos de Oriente de la Comintern se reunió en Bakú en septiembre de 1920, y Reed enfermó de tifus poco después de asistir."
+          }
+        }
+      ]
+    },
+    {
+      "id": "admiral-2008",
+      "kind": "film",
+      "title": "Admiral",
+      "titleEs": "Almirante",
+      "originalTitle": "Адмиралъ",
+      "year": 2008,
+      "era": "interwar",
+      "period": {
+        "start": "1916",
+        "end": "1920-02"
+      },
+      "theaters": ["eastern-europe", "asia"],
+      "tags": ["civil-war", "biography", "romance", "naval", "true-story"],
+      "gold": false,
+      "directors": ["Andrei Kravchuk"],
+      "countries": ["RU"],
+      "languages": ["ru"],
+      "ids": {
+        "tmdb": 13506,
+        "tmdbType": "movie",
+        "imdb": "tt1101026",
+        "wikidata": "Q358985"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Admiral_(2008_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Almirante_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "A decorated naval officer and the wife of his friend fall in love as the Russian Empire collapses, and he becomes the leader of the White cause across Siberia.",
+        "es": "Un oficial naval condecorado y la esposa de su amigo se enamoran mientras se derrumba el Imperio ruso, y él termina al frente de la causa blanca a lo largo de Siberia."
+      },
+      "history": {
+        "en": [
+          "Alexander Kolchak was a polar explorer and one of the Russian Navy's best mine-warfare experts, promoted to command the Black Sea Fleet in 1916. After the Bolshevik revolution he joined the anti-Communist Whites, and on 18 November 1918 a coup in Omsk made him Supreme Ruler of Russia. His armies reached the Volga in spring 1919 before collapsing under Red counter-offensives, and his government retreated east along the Trans-Siberian Railway.",
+          "His love for the poet Anna Timiryova, who followed him to Siberia and was later imprisoned for decades in Soviet camps, is real. The film is openly sympathetic to Kolchak and says little about the White terror in Siberia; its opening sea battle is invented, since the German cruiser Friedrich Carl actually sank on Russian mines in November 1914."
+        ],
+        "es": [
+          "Alexandr Kolchak fue explorador polar y uno de los mejores expertos en guerra de minas de la Marina rusa, ascendido en 1916 al mando de la Flota del Mar Negro. Tras la revolución bolchevique se unió a los blancos anticomunistas, y el 18 de noviembre de 1918 un golpe en Omsk lo convirtió en Gobernante Supremo de Rusia. Sus ejércitos llegaron al Volga en la primavera de 1919 antes de derrumbarse ante las contraofensivas rojas, y su gobierno se retiró hacia el este por el Transiberiano.",
+          "Su amor por la poeta Anna Timiriova, que lo siguió a Siberia y luego pasó décadas presa en campos soviéticos, es real. La película es abiertamente favorable a Kolchak y apenas muestra el terror blanco en Siberia; su batalla naval inicial es inventada, porque el crucero alemán Friedrich Carl se hundió en realidad por minas rusas en noviembre de 1914."
+        ]
+      },
+      "journey": [
+        {
+          "place": "helsingfors",
+          "name": {
+            "en": "Helsingfors naval base",
+            "es": "Base naval de Helsingfors"
+          },
+          "coordinates": [24.9375, 60.1708],
+          "date": "1916",
+          "kind": "base",
+          "story": {
+            "en": "After a daring minelaying action in the Baltic, Captain Kolchak is promoted and meets Anna Timiryova, the wife of a fellow officer.",
+            "es": "Tras una audaz acción de minado en el Báltico, el capitán Kolchak es ascendido y conoce a Anna Timiriova, esposa de un compañero oficial."
+          },
+          "history": {
+            "en": "Helsingfors, today's Helsinki, was the main base of the Russian Baltic Fleet during the First World War.",
+            "es": "Helsingfors, la actual Helsinki, fue la base principal de la Flota rusa del Báltico durante la Primera Guerra Mundial."
+          }
+        },
+        {
+          "place": "sevastopol",
+          "name": {
+            "en": "Sevastopol",
+            "es": "Sebastopol"
+          },
+          "coordinates": [33.5225, 44.605],
+          "date": "1917-06",
+          "kind": "base",
+          "story": {
+            "en": "Now commanding the Black Sea Fleet, Kolchak faces a revolution that reaches his own ships and his own officers.",
+            "es": "Ya al mando de la Flota del Mar Negro, Kolchak enfrenta una revolución que llega a sus propios barcos y a sus propios oficiales."
+          },
+          "history": {
+            "en": "In June 1917 mutinous sailors in Sevastopol demanded the officers' weapons, and Kolchak threw his sword into the sea rather than hand it over.",
+            "es": "En junio de 1917 los marineros amotinados de Sebastopol exigieron las armas de los oficiales, y Kolchak lanzó su sable al mar antes que entregarlo."
+          }
+        },
+        {
+          "place": "omsk",
+          "name": {
+            "en": "Omsk",
+            "es": "Omsk"
+          },
+          "coordinates": [73.3833, 54.9667],
+          "date": "1918-11",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "Kolchak becomes Supreme Ruler of the White government, and Anna leaves her husband to be near him as a volunteer nurse.",
+            "es": "Kolchak se convierte en Gobernante Supremo del gobierno blanco, y Anna deja a su esposo para estar cerca de él como enfermera voluntaria."
+          },
+          "history": {
+            "en": "On 18 November 1918 a coup in Omsk made Kolchak head of the largest White government of the Russian Civil War.",
+            "es": "El 18 de noviembre de 1918 un golpe en Omsk puso a Kolchak al frente del mayor gobierno blanco de la guerra civil rusa."
+          }
+        },
+        {
+          "place": "irkutsk",
+          "name": {
+            "en": "Irkutsk",
+            "es": "Irkutsk"
+          },
+          "coordinates": [104.28, 52.2892],
+          "date": "1920-01",
+          "kind": "city",
+          "story": {
+            "en": "As the White front falls apart, the couple retreats east along the Trans-Siberian, depending on foreign allies who have their own plans.",
+            "es": "Mientras el frente blanco se desmorona, la pareja se retira hacia el este por el Transiberiano, a merced de aliados extranjeros con sus propios planes."
+          },
+          "history": {
+            "en": "The Czechoslovak Legion handed Kolchak over in Irkutsk in January 1920, and the Bolsheviks shot him there on 7 February.",
+            "es": "La Legión Checoslovaca entregó a Kolchak en Irkutsk en enero de 1920, y los bolcheviques lo fusilaron allí el 7 de febrero."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-wind-that-shakes-the-barley-2006",
+      "kind": "film",
+      "title": "The Wind That Shakes the Barley",
+      "titleEs": "El viento que acaricia el prado",
+      "year": 2006,
+      "era": "interwar",
+      "period": {
+        "start": "1920",
+        "end": "1922"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["civil-war", "resistance", "combat"],
+      "gold": false,
+      "directors": ["Ken Loach"],
+      "countries": ["IE", "GB"],
+      "languages": ["en", "ga"],
+      "ids": {
+        "tmdb": 1116,
+        "tmdbType": "movie",
+        "imdb": "tt0460989",
+        "wikidata": "Q827106"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Wind_That_Shakes_the_Barley_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/The_Wind_That_Shakes_the_Barley"
+      },
+      "synopsis": {
+        "en": "Two brothers in County Cork take up arms against British rule, only to discover that winning a treaty can divide them more than the war did.",
+        "es": "Dos hermanos del condado de Cork toman las armas contra el dominio británico y descubren que conseguir un tratado puede dividirlos más que la propia guerra."
+      },
+      "history": {
+        "en": [
+          "The Irish War of Independence (1919-1921) pitted the IRA's guerrilla flying columns against the Royal Irish Constabulary, the British Army and the hated Black and Tans and Auxiliaries, who answered ambushes with reprisals and house burnings. County Cork saw some of the fiercest fighting, including the Kilmichael ambush of November 1920, and about 2,000 people died across Ireland before the truce of July 1921.",
+          "The Anglo-Irish Treaty of December 1921 created the Irish Free State but kept an oath to the Crown and partition, splitting the republicans. The civil war that followed (June 1922-May 1923) set former comrades against each other. The O'Donovan brothers are fictional; the film won the Palme d'Or, and some British critics accused it of a one-sided portrait of the Crown forces."
+        ],
+        "es": [
+          "La guerra de independencia irlandesa (1919-1921) enfrentó a las columnas guerrilleras del IRA con la Real Policía Irlandesa, el Ejército británico y los odiados Black and Tans y Auxiliares, que respondían a las emboscadas con represalias e incendios de casas. El condado de Cork vivió algunos de los combates más duros, como la emboscada de Kilmichael en noviembre de 1920, y unas 2000 personas murieron en toda Irlanda antes de la tregua de julio de 1921.",
+          "El Tratado angloirlandés de diciembre de 1921 creó el Estado Libre Irlandés, pero mantuvo el juramento a la Corona y la partición, lo que dividió a los republicanos. La guerra civil que siguió (junio de 1922 a mayo de 1923) enfrentó a antiguos compañeros de armas. Los hermanos O'Donovan son ficticios; la película ganó la Palma de Oro y algunos críticos británicos la acusaron de retratar de forma parcial a las fuerzas de la Corona."
+        ]
+      },
+      "journey": [
+        {
+          "place": "county-cork",
+          "name": {
+            "en": "County Cork",
+            "es": "Condado de Cork"
+          },
+          "coordinates": [-8.75, 52],
+          "date": "1920",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "After British troops kill a young man in his village, medical student Damien gives up a job in London to join his brother's IRA flying column.",
+            "es": "Después de que tropas británicas matan a un joven de su pueblo, el estudiante de medicina Damien renuncia a un trabajo en Londres y se une a la columna del IRA de su hermano."
+          },
+          "history": {
+            "en": "At Kilmichael, County Cork, in November 1920 an IRA flying column killed 17 Auxiliaries in one of the war's deadliest ambushes.",
+            "es": "En Kilmichael, condado de Cork, una columna del IRA mató a 17 Auxiliares en noviembre de 1920, en una de las emboscadas más sangrientas de la guerra."
+          }
+        },
+        {
+          "place": "county-cork",
+          "name": {
+            "en": "County Cork in the civil war",
+            "es": "Cork en la guerra civil"
+          },
+          "coordinates": [-8.75, 52],
+          "date": "1922",
+          "kind": "front",
+          "story": {
+            "en": "The treaty splits the column, and the two brothers end up wearing different uniforms in the same valleys.",
+            "es": "El tratado divide a la columna, y los dos hermanos terminan vistiendo uniformes distintos en los mismos valles."
+          },
+          "history": {
+            "en": "Cork was an anti-Treaty stronghold until Free State troops landed by sea and took the city in August 1922.",
+            "es": "Cork fue un bastión contrario al tratado hasta que las tropas del Estado Libre desembarcaron por mar y tomaron la ciudad en agosto de 1922."
+          }
+        }
+      ]
+    },
+    {
+      "id": "michael-collins-1996",
+      "kind": "film",
+      "title": "Michael Collins",
+      "titleEs": "Michael Collins",
+      "year": 1996,
+      "era": "interwar",
+      "period": {
+        "start": "1916-04",
+        "end": "1922-08"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["biography", "politics", "civil-war", "true-story"],
+      "gold": false,
+      "directors": ["Neil Jordan"],
+      "countries": ["IE", "GB", "US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 1770,
+        "tmdbType": "movie",
+        "imdb": "tt0117039",
+        "wikidata": "Q430535"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Michael_Collins_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Michael_Collins_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "Michael Collins turns a defeated rebellion into a guerrilla war that forces the British Empire to negotiate, then must sell the compromise to his own comrades.",
+        "es": "Michael Collins convierte una rebelión derrotada en una guerra de guerrillas que obliga al Imperio británico a negociar, y luego debe convencer a sus propios compañeros de aceptar el acuerdo."
+      },
+      "history": {
+        "en": [
+          "Collins fought in the 1916 Easter Rising and, after internment, became the IRA's director of intelligence and the Republic's finance minister. His Dublin 'Squad' dismantled British intelligence in the city, climaxing on Bloody Sunday, 21 November 1920. He led the negotiations that produced the Anglo-Irish Treaty of 6 December 1921, then commanded the Free State army in the civil war until he was killed in an ambush in August 1922.",
+          "Neil Jordan takes notable liberties. At Croke Park no armoured car drove onto the pitch, although Crown forces did kill 14 people there; Ned Broy was never killed and later became Garda commissioner; and the film casts Éamon de Valera in a harsher light than historians support, even hinting at his complicity in Collins's death."
+        ],
+        "es": [
+          "Collins combatió en el Alzamiento de Pascua de 1916 y, tras su internamiento, se convirtió en jefe de inteligencia del IRA y ministro de Finanzas de la República. Su «Escuadra» de Dublín desmanteló la inteligencia británica en la ciudad, con su punto culminante el Domingo Sangriento, 21 de noviembre de 1920. Encabezó las negociaciones del Tratado angloirlandés del 6 de diciembre de 1921 y después dirigió el ejército del Estado Libre en la guerra civil hasta morir en una emboscada en agosto de 1922.",
+          "Neil Jordan se toma libertades notables. En Croke Park ningún blindado entró en el campo, aunque las fuerzas de la Corona sí mataron allí a 14 personas; Ned Broy nunca fue asesinado y llegó a ser comisario de la Garda; y la película muestra a Éamon de Valera con una dureza que los historiadores no respaldan, e incluso insinúa su complicidad en la muerte de Collins."
+        ]
+      },
+      "journey": [
+        {
+          "place": "dublin",
+          "name": {
+            "en": "General Post Office, Dublin",
+            "es": "Oficina General de Correos, Dublín"
+          },
+          "coordinates": [-6.2611, 53.3493],
+          "date": "1916-04",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "The film opens with the rebels surrendering their shattered headquarters on Sackville Street and a young Collins vowing never to fight that way again.",
+            "es": "La película arranca con los rebeldes rindiendo su cuartel general destrozado en Sackville Street y un joven Collins jurando no volver a pelear de esa manera."
+          },
+          "history": {
+            "en": "The Easter Rising of 24-29 April 1916 was led from the GPO, and fifteen of its leaders were shot by firing squad in May.",
+            "es": "El Alzamiento de Pascua del 24 al 29 de abril de 1916 se dirigió desde la GPO, y quince de sus líderes fueron fusilados en mayo."
+          }
+        },
+        {
+          "place": "dublin",
+          "name": {
+            "en": "Croke Park, Dublin",
+            "es": "Croke Park, Dublín"
+          },
+          "coordinates": [-6.2511, 53.3608],
+          "date": "1920-11",
+          "kind": "city",
+          "story": {
+            "en": "Collins's squad strikes at British intelligence officers across Dublin, and the reprisal falls on a crowd watching Gaelic football.",
+            "es": "La escuadra de Collins golpea a oficiales de inteligencia británicos por todo Dublín, y la represalia cae sobre el público de un partido de fútbol gaélico."
+          },
+          "history": {
+            "en": "On Bloody Sunday, 21 November 1920, Crown forces opened fire at Croke Park and killed 14 people, hours after the IRA shot British agents in the city.",
+            "es": "El Domingo Sangriento, 21 de noviembre de 1920, las fuerzas de la Corona abrieron fuego en Croke Park y mataron a 14 personas, horas después de que el IRA matara a agentes británicos en la ciudad."
+          }
+        },
+        {
+          "place": "dublin",
+          "name": {
+            "en": "Custom House, Dublin",
+            "es": "Aduana de Dublín"
+          },
+          "coordinates": [-6.2531, 53.3485],
+          "date": "1921-05",
+          "kind": "battle",
+          "story": {
+            "en": "De Valera orders a conventional assault on a great public building, and the Dublin IRA pays a heavy price.",
+            "es": "De Valera ordena un ataque convencional contra un gran edificio público, y el IRA de Dublín paga un precio muy alto."
+          },
+          "history": {
+            "en": "The IRA burned the Custom House on 25 May 1921, but more than 80 volunteers were captured in the operation.",
+            "es": "El IRA incendió la Aduana el 25 de mayo de 1921, pero más de 80 voluntarios fueron capturados en la operación."
+          }
+        },
+        {
+          "place": "london",
+          "name": {
+            "en": "10 Downing Street, London",
+            "es": "10 de Downing Street, Londres"
+          },
+          "coordinates": [-0.1278, 51.5033],
+          "date": "1921-12",
+          "kind": "city",
+          "story": {
+            "en": "Collins is sent to London to negotiate with Lloyd George and Churchill, knowing any deal will split the movement.",
+            "es": "Collins es enviado a Londres a negociar con Lloyd George y Churchill, sabiendo que cualquier acuerdo dividirá al movimiento."
+          },
+          "history": {
+            "en": "The Anglo-Irish Treaty, signed in Downing Street on 6 December 1921, created the Irish Free State as a dominion of the Empire.",
+            "es": "El Tratado angloirlandés, firmado en Downing Street el 6 de diciembre de 1921, creó el Estado Libre Irlandés como dominio del Imperio."
+          }
+        },
+        {
+          "place": "beal-na-blath",
+          "name": {
+            "en": "Béal na Bláth, West Cork",
+            "es": "Béal na Bláth, oeste de Cork"
+          },
+          "coordinates": [-8.8557, 51.8218],
+          "date": "1922-08",
+          "kind": "journey",
+          "story": {
+            "en": "With civil war raging, Collins drives through his native West Cork hoping to meet the other side and end the fighting.",
+            "es": "Con la guerra civil en plena marcha, Collins recorre su natal oeste de Cork con la esperanza de reunirse con el otro bando y poner fin a los combates."
+          },
+          "history": {
+            "en": "Collins was killed in an anti-Treaty ambush at Béal na Bláth on 22 August 1922, aged 31.",
+            "es": "Collins murió en una emboscada de los contrarios al tratado en Béal na Bláth el 22 de agosto de 1922, a los 31 años."
+          }
+        }
+      ]
+    },
+    {
+      "id": "land-and-freedom-1995",
+      "kind": "film",
+      "title": "Land and Freedom",
+      "titleEs": "Tierra y libertad",
+      "year": 1995,
+      "era": "interwar",
+      "period": {
+        "start": "1936-09",
+        "end": "1937-06"
+      },
+      "theaters": ["western-europe", "mediterranean"],
+      "tags": ["civil-war", "combat", "politics"],
+      "gold": false,
+      "directors": ["Ken Loach"],
+      "countries": ["GB", "ES", "DE", "IT"],
+      "languages": ["en", "es"],
+      "ids": {
+        "tmdb": 38884,
+        "tmdbType": "movie",
+        "imdb": "tt0114671",
+        "wikidata": "Q643805"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Land_and_Freedom_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Tierra_y_libertad_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "An unemployed Liverpool communist goes to fight fascism in Spain, joins a militia where men and women share the trenches, and learns that his own side is also at war with itself.",
+        "es": "Un comunista desempleado de Liverpool va a combatir al fascismo en España, se une a una milicia donde hombres y mujeres comparten las trincheras y descubre que su propio bando también está en guerra consigo mismo."
+      },
+      "history": {
+        "en": [
+          "When the military uprising of July 1936 split Spain, some 35,000 foreign volunteers came to defend the Republic, about 2,500 of them from Britain and Ireland. Most joined the Communist-led International Brigades, but some served in the militias of the anarchist CNT or of the POUM, an anti-Stalinist Marxist party, which held the Aragon front around Huesca.",
+          "Ken Loach's fictional story follows the path of George Orwell's Homage to Catalonia. In the Barcelona May Days of 1937 anarchists and the POUM fought government and Communist forces in the streets; the POUM was outlawed in June, its leader Andreu Nin was murdered by Soviet agents, and its militias were dissolved. The long village debate on collectivising the land was largely improvised by non-professional actors."
+        ],
+        "es": [
+          "Cuando el alzamiento militar de julio de 1936 partió España en dos, unos 35 000 voluntarios extranjeros llegaron a defender la República, cerca de 2500 de ellos de Gran Bretaña e Irlanda. La mayoría se unió a las Brigadas Internacionales, dirigidas por los comunistas, pero algunos sirvieron en las milicias anarquistas de la CNT o en las del POUM, un partido marxista antiestalinista que defendía el frente de Aragón en torno a Huesca.",
+          "La historia de ficción de Ken Loach sigue el camino de Homenaje a Cataluña de George Orwell. En los Hechos de Mayo de 1937 anarquistas y poumistas se enfrentaron en las calles de Barcelona a las fuerzas del gobierno y a los comunistas; el POUM fue ilegalizado en junio, su líder Andreu Nin fue asesinado por agentes soviéticos y sus milicias fueron disueltas. El largo debate del pueblo sobre la colectivización de la tierra lo improvisaron en gran parte actores no profesionales."
+        ]
+      },
+      "journey": [
+        {
+          "place": "liverpool",
+          "name": {
+            "en": "Liverpool",
+            "es": "Liverpool"
+          },
+          "coordinates": [-2.9917, 53.4072],
+          "date": "1936-09",
+          "kind": "home",
+          "story": {
+            "en": "After a rally for the Spanish Republic, young David Carr leaves the dole queue behind and sets off to fight in Spain.",
+            "es": "Tras un mitin por la República española, el joven David Carr deja atrás la fila del paro y parte a combatir en España."
+          },
+          "history": {
+            "en": "Liverpool's docks and unemployed workers supplied many of the British volunteers who went to Spain in 1936-1938.",
+            "es": "Los muelles y los obreros sin trabajo de Liverpool aportaron muchos de los voluntarios británicos que fueron a España entre 1936 y 1938."
+          }
+        },
+        {
+          "place": "aragon-front",
+          "name": {
+            "en": "Aragon front, Sierra de Alcubierre",
+            "es": "Frente de Aragón, sierra de Alcubierre"
+          },
+          "coordinates": [-0.4975, 41.7417],
+          "date": "1936-12",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "By chance he joins a POUM militia, where men and women fight side by side and argue fiercely about the revolution.",
+            "es": "Por casualidad termina en una milicia del POUM, donde hombres y mujeres combaten codo con codo y discuten con pasión sobre la revolución."
+          },
+          "history": {
+            "en": "POUM militias held the static front in the Sierra de Alcubierre near Huesca, where George Orwell served in early 1937.",
+            "es": "Las milicias del POUM defendían el frente estancado de la sierra de Alcubierre, cerca de Huesca, donde George Orwell sirvió a comienzos de 1937."
+          }
+        },
+        {
+          "place": "barcelona",
+          "name": {
+            "en": "Barcelona",
+            "es": "Barcelona"
+          },
+          "coordinates": [2.1769, 41.3825],
+          "date": "1937-05",
+          "kind": "city",
+          "story": {
+            "en": "Recovering from a wound, David joins the International Brigades and sees the Republic's factions turn their guns on each other.",
+            "es": "Mientras se recupera de una herida, David se une a las Brigadas Internacionales y ve cómo las facciones republicanas se disparan entre sí."
+          },
+          "history": {
+            "en": "In the May Days of 3-8 May 1937 anarchists and the POUM fought government and Communist forces in Barcelona, leaving hundreds dead.",
+            "es": "En los Hechos de Mayo, del 3 al 8 de mayo de 1937, anarquistas y poumistas lucharon en Barcelona contra el gobierno y los comunistas, con cientos de muertos."
+          }
+        },
+        {
+          "place": "aragon-front",
+          "name": {
+            "en": "Back on the Aragon front",
+            "es": "De vuelta en el frente de Aragón"
+          },
+          "coordinates": [-0.4975, 41.7417],
+          "date": "1937-06",
+          "kind": "front",
+          "story": {
+            "en": "He returns to his old comrades just as a government unit arrives to disarm them.",
+            "es": "Vuelve con sus antiguos compañeros justo cuando llega una unidad del gobierno para desarmarlos."
+          },
+          "history": {
+            "en": "In June 1937 the Republican government outlawed the POUM, arrested its leaders and dissolved its militia units.",
+            "es": "En junio de 1937 el gobierno republicano ilegalizó el POUM, detuvo a sus dirigentes y disolvió sus milicias."
+          }
+        }
+      ]
+    },
+    {
+      "id": "for-whom-the-bell-tolls-1943",
+      "kind": "film",
+      "title": "For Whom the Bell Tolls",
+      "titleEs": "Por quién doblan las campanas",
+      "year": 1943,
+      "era": "interwar",
+      "period": {
+        "start": "1937-05",
+        "end": "1937-06"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["civil-war", "combat", "romance"],
+      "gold": false,
+      "directors": ["Sam Wood"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 27854,
+        "tmdbType": "movie",
+        "imdb": "tt0035896",
+        "wikidata": "Q515572"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/For_Whom_the_Bell_Tolls_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Por_qui%C3%A9n_doblan_las_campanas_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "An American dynamiter fighting for the Spanish Republic has three days in the mountains to blow up a bridge, with a wary guerrilla band and a young woman who changes everything.",
+        "es": "Un dinamitero estadounidense que lucha por la República española tiene tres días en la montaña para volar un puente, con una banda guerrillera desconfiada y una joven que lo cambia todo."
+      },
+      "history": {
+        "en": [
+          "Ernest Hemingway covered the Spanish Civil War as a reporter and set his 1940 novel in the Sierra de Guadarrama, north of Madrid, during the Republican offensive toward Segovia at the end of May 1937. The Republic did use guerrilla bands and dynamiters behind Nationalist lines, and thousands of foreign volunteers, Americans among them, fought for it.",
+          "Paramount softened the novel's politics for a wartime audience and shot the mountain scenes in California's Sierra Nevada. The real Segovia offensive, launched on 30 May 1937, failed within a week. The film received nine Academy Award nominations, and Katina Paxinou won Best Supporting Actress as the guerrilla leader Pilar."
+        ],
+        "es": [
+          "Ernest Hemingway cubrió la guerra civil española como corresponsal y situó su novela de 1940 en la sierra de Guadarrama, al norte de Madrid, durante la ofensiva republicana sobre Segovia a finales de mayo de 1937. La República sí empleó guerrilleros y dinamiteros tras las líneas nacionales, y miles de voluntarios extranjeros, entre ellos estadounidenses, lucharon en sus filas.",
+          "Paramount suavizó la política de la novela para el público de guerra y rodó las escenas de montaña en la Sierra Nevada de California. La verdadera ofensiva de Segovia, lanzada el 30 de mayo de 1937, fracasó en menos de una semana. La película obtuvo nueve nominaciones al Óscar, y Katina Paxinou ganó el de mejor actriz de reparto como la guerrillera Pilar."
+        ]
+      },
+      "journey": [
+        {
+          "place": "sierra-de-guadarrama",
+          "name": {
+            "en": "Sierra de Guadarrama",
+            "es": "Sierra de Guadarrama"
+          },
+          "coordinates": [-3.9562, 40.8501],
+          "date": "1937-05",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Behind Nationalist lines in the pine-covered mountains, Robert Jordan joins Pablo's band to blow a bridge before the offensive begins.",
+            "es": "Tras las líneas nacionales, en montañas cubiertas de pinos, Robert Jordan se une a la banda de Pablo para volar un puente antes de que empiece la ofensiva."
+          },
+          "history": {
+            "en": "The Republic's Segovia offensive across the Guadarrama began on 30 May 1937 and was halted within days.",
+            "es": "La ofensiva republicana de Segovia a través del Guadarrama comenzó el 30 de mayo de 1937 y quedó detenida en pocos días."
+          }
+        }
+      ]
+    },
+    {
+      "id": "while-at-war-2019",
+      "kind": "film",
+      "title": "While at War",
+      "titleEs": "Mientras dure la guerra",
+      "originalTitle": "Mientras dure la guerra",
+      "year": 2019,
+      "era": "interwar",
+      "period": {
+        "start": "1936-07",
+        "end": "1936-10"
+      },
+      "theaters": ["western-europe", "mediterranean"],
+      "tags": ["civil-war", "politics", "biography", "true-story"],
+      "gold": false,
+      "directors": ["Alejandro Amenábar"],
+      "countries": ["ES", "AR"],
+      "languages": ["es"],
+      "ids": {
+        "tmdb": 542921,
+        "tmdbType": "movie",
+        "imdb": "tt7818580",
+        "wikidata": "Q50682542"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/While_at_War",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Mientras_dure_la_guerra"
+      },
+      "synopsis": {
+        "en": "The writer Miguel de Unamuno backs the military coup of 1936 in Salamanca, while in the rebel camp a cautious General Franco maneuvers to take sole command.",
+        "es": "El escritor Miguel de Unamuno apoya el golpe militar de 1936 en Salamanca, mientras en el bando sublevado un cauteloso general Franco maniobra para quedarse con el mando único."
+      },
+      "history": {
+        "en": [
+          "Miguel de Unamuno, Spain's most famous intellectual and rector of the University of Salamanca, initially supported the military uprising of 17-18 July 1936, which he saw as a way to restore order. Within weeks he watched friends such as the Protestant pastor Atilano Coco and the mayor Casto Prieto Carrasco disappear into the rebel repression. Meanwhile the generals, meeting near Salamanca on 21 September, chose Francisco Franco as commander-in-chief, and on 1 October he took power as head of state in Burgos.",
+          "On 12 October 1936 Unamuno clashed publicly with General Millán-Astray in the university's great hall and was stripped of his post; he died under house arrest on 31 December. Amenábar follows the record closely, but the exact words of the famous speech, including the line 'you will win, but you will not convince', were reconstructed years later, and historians still debate them."
+        ],
+        "es": [
+          "Miguel de Unamuno, el intelectual más famoso de España y rector de la Universidad de Salamanca, apoyó al principio el alzamiento militar del 17 y 18 de julio de 1936, que veía como una forma de restaurar el orden. En pocas semanas vio desaparecer en la represión sublevada a amigos como el pastor protestante Atilano Coco y el alcalde Casto Prieto Carrasco. Mientras tanto, los generales, reunidos cerca de Salamanca el 21 de septiembre, eligieron a Francisco Franco como generalísimo, y el 1 de octubre asumió en Burgos la jefatura del Estado.",
+          "El 12 de octubre de 1936 Unamuno se enfrentó en público al general Millán-Astray en el paraninfo de la universidad y fue destituido; murió bajo arresto domiciliario el 31 de diciembre. Amenábar sigue de cerca los hechos, pero las palabras exactas del famoso discurso, incluida la frase «venceréis, pero no convenceréis», se reconstruyeron años después y los historiadores todavía las discuten."
+        ]
+      },
+      "journey": [
+        {
+          "place": "salamanca",
+          "name": {
+            "en": "Salamanca",
+            "es": "Salamanca"
+          },
+          "coordinates": [-5.6667, 40.9614],
+          "date": "1936-07",
+          "kind": "city",
+          "story": {
+            "en": "Rebel troops occupy the city, the socialist mayor is arrested, and Unamuno publicly supports the coup.",
+            "es": "Las tropas sublevadas ocupan la ciudad, el alcalde socialista es detenido y Unamuno apoya públicamente el golpe."
+          },
+          "history": {
+            "en": "Salamanca fell to the rebels on 19 July 1936, and its mayor, Casto Prieto Carrasco, was shot on 29 July.",
+            "es": "Salamanca cayó en manos de los sublevados el 19 de julio de 1936, y su alcalde, Casto Prieto Carrasco, fue fusilado el 29 de julio."
+          }
+        },
+        {
+          "place": "tetouan",
+          "name": {
+            "en": "Tetuan, Spanish Morocco",
+            "es": "Tetuán, Marruecos español"
+          },
+          "coordinates": [-5.3747, 35.5698],
+          "date": "1936-08",
+          "kind": "base",
+          "story": {
+            "en": "In Spanish Morocco, a German delegation presses General Franco to become the rebels' single leader.",
+            "es": "En el Marruecos español, una delegación alemana presiona al general Franco para que se convierta en el líder único de los sublevados."
+          },
+          "history": {
+            "en": "Franco led the Army of Africa from Tetuan, and from late July German and Italian aircraft ferried his troops across the Strait.",
+            "es": "Franco dirigió el Ejército de África desde Tetuán, y desde finales de julio aviones alemanes e italianos trasladaron a sus tropas a través del Estrecho."
+          }
+        },
+        {
+          "place": "caceres",
+          "name": {
+            "en": "Cáceres",
+            "es": "Cáceres"
+          },
+          "coordinates": [-6.3711, 39.4731],
+          "date": "1936-09",
+          "kind": "base",
+          "story": {
+            "en": "At his headquarters, Franco hears Millán-Astray urge him to seize supreme command and to relieve the besieged Alcázar of Toledo.",
+            "es": "En su cuartel general, Franco escucha a Millán-Astray pedirle que tome el mando supremo y que libere el Alcázar de Toledo sitiado."
+          },
+          "history": {
+            "en": "Franco moved his headquarters to Cáceres in late August 1936 as his columns advanced up the Tagus toward Madrid.",
+            "es": "Franco trasladó su cuartel general a Cáceres a finales de agosto de 1936 mientras sus columnas avanzaban por el Tajo hacia Madrid."
+          }
+        },
+        {
+          "place": "salamanca",
+          "name": {
+            "en": "University of Salamanca",
+            "es": "Universidad de Salamanca"
+          },
+          "coordinates": [-5.6667, 40.9614],
+          "date": "1936-10",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "After searching in vain for his arrested friends, Unamuno faces Millán-Astray in the university's great hall on the Day of the Race.",
+            "es": "Tras buscar en vano a sus amigos detenidos, Unamuno se enfrenta a Millán-Astray en el paraninfo de la universidad en el Día de la Raza."
+          },
+          "history": {
+            "en": "On 12 October 1936 Unamuno rebuked the rebels in the Paraninfo of the University of Salamanca and was removed as rector days later.",
+            "es": "El 12 de octubre de 1936 Unamuno reprendió a los sublevados en el paraninfo de la Universidad de Salamanca y fue destituido como rector días después."
+          }
+        }
+      ]
+    },
+    {
+      "id": "libertarias-1996",
+      "kind": "film",
+      "title": "Libertarias",
+      "titleEs": "Libertarias",
+      "year": 1996,
+      "era": "interwar",
+      "period": {
+        "start": "1936-07",
+        "end": "1936-10"
+      },
+      "theaters": ["western-europe", "mediterranean"],
+      "tags": ["civil-war", "combat"],
+      "gold": false,
+      "directors": ["Vicente Aranda"],
+      "countries": ["ES"],
+      "languages": ["es"],
+      "ids": {
+        "tmdb": 58097,
+        "tmdbType": "movie",
+        "imdb": "tt0113649",
+        "wikidata": "Q1229160"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Libertarias",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Libertarias"
+      },
+      "synopsis": {
+        "en": "In revolutionary Barcelona a young nun on the run falls in with the anarchist women of Mujeres Libres and follows them to the front, where they demand to fight like any militiaman.",
+        "es": "En la Barcelona revolucionaria, una joven monja fugitiva se une a las anarquistas de Mujeres Libres y las sigue al frente, donde exigen combatir como cualquier miliciano."
+      },
+      "history": {
+        "en": [
+          "When workers' militias and loyal police defeated the military uprising in Barcelona on 19-20 July 1936, the anarchist CNT became the real power in the city. Churches were burned, factories and land collectivised, and columns of volunteers, among them the famous Durruti Column, marched on Nationalist-held Zaragoza. Hundreds of women, the milicianas, went to the front with them.",
+          "The anarchist women's organisation Mujeres Libres, founded in 1936, grew to about 30,000 members by 1938. By early 1937 the Republican government was withdrawing women from combat, and the militias were absorbed into the regular Popular Army. Aranda's characters are fictional, and the film mixes revolutionary comedy with the brutality of the war."
+        ],
+        "es": [
+          "Cuando las milicias obreras y la policía leal derrotaron el alzamiento militar en Barcelona el 19 y 20 de julio de 1936, la CNT anarquista pasó a ser el poder real en la ciudad. Se quemaron iglesias, se colectivizaron fábricas y tierras, y columnas de voluntarios, entre ellas la famosa Columna Durruti, marcharon sobre la Zaragoza en manos nacionales. Cientos de mujeres, las milicianas, fueron al frente con ellas.",
+          "La organización anarquista Mujeres Libres, fundada en 1936, llegó a tener unas 30 000 afiliadas en 1938. A comienzos de 1937 el gobierno republicano retiraba ya a las mujeres del combate, y las milicias fueron absorbidas por el Ejército Popular regular. Los personajes de Aranda son ficticios, y la película mezcla la comedia revolucionaria con la brutalidad de la guerra."
+        ]
+      },
+      "journey": [
+        {
+          "place": "barcelona",
+          "name": {
+            "en": "Barcelona",
+            "es": "Barcelona"
+          },
+          "coordinates": [2.1769, 41.3825],
+          "date": "1936-07",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "Fleeing her convent as churches burn, María hides in a brothel just as the militia women of Mujeres Libres arrive to liberate it.",
+            "es": "Huyendo de su convento mientras arden las iglesias, María se esconde en un prostíbulo justo cuando llegan las milicianas de Mujeres Libres a liberarlo."
+          },
+          "history": {
+            "en": "After defeating the uprising on 19-20 July 1936, anarchist committees effectively took control of Barcelona.",
+            "es": "Tras derrotar el alzamiento el 19 y 20 de julio de 1936, los comités anarquistas tomaron de hecho el control de Barcelona."
+          }
+        },
+        {
+          "place": "aragon-front",
+          "name": {
+            "en": "Aragon front near Pina de Ebro",
+            "es": "Frente de Aragón, cerca de Pina de Ebro"
+          },
+          "coordinates": [-0.526, 41.489],
+          "date": "1936-08",
+          "kind": "front",
+          "story": {
+            "en": "The women join the columns marching on Zaragoza and insist on fighting in the line rather than cooking behind it.",
+            "es": "Las mujeres se suman a las columnas que marchan sobre Zaragoza e insisten en combatir en primera línea en vez de cocinar en la retaguardia."
+          },
+          "history": {
+            "en": "The Durruti Column advanced from Barcelona toward Zaragoza and dug in along the Ebro around Pina in August 1936.",
+            "es": "La Columna Durruti avanzó desde Barcelona hacia Zaragoza y se atrincheró junto al Ebro, en torno a Pina, en agosto de 1936."
+          }
+        }
+      ]
+    },
+    {
+      "id": "13-roses-2007",
+      "kind": "film",
+      "title": "13 Roses",
+      "titleEs": "Las 13 rosas",
+      "originalTitle": "Las 13 rosas",
+      "year": 2007,
+      "era": "interwar",
+      "period": {
+        "start": "1939-03",
+        "end": "1939-08"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["civil-war", "prisoners", "true-story"],
+      "gold": false,
+      "directors": ["Emilio Martínez-Lázaro"],
+      "countries": ["ES"],
+      "languages": ["es"],
+      "ids": {
+        "tmdb": 27605,
+        "tmdbType": "movie",
+        "imdb": "tt0809533",
+        "wikidata": "Q384998"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/13_Roses",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Las_13_rosas_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "In the last days of the Spanish Civil War, a group of young Madrid women with leftist sympathies believe they have nothing to fear from Franco's victory.",
+        "es": "En los últimos días de la guerra civil española, un grupo de jóvenes madrileñas de izquierdas cree que no tiene nada que temer de la victoria de Franco."
+      },
+      "history": {
+        "en": [
+          "Madrid, besieged since November 1936, surrendered to Franco's army on 28 March 1939. The victors launched a sweeping purge: tens of thousands of Republicans were arrested, and women's prisons such as Ventas were packed far beyond capacity. Many of the detainees were young members of the socialist and communist youth organisations.",
+          "On 5 August 1939 thirteen young women, most of them members of the Unified Socialist Youth, were shot at the wall of the Cementerio del Este alongside dozens of men, in reprisal for the killing of Commander Isaac Gabaldón, a Francoist police official, on 27 July. The film, based on real letters and testimonies, merges and simplifies some of their stories."
+        ],
+        "es": [
+          "Madrid, sitiado desde noviembre de 1936, se rindió al ejército de Franco el 28 de marzo de 1939. Los vencedores emprendieron una depuración masiva: decenas de miles de republicanos fueron detenidos, y cárceles de mujeres como la de Ventas quedaron abarrotadas muy por encima de su capacidad. Muchas de las detenidas eran jóvenes de las juventudes socialistas y comunistas.",
+          "El 5 de agosto de 1939 trece jóvenes, varias de ellas militantes de las Juventudes Socialistas Unificadas, fueron fusiladas ante la tapia del Cementerio del Este junto a decenas de hombres, como represalia por el asesinato del comandante franquista Isaac Gabaldón el 27 de julio. La película, basada en cartas y testimonios reales, funde y simplifica algunas de sus historias."
+        ]
+      },
+      "journey": [
+        {
+          "place": "madrid",
+          "name": {
+            "en": "Madrid",
+            "es": "Madrid"
+          },
+          "coordinates": [-3.7036, 40.4169],
+          "date": "1939-03",
+          "kind": "city",
+          "story": {
+            "en": "As the last bombs fall on the city, the friends keep up their political work and dance while Franco's troops close in.",
+            "es": "Mientras caen las últimas bombas sobre la ciudad, las amigas siguen con su militancia y bailan mientras se acercan las tropas de Franco."
+          },
+          "history": {
+            "en": "Madrid, besieged since November 1936, surrendered to the Nationalists on 28 March 1939.",
+            "es": "Madrid, sitiado desde noviembre de 1936, se rindió a los nacionales el 28 de marzo de 1939."
+          }
+        },
+        {
+          "place": "madrid",
+          "name": {
+            "en": "Police headquarters, Puerta del Sol",
+            "es": "Dirección General de Seguridad, Puerta del Sol"
+          },
+          "coordinates": [-3.7036, 40.4169],
+          "date": "1939-05",
+          "kind": "city",
+          "story": {
+            "en": "Betrayed by a friend, the young women are arrested one by one and brutally interrogated.",
+            "es": "Traicionadas por un conocido, las jóvenes son detenidas una a una e interrogadas con brutalidad."
+          },
+          "history": {
+            "en": "Franco's police used the Dirección General de Seguridad on the Puerta del Sol as a centre of interrogation and torture.",
+            "es": "La policía franquista usó la Dirección General de Seguridad de la Puerta del Sol como centro de interrogatorios y torturas."
+          }
+        },
+        {
+          "place": "madrid",
+          "name": {
+            "en": "Ventas women's prison",
+            "es": "Cárcel de mujeres de Ventas"
+          },
+          "coordinates": [-3.6647, 40.4278],
+          "date": "1939-06",
+          "kind": "camp",
+          "primary": true,
+          "story": {
+            "en": "Crowded into Ventas with mothers and babies, they hold on to friendship, songs and the hope of release.",
+            "es": "Hacinadas en Ventas junto a madres y bebés, se aferran a la amistad, a las canciones y a la esperanza de salir libres."
+          },
+          "history": {
+            "en": "Built in 1933 as a model women's prison, Ventas was crammed with political prisoners and their children after the war.",
+            "es": "Construida en 1933 como cárcel modelo de mujeres, Ventas quedó abarrotada de presas políticas y sus hijos tras la guerra."
+          }
+        },
+        {
+          "place": "madrid",
+          "name": {
+            "en": "Cementerio del Este",
+            "es": "Cementerio del Este"
+          },
+          "coordinates": [-3.6406, 40.4194],
+          "date": "1939-08",
+          "kind": "city",
+          "story": {
+            "en": "A summary military court decides their fate, and they write their last letters to their families.",
+            "es": "Un consejo de guerra sumarísimo decide su destino, y ellas escriben sus últimas cartas a sus familias."
+          },
+          "history": {
+            "en": "On 5 August 1939 the thirteen young women were shot at the cemetery wall, today's Almudena cemetery.",
+            "es": "El 5 de agosto de 1939 las trece jóvenes fueron fusiladas ante la tapia del cementerio, hoy cementerio de la Almudena."
+          }
+        }
+      ]
+    },
+    {
+      "id": "cabaret-1972",
+      "kind": "film",
+      "title": "Cabaret",
+      "titleEs": "Cabaret",
+      "year": 1972,
+      "era": "interwar",
+      "period": {
+        "start": "1931",
+        "end": "1932"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["politics", "romance"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won eight Academy Awards, a record for a film that did not win Best Picture, and ranks #63 on AFI's 2007 list of the 100 greatest American films.",
+        "es": "Ganó ocho premios Óscar, récord para una película que no ganó el de mejor película, y ocupa el puesto 63 en la lista de 2007 del AFI de las 100 mejores películas estadounidenses."
+      },
+      "directors": ["Bob Fosse"],
+      "countries": ["US"],
+      "languages": ["en", "de"],
+      "ids": {
+        "tmdb": 10784,
+        "tmdbType": "movie",
+        "imdb": "tt0068327",
+        "wikidata": "Q918363"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Cabaret_(1972_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Cabaret_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "In Berlin in 1931, a reserved English student falls for Sally Bowles, the dazzling star of the Kit Kat Klub, while outside the club the Nazis grow bolder every night.",
+        "es": "En el Berlín de 1931, un reservado estudiante inglés se enamora de Sally Bowles, la deslumbrante estrella del Kit Kat Klub, mientras fuera del club los nazis se vuelven más audaces cada noche."
+      },
+      "history": {
+        "en": [
+          "Cabaret is set in the last years of the Weimar Republic, when the Great Depression left about six million Germans unemployed and street fights between Nazi stormtroopers and Communists became routine. The Nazi vote rose from 18 percent in September 1930 to 37 percent in July 1932, and Hitler was appointed chancellor in January 1933.",
+          "The film comes from Christopher Isherwood's Berlin stories, drawn from his life in the city between 1929 and 1933, and from the 1966 stage musical. Sally Bowles was based on the singer Jean Ross; Isherwood himself was gay, a side of Brian that the film only partly acknowledges. The Kit Kat Klub is invented, and Fosse uses its numbers as a mirror of the politics outside."
+        ],
+        "es": [
+          "Cabaret transcurre en los últimos años de la República de Weimar, cuando la Gran Depresión dejó a unos seis millones de alemanes sin trabajo y las peleas callejeras entre las tropas de asalto nazis y los comunistas se volvieron rutina. El voto nazi pasó del 18 % en septiembre de 1930 al 37 % en julio de 1932, y Hitler fue nombrado canciller en enero de 1933.",
+          "La película nace de los relatos berlineses de Christopher Isherwood, basados en su vida en la ciudad entre 1929 y 1933, y del musical teatral de 1966. Sally Bowles se inspiró en la cantante Jean Ross; Isherwood era gay, un aspecto de Brian que la película solo reconoce a medias. El Kit Kat Klub es inventado, y Fosse usa sus números como espejo de la política de la calle."
+        ]
+      },
+      "journey": [
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Nollendorfplatz, Schöneberg, Berlin",
+            "es": "Nollendorfplatz, Schöneberg, Berlín"
+          },
+          "coordinates": [13.3539, 52.4992],
+          "date": "1931",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "Brian moves into Sally's boarding house and is swept into her nights at the Kit Kat Klub, where the master of ceremonies mocks everything, including the Nazis.",
+            "es": "Brian se muda a la pensión de Sally y se deja llevar por sus noches en el Kit Kat Klub, donde el maestro de ceremonias se burla de todo, incluso de los nazis."
+          },
+          "history": {
+            "en": "Isherwood, whose stories inspired the film, lodged at Nollendorfstraße 17, just off Nollendorfplatz, from 1930 to 1933.",
+            "es": "Isherwood, cuyos relatos inspiraron la película, vivió en Nollendorfstraße 17, junto a Nollendorfplatz, entre 1930 y 1933."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-sound-of-music-1965",
+      "kind": "film",
+      "title": "The Sound of Music",
+      "titleEs": "La novicia rebelde",
+      "year": 1965,
+      "era": "interwar",
+      "period": {
+        "start": "1938",
+        "end": "1938-09"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["romance", "true-story", "politics"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won the Academy Award for Best Picture and ranks #40 on AFI's 2007 list of the 100 greatest American films.",
+        "es": "Ganó el Óscar a la mejor película y ocupa el puesto 40 en la lista de 2007 del AFI de las 100 mejores películas estadounidenses."
+      },
+      "directors": ["Robert Wise"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 15121,
+        "tmdbType": "movie",
+        "imdb": "tt0059742",
+        "wikidata": "Q60072"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Sound_of_Music_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/The_Sound_of_Music",
+        "fandom": "https://movies.fandom.com/wiki/The_Sound_of_Music"
+      },
+      "synopsis": {
+        "en": "A free-spirited novice becomes governess to the seven children of a strict naval captain in Salzburg and fills their house with music, just as Nazi Germany reaches for Austria.",
+        "es": "Una novicia de espíritu libre se convierte en institutriz de los siete hijos de un severo capitán de marina en Salzburgo y llena la casa de música, justo cuando la Alemania nazi se apodera de Austria."
+      },
+      "history": {
+        "en": [
+          "The story is based on the real von Trapp family. Maria Kutschera, a novice at Nonnberg Abbey, came to the house of the widowed naval hero Georg von Trapp as a tutor in 1926 and married him in 1927; the family choir she helped build won first prize at the Salzburg Festival's choral competition in 1936. On 12 March 1938 German troops crossed into Austria, and the Anschluss was sealed by a staged plebiscite a month later.",
+          "The film compresses a decade into a single year and reshapes the characters: the real Georg was a warm father, and the children's names and ages were changed. The Trapps did not escape over the mountains; they left openly by train for Italy in 1938. The Untersberg, where the film's final hike begins, actually leads toward Germany and Hitler's retreat at Berchtesgaden."
+        ],
+        "es": [
+          "La historia se basa en la verdadera familia von Trapp. Maria Kutschera, novicia de la abadía de Nonnberg, llegó en 1926 como tutora a la casa del viudo héroe naval Georg von Trapp y se casó con él en 1927; el coro familiar que ayudó a formar ganó el primer premio del concurso coral del Festival de Salzburgo en 1936. El 12 de marzo de 1938 las tropas alemanas entraron en Austria, y la anexión se selló con un plebiscito amañado un mes después.",
+          "La película comprime una década en un solo año y modifica a los personajes: el verdadero Georg era un padre cariñoso, y se cambiaron los nombres y las edades de los niños. Los Trapp no huyeron por las montañas; salieron abiertamente en tren hacia Italia en 1938. El Untersberg, donde empieza la caminata final de la película, en realidad lleva hacia Alemania y el refugio de Hitler en Berchtesgaden."
+        ]
+      },
+      "journey": [
+        {
+          "place": "salzburg",
+          "name": {
+            "en": "Nonnberg Abbey, Salzburg",
+            "es": "Abadía de Nonnberg, Salzburgo"
+          },
+          "coordinates": [13.0517, 47.7961],
+          "date": "1938",
+          "kind": "city",
+          "story": {
+            "en": "Maria, a novice who would rather sing on the hills than keep the abbey's rules, is sent away to work as a governess.",
+            "es": "Maria, una novicia que prefiere cantar en las colinas antes que cumplir las reglas de la abadía, es enviada a trabajar como institutriz."
+          },
+          "history": {
+            "en": "The real Maria Kutschera was a novice at Nonnberg, a Benedictine convent founded around 714, before joining the Trapp household.",
+            "es": "La verdadera Maria Kutschera fue novicia en Nonnberg, un convento benedictino fundado hacia el año 714, antes de entrar en la casa de los Trapp."
+          }
+        },
+        {
+          "place": "salzburg",
+          "name": {
+            "en": "Villa Trapp, Aigen",
+            "es": "Villa Trapp, Aigen"
+          },
+          "coordinates": [13.0817, 47.7892],
+          "date": "1938",
+          "kind": "home",
+          "primary": true,
+          "story": {
+            "en": "In the captain's villa, Maria wins over seven mischievous children with songs and play clothes, and slowly wins over their father too.",
+            "es": "En la villa del capitán, Maria conquista a siete niños traviesos con canciones y ropa para jugar, y poco a poco también a su padre."
+          },
+          "history": {
+            "en": "The family lived in this villa in the Aigen district until 1938, when it was seized and used by Heinrich Himmler's SS.",
+            "es": "La familia vivió en esta villa del barrio de Aigen hasta 1938, cuando fue confiscada y utilizada por las SS de Heinrich Himmler."
+          }
+        },
+        {
+          "place": "salzburg",
+          "name": {
+            "en": "Felsenreitschule, Salzburg",
+            "es": "Felsenreitschule, Salzburgo"
+          },
+          "coordinates": [13.0417, 47.7983],
+          "date": "1938-08",
+          "kind": "city",
+          "story": {
+            "en": "After the Anschluss, the family sings at the Salzburg Festival while the new regime waits for the captain to accept a German command.",
+            "es": "Tras la anexión, la familia canta en el Festival de Salzburgo mientras el nuevo régimen espera que el capitán acepte un mando alemán."
+          },
+          "history": {
+            "en": "The Felsenreitschule, a riding school carved into the rock of the Mönchsberg, has been a Salzburg Festival stage since 1926.",
+            "es": "La Felsenreitschule, una escuela de equitación excavada en la roca del Mönchsberg, es escenario del Festival de Salzburgo desde 1926."
+          }
+        },
+        {
+          "place": "untersberg",
+          "name": {
+            "en": "The Alps near the Untersberg",
+            "es": "Los Alpes cerca del Untersberg"
+          },
+          "coordinates": [12.9833, 47.7],
+          "date": "1938-09",
+          "kind": "journey",
+          "story": {
+            "en": "Refusing to serve Hitler, the captain leads his family on foot into the mountains toward freedom.",
+            "es": "Negándose a servir a Hitler, el capitán guía a su familia a pie por las montañas en busca de la libertad."
+          },
+          "history": {
+            "en": "The real Trapps left Austria by train for Italy in 1938 and later settled in Stowe, Vermont.",
+            "es": "Los verdaderos Trapp salieron de Austria en tren hacia Italia en 1938 y más tarde se establecieron en Stowe, Vermont."
+          }
+        }
+      ]
+    },
+    {
+      "id": "mephisto-1981",
+      "kind": "film",
+      "title": "Mephisto",
+      "titleEs": "Mefisto",
+      "year": 1981,
+      "era": "interwar",
+      "period": {
+        "start": "1926",
+        "end": "1936"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["politics"],
+      "gold": false,
+      "directors": ["István Szabó"],
+      "countries": ["HU", "DE", "AT"],
+      "languages": ["de"],
+      "ids": {
+        "tmdb": 11911,
+        "tmdbType": "movie",
+        "imdb": "tt0082736",
+        "wikidata": "Q314418"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Mephisto_(1981_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Mefisto_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "A brilliant, vain actor who once dreamed of revolutionary theatre stays in Nazi Germany to become its greatest star, and discovers what the regime expects in return.",
+        "es": "Un actor brillante y vanidoso que alguna vez soñó con un teatro revolucionario se queda en la Alemania nazi para convertirse en su mayor estrella, y descubre lo que el régimen espera a cambio."
+      },
+      "history": {
+        "en": [
+          "The film adapts Klaus Mann's 1936 novel, a thinly veiled portrait of his former brother-in-law Gustaf Gründgens. Gründgens rose from the Hamburger Kammerspiele in the 1920s to become Germany's most celebrated Mephisto, and under the protection of Hermann Göring, who controlled the Prussian State Theatre, he was made its director in 1934 while many colleagues fled into exile.",
+          "Gründgens's adopted son sued to stop the novel's publication in West Germany, and the Federal Constitutional Court upheld the ban in 1971. Szabó's Hungarian co-production, with Klaus Maria Brandauer as Höfgen, became the first Hungarian film to win the Academy Award for Best Foreign Language Film. Like the novel, it fictionalises names and events; Gründgens also used his position to shield some endangered colleagues."
+        ],
+        "es": [
+          "La película adapta la novela de Klaus Mann de 1936, un retrato apenas disimulado de su excuñado Gustaf Gründgens. Gründgens pasó de los Hamburger Kammerspiele en los años veinte a ser el Mefistófeles más célebre de Alemania y, bajo la protección de Hermann Göring, que controlaba el Teatro Estatal de Prusia, fue nombrado su director en 1934 mientras muchos colegas partían al exilio.",
+          "El hijo adoptivo de Gründgens demandó para impedir la publicación de la novela en Alemania Occidental, y el Tribunal Constitucional Federal confirmó la prohibición en 1971. La coproducción húngara de Szabó, con Klaus Maria Brandauer como Höfgen, fue la primera película húngara en ganar el Óscar a la mejor película de habla no inglesa. Como la novela, cambia nombres y hechos; Gründgens también usó su posición para proteger a algunos colegas en peligro."
+        ]
+      },
+      "journey": [
+        {
+          "place": "hamburg",
+          "name": {
+            "en": "Hamburg",
+            "es": "Hamburgo"
+          },
+          "coordinates": [9.9855, 53.57],
+          "date": "1926",
+          "kind": "city",
+          "story": {
+            "en": "In a provincial Hamburg theatre, Hendrik Höfgen burns with ambition, plays the rebel and even launches a revolutionary workers' stage.",
+            "es": "En un teatro de provincias de Hamburgo, Hendrik Höfgen arde de ambición, juega al rebelde e incluso crea un escenario obrero revolucionario."
+          },
+          "history": {
+            "en": "Gründgens, the model for Höfgen, made his name as actor and director at the Hamburger Kammerspiele between 1923 and 1928.",
+            "es": "Gründgens, el modelo de Höfgen, se hizo un nombre como actor y director en los Hamburger Kammerspiele entre 1923 y 1928."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Prussian State Theatre, Berlin",
+            "es": "Teatro Estatal de Prusia, Berlín"
+          },
+          "coordinates": [13.3922, 52.5136],
+          "date": "1933",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "With the Nazis in power, Höfgen returns from abroad, triumphs as Mephisto and accepts the patronage of a powerful general.",
+            "es": "Con los nazis en el poder, Höfgen regresa del extranjero, triunfa como Mefistófeles y acepta la protección de un poderoso general."
+          },
+          "history": {
+            "en": "Göring, as Prussian prime minister, controlled the State Theatre on the Gendarmenmarkt and appointed Gründgens its director in 1934.",
+            "es": "Göring, como primer ministro de Prusia, controlaba el Teatro Estatal de la Gendarmenmarkt y nombró director a Gründgens en 1934."
+          }
+        }
+      ]
+    },
+    {
+      "id": "munich-the-edge-of-war-2021",
+      "kind": "film",
+      "title": "Munich – The Edge of War",
+      "titleEs": "Múnich en vísperas de una guerra",
+      "year": 2021,
+      "era": "interwar",
+      "period": {
+        "start": "1932",
+        "end": "1938-09"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["politics", "espionage"],
+      "gold": false,
+      "directors": ["Christian Schwochow"],
+      "countries": ["GB"],
+      "languages": ["en", "de"],
+      "ids": {
+        "tmdb": 760336,
+        "tmdbType": "movie",
+        "imdb": "tt7475578",
+        "wikidata": "Q104007933"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Munich_%E2%80%93_The_Edge_of_War",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/M%C3%BAnich_en_v%C3%ADsperas_de_una_guerra"
+      },
+      "synopsis": {
+        "en": "Two Oxford friends, one in Chamberlain's office and one in Hitler's foreign ministry, meet again at the Munich conference with a document that could change its outcome.",
+        "es": "Dos amigos de Oxford, uno en la oficina de Chamberlain y otro en el ministerio de Exteriores de Hitler, se reencuentran en la conferencia de Múnich con un documento que podría cambiar su resultado."
+      },
+      "history": {
+        "en": [
+          "In September 1938 Hitler threatened war to seize the Sudetenland, the German-speaking border regions of Czechoslovakia. After two meetings with Neville Chamberlain, a conference in Munich on 29-30 September brought together Britain, France, Germany and Italy, which agreed to hand the territory to Germany without Czechoslovakia at the table. Chamberlain returned promising 'peace for our time'; in March 1939 Hitler occupied the rest of the Czech lands.",
+          "The film adapts Robert Harris's novel. Legat and Hartmann are fictional, but a real circle of officers and diplomats, the Oster conspiracy, was ready to arrest Hitler if he went to war that autumn. The Hossbach Memorandum on Hitler's war plans is also real, though it was never smuggled to Chamberlain. The film presents Chamberlain sympathetically, as a leader buying time for rearmament."
+        ],
+        "es": [
+          "En septiembre de 1938 Hitler amenazó con la guerra para apoderarse de los Sudetes, las regiones fronterizas germanoparlantes de Checoslovaquia. Tras dos reuniones con Neville Chamberlain, una conferencia en Múnich los días 29 y 30 de septiembre reunió a Gran Bretaña, Francia, Alemania e Italia, que acordaron entregar el territorio a Alemania sin Checoslovaquia en la mesa. Chamberlain volvió prometiendo «paz para nuestro tiempo»; en marzo de 1939 Hitler ocupó el resto de las tierras checas.",
+          "La película adapta la novela de Robert Harris. Legat y Hartmann son ficticios, pero un círculo real de militares y diplomáticos, la conspiración de Oster, estaba listo para detener a Hitler si iba a la guerra ese otoño. El memorando Hossbach sobre los planes bélicos de Hitler también es real, aunque nunca se hizo llegar a Chamberlain. La película presenta a Chamberlain con simpatía, como un líder que ganaba tiempo para el rearme."
+        ]
+      },
+      "journey": [
+        {
+          "place": "oxford",
+          "name": {
+            "en": "Oxford",
+            "es": "Oxford"
+          },
+          "coordinates": [-1.255, 51.755],
+          "date": "1932",
+          "kind": "home",
+          "story": {
+            "en": "Hugh Legat and his German friend Paul von Hartmann celebrate their graduation, with Paul full of enthusiasm for a 'new Germany'.",
+            "es": "Hugh Legat y su amigo alemán Paul von Hartmann celebran su graduación, con Paul entusiasmado por una «nueva Alemania»."
+          },
+          "history": {
+            "en": "German Rhodes scholars studied at Oxford between the wars, among them Adam von Trott, later a member of the resistance against Hitler.",
+            "es": "Entre las dos guerras estudiaron en Oxford becarios Rhodes alemanes, entre ellos Adam von Trott, que después formó parte de la resistencia contra Hitler."
+          }
+        },
+        {
+          "place": "london",
+          "name": {
+            "en": "10 Downing Street, London",
+            "es": "10 de Downing Street, Londres"
+          },
+          "coordinates": [-0.1278, 51.5033],
+          "date": "1938-09",
+          "kind": "city",
+          "story": {
+            "en": "Now one of Chamberlain's private secretaries, Legat is asked by British intelligence to meet his old friend in Munich.",
+            "es": "Ahora secretario privado de Chamberlain, Legat recibe de la inteligencia británica el encargo de reunirse con su viejo amigo en Múnich."
+          },
+          "history": {
+            "en": "On 28 September 1938 Chamberlain learned of Hitler's invitation to Munich while he was addressing the House of Commons.",
+            "es": "El 28 de septiembre de 1938 Chamberlain recibió la invitación de Hitler a Múnich mientras hablaba ante la Cámara de los Comunes."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Wilhelmstraße, Berlin",
+            "es": "Wilhelmstraße, Berlín"
+          },
+          "coordinates": [13.3774, 52.5079],
+          "date": "1938-09",
+          "kind": "city",
+          "story": {
+            "en": "At the Foreign Office, Paul joins officers plotting to topple Hitler and obtains a secret record of his plans for war.",
+            "es": "En el ministerio de Exteriores, Paul se une a militares que conspiran para derrocar a Hitler y consigue un registro secreto de sus planes de guerra."
+          },
+          "history": {
+            "en": "In September 1938 conspirators around Colonel Hans Oster prepared to arrest Hitler if he ordered an attack on Czechoslovakia.",
+            "es": "En septiembre de 1938 los conspiradores en torno al coronel Hans Oster se prepararon para detener a Hitler si ordenaba atacar Checoslovaquia."
+          }
+        },
+        {
+          "place": "munich",
+          "name": {
+            "en": "Führerbau, Munich",
+            "es": "Führerbau, Múnich"
+          },
+          "coordinates": [11.5678, 48.1461],
+          "date": "1938-09",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "As the conference opens, the two friends try to get the evidence into Chamberlain's hands before he signs.",
+            "es": "Mientras empieza la conferencia, los dos amigos intentan poner las pruebas en manos de Chamberlain antes de que firme."
+          },
+          "history": {
+            "en": "In the Führerbau on 29-30 September 1938 the four powers signed the Munich Agreement that gave the Sudetenland to Germany.",
+            "es": "En el Führerbau, los días 29 y 30 de septiembre de 1938, las cuatro potencias firmaron el Acuerdo de Múnich que entregó los Sudetes a Alemania."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-kings-speech-2010",
+      "kind": "film",
+      "title": "The King's Speech",
+      "titleEs": "El discurso del rey",
+      "year": 2010,
+      "era": "interwar",
+      "period": {
+        "start": "1925-10",
+        "end": "1939-09"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["biography", "true-story", "home-front", "politics"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won four Academy Awards, including Best Picture, Best Director and Best Actor for Colin Firth.",
+        "es": "Ganó cuatro premios Óscar, entre ellos mejor película, mejor director y mejor actor para Colin Firth."
+      },
+      "directors": ["Tom Hooper"],
+      "countries": ["GB"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 45269,
+        "tmdbType": "movie",
+        "imdb": "tt1504320",
+        "wikidata": "Q160060"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_King's_Speech",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/El_discurso_del_rey"
+      },
+      "synopsis": {
+        "en": "The stammering Duke of York, suddenly thrust onto the throne, turns to an unorthodox Australian speech therapist to find his voice as Britain heads for war.",
+        "es": "El tartamudo duque de York, lanzado de pronto al trono, recurre a un poco ortodoxo logopeda australiano para encontrar su voz mientras Gran Bretaña se encamina a la guerra."
+      },
+      "history": {
+        "en": [
+          "Prince Albert, Duke of York, had stammered since childhood. After a painful speech closing the British Empire Exhibition at Wembley in 1925, he began treatment in October 1926 with Lionel Logue, an Australian speech therapist who remained his friend until Logue's death in 1953. In December 1936 his brother Edward VIII abdicated to marry Wallis Simpson, and Albert was crowned George VI in Westminster Abbey on 12 May 1937.",
+          "On 3 September 1939, the day Britain declared war on Germany, George VI broadcast to the Empire from Buckingham Palace with Logue at his side. The film compresses the timeline, since Logue's treatment had already helped the Duke long before the abdication, and it shows Winston Churchill as a firm ally of Albert, when in fact Churchill had supported Edward VIII during the crisis."
+        ],
+        "es": [
+          "El príncipe Alberto, duque de York, tartamudeaba desde niño. Tras un penoso discurso al clausurar la Exposición del Imperio Británico en Wembley en 1925, empezó en octubre de 1926 un tratamiento con Lionel Logue, un logopeda australiano que fue su amigo hasta su muerte en 1953. En diciembre de 1936 su hermano Eduardo VIII abdicó para casarse con Wallis Simpson, y Alberto fue coronado como Jorge VI en la abadía de Westminster el 12 de mayo de 1937.",
+          "El 3 de septiembre de 1939, el día en que Gran Bretaña declaró la guerra a Alemania, Jorge VI habló por radio al Imperio desde el palacio de Buckingham con Logue a su lado. La película comprime la cronología, porque el tratamiento de Logue ya había ayudado al duque mucho antes de la abdicación, y muestra a Winston Churchill como firme aliado de Alberto, cuando en realidad Churchill había apoyado a Eduardo VIII durante la crisis."
+        ]
+      },
+      "journey": [
+        {
+          "place": "london",
+          "name": {
+            "en": "Wembley Stadium, London",
+            "es": "Estadio de Wembley, Londres"
+          },
+          "coordinates": [-0.2797, 51.5556],
+          "date": "1925-10",
+          "kind": "city",
+          "story": {
+            "en": "Before a silent stadium crowd, the Duke of York freezes at the microphone while closing the Empire Exhibition.",
+            "es": "Ante un estadio en silencio, el duque de York se paraliza frente al micrófono al clausurar la Exposición del Imperio."
+          },
+          "history": {
+            "en": "The Duke's halting speech closed the British Empire Exhibition at Wembley on 31 October 1925.",
+            "es": "El titubeante discurso del duque clausuró la Exposición del Imperio Británico en Wembley el 31 de octubre de 1925."
+          }
+        },
+        {
+          "place": "london",
+          "name": {
+            "en": "Harley Street, London",
+            "es": "Harley Street, Londres"
+          },
+          "coordinates": [-0.1477, 51.5206],
+          "date": "1926-10",
+          "kind": "city",
+          "story": {
+            "en": "In Lionel Logue's shabby consulting room, the Duke reluctantly accepts a therapy built on equality, swearing and music.",
+            "es": "En el modesto consultorio de Lionel Logue, el duque acepta a regañadientes una terapia basada en la igualdad, las groserías y la música."
+          },
+          "history": {
+            "en": "Logue saw the Duke for the first time at his rooms at 146 Harley Street on 19 October 1926.",
+            "es": "Logue recibió al duque por primera vez en su consultorio de Harley Street 146 el 19 de octubre de 1926."
+          }
+        },
+        {
+          "place": "balmoral",
+          "name": {
+            "en": "Balmoral Castle",
+            "es": "Castillo de Balmoral"
+          },
+          "coordinates": [-3.2302, 57.0407],
+          "date": "1936-09",
+          "kind": "home",
+          "story": {
+            "en": "At a Highland house party hosted by the new king and Wallis Simpson, Bertie tries to confront his brother and loses his words.",
+            "es": "En una fiesta en las Tierras Altas organizada por el nuevo rey y Wallis Simpson, Bertie intenta enfrentar a su hermano y se queda sin palabras."
+          },
+          "history": {
+            "en": "Edward VIII's stay at Balmoral with Wallis Simpson in September 1936 caused scandal as the abdication crisis approached.",
+            "es": "La estancia de Eduardo VIII en Balmoral con Wallis Simpson en septiembre de 1936 causó escándalo cuando se acercaba la crisis de la abdicación."
+          }
+        },
+        {
+          "place": "london",
+          "name": {
+            "en": "Westminster Abbey, London",
+            "es": "Abadía de Westminster, Londres"
+          },
+          "coordinates": [-0.1274, 51.4994],
+          "date": "1937-05",
+          "kind": "city",
+          "story": {
+            "en": "Rehearsing the coronation in the empty abbey, the king and his therapist have their fiercest argument.",
+            "es": "Mientras ensayan la coronación en la abadía vacía, el rey y su logopeda tienen su discusión más dura."
+          },
+          "history": {
+            "en": "George VI was crowned in Westminster Abbey on 12 May 1937, the first coronation broadcast by radio.",
+            "es": "Jorge VI fue coronado en la abadía de Westminster el 12 de mayo de 1937, la primera coronación transmitida por radio."
+          }
+        },
+        {
+          "place": "london",
+          "name": {
+            "en": "Buckingham Palace, London",
+            "es": "Palacio de Buckingham, Londres"
+          },
+          "coordinates": [-0.142, 51.501],
+          "date": "1939-09",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "On the day war is declared, the king must speak live to the whole Empire, with Logue standing beside him.",
+            "es": "El día en que se declara la guerra, el rey debe hablar en directo a todo el Imperio, con Logue a su lado."
+          },
+          "history": {
+            "en": "George VI broadcast his wartime address from Buckingham Palace on the evening of 3 September 1939.",
+            "es": "Jorge VI emitió su mensaje de guerra desde el palacio de Buckingham la noche del 3 de septiembre de 1939."
+          }
+        }
+      ]
+    },
+    {
+      "id": "race-2016",
+      "kind": "film",
+      "title": "Race",
+      "titleEs": "El héroe de Berlín",
+      "year": 2016,
+      "era": "interwar",
+      "period": {
+        "start": "1933",
+        "end": "1936-09"
+      },
+      "theaters": ["americas", "western-europe"],
+      "tags": ["biography", "true-story", "politics"],
+      "gold": false,
+      "directors": ["Stephen Hopkins"],
+      "countries": ["CA", "DE", "FR"],
+      "languages": ["en", "de"],
+      "ids": {
+        "tmdb": 323677,
+        "tmdbType": "movie",
+        "imdb": "tt3499096",
+        "wikidata": "Q17515125"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Race_(2016_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Race_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "Ohio State sprinter Jesse Owens must decide whether to run in Hitler's Olympics, then take on the world's best athletes in the heart of Nazi Berlin.",
+        "es": "El velocista de Ohio State Jesse Owens debe decidir si corre en los Juegos Olímpicos de Hitler y luego enfrentarse a los mejores atletas del mundo en pleno Berlín nazi."
+      },
+      "history": {
+        "en": [
+          "Jesse Owens, the grandson of enslaved people, became a national star at Ohio State when he set three world records and tied a fourth in about 45 minutes at Ann Arbor on 25 May 1935. The United States debated boycotting the 1936 Berlin Olympics over Nazi racial policy, but Avery Brundage of the American Olympic Committee pushed hard for participation.",
+          "In Berlin Owens won four gold medals: the 100 m, the long jump, the 200 m and the 4 x 100 m relay, and the German long jumper Luz Long publicly befriended him. The film compresses his college years and dramatises Brundage's dealings with the regime; the late replacement of the Jewish sprinters Marty Glickman and Sam Stoller in the relay is historical. At home Owens still faced segregation, and President Roosevelt never congratulated him."
+        ],
+        "es": [
+          "Jesse Owens, nieto de personas esclavizadas, se convirtió en estrella nacional en Ohio State cuando batió tres récords mundiales e igualó un cuarto en unos 45 minutos en Ann Arbor el 25 de mayo de 1935. Estados Unidos debatió boicotear los Juegos de Berlín de 1936 por la política racial nazi, pero Avery Brundage, del Comité Olímpico estadounidense, presionó con fuerza para participar.",
+          "En Berlín Owens ganó cuatro medallas de oro: 100 metros, salto de longitud, 200 metros y relevo 4 x 100, y el saltador alemán Luz Long le brindó su amistad en público. La película comprime sus años universitarios y dramatiza los tratos de Brundage con el régimen; la sustitución de última hora de los velocistas judíos Marty Glickman y Sam Stoller en el relevo es histórica. En su país Owens siguió sufriendo la segregación, y el presidente Roosevelt nunca lo felicitó."
+        ]
+      },
+      "journey": [
+        {
+          "place": "columbus",
+          "name": {
+            "en": "Ohio State University, Columbus",
+            "es": "Universidad Estatal de Ohio, Columbus"
+          },
+          "coordinates": [-83.0144, 40.0006],
+          "date": "1933",
+          "kind": "home",
+          "story": {
+            "en": "The first in his family to go to college, Owens meets coach Larry Snyder, who sees an Olympic champion in the raw sprinter.",
+            "es": "El primero de su familia en ir a la universidad, Owens conoce al entrenador Larry Snyder, que ve un campeón olímpico en el velocista sin pulir."
+          },
+          "history": {
+            "en": "Running for Ohio State, Owens set three world records and tied a fourth at the Big Ten meet on 25 May 1935.",
+            "es": "Corriendo para Ohio State, Owens batió tres récords mundiales e igualó un cuarto en el campeonato Big Ten del 25 de mayo de 1935."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Olympic Stadium, Berlin",
+            "es": "Estadio Olímpico de Berlín"
+          },
+          "coordinates": [13.2394, 52.5147],
+          "date": "1936-08",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "In the regime's showcase stadium, Owens races under the eyes of the Nazi leadership and finds an unexpected friend in his German rival.",
+            "es": "En el estadio escaparate del régimen, Owens compite bajo la mirada de la cúpula nazi y encuentra un amigo inesperado en su rival alemán."
+          },
+          "history": {
+            "en": "Between 3 and 9 August 1936 Owens won four gold medals in the new Olympic Stadium before crowds of up to 100,000.",
+            "es": "Entre el 3 y el 9 de agosto de 1936 Owens ganó cuatro medallas de oro en el nuevo Estadio Olímpico ante multitudes de hasta 100 000 personas."
+          }
+        },
+        {
+          "place": "new-york",
+          "name": {
+            "en": "Waldorf-Astoria, New York",
+            "es": "Hotel Waldorf-Astoria, Nueva York"
+          },
+          "coordinates": [-73.9739, 40.7567],
+          "date": "1936-09",
+          "kind": "city",
+          "story": {
+            "en": "Back home a hero, Owens arrives at a banquet in his own honour and is told to use the service entrance.",
+            "es": "De vuelta en casa como un héroe, Owens llega a un banquete en su honor y le indican que use la entrada de servicio."
+          },
+          "history": {
+            "en": "Owens later recalled having to ride the freight elevator to reach his own reception at the Waldorf-Astoria.",
+            "es": "Owens recordó después que tuvo que subir en el montacargas para llegar a su propia recepción en el Waldorf-Astoria."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-boys-in-the-boat-2023",
+      "kind": "film",
+      "title": "The Boys in the Boat",
+      "titleEs": "The Boys in the Boat",
+      "year": 2023,
+      "era": "interwar",
+      "period": {
+        "start": "1936",
+        "end": "1936-08"
+      },
+      "theaters": ["americas", "western-europe"],
+      "tags": ["true-story", "biography"],
+      "gold": false,
+      "directors": ["George Clooney"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 823452,
+        "tmdbType": "movie",
+        "imdb": "tt1856080",
+        "wikidata": "Q111528279"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Boys_in_the_Boat_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/The_Boys_in_the_Boat"
+      },
+      "synopsis": {
+        "en": "A crew of broke, working-class students from the University of Washington rows its way from Depression-era Seattle to the 1936 Berlin Olympics.",
+        "es": "Un equipo de estudiantes pobres y de clase trabajadora de la Universidad de Washington rema desde la Seattle de la Depresión hasta los Juegos Olímpicos de Berlín de 1936."
+      },
+      "history": {
+        "en": [
+          "The film adapts Daniel James Brown's book about the University of Washington eight, sons of loggers, farmers and shipyard workers who began rowing together in 1933. Coached by Al Ulbrickson, with boats built by George Pocock, they won the national title at Poughkeepsie in June 1936 and then the US Olympic trials.",
+          "At the Berlin-Grünau course on 14 August 1936 they came from behind in a poor outside lane to beat Italy by about 0.6 seconds, with Germany third, as Hitler watched. The film simplifies the story: the crew's story spans three years, not one season, and the Olympic trials were held at Princeton, not at Poughkeepsie."
+        ],
+        "es": [
+          "La película adapta el libro de Daniel James Brown sobre el ocho de la Universidad de Washington, hijos de leñadores, granjeros y obreros de astilleros que empezaron a remar juntos en 1933. Entrenados por Al Ulbrickson, con botes construidos por George Pocock, ganaron el título nacional en Poughkeepsie en junio de 1936 y luego las pruebas olímpicas de Estados Unidos.",
+          "En el canal de Berlín-Grünau, el 14 de agosto de 1936, remontaron desde una mala calle exterior para vencer a Italia por unos 0,6 segundos, con Alemania tercera, ante la mirada de Hitler. La película simplifica la historia: el recorrido del equipo abarca tres años y no una sola temporada, y las pruebas olímpicas se disputaron en Princeton, no en Poughkeepsie."
+        ]
+      },
+      "journey": [
+        {
+          "place": "seattle",
+          "name": {
+            "en": "University of Washington, Seattle",
+            "es": "Universidad de Washington, Seattle"
+          },
+          "coordinates": [-122.3081, 47.6542],
+          "date": "1936",
+          "kind": "home",
+          "story": {
+            "en": "Living in an abandoned car, engineering student Joe Rantz tries out for the crew for a bed, a job and a meal.",
+            "es": "Viviendo en un auto abandonado, el estudiante de ingeniería Joe Rantz se presenta a las pruebas de remo a cambio de cama, trabajo y comida."
+          },
+          "history": {
+            "en": "Joe Rantz, abandoned by his family as a teenager, joined the Washington freshman crew in 1933.",
+            "es": "Joe Rantz, abandonado por su familia en la adolescencia, entró en el equipo de novatos de Washington en 1933."
+          }
+        },
+        {
+          "place": "seattle",
+          "name": {
+            "en": "Lake Washington, Seattle",
+            "es": "Lago Washington, Seattle"
+          },
+          "coordinates": [-122.26, 47.63],
+          "date": "1936-04",
+          "kind": "city",
+          "story": {
+            "en": "Racing arch-rival California before a huge crowd, the junior crew stuns its own coach.",
+            "es": "Compitiendo contra el eterno rival California ante una enorme multitud, el equipo júnior deja atónito a su propio entrenador."
+          },
+          "history": {
+            "en": "The annual Washington-California regatta on Lake Washington drew tens of thousands of spectators in the 1930s.",
+            "es": "La regata anual entre Washington y California en el lago Washington atraía a decenas de miles de espectadores en los años treinta."
+          }
+        },
+        {
+          "place": "poughkeepsie",
+          "name": {
+            "en": "Hudson River, Poughkeepsie",
+            "es": "Río Hudson, Poughkeepsie"
+          },
+          "coordinates": [-73.9306, 41.7053],
+          "date": "1936-06",
+          "kind": "city",
+          "story": {
+            "en": "On the Hudson, the underdogs must beat the elite East Coast crews to earn their Olympic chance.",
+            "es": "En el Hudson, los desfavorecidos deben vencer a los equipos de élite de la costa este para ganarse su oportunidad olímpica."
+          },
+          "history": {
+            "en": "Washington's varsity eight won the Intercollegiate Rowing Association regatta at Poughkeepsie in June 1936.",
+            "es": "El ocho titular de Washington ganó la regata de la Intercollegiate Rowing Association en Poughkeepsie en junio de 1936."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Grünau regatta course, Berlin",
+            "es": "Canal de regatas de Grünau, Berlín"
+          },
+          "coordinates": [13.5667, 52.4167],
+          "date": "1936-08",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "With their stroke oarsman sick and a bad lane, the Americans line up against the best crews in Europe in front of Hitler.",
+            "es": "Con su primer remero enfermo y una mala calle, los estadounidenses se alinean contra los mejores equipos de Europa frente a Hitler."
+          },
+          "history": {
+            "en": "On 14 August 1936 Washington won the Olympic eights at Grünau, beating Italy by about 0.6 seconds.",
+            "es": "El 14 de agosto de 1936 Washington ganó la prueba olímpica de ocho en Grünau, por delante de Italia por unos 0,6 segundos."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-last-emperor-1987",
+      "kind": "film",
+      "title": "The Last Emperor",
+      "titleEs": "El último emperador",
+      "year": 1987,
+      "era": "interwar",
+      "period": {
+        "start": "1908",
+        "end": "1950"
+      },
+      "theaters": ["asia"],
+      "tags": ["biography", "true-story", "politics", "prisoners"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won all nine Academy Awards it was nominated for, including Best Picture and Best Director.",
+        "es": "Ganó los nueve premios Óscar a los que estaba nominada, entre ellos mejor película y mejor director."
+      },
+      "directors": ["Bernardo Bertolucci"],
+      "countries": ["IT", "GB", "CN"],
+      "languages": ["en", "zh", "ja"],
+      "ids": {
+        "tmdb": 746,
+        "tmdbType": "movie",
+        "imdb": "tt0093389",
+        "wikidata": "Q212775"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Last_Emperor",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/El_%C3%BAltimo_emperador",
+        "fandom": "https://movies.fandom.com/wiki/The_Last_Emperor_(1987)"
+      },
+      "synopsis": {
+        "en": "Crowned emperor of China at two, Puyi lives as a prisoner of the Forbidden City, a pawn of Japan in Manchuria and finally an inmate of the Communist state.",
+        "es": "Coronado emperador de China a los dos años, Puyi vive como prisionero de la Ciudad Prohibida, peón de Japón en Manchuria y finalmente recluso del Estado comunista."
+      },
+      "history": {
+        "en": [
+          "Puyi became the last Qing emperor in 1908 and abdicated in February 1912 after the revolution that created the Republic of China, but he was allowed to live inside the Forbidden City until a warlord expelled him in 1924. He then lived in the Japanese concession of Tientsin, and after Japan seized Manchuria in 1931 he became head of its puppet state of Manchukuo, enthroned as emperor in 1934.",
+          "Captured by the Soviets in 1945 and handed to the People's Republic in 1950, he spent nearly ten years in the Fushun war criminals centre before being pardoned in 1959. Bertolucci's film was the first Western feature allowed to shoot inside the Forbidden City. It relies heavily on Puyi's autobiography, written under Communist supervision, and dramatises episodes such as the fate of Empress Wanrong's baby."
+        ],
+        "es": [
+          "Puyi se convirtió en el último emperador Qing en 1908 y abdicó en febrero de 1912 tras la revolución que creó la República de China, pero se le permitió vivir dentro de la Ciudad Prohibida hasta que un caudillo militar lo expulsó en 1924. Después vivió en la concesión japonesa de Tianjin y, tras la ocupación japonesa de Manchuria en 1931, se convirtió en jefe de su Estado títere, Manchukuo, donde fue entronizado emperador en 1934.",
+          "Capturado por los soviéticos en 1945 y entregado a la República Popular en 1950, pasó casi diez años en el centro para criminales de guerra de Fushun hasta ser indultado en 1959. La película de Bertolucci fue la primera producción occidental autorizada a rodar dentro de la Ciudad Prohibida. Se apoya mucho en la autobiografía de Puyi, escrita bajo supervisión comunista, y dramatiza episodios como el destino del bebé de la emperatriz Wanrong."
+        ]
+      },
+      "journey": [
+        {
+          "place": "peking",
+          "name": {
+            "en": "Forbidden City, Peking",
+            "es": "Ciudad Prohibida, Pekín"
+          },
+          "coordinates": [116.3908, 39.9158],
+          "date": "1908",
+          "kind": "home",
+          "primary": true,
+          "story": {
+            "en": "Crowned as a toddler, Puyi grows up among eunuchs and rituals, forbidden to leave the palace long after China becomes a republic.",
+            "es": "Coronado cuando apenas camina, Puyi crece entre eunucos y rituales, sin poder salir del palacio mucho después de que China se convierta en república."
+          },
+          "history": {
+            "en": "Puyi abdicated in February 1912 but kept living in the inner court of the Forbidden City until his expulsion in November 1924.",
+            "es": "Puyi abdicó en febrero de 1912, pero siguió viviendo en la corte interior de la Ciudad Prohibida hasta su expulsión en noviembre de 1924."
+          }
+        },
+        {
+          "place": "tientsin",
+          "name": {
+            "en": "Zhang Garden, Tientsin",
+            "es": "Jardín Zhang, Tianjin"
+          },
+          "coordinates": [117.185, 39.124],
+          "date": "1925",
+          "kind": "home",
+          "story": {
+            "en": "Expelled from the palace, the former emperor lives as a westernised playboy in the foreign concession, courted by the Japanese.",
+            "es": "Expulsado del palacio, el exemperador vive como un playboy occidentalizado en la concesión extranjera, cortejado por los japoneses."
+          },
+          "history": {
+            "en": "From 1925 Puyi lived in the Japanese concession of Tientsin, first at the Zhang Garden, until he left for Manchuria in 1931.",
+            "es": "Desde 1925 Puyi vivió en la concesión japonesa de Tianjin, primero en el Jardín Zhang, hasta que partió a Manchuria en 1931."
+          }
+        },
+        {
+          "place": "hsinking",
+          "name": {
+            "en": "Imperial Palace, Hsinking (Changchun)",
+            "es": "Palacio Imperial, Hsinking (Changchun)"
+          },
+          "coordinates": [125.3422, 43.9036],
+          "date": "1934",
+          "kind": "city",
+          "story": {
+            "en": "Enthroned as emperor of Manchukuo, Puyi discovers that the Japanese control every decision, while his wife sinks into opium addiction.",
+            "es": "Entronizado como emperador de Manchukuo, Puyi descubre que los japoneses controlan cada decisión, mientras su esposa se hunde en el opio."
+          },
+          "history": {
+            "en": "Japan made Puyi chief executive of Manchukuo in 1932 and emperor on 1 March 1934, ruling from Hsinking, today's Changchun.",
+            "es": "Japón nombró a Puyi jefe ejecutivo de Manchukuo en 1932 y emperador el 1 de marzo de 1934, con sede en Hsinking, la actual Changchun."
+          }
+        },
+        {
+          "place": "fushun",
+          "name": {
+            "en": "Fushun war criminals centre",
+            "es": "Centro de criminales de guerra de Fushun"
+          },
+          "coordinates": [123.9014, 41.8839],
+          "date": "1950",
+          "kind": "camp",
+          "story": {
+            "en": "Handed over to the new People's Republic, the former emperor must learn to tie his own shoes and confront his past.",
+            "es": "Entregado a la nueva República Popular, el exemperador debe aprender a atarse los zapatos y a enfrentar su pasado."
+          },
+          "history": {
+            "en": "Puyi was held at Fushun from 1950 until his pardon in 1959, when he was presented as a reformed citizen.",
+            "es": "Puyi estuvo recluido en Fushun desde 1950 hasta su indulto en 1959, cuando fue presentado como un ciudadano reformado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lion-of-the-desert-1981",
+      "kind": "film",
+      "title": "Lion of the Desert",
+      "titleEs": "El león del desierto",
+      "year": 1981,
+      "era": "interwar",
+      "period": {
+        "start": "1929",
+        "end": "1931-09"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["resistance", "combat", "biography", "true-story"],
+      "gold": false,
+      "directors": ["Moustapha Akkad"],
+      "countries": ["LY", "US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 26843,
+        "tmdbType": "movie",
+        "imdb": "tt0081059",
+        "wikidata": "Q471362"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Lion_of_the_Desert",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/El_le%C3%B3n_del_desierto"
+      },
+      "synopsis": {
+        "en": "An elderly Quran teacher leads Bedouin horsemen against Mussolini's tanks and aircraft, while a ruthless general is sent to end twenty years of Libyan resistance.",
+        "es": "Un anciano maestro del Corán dirige a jinetes beduinos contra los tanques y aviones de Mussolini, mientras un general implacable es enviado a acabar con veinte años de resistencia libia."
+      },
+      "history": {
+        "en": [
+          "Italy invaded Libya in 1911, but in Cyrenaica the Senussi resistance led by Omar Mukhtar held out for two decades. In 1930 Mussolini made Rodolfo Graziani vice-governor of Cyrenaica, and he crushed the revolt with aircraft, armoured cars, a 270-kilometre barbed-wire fence along the Egyptian border and the deportation of about 100,000 people to camps on the coast, where tens of thousands died.",
+          "Mukhtar was captured in September 1931 and hanged at Suluq on 16 September in front of some 20,000 detainees. The film, with Anthony Quinn as Mukhtar and Oliver Reed as Graziani, was financed by Muammar Gaddafi's government. Italy banned it in 1982, and it was not shown on Italian television until 2009."
+        ],
+        "es": [
+          "Italia invadió Libia en 1911, pero en la Cirenaica la resistencia senusí dirigida por Omar Mujtar resistió durante dos décadas. En 1930 Mussolini nombró a Rodolfo Graziani vicegobernador de la Cirenaica, y este aplastó la revuelta con aviones, blindados, una alambrada de 270 kilómetros en la frontera egipcia y la deportación de unas 100 000 personas a campos de la costa, donde murieron decenas de miles.",
+          "Mujtar fue capturado en septiembre de 1931 y ahorcado en Suluq el 16 de septiembre ante unos 20 000 detenidos. La película, con Anthony Quinn como Mujtar y Oliver Reed como Graziani, fue financiada por el gobierno de Muamar el Gadafi. Italia la prohibió en 1982 y no se emitió en la televisión italiana hasta 2009."
+        ]
+      },
+      "journey": [
+        {
+          "place": "rome",
+          "name": {
+            "en": "Palazzo Venezia, Rome",
+            "es": "Palazzo Venezia, Roma"
+          },
+          "coordinates": [12.4815, 41.8962],
+          "date": "1929",
+          "kind": "city",
+          "story": {
+            "en": "Furious at his generals' failures, Mussolini sends his toughest commander to finish the war in Libya.",
+            "es": "Furioso por los fracasos de sus generales, Mussolini envía a su comandante más duro a terminar la guerra en Libia."
+          },
+          "history": {
+            "en": "Mussolini governed from the Palazzo Venezia and in 1930 named Rodolfo Graziani vice-governor of Cyrenaica.",
+            "es": "Mussolini gobernaba desde el Palazzo Venezia y en 1930 nombró a Rodolfo Graziani vicegobernador de la Cirenaica."
+          }
+        },
+        {
+          "place": "benghazi",
+          "name": {
+            "en": "Benghazi",
+            "es": "Bengasi"
+          },
+          "coordinates": [20.0667, 32.1167],
+          "date": "1930",
+          "kind": "base",
+          "story": {
+            "en": "Graziani arrives with tanks, aircraft and a plan to cut the guerrillas off from the people who feed them.",
+            "es": "Graziani llega con tanques, aviones y un plan para aislar a los guerrilleros de la gente que los alimenta."
+          },
+          "history": {
+            "en": "Benghazi was the capital of Italian Cyrenaica and the base for Graziani's campaign of 1930-1931.",
+            "es": "Bengasi era la capital de la Cirenaica italiana y la base de la campaña de Graziani de 1930 y 1931."
+          }
+        },
+        {
+          "place": "jebel-akhdar",
+          "name": {
+            "en": "Jebel Akhdar",
+            "es": "Yebel Ajdar"
+          },
+          "coordinates": [21.4728, 32.5977],
+          "date": "1930-06",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "In the Green Mountain, Omar Mukhtar's horsemen ambush Italian columns and refuse every offer to surrender.",
+            "es": "En la Montaña Verde, los jinetes de Omar Mujtar emboscan a las columnas italianas y rechazan toda oferta de rendición."
+          },
+          "history": {
+            "en": "The wooded plateau of the Jebel Akhdar was the heart of the Senussi guerrilla war against Italy in Cyrenaica.",
+            "es": "La meseta boscosa del Yebel Ajdar fue el corazón de la guerrilla senusí contra Italia en la Cirenaica."
+          }
+        },
+        {
+          "place": "suluq",
+          "name": {
+            "en": "Suluq",
+            "es": "Suluq"
+          },
+          "coordinates": [20.2503, 31.6686],
+          "date": "1931-09",
+          "kind": "camp",
+          "story": {
+            "en": "Brought before the Italians after a skirmish, Mukhtar faces his enemies with the same calm he showed in the mountains.",
+            "es": "Llevado ante los italianos tras una escaramuza, Mujtar enfrenta a sus enemigos con la misma calma que mostró en la montaña."
+          },
+          "history": {
+            "en": "Omar Mukhtar was hanged at the Suluq camp on 16 September 1931 before about 20,000 Bedouin prisoners.",
+            "es": "Omar Mujtar fue ahorcado en el campo de Suluq el 16 de septiembre de 1931 ante unos 20 000 prisioneros beduinos."
+          }
+        }
+      ]
+    },
+    {
+      "id": "julia-1977",
+      "kind": "film",
+      "title": "Julia",
+      "titleEs": "Julia",
+      "year": 1977,
+      "era": "interwar",
+      "period": {
+        "start": "1934",
+        "end": "1937"
+      },
+      "theaters": ["western-europe", "eastern-europe"],
+      "tags": ["resistance", "politics", "espionage"],
+      "gold": false,
+      "directors": ["Fred Zinnemann"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 42222,
+        "tmdbType": "movie",
+        "imdb": "tt0076245",
+        "wikidata": "Q1166180"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Julia_(1977_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Julia_(pel%C3%ADcula_de_1977)"
+      },
+      "synopsis": {
+        "en": "Playwright Lillian Hellman agrees to smuggle money into Nazi Germany for her childhood friend Julia, now fighting fascism in secret.",
+        "es": "La dramaturga Lillian Hellman acepta pasar dinero de contrabando a la Alemania nazi para su amiga de la infancia Julia, que ahora combate el fascismo en secreto."
+      },
+      "history": {
+        "en": [
+          "In the 1930s Vienna and Berlin were the scenes of a brutal struggle between the left and rising fascism. In February 1934 Austria's government crushed a socialist uprising in Vienna with artillery, and in Germany the Gestapo hunted down the underground networks that helped Jews and political opponents escape. Many foreign sympathisers carried money and messages for them.",
+          "The film adapts a chapter of Lillian Hellman's memoir Pentimento, but the story's truth is disputed. The psychiatrist Muriel Gardiner, an American who worked with the Austrian underground and whom Hellman never met, said she was the real model for Julia; Hellman denied it. The film won three Academy Awards, including Best Supporting Actress for Vanessa Redgrave and Best Supporting Actor for Jason Robards."
+        ],
+        "es": [
+          "En los años treinta Viena y Berlín fueron escenario de una lucha brutal entre la izquierda y el fascismo en ascenso. En febrero de 1934 el gobierno austriaco aplastó con artillería un levantamiento socialista en Viena, y en Alemania la Gestapo perseguía a las redes clandestinas que ayudaban a huir a judíos y opositores. Muchos simpatizantes extranjeros llevaban dinero y mensajes para ellas.",
+          "La película adapta un capítulo de las memorias Pentimento de Lillian Hellman, pero la veracidad de la historia está en disputa. La psiquiatra Muriel Gardiner, una estadounidense que colaboró con la resistencia austriaca y a quien Hellman nunca conoció, afirmó ser el verdadero modelo de Julia; Hellman lo negó. La película ganó tres premios Óscar, entre ellos mejor actriz de reparto para Vanessa Redgrave y mejor actor de reparto para Jason Robards."
+        ]
+      },
+      "journey": [
+        {
+          "place": "vienna",
+          "name": {
+            "en": "University of Vienna",
+            "es": "Universidad de Viena"
+          },
+          "coordinates": [16.3597, 48.2131],
+          "date": "1934-02",
+          "kind": "city",
+          "story": {
+            "en": "Lillian rushes to Vienna when Julia, a medical student, is badly hurt in a political attack, and then loses track of her.",
+            "es": "Lillian viaja de urgencia a Viena cuando Julia, estudiante de medicina, resulta gravemente herida en un ataque político, y luego pierde su rastro."
+          },
+          "history": {
+            "en": "In the Austrian Civil War of 12-16 February 1934, government forces shelled socialist housing blocks in Vienna, killing hundreds.",
+            "es": "En la guerra civil austriaca del 12 al 16 de febrero de 1934, las fuerzas del gobierno bombardearon bloques de viviendas socialistas en Viena y mataron a cientos de personas."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Berlin",
+            "es": "Berlín"
+          },
+          "coordinates": [13.3833, 52.5167],
+          "date": "1937",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "On her way to Moscow, Lillian carries the money across the border and meets Julia for a few tense minutes in a Berlin café.",
+            "es": "Camino de Moscú, Lillian cruza la frontera con el dinero y se reúne con Julia durante unos minutos tensos en un café de Berlín."
+          },
+          "history": {
+            "en": "By 1937 the Gestapo had destroyed most organised opposition in Germany, leaving small clandestine networks to help the persecuted.",
+            "es": "Hacia 1937 la Gestapo había destruido casi toda la oposición organizada en Alemania, y solo quedaban pequeñas redes clandestinas para ayudar a los perseguidos."
+          }
+        },
+        {
+          "place": "moscow",
+          "name": {
+            "en": "Moscow",
+            "es": "Moscú"
+          },
+          "coordinates": [37.6178, 55.7517],
+          "date": "1937",
+          "kind": "city",
+          "story": {
+            "en": "In a gloomy Moscow, Lillian receives news about Julia that will haunt her for the rest of her life.",
+            "es": "En un Moscú sombrío, Lillian recibe noticias sobre Julia que la perseguirán el resto de su vida."
+          },
+          "history": {
+            "en": "Hellman visited Moscow in the autumn of 1937, at the height of Stalin's Great Purge.",
+            "es": "Hellman visitó Moscú en el otoño de 1937, en pleno apogeo de la Gran Purga de Stalin."
+          }
+        }
+      ]
+    },
+    {
+      "id": "mr-jones-2019",
+      "kind": "film",
+      "title": "Mr. Jones",
+      "titleEs": "Mr. Jones",
+      "year": 2019,
+      "era": "interwar",
+      "period": {
+        "start": "1933-02",
+        "end": "1933-04"
+      },
+      "theaters": ["eastern-europe", "western-europe"],
+      "tags": ["true-story", "biography", "politics"],
+      "gold": false,
+      "directors": ["Agnieszka Holland"],
+      "countries": ["PL", "UA", "GB"],
+      "languages": ["en", "ru", "uk"],
+      "ids": {
+        "tmdb": 509598,
+        "tmdbType": "movie",
+        "imdb": "tt6828390",
+        "wikidata": "Q30963297"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Mr._Jones_(2019_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Mr._Jones_(pel%C3%ADcula_de_2019)"
+      },
+      "synopsis": {
+        "en": "A young Welsh journalist who has already interviewed Hitler goes to Moscow to ask how Stalin pays for his boom, and slips away to see Soviet Ukraine for himself.",
+        "es": "Un joven periodista galés que ya entrevistó a Hitler viaja a Moscú para averiguar cómo paga Stalin su auge económico, y se escabulle para ver con sus propios ojos la Ucrania soviética."
+      },
+      "history": {
+        "en": [
+          "Gareth Jones was a real Welsh journalist and former adviser to David Lloyd George. In March 1933 he left an official trip and walked through villages in Soviet Ukraine, where forced collectivisation and grain requisitions had caused the famine now known as the Holodomor; an estimated 3.5 to 5 million people died there in 1932-1933. His reports were published at the end of March 1933.",
+          "Walter Duranty of The New York Times, a Pulitzer winner, publicly dismissed Jones's account, and the Soviet Union denied any famine. The film invents some characters, such as the reporter Ada Brooks, and uses George Orwell as a framing device although there is no evidence the two met. Jones was murdered in 1935 while travelling in Inner Mongolia, then under Japanese influence."
+        ],
+        "es": [
+          "Gareth Jones fue un periodista galés real y antiguo asesor de David Lloyd George. En marzo de 1933 abandonó un viaje oficial y recorrió a pie aldeas de la Ucrania soviética, donde la colectivización forzosa y las requisas de grano habían causado la hambruna hoy conocida como Holodomor; se calcula que allí murieron entre 3,5 y 5 millones de personas en 1932 y 1933. Sus reportajes se publicaron a finales de marzo de 1933.",
+          "Walter Duranty, de The New York Times y ganador del Pulitzer, desmintió públicamente el relato de Jones, y la Unión Soviética negó cualquier hambruna. La película inventa algunos personajes, como la periodista Ada Brooks, y usa a George Orwell como recurso narrativo aunque no hay pruebas de que ambos se conocieran. Jones fue asesinado en 1935 mientras viajaba por la Mongolia Interior, entonces bajo influencia japonesa."
+        ]
+      },
+      "journey": [
+        {
+          "place": "london",
+          "name": {
+            "en": "London",
+            "es": "Londres"
+          },
+          "coordinates": [-0.1275, 51.5072],
+          "date": "1933-02",
+          "kind": "city",
+          "story": {
+            "en": "Fresh from interviewing Hitler, Jones warns Lloyd George's circle about Germany and wonders how Stalin can afford his factories.",
+            "es": "Recién llegado de entrevistar a Hitler, Jones advierte sobre Alemania al círculo de Lloyd George y se pregunta cómo puede Stalin pagar sus fábricas."
+          },
+          "history": {
+            "en": "Jones flew with Hitler during the German election campaign in February 1933, days before the Reichstag fire.",
+            "es": "Jones voló con Hitler durante la campaña electoral alemana en febrero de 1933, días antes del incendio del Reichstag."
+          }
+        },
+        {
+          "place": "moscow",
+          "name": {
+            "en": "Moscow",
+            "es": "Moscú"
+          },
+          "coordinates": [37.6178, 55.7517],
+          "date": "1933-03",
+          "kind": "city",
+          "story": {
+            "en": "Among the foreign press corps, Jones gets parties, cryptic hints and a warning that journalists may not leave Moscow.",
+            "es": "Entre la prensa extranjera, Jones encuentra fiestas, insinuaciones crípticas y la advertencia de que los periodistas no pueden salir de Moscú."
+          },
+          "history": {
+            "en": "Foreign correspondents in Moscow worked under censorship and needed official permission to travel outside the capital.",
+            "es": "Los corresponsales extranjeros en Moscú trabajaban bajo censura y necesitaban permiso oficial para viajar fuera de la capital."
+          }
+        },
+        {
+          "place": "stalino",
+          "name": {
+            "en": "Stalino (Hughesovka), Soviet Ukraine",
+            "es": "Stalino (Yúzovka), Ucrania soviética"
+          },
+          "coordinates": [37.8028, 48.0158],
+          "date": "1933-03",
+          "kind": "journey",
+          "primary": true,
+          "story": {
+            "en": "Slipping off his escorted train, Jones walks through snowbound villages around the Welsh-founded mining town where his mother once lived.",
+            "es": "Tras escaparse de su tren escoltado, Jones recorre aldeas nevadas en torno a la ciudad minera fundada por galeses donde vivió su madre."
+          },
+          "history": {
+            "en": "Founded by Welsh industrialist John Hughes, Hughesovka was renamed in Stalin's honour in 1924; the famine ravaged the surrounding countryside in 1933.",
+            "es": "Fundada por el industrial galés John Hughes, Yúzovka fue rebautizada en honor a Stalin en 1924; la hambruna asoló los campos de alrededor en 1933."
+          }
+        },
+        {
+          "place": "london",
+          "name": {
+            "en": "London",
+            "es": "Londres"
+          },
+          "coordinates": [-0.1275, 51.5072],
+          "date": "1933-04",
+          "kind": "city",
+          "story": {
+            "en": "Back home, Jones tries to tell the truth against denials from Moscow and from the most famous correspondent in the West.",
+            "es": "De vuelta en casa, Jones intenta contar la verdad frente a los desmentidos de Moscú y del corresponsal más famoso de Occidente."
+          },
+          "history": {
+            "en": "Jones announced the famine at a press conference in Berlin on 29 March 1933, and Duranty rebutted him in The New York Times two days later.",
+            "es": "Jones denunció la hambruna en una rueda de prensa en Berlín el 29 de marzo de 1933, y Duranty lo rebatió en The New York Times dos días después."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-wind-rises-2013",
+      "kind": "film",
+      "title": "The Wind Rises",
+      "titleEs": "El viento se levanta",
+      "originalTitle": "風立ちぬ",
+      "year": 2013,
+      "era": "interwar",
+      "period": {
+        "start": "1918",
+        "end": "1935"
+      },
+      "theaters": ["asia", "western-europe"],
+      "tags": ["animation", "biography", "air", "romance"],
+      "gold": false,
+      "directors": ["Hayao Miyazaki"],
+      "countries": ["JP"],
+      "languages": ["ja"],
+      "ids": {
+        "tmdb": 149870,
+        "tmdbType": "movie",
+        "imdb": "tt2013293",
+        "wikidata": "Q888131"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Wind_Rises",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Kaze_Tachinu",
+        "fandom": "https://ghibli.fandom.com/wiki/The_Wind_Rises"
+      },
+      "synopsis": {
+        "en": "A nearsighted boy who dreams of flight grows up to design aircraft for Mitsubishi, chasing beauty in the sky while Japan heads toward war.",
+        "es": "Un niño miope que sueña con volar crece para diseñar aviones para Mitsubishi, persiguiendo la belleza en el cielo mientras Japón se encamina hacia la guerra."
+      },
+      "history": {
+        "en": [
+          "Jiro Horikoshi was a real engineer who joined Mitsubishi in 1927, studied aviation in Germany and the United States, and designed the A5M carrier fighter, first flown in 1935, and later the A6M Zero, the Imperial Navy's main fighter in the Pacific War. Interwar Japan was racing to catch up with Western aviation, buying licences and sending engineers abroad.",
+          "Miyazaki blends Horikoshi's life with Tatsuo Hori's 1937 novel The Wind Has Risen, from which the romance with Nahoko, who has tuberculosis, is taken. The film shows the 1923 Great Kantō earthquake, the Depression and the rise of the secret police, and it drew debate in Japan and abroad over how it treats a man whose planes went to war."
+        ],
+        "es": [
+          "Jiro Horikoshi fue un ingeniero real que entró en Mitsubishi en 1927, estudió aviación en Alemania y Estados Unidos y diseñó el caza embarcado A5M, que voló por primera vez en 1935, y más tarde el A6M Zero, el principal caza de la Armada Imperial en la guerra del Pacífico. El Japón de entreguerras corría para alcanzar a la aviación occidental comprando licencias y enviando ingenieros al extranjero.",
+          "Miyazaki mezcla la vida de Horikoshi con la novela de Tatsuo Hori de 1937, El viento se levanta, de la que toma el romance con Nahoko, enferma de tuberculosis. La película muestra el gran terremoto de Kantō de 1923, la Depresión y el auge de la policía secreta, y generó debate en Japón y en el extranjero sobre cómo retrata a un hombre cuyos aviones fueron a la guerra."
+        ]
+      },
+      "journey": [
+        {
+          "place": "tokyo",
+          "name": {
+            "en": "Tokyo Imperial University",
+            "es": "Universidad Imperial de Tokio"
+          },
+          "coordinates": [139.7623, 35.7134],
+          "date": "1923-09",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "On a train to Tokyo, engineering student Jiro helps a young girl and her injured maid through the chaos of a great earthquake.",
+            "es": "En un tren hacia Tokio, el estudiante de ingeniería Jiro ayuda a una niña y a su criada herida en medio del caos de un gran terremoto."
+          },
+          "history": {
+            "en": "The Great Kantō earthquake of 1 September 1923 and the fires that followed killed more than 100,000 people around Tokyo and Yokohama.",
+            "es": "El gran terremoto de Kantō del 1 de septiembre de 1923 y los incendios posteriores mataron a más de 100 000 personas en Tokio y Yokohama."
+          }
+        },
+        {
+          "place": "nagoya",
+          "name": {
+            "en": "Mitsubishi works, Nagoya",
+            "es": "Fábrica de Mitsubishi, Nagoya"
+          },
+          "coordinates": [136.9064, 35.1814],
+          "date": "1927",
+          "kind": "base",
+          "story": {
+            "en": "Hired by Mitsubishi, Jiro and his friend Honjo design fighters for a country whose aviation lags decades behind the West.",
+            "es": "Contratados por Mitsubishi, Jiro y su amigo Honjo diseñan cazas para un país cuya aviación va décadas por detrás de Occidente."
+          },
+          "history": {
+            "en": "Mitsubishi's Nagoya aircraft works produced many of Japan's military planes, including Horikoshi's designs.",
+            "es": "La fábrica aeronáutica de Mitsubishi en Nagoya produjo muchos de los aviones militares de Japón, incluidos los diseños de Horikoshi."
+          }
+        },
+        {
+          "place": "dessau",
+          "name": {
+            "en": "Junkers works, Dessau",
+            "es": "Fábrica Junkers, Dessau"
+          },
+          "coordinates": [12.2461, 51.8342],
+          "date": "1929",
+          "kind": "base",
+          "story": {
+            "en": "Sent to Germany, Jiro admires Hugo Junkers's giant all-metal aircraft and sees how far behind Japan really is.",
+            "es": "Enviado a Alemania, Jiro admira los enormes aviones metálicos de Hugo Junkers y comprueba cuánto se ha quedado atrás Japón."
+          },
+          "history": {
+            "en": "Junkers built the huge G 38 at Dessau in 1929, and Mitsubishi later produced a licensed bomber version in Japan.",
+            "es": "Junkers construyó el enorme G 38 en Dessau en 1929, y Mitsubishi fabricó después en Japón una versión de bombardero bajo licencia."
+          }
+        },
+        {
+          "place": "karuizawa",
+          "name": {
+            "en": "Karuizawa",
+            "es": "Karuizawa"
+          },
+          "coordinates": [138.597, 36.3484],
+          "date": "1933",
+          "kind": "home",
+          "story": {
+            "en": "At a mountain resort, Jiro meets Nahoko again, and a paper plane starts a love story while a German guest warns of coming war.",
+            "es": "En un balneario de montaña, Jiro vuelve a encontrarse con Nahoko, y un avión de papel inicia una historia de amor mientras un huésped alemán advierte de la guerra que viene."
+          },
+          "history": {
+            "en": "Karuizawa had been a fashionable summer retreat for foreign residents and Japanese elites since the late nineteenth century.",
+            "es": "Karuizawa era desde finales del siglo XIX un refugio de verano de moda para residentes extranjeros y élites japonesas."
+          }
+        },
+        {
+          "place": "nagoya",
+          "name": {
+            "en": "Nagoya",
+            "es": "Nagoya"
+          },
+          "coordinates": [136.9064, 35.1814],
+          "date": "1935",
+          "kind": "base",
+          "story": {
+            "en": "Back in Nagoya, Jiro pours everything into a new fighter while Nahoko's illness grows worse.",
+            "es": "De vuelta en Nagoya, Jiro se entrega por completo a un nuevo caza mientras la enfermedad de Nahoko empeora."
+          },
+          "history": {
+            "en": "Horikoshi's Mitsubishi A5M first flew on 4 February 1935, the direct forerunner of the Zero.",
+            "es": "El Mitsubishi A5M de Horikoshi voló por primera vez el 4 de febrero de 1935, antecesor directo del Zero."
+          }
+        }
+      ]
+    },
+    {
+      "id": "a-special-day-1977",
+      "kind": "film",
+      "title": "A Special Day",
+      "titleEs": "Un día muy particular",
+      "originalTitle": "Una giornata particolare",
+      "year": 1977,
+      "era": "interwar",
+      "period": {
+        "start": "1938-05",
+        "end": "1938-05"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["politics", "home-front", "romance"],
+      "gold": false,
+      "directors": ["Ettore Scola"],
+      "countries": ["IT", "CA"],
+      "languages": ["it"],
+      "ids": {
+        "tmdb": 42229,
+        "tmdbType": "movie",
+        "imdb": "tt0076085",
+        "wikidata": "Q249782"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/A_Special_Day",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Una_giornata_particolare"
+      },
+      "synopsis": {
+        "en": "On the day Hitler parades through Rome, an exhausted housewife and the lonely neighbour across the courtyard are left alone in their empty apartment block.",
+        "es": "El día en que Hitler desfila por Roma, un ama de casa agotada y el solitario vecino del otro lado del patio se quedan solos en su edificio vacío."
+      },
+      "history": {
+        "en": [
+          "Hitler's state visit to Italy in May 1938 was staged by Mussolini as a triumph of the new Rome-Berlin Axis, with parades and military reviews that emptied whole neighbourhoods. That autumn the regime passed its racial laws against Jews, and fascist Italy moved steadily closer to war at Germany's side.",
+          "Fascist Italy also persecuted gay men: from 1938 many were sent into internal exile, the confino, some on the island of San Domino in the Tremiti archipelago. Ettore Scola's film, with Sophia Loren and Marcello Mastroianni, was nominated for the Academy Awards for Best Foreign Language Film and Best Actor, and won the Golden Globe for Best Foreign Film."
+        ],
+        "es": [
+          "La visita de Estado de Hitler a Italia en mayo de 1938 fue montada por Mussolini como un triunfo del nuevo Eje Roma-Berlín, con desfiles y revistas militares que vaciaron barrios enteros. Ese otoño el régimen aprobó sus leyes raciales contra los judíos, y la Italia fascista se acercó cada vez más a la guerra al lado de Alemania.",
+          "La Italia fascista también persiguió a los hombres homosexuales: desde 1938 muchos fueron enviados al destierro interno, el confino, algunos a la isla de San Domino, en el archipiélago de las Tremiti. La película de Ettore Scola, con Sophia Loren y Marcello Mastroianni, fue nominada a los Óscar a mejor película de habla no inglesa y mejor actor, y ganó el Globo de Oro a la mejor película extranjera."
+        ]
+      },
+      "journey": [
+        {
+          "place": "rome",
+          "name": {
+            "en": "Palazzo Federici, Rome",
+            "es": "Palazzo Federici, Roma"
+          },
+          "coordinates": [12.5205, 41.9193],
+          "date": "1938-05",
+          "kind": "home",
+          "primary": true,
+          "story": {
+            "en": "While her husband and six children march off to cheer Hitler, Antonietta chases an escaped bird into the flat of Gabriele, a radio announcer fired by the regime.",
+            "es": "Mientras su esposo y sus seis hijos salen a aclamar a Hitler, Antonietta persigue a un pájaro escapado hasta el piso de Gabriele, un locutor de radio despedido por el régimen."
+          },
+          "history": {
+            "en": "Built in the 1930s, the huge Palazzo Federici on Viale XXI Aprile is where the film was shot and set.",
+            "es": "Construido en los años treinta, el enorme Palazzo Federici del Viale XXI Aprile es donde se rodó y ambientó la película."
+          }
+        }
+      ]
+    },
+    {
+      "id": "peaky-blinders-2013",
+      "kind": "series",
+      "title": "Peaky Blinders",
+      "titleEs": "Peaky Blinders",
+      "year": 2013,
+      "endYear": 2022,
+      "seasons": 6,
+      "era": "interwar",
+      "period": {
+        "start": "1919",
+        "end": "1934"
+      },
+      "theaters": ["western-europe", "americas"],
+      "tags": ["home-front", "politics"],
+      "gold": false,
+      "directors": ["Steven Knight"],
+      "countries": ["GB"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 60574,
+        "tmdbType": "tv",
+        "imdb": "tt2442560",
+        "wikidata": "Q14944179"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Peaky_Blinders"
+      },
+      "synopsis": {
+        "en": "Home from the trenches, Tommy Shelby turns his family's Birmingham street gang into a business empire, from racecourse rackets to Parliament and the dark politics of the 1930s.",
+        "es": "De regreso de las trincheras, Tommy Shelby convierte la pandilla callejera de su familia en Birmingham en un imperio, de los negocios en los hipódromos al Parlamento y la política oscura de los años treinta."
+      },
+      "history": {
+        "en": [
+          "The Peaky Blinders were real Birmingham street gangs of the late nineteenth century, largely gone by the time the series begins in 1919. Steven Knight moves them into the interwar years and mixes invented characters with real figures such as the racecourse gangsters Billy Kimber and Darby Sabini, whose Birmingham and London mobs fought for control of on-course betting in the racecourse wars of 1921-1922.",
+          "Later seasons follow the shell shock of veterans, the General Strike of 1926, the Wall Street Crash of 1929 and the rise of Oswald Mosley, a Labour MP who founded the British Union of Fascists in 1932. The series takes liberties with chronology, for example showing Churchill as Home Secretary in 1919 and Mosley as a fascist leader in 1929."
+        ],
+        "es": [
+          "Los Peaky Blinders fueron pandillas callejeras reales de Birmingham a finales del siglo XIX, casi desaparecidas cuando empieza la serie en 1919. Steven Knight las traslada a la entreguerras y mezcla personajes inventados con figuras reales como los mafiosos de los hipódromos Billy Kimber y Darby Sabini, cuyas bandas de Birmingham y Londres pelearon por el control de las apuestas en las guerras de los hipódromos de 1921 y 1922.",
+          "Las temporadas siguientes muestran el trauma de los veteranos, la huelga general de 1926, el crac de Wall Street de 1929 y el ascenso de Oswald Mosley, un diputado laborista que fundó la Unión Británica de Fascistas en 1932. La serie se toma libertades con la cronología, por ejemplo al mostrar a Churchill como ministro del Interior en 1919 y a Mosley como líder fascista en 1929."
+        ]
+      },
+      "journey": [
+        {
+          "place": "birmingham",
+          "name": {
+            "en": "Small Heath, Birmingham",
+            "es": "Small Heath, en Birmingham"
+          },
+          "coordinates": [-1.8542, 52.4628],
+          "date": "1919",
+          "kind": "home",
+          "primary": true,
+          "story": {
+            "en": "Back from France, Thomas Shelby runs the family's betting shop and gang from the smoky streets of Small Heath.",
+            "es": "De vuelta de Francia, Thomas Shelby dirige la casa de apuestas y la pandilla de la familia desde las calles humeantes de Small Heath."
+          },
+          "history": {
+            "en": "Small Heath was a crowded industrial district of Birmingham, home to the BSA arms factory and to the original Peaky Blinders.",
+            "es": "Small Heath era un barrio industrial abarrotado de Birmingham, sede de la fábrica de armas BSA y cuna de los Peaky Blinders originales."
+          }
+        },
+        {
+          "place": "worcester",
+          "name": {
+            "en": "Worcester Racecourse",
+            "es": "Hipódromo de Worcester"
+          },
+          "coordinates": [-2.2331, 52.1992],
+          "date": "1919-12",
+          "kind": "city",
+          "story": {
+            "en": "Tommy's plan to take over Billy Kimber's betting pitches comes to a head on race day.",
+            "es": "El plan de Tommy para apoderarse de los puestos de apuestas de Billy Kimber llega a su punto crítico el día de la carrera."
+          },
+          "history": {
+            "en": "After the war Billy Kimber's Birmingham gang controlled protection rackets on bookmakers at many English racecourses.",
+            "es": "Después de la guerra, la banda de Billy Kimber en Birmingham controlaba la extorsión a los corredores de apuestas en muchos hipódromos ingleses."
+          }
+        },
+        {
+          "place": "london",
+          "name": {
+            "en": "Camden Town, London",
+            "es": "Camden Town, Londres"
+          },
+          "coordinates": [-0.1433, 51.541],
+          "date": "1921",
+          "kind": "city",
+          "story": {
+            "en": "Expanding to London, the Shelbys collide with Sabini's Italian gang and strike a risky deal with Alfie Solomons in Camden Town.",
+            "es": "Al expandirse a Londres, los Shelby chocan con la banda italiana de Sabini y cierran un trato arriesgado con Alfie Solomons en Camden Town."
+          },
+          "history": {
+            "en": "Darby Sabini's gang fought Kimber's Birmingham men for London's racecourse rackets in 1921-1922.",
+            "es": "La banda de Darby Sabini se enfrentó a los hombres de Kimber por el control de los hipódromos de Londres en 1921 y 1922."
+          }
+        },
+        {
+          "place": "epsom",
+          "name": {
+            "en": "Epsom Downs Racecourse",
+            "es": "Hipódromo de Epsom Downs"
+          },
+          "coordinates": [-0.2556, 51.3097],
+          "date": "1922-05",
+          "kind": "city",
+          "story": {
+            "en": "Derby Day brings a high-stakes gamble in which Tommy has bet everything, including his life.",
+            "es": "El día del Derby llega una apuesta de alto riesgo en la que Tommy lo ha jugado todo, incluso su vida."
+          },
+          "history": {
+            "en": "The Epsom Derby drew enormous crowds and was a prime target for the racecourse gangs of the early 1920s.",
+            "es": "El Derby de Epsom atraía multitudes enormes y era un objetivo principal de las bandas de los hipódromos a comienzos de los años veinte."
+          }
+        },
+        {
+          "place": "london",
+          "name": {
+            "en": "Palace of Westminster, London",
+            "es": "Palacio de Westminster, Londres"
+          },
+          "coordinates": [-0.1242, 51.4994],
+          "date": "1929-10",
+          "kind": "city",
+          "story": {
+            "en": "Now a Member of Parliament, Tommy tries to turn the Wall Street Crash and Westminster politics to his advantage.",
+            "es": "Ya diputado, Tommy intenta aprovechar el crac de Wall Street y la política de Westminster en su favor."
+          },
+          "history": {
+            "en": "The Wall Street Crash of October 1929 spread the Great Depression to Britain, where unemployment reached about 2.5 million by the end of 1930.",
+            "es": "El crac de Wall Street de octubre de 1929 extendió la Gran Depresión a Gran Bretaña, donde el desempleo llegó a unos 2,5 millones a finales de 1930."
+          }
+        },
+        {
+          "place": "birmingham",
+          "name": {
+            "en": "Bingley Hall, Birmingham",
+            "es": "Bingley Hall, en Birmingham"
+          },
+          "coordinates": [-1.9108, 52.479],
+          "date": "1929-12",
+          "kind": "city",
+          "story": {
+            "en": "A rally for Oswald Mosley in Birmingham becomes the stage for a plan that can go terribly wrong.",
+            "es": "Un mitin de Oswald Mosley en Birmingham se convierte en el escenario de un plan que puede salir terriblemente mal."
+          },
+          "history": {
+            "en": "Mosley was still a Labour minister in 1929; he left the party in 1931 and founded the British Union of Fascists in 1932.",
+            "es": "Mosley todavía era ministro laborista en 1929; dejó el partido en 1931 y fundó la Unión Británica de Fascistas en 1932."
+          }
+        },
+        {
+          "place": "miquelon",
+          "name": {
+            "en": "Miquelon Island",
+            "es": "Isla Miquelón"
+          },
+          "coordinates": [-56.3214, 47.0443],
+          "date": "1933-12",
+          "kind": "journey",
+          "story": {
+            "en": "As American Prohibition ends, Tommy travels to a remote French island off Canada to secure his place in the liquor trade.",
+            "es": "Cuando termina la Ley Seca en Estados Unidos, Tommy viaja a una remota isla francesa frente a Canadá para asegurar su lugar en el negocio del alcohol."
+          },
+          "history": {
+            "en": "Saint-Pierre and Miquelon was a major hub for smuggling alcohol into the United States during Prohibition.",
+            "es": "San Pedro y Miquelón fue un gran centro de contrabando de alcohol hacia Estados Unidos durante la Ley Seca."
+          }
+        }
+      ]
+    },
+    {
+      "id": "babylon-berlin-2017",
+      "kind": "series",
+      "title": "Babylon Berlin",
+      "titleEs": "Babylon Berlin",
+      "year": 2017,
+      "seasons": 5,
+      "era": "interwar",
+      "period": {
+        "start": "1929",
+        "end": "1933"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["politics", "espionage"],
+      "gold": false,
+      "directors": ["Tom Tykwer", "Achim von Borries", "Henk Handloegten"],
+      "countries": ["DE"],
+      "languages": ["de"],
+      "ids": {
+        "tmdb": 66980,
+        "tmdbType": "tv",
+        "imdb": "tt4378376",
+        "wikidata": "Q22998408"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Babylon_Berlin",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Babylon_Berlin"
+      },
+      "synopsis": {
+        "en": "A traumatised police inspector from Cologne and an ambitious young clerk investigate crimes that lead into the conspiracies tearing apart Weimar Berlin.",
+        "es": "Un inspector de policía traumatizado venido de Colonia y una joven y ambiciosa auxiliar investigan crímenes que conducen a las conspiraciones que desgarran el Berlín de Weimar."
+      },
+      "history": {
+        "en": [
+          "Based on Volker Kutscher's Gereon Rath novels, the series begins in Berlin in 1929, a city of four million with a thriving nightlife, deep poverty and violent street politics. Communists, Nazis and nationalist officers of the secret 'Black Reichswehr' all plotted against the fragile republic, while the Wall Street Crash of October 1929 plunged Germany into mass unemployment.",
+          "The series mixes fiction with real events: the 'Blutmai' police crackdown on Communist May Day marchers in 1929, the secret rearmament that Germany carried out in the Soviet Union, the Nazi party's internal struggles and its rise to power in 1933. Its famous Moka Efti nightclub was a real coffee house and dance palace on Friedrichstraße."
+        ],
+        "es": [
+          "Basada en las novelas de Gereon Rath de Volker Kutscher, la serie comienza en el Berlín de 1929, una ciudad de cuatro millones de habitantes con una vida nocturna vibrante, pobreza profunda y una política callejera violenta. Comunistas, nazis y oficiales nacionalistas de la secreta «Reichswehr Negra» conspiraban contra la frágil república, mientras el crac de Wall Street de octubre de 1929 hundía a Alemania en el desempleo masivo.",
+          "La serie mezcla ficción con hechos reales: la represión policial del «Blutmai» contra los manifestantes comunistas del Primero de Mayo de 1929, el rearme secreto que Alemania llevó a cabo en la Unión Soviética, las luchas internas del partido nazi y su llegada al poder en 1933. Su famoso club Moka Efti fue un café y salón de baile real en la Friedrichstraße."
+        ]
+      },
+      "journey": [
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Police headquarters, Alexanderplatz",
+            "es": "Jefatura de policía, Alexanderplatz"
+          },
+          "coordinates": [13.4153, 52.5197],
+          "date": "1929-04",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "Inspector Gereon Rath arrives from Cologne on a secret mission and meets Charlotte Ritter, a clerk who dreams of becoming a detective.",
+            "es": "El inspector Gereon Rath llega de Colonia con una misión secreta y conoce a Charlotte Ritter, una auxiliar que sueña con ser detective."
+          },
+          "history": {
+            "en": "The Berlin police headquarters on Alexanderplatz, nicknamed the 'Red Castle' for its brick walls, was one of the largest buildings in the city.",
+            "es": "La jefatura de policía de Berlín en Alexanderplatz, apodada el «Castillo Rojo» por sus muros de ladrillo, era uno de los edificios más grandes de la ciudad."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Moka Efti, Friedrichstraße",
+            "es": "Club Moka Efti, Friedrichstraße"
+          },
+          "coordinates": [13.3902, 52.5105],
+          "date": "1929-04",
+          "kind": "city",
+          "story": {
+            "en": "In the glittering Moka Efti, dancers, gangsters and conspirators share the same floor, and Charlotte earns extra money after hours.",
+            "es": "En el deslumbrante Moka Efti, bailarines, mafiosos y conspiradores comparten la misma pista, y Charlotte gana dinero extra fuera de horario."
+          },
+          "history": {
+            "en": "The real Moka Efti on Friedrichstraße was one of the largest coffee houses and entertainment venues of Weimar Berlin.",
+            "es": "El verdadero Moka Efti de la Friedrichstraße fue uno de los mayores cafés y locales de entretenimiento del Berlín de Weimar."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Wedding, Berlin",
+            "es": "Wedding, Berlín"
+          },
+          "coordinates": [13.3425, 52.55],
+          "date": "1929-05",
+          "kind": "city",
+          "story": {
+            "en": "Charlotte and Gereon are caught up in the police crackdown on banned Communist May Day marches in the working-class districts.",
+            "es": "Charlotte y Gereon quedan atrapados en la represión policial de las marchas comunistas prohibidas del Primero de Mayo en los barrios obreros."
+          },
+          "history": {
+            "en": "During 'Blutmai', 1-3 May 1929, Berlin police killed more than thirty people, many in Wedding and Neukölln.",
+            "es": "Durante el «Blutmai», del 1 al 3 de mayo de 1929, la policía de Berlín mató a más de treinta personas, muchas en Wedding y Neukölln."
+          }
+        }
+      ]
+    }
+  ]
+}

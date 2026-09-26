@@ -1,0 +1,24 @@
+{
+  "filmsPage": {
+    "eyebrow": "{n} films & series · 1914–1945",
+    "goldCount": "{n} essentials",
+    "previous": "Previous titles",
+    "next": "Next titles",
+    "results": "Showing {n} of {total}",
+    "era": "Era",
+    "kind": "Type",
+    "theater": "Theater of war",
+    "tags": "Themes",
+    "moreFilters": "More filters",
+    "exploreGlobe": "Explore this era on the globe",
+    "otherEras": "The other eras",
+    "stats": {
+      "label": "This era in numbers",
+      "titles": "Titles",
+      "films": "Films",
+      "series": "Series",
+      "gold": "Must-watch",
+      "places": "Places"
+    }
+  }
+}

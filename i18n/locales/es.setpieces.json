@@ -1,0 +1,229 @@
+{
+  "setpieces": {
+    "open": "Eventos especiales",
+    "title": "Eventos especiales",
+    "intro": "Siete momentos decisivos, reconstruidos en 3D sobre el globo. La escala y el tiempo están comprimidos.",
+    "watch": "Ver",
+    "close": "Cerrar",
+    "play": "Reproducir",
+    "pause": "Pausar",
+    "replay": "Repetir",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "loading": "Cargando",
+    "progress": "Progreso de la escena",
+    "keys": "Espacio pausa, Esc cierra",
+    "keysStill": "Flechas avanzan, Esc cierra",
+    "scenes": {
+      "messines": {
+        "title": "Las minas de Messines",
+        "place": "Cresta de Messines, Flandes",
+        "teaser": "Diecinueve minas estallan bajo la línea alemana en segundos.",
+        "beats": [
+          {
+            "time": "Antes del alba",
+            "text": "Durante meses, zapadores británicos, canadienses y australianos excavaron bajo la cresta de Messines, en poder alemán."
+          },
+          {
+            "time": "Noche",
+            "text": "Diecinueve minas, cargadas con cientos de toneladas de amonal, esperan bajo la primera línea alemana."
+          },
+          {
+            "time": "03:10",
+            "text": "Las minas estallan en unos 20 segundos, una tras otra."
+          },
+          {
+            "time": "03:10",
+            "text": "Enormes cráteres abren la cresta; se dice que la explosión se oyó hasta en Londres."
+          },
+          {
+            "time": "Amanecer",
+            "text": "Tras una cortina de artillería, infantería británica, irlandesa, australiana y neozelandesa toma la cresta."
+          }
+        ]
+      },
+      "dunkirk": {
+        "title": "Evacuación de Dunkerque",
+        "place": "Dunkerque, Francia",
+        "teaser": "Destructores y los Little Ships devuelven un ejército a casa cruzando el Canal.",
+        "beats": [
+          {
+            "time": "26 de mayo",
+            "text": "Cercadas en Dunkerque, tropas británicas y francesas esperan en las playas y a lo largo del espigón del puerto."
+          },
+          {
+            "time": "Día y noche",
+            "text": "Destructores, ferris y transportes van y vienen por el Canal hacia Dover y otros puertos ingleses."
+          },
+          {
+            "time": "En las playas",
+            "text": "Cientos de Little Ships llevan soldados desde la orilla hasta los barcos grandes fondeados mar adentro."
+          },
+          {
+            "time": "Sobre la ciudad",
+            "text": "Los bombardeos alemanes incendiaron los tanques de petróleo del puerto; el humo negro cubre la costa."
+          },
+          {
+            "time": "Desde el aire",
+            "text": "Los Stukas se lanzan sobre los barcos. Los ataques aéreos hunden seis destructores británicos y tres franceses."
+          },
+          {
+            "time": "4 de junio",
+            "text": "Al terminar, unos 338 000 soldados han sido puestos a salvo."
+          }
+        ]
+      },
+      "pearl-harbor": {
+        "title": "Ataque a Pearl Harbor",
+        "place": "Oahu, Hawái",
+        "teaser": "Seis portaaviones japoneses golpean a la Flota del Pacífico fondeada.",
+        "beats": [
+          {
+            "time": "Amanecer",
+            "text": "Seis portaaviones japoneses al norte de Oahu lanzan sus aviones."
+          },
+          {
+            "time": "Primera hora",
+            "text": "Unos 350 aviones, en dos oleadas, vuelan hacia el sur, rumbo a Oahu."
+          },
+          {
+            "time": "07:48",
+            "text": "Empieza el ataque. Los torpederos entran a ras del agua contra la Fila de Acorazados."
+          },
+          {
+            "time": "Minutos después",
+            "text": "Las bombas alcanzan la flota; estalla el pañol de proa del USS Arizona."
+          },
+          {
+            "time": "Mañana",
+            "text": "Los ocho acorazados del puerto quedan dañados y cuatro se hunden."
+          },
+          {
+            "time": "7 de diciembre",
+            "text": "Mueren unos 2400 estadounidenses. Al día siguiente, Estados Unidos declara la guerra a Japón."
+          }
+        ]
+      },
+      "midway": {
+        "title": "Batalla de Midway",
+        "place": "Atolón de Midway, Pacífico",
+        "teaser": "En minutos, los bombarderos en picado de EE. UU. cambian la guerra en el Pacífico.",
+        "beats": [
+          {
+            "time": "4 de junio",
+            "text": "Cuatro portaaviones japoneses navegan al noroeste de Midway; el Enterprise, el Hornet y el Yorktown esperan al noreste."
+          },
+          {
+            "time": "Mañana",
+            "text": "Los torpederos estadounidenses atacan primero, a ras del agua, y sufren grandes pérdidas."
+          },
+          {
+            "time": "Hacia las 10:20",
+            "text": "Muy alto, los bombarderos en picado SBD Dauntless del Enterprise y el Yorktown encuentran a los portaaviones japoneses."
+          },
+          {
+            "time": "Hacia las 10:25",
+            "text": "En pocos minutos, el Akagi, el Kaga y el Soryu son alcanzados y arden."
+          },
+          {
+            "time": "Tarde",
+            "text": "Aviones del Hiryu dejan fuera de combate al Yorktown; esa misma tarde, el Hiryu también es alcanzado."
+          },
+          {
+            "time": "Desenlace",
+            "text": "Se pierden los cuatro portaaviones de flota japoneses. Midway se considera un punto de inflexión de la guerra del Pacífico."
+          }
+        ]
+      },
+      "d-day": {
+        "title": "Día D, el desembarco de Normandía",
+        "place": "Normandía, Francia",
+        "teaser": "La mayor invasión por mar de la historia llega a cinco playas.",
+        "beats": [
+          {
+            "time": "Pasada la medianoche",
+            "text": "Unos 24 000 paracaidistas estadounidenses, británicos y canadienses caen tras las playas."
+          },
+          {
+            "time": "Cruce nocturno",
+            "text": "La mayor invasión por mar de la historia: unos 6900 buques cruzan el Canal."
+          },
+          {
+            "time": "Amanecer",
+            "text": "Acorazados, cruceros y destructores bombardean las defensas costeras alemanas."
+          },
+          {
+            "time": "Desde las 06:30",
+            "text": "Las lanchas de desembarco llegan a cinco playas: Utah, Omaha, Gold, Juno y Sword."
+          },
+          {
+            "time": "6 de junio",
+            "text": "Omaha es la más sangrienta. Ese día desembarcan por mar y aire unos 156 000 soldados aliados."
+          }
+        ]
+      },
+      "hiroshima": {
+        "title": "Hiroshima",
+        "place": "Hiroshima, Japón",
+        "teaser": "La primera bomba atómica usada en una guerra.",
+        "beats": [
+          {
+            "time": "6 de agosto",
+            "text": "Una mañana despejada sobre Hiroshima, ciudad levantada en el delta del río Ōta."
+          },
+          {
+            "time": "08:09",
+            "text": "El B-29 Enola Gay inicia su pasada de bombardeo a unos 9400 m, con dos aviones de acompañamiento."
+          },
+          {
+            "time": "08:15",
+            "text": "Little Boy es lanzada. Cae durante unos 44 segundos."
+          },
+          {
+            "time": "08:15",
+            "text": "Detona a unos 600 m sobre la ciudad, con la fuerza de unos 15 kilotones de TNT."
+          },
+          {
+            "time": "Minutos después",
+            "text": "La onda expansiva y el calor destruyen gran parte de la ciudad. Los incendios se extienden mientras sube la nube."
+          },
+          {
+            "time": "1945",
+            "text": "Unas 70 000 a 80 000 personas mueren en la explosión; a finales de 1945 la cifra llega a entre 90 000 y 166 000."
+          }
+        ]
+      },
+      "nagasaki": {
+        "title": "Nagasaki",
+        "place": "Nagasaki, Japón",
+        "teaser": "Tres días después, una segunda bomba atómica.",
+        "beats": [
+          {
+            "time": "9 de agosto",
+            "text": "Kokura, el objetivo principal, está cubierta por nubes y humo. El B-29 Bockscar se desvía hacia Nagasaki."
+          },
+          {
+            "time": "11:01",
+            "text": "Fat Man es lanzada sobre el valle de Urakami, a casi 3 km del punto previsto."
+          },
+          {
+            "time": "11:02",
+            "text": "Detona a unos 500 m sobre el valle, con la fuerza de unos 21 kilotones de TNT."
+          },
+          {
+            "time": "11:02",
+            "text": "Las colinas encierran la explosión en el valle de Urakami; buena parte de la ciudad queda protegida."
+          },
+          {
+            "time": "Minutos después",
+            "text": "La nube sube sobre el valle en llamas."
+          },
+          {
+            "time": "1945",
+            "text": "Unas 60 000 a 80 000 personas mueren antes de terminar 1945."
+          }
+        ]
+      }
+    }
+  }
+}

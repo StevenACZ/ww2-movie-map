@@ -1,0 +1,303 @@
+{
+  "site": {
+    "name": "WW2 Film Map",
+    "tagline": "Every war film, on the ground where it happened",
+    "description": "Explore {count} World War II, World War I and interwar films and series on an interactive 3D globe: see where each story happened, follow its journey across the map, learn the real history and find where to watch it."
+  },
+  "nav": {
+    "map": "Map",
+    "films": "Films",
+    "timeline": "Timeline",
+    "places": "Places",
+    "about": "About",
+    "skip": "Skip to content",
+    "language": "Language",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "sound": {
+    "on": "Sound on",
+    "off": "Sound off"
+  },
+  "era": {
+    "all": "All eras",
+    "ww1": "World War I",
+    "interwar": "Interwar",
+    "ww2": "World War II",
+    "short": {
+      "all": "All",
+      "ww1": "WWI",
+      "interwar": "Interwar",
+      "ww2": "WWII"
+    },
+    "years": {
+      "ww1": "1914–1918",
+      "interwar": "1918–1939",
+      "ww2": "1939–1945"
+    }
+  },
+  "theater": {
+    "western-europe": "Western Europe",
+    "eastern-europe": "Eastern Front",
+    "mediterranean": "Mediterranean & Africa",
+    "atlantic": "Atlantic & Arctic",
+    "pacific": "Pacific",
+    "asia": "China & Southeast Asia",
+    "americas": "The Americas"
+  },
+  "tag": {
+    "combat": "Combat",
+    "holocaust": "Holocaust",
+    "resistance": "Resistance",
+    "espionage": "Espionage",
+    "air": "Air war",
+    "naval": "Naval",
+    "home-front": "Home front",
+    "prisoners": "Prisoners of war",
+    "civil-war": "Civil war",
+    "politics": "Politics",
+    "biography": "Biography",
+    "true-story": "True story",
+    "animation": "Animation",
+    "documentary": "Documentary",
+    "comedy": "Comedy",
+    "romance": "Romance"
+  },
+  "kind": {
+    "film": "Film",
+    "series": "Series",
+    "films": "Films",
+    "seriesPlural": "Series",
+    "all": "Films & series"
+  },
+  "stopKind": {
+    "battle": "Battle",
+    "city": "City",
+    "front": "Front line",
+    "camp": "Camp",
+    "sea": "At sea",
+    "landing": "Landing",
+    "base": "Base",
+    "home": "Home",
+    "journey": "On the road"
+  },
+  "status": {
+    "neutral": "Neutral",
+    "war": "At war",
+    "entente": "Entente",
+    "central": "Central Powers",
+    "allies": "Allies",
+    "axis": "Axis",
+    "soviet": "Soviet Union",
+    "occupied-central": "Occupied by the Central Powers",
+    "occupied-axis": "Occupied by the Axis",
+    "occupied-allies": "Occupied by the Allies",
+    "occupied-soviet": "Occupied by the USSR",
+    "civil-war": "Civil war",
+    "occupied": "Occupied"
+  },
+  "gold": {
+    "label": "Must-watch",
+    "only": "Must-watch only",
+    "why": "Why it's essential"
+  },
+  "map": {
+    "title": "World War II films on a 3D globe",
+    "h1": "WW2 Film Map",
+    "intro": "Spin the globe, scrub through time from 1914 to 1945 and open any film to follow its story across the places where it really happened.",
+    "search": "Search films, series or places",
+    "results": "{n} titles",
+    "noResults": "No titles match these filters.",
+    "clear": "Clear filters",
+    "filters": "Filters",
+    "list": "Titles",
+    "loading": "Loading the globe…",
+    "webglFallback": "Your browser can't show the 3D globe, but every film is listed below.",
+    "legend": "Legend",
+    "colorBy": "Color countries by",
+    "bySide": "Sides",
+    "byWar": "At war",
+    "layers": "Layers",
+    "units": "Units",
+    "fronts": "Front lines",
+    "events": "Events",
+    "play": "Play history",
+    "pause": "Pause",
+    "speed": "Speed",
+    "dateFilter": "Showing titles around {date}",
+    "showAll": "Show all",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "resetView": "Reset view",
+    "cluster": "{n} titles here",
+    "openTitle": "Open {title}",
+    "timeline": "Date",
+    "hint": "Drag to rotate · scroll or pinch to zoom · drag the date to travel in time",
+    "warBorder": "Border between warring sides",
+    "layer": {
+      "units": "Tanks, ships and planes",
+      "fronts": "Front lines",
+      "events": "Historical events",
+      "labels": "Country names"
+    },
+    "clusterTitle": "{n} titles in this area",
+    "dispatch": "Dispatch",
+    "journeyStop": "Stop {n} of {total}",
+    "tourStop": "Next stop",
+    "inProgress": "In progress"
+  },
+  "title": {
+    "journey": "Where it happened",
+    "journeyIntro": "Follow the story across {n} places.",
+    "playJourney": "Play the journey",
+    "stop": "Stop {n}",
+    "onScreen": "In the story",
+    "history": "What really happened",
+    "context": "The history behind it",
+    "watch": "Where to watch",
+    "trailer": "Watch trailer",
+    "details": "Full details",
+    "directedBy": "Directed by",
+    "createdBy": "Created by",
+    "runtime": "{n} min",
+    "seasons": "{n} seasons | {n} season | {n} seasons",
+    "released": "Released",
+    "setIn": "Set in",
+    "related": "More films like this",
+    "links": "Learn more",
+    "wikipedia": "Wikipedia",
+    "imdb": "IMDb",
+    "tmdb": "TMDB",
+    "fandom": "Fan wiki",
+    "backToMap": "See it on the globe",
+    "cast": "Starring",
+    "genres": "Genres",
+    "languages": "Languages",
+    "countries": "Countries",
+    "rating": "TMDB rating",
+    "places": "Places in this story",
+    "period": "Period"
+  },
+  "watch": {
+    "region": "Your region",
+    "stream": "Stream",
+    "free": "Free",
+    "ads": "With ads",
+    "rent": "Rent",
+    "buy": "Buy",
+    "none": "Not available to stream in {region} right now.",
+    "search": "Search on JustWatch",
+    "attribution": "Streaming data by JustWatch via TMDB",
+    "loading": "Checking streaming services…"
+  },
+  "trailer": {
+    "play": "Play trailer",
+    "close": "Close trailer",
+    "unavailable": "Trailer not available"
+  },
+  "films": {
+    "title": "World War II films and series",
+    "h1": "The collection",
+    "intro": "{count} films and series about World War II, World War I and the years between them, each mapped to the places where it happened.",
+    "gold": "The must-watch essentials",
+    "goldIntro": "The films every war-cinema fan should see at least once.",
+    "sort": "Sort",
+    "sortStory": "Historical date",
+    "sortYear": "Release year",
+    "sortRating": "Rating",
+    "sortTitle": "Title",
+    "all": "All titles",
+    "count": "{n} titles"
+  },
+  "era_page": {
+    "ww1": {
+      "title": "Best World War I movies and series",
+      "h1": "World War I on screen",
+      "intro": "From the trenches of the Somme to the deserts of Arabia: the films that bring the Great War of 1914–1918 to life, mapped to where they happened."
+    },
+    "interwar": {
+      "title": "Films about the interwar years (1918–1939)",
+      "h1": "Between the wars",
+      "intro": "Revolutions, civil wars and the rise of fascism: the films that tell how the world walked from one world war into the next."
+    },
+    "ww2": {
+      "title": "Best World War II movies and series",
+      "h1": "World War II on screen",
+      "intro": "From Dunkirk to Iwo Jima: the essential films and series about the Second World War, mapped to the places where their stories unfold."
+    }
+  },
+  "places": {
+    "title": "World War II places in film",
+    "h1": "Places",
+    "intro": "The cities, beaches, camps and battlefields that appear in more than one war film. Pick a place to see every story set there.",
+    "count": "{n} titles",
+    "setHere": "Films and series set in {place}",
+    "whatHappened": "What happened here",
+    "nearby": "Nearby places",
+    "events": "Events at {place}",
+    "here": "Here in the story"
+  },
+  "timeline": {
+    "title": "World War II timeline 1914–1945",
+    "h1": "Timeline 1914–1945",
+    "intro": "Thirty-one years that changed the world, from the shot in Sarajevo to the surrender in Tokyo Bay, with the films that tell each chapter.",
+    "chapter": "Chapter {n}",
+    "filmsOfThisTime": "Films set in this moment",
+    "readMore": "Read more on Wikipedia",
+    "jump": "Jump to",
+    "category": {
+      "war": "War",
+      "battle": "Battle",
+      "politics": "Politics",
+      "diplomacy": "Diplomacy",
+      "holocaust": "Holocaust",
+      "home-front": "Home front",
+      "technology": "Technology",
+      "naval": "Naval",
+      "air": "Air"
+    }
+  },
+  "about": {
+    "title": "About the project",
+    "h1": "About",
+    "intro": "WW2 Film Map started as a personal list of the war films I had watched. It grew into a 3D atlas of war cinema: pick a film, see where it happened, learn what really happened there, and find where to watch it.",
+    "how": "How to use it",
+    "step1": "Pick a moment",
+    "step1Text": "Drag the timeline from 1914 to 1945 and watch borders, fronts, tanks, ships and planes move across the globe.",
+    "step2": "Open a film",
+    "step2Text": "Every poster sits where its story happens. Open one to follow its journey stop by stop.",
+    "step3": "Learn and watch",
+    "step3Text": "Read the real history behind the story, watch the trailer and see where it streams in your country.",
+    "sources": "Sources and credits",
+    "sourcesText": "Film data, posters, trailers and streaming availability come from TMDB and JustWatch. Historical borders come from the historical-basemaps project; history and places are researched from Wikipedia and Wikidata.",
+    "tmdbNotice": "This product uses the TMDB API but is not endorsed or certified by TMDB.",
+    "author": "Made by",
+    "authorText": "Steven Coaila Zaa, software engineer. See more of my work in my portfolio.",
+    "portfolio": "Portfolio",
+    "source": "Source code",
+    "stats": {
+      "titles": "Films & series",
+      "places": "Places",
+      "events": "Historical events",
+      "operations": "Animated operations"
+    }
+  },
+  "common": {
+    "loading": "Loading…",
+    "back": "Back",
+    "viewAll": "View all",
+    "more": "More",
+    "less": "Less",
+    "close": "Close",
+    "open": "Open",
+    "external": "(opens in a new tab)",
+    "notFound": "Page not found",
+    "notFoundText": "This page doesn't exist, but the globe does.",
+    "home": "Back to the map",
+    "updated": "Updated {date}"
+  },
+  "footer": {
+    "made": "Made by Steven Coaila Zaa",
+    "tmdb": "Data and images: TMDB. Streaming: JustWatch."
+  }
+}

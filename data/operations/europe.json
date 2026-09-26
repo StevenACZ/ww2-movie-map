@@ -1,0 +1,1604 @@
+{
+  "operations": [
+    {
+      "id": "poland-army-group-north",
+      "era": "ww2",
+      "name": {
+        "en": "Invasion of Poland: from East Prussia to Warsaw",
+        "es": "Invasión de Polonia: de Prusia Oriental a Varsovia"
+      },
+      "summary": {
+        "en": "German 3rd Army panzers strike south from East Prussia through Mława and across the Narew to reach Praga, Warsaw's east bank.",
+        "es": "Los blindados del 3.er Ejército alemán atacan desde Prusia Oriental por Mława y cruzan el Narew hasta Praga, en la orilla este de Varsovia."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 4,
+      "start": "1939-09-01",
+      "end": "1939-09-15",
+      "path": [
+        [20.42, 53.36],
+        [20.38, 53.11],
+        [21.4, 52.88],
+        [21.46, 52.59],
+        [21.05, 52.25]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Invasion_of_Poland"
+    },
+    {
+      "id": "poland-pomerania-corridor",
+      "era": "ww2",
+      "name": {
+        "en": "Invasion of Poland: the Polish Corridor",
+        "es": "Invasión de Polonia: el Corredor Polaco"
+      },
+      "summary": {
+        "en": "Guderian's corps drives east from Pomerania through the Tuchola Forest and cuts the Polish Corridor at the Vistula.",
+        "es": "El cuerpo de Guderian avanza desde Pomerania por el bosque de Tuchola y corta el Corredor Polaco en el Vístula."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 3,
+      "start": "1939-09-01",
+      "end": "1939-09-05",
+      "path": [
+        [17.56, 53.7],
+        [17.86, 53.59],
+        [18.45, 53.41],
+        [18.75, 53.48]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Tuchola_Forest"
+    },
+    {
+      "id": "poland-army-group-south",
+      "era": "ww2",
+      "name": {
+        "en": "Invasion of Poland: from Silesia to Warsaw",
+        "es": "Invasión de Polonia: de Silesia a Varsovia"
+      },
+      "summary": {
+        "en": "Reichenau's 10th Army panzers break out of Silesia past Wieluń and Piotrków and reach the outskirts of Warsaw on 8 September.",
+        "es": "Los blindados del 10.º Ejército de Reichenau salen de Silesia por Wieluń y Piotrków y llegan a las afueras de Varsovia el 8 de septiembre."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 5,
+      "weight": 2,
+      "start": "1939-09-01",
+      "end": "1939-09-08",
+      "path": [
+        [18.2, 50.97],
+        [18.57, 51.22],
+        [19.7, 51.4],
+        [20.01, 51.53],
+        [20.97, 52.22]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Invasion_of_Poland"
+    },
+    {
+      "id": "soviet-invasion-of-poland",
+      "era": "ww2",
+      "name": {
+        "en": "Soviet invasion of Poland",
+        "es": "Invasión soviética de Polonia"
+      },
+      "summary": {
+        "en": "On 17 September the Red Army crosses Poland's eastern border and advances through Baranowicze and Słonim to Białystok.",
+        "es": "El 17 de septiembre el Ejército Rojo cruza la frontera oriental de Polonia y avanza por Baránavichi y Słonim hasta Białystok."
+      },
+      "faction": "soviet",
+      "unit": "tank",
+      "count": 4,
+      "start": "1939-09-17",
+      "end": "1939-09-24",
+      "path": [
+        [26.95, 53.6],
+        [26.0, 53.13],
+        [25.32, 53.09],
+        [24.47, 53.17],
+        [23.16, 53.13]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Soviet_invasion_of_Poland"
+    },
+    {
+      "id": "winter-war",
+      "era": "ww2",
+      "name": {
+        "en": "Winter War: assault on the Mannerheim Line",
+        "es": "Guerra de Invierno: asalto a la Línea Mannerheim"
+      },
+      "summary": {
+        "en": "Soviet armies cross the Karelian Isthmus from Leningrad, stall at the Mannerheim Line, break it at Summa in February and reach Viipuri.",
+        "es": "Los ejércitos soviéticos cruzan el istmo de Carelia desde Leningrado, se detienen ante la Línea Mannerheim, la rompen en Summa en febrero y llegan a Víborg."
+      },
+      "faction": "soviet",
+      "unit": "tank",
+      "count": 4,
+      "start": "1939-11-30",
+      "end": "1940-03-13",
+      "path": [
+        [30.32, 59.94],
+        [29.78, 60.19],
+        [29.3, 60.4],
+        [28.97, 60.55],
+        [28.75, 60.71]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Winter_War"
+    },
+    {
+      "id": "weserubung-narvik",
+      "era": "ww2",
+      "name": {
+        "en": "Weserübung: destroyers to Narvik",
+        "es": "Weserübung: destructores a Narvik"
+      },
+      "summary": {
+        "en": "Ten German destroyers carrying mountain troops run up the Norwegian coast and seize the iron-ore port of Narvik on 9 April.",
+        "es": "Diez destructores alemanes con tropas de montaña suben por la costa noruega y toman el puerto de mineral de hierro de Narvik el 9 de abril."
+      },
+      "faction": "axis",
+      "unit": "ship",
+      "count": 4,
+      "start": "1940-04-07",
+      "end": "1940-04-09",
+      "path": [
+        [8.58, 53.55],
+        [4.8, 58.5],
+        [4.3, 61.5],
+        [8.0, 65.5],
+        [14.2, 68.0],
+        [17.43, 68.44]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Weserübung"
+    },
+    {
+      "id": "weserubung-trondheim",
+      "era": "ww2",
+      "name": {
+        "en": "Weserübung: Admiral Hipper to Trondheim",
+        "es": "Weserübung: el Admiral Hipper a Trondheim"
+      },
+      "summary": {
+        "en": "The heavy cruiser Admiral Hipper and four destroyers land troops at Trondheim, central Norway's key port.",
+        "es": "El crucero pesado Admiral Hipper y cuatro destructores desembarcan tropas en Trondheim, el puerto clave del centro de Noruega."
+      },
+      "faction": "axis",
+      "unit": "ship",
+      "count": 3,
+      "start": "1940-04-07",
+      "end": "1940-04-09",
+      "path": [
+        [8.7, 53.87],
+        [4.5, 59.0],
+        [4.8, 62.5],
+        [9.6, 63.7],
+        [10.39, 63.43]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Weserübung"
+    },
+    {
+      "id": "weserubung-oslo",
+      "era": "ww2",
+      "name": {
+        "en": "Weserübung: the Oslofjord",
+        "es": "Weserübung: el fiordo de Oslo"
+      },
+      "summary": {
+        "en": "The Oslo task group sails up the Oslofjord; the cruiser Blücher is sunk at Drøbak, delaying the capture of the Norwegian capital.",
+        "es": "El grupo naval de Oslo remonta el fiordo; el crucero Blücher es hundido en Drøbak, lo que retrasa la captura de la capital noruega."
+      },
+      "faction": "axis",
+      "unit": "ship",
+      "count": 3,
+      "start": "1940-04-08",
+      "end": "1940-04-09",
+      "path": [
+        [10.15, 54.33],
+        [11.3, 57.2],
+        [10.6, 59.05],
+        [10.63, 59.66],
+        [10.75, 59.91]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Weserübung"
+    },
+    {
+      "id": "fall-gelb-sichelschnitt",
+      "era": "ww2",
+      "name": {
+        "en": "Fall Gelb: the sickle cut through the Ardennes",
+        "es": "Fall Gelb: el corte de hoz por las Ardenas"
+      },
+      "summary": {
+        "en": "Panzer corps push through the Ardennes, cross the Meuse at Sedan and race to the Channel at Abbeville, trapping the Allied armies in Belgium.",
+        "es": "Los cuerpos panzer atraviesan las Ardenas, cruzan el Mosa en Sedán y corren hasta el canal de la Mancha en Abbeville, atrapando a los ejércitos aliados en Bélgica."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 6,
+      "weight": 3,
+      "start": "1940-05-10",
+      "end": "1940-05-20",
+      "path": [
+        [6.42, 50.21],
+        [5.8, 49.9],
+        [5.43, 49.84],
+        [5.07, 49.79],
+        [4.94, 49.7],
+        [4.02, 49.69],
+        [3.29, 49.85],
+        [2.93, 49.93],
+        [2.3, 49.89],
+        [1.83, 50.1]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_France"
+    },
+    {
+      "id": "dunkirk-evacuation",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Dynamo: the Dunkirk evacuation",
+        "es": "Operación Dinamo: la evacuación de Dunkerque"
+      },
+      "summary": {
+        "en": "Destroyers and hundreds of little ships shuttle between Dover and Dunkirk, lifting more than 338,000 Allied soldiers off the beaches.",
+        "es": "Destructores y cientos de pequeñas embarcaciones van y vienen entre Dover y Dunkerque y rescatan de las playas a más de 338.000 soldados aliados."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 6,
+      "weight": 3,
+      "start": "1940-05-26",
+      "end": "1940-06-04",
+      "path": [
+        [1.32, 51.12],
+        [1.8, 51.3],
+        [2.37, 51.05],
+        [1.7, 51.05],
+        [1.32, 51.12]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Dunkirk_evacuation"
+    },
+    {
+      "id": "battle-of-britain-luftwaffe",
+      "era": "ww2",
+      "name": {
+        "en": "Battle of Britain: Luftwaffe raids",
+        "es": "Batalla de Inglaterra: incursiones de la Luftwaffe"
+      },
+      "summary": {
+        "en": "Bomber formations with fighter escort cross from northern France over Kent to strike RAF airfields and, from September, London.",
+        "es": "Formaciones de bombarderos escoltados cruzan desde el norte de Francia sobre Kent para atacar los aeródromos de la RAF y, desde septiembre, Londres."
+      },
+      "faction": "axis",
+      "unit": "bomber",
+      "count": 5,
+      "weight": 3,
+      "start": "1940-07-10",
+      "end": "1940-10-31",
+      "path": [
+        [2.3, 49.9],
+        [1.86, 50.95],
+        [1.32, 51.12],
+        [0.8, 51.25],
+        [-0.12, 51.5],
+        [0.8, 51.5],
+        [1.6, 50.87],
+        [2.3, 49.9]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Britain"
+    },
+    {
+      "id": "battle-of-britain-raf",
+      "era": "ww2",
+      "name": {
+        "en": "Battle of Britain: RAF Fighter Command",
+        "es": "Batalla de Inglaterra: el Mando de Caza de la RAF"
+      },
+      "summary": {
+        "en": "Hurricanes and Spitfires scramble from Biggin Hill and Hornchurch to intercept the raids over Kent and the Thames estuary.",
+        "es": "Hurricanes y Spitfires despegan de Biggin Hill y Hornchurch para interceptar los ataques sobre Kent y el estuario del Támesis."
+      },
+      "faction": "allies",
+      "unit": "fighter",
+      "count": 4,
+      "weight": 3,
+      "start": "1940-07-10",
+      "end": "1940-10-31",
+      "path": [
+        [0.03, 51.33],
+        [1.1, 51.2],
+        [0.52, 51.27],
+        [-0.12, 51.5],
+        [0.2, 51.54],
+        [0.03, 51.33]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Britain"
+    },
+    {
+      "id": "the-blitz",
+      "era": "ww2",
+      "name": {
+        "en": "The Blitz",
+        "es": "El Blitz"
+      },
+      "summary": {
+        "en": "Night bombers fly from airfields in occupied France to pound London, Coventry and other British cities for eight months.",
+        "es": "Bombarderos nocturnos despegan de aeródromos de la Francia ocupada para castigar Londres, Coventry y otras ciudades británicas durante ocho meses."
+      },
+      "faction": "axis",
+      "unit": "bomber",
+      "count": 4,
+      "start": "1940-09-07",
+      "end": "1941-05-11",
+      "path": [
+        [1.15, 49.02],
+        [-0.8, 50.73],
+        [-1.51, 52.41],
+        [-0.12, 51.5],
+        [0.97, 50.91],
+        [1.15, 49.02]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/The_Blitz"
+    },
+    {
+      "id": "atlantic-hx-convoys",
+      "era": "ww2",
+      "name": {
+        "en": "Battle of the Atlantic: HX convoys",
+        "es": "Batalla del Atlántico: convoyes HX"
+      },
+      "summary": {
+        "en": "Merchant convoys escorted by warships carry food, fuel and munitions from Halifax across the North Atlantic to Liverpool.",
+        "es": "Convoyes mercantes escoltados por buques de guerra llevan alimentos, combustible y municiones desde Halifax a Liverpool a través del Atlántico Norte."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 3,
+      "weight": 2,
+      "start": "1939-09-16",
+      "end": "1945-05-08",
+      "path": [
+        [-63.57, 44.65],
+        [-53.0, 46.5],
+        [-35.0, 53.0],
+        [-20.0, 57.0],
+        [-8.0, 55.6],
+        [-5.8, 55.3],
+        [-3.0, 53.43]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Atlantic"
+    },
+    {
+      "id": "atlantic-u-boat-patrols",
+      "era": "ww2",
+      "name": {
+        "en": "Battle of the Atlantic: U-boat patrols",
+        "es": "Batalla del Atlántico: patrullas de U-Boote"
+      },
+      "summary": {
+        "en": "From the Biscay bases at Lorient and Saint-Nazaire, U-boat wolf packs sail out to hunt convoys in the mid-Atlantic gap.",
+        "es": "Desde las bases de Lorient y Saint-Nazaire en el golfo de Vizcaya, las manadas de U-Boote salen a cazar convoyes en el centro del Atlántico."
+      },
+      "faction": "axis",
+      "unit": "submarine",
+      "count": 3,
+      "start": "1940-07-07",
+      "end": "1944-08-31",
+      "path": [
+        [-3.37, 47.73],
+        [-8.0, 47.0],
+        [-20.0, 52.0],
+        [-32.0, 55.0],
+        [-25.0, 48.0],
+        [-10.0, 46.5],
+        [-2.2, 47.27]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Atlantic"
+    },
+    {
+      "id": "arctic-convoys",
+      "era": "ww2",
+      "name": {
+        "en": "Arctic convoys to Murmansk",
+        "es": "Convoyes árticos a Múrmansk"
+      },
+      "summary": {
+        "en": "Allied convoys sail from Iceland past Jan Mayen and Bear Island to Murmansk and Arkhangelsk, carrying Lend-Lease supplies to the Soviet Union.",
+        "es": "Convoyes aliados zarpan de Islandia, pasan por Jan Mayen y la isla del Oso y llegan a Múrmansk y Arcángel con suministros de Préstamo y Arriendo para la Unión Soviética."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 3,
+      "start": "1941-08-21",
+      "end": "1945-05-30",
+      "path": [
+        [-21.6, 64.4],
+        [-15.0, 67.5],
+        [-8.0, 70.0],
+        [5.0, 72.5],
+        [19.0, 73.4],
+        [26.0, 72.3],
+        [33.3, 69.4],
+        [33.08, 68.97]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Arctic_convoys_of_World_War_II"
+    },
+    {
+      "id": "bismarck-sortie",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Rheinübung: Bismarck breaks out",
+        "es": "Operación Rheinübung: la salida del Bismarck"
+      },
+      "summary": {
+        "en": "Bismarck and Prinz Eugen sail from Gotenhafen via Norway into the Denmark Strait, sink HMS Hood and are hunted until Bismarck is sunk on 27 May.",
+        "es": "El Bismarck y el Prinz Eugen zarpan de Gotenhafen, pasan por Noruega al estrecho de Dinamarca, hunden al HMS Hood y son perseguidos hasta el hundimiento del Bismarck el 27 de mayo."
+      },
+      "faction": "axis",
+      "unit": "ship",
+      "count": 2,
+      "weight": 2,
+      "start": "1941-05-18",
+      "end": "1941-05-27",
+      "path": [
+        [18.53, 54.52],
+        [15.0, 55.2],
+        [10.9, 55.4],
+        [11.3, 57.3],
+        [5.25, 60.33],
+        [-1.0, 64.5],
+        [-27.0, 66.3],
+        [-31.2, 63.3],
+        [-35.0, 57.0],
+        [-27.0, 50.0],
+        [-16.2, 48.17]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Last_battle_of_the_battleship_Bismarck"
+    },
+    {
+      "id": "bismarck-home-fleet-pursuit",
+      "era": "ww2",
+      "name": {
+        "en": "The Home Fleet hunts the Bismarck",
+        "es": "La Home Fleet persigue al Bismarck"
+      },
+      "summary": {
+        "en": "Hood and Prince of Wales leave Scapa Flow for the Denmark Strait; after Hood's loss the Royal Navy chases Bismarck south until King George V and Rodney sink her.",
+        "es": "El Hood y el Prince of Wales salen de Scapa Flow hacia el estrecho de Dinamarca; tras la pérdida del Hood la Royal Navy persigue al Bismarck hasta que el King George V y el Rodney lo hunden."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 3,
+      "start": "1941-05-22",
+      "end": "1941-05-27",
+      "path": [
+        [-3.1, 58.9],
+        [-12.0, 61.5],
+        [-24.0, 63.8],
+        [-30.5, 62.5],
+        [-30.0, 56.0],
+        [-20.0, 49.5],
+        [-16.3, 48.2]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Last_battle_of_the_battleship_Bismarck"
+    },
+    {
+      "id": "barbarossa-army-group-north",
+      "era": "ww2",
+      "name": {
+        "en": "Barbarossa: Army Group North to Leningrad",
+        "es": "Barbarroja: Grupo de Ejércitos Norte hacia Leningrado"
+      },
+      "summary": {
+        "en": "Panzer Group 4 drives from East Prussia through Lithuania, crosses the Daugava at Daugavpils and pushes past Pskov and Luga to encircle Leningrad.",
+        "es": "El Grupo Panzer 4 avanza desde Prusia Oriental por Lituania, cruza el Daugava en Daugavpils y sigue por Pskov y Luga hasta cercar Leningrado."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 5,
+      "start": "1941-06-22",
+      "end": "1941-09-08",
+      "path": [
+        [21.88, 55.08],
+        [23.3, 55.93],
+        [26.53, 55.87],
+        [28.36, 57.34],
+        [28.33, 57.82],
+        [29.85, 58.74],
+        [30.08, 59.74]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Barbarossa"
+    },
+    {
+      "id": "barbarossa-army-group-center",
+      "era": "ww2",
+      "name": {
+        "en": "Barbarossa: Army Group Center to Smolensk",
+        "es": "Barbarroja: Grupo de Ejércitos Centro hacia Smolensk"
+      },
+      "summary": {
+        "en": "Guderian's and Hoth's panzer groups close great pockets at Białystok-Minsk and Smolensk, then hold the Yelnya salient through September.",
+        "es": "Los grupos panzer de Guderian y Hoth cierran grandes bolsas en Białystok-Minsk y Smolensk y luego sostienen el saliente de Yelnia durante septiembre."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 6,
+      "weight": 3,
+      "start": "1941-06-22",
+      "end": "1941-09-29",
+      "path": [
+        [23.69, 52.1],
+        [25.3, 53.0],
+        [27.56, 53.9],
+        [28.5, 54.23],
+        [30.42, 54.51],
+        [32.05, 54.78],
+        [33.18, 54.57]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Barbarossa"
+    },
+    {
+      "id": "operation-typhoon",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Typhoon: the drive on Moscow",
+        "es": "Operación Tifón: el avance sobre Moscú"
+      },
+      "summary": {
+        "en": "Army Group Center smashes the fronts at Vyazma and Bryansk and pushes through Mozhaysk until frost and Soviet reserves stop it at Moscow's gates.",
+        "es": "El Grupo de Ejércitos Centro destroza los frentes de Viazma y Briansk y avanza por Mozhaisk hasta que el frío y las reservas soviéticas lo detienen a las puertas de Moscú."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 6,
+      "weight": 2,
+      "start": "1941-09-30",
+      "end": "1941-12-05",
+      "path": [
+        [33.18, 54.57],
+        [34.3, 55.21],
+        [35.0, 55.4],
+        [36.03, 55.5],
+        [36.73, 56.0],
+        [37.4, 55.98]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Typhoon"
+    },
+    {
+      "id": "barbarossa-army-group-south",
+      "era": "ww2",
+      "name": {
+        "en": "Barbarossa: Army Group South to Kiev and Rostov",
+        "es": "Barbarroja: Grupo de Ejércitos Sur hacia Kiev y Rostov"
+      },
+      "summary": {
+        "en": "Kleist's panzers advance across Ukraine from Volhynia, help encircle Kiev in September and reach Rostov-on-Don in November.",
+        "es": "Los blindados de Kleist cruzan Ucrania desde Volinia, ayudan a cercar Kiev en septiembre y llegan a Rostov del Don en noviembre."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 5,
+      "start": "1941-06-22",
+      "end": "1941-11-21",
+      "path": [
+        [23.9, 50.8],
+        [25.33, 50.75],
+        [25.73, 50.42],
+        [28.66, 50.25],
+        [30.52, 50.45],
+        [33.42, 49.07],
+        [35.04, 48.46],
+        [35.14, 47.84],
+        [37.55, 47.1],
+        [38.9, 47.22],
+        [39.7, 47.23]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Barbarossa"
+    },
+    {
+      "id": "moscow-counteroffensive",
+      "era": "ww2",
+      "name": {
+        "en": "Soviet counteroffensive at Moscow",
+        "es": "Contraofensiva soviética en Moscú"
+      },
+      "summary": {
+        "en": "Fresh Siberian divisions and new armies strike the exhausted Germans on 5 December and drive them back west past Istra and Volokolamsk.",
+        "es": "Divisiones siberianas frescas y nuevos ejércitos golpean a los alemanes agotados el 5 de diciembre y los hacen retroceder más allá de Istra y Volokolamsk."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 5,
+      "start": "1941-12-05",
+      "end": "1942-01-07",
+      "path": [
+        [37.5, 56.0],
+        [36.86, 55.91],
+        [35.95, 56.03],
+        [35.3, 55.95]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Moscow"
+    },
+    {
+      "id": "case-blue-stalingrad",
+      "era": "ww2",
+      "name": {
+        "en": "Case Blue: the advance on Stalingrad",
+        "es": "Caso Azul: el avance sobre Stalingrado"
+      },
+      "summary": {
+        "en": "German armies strike from Kursk to Voronezh, wheel south along the Don and cross the steppe to reach the Volga at Stalingrad in late August.",
+        "es": "Los ejércitos alemanes atacan desde Kursk hacia Vorónezh, giran al sur por el Don y cruzan la estepa hasta llegar al Volga en Stalingrado a fines de agosto."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 6,
+      "weight": 3,
+      "start": "1942-06-28",
+      "end": "1942-09-13",
+      "path": [
+        [36.19, 51.73],
+        [39.2, 51.67],
+        [39.57, 50.19],
+        [40.4, 48.92],
+        [42.2, 48.8],
+        [43.53, 48.69],
+        [44.52, 48.71]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Case_Blue"
+    },
+    {
+      "id": "case-blue-caucasus",
+      "era": "ww2",
+      "name": {
+        "en": "Case Blue: Army Group A into the Caucasus",
+        "es": "Caso Azul: el Grupo de Ejércitos A en el Cáucaso"
+      },
+      "summary": {
+        "en": "Army Group A crosses the Don at Rostov and drives deep into the Caucasus toward the oil fields, stalling at Mozdok and near Ordzhonikidze.",
+        "es": "El Grupo de Ejércitos A cruza el Don en Rostov y penetra en el Cáucaso rumbo a los campos petroleros, hasta detenerse en Mozdok y cerca de Ordzhonikidze."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 5,
+      "start": "1942-07-09",
+      "end": "1942-11-18",
+      "path": [
+        [38.8, 48.2],
+        [39.7, 47.23],
+        [41.54, 46.47],
+        [41.12, 45.0],
+        [43.06, 44.04],
+        [44.65, 43.74],
+        [43.61, 43.49],
+        [44.55, 43.04]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Case_Blue"
+    },
+    {
+      "id": "uranus-northern-pincer",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Uranus: northern pincer",
+        "es": "Operación Urano: pinza norte"
+      },
+      "summary": {
+        "en": "The 5th Tank Army bursts out of the Serafimovich bridgehead through the Romanian 3rd Army and races south to Kalach on the Don.",
+        "es": "El 5.º Ejército de Tanques irrumpe desde la cabeza de puente de Serafímovich a través del 3.er Ejército rumano y corre al sur hasta Kalach, en el Don."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 5,
+      "weight": 3,
+      "start": "1942-11-19",
+      "end": "1942-11-23",
+      "path": [
+        [42.73, 49.58],
+        [42.6, 49.3],
+        [42.5, 49.15],
+        [43.1, 48.9],
+        [43.53, 48.69]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Uranus"
+    },
+    {
+      "id": "uranus-southern-pincer",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Uranus: southern pincer",
+        "es": "Operación Urano: pinza sur"
+      },
+      "summary": {
+        "en": "Striking from the lakes south of Stalingrad, Soviet mechanized corps drive west to meet the northern pincer at Sovetsky, trapping the 6th Army.",
+        "es": "Desde los lagos al sur de Stalingrado, los cuerpos mecanizados soviéticos avanzan al oeste hasta unirse con la pinza norte en Sovetski y encerrar al 6.º Ejército."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 4,
+      "start": "1942-11-20",
+      "end": "1942-11-23",
+      "path": [
+        [44.55, 48.2],
+        [44.1, 48.35],
+        [43.63, 48.6],
+        [43.53, 48.69]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Uranus"
+    },
+    {
+      "id": "kursk-citadel-north",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Citadel: the northern pincer",
+        "es": "Operación Ciudadela: pinza norte"
+      },
+      "summary": {
+        "en": "Model's 9th Army attacks south from the Orel salient toward Ponyri and Olkhovatka but is stopped in the Soviet defense belts.",
+        "es": "El 9.º Ejército de Model ataca al sur desde el saliente de Oriol hacia Poniri y Oljovatka, pero es frenado en los cinturones defensivos soviéticos."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 5,
+      "start": "1943-07-05",
+      "end": "1943-07-12",
+      "path": [
+        [36.5, 52.55],
+        [36.35, 52.4],
+        [36.3, 52.3],
+        [36.15, 52.18]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Kursk"
+    },
+    {
+      "id": "kursk-citadel-south",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Citadel: the southern pincer",
+        "es": "Operación Ciudadela: pinza sur"
+      },
+      "summary": {
+        "en": "Hoth's 4th Panzer Army and the SS panzer corps attack north from Belgorod toward Oboyan and collide with Soviet tank armies at Prokhorovka.",
+        "es": "El 4.º Ejército Panzer de Hoth y el cuerpo panzer SS atacan al norte desde Bélgorod hacia Oboyán y chocan con los ejércitos de tanques soviéticos en Prójorovka."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 6,
+      "weight": 3,
+      "start": "1943-07-05",
+      "end": "1943-07-16",
+      "path": [
+        [35.95, 50.7],
+        [36.2, 50.8],
+        [36.46, 50.86],
+        [36.67, 51.04]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Kursk"
+    },
+    {
+      "id": "operation-kutuzov",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Kutuzov: the Orel counteroffensive",
+        "es": "Operación Kutúzov: la contraofensiva de Oriol"
+      },
+      "summary": {
+        "en": "The Western and Bryansk Fronts attack the Orel salient from the north and east, liberate Orel on 5 August and push on toward Bryansk.",
+        "es": "Los frentes Occidental y de Briansk atacan el saliente de Oriol desde el norte y el este, liberan Oriol el 5 de agosto y siguen hacia Briansk."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 5,
+      "start": "1943-07-12",
+      "end": "1943-08-18",
+      "path": [
+        [35.0, 53.8],
+        [36.0, 53.44],
+        [36.07, 52.97],
+        [35.12, 53.12],
+        [34.6, 53.25]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Kutuzov"
+    },
+    {
+      "id": "operation-polkovodets-rumyantsev",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Polkovodets Rumyantsev: Belgorod and Kharkov",
+        "es": "Operación Polkovodets Rumiántsev: Bélgorod y Járkov"
+      },
+      "summary": {
+        "en": "Voronezh and Steppe Front armies break through at Belgorod on 3 August and liberate Kharkov for the last time on 23 August.",
+        "es": "Los ejércitos de los frentes de Vorónezh y de la Estepa rompen en Bélgorod el 3 de agosto y liberan Járkov por última vez el 23 de agosto."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 5,
+      "start": "1943-08-03",
+      "end": "1943-08-23",
+      "path": [
+        [36.6, 50.9],
+        [36.58, 50.6],
+        [36.4, 50.3],
+        [36.23, 49.99]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Belgorod–Kharkov_offensive_operation"
+    },
+    {
+      "id": "dnieper-kiev",
+      "era": "ww2",
+      "name": {
+        "en": "Battle of the Dnieper and the liberation of Kiev",
+        "es": "Batalla del Dniéper y liberación de Kiev"
+      },
+      "summary": {
+        "en": "Soviet fronts race from Kharkov and Poltava to the Dnieper, force crossings at Bukrin and Lyutezh and liberate Kiev on 6 November.",
+        "es": "Los frentes soviéticos avanzan desde Járkov y Poltava hasta el Dniéper, fuerzan cruces en Bukrin y Liutizh y liberan Kiev el 6 de noviembre."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 6,
+      "start": "1943-08-26",
+      "end": "1943-12-23",
+      "path": [
+        [36.23, 49.99],
+        [34.55, 49.59],
+        [31.4, 50.05],
+        [30.4, 50.68],
+        [30.52, 50.45],
+        [29.9, 50.08],
+        [28.66, 50.25]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Dnieper"
+    },
+    {
+      "id": "operation-bagration",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Bagration",
+        "es": "Operación Bagratión"
+      },
+      "summary": {
+        "en": "Four Soviet fronts shatter Army Group Center in Belarus, liberate Minsk on 3 July and drive on through Brest to the Vistula near Warsaw.",
+        "es": "Cuatro frentes soviéticos destrozan al Grupo de Ejércitos Centro en Bielorrusia, liberan Minsk el 3 de julio y siguen por Brest hasta el Vístula cerca de Varsovia."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 6,
+      "weight": 3,
+      "start": "1944-06-22",
+      "end": "1944-08-19",
+      "path": [
+        [30.42, 54.51],
+        [28.5, 54.23],
+        [27.56, 53.9],
+        [26.0, 53.13],
+        [23.69, 52.1],
+        [22.27, 52.17],
+        [21.2, 52.35]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Bagration"
+    },
+    {
+      "id": "vistula-oder-offensive",
+      "era": "ww2",
+      "name": {
+        "en": "Vistula-Oder offensive",
+        "es": "Ofensiva del Vístula-Óder"
+      },
+      "summary": {
+        "en": "Zhukov's 1st Belorussian Front bursts out of the Magnuszew bridgehead, takes Łódź and reaches the Oder at Küstrin, 70 km from Berlin.",
+        "es": "El 1.er Frente Bielorruso de Zhúkov sale de la cabeza de puente de Magnuszew, toma Łódź y llega al Óder en Küstrin, a 70 km de Berlín."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 6,
+      "weight": 2,
+      "start": "1945-01-12",
+      "end": "1945-02-02",
+      "path": [
+        [21.37, 51.76],
+        [19.46, 51.76],
+        [18.1, 52.2],
+        [16.93, 52.41],
+        [15.5, 52.5],
+        [14.64, 52.59]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Vistula–Oder_offensive"
+    },
+    {
+      "id": "berlin-offensive",
+      "era": "ww2",
+      "name": {
+        "en": "Battle of Berlin",
+        "es": "Batalla de Berlín"
+      },
+      "summary": {
+        "en": "After storming the Seelow Heights, Soviet tank armies encircle Berlin and fight into the city center until the garrison surrenders on 2 May.",
+        "es": "Tras asaltar las alturas de Seelow, los ejércitos de tanques soviéticos cercan Berlín y combaten hasta el centro de la ciudad, cuya guarnición se rinde el 2 de mayo."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 6,
+      "weight": 3,
+      "start": "1945-04-16",
+      "end": "1945-05-02",
+      "path": [
+        [14.64, 52.59],
+        [14.38, 52.53],
+        [14.14, 52.5],
+        [13.88, 52.53],
+        [13.4, 52.52]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Berlin"
+    },
+    {
+      "id": "rommel-advance",
+      "era": "ww2",
+      "name": {
+        "en": "Rommel's advance across Libya",
+        "es": "El avance de Rommel por Libia"
+      },
+      "summary": {
+        "en": "The Afrika Korps drives east from Tripoli and El Agheila, besieges Tobruk, takes it in June 1942 and pursues the British to El Alamein.",
+        "es": "El Afrika Korps avanza al este desde Trípoli y El Agheila, sitia Tobruk, la toma en junio de 1942 y persigue a los británicos hasta El Alamein."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 5,
+      "start": "1941-03-24",
+      "end": "1942-07-01",
+      "path": [
+        [13.19, 32.89],
+        [16.59, 31.2],
+        [19.23, 30.26],
+        [20.22, 30.76],
+        [22.3, 31.7],
+        [23.3, 32.15],
+        [23.96, 32.08],
+        [25.09, 31.76],
+        [27.24, 31.35],
+        [28.95, 30.83]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Western_Desert_campaign"
+    },
+    {
+      "id": "el-alamein-pursuit",
+      "era": "ww2",
+      "name": {
+        "en": "Second El Alamein and the pursuit to Tunisia",
+        "es": "Segunda batalla de El Alamein y la persecución hasta Túnez"
+      },
+      "summary": {
+        "en": "Montgomery's Eighth Army breaks the Axis line at El Alamein and pursues Rommel 2,000 km through Tobruk, Benghazi and Tripoli to the Mareth Line.",
+        "es": "El Octavo Ejército de Montgomery rompe la línea del Eje en El Alamein y persigue a Rommel 2.000 km por Tobruk, Bengasi y Trípoli hasta la Línea Mareth."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 6,
+      "weight": 3,
+      "start": "1942-10-23",
+      "end": "1943-02-17",
+      "path": [
+        [28.95, 30.83],
+        [27.24, 31.35],
+        [23.96, 32.08],
+        [20.07, 32.12],
+        [19.23, 30.26],
+        [16.59, 31.2],
+        [13.19, 32.89],
+        [11.22, 33.14],
+        [10.5, 33.35]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Second_Battle_of_El_Alamein"
+    },
+    {
+      "id": "torch-western-task-force",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Torch: Western Task Force",
+        "es": "Operación Antorcha: Fuerza Operativa Occidental"
+      },
+      "summary": {
+        "en": "Patton's convoy sails straight from Hampton Roads across the Atlantic to land around Casablanca in French Morocco on 8 November.",
+        "es": "El convoy de Patton zarpa de Hampton Roads, cruza el Atlántico y desembarca en torno a Casablanca, en el Marruecos francés, el 8 de noviembre."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 5,
+      "start": "1942-10-24",
+      "end": "1942-11-08",
+      "path": [
+        [-76.3, 36.95],
+        [-50.0, 34.5],
+        [-25.0, 33.5],
+        [-10.0, 33.8],
+        [-7.6, 33.6]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Torch"
+    },
+    {
+      "id": "torch-mediterranean-task-forces",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Torch: Oran and Algiers",
+        "es": "Operación Antorcha: Orán y Argel"
+      },
+      "summary": {
+        "en": "Convoys from the Clyde pass Gibraltar into the Mediterranean and land American and British troops at Oran and Algiers on 8 November.",
+        "es": "Convoyes salidos del Clyde cruzan Gibraltar hacia el Mediterráneo y desembarcan tropas estadounidenses y británicas en Orán y Argel el 8 de noviembre."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 5,
+      "weight": 2,
+      "start": "1942-10-22",
+      "end": "1942-11-08",
+      "path": [
+        [-4.9, 55.9],
+        [-12.0, 50.0],
+        [-12.0, 40.0],
+        [-5.35, 36.0],
+        [-0.64, 35.75],
+        [3.06, 36.8]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Torch"
+    },
+    {
+      "id": "tunisia-campaign",
+      "era": "ww2",
+      "name": {
+        "en": "Tunisian campaign",
+        "es": "Campaña de Túnez"
+      },
+      "summary": {
+        "en": "The First Army races from Algeria toward Tunis, is held in the hills at Medjez el Bab through winter, and finally takes Tunis in May 1943.",
+        "es": "El Primer Ejército corre desde Argelia hacia Túnez, queda frenado en las colinas de Medjez el Bab durante el invierno y finalmente toma Túnez en mayo de 1943."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 5,
+      "start": "1942-11-17",
+      "end": "1943-05-13",
+      "path": [
+        [3.06, 36.75],
+        [7.75, 36.9],
+        [8.76, 36.95],
+        [9.18, 36.73],
+        [9.61, 36.65],
+        [10.18, 36.81],
+        [10.9, 36.95]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Tunisian_campaign"
+    },
+    {
+      "id": "kasserine-pass",
+      "era": "ww2",
+      "name": {
+        "en": "Battle of Kasserine Pass",
+        "es": "Batalla del paso de Kasserine"
+      },
+      "summary": {
+        "en": "German panzers strike from the Faïd Pass through Sidi Bou Zid and Sbeitla and break through the Kasserine Pass before being halted short of Thala.",
+        "es": "Los panzer alemanes atacan desde el paso de Faïd por Sidi Bou Zid y Sbeitla y cruzan el paso de Kasserine antes de ser detenidos cerca de Thala."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 4,
+      "start": "1943-02-14",
+      "end": "1943-02-24",
+      "path": [
+        [9.6, 34.95],
+        [9.5, 34.87],
+        [9.12, 35.23],
+        [8.73, 35.25],
+        [8.67, 35.57]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Kasserine_Pass"
+    },
+    {
+      "id": "husky-us-seventh-army",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Husky: Patton's Seventh Army",
+        "es": "Operación Husky: el Séptimo Ejército de Patton"
+      },
+      "summary": {
+        "en": "Landing at Gela and Licata, the US Seventh Army sweeps west to Palermo and then along the north coast to Messina.",
+        "es": "Tras desembarcar en Gela y Licata, el Séptimo Ejército estadounidense barre el oeste hasta Palermo y luego avanza por la costa norte hasta Mesina."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 5,
+      "weight": 2,
+      "start": "1943-07-10",
+      "end": "1943-08-17",
+      "path": [
+        [14.25, 37.07],
+        [13.58, 37.31],
+        [13.36, 38.12],
+        [14.02, 38.04],
+        [14.6, 38.07],
+        [15.55, 38.19]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Allied_invasion_of_Sicily"
+    },
+    {
+      "id": "husky-british-eighth-army",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Husky: Montgomery's Eighth Army",
+        "es": "Operación Husky: el Octavo Ejército de Montgomery"
+      },
+      "summary": {
+        "en": "The Eighth Army lands near Syracuse, takes Augusta and grinds up the east coast past Catania and Mount Etna to Messina.",
+        "es": "El Octavo Ejército desembarca cerca de Siracusa, toma Augusta y avanza con dificultad por la costa este, más allá de Catania y el Etna, hasta Mesina."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 5,
+      "start": "1943-07-10",
+      "end": "1943-08-17",
+      "path": [
+        [15.14, 36.9],
+        [15.29, 37.07],
+        [15.22, 37.23],
+        [15.08, 37.5],
+        [15.28, 37.85],
+        [15.55, 38.19]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Allied_invasion_of_Sicily"
+    },
+    {
+      "id": "salerno-to-rome",
+      "era": "ww2",
+      "name": {
+        "en": "Salerno and the road to Rome",
+        "es": "Salerno y el camino a Roma"
+      },
+      "summary": {
+        "en": "The US Fifth Army lands at Salerno, takes Naples, fights up to the Gustav Line at Cassino and enters Rome on 4 June 1944.",
+        "es": "El Quinto Ejército estadounidense desembarca en Salerno, toma Nápoles, combate hasta la Línea Gustav en Cassino y entra en Roma el 4 de junio de 1944."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 4,
+      "start": "1943-09-09",
+      "end": "1944-06-04",
+      "path": [
+        [14.77, 40.68],
+        [14.25, 40.85],
+        [14.21, 41.1],
+        [13.98, 41.4],
+        [13.83, 41.49],
+        [13.35, 41.64],
+        [12.92, 41.78],
+        [12.5, 41.9]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Avalanche"
+    },
+    {
+      "id": "anzio-landing",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Shingle: the Anzio landing",
+        "es": "Operación Shingle: el desembarco de Anzio"
+      },
+      "summary": {
+        "en": "An Allied fleet sails from Naples and lands VI Corps at Anzio behind the Gustav Line, opening a beachhead that holds until the May breakout.",
+        "es": "Una flota aliada zarpa de Nápoles y desembarca al VI Cuerpo en Anzio, detrás de la Línea Gustav, abriendo una cabeza de playa que resiste hasta la ruptura de mayo."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 5,
+      "start": "1944-01-21",
+      "end": "1944-01-22",
+      "path": [
+        [14.25, 40.85],
+        [13.9, 40.95],
+        [13.2, 41.25],
+        [12.63, 41.45]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Anzio"
+    },
+    {
+      "id": "cbo-raf-bomber-command",
+      "era": "ww2",
+      "name": {
+        "en": "Combined Bomber Offensive: RAF night raids",
+        "es": "Ofensiva de Bombardeo Combinada: incursiones nocturnas de la RAF"
+      },
+      "summary": {
+        "en": "Lancasters and Halifaxes from Lincolnshire and Yorkshire cross the North Sea at night to bomb the industrial cities of the Ruhr.",
+        "es": "Lancasters y Halifaxes de Lincolnshire y Yorkshire cruzan de noche el mar del Norte para bombardear las ciudades industriales del Ruhr."
+      },
+      "faction": "allies",
+      "unit": "bomber",
+      "count": 3,
+      "start": "1943-03-05",
+      "end": "1945-04-12",
+      "path": [
+        [-0.55, 53.31],
+        [2.5, 52.8],
+        [4.6, 52.5],
+        [7.01, 51.46],
+        [5.5, 51.4],
+        [2.0, 52.3],
+        [-0.55, 53.31]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Combined_Bomber_Offensive"
+    },
+    {
+      "id": "cbo-usaaf-daylight",
+      "era": "ww2",
+      "name": {
+        "en": "Combined Bomber Offensive: USAAF daylight raids",
+        "es": "Ofensiva de Bombardeo Combinada: incursiones diurnas de la USAAF"
+      },
+      "summary": {
+        "en": "B-17s and B-24s of the Eighth Air Force fly from East Anglia in daylight against ball-bearing plants, oil targets and Berlin.",
+        "es": "Los B-17 y B-24 de la Octava Fuerza Aérea despegan de día desde East Anglia contra fábricas de rodamientos, objetivos petroleros y Berlín."
+      },
+      "faction": "allies",
+      "unit": "bomber",
+      "count": 3,
+      "start": "1943-01-27",
+      "end": "1945-04-12",
+      "path": [
+        [0.71, 52.25],
+        [3.5, 51.8],
+        [5.0, 50.9],
+        [8.6, 50.1],
+        [10.23, 50.05],
+        [6.0, 50.0],
+        [1.8, 51.1],
+        [0.71, 52.25]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Combined_Bomber_Offensive"
+    },
+    {
+      "id": "d-day-us-beaches",
+      "era": "ww2",
+      "name": {
+        "en": "D-Day: the American assault on Omaha and Utah",
+        "es": "Día D: el asalto estadounidense a Omaha y Utah"
+      },
+      "summary": {
+        "en": "Task Force O and U sail from Portland and Devon ports through the swept lanes to land the US V and VII Corps on Omaha and Utah beaches.",
+        "es": "Las fuerzas navales O y U zarpan de Portland y los puertos de Devon por los canales barridos y desembarcan a los cuerpos V y VII de EE. UU. en Omaha y Utah."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 4,
+      "weight": 3,
+      "start": "1944-06-05",
+      "end": "1944-06-06",
+      "path": [
+        [-2.45, 50.56],
+        [-1.0, 50.3],
+        [-1.0, 49.8],
+        [-0.87, 49.4]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Normandy_landings"
+    },
+    {
+      "id": "d-day-anglo-canadian-beaches",
+      "era": "ww2",
+      "name": {
+        "en": "D-Day: Gold, Juno and Sword",
+        "es": "Día D: Gold, Juno y Sword"
+      },
+      "summary": {
+        "en": "From Portsmouth and the Solent, British and Canadian assault forces cross the Channel to land on Gold, Juno and Sword beaches.",
+        "es": "Desde Portsmouth y el Solent, las fuerzas de asalto británicas y canadienses cruzan el canal para desembarcar en las playas Gold, Juno y Sword."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 4,
+      "weight": 3,
+      "start": "1944-06-05",
+      "end": "1944-06-06",
+      "path": [
+        [-1.1, 50.78],
+        [-1.0, 50.3],
+        [-0.6, 49.8],
+        [-0.4, 49.35]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Normandy_landings"
+    },
+    {
+      "id": "d-day-airborne",
+      "era": "ww2",
+      "name": {
+        "en": "D-Day: the airborne assault",
+        "es": "Día D: el asalto aerotransportado"
+      },
+      "summary": {
+        "en": "C-47 transports carry the US 82nd and 101st Airborne Divisions over the Channel Islands to drop paratroopers around Sainte-Mère-Église.",
+        "es": "Los transportes C-47 llevan a las divisiones aerotransportadas 82.ª y 101.ª de EE. UU. sobre las islas del Canal y lanzan paracaidistas en torno a Sainte-Mère-Église."
+      },
+      "faction": "allies",
+      "unit": "bomber",
+      "count": 4,
+      "weight": 2,
+      "start": "1944-06-05",
+      "end": "1944-06-06",
+      "path": [
+        [-1.28, 51.38],
+        [-2.45, 50.52],
+        [-2.9, 49.5],
+        [-1.32, 49.41]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/American_airborne_landings_in_Normandy"
+    },
+    {
+      "id": "cobra-breakout-to-paris",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Cobra and the breakout to Paris",
+        "es": "Operación Cobra y la ruptura hacia París"
+      },
+      "summary": {
+        "en": "US armor breaks out west of Saint-Lô, turns the corner at Avranches, sweeps through Le Mans and Argentan and liberates Paris on 25 August.",
+        "es": "Los blindados estadounidenses rompen al oeste de Saint-Lô, doblan en Avranches, barren Le Mans y Argentan y liberan París el 25 de agosto."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 5,
+      "start": "1944-07-25",
+      "end": "1944-08-25",
+      "path": [
+        [-1.09, 49.12],
+        [-1.44, 49.05],
+        [-1.36, 48.68],
+        [-0.62, 48.3],
+        [0.2, 48.0],
+        [0.09, 48.43],
+        [-0.01, 48.74],
+        [1.37, 48.74],
+        [2.35, 48.86]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Cobra"
+    },
+    {
+      "id": "dragoon-landing",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Dragoon: the Provence landing",
+        "es": "Operación Dragoon: el desembarco en Provenza"
+      },
+      "summary": {
+        "en": "Allied convoys from Corsica and Italy land American and Free French forces on the Riviera between Cavalaire and Saint-Raphaël.",
+        "es": "Convoyes aliados desde Córcega e Italia desembarcan fuerzas estadounidenses y de la Francia Libre en la Riviera, entre Cavalaire y Saint-Raphaël."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 4,
+      "start": "1944-08-14",
+      "end": "1944-08-15",
+      "path": [
+        [8.74, 41.92],
+        [7.5, 42.8],
+        [6.64, 43.27]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Dragoon"
+    },
+    {
+      "id": "dragoon-rhone-valley",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Dragoon: up the Rhône valley",
+        "es": "Operación Dragoon: subiendo por el valle del Ródano"
+      },
+      "summary": {
+        "en": "From the Riviera beachhead the Allies chase the German 19th Army up the Rhône through Montélimar and Lyon to link up with Patton near Dijon.",
+        "es": "Desde la cabeza de playa de la Riviera, los aliados persiguen al 19.º Ejército alemán por el Ródano, pasando por Montélimar y Lyon, hasta unirse con Patton cerca de Dijon."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 4,
+      "start": "1944-08-15",
+      "end": "1944-09-12",
+      "path": [
+        [6.64, 43.27],
+        [5.45, 43.53],
+        [4.75, 44.56],
+        [4.89, 44.93],
+        [4.83, 45.76],
+        [5.04, 47.32]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Dragoon"
+    },
+    {
+      "id": "market-garden-airborne",
+      "era": "ww2",
+      "name": {
+        "en": "Market Garden: the airborne carpet",
+        "es": "Market Garden: la alfombra aerotransportada"
+      },
+      "summary": {
+        "en": "Transport streams fly from English airfields over the North Sea to drop three airborne divisions at Eindhoven, Nijmegen and Arnhem.",
+        "es": "Oleadas de transportes vuelan desde aeródromos ingleses sobre el mar del Norte para lanzar tres divisiones aerotransportadas en Eindhoven, Nimega y Arnhem."
+      },
+      "faction": "allies",
+      "unit": "bomber",
+      "count": 3,
+      "start": "1944-09-17",
+      "end": "1944-09-25",
+      "path": [
+        [-1.86, 51.66],
+        [1.6, 52.15],
+        [4.0, 51.75],
+        [5.83, 51.99],
+        [4.0, 51.55],
+        [1.6, 51.9],
+        [-1.86, 51.66]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Market_Garden"
+    },
+    {
+      "id": "market-garden-xxx-corps",
+      "era": "ww2",
+      "name": {
+        "en": "Market Garden: XXX Corps drives to Nijmegen",
+        "es": "Market Garden: el XXX Cuerpo avanza hacia Nimega"
+      },
+      "summary": {
+        "en": "British XXX Corps drives up the single road from Neerpelt through Eindhoven and Grave to Nijmegen but cannot break through to Arnhem.",
+        "es": "El XXX Cuerpo británico avanza por la única carretera desde Neerpelt por Eindhoven y Grave hasta Nimega, pero no logra llegar a Arnhem."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 4,
+      "weight": 2,
+      "start": "1944-09-17",
+      "end": "1944-09-25",
+      "path": [
+        [5.42, 51.25],
+        [5.46, 51.35],
+        [5.48, 51.44],
+        [5.49, 51.51],
+        [5.55, 51.62],
+        [5.74, 51.76],
+        [5.86, 51.84],
+        [5.85, 51.92]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Market_Garden"
+    },
+    {
+      "id": "bulge-german-offensive",
+      "era": "ww2",
+      "name": {
+        "en": "Battle of the Bulge: the Ardennes offensive",
+        "es": "Batalla de las Ardenas: la ofensiva alemana"
+      },
+      "summary": {
+        "en": "German panzer armies break through the thin American line in the Ardennes, take St. Vith and reach Celles, just short of the Meuse.",
+        "es": "Los ejércitos panzer alemanes rompen la débil línea estadounidense en las Ardenas, toman St. Vith y llegan a Celles, a pocos kilómetros del Mosa."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 6,
+      "weight": 3,
+      "start": "1944-12-16",
+      "end": "1944-12-24",
+      "path": [
+        [6.33, 50.37],
+        [6.13, 50.28],
+        [5.79, 50.13],
+        [5.35, 50.23],
+        [5.0, 50.23]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Bulge"
+    },
+    {
+      "id": "bulge-allied-counterattack",
+      "era": "ww2",
+      "name": {
+        "en": "Battle of the Bulge: relief of Bastogne and counterattack",
+        "es": "Batalla de las Ardenas: liberación de Bastogne y contraataque"
+      },
+      "summary": {
+        "en": "Patton's Third Army attacks north from Arlon, relieves Bastogne on 26 December and pushes on to Houffalize and St. Vith to erase the bulge.",
+        "es": "El Tercer Ejército de Patton ataca al norte desde Arlon, libera Bastogne el 26 de diciembre y sigue hasta Houffalize y St. Vith para eliminar la bolsa."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 4,
+      "start": "1944-12-22",
+      "end": "1945-01-28",
+      "path": [
+        [5.81, 49.68],
+        [5.72, 50.0],
+        [5.79, 50.13],
+        [6.13, 50.28]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Bulge"
+    },
+    {
+      "id": "remagen-to-the-elbe",
+      "era": "ww2",
+      "name": {
+        "en": "From Remagen to the Elbe",
+        "es": "De Remagen al Elba"
+      },
+      "summary": {
+        "en": "US armies cross the Rhine at Remagen, encircle the Ruhr, sweep through Kassel and Leipzig and meet the Red Army at Torgau on the Elbe.",
+        "es": "Los ejércitos estadounidenses cruzan el Rin en Remagen, cercan el Ruhr, barren Kassel y Leipzig y se encuentran con el Ejército Rojo en Torgau, sobre el Elba."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 4,
+      "start": "1945-03-07",
+      "end": "1945-04-25",
+      "path": [
+        [7.23, 50.58],
+        [8.77, 50.8],
+        [9.48, 51.31],
+        [11.0, 51.35],
+        [12.37, 51.34],
+        [13.0, 51.56]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Western_Allied_invasion_of_Germany"
+    },
+    {
+      "id": "operation-plunder",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Plunder and the drive to Hamburg",
+        "es": "Operación Plunder y el avance hacia Hamburgo"
+      },
+      "summary": {
+        "en": "Montgomery's 21st Army Group crosses the Rhine at Wesel and advances across the North German plain through Osnabrück and Bremen to Hamburg.",
+        "es": "El 21.er Grupo de Ejércitos de Montgomery cruza el Rin en Wesel y avanza por la llanura del norte de Alemania por Osnabrück y Bremen hasta Hamburgo."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 4,
+      "start": "1945-03-23",
+      "end": "1945-05-03",
+      "path": [
+        [6.62, 51.66],
+        [8.05, 52.28],
+        [8.8, 53.08],
+        [9.99, 53.55]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Plunder"
+    },
+    {
+      "id": "drive-into-southern-germany",
+      "era": "ww2",
+      "name": {
+        "en": "The drive into southern Germany",
+        "es": "El avance hacia el sur de Alemania"
+      },
+      "summary": {
+        "en": "The US Seventh Army crosses the Rhine near Worms and drives through Würzburg, Nuremberg and Munich to the Alps and the Brenner Pass.",
+        "es": "El Séptimo Ejército estadounidense cruza el Rin cerca de Worms y avanza por Wurzburgo, Núremberg y Múnich hasta los Alpes y el paso del Brennero."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 3,
+      "start": "1945-03-26",
+      "end": "1945-05-04",
+      "path": [
+        [8.36, 49.63],
+        [9.93, 49.79],
+        [11.08, 49.45],
+        [11.58, 48.14],
+        [11.4, 47.26],
+        [11.5, 47.0]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Western_Allied_invasion_of_Germany"
+    }
+  ]
+}

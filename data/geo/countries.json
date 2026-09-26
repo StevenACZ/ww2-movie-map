@@ -1,0 +1,2008 @@
+{
+  "sets": {
+    "1914": {
+      "from": "1914-01",
+      "to": "1918-11"
+    },
+    "1920": {
+      "from": "1918-12",
+      "to": "1929-12"
+    },
+    "1930": {
+      "from": "1930-01",
+      "to": "1937-12"
+    },
+    "1938": {
+      "from": "1938-01",
+      "to": "1945-08"
+    },
+    "1945": {
+      "from": "1945-09",
+      "to": "1945-12"
+    }
+  },
+  "statuses": [
+    "neutral",
+    "war",
+    "entente",
+    "central",
+    "allies",
+    "axis",
+    "soviet",
+    "occupied-central",
+    "occupied-axis",
+    "occupied-allies",
+    "occupied-soviet",
+    "civil-war"
+  ],
+  "countries": {
+    "aden": {
+      "name": {
+        "en": "Aden",
+        "es": "Adén"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "afghanistan": {
+      "name": {
+        "en": "Afghanistan",
+        "es": "Afganistán"
+      },
+      "label": [65.96, 33.77],
+      "labelRank": 3,
+      "timeline": []
+    },
+    "albania": {
+      "name": {
+        "en": "Albania",
+        "es": "Albania"
+      },
+      "label": [20.13, 40.84],
+      "labelRank": 3,
+      "timeline": [
+        ["1939-04-07", "occupied-axis"],
+        ["1944-11-29", "allies"]
+      ]
+    },
+    "algeria": {
+      "name": {
+        "en": "Algeria",
+        "es": "Argelia"
+      },
+      "label": [2.81, 27.92],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1942-11-11", "allies"]
+      ]
+    },
+    "american-samoa": {
+      "name": {
+        "en": "American Samoa",
+        "es": "Samoa Americana"
+      },
+      "timeline": [
+        ["1917-04-06", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-08", "allies"]
+      ]
+    },
+    "andorra": {
+      "name": {
+        "en": "Andorra",
+        "es": "Andorra"
+      },
+      "timeline": []
+    },
+    "angola": {
+      "name": {
+        "en": "Angola",
+        "es": "Angola"
+      },
+      "label": [17.56, -12.41],
+      "labelRank": 3,
+      "timeline": [
+        ["1916-03-09", "entente"],
+        ["1918-11-11", "neutral"]
+      ]
+    },
+    "argentina": {
+      "name": {
+        "en": "Argentina",
+        "es": "Argentina"
+      },
+      "label": [-64.44, -33.96],
+      "labelRank": 2,
+      "timeline": [["1945-03-27", "allies"]]
+    },
+    "australia": {
+      "name": {
+        "en": "Australia",
+        "es": "Australia"
+      },
+      "label": [134.41, -24.69],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "austria": {
+      "name": {
+        "en": "Austria",
+        "es": "Austria"
+      },
+      "label": [14.11, 47.58],
+      "labelRank": 3,
+      "timeline": [
+        ["1939-09-01", "axis"],
+        ["1945-05-08", "occupied-allies"]
+      ]
+    },
+    "austria-hungary": {
+      "name": {
+        "en": "Austria-Hungary",
+        "es": "Austria-Hungría"
+      },
+      "label": [17.62, 47.36],
+      "labelRank": 1,
+      "timeline": [
+        ["1914-07-28", "central"],
+        ["1918-11-04", "neutral"]
+      ]
+    },
+    "basutoland": {
+      "name": {
+        "en": "Basutoland",
+        "es": "Basutolandia"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "bechuanaland": {
+      "name": {
+        "en": "Bechuanaland",
+        "es": "Bechuanalandia"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "belgian-congo": {
+      "name": {
+        "en": "Belgian Congo",
+        "es": "Congo Belga"
+      },
+      "label": [23.64, -2.57],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1940-05-10", "allies"]
+      ]
+    },
+    "belgium": {
+      "name": {
+        "en": "Belgium",
+        "es": "Bélgica"
+      },
+      "label": [4.62, 50.68],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1914-08-20", "occupied-central"],
+        ["1918-11-11", "neutral"],
+        ["1940-05-10", "allies"],
+        ["1940-05-28", "occupied-axis"],
+        ["1944-09-03", "allies"]
+      ]
+    },
+    "bhutan": {
+      "name": {
+        "en": "Bhutan",
+        "es": "Bután"
+      },
+      "timeline": []
+    },
+    "bolivia": {
+      "name": {
+        "en": "Bolivia",
+        "es": "Bolivia"
+      },
+      "label": [-64.64, -16.74],
+      "labelRank": 3,
+      "timeline": [
+        ["1932-06-15", "war"],
+        ["1935-06-12", "neutral"],
+        ["1943-04-07", "allies"]
+      ]
+    },
+    "brazil": {
+      "name": {
+        "en": "Brazil",
+        "es": "Brasil"
+      },
+      "label": [-50.85, -11.28],
+      "labelRank": 2,
+      "timeline": [
+        ["1917-10-26", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1942-08-22", "allies"]
+      ]
+    },
+    "british-guiana": {
+      "name": {
+        "en": "British Guiana",
+        "es": "Guayana Británica"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "british-honduras": {
+      "name": {
+        "en": "British Honduras",
+        "es": "Honduras Británica"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "british-malaya": {
+      "name": {
+        "en": "British Malaya",
+        "es": "Malaya británica"
+      },
+      "label": [114.05, 2.96],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1942-02-15", "occupied-axis"],
+        ["1945-09-12", "allies"]
+      ]
+    },
+    "british-raj": {
+      "name": {
+        "en": "British Raj",
+        "es": "Raj británico"
+      },
+      "label": [78.03, 23.64],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "british-somaliland": {
+      "name": {
+        "en": "British Somaliland",
+        "es": "Somalilandia británica"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-08-19", "occupied-axis"],
+        ["1941-03-16", "allies"]
+      ]
+    },
+    "british-west-indies": {
+      "name": {
+        "en": "British West Indies",
+        "es": "Antillas Británicas"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "brunei": {
+      "name": {
+        "en": "Brunei",
+        "es": "Brunéi"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1941-12-16", "occupied-axis"],
+        ["1945-06-10", "allies"]
+      ]
+    },
+    "bulgaria": {
+      "name": {
+        "en": "Bulgaria",
+        "es": "Bulgaria"
+      },
+      "label": [25.01, 42.7],
+      "labelRank": 3,
+      "timeline": [
+        ["1915-10-14", "central"],
+        ["1918-09-30", "neutral"],
+        ["1941-03-01", "axis"],
+        ["1944-09-09", "allies"]
+      ]
+    },
+    "burma": {
+      "name": {
+        "en": "Burma",
+        "es": "Birmania"
+      },
+      "label": [96.15, 21.47],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1942-05-20", "occupied-axis"],
+        ["1945-05-03", "allies"]
+      ]
+    },
+    "canada": {
+      "name": {
+        "en": "Canada",
+        "es": "Canadá"
+      },
+      "label": [-103.51, 57.93],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-10", "allies"]
+      ]
+    },
+    "ceylon": {
+      "name": {
+        "en": "Ceylon",
+        "es": "Ceilán"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "chile": {
+      "name": {
+        "en": "Chile",
+        "es": "Chile"
+      },
+      "label": [-69.24, -23.73],
+      "labelRank": 3,
+      "timeline": [["1945-04-11", "allies"]]
+    },
+    "china": {
+      "name": {
+        "en": "China",
+        "es": "China"
+      },
+      "label": [107.94, 33.14],
+      "labelRank": 1,
+      "timeline": [
+        ["1917-08-14", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1927-08-01", "civil-war"],
+        ["1937-07-07", "allies"]
+      ]
+    },
+    "colombia": {
+      "name": {
+        "en": "Colombia",
+        "es": "Colombia"
+      },
+      "label": [-73.15, 3.74],
+      "labelRank": 3,
+      "timeline": [
+        ["1932-09-01", "war"],
+        ["1933-05-24", "neutral"],
+        ["1943-11-26", "allies"]
+      ]
+    },
+    "costa-rica": {
+      "name": {
+        "en": "Costa Rica",
+        "es": "Costa Rica"
+      },
+      "timeline": [
+        ["1918-05-23", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-08", "allies"]
+      ]
+    },
+    "cuba": {
+      "name": {
+        "en": "Cuba",
+        "es": "Cuba"
+      },
+      "label": [-76.49, 20.63],
+      "labelRank": 3,
+      "timeline": [
+        ["1917-04-07", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-09", "allies"]
+      ]
+    },
+    "czechoslovakia": {
+      "name": {
+        "en": "Czechoslovakia",
+        "es": "Checoslovaquia"
+      },
+      "label": [15.56, 49.74],
+      "labelRank": 3,
+      "timeline": [
+        ["1939-03-15", "occupied-axis"],
+        ["1945-05-09", "allies"]
+      ]
+    },
+    "danzig": {
+      "name": {
+        "en": "Free City of Danzig",
+        "es": "Ciudad Libre de Dánzig"
+      },
+      "timeline": [
+        ["1939-09-01", "axis"],
+        ["1945-03-30", "occupied-soviet"]
+      ]
+    },
+    "denmark": {
+      "name": {
+        "en": "Denmark",
+        "es": "Dinamarca"
+      },
+      "label": [9.19, 55.86],
+      "labelRank": 3,
+      "timeline": [
+        ["1940-04-09", "occupied-axis"],
+        ["1945-05-05", "allies"]
+      ]
+    },
+    "dominican-republic": {
+      "name": {
+        "en": "Dominican Republic",
+        "es": "República Dominicana"
+      },
+      "timeline": [["1941-12-08", "allies"]]
+    },
+    "dutch-east-indies": {
+      "name": {
+        "en": "Dutch East Indies",
+        "es": "Indias Orientales Neerlandesas"
+      },
+      "label": [101.54, -0.48],
+      "labelRank": 2,
+      "timeline": [
+        ["1940-05-10", "allies"],
+        ["1942-03-08", "occupied-axis"],
+        ["1945-09-02", "allies"]
+      ]
+    },
+    "ecuador": {
+      "name": {
+        "en": "Ecuador",
+        "es": "Ecuador"
+      },
+      "timeline": [
+        ["1941-07-05", "war"],
+        ["1941-07-31", "neutral"],
+        ["1945-02-02", "allies"]
+      ]
+    },
+    "egypt": {
+      "name": {
+        "en": "Egypt",
+        "es": "Egipto"
+      },
+      "label": [29.69, 26.31],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-12-18", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1945-02-24", "allies"]
+      ]
+    },
+    "el-salvador": {
+      "name": {
+        "en": "El Salvador",
+        "es": "El Salvador"
+      },
+      "timeline": [["1941-12-08", "allies"]]
+    },
+    "eritrea": {
+      "name": {
+        "en": "Eritrea",
+        "es": "Eritrea"
+      },
+      "timeline": [
+        ["1915-05-23", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1935-10-03", "war"],
+        ["1936-05-09", "neutral"],
+        ["1940-06-10", "axis"],
+        ["1941-04-01", "occupied-allies"]
+      ]
+    },
+    "estonia": {
+      "name": {
+        "en": "Estonia",
+        "es": "Estonia"
+      },
+      "label": [25.88, 58.66],
+      "labelRank": 3,
+      "timeline": [
+        ["1918-11-28", "war"],
+        ["1920-02-02", "neutral"],
+        ["1940-06-17", "occupied-soviet"],
+        ["1941-08-28", "occupied-axis"],
+        ["1944-09-22", "occupied-soviet"]
+      ]
+    },
+    "ethiopia": {
+      "name": {
+        "en": "Ethiopia",
+        "es": "Etiopía"
+      },
+      "label": [39.2, 8.16],
+      "labelRank": 2,
+      "timeline": [
+        ["1935-10-03", "war"],
+        ["1936-05-09", "occupied-axis"],
+        ["1941-05-05", "allies"]
+      ]
+    },
+    "fiji": {
+      "name": {
+        "en": "Fiji",
+        "es": "Fiyi"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "finland": {
+      "name": {
+        "en": "Finland",
+        "es": "Finlandia"
+      },
+      "label": [27.51, 63.81],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-08-01", "entente"],
+        ["1917-12-06", "neutral"],
+        ["1918-01-27", "civil-war"],
+        ["1918-05-15", "neutral"],
+        ["1939-11-30", "war"],
+        ["1940-03-13", "neutral"],
+        ["1941-06-25", "axis"],
+        ["1944-09-19", "allies"]
+      ]
+    },
+    "france": {
+      "name": {
+        "en": "France",
+        "es": "Francia"
+      },
+      "label": [2.42, 46.59],
+      "labelRank": 1,
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1944-08-25", "allies"]
+      ]
+    },
+    "french-cameroons": {
+      "name": {
+        "en": "French Cameroons",
+        "es": "Camerún francés"
+      },
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1940-08-27", "allies"]
+      ]
+    },
+    "french-equatorial-africa": {
+      "name": {
+        "en": "French Equatorial Africa",
+        "es": "África Ecuatorial Francesa"
+      },
+      "label": [18.91, 9.12],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1940-08-28", "allies"]
+      ]
+    },
+    "french-guiana": {
+      "name": {
+        "en": "French Guiana",
+        "es": "Guayana Francesa"
+      },
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1943-03-18", "allies"]
+      ]
+    },
+    "french-indochina": {
+      "name": {
+        "en": "French Indochina",
+        "es": "Indochina francesa"
+      },
+      "label": [107.16, 13.56],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1945-09-02", "allies"]
+      ]
+    },
+    "french-somaliland": {
+      "name": {
+        "en": "French Somaliland",
+        "es": "Somalia Francesa"
+      },
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1942-12-28", "allies"]
+      ]
+    },
+    "french-west-africa": {
+      "name": {
+        "en": "French West Africa",
+        "es": "África Occidental Francesa"
+      },
+      "label": [-5.2, 17.15],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1942-11-23", "allies"]
+      ]
+    },
+    "french-west-indies": {
+      "name": {
+        "en": "French West Indies",
+        "es": "Antillas Francesas"
+      },
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1943-07-14", "allies"]
+      ]
+    },
+    "gambia": {
+      "name": {
+        "en": "Gambia",
+        "es": "Gambia"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "german-east-africa": {
+      "name": {
+        "en": "German East Africa",
+        "es": "África Oriental Alemana"
+      },
+      "timeline": [
+        ["1914-08-01", "central"],
+        ["1916-09-04", "entente"],
+        ["1918-11-11", "neutral"]
+      ]
+    },
+    "germany": {
+      "name": {
+        "en": "Germany",
+        "es": "Alemania"
+      },
+      "label": [10.69, 51.26],
+      "labelRank": 1,
+      "timeline": [
+        ["1914-08-01", "central"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-01", "axis"],
+        ["1945-05-08", "occupied-allies"]
+      ]
+    },
+    "gilbert-and-ellice": {
+      "name": {
+        "en": "Gilbert and Ellice Islands",
+        "es": "Islas Gilbert y Ellice"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1941-12-10", "occupied-axis"],
+        ["1943-11-23", "allies"]
+      ]
+    },
+    "gold-coast": {
+      "name": {
+        "en": "Gold Coast",
+        "es": "Costa de Oro"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "greece": {
+      "name": {
+        "en": "Greece",
+        "es": "Grecia"
+      },
+      "label": [21.91, 39.48],
+      "labelRank": 2,
+      "timeline": [
+        ["1917-06-27", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1919-05-15", "war"],
+        ["1922-10-11", "neutral"],
+        ["1940-10-28", "allies"],
+        ["1941-04-27", "occupied-axis"],
+        ["1944-10-12", "allies"]
+      ]
+    },
+    "greenland": {
+      "name": {
+        "en": "Greenland",
+        "es": "Groenlandia"
+      },
+      "label": [-41.39, 74.7],
+      "labelRank": 3,
+      "timeline": [["1941-04-09", "allies"]]
+    },
+    "guam": {
+      "name": {
+        "en": "Guam",
+        "es": "Guam"
+      },
+      "timeline": [
+        ["1917-04-06", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-08", "allies"],
+        ["1941-12-10", "occupied-axis"],
+        ["1944-08-10", "allies"]
+      ]
+    },
+    "guatemala": {
+      "name": {
+        "en": "Guatemala",
+        "es": "Guatemala"
+      },
+      "timeline": [
+        ["1918-04-23", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-09", "allies"]
+      ]
+    },
+    "haiti": {
+      "name": {
+        "en": "Haiti",
+        "es": "Haití"
+      },
+      "timeline": [
+        ["1918-07-12", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-08", "allies"]
+      ]
+    },
+    "honduras": {
+      "name": {
+        "en": "Honduras",
+        "es": "Honduras"
+      },
+      "timeline": [
+        ["1918-07-19", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-08", "allies"]
+      ]
+    },
+    "hong-kong": {
+      "name": {
+        "en": "Hong Kong",
+        "es": "Hong Kong"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1941-12-25", "occupied-axis"],
+        ["1945-08-30", "allies"]
+      ]
+    },
+    "hungary": {
+      "name": {
+        "en": "Hungary",
+        "es": "Hungría"
+      },
+      "label": [19.48, 47.32],
+      "labelRank": 2,
+      "timeline": [
+        ["1919-04-16", "war"],
+        ["1919-08-03", "neutral"],
+        ["1941-06-27", "axis"],
+        ["1944-03-19", "occupied-axis"],
+        ["1945-04-04", "occupied-soviet"]
+      ]
+    },
+    "iceland": {
+      "name": {
+        "en": "Iceland",
+        "es": "Islandia"
+      },
+      "label": [-18.57, 64.74],
+      "labelRank": 3,
+      "timeline": [["1940-05-10", "occupied-allies"]]
+    },
+    "iran": {
+      "name": {
+        "en": "Iran (Persia)",
+        "es": "Irán (Persia)"
+      },
+      "label": [54.44, 32.26],
+      "labelRank": 2,
+      "timeline": [
+        ["1941-08-25", "occupied-allies"],
+        ["1943-09-09", "allies"]
+      ]
+    },
+    "iraq": {
+      "name": {
+        "en": "Iraq",
+        "es": "Irak"
+      },
+      "label": [42.97, 32.96],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-05-02", "war"],
+        ["1941-05-31", "occupied-allies"],
+        ["1943-01-17", "allies"]
+      ]
+    },
+    "ireland": {
+      "name": {
+        "en": "Ireland",
+        "es": "Irlanda"
+      },
+      "label": [-7.97, 53.14],
+      "labelRank": 3,
+      "timeline": [
+        ["1919-01-21", "civil-war"],
+        ["1921-07-11", "neutral"],
+        ["1922-06-28", "civil-war"],
+        ["1923-05-24", "neutral"]
+      ]
+    },
+    "italian-somaliland": {
+      "name": {
+        "en": "Italian Somaliland",
+        "es": "Somalia italiana"
+      },
+      "timeline": [
+        ["1915-05-23", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1935-10-03", "war"],
+        ["1936-05-09", "neutral"],
+        ["1940-06-10", "axis"],
+        ["1941-02-25", "occupied-allies"]
+      ]
+    },
+    "italy": {
+      "name": {
+        "en": "Italy",
+        "es": "Italia"
+      },
+      "label": [11.02, 44.76],
+      "labelRank": 1,
+      "timeline": [
+        ["1915-05-23", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1935-10-03", "war"],
+        ["1936-05-09", "neutral"],
+        ["1940-06-10", "axis"],
+        ["1943-09-08", "occupied-axis"],
+        ["1943-10-13", "allies"]
+      ]
+    },
+    "japan": {
+      "name": {
+        "en": "Japan",
+        "es": "Japón"
+      },
+      "label": [138.22, 36.06],
+      "labelRank": 1,
+      "timeline": [
+        ["1914-08-23", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1937-07-07", "axis"],
+        ["1945-09-02", "occupied-allies"]
+      ]
+    },
+    "kamerun": {
+      "name": {
+        "en": "Kamerun",
+        "es": "Camerún alemán"
+      },
+      "timeline": [
+        ["1914-08-01", "central"],
+        ["1916-03-10", "entente"],
+        ["1918-11-11", "neutral"]
+      ]
+    },
+    "kenya": {
+      "name": {
+        "en": "Kenya",
+        "es": "Kenia"
+      },
+      "label": [37.8, 0.41],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "korea": {
+      "name": {
+        "en": "Korea",
+        "es": "Corea"
+      },
+      "label": [128.13, 36.99],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-08-23", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1937-07-07", "axis"],
+        ["1945-09-02", "occupied-allies"]
+      ]
+    },
+    "kuwait": {
+      "name": {
+        "en": "Kuwait",
+        "es": "Kuwait"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "latvia": {
+      "name": {
+        "en": "Latvia",
+        "es": "Letonia"
+      },
+      "label": [25.15, 57.14],
+      "labelRank": 3,
+      "timeline": [
+        ["1918-12-05", "war"],
+        ["1920-08-11", "neutral"],
+        ["1940-06-17", "occupied-soviet"],
+        ["1941-07-01", "occupied-axis"],
+        ["1944-10-13", "occupied-soviet"]
+      ]
+    },
+    "lebanon": {
+      "name": {
+        "en": "Lebanon",
+        "es": "Líbano"
+      },
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1941-07-14", "allies"]
+      ]
+    },
+    "liberia": {
+      "name": {
+        "en": "Liberia",
+        "es": "Liberia"
+      },
+      "timeline": [
+        ["1917-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1944-01-27", "allies"]
+      ]
+    },
+    "libya": {
+      "name": {
+        "en": "Libya",
+        "es": "Libia"
+      },
+      "label": [19.13, 26.23],
+      "labelRank": 2,
+      "timeline": [
+        ["1915-05-23", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1935-10-03", "war"],
+        ["1936-05-09", "neutral"],
+        ["1940-06-10", "axis"],
+        ["1943-01-23", "occupied-allies"]
+      ]
+    },
+    "lithuania": {
+      "name": {
+        "en": "Lithuania",
+        "es": "Lituania"
+      },
+      "label": [23.76, 55.36],
+      "labelRank": 3,
+      "timeline": [
+        ["1918-12-01", "war"],
+        ["1920-11-30", "neutral"],
+        ["1940-06-15", "occupied-soviet"],
+        ["1941-06-24", "occupied-axis"],
+        ["1944-07-13", "occupied-soviet"]
+      ]
+    },
+    "luxembourg": {
+      "name": {
+        "en": "Luxembourg",
+        "es": "Luxemburgo"
+      },
+      "timeline": [
+        ["1914-08-02", "occupied-central"],
+        ["1918-11-11", "neutral"],
+        ["1940-05-10", "occupied-axis"],
+        ["1944-09-10", "allies"]
+      ]
+    },
+    "madagascar": {
+      "name": {
+        "en": "Madagascar",
+        "es": "Madagascar"
+      },
+      "label": [46.73, -19.21],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1942-11-06", "allies"]
+      ]
+    },
+    "malta": {
+      "name": {
+        "en": "Malta",
+        "es": "Malta"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "manchuria": {
+      "name": {
+        "en": "Manchuria",
+        "es": "Manchuria"
+      },
+      "label": [124.83, 46.68],
+      "labelRank": 2,
+      "timeline": [
+        ["1931-09-18", "occupied-axis"],
+        ["1945-08-20", "occupied-soviet"]
+      ]
+    },
+    "mexico": {
+      "name": {
+        "en": "Mexico",
+        "es": "México"
+      },
+      "label": [-102.44, 24.02],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-01-01", "civil-war"],
+        ["1920-12-01", "neutral"],
+        ["1926-08-01", "civil-war"],
+        ["1929-06-21", "neutral"],
+        ["1942-05-22", "allies"]
+      ]
+    },
+    "mongolia": {
+      "name": {
+        "en": "Mongolia",
+        "es": "Mongolia"
+      },
+      "label": [102.91, 46.42],
+      "labelRank": 2,
+      "timeline": [
+        ["1939-05-11", "war"],
+        ["1939-09-16", "neutral"],
+        ["1945-08-10", "allies"]
+      ]
+    },
+    "montenegro": {
+      "name": {
+        "en": "Montenegro",
+        "es": "Montenegro"
+      },
+      "timeline": [
+        ["1914-08-05", "entente"],
+        ["1916-01-25", "occupied-central"],
+        ["1918-11-11", "neutral"]
+      ]
+    },
+    "morocco": {
+      "name": {
+        "en": "French Morocco",
+        "es": "Marruecos francés"
+      },
+      "label": [-6.31, 31.81],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1942-11-11", "allies"]
+      ]
+    },
+    "mozambique": {
+      "name": {
+        "en": "Mozambique",
+        "es": "Mozambique"
+      },
+      "label": [38.04, -15.02],
+      "labelRank": 3,
+      "timeline": [
+        ["1916-03-09", "entente"],
+        ["1918-11-11", "neutral"]
+      ]
+    },
+    "nepal": {
+      "name": {
+        "en": "Nepal",
+        "es": "Nepal"
+      },
+      "timeline": [["1939-09-04", "allies"]]
+    },
+    "netherlands": {
+      "name": {
+        "en": "Netherlands",
+        "es": "Países Bajos"
+      },
+      "label": [6.27, 52.66],
+      "labelRank": 3,
+      "timeline": [
+        ["1940-05-10", "allies"],
+        ["1940-05-15", "occupied-axis"],
+        ["1945-05-05", "allies"]
+      ]
+    },
+    "netherlands-antilles": {
+      "name": {
+        "en": "Netherlands Antilles",
+        "es": "Antillas Neerlandesas"
+      },
+      "timeline": [["1940-05-10", "allies"]]
+    },
+    "new-caledonia": {
+      "name": {
+        "en": "New Caledonia",
+        "es": "Nueva Caledonia"
+      },
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1940-09-19", "allies"]
+      ]
+    },
+    "new-guinea": {
+      "name": {
+        "en": "New Guinea",
+        "es": "Nueva Guinea"
+      },
+      "timeline": [
+        ["1914-08-01", "central"],
+        ["1914-09-17", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "new-hebrides": {
+      "name": {
+        "en": "New Hebrides",
+        "es": "Nuevas Hébridas"
+      },
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1940-07-22", "allies"]
+      ]
+    },
+    "new-zealand": {
+      "name": {
+        "en": "New Zealand",
+        "es": "Nueva Zelanda"
+      },
+      "label": [169.5, -45.1],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "newfoundland": {
+      "name": {
+        "en": "Newfoundland",
+        "es": "Terranova"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "nicaragua": {
+      "name": {
+        "en": "Nicaragua",
+        "es": "Nicaragua"
+      },
+      "timeline": [
+        ["1918-05-06", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-08", "allies"]
+      ]
+    },
+    "nigeria": {
+      "name": {
+        "en": "Nigeria",
+        "es": "Nigeria"
+      },
+      "label": [8.08, 9.57],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "niue": {
+      "name": {
+        "en": "Niue",
+        "es": "Niue"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "norway": {
+      "name": {
+        "en": "Norway",
+        "es": "Noruega"
+      },
+      "label": [10.17, 61.62],
+      "labelRank": 2,
+      "timeline": [
+        ["1940-04-09", "allies"],
+        ["1940-06-10", "occupied-axis"],
+        ["1945-05-08", "allies"]
+      ]
+    },
+    "nyasaland": {
+      "name": {
+        "en": "Nyasaland",
+        "es": "Nyasalandia"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "oman": {
+      "name": {
+        "en": "Muscat and Oman",
+        "es": "Mascate y Omán"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "ottoman-empire": {
+      "name": {
+        "en": "Ottoman Empire",
+        "es": "Imperio otomano"
+      },
+      "label": [40.86, 37.64],
+      "labelRank": 1,
+      "timeline": [
+        ["1914-11-01", "central"],
+        ["1918-10-31", "neutral"]
+      ]
+    },
+    "palestine": {
+      "name": {
+        "en": "Mandatory Palestine",
+        "es": "Palestina (Mandato británico)"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "panama": {
+      "name": {
+        "en": "Panama",
+        "es": "Panamá"
+      },
+      "timeline": [
+        ["1917-04-07", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-07", "allies"]
+      ]
+    },
+    "paraguay": {
+      "name": {
+        "en": "Paraguay",
+        "es": "Paraguay"
+      },
+      "label": [-59.82, -22.09],
+      "labelRank": 3,
+      "timeline": [
+        ["1932-06-15", "war"],
+        ["1935-06-12", "neutral"],
+        ["1945-02-07", "allies"]
+      ]
+    },
+    "peru": {
+      "name": {
+        "en": "Peru",
+        "es": "Perú"
+      },
+      "label": [-73.62, -12.44],
+      "labelRank": 3,
+      "timeline": [
+        ["1932-09-01", "war"],
+        ["1933-05-24", "neutral"],
+        ["1941-07-05", "war"],
+        ["1941-07-31", "neutral"],
+        ["1945-02-12", "allies"]
+      ]
+    },
+    "philippines": {
+      "name": {
+        "en": "Philippines",
+        "es": "Filipinas"
+      },
+      "label": [121.12, 16.73],
+      "labelRank": 2,
+      "timeline": [
+        ["1917-04-06", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-08", "allies"],
+        ["1942-05-06", "occupied-axis"],
+        ["1945-03-03", "allies"]
+      ]
+    },
+    "poland": {
+      "name": {
+        "en": "Poland",
+        "es": "Polonia"
+      },
+      "label": [22.61, 51.77],
+      "labelRank": 2,
+      "timeline": [
+        ["1919-02-14", "war"],
+        ["1921-03-18", "neutral"],
+        ["1939-09-01", "allies"],
+        ["1939-09-28", "occupied-axis"],
+        ["1945-01-17", "allies"]
+      ]
+    },
+    "portugal": {
+      "name": {
+        "en": "Portugal",
+        "es": "Portugal"
+      },
+      "label": [-8.02, 40.18],
+      "labelRank": 3,
+      "timeline": [
+        ["1916-03-09", "entente"],
+        ["1918-11-11", "neutral"]
+      ]
+    },
+    "portuguese-guinea": {
+      "name": {
+        "en": "Portuguese Guinea",
+        "es": "Guinea Portuguesa"
+      },
+      "timeline": [
+        ["1916-03-09", "entente"],
+        ["1918-11-11", "neutral"]
+      ]
+    },
+    "puerto-rico": {
+      "name": {
+        "en": "Puerto Rico",
+        "es": "Puerto Rico"
+      },
+      "timeline": [
+        ["1917-04-06", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-08", "allies"]
+      ]
+    },
+    "qatar": {
+      "name": {
+        "en": "Qatar",
+        "es": "Catar"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "rhodesia": {
+      "name": {
+        "en": "Rhodesia",
+        "es": "Rodesia"
+      },
+      "label": [27.61, -15.77],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "romania": {
+      "name": {
+        "en": "Romania",
+        "es": "Rumania"
+      },
+      "label": [25.57, 46.16],
+      "labelRank": 2,
+      "timeline": [
+        ["1916-08-27", "entente"],
+        ["1916-12-06", "occupied-central"],
+        ["1918-11-10", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1919-04-16", "war"],
+        ["1919-08-03", "neutral"],
+        ["1941-06-22", "axis"],
+        ["1944-08-23", "allies"]
+      ]
+    },
+    "ruanda-urundi": {
+      "name": {
+        "en": "Ruanda-Urundi",
+        "es": "Ruanda-Urundi"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1940-05-10", "allies"]
+      ]
+    },
+    "russia": {
+      "name": {
+        "en": "Russian Empire",
+        "es": "Imperio ruso"
+      },
+      "label": [70.02, 53.22],
+      "labelRank": 1,
+      "timeline": [
+        ["1914-08-01", "entente"],
+        ["1917-12-15", "civil-war"],
+        ["1922-10-25", "neutral"]
+      ]
+    },
+    "samoa": {
+      "name": {
+        "en": "Samoa",
+        "es": "Samoa"
+      },
+      "timeline": [
+        ["1914-08-01", "central"],
+        ["1914-08-29", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "saudi-arabia": {
+      "name": {
+        "en": "Saudi Arabia",
+        "es": "Arabia Saudí"
+      },
+      "label": [44.45, 23.52],
+      "labelRank": 2,
+      "timeline": [["1945-02-28", "allies"]]
+    },
+    "serbia": {
+      "name": {
+        "en": "Serbia",
+        "es": "Serbia"
+      },
+      "label": [21.3, 43.11],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-07-28", "entente"],
+        ["1915-11-24", "occupied-central"],
+        ["1918-11-01", "entente"],
+        ["1918-11-11", "neutral"]
+      ]
+    },
+    "sierra-leone": {
+      "name": {
+        "en": "Sierra Leone",
+        "es": "Sierra Leona"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "solomon-islands": {
+      "name": {
+        "en": "Solomon Islands",
+        "es": "Islas Salomón"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1942-05-03", "occupied-axis"],
+        ["1943-02-09", "allies"]
+      ]
+    },
+    "south-africa": {
+      "name": {
+        "en": "South Africa",
+        "es": "Sudáfrica"
+      },
+      "label": [23.3, -30.27],
+      "labelRank": 2,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-06", "allies"]
+      ]
+    },
+    "south-seas-mandate": {
+      "name": {
+        "en": "South Seas Mandate",
+        "es": "Mandato del Pacífico Sur"
+      },
+      "timeline": [
+        ["1914-08-23", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1937-07-07", "axis"],
+        ["1944-08-01", "occupied-allies"]
+      ]
+    },
+    "south-west-africa": {
+      "name": {
+        "en": "South West Africa",
+        "es": "África del Sudoeste"
+      },
+      "timeline": [
+        ["1914-08-01", "central"],
+        ["1915-07-09", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-06", "allies"]
+      ]
+    },
+    "spain": {
+      "name": {
+        "en": "Spain",
+        "es": "España"
+      },
+      "label": [-3.55, 40.37],
+      "labelRank": 2,
+      "timeline": [
+        ["1936-07-17", "civil-war"],
+        ["1939-04-01", "neutral"]
+      ]
+    },
+    "spanish-guinea": {
+      "name": {
+        "en": "Spanish Guinea",
+        "es": "Guinea Española"
+      },
+      "timeline": [
+        ["1936-07-17", "civil-war"],
+        ["1939-04-01", "neutral"]
+      ]
+    },
+    "spanish-morocco": {
+      "name": {
+        "en": "Spanish Morocco",
+        "es": "Marruecos español"
+      },
+      "timeline": [
+        ["1936-07-17", "civil-war"],
+        ["1939-04-01", "neutral"]
+      ]
+    },
+    "spanish-sahara": {
+      "name": {
+        "en": "Spanish Sahara",
+        "es": "Sahara Español"
+      },
+      "timeline": [
+        ["1936-07-17", "civil-war"],
+        ["1939-04-01", "neutral"]
+      ]
+    },
+    "sudan": {
+      "name": {
+        "en": "Anglo-Egyptian Sudan",
+        "es": "Sudán anglo-egipcio"
+      },
+      "label": [29.8, 13.92],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "suriname": {
+      "name": {
+        "en": "Suriname",
+        "es": "Surinam"
+      },
+      "timeline": [["1940-05-10", "allies"]]
+    },
+    "swaziland": {
+      "name": {
+        "en": "Swaziland",
+        "es": "Suazilandia"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "sweden": {
+      "name": {
+        "en": "Sweden",
+        "es": "Suecia"
+      },
+      "label": [16.28, 64.31],
+      "labelRank": 2,
+      "timeline": []
+    },
+    "switzerland": {
+      "name": {
+        "en": "Switzerland",
+        "es": "Suiza"
+      },
+      "label": [7.88, 46.94],
+      "labelRank": 3,
+      "timeline": []
+    },
+    "syria": {
+      "name": {
+        "en": "Syria (French Mandate)",
+        "es": "Siria (Mandato francés)"
+      },
+      "label": [38.72, 35.9],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1941-07-14", "allies"]
+      ]
+    },
+    "taiwan": {
+      "name": {
+        "en": "Taiwan",
+        "es": "Taiwán"
+      },
+      "timeline": [
+        ["1914-08-23", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1937-07-07", "axis"],
+        ["1945-09-02", "occupied-allies"],
+        ["1945-10-25", "allies"]
+      ]
+    },
+    "tanganyika": {
+      "name": {
+        "en": "Tanganyika",
+        "es": "Tanganica"
+      },
+      "label": [34.84, -6.35],
+      "labelRank": 3,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "thailand": {
+      "name": {
+        "en": "Thailand (Siam)",
+        "es": "Tailandia (Siam)"
+      },
+      "label": [100.94, 15.25],
+      "labelRank": 2,
+      "timeline": [
+        ["1917-07-22", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1940-11-28", "war"],
+        ["1941-01-28", "neutral"],
+        ["1941-12-21", "axis"],
+        ["1945-08-16", "neutral"]
+      ]
+    },
+    "tibet": {
+      "name": {
+        "en": "Tibet",
+        "es": "Tíbet"
+      },
+      "label": [87.61, 31.37],
+      "labelRank": 3,
+      "timeline": []
+    },
+    "togoland": {
+      "name": {
+        "en": "Togoland",
+        "es": "Togolandia"
+      },
+      "timeline": [
+        ["1914-08-01", "central"],
+        ["1914-08-26", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1944-08-25", "allies"]
+      ]
+    },
+    "tonga": {
+      "name": {
+        "en": "Tonga",
+        "es": "Tonga"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "transjordan": {
+      "name": {
+        "en": "Transjordan",
+        "es": "Transjordania"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "trucial-states": {
+      "name": {
+        "en": "Trucial States",
+        "es": "Estados de la Tregua"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "tunisia": {
+      "name": {
+        "en": "Tunisia",
+        "es": "Túnez"
+      },
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1943-05-13", "allies"]
+      ]
+    },
+    "turkey": {
+      "name": {
+        "en": "Turkey",
+        "es": "Turquía"
+      },
+      "label": [32.88, 39.07],
+      "labelRank": 2,
+      "timeline": [
+        ["1919-05-15", "war"],
+        ["1922-10-11", "neutral"],
+        ["1945-02-23", "allies"]
+      ]
+    },
+    "uganda": {
+      "name": {
+        "en": "Uganda",
+        "es": "Uganda"
+      },
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "uk": {
+      "name": {
+        "en": "United Kingdom",
+        "es": "Reino Unido"
+      },
+      "label": [-1.56, 52.95],
+      "labelRank": 1,
+      "timeline": [
+        ["1914-08-04", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"]
+      ]
+    },
+    "uruguay": {
+      "name": {
+        "en": "Uruguay",
+        "es": "Uruguay"
+      },
+      "timeline": [["1945-02-15", "allies"]]
+    },
+    "us-virgin-islands": {
+      "name": {
+        "en": "US Virgin Islands",
+        "es": "Islas Vírgenes de EE. UU."
+      },
+      "timeline": [
+        ["1917-04-06", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-08", "allies"]
+      ]
+    },
+    "usa": {
+      "name": {
+        "en": "United States",
+        "es": "Estados Unidos"
+      },
+      "label": [-99.39, 39.45],
+      "labelRank": 1,
+      "timeline": [
+        ["1917-04-06", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-08", "allies"]
+      ]
+    },
+    "ussr": {
+      "name": {
+        "en": "Soviet Union",
+        "es": "Unión Soviética"
+      },
+      "label": [70.01, 53.24],
+      "labelRank": 1,
+      "timeline": [
+        ["1917-11-07", "civil-war"],
+        ["1922-10-25", "neutral"],
+        ["1939-05-11", "war"],
+        ["1939-09-17", "soviet"],
+        ["1941-06-22", "allies"]
+      ]
+    },
+    "venezuela": {
+      "name": {
+        "en": "Venezuela",
+        "es": "Venezuela"
+      },
+      "label": [-65.04, 7.41],
+      "labelRank": 3,
+      "timeline": [["1945-02-15", "allies"]]
+    },
+    "wake-island": {
+      "name": {
+        "en": "Wake Island",
+        "es": "Isla Wake"
+      },
+      "timeline": [
+        ["1917-04-06", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1941-12-08", "allies"],
+        ["1941-12-23", "occupied-axis"],
+        ["1945-09-04", "allies"]
+      ]
+    },
+    "wallis-and-futuna": {
+      "name": {
+        "en": "Wallis and Futuna",
+        "es": "Wallis y Futuna"
+      },
+      "timeline": [
+        ["1914-08-03", "entente"],
+        ["1918-11-11", "neutral"],
+        ["1939-09-03", "allies"],
+        ["1940-06-22", "occupied-axis"],
+        ["1942-05-27", "allies"]
+      ]
+    },
+    "xinjiang": {
+      "name": {
+        "en": "Xinjiang",
+        "es": "Sinkiang"
+      },
+      "label": [85.12, 41.05],
+      "labelRank": 3,
+      "timeline": []
+    },
+    "yugoslavia": {
+      "name": {
+        "en": "Yugoslavia",
+        "es": "Yugoslavia"
+      },
+      "label": [18.96, 44.08],
+      "labelRank": 2,
+      "timeline": [
+        ["1941-04-06", "allies"],
+        ["1941-04-17", "occupied-axis"],
+        ["1944-10-20", "allies"]
+      ]
+    }
+  }
+}

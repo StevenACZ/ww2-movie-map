@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: "17 9 * * *"
 
 permissions:
   contents: read
@@ -24,6 +26,7 @@ jobs:
       LOCAL_SSH_KEY: ${{ vars.LOCAL_SSH_KEY_PATH }}
       DEPLOY_PATH_PREFIX: ${{ vars.DEPLOY_PATH_PREFIX }}
       PRODUCTION_URL: https://ww2.stevenacz.com
+      HAS_TMDB: ${{ secrets.TMDB_API_KEY != '' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
@@ -57,6 +60,13 @@ jobs:
           else
             bun install --frozen-lockfile
           fi
+
+      - name: Refresh TMDB data
+        if: env.HAS_TMDB == 'true'
+        continue-on-error: true
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: bun scripts/tmdb/sync.ts
 
       - name: Format check
         run: |

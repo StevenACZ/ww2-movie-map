@@ -1,694 +1,642 @@
 <template>
-  <main class="timeline-page" role="main" aria-label="WW2 Interactive Timeline">
-    <!-- Background Map -->
-    <div class="world-map-bg" aria-hidden="true"></div>
-
-    <!-- Subtle grid pattern -->
-    <div class="grid-pattern" aria-hidden="true"></div>
-
-    <header class="header-content">
-      <span class="period-badge"
-        >{{ visibleStartYear }} - {{ visibleEndYear }}</span
-      >
-      <h1>Interactive Timeline</h1>
-      <h2>The War and Cinema</h2>
-      <p class="subtitle">
-        Explore key historical events and related film releases
+  <div ref="root" class="tl">
+    <header class="tl-hero container">
+      <p class="tl-hero__eyebrow eyebrow">{{ t("timelinePage.eyebrow") }}</p>
+      <h1 class="tl-hero__title">{{ t("timeline.h1") }}</h1>
+      <p class="tl-hero__intro">{{ t("timeline.intro") }}</p>
+      <div class="tl-strip" aria-hidden="true">
+        <span class="tl-strip__year stencil">1914</span>
+        <svg
+          class="tl-strip__ruler"
+          viewBox="0 0 320 40"
+          preserveAspectRatio="none"
+        >
+          <line
+            v-for="(tick, i) in TICKS"
+            :key="tick.year"
+            class="tl-strip__tick"
+            :class="`tl-strip__tick--${tick.era}`"
+            :x1="5 + i * 10"
+            :x2="5 + i * 10"
+            :y1="tick.big ? 6 : 16"
+            y2="34"
+            :style="{ '--i': i }"
+          />
+          <path class="tl-strip__line" d="M0 34H320" pathLength="1" />
+        </svg>
+        <TimelineYear
+          class="tl-strip__year tl-strip__year--end stencil"
+          :year="1945"
+          :from="1914"
+        />
+      </div>
+      <p class="tl-hero__stats mono">
+        {{
+          t("timelinePage.stats", {
+            events: events.length,
+            films: titles.length,
+          })
+        }}
       </p>
     </header>
 
-    <!-- Legend -->
-    <div class="legend">
-      <div class="legend-item">
-        <span class="legend-dot event-dot"></span>
-        <span>Historical Events</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-dot film-dot"></span>
-        <span>Films</span>
-      </div>
-    </div>
-
-    <!-- Mobile Timeline (Card-based) -->
-    <div class="mobile-timeline" v-if="isMobile">
-      <TransitionGroup name="mobile-card">
-        <!-- Events -->
-        <TimelineMobileCard
-          v-for="event in mobileTimelineItems.events"
-          :key="'event-' + event.id"
-          :item="event"
-          type="event"
-        />
-
-        <!-- Films -->
-        <TimelineMobileCard
-          v-for="film in mobileTimelineItems.films"
-          :key="'film-' + film.id"
-          :item="film"
-          type="film"
-          @select="toggleFilmPopup"
-        />
-      </TransitionGroup>
-
-      <!-- Empty State -->
-      <div
-        v-if="
-          mobileTimelineItems.events.length === 0 &&
-          mobileTimelineItems.films.length === 0
-        "
-        class="empty-state"
-      >
-        <CalendarIcon class="empty-icon" />
-        <p>No events or films in this period</p>
-      </div>
-    </div>
-
-    <!-- Desktop Timeline -->
-    <div class="timeline-container" ref="timelineContainer" v-if="!isMobile">
-      <!-- Timeline Axis (Center) -->
-      <div class="timeline-axis">
-        <div class="axis-line"></div>
-
-        <!-- Year Markers -->
-        <div
-          v-for="year in visibleYears"
-          :key="year"
-          class="year-marker"
-          :style="{ left: getYearPosition(year) + '%' }"
+    <nav class="tl-nav" :aria-label="t('timeline.jump')">
+      <div class="tl-nav__inner container">
+        <span class="tl-nav__label eyebrow">{{ t("timeline.jump") }}</span>
+        <ul class="tl-nav__chips">
+          <li v-for="chapter in chapters" :key="chapter.era">
+            <a
+              :href="`#${chapter.era}`"
+              class="chip tl-nav__chip"
+              :class="[
+                `tl-nav__chip--${chapter.era}`,
+                { 'is-active': current.era === chapter.era },
+              ]"
+              :aria-current="current.era === chapter.era ? 'true' : undefined"
+              @click="play(chapter.era)"
+            >
+              {{ t(`era.short.${chapter.era}`) }}
+              <span class="mono tl-nav__years">{{
+                t(`era.years.${chapter.era}`)
+              }}</span>
+            </a>
+          </li>
+        </ul>
+        <span
+          class="tl-nav__pill mono"
+          :class="`tl-nav__pill--${current.era}`"
+          aria-hidden="true"
         >
-          <div class="year-tick"></div>
-          <div class="year-label">{{ year }}</div>
+          <TimelineYear :year="current.year" />
+        </span>
+      </div>
+    </nav>
+
+    <div class="tl-body container">
+      <aside class="tl-side" aria-hidden="true">
+        <div class="tl-side__sticky" :class="`tl-side__sticky--${current.era}`">
+          <span class="tl-side__era eyebrow">{{
+            t(`era.${current.era}`)
+          }}</span>
+          <TimelineYear class="tl-side__year stencil" :year="current.year" />
+          <span class="tl-side__bar" />
         </div>
-      </div>
+      </aside>
 
-      <!-- Events Section (Top Half) -->
-      <div class="timeline-section events-section">
-        <TransitionGroup name="card">
-          <TimelineEventCard
-            v-for="(event, index) in positionedEvents"
-            :key="event.id"
-            :event="event"
-            :index="index"
-          />
-        </TransitionGroup>
-      </div>
-
-      <!-- Films Section (Bottom Half) -->
-      <div class="timeline-section films-section">
-        <TransitionGroup name="card">
-          <TimelineFilmCard
-            v-for="(film, index) in positionedFilms"
-            :key="film.id"
-            :film="film"
-            :index="index"
-            :is-selected="selectedFilm?.id === film.id"
-            @select="selectFilm"
-            @open-trailer="openTrailer"
-          />
-        </TransitionGroup>
+      <div class="tl-chapters">
+        <section
+          v-for="(chapter, n) in chapters"
+          :id="chapter.era"
+          :key="chapter.era"
+          class="tl-chapter"
+          :class="`tl-chapter--${chapter.era}`"
+          :aria-labelledby="`${chapter.era}-title`"
+        >
+          <header class="tl-chapter__head">
+            <p class="tl-chapter__num mono">
+              {{ t("timeline.chapter", { n: n + 1 }) }}
+            </p>
+            <h2 :id="`${chapter.era}-title`" class="tl-chapter__title">
+              {{ t(`era.${chapter.era}`) }}
+            </h2>
+            <p class="tl-chapter__years stencil">
+              {{ t(`era.years.${chapter.era}`) }}
+            </p>
+          </header>
+          <div class="tl-track">
+            <span class="tl-track__fill" aria-hidden="true" />
+            <ol class="tl-track__list">
+              <TimelineEventCard
+                v-for="(event, i) in chapter.events"
+                :key="event.id"
+                :event="event"
+                :films="filmsFor(event)"
+                :side="i % 2 === 0 ? 'left' : 'right'"
+                :rank="n === 0 ? i : events.length"
+              />
+            </ol>
+          </div>
+        </section>
       </div>
     </div>
-
-    <!-- Mobile Film Popup Modal -->
-    <TimelineMobileModal
-      :film="mobileSelectedFilm"
-      @close="mobileSelectedFilm = null"
-    />
-
-    <!-- Bottom Navigation -->
-    <TimelineNav
-      :periods="periods"
-      :current-index="currentPeriodIndex"
-      @prev="prevPeriod"
-      @next="nextPeriod"
-      @set-period="setPeriod"
-    />
-
-    <!-- Period info tooltip -->
-    <footer class="period-info" role="status" aria-live="polite">
-      <span class="info-text">
-        {{ positionedEvents.length }} events •
-        {{ positionedFilms.length }} films
-      </span>
-    </footer>
-
-    <!-- Trailer Modal (Desktop Only) -->
-    <TrailerModal
-      :is-open="isTrailerOpen"
-      :trailer-url="activeTrailerUrl"
-      :film-title="activeFilmTitle"
-      @close="closeTrailer"
-    />
-  </main>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from "vue";
-import { useTimelinePositioning } from "../composables/useTimelinePositioning";
-import type { Film } from "../../types";
-import type {
-  HistoricalEvent,
-  TimelinePeriod,
-  PositionedFilm,
-} from "../../types/timeline";
+import type { Era, Locale } from "~~/types/data";
+import type { EventCard, TitleCard } from "~~/types/view";
 
-// Import JSON data
-import filmsData from "../../data/films.json";
-import eventsData from "../../data/historical-events.json";
-import {
-  buildPageSeo,
-  canonicalUrl,
-  jsonLdScript,
-  SITE_URL,
-} from "~/utils/seo";
-
-// Import components
-import TimelineEventCard from "../components/timeline/TimelineEventCard.vue";
-import TimelineFilmCard from "../components/timeline/TimelineFilmCard.vue";
-import TimelineMobileCard from "../components/timeline/TimelineMobileCard.vue";
-import TimelineMobileModal from "../components/timeline/TimelineMobileModal.vue";
-import TimelineNav from "../components/timeline/TimelineNav.vue";
-import CalendarIcon from "../components/icons/CalendarIcon.vue";
-
-const allEvents = eventsData.events as HistoricalEvent[];
-const allFilms = filmsData.films as unknown as Film[];
-
-// Films to display on timeline (selected IDs from main JSON)
-const timelineFilmIds = [
-  "the-eight-hundred-2020",
-  "dunkirk-2017",
-  "battle-of-britain-1969",
-  "das-boot-1981",
-  "tora-tora-tora-1970",
-  "schindlers-list-1993",
-  "come-and-see-1985",
-  "saving-private-ryan-1998",
-  "downfall-2004",
-  "hacksaw-ridge-2016",
-];
-
-useSeoMeta(
-  buildPageSeo({
-    path: "/timeline",
-    title: "WW2 Interactive Timeline",
-    ogTitle: "World War II Timeline - Historical Events & Films",
-    description:
-      "Navigate a World War II timeline from 1936 to 1945. Explore key historical events and the films that portray them, from the Spanish Civil War to the end of the Pacific War.",
-    ogDescription:
-      "Explore key World War II events and related films in an interactive timeline from 1936 to 1945.",
-  })
-);
-
-useHead({
-  link: [{ rel: "canonical", href: canonicalUrl("/timeline") }],
-  script: [
-    jsonLdScript({
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": `${SITE_URL}/timeline#page`,
-      name: "World War II Interactive Timeline",
-      description:
-        "Interactive timeline exploring key events of World War II and related cinema from 1936 to 1945.",
-      url: canonicalUrl("/timeline"),
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-      about: {
-        "@type": "HistoricalEvent",
-        name: "World War II",
-        startDate: "1939-09-01",
-        endDate: "1945-09-02",
-        description:
-          "The Second World War, a global conflict from 1939 to 1945.",
-        sameAs: "https://en.wikipedia.org/wiki/World_War_II",
-      },
-      mainEntity: {
-        "@type": "ItemList",
-        name: "WW2 Timeline Events",
-        itemListOrder: "https://schema.org/ItemListOrderAscending",
-        numberOfItems: allEvents.length,
-        itemListElement: allEvents.map((event, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          item: {
-            "@type": "CreativeWork",
-            name: event.title,
-            description: event.description,
-            temporalCoverage: event.date,
-          },
-        })),
-      },
-    }),
-  ],
+const ERAS: Era[] = ["ww1", "interwar", "ww2"];
+const TICKS = Array.from({ length: 32 }, (_, i) => {
+  const year = 1914 + i;
+  return {
+    year,
+    era: eraAt(toMonths(`${year}-06`)),
+    big: year % 5 === 0 || i === 0 || i === 31,
+  };
 });
 
-// State
-const events = ref<HistoricalEvent[]>(allEvents);
-const films = ref<Film[]>(
-  allFilms.filter((film) => timelineFilmIds.includes(film.id))
+const { t, locale } = useI18n();
+const { play } = useSound();
+const { data } = await useIndexData();
+
+const events = computed(() => data.value?.events ?? []);
+const titles = computed(() => data.value?.titles ?? []);
+
+const chapters = computed(() =>
+  ERAS.map((era) => ({
+    era,
+    events: events.value.filter((event) => event.era === era),
+  }))
 );
-const selectedFilm = ref<PositionedFilm | null>(null);
-const mobileSelectedFilm = ref<PositionedFilm | null>(null);
-const currentPeriodIndex = ref(2); // Start with last period (1942-1945)
-const isMobile = ref(false);
 
-// Trailer Modal State
-const isTrailerOpen = ref(false);
-const activeTrailerUrl = ref("");
-const activeFilmTitle = ref("");
-
-// Periods Configuration - 3 years per slide
-const periods: TimelinePeriod[] = [
-  { label: "1936-1938", start: 1936, end: 1938 },
-  { label: "1939-1941", start: 1939, end: 1941 },
-  { label: "1942-1945", start: 1942, end: 1945 },
-];
-
-// Use the timeline positioning composable
-const {
-  visibleStartYear,
-  visibleEndYear,
-  visibleYears,
-  getYearPosition,
-  positionedEvents,
-  positionedFilms,
-} = useTimelinePositioning({
-  events,
-  films,
-  currentPeriodIndex,
-  periods,
+const films = computed(() => {
+  const spans = titles.value.map((title) => ({
+    title,
+    start: Math.floor(toMonths(title.period.start)),
+    end: Math.floor(toMonths(title.period.end)),
+  }));
+  const map = new Map<string, TitleCard[]>();
+  for (const event of events.value) {
+    const at = Math.floor(toMonths(event.date));
+    const matches = spans
+      .filter((span) => span.start <= at && at <= span.end)
+      .sort(
+        (a, b) =>
+          a.end - a.start - (b.end - b.start) ||
+          Math.abs(at - a.start) - Math.abs(at - b.start)
+      )
+      .slice(0, 4)
+      .map((span) => span.title);
+    map.set(event.id, matches);
+  }
+  return map;
 });
 
-// Mobile timeline items (sorted by date)
-const mobileTimelineItems = computed(() => ({
-  events: positionedEvents.value,
-  films: positionedFilms.value,
-}));
+function filmsFor(event: EventCard) {
+  return films.value.get(event.id) ?? [];
+}
 
-// Check mobile
-const checkMobile = () => {
-  isMobile.value = window.innerWidth <= 768;
-};
+const current = reactive<{ year: number; era: Era }>({
+  year: 1914,
+  era: "ww1",
+});
+const root = ref<HTMLElement>();
+let observer: IntersectionObserver | undefined;
 
-// Load data from imported JSON files
 onMounted(() => {
-  checkMobile();
-  window.addEventListener("resize", checkMobile);
-
-  // Click outside handler to close modal
-  document.addEventListener("click", handleClickOutside);
-});
-
-// Close modal when clicking outside
-const handleClickOutside = (event: MouseEvent) => {
-  if (selectedFilm.value) {
-    const popup = document.querySelector(".film-popup");
-    const filmCards = document.querySelectorAll(".film-card");
-
-    let clickedOnCard = false;
-    filmCards.forEach((card) => {
-      if (card.contains(event.target as Node)) {
-        clickedOnCard = true;
+  observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        const el = entry.target as HTMLElement;
+        current.year = Number(el.dataset.year);
+        current.era = el.dataset.era as Era;
       }
-    });
-
-    if (!clickedOnCard && popup && !popup.contains(event.target as Node)) {
-      selectedFilm.value = null;
-    }
-  }
-};
-
-// Cleanup event listeners
-onUnmounted(() => {
-  document.removeEventListener("click", handleClickOutside);
-  window.removeEventListener("resize", checkMobile);
+    },
+    { rootMargin: "-45% 0px -55% 0px" }
+  );
+  root.value
+    ?.querySelectorAll<HTMLElement>("[data-year]")
+    .forEach((el) => observer!.observe(el));
 });
 
-// Navigation Methods
-const nextPeriod = () => {
-  if (currentPeriodIndex.value < periods.length - 1) {
-    currentPeriodIndex.value++;
-  }
-};
+onBeforeUnmount(() => observer?.disconnect());
 
-const prevPeriod = () => {
-  if (currentPeriodIndex.value > 0) {
-    currentPeriodIndex.value--;
-  }
-};
-
-const setPeriod = (index: number) => {
-  currentPeriodIndex.value = index;
-};
-
-// Film selection
-const selectFilm = (film: PositionedFilm) => {
-  selectedFilm.value = selectedFilm.value?.id === film.id ? null : film;
-};
-
-const toggleFilmPopup = (film: PositionedFilm) => {
-  mobileSelectedFilm.value = film;
-};
-
-// Trailer handling - Desktop shows modal, Mobile redirects to YouTube
-const openTrailer = (film: PositionedFilm) => {
-  if (isMobile.value) {
-    window.open(film.trailerUrl, "_blank", "noopener,noreferrer");
-  } else {
-    activeTrailerUrl.value = film.trailerUrl || "";
-    activeFilmTitle.value = `${film.title} (${film.year})`;
-    isTrailerOpen.value = true;
-    selectedFilm.value = null;
-  }
-};
-
-const closeTrailer = () => {
-  isTrailerOpen.value = false;
-  activeTrailerUrl.value = "";
-  activeFilmTitle.value = "";
-};
+usePageSeo(() => ({
+  path: "/timeline",
+  title: t("timeline.title"),
+  description: t("timeline.intro"),
+  jsonLd: [
+    breadcrumbGraph(locale.value as Locale, [
+      { name: t("nav.map"), path: "/" },
+      { name: t("nav.timeline"), path: "/timeline" },
+    ]),
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: t("timeline.title"),
+      numberOfItems: events.value.length,
+      itemListElement: events.value.map((event, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "Event",
+          name: event.title,
+          startDate: event.date,
+          ...(event.endDate ? { endDate: event.endDate } : {}),
+          ...(event.place
+            ? { location: { "@type": "Place", name: event.place } }
+            : {}),
+          sameAs: event.wikipedia,
+        },
+      })),
+    },
+  ],
+}));
 </script>
 
 <style lang="scss" scoped>
-@use "@/assets/scss/variables" as *;
-@use "@/assets/scss/mixins" as *;
+.tl {
+  --c-ww1: color-mix(in oklab, var(--paper) 55%, var(--gold-deep));
+  --c-interwar: color-mix(in oklab, var(--red) 70%, var(--gold-deep));
+  --c-ww2: color-mix(in oklab, var(--olive) 55%, var(--gold));
+  --nav-h: 58px;
+  overflow-x: clip;
+}
 
-.timeline-page {
-  min-height: 100vh;
-  background: $bg-page;
-  color: $text-primary;
-  font-family: "Inter", sans-serif;
-  overflow-x: hidden;
-  position: relative;
-  padding-top: 120px;
+.tl-hero {
+  padding-block: clamp(48px, 10vw, 120px) clamp(36px, 6vw, 72px);
+}
 
-  @include mobile {
-    padding-top: 80px;
-    padding-bottom: 120px;
+.tl-hero__eyebrow {
+  color: var(--gold);
+}
+
+.tl-hero__title {
+  margin-top: 14px;
+  @include display(clamp(3rem, 11vw, 8.5rem));
+  color: var(--paper);
+  max-width: 14ch;
+}
+
+.tl-hero__intro {
+  margin-top: 22px;
+  max-width: 58ch;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: var(--muted);
+}
+
+.tl-strip {
+  margin-top: clamp(32px, 6vw, 64px);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: end;
+  gap: clamp(12px, 2vw, 28px);
+  font-size: clamp(2.6rem, 9vw, 6.5rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.tl-strip__year {
+  color: var(--c-ww1);
+
+  &--end {
+    color: var(--gold);
   }
 }
 
-.world-map-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+.tl-strip__ruler {
   width: 100%;
-  height: 100%;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.03;
-  pointer-events: none;
-  filter: invert(1);
+  height: 0.5em;
+  margin-bottom: 0.12em;
+  overflow: visible;
 }
 
-.grid-pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 50px 50px;
-  pointer-events: none;
+.tl-strip__line {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1;
+
+  @include motion {
+    animation-name: draw;
+    animation-duration: 1.4s;
+    animation-timing-function: $ease-in-out;
+    animation-fill-mode: both;
+  }
 }
 
-.header-content {
-  text-align: center;
-  margin-bottom: 40px;
-  position: relative;
-  z-index: $z-dropdown;
-  padding: 0 $spacing-lg;
+.tl-strip__tick {
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
 
-  @include mobile {
-    margin-bottom: $spacing-lg;
-    padding: 0 $spacing-md;
+  &--ww1 {
+    stroke: var(--c-ww1);
   }
 
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0 0 $spacing-xs 0;
-    color: $text-primary;
-    letter-spacing: -1px;
+  &--interwar {
+    stroke: var(--c-interwar);
+  }
 
-    @include mobile {
-      font-size: 1.75rem;
+  &--ww2 {
+    stroke: var(--c-ww2);
+  }
+
+  @include motion {
+    transform-box: fill-box;
+    transform-origin: bottom;
+    animation-name: tick-up;
+    animation-duration: 0.5s;
+    animation-delay: calc(0.3s + var(--i) * 35ms);
+    animation-timing-function: $ease-spring;
+    animation-fill-mode: both;
+  }
+}
+
+.tl-hero__stats {
+  margin-top: 18px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.tl-nav {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 50;
+  @include glass(0.82);
+  border-inline: 0;
+}
+
+.tl-nav__inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: var(--nav-h);
+}
+
+.tl-nav__label {
+  display: none;
+
+  @include up($bp-md) {
+    display: inline;
+  }
+}
+
+.tl-nav__chips {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  min-width: 0;
+}
+
+.tl-nav__chip {
+  --c: var(--c-ww1);
+
+  &--interwar {
+    --c: var(--c-interwar);
+  }
+
+  &--ww2 {
+    --c: var(--c-ww2);
+  }
+
+  &::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--c);
+  }
+
+  &.is-active {
+    background: var(--c);
+    border-color: var(--c);
+    color: #12130d;
+
+    &::before {
+      background: #12130d;
     }
-
-    @include mobile-small {
-      font-size: 1.5rem;
-    }
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin: 0 0 12px 0;
-    color: $text-secondary;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-
-    @include mobile {
-      font-size: 0.85rem;
-      letter-spacing: 2px;
-    }
   }
 }
 
-.period-badge {
-  display: inline-block;
-  padding: 6px $spacing-md;
-  background: rgba($beige, 0.12);
-  border: 1px solid rgba($beige, 0.25);
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: $beige;
-  letter-spacing: 2px;
-  margin-bottom: $spacing-md;
+.tl-nav__years {
+  display: none;
+  font-size: 0.72rem;
+  opacity: 0.75;
 
-  @include mobile {
-    font-size: 0.75rem;
-    padding: 4px 12px;
-    letter-spacing: 1px;
+  @include up($bp-sm) {
+    display: inline;
   }
 }
 
-.subtitle {
-  color: $text-muted;
+.tl-nav__pill {
+  margin-left: auto;
+  flex: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--c, var(--line-strong));
   font-size: 1rem;
-  margin: 0;
+  font-weight: 600;
+  color: var(--c);
+  transition:
+    color 0.4s $ease-out,
+    border-color 0.4s $ease-out;
 
-  @include mobile {
-    font-size: 0.85rem;
+  &--ww1 {
+    --c: var(--c-ww1);
+  }
+
+  &--interwar {
+    --c: var(--c-interwar);
+  }
+
+  &--ww2 {
+    --c: var(--c-ww2);
+  }
+
+  @include up($bp-lg) {
     display: none;
   }
 }
 
-// Legend
-.legend {
-  display: flex;
-  justify-content: center;
-  gap: $spacing-xl;
-  margin-bottom: $spacing-lg;
-  position: relative;
-  z-index: $z-dropdown;
+.tl-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding-bottom: clamp(64px, 10vw, 140px);
 
-  @include mobile {
-    gap: $spacing-lg;
-    margin-bottom: $spacing-md;
+  @include up($bp-lg) {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 32px;
   }
 }
 
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: $spacing-sm;
-  font-size: 0.85rem;
-  color: $text-secondary;
-
-  @include mobile {
-    font-size: 0.75rem;
-    gap: $spacing-xs;
-  }
-}
-
-.legend-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-
-  @include mobile {
-    width: 10px;
-    height: 10px;
-  }
-
-  &.event-dot {
-    background: $danger;
-    box-shadow: 0 0 10px rgba($danger, 0.5);
-  }
-
-  &.film-dot {
-    background: $beige;
-    box-shadow: 0 0 10px rgba($beige, 0.5);
-  }
-}
-
-// Mobile Timeline
-.mobile-timeline {
+.tl-side {
   display: none;
-  padding: 0 $spacing-md;
-  padding-bottom: 80px;
 
-  @include mobile {
+  @include up($bp-lg) {
     display: block;
   }
 }
 
-.empty-state {
-  text-align: center;
-  padding: 60px $spacing-lg;
-  color: $text-muted;
+.tl-side__sticky {
+  --c: var(--c-ww1);
+  position: sticky;
+  top: calc(var(--header-h) + var(--nav-h) + 32px);
+  padding-top: 48px;
+  display: grid;
+  gap: 10px;
+
+  &--interwar {
+    --c: var(--c-interwar);
+  }
+
+  &--ww2 {
+    --c: var(--c-ww2);
+  }
 }
 
-.empty-icon {
-  width: 3rem;
-  height: 3rem;
-  display: block;
-  margin: 0 auto $spacing-md;
-  opacity: 0.5;
+.tl-side__era {
+  color: var(--c);
+  transition: color 0.4s $ease-out;
 }
 
-// Desktop Timeline
-.timeline-container {
+.tl-side__year {
+  font-size: 5.6rem;
+  font-weight: 800;
+  color: var(--paper);
+}
+
+.tl-side__bar {
+  width: 64px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--c);
+  transition: background-color 0.4s $ease-out;
+}
+
+.tl-chapter {
+  --era-c: var(--c-ww1);
+  scroll-margin-top: calc(var(--header-h) + var(--nav-h));
+
+  &--interwar {
+    --era-c: var(--c-interwar);
+  }
+
+  &--ww2 {
+    --era-c: var(--c-ww2);
+  }
+}
+
+.tl-chapter__head {
   position: relative;
-  height: 700px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-block: clamp(56px, 9vw, 110px) clamp(28px, 4vw, 48px);
 
-  @include mobile {
-    display: none;
+  @include up($bp-md) {
+    text-align: center;
+  }
+
+  @supports (animation-timeline: view()) {
+    @include motion {
+      animation-name: head-in;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 40%;
+    }
   }
 }
 
-// Axis
-.timeline-axis {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  z-index: $z-base;
-  transform: translateY(-50%);
+.tl-chapter__num {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--era-c);
 }
 
-.axis-line {
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.2);
+.tl-chapter__title {
+  margin-top: 10px;
+  @include display(clamp(2.8rem, 9vw, 6.8rem));
+  color: var(--paper);
 }
 
-.year-marker {
-  position: absolute;
-  top: -10px;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.tl-chapter__years {
+  margin-top: 8px;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--era-c);
+  letter-spacing: 0.04em;
 }
 
-.year-tick {
-  width: 1px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.3);
-  margin-bottom: $spacing-sm;
-}
+.tl-track {
+  position: relative;
 
-.year-label {
-  color: $text-secondary;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
+  &::before,
+  .tl-track__fill {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 17px;
+    width: 3px;
+    border-radius: 3px;
 
-// Timeline Sections
-.timeline-section {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  overflow: visible;
-}
+    @include up($bp-md) {
+      left: calc(50% - 1.5px);
+    }
+  }
 
-.events-section {
-  top: 0;
-}
-
-.films-section {
-  top: 50%;
-}
-
-// Period info
-.period-info {
-  position: fixed;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: $z-sticky;
-
-  @include mobile {
-    bottom: 95px;
+  &::before {
+    background: var(--line);
   }
 }
 
-.info-text {
-  font-size: 0.8rem;
-  color: $text-muted;
-  background: $bg-dark;
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+.tl-track__list {
+  position: relative;
+  list-style: none;
+}
 
-  @include mobile {
-    font-size: 0.75rem;
-    padding: 4px 12px;
+.tl-track__fill {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--era-c) 60%, transparent),
+    var(--era-c)
+  );
+  box-shadow: 0 0 18px color-mix(in oklab, var(--era-c) 45%, transparent);
+  transform-origin: top;
+
+  @supports (animation-timeline: view()) {
+    @include motion {
+      animation-name: fill-grow;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: entry 50% exit 50%;
+    }
   }
 }
 
-// Card Transitions
-.card-enter-active,
-.card-leave-active {
-  transition: all 0.4s ease;
-  transition-delay: var(--delay, 0s);
+@keyframes fill-grow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
 }
 
-.card-enter-from {
-  opacity: 0;
-  transform: translateX(-50%) translateY(20px);
+@keyframes head-in {
+  from {
+    opacity: 0;
+    transform: translateY(48px);
+    letter-spacing: 0.08em;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.card-leave-to {
-  opacity: 0;
-  transform: translateX(-50%) translateY(-20px);
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
-// Mobile Card Transitions
-.mobile-card-enter-active,
-.mobile-card-leave-active {
-  transition: all 0.3s ease;
-}
-
-.mobile-card-enter-from {
-  opacity: 0;
-  transform: translateX(-20px);
-}
-
-.mobile-card-leave-to {
-  opacity: 0;
-  transform: translateX(20px);
+@keyframes tick-up {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
 }
 </style>

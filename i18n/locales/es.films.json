@@ -1,0 +1,24 @@
+{
+  "filmsPage": {
+    "eyebrow": "{n} películas y series · 1914–1945",
+    "goldCount": "{n} imprescindibles",
+    "previous": "Títulos anteriores",
+    "next": "Títulos siguientes",
+    "results": "Mostrando {n} de {total}",
+    "era": "Época",
+    "kind": "Tipo",
+    "theater": "Frente de guerra",
+    "tags": "Temas",
+    "moreFilters": "Más filtros",
+    "exploreGlobe": "Explora esta época en el globo",
+    "otherEras": "Las otras épocas",
+    "stats": {
+      "label": "Esta época en cifras",
+      "titles": "Títulos",
+      "films": "Películas",
+      "series": "Series",
+      "gold": "Imprescindibles",
+      "places": "Lugares"
+    }
+  }
+}

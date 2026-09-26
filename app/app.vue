@@ -1,75 +1,27 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <AppHeader />
+  <NuxtLayout>
     <NuxtPage />
-    <WelcomeModal v-if="showWelcome" @close="handleWelcomeClose" />
-  </div>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import WelcomeModal from "~/components/WelcomeModal.vue";
-import { jsonLdScript, siteGraph } from "~/utils/seo";
+import type { Locale } from "~~/types/data";
 
-const showWelcome = ref(false);
+const { locale, t } = useI18n();
+const config = useRuntimeConfig();
+const sound = useSound();
 
-useHead({
-  script: [jsonLdScript(siteGraph())],
-});
+useHead(() => ({
+  htmlAttrs: { lang: locale.value === "es" ? "es" : "en" },
+  script: [
+    jsonLdScript(
+      siteGraph(
+        locale.value as Locale,
+        t("site.description", { count: config.public.titleCount })
+      )
+    ),
+  ],
+}));
 
-onMounted(() => {
-  const seen = localStorage.getItem("welcome_seen");
-  if (!seen) {
-    showWelcome.value = true;
-  }
-});
-
-const handleWelcomeClose = (dontShowAgain: boolean) => {
-  if (dontShowAgain) {
-    localStorage.setItem("welcome_seen", "true");
-  }
-  showWelcome.value = false;
-};
+onMounted(() => sound.hydrate());
 </script>
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body,
-#__nuxt {
-  height: 100%;
-}
-
-body {
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
-  background-color: #14191e;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-</style>

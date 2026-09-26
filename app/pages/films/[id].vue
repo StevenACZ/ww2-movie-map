@@ -1,665 +1,397 @@
 <template>
-  <main
-    class="film-page"
-    role="main"
-    :aria-label="`${film.title} film details`"
-  >
-    <!-- Background Elements -->
-    <div class="world-map-bg" aria-hidden="true"></div>
-    <div class="grid-pattern" aria-hidden="true"></div>
+  <article v-if="film" class="title-page">
+    <TitleHero :film="film" :countries="countries" :languages="languages" />
 
-    <article class="film-detail" itemscope itemtype="https://schema.org/Movie">
-      <!-- Breadcrumb -->
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <NuxtLink to="/" class="crumb">Map</NuxtLink>
-        <span class="crumb-divider" aria-hidden="true">/</span>
-        <NuxtLink to="/films/" class="crumb">Films</NuxtLink>
-        <span class="crumb-divider" aria-hidden="true">/</span>
-        <span class="crumb current" aria-current="page">{{ film.title }}</span>
-      </nav>
-
-      <!-- Header -->
-      <header class="film-header">
-        <span class="film-badge">{{ film.country }} · {{ film.year }}</span>
-        <h1 class="film-title" itemprop="name">{{ film.title }}</h1>
-        <p class="film-subtitle">
-          A World War II film set in
-          {{ primaryLocation?.name ?? film.country }}, depicting events of
-          {{ eventPeriod }}
-        </p>
-        <div class="film-meta">
-          <span class="meta-item rating" aria-label="IMDb rating">
-            <StarIcon class="star" />
-            {{ film.imdbRating }} on IMDb
-          </span>
-          <span class="meta-divider" aria-hidden="true">•</span>
-          <time itemprop="datePublished" :datetime="String(film.year)">
-            {{ film.year }}
-          </time>
-          <span class="meta-divider" aria-hidden="true">•</span>
-          <span itemprop="countryOfOrigin">{{ film.country }}</span>
-        </div>
-      </header>
-
-      <!-- Body: poster + info -->
-      <div class="film-body">
-        <div class="poster-column">
-          <img
-            :src="film.poster"
-            :alt="`${film.title} movie poster`"
-            class="poster-image"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-            width="300"
-            height="450"
-            itemprop="image"
-          />
-        </div>
-
-        <div class="info-column">
-          <section class="info-section" aria-labelledby="synopsis-heading">
-            <h2 id="synopsis-heading" class="section-heading">Synopsis</h2>
-            <p class="synopsis" itemprop="description">{{ film.synopsis }}</p>
-          </section>
-
-          <section class="info-section" aria-labelledby="events-heading">
-            <h2 id="events-heading" class="section-heading">
-              Historical setting
-            </h2>
-            <p
-              v-for="paragraph in film.historicalContext ?? []"
-              :key="paragraph.slice(0, 40)"
-              class="setting-text"
-            >
-              {{ paragraph }}
-            </p>
-            <p class="setting-text">
-              The events portrayed in {{ film.title }} take place in
-              <strong>{{ eventPeriod }}</strong
-              >, during the Second World War. Explore the same period alongside
-              other films on the
-              <NuxtLink to="/timeline/">WW2 timeline</NuxtLink>.
-            </p>
-          </section>
-
-          <section class="info-section" aria-labelledby="locations-heading">
-            <h2 id="locations-heading" class="section-heading">Locations</h2>
-            <ul class="locations-list">
-              <li
-                v-for="loc in film.locations"
-                :key="loc.name"
-                class="location-item"
-                :class="{ primary: loc.isPrimary }"
-              >
-                <NuxtLink
-                  :to="mapLink"
-                  class="location-link"
-                  :aria-label="`View ${loc.name} on the interactive map`"
-                >
-                  <MapPinIcon class="pin" />
-                  <span>{{ loc.name }}</span>
-                  <span class="location-type">{{ loc.type }}</span>
-                </NuxtLink>
-              </li>
-            </ul>
-          </section>
-
-          <!-- Actions -->
-          <div class="actions-section">
-            <NuxtLink :to="mapLink" class="action-btn map-btn">
-              View on the map
-            </NuxtLink>
-            <a
-              :href="wikipediaUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="action-btn"
-              :aria-label="`Read about ${film.title} on Wikipedia`"
-            >
-              Wikipedia
-            </a>
-            <a
-              v-if="film.imdbUrl"
-              :href="film.imdbUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="action-btn"
-              :aria-label="`${film.title} on IMDb`"
-            >
-              IMDb
-            </a>
-            <a
-              v-if="film.trailerUrl"
-              :href="film.trailerUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="action-btn"
-              :aria-label="`Watch the ${film.title} trailer`"
-            >
-              Trailer
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Related films -->
-      <section
-        v-if="relatedFilms.length > 0"
-        class="related-section"
-        aria-labelledby="related-heading"
-      >
-        <h2 id="related-heading" class="section-heading">
-          More films from this period
+    <section class="section container" aria-labelledby="journey-title">
+      <header class="section__head">
+        <h2 id="journey-title" class="section__title">
+          {{ t("title.journey") }}
         </h2>
-        <ul class="related-list">
-          <li v-for="rel in relatedFilms" :key="rel.id" class="related-item">
-            <NuxtLink :to="`/films/${rel.id}/`" class="related-link">
-              <img
-                :src="rel.poster"
-                :alt="`${rel.title} movie poster`"
-                class="related-poster"
-                loading="lazy"
-                decoding="async"
-                width="120"
-                height="180"
-              />
-              <span class="related-title">{{ rel.title }}</span>
-              <span class="related-year">{{ rel.year }}</span>
-            </NuxtLink>
-          </li>
-        </ul>
-      </section>
-    </article>
-  </main>
+        <p class="section__intro">
+          {{ t("title.journeyIntro", { n: film.journey.length }) }}
+        </p>
+      </header>
+      <TitleJourney :journey="film.journey" :place-pages="film.placePages" />
+    </section>
+
+    <section
+      v-if="film.history.length"
+      class="section container"
+      aria-labelledby="history-title"
+    >
+      <header class="section__head">
+        <h2 id="history-title" class="section__title">
+          {{ t("title.history") }}
+        </h2>
+      </header>
+      <div class="history">
+        <p
+          v-for="(paragraph, index) in film.history"
+          :key="index"
+          class="reveal"
+        >
+          {{ paragraph }}
+        </p>
+      </div>
+    </section>
+
+    <section id="watch" class="section container" aria-labelledby="watch-title">
+      <header class="section__head">
+        <h2 id="watch-title" class="section__title">{{ t("title.watch") }}</h2>
+      </header>
+      <TitleWatchProviders
+        :id="film.id"
+        :title="film.altTitle ?? film.title"
+        :available="film.streaming"
+      />
+    </section>
+
+    <section class="section container" aria-labelledby="details-title">
+      <header class="section__head">
+        <h2 id="details-title" class="section__title">
+          {{ t("title.details") }}
+        </h2>
+      </header>
+      <TitleDetails
+        :film="film"
+        :countries="countries"
+        :languages="languages"
+      />
+    </section>
+
+    <section class="section container" aria-labelledby="links-title">
+      <header class="section__head">
+        <h2 id="links-title" class="section__title">{{ t("title.links") }}</h2>
+      </header>
+      <ul class="links">
+        <li v-for="link in links" :key="link.href">
+          <a
+            :href="link.href"
+            target="_blank"
+            rel="noopener"
+            class="links__card"
+          >
+            <span class="links__label">{{ link.label }}</span>
+            <span class="links__host mono">{{ link.host }}</span>
+            <Icon name="external" class="links__icon" />
+            <span class="visually-hidden">{{ t("common.external") }}</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section
+      v-if="film.related.length"
+      class="section container"
+      aria-labelledby="related-title"
+    >
+      <header class="section__head">
+        <h2 id="related-title" class="section__title">
+          {{ t("title.related") }}
+        </h2>
+      </header>
+      <ul class="related">
+        <li v-for="item in film.related" :key="item.id">
+          <TitleTile
+            :title="item"
+            :level="3"
+            sizes="(min-width: 900px) 200px, 42vw"
+          />
+        </li>
+      </ul>
+    </section>
+  </article>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import type { Film } from "../../../types";
-import filmsData from "../../../data/films.json";
-import {
-  buildPageSeo,
-  canonicalUrl,
-  jsonLdScript,
-  SITE_URL,
-} from "~/utils/seo";
-import MapPinIcon from "../../components/icons/MapPinIcon.vue";
-import StarIcon from "../../components/icons/StarIcon.vue";
+import type { Locale } from "~~/types/data";
+import type { TitleDetail } from "~~/types/view";
+
+const SEO_TITLE_MAX = 65;
+const SEO_DESCRIPTION_MAX = 155;
 
 const route = useRoute();
+const { t, locale } = useI18n();
+const id = String(route.params.id);
 
-const films = filmsData.films as Film[];
-const film = films.find((entry) => entry.id === route.params.id);
-
-if (!film) {
-  throw createError({ statusCode: 404, statusMessage: "Film not found" });
+const { data } = await useFetch<TitleDetail>(
+  () => `/api/titles/${locale.value}/${id}`
+);
+if (!data.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Title not found",
+    fatal: true,
+  });
 }
 
-const pagePath = `/films/${film.id}`;
+const film = computed(() => data.value);
 
-const eventPeriod = computed(() =>
-  film.eventYears.start === film.eventYears.end
-    ? String(film.eventYears.start)
-    : `${film.eventYears.start}–${film.eventYears.end}`
+function displayName(type: "region" | "language", code: string): string {
+  try {
+    return new Intl.DisplayNames([locale.value], { type }).of(code) ?? code;
+  } catch {
+    return code;
+  }
+}
+
+const countries = computed(
+  () => film.value?.countries.map((c) => displayName("region", c)) ?? []
+);
+const languages = computed(
+  () => film.value?.languages.map((c) => displayName("language", c)) ?? []
 );
 
-const primaryLocation = computed(
-  () => film.locations.find((loc) => loc.isPrimary) ?? film.locations[0]
-);
-
-const mapLink = computed(() => `/#film-${encodeURIComponent(film.id)}`);
-
-const wikipediaUrl = computed(() => {
-  if (film.wikipediaUrl) return film.wikipediaUrl;
-  return `https://en.wikipedia.org/wiki/${film.title.replace(/ /g, "_")}`;
+const links = computed(() => {
+  const f = film.value;
+  if (!f) return [];
+  const items = [
+    { label: t("title.wikipedia"), href: f.links.wikipedia },
+    {
+      label: t("title.imdb"),
+      href: `https://www.imdb.com/title/${f.ids.imdb}/`,
+    },
+    {
+      label: t("title.tmdb"),
+      href: `https://www.themoviedb.org/${f.ids.tmdbType}/${f.ids.tmdb}`,
+    },
+    ...(f.links.fandom
+      ? [{ label: t("title.fandom"), href: f.links.fandom }]
+      : []),
+    ...(f.links.official
+      ? [{ label: t("titlePage.official"), href: f.links.official }]
+      : []),
+  ];
+  return items.map((item) => ({
+    ...item,
+    host: new URL(item.href).hostname.replace(/^www\./, ""),
+  }));
 });
 
-// Interlink films that depict the closest historical period.
-const relatedFilms = computed(() =>
-  films
-    .filter((entry) => entry.id !== film.id)
-    .sort(
-      (a, b) =>
-        Math.abs(a.eventYears.start - film.eventYears.start) -
-          Math.abs(b.eventYears.start - film.eventYears.start) ||
-        b.imdbRating - a.imdbRating
-    )
-    .slice(0, 3)
-);
+function clip(text: string, max: number): string {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max - 1);
+  const end = cut.lastIndexOf(" ");
+  return `${cut.slice(0, end > 0 ? end : cut.length).replace(/[\s,;:.]+$/, "")}…`;
+}
 
-const metaDescription = (() => {
-  const base = `${film.title} (${film.year}) on the WW2 Film Map: ${film.synopsis}`;
-  if (base.length <= 158) return base;
-  return `${base.slice(0, 155).replace(/\s+\S*$/, "")}…`;
-})();
-
-useSeoMeta({
-  ...buildPageSeo({
-    path: pagePath,
-    title: `${film.title} (${film.year})`,
-    description: metaDescription,
-    ogTitle: `${film.title} (${film.year}) — WW2 Film Map`,
-    ogDescription: metaDescription,
-    imageAlt: `${film.title} movie poster`,
-  }),
-  ogImage: film.poster,
-  ogImageWidth: 300,
-  ogImageHeight: 450,
-});
-
-useHead({
-  link: [{ rel: "canonical", href: canonicalUrl(pagePath) }],
-  script: [
-    jsonLdScript({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Movie",
-          "@id": `${canonicalUrl(pagePath)}#movie`,
-          name: film.title,
-          url: canonicalUrl(pagePath),
-          datePublished: String(film.year),
-          description: film.synopsis,
-          image: film.poster,
-          countryOfOrigin: film.country,
-          about: {
-            "@type": "Thing",
-            name: "World War II",
-            sameAs: "https://en.wikipedia.org/wiki/World_War_II",
-          },
-          sameAs: [film.wikipediaUrl, film.imdbUrl].filter(Boolean),
-          contentLocation: film.locations.map((location) => ({
-            "@type": "Place",
-            name: location.name,
-            geo: {
-              "@type": "GeoCoordinates",
-              longitude: location.coordinates[0],
-              latitude: location.coordinates[1],
-            },
-          })),
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": `${canonicalUrl(pagePath)}#breadcrumbs`,
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Map",
-              item: `${SITE_URL}/`,
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Films",
-              item: canonicalUrl("/films"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: film.title,
-              item: canonicalUrl(pagePath),
-            },
-          ],
-        },
-      ],
-    }),
-  ],
+usePageSeo(() => {
+  const f = film.value!;
+  const current = locale.value as Locale;
+  const path = `/films/${f.id}`;
+  const base = `${f.title} (${f.year})`;
+  const long = `${base}${t("titlePage.seoSuffix")}`;
+  const title =
+    long.length + SITE_NAME.length + 3 <= SEO_TITLE_MAX ? long : base;
+  const image = f.backdrop
+    ? {
+        image: tmdbImage(f.backdrop, "w1280"),
+        imageWidth: 1280,
+        imageHeight: 720,
+      }
+    : f.poster
+      ? {
+          image: tmdbImage(f.poster, "w780"),
+          imageWidth: 780,
+          imageHeight: 1170,
+        }
+      : {};
+  const people = f.directors.map((name) => ({ "@type": "Person", name }));
+  const places = [
+    ...new Map(f.journey.map((stop) => [stop.place, stop])).values(),
+  ].map((stop) => ({
+    "@type": "Place",
+    name: stop.name,
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: stop.coordinates[1],
+      longitude: stop.coordinates[0],
+    },
+  }));
+  const alternateName = [...new Set([f.altTitle, f.originalTitle])].filter(
+    (name): name is string => !!name && name !== f.title
+  );
+  const work = {
+    "@context": "https://schema.org",
+    "@type": f.kind === "series" ? "TVSeries" : "Movie",
+    name: f.title,
+    ...(alternateName.length ? { alternateName } : {}),
+    url: absoluteUrl(path, current),
+    ...(f.poster ? { image: tmdbImage(f.poster, "w780") } : {}),
+    dateCreated: String(f.year),
+    ...(people.length
+      ? { [f.kind === "series" ? "creator" : "director"]: people }
+      : {}),
+    countryOfOrigin: countries.value.map((name) => ({
+      "@type": "Country",
+      name,
+    })),
+    description: f.synopsis,
+    sameAs: [
+      f.links.wikipedia,
+      `https://www.imdb.com/title/${f.ids.imdb}/`,
+      `https://www.themoviedb.org/${f.ids.tmdbType}/${f.ids.tmdb}`,
+    ],
+    contentLocation: places,
+  };
+  return {
+    path,
+    title,
+    description: clip(f.synopsis, SEO_DESCRIPTION_MAX),
+    ...image,
+    imageAlt: f.title,
+    type: f.kind === "series" ? "video.tv_show" : "video.movie",
+    jsonLd: [
+      work,
+      breadcrumbGraph(current, [
+        { name: t("nav.map"), path: "/" },
+        { name: t("nav.films"), path: "/films" },
+        { name: f.title, path },
+      ]),
+    ],
+  };
 });
 </script>
 
-<style scoped lang="scss">
-@use "@/assets/scss/variables" as *;
-@use "@/assets/scss/mixins" as *;
+<style lang="scss" scoped>
+.section {
+  padding-block: clamp(48px, 7vw, 96px) 0;
 
-.film-page {
-  min-height: 100vh;
-  background: $bg-page;
-  color: $text-primary;
-  font-family: "Inter", sans-serif;
-  position: relative;
-  padding: 120px $spacing-lg 100px;
-
-  @include mobile {
-    padding: 80px $spacing-md 60px;
-  }
-
-  @include mobile-small {
-    padding: 70px $spacing-sm 40px;
+  &:last-child {
+    padding-bottom: clamp(64px, 9vw, 128px);
   }
 }
 
-.world-map-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.03;
-  pointer-events: none;
-  filter: invert(1);
+#watch {
+  scroll-margin-top: calc(var(--header-h) + 16px);
 }
 
-.grid-pattern {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 50px 50px;
-  pointer-events: none;
+.section__head {
+  margin-bottom: clamp(24px, 3vw, 40px);
 }
 
-.film-detail {
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.breadcrumb {
+.section__title {
   display: flex;
   align-items: center;
-  gap: $spacing-sm;
-  margin-bottom: $spacing-xl;
-  font-size: 0.9rem;
-
-  .crumb {
-    color: $text-muted;
-    text-decoration: none;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: $beige;
-    }
-
-    &.current {
-      color: $text-secondary;
-    }
-  }
-
-  .crumb-divider {
-    color: $text-muted;
-  }
-}
-
-.film-header {
-  margin-bottom: $spacing-2xl;
-
-  @include mobile {
-    margin-bottom: $spacing-xl;
-  }
-}
-
-.film-badge {
-  display: inline-block;
-  padding: 6px $spacing-md;
-  background: rgba($beige, 0.12);
-  border: 1px solid rgba($beige, 0.25);
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: $beige;
-  letter-spacing: 2px;
-  margin-bottom: $spacing-md;
+  gap: 16px;
+  font-size: clamp(2rem, 5vw, 3.4rem);
   text-transform: uppercase;
+  color: var(--paper);
 
-  @include mobile {
-    font-size: 0.75rem;
-    padding: 4px 12px;
-    letter-spacing: 1px;
+  &::before {
+    content: "";
+    flex: none;
+    width: clamp(24px, 4vw, 48px);
+    height: 3px;
+    background: var(--red);
   }
 }
 
-.film-title {
-  font-size: 3rem;
-  font-weight: 800;
-  margin: 0 0 $spacing-sm 0;
-  letter-spacing: -1px;
+.section__intro {
+  margin-top: 12px;
+  color: var(--muted);
+}
 
-  @include mobile {
-    font-size: 2rem;
+.history {
+  max-width: 68ch;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.75;
+  color: var(--paper);
+
+  p + p {
+    margin-top: 1.2em;
+  }
+
+  p:first-child::first-letter {
+    float: left;
+    margin: 0.08em 0.12em 0 0;
+    font-family: var(--font-stencil);
+    font-size: 4.6em;
+    font-weight: 800;
+    line-height: 0.8;
+    color: var(--gold);
   }
 }
 
-.film-subtitle {
-  font-size: 1.1rem;
-  font-weight: 300;
-  color: $text-secondary;
-  margin: 0 0 $spacing-md 0;
-  max-width: 640px;
-}
-
-.film-meta {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: $spacing-sm;
-  color: $text-muted;
-  font-size: 0.95rem;
-
-  .rating {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: $beige;
-    font-weight: 600;
-  }
-
-  .star {
-    width: 16px;
-    height: 16px;
-  }
-}
-
-.film-body {
+.links {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: $spacing-2xl;
-  margin-bottom: $spacing-2xl;
+  gap: 12px;
+  list-style: none;
 
-  @include mobile {
-    grid-template-columns: 1fr;
-    gap: $spacing-lg;
+  @include up($bp-sm) {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
 }
 
-.poster-column {
-  .poster-image {
-    width: 100%;
-    height: auto;
-    border-radius: $border-radius-md;
-    border: 1px solid $surface-border;
-    display: block;
-  }
+.links__card {
+  position: relative;
+  display: grid;
+  gap: 4px;
+  min-height: 88px;
+  padding: 18px 48px 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition:
+    border-color 0.25s $ease-out,
+    transform 0.25s $ease-out,
+    background-color 0.25s $ease-out;
 
-  @include mobile {
-    max-width: 240px;
+  &:hover {
+    border-color: var(--gold);
+    background: var(--surface-2);
+    transform: translateY(-2px);
   }
 }
 
-.info-column {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-xl;
-}
-
-.section-heading {
-  font-size: 1rem;
+.links__label {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: $beige;
-  margin: 0 0 $spacing-md 0;
 }
 
-.synopsis,
-.setting-text {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: $text-secondary;
-  margin: 0;
+.links__host {
+  font-size: 0.72rem;
+  color: var(--faint);
+  overflow-wrap: anywhere;
+}
 
-  a {
-    color: $beige;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+.links__icon {
+  position: absolute;
+  right: 18px;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+  transition: color 0.25s $ease-out;
 
-    &:hover {
-      color: $beige-light;
-    }
+  .links__card:hover & {
+    color: var(--gold);
   }
 }
 
-.locations-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: $spacing-sm;
-}
-
-.location-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  background: $bg-card;
-  border: 1px solid $surface-border;
-  border-radius: 20px;
-  color: $text-secondary;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition:
-    border-color 0.2s ease,
-    color 0.2s ease;
-
-  .pin {
-    width: 14px;
-    height: 14px;
-    color: $beige;
-  }
-
-  .location-type {
-    color: $text-muted;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  &:hover {
-    border-color: rgba($beige, 0.5);
-    color: $text-primary;
-  }
-}
-
-.location-item.primary .location-link {
-  border-color: rgba($beige, 0.4);
-}
-
-.actions-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $spacing-sm;
-}
-
-.action-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background: $bg-card;
-  border: 1px solid $surface-border;
-  border-radius: $border-radius-sm;
-  color: $text-secondary;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition:
-    border-color 0.2s ease,
-    color 0.2s ease,
-    background 0.2s ease;
-
-  &:hover {
-    border-color: rgba($beige, 0.5);
-    color: $text-primary;
-  }
-
-  &.map-btn {
-    background: rgba($beige, 0.14);
-    border-color: rgba($beige, 0.4);
-    color: $beige;
-
-    &:hover {
-      background: rgba($beige, 0.22);
-      color: $beige-light;
-    }
-  }
-}
-
-.related-section {
-  border-top: 1px solid $surface-border;
-  padding-top: $spacing-xl;
-}
-
-.related-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.related {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: $spacing-lg;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(150px, 42%);
+  gap: 16px;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 12px;
+  overscroll-behavior-x: contain;
 
-  @include mobile {
-    grid-template-columns: 1fr;
-  }
-}
-
-.related-link {
-  display: flex;
-  align-items: center;
-  gap: $spacing-md;
-  padding: $spacing-md;
-  background: $bg-card;
-  border: 1px solid $surface-border;
-  border-radius: $border-radius-md;
-  text-decoration: none;
-  color: $text-secondary;
-  transition:
-    border-color 0.2s ease,
-    color 0.2s ease;
-
-  &:hover {
-    border-color: rgba($beige, 0.5);
-    color: $text-primary;
+  > li {
+    scroll-snap-align: start;
   }
 
-  .related-poster {
-    width: 60px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: $border-radius-sm;
-    flex-shrink: 0;
-  }
-
-  .related-title {
-    font-weight: 600;
-    display: block;
-  }
-
-  .related-year {
-    color: $text-muted;
-    font-size: 0.85rem;
-    margin-left: auto;
+  @include up($bp-md) {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    overflow: visible;
+    padding-bottom: 0;
   }
 }
 </style>

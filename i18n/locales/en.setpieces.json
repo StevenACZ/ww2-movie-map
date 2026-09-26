@@ -1,0 +1,229 @@
+{
+  "setpieces": {
+    "open": "Special events",
+    "title": "Special events",
+    "intro": "Seven turning points, reconstructed in 3D on the globe. Scale and time are compressed.",
+    "watch": "Watch",
+    "close": "Close",
+    "play": "Play",
+    "pause": "Pause",
+    "replay": "Replay",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading",
+    "progress": "Scene progress",
+    "keys": "Space pauses, Esc closes",
+    "keysStill": "Arrows step, Esc closes",
+    "scenes": {
+      "messines": {
+        "title": "The mines of Messines",
+        "place": "Messines Ridge, Flanders",
+        "teaser": "Nineteen mines erupt under the German line within seconds.",
+        "beats": [
+          {
+            "time": "Before dawn",
+            "text": "For months, British, Canadian and Australian tunnellers dug beneath the German-held Messines Ridge."
+          },
+          {
+            "time": "Night",
+            "text": "Nineteen mines, packed with hundreds of tonnes of ammonal, wait under the German front line."
+          },
+          {
+            "time": "03:10",
+            "text": "The mines are fired within about 20 seconds of each other."
+          },
+          {
+            "time": "03:10",
+            "text": "The ridge is torn open by huge craters; the blast was reportedly heard as far away as London."
+          },
+          {
+            "time": "Dawn",
+            "text": "Behind a creeping barrage, British, Irish, Australian and New Zealand infantry take the ridge."
+          }
+        ]
+      },
+      "dunkirk": {
+        "title": "Dunkirk evacuation",
+        "place": "Dunkirk, France",
+        "teaser": "Destroyers and the Little Ships bring an army home across the Channel.",
+        "beats": [
+          {
+            "time": "26 May",
+            "text": "Cut off at Dunkirk, British and French troops wait on the beaches and along the harbour mole."
+          },
+          {
+            "time": "Day and night",
+            "text": "Destroyers, ferries and transports shuttle across the Channel to Dover and other English ports."
+          },
+          {
+            "time": "On the beaches",
+            "text": "Hundreds of Little Ships ferry soldiers from the shallows out to the larger ships offshore."
+          },
+          {
+            "time": "Over the town",
+            "text": "German bombing has set the port's oil tanks ablaze; black smoke hangs over the coast."
+          },
+          {
+            "time": "From the air",
+            "text": "Stukas dive on the ships. Air attacks sink six British and three French destroyers."
+          },
+          {
+            "time": "4 June",
+            "text": "When it ends, about 338,000 soldiers have been brought to safety."
+          }
+        ]
+      },
+      "pearl-harbor": {
+        "title": "Attack on Pearl Harbor",
+        "place": "Oahu, Hawaii",
+        "teaser": "Six Japanese carriers strike the US Pacific Fleet at anchor.",
+        "beats": [
+          {
+            "time": "Dawn",
+            "text": "Six Japanese aircraft carriers north of Oahu launch their aircraft."
+          },
+          {
+            "time": "Early morning",
+            "text": "About 350 aircraft, in two waves, fly south toward Oahu."
+          },
+          {
+            "time": "07:48",
+            "text": "The attack begins. Torpedo bombers skim in low against Battleship Row."
+          },
+          {
+            "time": "Minutes later",
+            "text": "Bombs strike the fleet; the forward magazine of USS Arizona explodes."
+          },
+          {
+            "time": "Morning",
+            "text": "All eight battleships in the harbour are damaged, and four are sunk."
+          },
+          {
+            "time": "7 December",
+            "text": "About 2,400 Americans are killed. The next day the United States declares war on Japan."
+          }
+        ]
+      },
+      "midway": {
+        "title": "Battle of Midway",
+        "place": "Midway Atoll, Pacific",
+        "teaser": "In minutes, US dive bombers turn the war in the Pacific.",
+        "beats": [
+          {
+            "time": "4 June",
+            "text": "Four Japanese carriers steam northwest of Midway; Enterprise, Hornet and Yorktown wait to the northeast."
+          },
+          {
+            "time": "Morning",
+            "text": "US torpedo bombers attack first, low over the water, and suffer heavy losses."
+          },
+          {
+            "time": "About 10:20",
+            "text": "High above, SBD Dauntless dive bombers from Enterprise and Yorktown find the Japanese carriers."
+          },
+          {
+            "time": "About 10:25",
+            "text": "Within minutes Akagi, Kaga and Soryu are hit and burning."
+          },
+          {
+            "time": "Afternoon",
+            "text": "Aircraft from Hiryu cripple Yorktown; later that afternoon Hiryu is hit too."
+          },
+          {
+            "time": "Aftermath",
+            "text": "All four Japanese fleet carriers are lost. Midway is widely seen as a turning point of the Pacific War."
+          }
+        ]
+      },
+      "d-day": {
+        "title": "D-Day, the Normandy landings",
+        "place": "Normandy, France",
+        "teaser": "The largest seaborne invasion in history lands on five beaches.",
+        "beats": [
+          {
+            "time": "After midnight",
+            "text": "About 24,000 American, British and Canadian airborne troops drop behind the beaches."
+          },
+          {
+            "time": "Night crossing",
+            "text": "The largest seaborne invasion in history: about 6,900 vessels cross the Channel."
+          },
+          {
+            "time": "Dawn",
+            "text": "Battleships, cruisers and destroyers bombard the German coastal defences."
+          },
+          {
+            "time": "From 06:30",
+            "text": "Landing craft reach five beaches: Utah, Omaha, Gold, Juno and Sword."
+          },
+          {
+            "time": "6 June",
+            "text": "Omaha is the bloodiest. About 156,000 Allied troops land by sea and air that day."
+          }
+        ]
+      },
+      "hiroshima": {
+        "title": "Hiroshima",
+        "place": "Hiroshima, Japan",
+        "teaser": "The first atomic bomb used in war.",
+        "beats": [
+          {
+            "time": "6 August",
+            "text": "A clear morning over Hiroshima, a city built on the delta of the Ōta River."
+          },
+          {
+            "time": "08:09",
+            "text": "The B-29 Enola Gay begins its bomb run at about 9,400 m, with two accompanying aircraft."
+          },
+          {
+            "time": "08:15",
+            "text": "Little Boy is released. It falls for about 44 seconds."
+          },
+          {
+            "time": "08:15",
+            "text": "It detonates about 600 m above the city, with the force of about 15 kilotons of TNT."
+          },
+          {
+            "time": "Minutes later",
+            "text": "Blast and heat destroy much of the city. Fires spread as the cloud climbs."
+          },
+          {
+            "time": "1945",
+            "text": "About 70,000 to 80,000 people die in the blast; by the end of 1945 the toll reaches 90,000 to 166,000."
+          }
+        ]
+      },
+      "nagasaki": {
+        "title": "Nagasaki",
+        "place": "Nagasaki, Japan",
+        "teaser": "Three days later, a second atomic bomb.",
+        "beats": [
+          {
+            "time": "9 August",
+            "text": "Kokura, the primary target, is hidden by cloud and smoke. The B-29 Bockscar turns to Nagasaki."
+          },
+          {
+            "time": "11:01",
+            "text": "Fat Man is released over the Urakami Valley, nearly 3 km from the planned aim point."
+          },
+          {
+            "time": "11:02",
+            "text": "It detonates about 500 m above the valley, with the force of about 21 kilotons of TNT."
+          },
+          {
+            "time": "11:02",
+            "text": "The hills confine the blast to the Urakami Valley; much of the city beyond is shielded."
+          },
+          {
+            "time": "Minutes later",
+            "text": "The cloud climbs over the burning valley."
+          },
+          {
+            "time": "1945",
+            "text": "About 60,000 to 80,000 people die by the end of 1945."
+          }
+        ]
+      }
+    }
+  }
+}

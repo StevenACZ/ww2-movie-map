@@ -1,0 +1,43 @@
+{
+  "placesPage": {
+    "eyebrow": "The atlas · {n} places",
+    "atlas": "Every place, most filmed first",
+    "search": "Search places",
+    "searchPlaceholder": "City, beach, camp or sea…",
+    "clear": "Clear search",
+    "results": "{n} of {total} places",
+    "noResults": "No place matches “{q}”.",
+    "back": "All places",
+    "seoDescription": "{n} war films and series set in {place}, including {titles}. See where each story happens on the map.",
+    "seoDescriptionShort": "{n} war films and series set in {place}. See where each story happens on the map.",
+    "eraFilter": "Filter by era",
+    "map": {
+      "label": "Interactive atlas of the places in the films",
+      "regions": "Map regions",
+      "region": {
+        "world": "World",
+        "west": "Western Europe",
+        "east": "Eastern Front",
+        "med": "Mediterranean & Africa",
+        "pacific": "Pacific",
+        "asia": "East Asia"
+      },
+      "area": {
+        "atlantic": "Atlantic Ocean",
+        "pacific": "Pacific Ocean",
+        "indian": "Indian Ocean",
+        "europe": "Europe",
+        "ussr": "Soviet Union",
+        "africa": "Africa",
+        "china": "China",
+        "americas": "North America"
+      },
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "hint": "Drag to move · scroll or pinch to zoom",
+      "loading": "Unfolding the atlas…",
+      "open": "Open place",
+      "atSea": "At sea"
+    }
+  }
+}

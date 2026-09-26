@@ -1,0 +1,553 @@
+{
+  "places": {
+    "dunkirk": {
+      "name": { "en": "Dunkirk", "es": "Dunkerque" },
+      "description": {
+        "en": "In late May 1940 the German breakthrough in the Ardennes trapped the British Expeditionary Force and much of the French army against the Channel coast at Dunkirk. Operation Dynamo, run from 26 May to 4 June, lifted 338,226 Allied soldiers from the harbour mole and beaches with destroyers and hundreds of civilian 'little ships', while a French rearguard held the perimeter and was captured when the town fell.",
+        "es": "A fines de mayo de 1940, la irrupción alemana por las Ardenas dejó acorralados en Dunkerque al Cuerpo Expedicionario Británico y a buena parte del ejército francés. La Operación Dynamo, entre el 26 de mayo y el 4 de junio, rescató a 338.226 soldados aliados desde el espigón y las playas con destructores y cientos de pequeñas embarcaciones civiles, mientras una retaguardia francesa sostenía el cerco hasta caer prisionera."
+      }
+    },
+    "english-channel": {
+      "name": { "en": "English Channel", "es": "Canal de la Mancha" },
+      "description": {
+        "en": "After the fall of France in June 1940, the Channel became Britain's front line. The Luftwaffe opened the Battle of Britain in July by attacking shipping in the Strait of Dover, and RAF Fighter Command fought over these waters until October, joined from September 1940 by American volunteers of the Eagle Squadrons. Four years later the same crossing carried the D-Day invasion fleet to Normandy.",
+        "es": "Tras la caída de Francia en junio de 1940, el canal se convirtió en la primera línea británica. La Luftwaffe abrió la batalla de Inglaterra en julio atacando convoyes en el estrecho de Dover, y el Mando de Caza de la RAF combatió sobre estas aguas hasta octubre, con voluntarios estadounidenses de los Eagle Squadrons desde septiembre de 1940. Cuatro años después, esa misma travesía llevó la flota del Día D a Normandía."
+      }
+    },
+    "london": {
+      "name": { "en": "London", "es": "Londres" },
+      "description": {
+        "en": "London was hit by Zeppelins and Gotha bombers in the First World War, and in May 1940 it became the seat of Churchill's war cabinet, run partly from the Cabinet War Rooms. The Blitz, from 7 September 1940 to May 1941, killed some 20,000 Londoners, and V-1 and V-2 rockets followed in 1944. The city also hosted the exiled governments of Poland, Norway, the Netherlands and Free France.",
+        "es": "Londres sufrió ataques de zepelines y bombarderos Gotha en la Primera Guerra Mundial, y en mayo de 1940 pasó a ser la sede del gabinete de guerra de Churchill, que operaba en parte desde un búnker subterráneo. El Blitz, del 7 de septiembre de 1940 a mayo de 1941, mató a unos 20.000 londinenses, y en 1944 llegaron las bombas V-1 y V-2. La ciudad acogió además a los gobiernos exiliados de Polonia, Noruega, Países Bajos y la Francia Libre."
+      }
+    },
+    "berlin": {
+      "name": { "en": "Berlin", "es": "Berlín" },
+      "description": {
+        "en": "The restless capital of the Weimar Republic fell to Hitler on 30 January 1933 and staged the 1936 Olympic Games as Nazi propaganda. From the Bendlerblock, conspirators launched the failed coup of 20 July 1944. RAF and American bombing wrecked the city from 1943, and the Red Army stormed it in April 1945; Hitler killed himself in the Führerbunker on 30 April, and the garrison surrendered on 2 May.",
+        "es": "La inquieta capital de la República de Weimar quedó en manos de Hitler el 30 de enero de 1933 y usó los Juegos Olímpicos de 1936 como propaganda nazi. Desde el Bendlerblock, los conspiradores lanzaron el fallido golpe del 20 de julio de 1944. Los bombardeos británicos y estadounidenses la arrasaron desde 1943 y el Ejército Rojo la asaltó en abril de 1945; Hitler se suicidó en el búnker el 30 de abril y la guarnición se rindió el 2 de mayo."
+      }
+    },
+    "la-rochelle": {
+      "name": { "en": "La Rochelle", "es": "La Rochelle" },
+      "description": {
+        "en": "After the fall of France, the Kriegsmarine turned the Atlantic port of La Rochelle and its deep-water harbour at La Pallice into a U-boat base. The 3rd U-boat Flotilla moved there in 1941, and a massive concrete submarine pen was built in 1941 and 1942 that survived every Allied raid. The German garrison held the town as a fortified pocket until the surrender of 9 May 1945.",
+        "es": "Tras la derrota francesa, la Kriegsmarine convirtió el puerto atlántico de La Rochelle y su dársena de aguas profundas de La Pallice en una base de submarinos. La 3.ª Flotilla de U-Boote se instaló allí en 1941, y entre 1941 y 1942 se levantó un enorme refugio de hormigón que resistió todos los ataques aliados. La guarnición alemana conservó la ciudad como bolsa fortificada hasta la rendición del 9 de mayo de 1945."
+      }
+    },
+    "north-atlantic": {
+      "name": { "en": "North Atlantic", "es": "Atlántico Norte" },
+      "description": {
+        "en": "The Battle of the Atlantic, fought from 1939 to 1945, pitted German U-boat wolf packs against the convoys that kept Britain supplied from North America. Thousands of merchant ships were sunk, many in the mid-ocean air gap beyond the reach of land-based aircraft. Long-range Liberators, escort carriers, radar and broken Enigma traffic closed that gap in spring 1943, when 41 U-boats were lost in 'Black May' alone.",
+        "es": "La batalla del Atlántico, librada entre 1939 y 1945, enfrentó a las manadas de U-Boote alemanes con los convoyes que abastecían a Gran Bretaña desde Norteamérica. Miles de mercantes se hundieron, muchos en el hueco central del océano, fuera del alcance de la aviación terrestre. Los Liberator de largo alcance, los portaaviones de escolta, el radar y el descifrado de Enigma cerraron ese hueco en la primavera de 1943, cuando solo en el llamado Mayo Negro se perdieron 41 submarinos."
+      }
+    },
+    "strait-of-gibraltar": {
+      "name": { "en": "Strait of Gibraltar", "es": "Estrecho de Gibraltar" },
+      "description": {
+        "en": "The narrow strait between Spain and Morocco was guarded by the British fortress of Gibraltar, base of Force H and of constant anti-submarine patrols. From September 1941 Germany sent U-boats through it to support Italy in the Mediterranean, using the inflowing current to slip past submerged. About 60 boats made the passage, several were sunk or damaged in the attempt, and none ever returned to the Atlantic.",
+        "es": "El angosto paso entre España y Marruecos estaba vigilado por la fortaleza británica de Gibraltar, base de la Fuerza H y de patrullas antisubmarinas constantes. Desde septiembre de 1941, Alemania envió U-Boote por el estrecho para apoyar a Italia en el Mediterráneo, aprovechando la corriente entrante para cruzar sumergidos. Unos 60 submarinos lo lograron, varios fueron hundidos o dañados en el intento y ninguno volvió jamás al Atlántico."
+      }
+    },
+    "narvik": {
+      "name": { "en": "Narvik", "es": "Narvik" },
+      "description": {
+        "en": "Narvik's ice-free harbour shipped Swedish iron ore to Germany, which made it a prime target when Germany invaded Norway on 9 April 1940. German destroyers sank the Norwegian coastal defence ships Eidsvold and Norge, but two Royal Navy attacks on 10 and 13 April destroyed all ten of them. Norwegian, French, Polish and British troops retook the town on 28 May, then withdrew in early June as France collapsed.",
+        "es": "El puerto de Narvik, libre de hielo, embarcaba el hierro sueco hacia Alemania, y por eso fue un objetivo clave cuando Alemania invadió Noruega el 9 de abril de 1940. Los destructores alemanes hundieron los acorazados costeros noruegos Eidsvold y Norge, pero dos ataques de la Marina Real, el 10 y el 13 de abril, acabaron con los diez. Tropas noruegas, francesas, polacas y británicas recuperaron la ciudad el 28 de mayo y se retiraron a comienzos de junio, cuando Francia se derrumbaba."
+      }
+    },
+    "bremen": {
+      "name": { "en": "Bremen", "es": "Bremen" },
+      "description": {
+        "en": "Bremen's shipyards, including AG Weser and Bremer Vulkan, built U-boats, and its aircraft plants supplied the Luftwaffe, so the city was bombed throughout the war. It became a frequent and costly target for the US Eighth Air Force in 1943: the 100th Bomb Group flew its first mission against the Bremen U-boat yards on 25 June 1943, and returned in October under fierce flak and fighter attacks.",
+        "es": "Los astilleros de Bremen, como AG Weser y Bremer Vulkan, construían U-Boote y sus fábricas aeronáuticas abastecían a la Luftwaffe, así que la ciudad fue bombardeada durante toda la guerra. En 1943 se volvió un blanco frecuente y costoso para la Octava Fuerza Aérea estadounidense: el 100.º Grupo de Bombardeo voló su primera misión contra esos astilleros el 25 de junio de 1943 y regresó en octubre bajo un feroz fuego antiaéreo y de cazas."
+      }
+    },
+    "stalag-luft-iii": {
+      "name": { "en": "Stalag Luft III", "es": "Stalag Luft III" },
+      "description": {
+        "en": "Opened by the Luftwaffe in 1942 near Sagan, in today's Żagań in Poland, this camp held captured Allied airmen, including thousands of Americans in its later compounds. Its sandy soil was chosen to defeat tunnelling, yet on the night of 24 March 1944 seventy-six prisoners escaped through the tunnel 'Harry'. Only three reached freedom and fifty were executed on Hitler's orders; in January 1945 the camp was marched west.",
+        "es": "Abierto por la Luftwaffe en 1942 cerca de Sagan, hoy Żagań, en Polonia, este campo retenía a aviadores aliados capturados, entre ellos miles de estadounidenses en sus últimos recintos. Su suelo arenoso debía impedir los túneles, pero la noche del 24 de marzo de 1944 setenta y seis prisioneros escaparon por el túnel Harry. Solo tres llegaron a la libertad y cincuenta fueron fusilados por orden de Hitler; en enero de 1945 el campo fue evacuado a pie hacia el oeste."
+      }
+    },
+    "bletchley-park": {
+      "name": { "en": "Bletchley Park", "es": "Bletchley Park" },
+      "description": {
+        "en": "In August 1939 Britain's Government Code and Cypher School moved to this Buckinghamshire estate. Building on Polish work, Alan Turing and Gordon Welchman designed the electromechanical bombe, which from 1940 broke German Enigma settings daily; Hut 8 attacked the naval traffic vital to the Atlantic convoys. By 1945 nearly 10,000 people worked there, and the Colossus computers were cracking Hitler's high-level Lorenz cipher.",
+        "es": "En agosto de 1939, la Escuela de Códigos y Cifrado del gobierno británico se trasladó a esta finca de Buckinghamshire. Sobre la base del trabajo polaco, Alan Turing y Gordon Welchman diseñaron la bomba electromecánica, que desde 1940 descifraba a diario la configuración de Enigma; el Barracón 8 atacaba el tráfico naval clave para los convoyes del Atlántico. En 1945 trabajaban allí casi 10.000 personas y las computadoras Colossus rompían el cifrado Lorenz del alto mando."
+      }
+    },
+    "sicily": {
+      "name": { "en": "Sicily", "es": "Sicilia" },
+      "description": {
+        "en": "On 10 July 1943 Operation Husky landed Patton's US Seventh Army and Montgomery's British Eighth Army on Sicily's southern and eastern coasts, after the Mincemeat deception had pointed Germany toward Greece and Sardinia. Special Raiding Squadron commandos silenced the guns at Capo Murro di Porco. The campaign ended at Messina on 17 August, and its shock helped topple Mussolini on 25 July.",
+        "es": "El 10 de julio de 1943, la Operación Husky desembarcó al Séptimo Ejército estadounidense de Patton y al Octavo Ejército británico de Montgomery en las costas sur y este de Sicilia, después de que el engaño de la Operación Mincemeat desviara la atención alemana hacia Grecia y Cerdeña. Comandos del Special Raiding Squadron silenciaron la batería de Capo Murro di Porco. La campaña terminó en Mesina el 17 de agosto, y su impacto precipitó la caída de Mussolini el 25 de julio."
+      }
+    },
+    "hamburg": {
+      "name": { "en": "Hamburg", "es": "Hamburgo" },
+      "description": {
+        "en": "Germany's great port was a cultural centre in the Weimar years and an industrial one under the Nazis: the Blohm & Voss yard launched the battleship Bismarck there on 14 February 1939 and turned out U-boats throughout the war. In late July 1943 Operation Gomorrah, a week of RAF and American raids, created a firestorm that killed around 37,000 people and left much of the city in ruins.",
+        "es": "El gran puerto alemán fue un centro cultural en los años de Weimar y un polo industrial bajo el nazismo: el astillero Blohm & Voss botó allí el acorazado Bismarck el 14 de febrero de 1939 y fabricó U-Boote durante toda la guerra. A fines de julio de 1943, la Operación Gomorra, una semana de bombardeos británicos y estadounidenses, desató una tormenta de fuego que mató a unas 37.000 personas y dejó en ruinas gran parte de la ciudad."
+      }
+    },
+    "river-plate": {
+      "name": { "en": "River Plate", "es": "Río de la Plata" },
+      "description": {
+        "en": "On 13 December 1939 the German pocket battleship Admiral Graf Spee, which had been raiding merchant shipping in the South Atlantic, met the British cruisers Exeter, Ajax and Achilles off the estuary. After a running battle she took refuge in neutral Montevideo. Believing a larger British force was waiting, Captain Hans Langsdorff scuttled his ship in the estuary on 17 December and took his own life three days later.",
+        "es": "El 13 de diciembre de 1939, el acorazado de bolsillo alemán Admiral Graf Spee, que venía hundiendo mercantes en el Atlántico Sur, se enfrentó frente al estuario a los cruceros británicos Exeter, Ajax y Achilles. Tras un combate en persecución se refugió en el puerto neutral de Montevideo. Convencido de que lo esperaba una fuerza británica mayor, el capitán Hans Langsdorff hundió su propio barco en el estuario el 17 de diciembre y se quitó la vida tres días después."
+      }
+    },
+    "liverpool": {
+      "name": { "en": "Liverpool", "es": "Liverpool" },
+      "description": {
+        "en": "Britain's main Atlantic port received most of the convoys that fed the country during the Second World War. From February 1941 the Western Approaches Command directed the anti-submarine war from Derby House in the city centre, and escort groups sailed from its docks. That made Merseyside a Luftwaffe target: the May Blitz of 1941 killed about 1,700 people. Earlier, local volunteers had left from here for Spain.",
+        "es": "El principal puerto atlántico británico recibió la mayoría de los convoyes que alimentaron al país en la Segunda Guerra Mundial. Desde febrero de 1941, el Mando de los Accesos Occidentales dirigió la guerra antisubmarina desde Derby House, en el centro, y de sus muelles zarpaban los grupos de escolta. Eso hizo de Merseyside un blanco de la Luftwaffe: el Blitz de mayo de 1941 mató a unas 1.700 personas. Antes, voluntarios locales habían partido de aquí hacia España."
+      }
+    },
+    "arctic-convoy-route": {
+      "name": {
+        "en": "Arctic convoy route",
+        "es": "Ruta de los convoyes árticos"
+      },
+      "description": {
+        "en": "From August 1941 to May 1945, Allied convoys carried tanks, aircraft and supplies around northern Norway to the Soviet ports of Murmansk and Arkhangelsk. Ships faced pack ice, polar storms, U-boats, Luftwaffe bombers from Norwegian airfields and the threat of the battleship Tirpitz. The worst disaster came in July 1942, when convoy PQ 17 was ordered to scatter and lost 24 of its 35 merchant ships.",
+        "es": "Entre agosto de 1941 y mayo de 1945, los convoyes aliados llevaron tanques, aviones y suministros bordeando el norte de Noruega hasta los puertos soviéticos de Múrmansk y Arcángel. Los barcos enfrentaban hielo a la deriva, tormentas polares, U-Boote, bombarderos de la Luftwaffe con base en Noruega y la amenaza del acorazado Tirpitz. El peor desastre llegó en julio de 1942, cuando el convoy PQ 17 recibió la orden de dispersarse y perdió 24 de sus 35 mercantes."
+      }
+    },
+    "alexandria": {
+      "name": { "en": "Alexandria", "es": "Alejandría" },
+      "description": {
+        "en": "Egypt's great harbour was the main base of the Royal Navy's Mediterranean Fleet. Survivors of the ships lost off Crete in May 1941 were landed here, and on 19 December 1941 Italian frogmen riding human torpedoes crippled the battleships Queen Elizabeth and Valiant at their moorings. When Rommel reached El Alamein in July 1942, the city lay barely 100 kilometres from the front and the fleet withdrew eastward.",
+        "es": "El gran puerto egipcio era la base principal de la Flota del Mediterráneo de la Marina Real. Aquí desembarcaron los sobrevivientes de los barcos hundidos frente a Creta en mayo de 1941, y el 19 de diciembre de 1941 buzos italianos a bordo de torpedos tripulados dejaron fuera de combate a los acorazados Queen Elizabeth y Valiant en sus amarras. Cuando Rommel llegó a El Alamein en julio de 1942, la ciudad quedó a apenas 100 kilómetros del frente y la flota se retiró hacia el este."
+      }
+    },
+    "hardangervidda": {
+      "name": { "en": "Hardangervidda", "es": "Hardangervidda" },
+      "description": {
+        "en": "This vast, treeless mountain plateau in southern Norway was the staging ground for the sabotage of German heavy water production. Four Norwegian commandos of Operation Grouse parachuted onto it on 18 October 1942 and survived the winter hidden in remote cabins, at times living on reindeer moss. In February 1943 the Gunnerside team dropped in to join them, and the combined group descended on the Vemork plant below.",
+        "es": "Esta enorme meseta montañosa y sin árboles del sur de Noruega fue la base para sabotear la producción alemana de agua pesada. Cuatro comandos noruegos de la Operación Grouse saltaron en paracaídas sobre ella el 18 de octubre de 1942 y sobrevivieron al invierno escondidos en cabañas aisladas, a veces alimentándose de liquen de reno. En febrero de 1943 llegó el equipo Gunnerside y el grupo reunido bajó hacia la planta de Vemork."
+      }
+    },
+    "vemork": {
+      "name": { "en": "Vemork", "es": "Vemork" },
+      "description": {
+        "en": "Norsk Hydro's power plant at Vemork, above Rjukan, was the only large-scale producer of heavy water in occupied Europe, a key material for Germany's nuclear research. A British glider assault, Operation Freshman, ended in disaster in November 1942. On the night of 27 to 28 February 1943, Norwegian commandos of Operation Gunnerside climbed the gorge, destroyed the high-concentration cells and escaped without firing a shot.",
+        "es": "La central de Norsk Hydro en Vemork, sobre Rjukan, era la única productora a gran escala de agua pesada en la Europa ocupada, un material clave para la investigación nuclear alemana. Un asalto británico en planeadores, la Operación Freshman, terminó en desastre en noviembre de 1942. La noche del 27 al 28 de febrero de 1943, comandos noruegos de la Operación Gunnerside escalaron el desfiladero, destruyeron las celdas de concentración y huyeron sin disparar un tiro."
+      }
+    },
+    "lake-tinn": {
+      "name": { "en": "Lake Tinn", "es": "Lago Tinn" },
+      "description": {
+        "en": "In February 1944 the Germans tried to move Vemork's remaining heavy water stock to Germany by rail and across Lake Tinn on the ferry SF Hydro. On 20 February, explosives planted by Norwegian saboteur Knut Haukelid and his team sank the ferry in the lake's deepest water, sending the heavy water to the bottom. Eighteen people died, fourteen of them Norwegian crew and passengers.",
+        "es": "En febrero de 1944, los alemanes intentaron llevar a Alemania las últimas reservas de agua pesada de Vemork por tren y cruzando el lago Tinn en el transbordador SF Hydro. El 20 de febrero, las cargas que colocaron el saboteador noruego Knut Haukelid y su equipo hundieron la nave en la parte más profunda del lago, con el agua pesada a bordo. Murieron dieciocho personas, catorce de ellas tripulantes y pasajeros noruegos."
+      }
+    },
+    "oslo": {
+      "name": { "en": "Oslo", "es": "Oslo" },
+      "description": {
+        "en": "When Germany invaded on 9 April 1940, the Oscarsborg fortress sank the heavy cruiser Blücher in the Oslofjord, delaying the occupation long enough for King Haakon VII and the government to escape north. The King refused to accept Vidkun Quisling's regime and later led the resistance from London. In occupied Oslo, saboteurs such as Max Manus and the Oslo Gang mined German ships in the harbour.",
+        "es": "Cuando Alemania invadió Noruega el 9 de abril de 1940, la fortaleza de Oscarsborg hundió el crucero pesado Blücher en el fiordo de Oslo y retrasó la ocupación lo suficiente para que el rey Haakon VII y el gobierno huyeran al norte. El rey se negó a aceptar el régimen de Vidkun Quisling y luego encabezó la resistencia desde Londres. En la Oslo ocupada, saboteadores como Max Manus y la Banda de Oslo minaron barcos alemanes en el puerto."
+      }
+    },
+    "new-york": {
+      "name": { "en": "New York", "es": "Nueva York" },
+      "description": {
+        "en": "In the 1910s Greenwich Village was the heart of American radicalism, and in 1919 returning doughboys paraded up Fifth Avenue. The port sent the 1936 US Olympic team to Berlin and welcomed Jesse Owens home with a ticker-tape parade. During the Second World War it was the main embarkation point for troops bound for Europe, while U-boats hunted ships within sight of the coast from early 1942.",
+        "es": "En la década de 1910, Greenwich Village era el corazón del radicalismo estadounidense, y en 1919 los soldados que volvían de Francia desfilaron por la Quinta Avenida. Desde su puerto partió el equipo olímpico de 1936 hacia Berlín, y la ciudad recibió a Jesse Owens con un desfile triunfal. En la Segunda Guerra Mundial fue el principal punto de embarque de tropas hacia Europa, mientras desde comienzos de 1942 los U-Boote cazaban barcos a la vista de la costa."
+      }
+    },
+    "naples": {
+      "name": { "en": "Naples", "es": "Nápoles" },
+      "description": {
+        "en": "Italy's largest southern port was heavily bombed from 1940 onward. After the armistice of September 1943 the German garrison began deporting men and wrecking the harbour, and from 27 to 30 September the people of Naples rose in the Four Days of Naples, forcing the Germans out. Allied troops entered on 1 October 1943 and found a city of ruin, hunger and a thriving black market.",
+        "es": "El mayor puerto del sur de Italia fue bombardeado con dureza desde 1940. Tras el armisticio de septiembre de 1943, la guarnición alemana empezó a deportar hombres y a destruir el puerto, y del 27 al 30 de septiembre los napolitanos se sublevaron en las Cuatro Jornadas de Nápoles hasta expulsar a los alemanes. Las tropas aliadas entraron el 1 de octubre de 1943 y encontraron una ciudad en ruinas, con hambre y un mercado negro floreciente."
+      }
+    },
+    "warsaw": {
+      "name": { "en": "Warsaw", "es": "Varsovia" },
+      "description": {
+        "en": "Besieged and bombed in September 1939, Warsaw surrendered on 28 September. The Germans sealed some 400,000 Jews into a ghetto in November 1940 and in the summer of 1942 deported about 265,000 of them from the Umschlagplatz to Treblinka. The ghetto rose in April 1943. On 1 August 1944 the Home Army launched the Warsaw Uprising; after 63 days it was crushed, and the city razed.",
+        "es": "Sitiada y bombardeada en septiembre de 1939, Varsovia se rindió el 28 de ese mes. Los alemanes encerraron a unos 400.000 judíos en un gueto en noviembre de 1940 y, en el verano de 1942, deportaron a cerca de 265.000 desde la Umschlagplatz a Treblinka. El gueto se levantó en abril de 1943. El 1 de agosto de 1944, el Ejército Nacional inició el Levantamiento de Varsovia; tras 63 días fue aplastado y la ciudad, arrasada."
+      }
+    },
+    "paris": {
+      "name": { "en": "Paris", "es": "París" },
+      "description": {
+        "en": "German long-range guns shelled Paris in 1918, and in June 1940 the Wehrmacht entered an undefended city that stayed occupied for four years. In July 1942 French police rounded up more than 13,000 Jews in the Vel' d'Hiv raid. The Resistance rose on 19 August 1944; General von Choltitz did not carry out Hitler's order to destroy the city, and Leclerc's 2nd Armoured Division liberated it on 25 August.",
+        "es": "Los cañones alemanes de largo alcance bombardearon París en 1918, y en junio de 1940 la Wehrmacht entró en una ciudad indefensa que siguió ocupada durante cuatro años. En julio de 1942, la policía francesa detuvo a más de 13.000 judíos en la redada del Velódromo de Invierno. La Resistencia se sublevó el 19 de agosto de 1944; el general von Choltitz no cumplió la orden de Hitler de destruir la ciudad y la 2.ª División Blindada de Leclerc la liberó el 25 de agosto."
+      }
+    },
+    "tobruk": {
+      "name": { "en": "Tobruk", "es": "Tobruk" },
+      "description": {
+        "en": "This small Libyan port was the key to Axis supply in North Africa. Its garrison, led by the Australian 9th Division, the 'Rats of Tobruk', withstood Rommel's siege from April to November 1941. Tobruk fell on 21 June 1942, with some 33,000 Allied troops captured, a blow that sent Churchill's standing to a low. A British commando and naval raid on the port in September 1942 failed with heavy losses.",
+        "es": "Este pequeño puerto libio era clave para el abastecimiento del Eje en el norte de África. Su guarnición, encabezada por la 9.ª División australiana, las Ratas de Tobruk, resistió el asedio de Rommel de abril a noviembre de 1941. Tobruk cayó el 21 de junio de 1942 con unos 33.000 soldados aliados capturados, un golpe que dejó muy debilitado a Churchill. Un ataque británico de comandos y fuerzas navales contra el puerto en septiembre de 1942 fracasó con grandes pérdidas."
+      }
+    },
+    "pearl-harbor": {
+      "name": { "en": "Pearl Harbor", "es": "Pearl Harbor" },
+      "description": {
+        "en": "Home of the US Pacific Fleet since 1940, the base on Oahu was struck without warning on the morning of 7 December 1941 by 353 aircraft from six Japanese carriers. All eight battleships in the harbour were damaged and four sunk, including USS Arizona, and 2,403 Americans were killed. The American carriers were at sea and escaped. The next day the United States declared war on Japan.",
+        "es": "Sede de la Flota del Pacífico estadounidense desde 1940, la base de Oahu fue atacada sin previo aviso la mañana del 7 de diciembre de 1941 por 353 aviones de seis portaaviones japoneses. Los ocho acorazados del puerto resultaron dañados y cuatro se hundieron, entre ellos el USS Arizona, y murieron 2.403 estadounidenses. Los portaaviones de Estados Unidos estaban en el mar y se salvaron. Al día siguiente, Estados Unidos declaró la guerra a Japón."
+      }
+    },
+    "stalingrad": {
+      "name": { "en": "Stalingrad", "es": "Stalingrado" },
+      "description": {
+        "en": "In August 1942 the German Sixth Army reached this industrial city on the Volga, and the fighting turned into months of street and factory combat against Chuikov's 62nd Army. On 19 November Operation Uranus encircled more than 250,000 Axis troops. Field Marshal Paulus surrendered on 31 January 1943 and the last pocket on 2 February; about 91,000 prisoners marched into captivity. The battle turned the war in the East.",
+        "es": "En agosto de 1942, el Sexto Ejército alemán llegó a esta ciudad industrial a orillas del Volga, y la lucha se convirtió en meses de combates calle por calle y fábrica por fábrica contra el 62.º Ejército de Chuikov. El 19 de noviembre, la Operación Urano cercó a más de 250.000 soldados del Eje. El mariscal Paulus se rindió el 31 de enero de 1943 y el último reducto, el 2 de febrero; unos 91.000 prisioneros partieron al cautiverio. La batalla cambió el curso de la guerra en el Este."
+      }
+    },
+    "auschwitz": {
+      "name": { "en": "Auschwitz", "es": "Auschwitz" },
+      "description": {
+        "en": "Opened in 1940 for Polish political prisoners near Oświęcim, Auschwitz grew into the largest Nazi killing centre, with gas chambers and crematoria at Birkenau. About 1.1 million people were murdered there, around a million of them Jews; some 420,000 Hungarian Jews arrived in the spring and summer of 1944 alone. On 7 October 1944 the Sonderkommando revolted. Soviet troops liberated the camp on 27 January 1945.",
+        "es": "Abierto en 1940 para presos políticos polacos cerca de Oświęcim, Auschwitz se convirtió en el mayor centro de exterminio nazi, con cámaras de gas y crematorios en Birkenau. Allí fueron asesinadas cerca de 1,1 millones de personas, alrededor de un millón de ellas judías; solo en la primavera y el verano de 1944 llegaron unos 420.000 judíos húngaros. El 7 de octubre de 1944 se sublevó el Sonderkommando. Las tropas soviéticas liberaron el campo el 27 de enero de 1945."
+      }
+    },
+    "hiroshima": {
+      "name": { "en": "Hiroshima", "es": "Hiroshima" },
+      "description": {
+        "en": "A military headquarters city beside the naval base of Kure, Hiroshima had been largely spared conventional bombing when the B-29 Enola Gay dropped the uranium bomb Little Boy on 6 August 1945. The blast and firestorm killed some 70,000 to 80,000 people at once, and about 140,000 by the end of the year. Radioactive 'black rain' fell on the outskirts; Japan announced its surrender on 15 August.",
+        "es": "Ciudad sede de mandos militares junto a la base naval de Kure, Hiroshima se había librado casi por completo de los bombardeos convencionales cuando el B-29 Enola Gay lanzó la bomba de uranio Little Boy el 6 de agosto de 1945. La explosión y el incendio mataron de inmediato a entre 70.000 y 80.000 personas, y a unas 140.000 hacia fin de año. Sobre las afueras cayó una lluvia negra radiactiva; Japón anunció su rendición el 15 de agosto."
+      }
+    },
+    "krakow": {
+      "name": { "en": "Kraków", "es": "Cracovia" },
+      "description": {
+        "en": "From October 1939 Kraków was the capital of the German General Government, ruled by Hans Frank from Wawel Castle. On 6 November 1939 the Germans arrested 183 professors of the Jagiellonian University. Jews were forced into a ghetto in Podgórze in March 1941, which was liquidated on 13 and 14 March 1943; survivors went to the Płaszów camp, and Oskar Schindler shielded more than a thousand at his enamel factory.",
+        "es": "Desde octubre de 1939, Cracovia fue la capital del Gobierno General alemán, que Hans Frank dirigía desde el castillo de Wawel. El 6 de noviembre de 1939, los alemanes arrestaron a 183 profesores de la Universidad Jaguelónica. Los judíos fueron encerrados en un gueto en Podgórze en marzo de 1941, liquidado el 13 y 14 de marzo de 1943; los sobrevivientes pasaron al campo de Płaszów, y Oskar Schindler protegió a más de mil en su fábrica de esmaltes."
+      }
+    },
+    "wolfs-lair": {
+      "name": { "en": "Wolf's Lair", "es": "La Guarida del Lobo" },
+      "description": {
+        "en": "Hidden in the forests of East Prussia near Rastenburg, today's Kętrzyn in Poland, the Wolfsschanze was Hitler's main headquarters from the invasion of the Soviet Union in June 1941, and he spent more than 800 days there. On 20 July 1944 Colonel Claus von Stauffenberg set off a briefcase bomb in its conference hut; Hitler survived. He left in November 1944, and the bunkers were blown up in January 1945.",
+        "es": "Oculta en los bosques de Prusia Oriental, cerca de Rastenburg, hoy Kętrzyn, en Polonia, la Wolfsschanze fue el cuartel general principal de Hitler desde la invasión de la Unión Soviética en junio de 1941, y allí pasó más de 800 días. El 20 de julio de 1944, el coronel Claus von Stauffenberg hizo estallar una bomba en su sala de conferencias; Hitler sobrevivió. Se marchó en noviembre de 1944 y los búnkeres fueron volados en enero de 1945."
+      }
+    },
+    "moscow": {
+      "name": { "en": "Moscow", "es": "Moscú" },
+      "description": {
+        "en": "The Bolsheviks took Moscow after heavy fighting in November 1917 and made it the Soviet capital in 1918. In the 1930s it was the stage for Stalin's show trials. In October 1941 German armies came within sight of the city, but the Red Army's counteroffensive of 5 December 1941 drove them back, Germany's first major defeat. Troops left for the front from its railway stations throughout the war.",
+        "es": "Los bolcheviques tomaron Moscú tras duros combates en noviembre de 1917 y la hicieron capital soviética en 1918. En los años treinta fue el escenario de los procesos de Stalin. En octubre de 1941, los ejércitos alemanes llegaron a las puertas de la ciudad, pero la contraofensiva del Ejército Rojo del 5 de diciembre de 1941 los hizo retroceder: la primera gran derrota alemana. De sus estaciones partieron tropas al frente durante toda la guerra."
+      }
+    },
+    "sevastopol": {
+      "name": { "en": "Sevastopol", "es": "Sebastopol" },
+      "description": {
+        "en": "Home of the Black Sea Fleet, which Admiral Alexander Kolchak commanded in 1916 and 1917, Sevastopol was besieged by Manstein's Eleventh Army from October 1941. The defenders, including the sniper Lyudmila Pavlichenko, held out for 250 days until the fortress fell on 4 July 1942 under massive artillery fire. The Red Army retook the city on 9 May 1944.",
+        "es": "Base de la Flota del Mar Negro, que el almirante Aleksandr Kolchak comandó en 1916 y 1917, Sebastopol fue sitiada por el Undécimo Ejército de Manstein desde octubre de 1941. Sus defensores, entre ellos la francotiradora Liudmila Pavlichenko, resistieron 250 días, hasta que la fortaleza cayó el 4 de julio de 1942 bajo un bombardeo masivo de artillería. El Ejército Rojo recuperó la ciudad el 9 de mayo de 1944."
+      }
+    },
+    "washington-dc": {
+      "name": { "en": "Washington, D.C.", "es": "Washington D. C." },
+      "description": {
+        "en": "The American capital became the command centre of a global war after Japan's delayed diplomatic note arrived hours after the attack on Pearl Harbor. Roosevelt and Churchill planned Allied strategy here at the Arcadia Conference in December 1941, and the Pentagon opened in 1943. In August 1942 Eleanor Roosevelt welcomed the Soviet sniper Lyudmila Pavlichenko. After Roosevelt's death in April 1945, Harry Truman inherited the atomic bomb.",
+        "es": "La capital estadounidense se convirtió en el centro de mando de una guerra global después de que la nota diplomática japonesa llegara horas tarde, ya iniciado el ataque a Pearl Harbor. Roosevelt y Churchill trazaron aquí la estrategia aliada en la Conferencia Arcadia de diciembre de 1941, y el Pentágono abrió en 1943. En agosto de 1942, Eleanor Roosevelt recibió a la francotiradora soviética Liudmila Pavlichenko. Tras la muerte de Roosevelt en abril de 1945, Harry Truman heredó la bomba atómica."
+      }
+    },
+    "lwow": {
+      "name": { "en": "Lviv (Lwów)", "es": "Leópolis (Lwów)" },
+      "description": {
+        "en": "The Polish city of Lwów was occupied by the Soviet Union in September 1939 and by Germany on 30 June 1941, when deadly pogroms followed. Its large Jewish community was confined to a ghetto from late 1941, deported to the Bełżec death camp and to the Janowska camp, and the ghetto was liquidated in June 1943. A few survived hidden in the city sewers until the Red Army arrived in July 1944.",
+        "es": "La ciudad polaca de Lwów fue ocupada por la Unión Soviética en septiembre de 1939 y por Alemania el 30 de junio de 1941, a lo que siguieron pogromos sangrientos. Su numerosa comunidad judía fue encerrada en un gueto desde fines de 1941 y deportada al campo de exterminio de Bełżec y al campo de Janowska; el gueto se liquidó en junio de 1943. Unos pocos sobrevivieron ocultos en las alcantarillas hasta la llegada del Ejército Rojo en julio de 1944."
+      }
+    },
+    "monte-cassino": {
+      "name": { "en": "Monte Cassino", "es": "Montecassino" },
+      "description": {
+        "en": "The hilltop abbey of Monte Cassino anchored Germany's Gustav Line across Italy. Between January and May 1944 the Allies fought four battles to break through, with American, British, New Zealand, Indian and French colonial troops, including Algerian and Moroccan units. The abbey was destroyed by bombing on 15 February 1944. Polish II Corps finally raised its flag over the ruins on 18 May, opening the road to Rome.",
+        "es": "La abadía en lo alto de Montecassino era el eje de la Línea Gustav alemana en Italia. Entre enero y mayo de 1944, los Aliados libraron cuatro batallas para romperla, con tropas estadounidenses, británicas, neozelandesas, indias y coloniales francesas, entre ellas unidades argelinas y marroquíes. Los bombardeos destruyeron la abadía el 15 de febrero de 1944. El II Cuerpo polaco izó por fin su bandera sobre las ruinas el 18 de mayo y abrió el camino a Roma."
+      }
+    },
+    "shanghai": {
+      "name": { "en": "Shanghai", "es": "Shanghái" },
+      "description": {
+        "en": "China's largest city was the scene of one of the first great battles of the Sino-Japanese War, fought from August to November 1937. As the Chinese army withdrew, a few hundred soldiers of the 88th Division held the Sihang Warehouse for four days in full view of the International Settlement. After Pearl Harbor, Japan occupied the foreign concessions in December 1941 and later interned Allied civilians in camps.",
+        "es": "La ciudad más grande de China fue escenario de una de las primeras grandes batallas de la guerra chino-japonesa, entre agosto y noviembre de 1937. Mientras el ejército chino se replegaba, unos cientos de soldados de la 88.ª División defendieron el almacén Sihang durante cuatro días a la vista de la Concesión Internacional. Tras Pearl Harbor, Japón ocupó las concesiones extranjeras en diciembre de 1941 y luego internó a los civiles aliados en campos."
+      }
+    },
+    "iwo-jima": {
+      "name": { "en": "Iwo Jima", "es": "Iwo Jima" },
+      "description": {
+        "en": "General Tadamichi Kuribayashi turned this small volcanic island into a fortress of tunnels and bunkers. The 3rd, 4th and 5th Marine Divisions landed on 19 February 1945, and on 23 February Marines raised the flag on Mount Suribachi in the photograph that became an icon. The battle lasted until 26 March; almost all of the roughly 21,000 Japanese defenders died, and US casualties exceeded 26,000.",
+        "es": "El general Tadamichi Kuribayashi convirtió esta pequeña isla volcánica en una fortaleza de túneles y búnkeres. Las divisiones 3.ª, 4.ª y 5.ª de Marines desembarcaron el 19 de febrero de 1945, y el 23 de febrero izaron la bandera en el monte Suribachi, en la fotografía que se volvió un ícono. La batalla duró hasta el 26 de marzo; murieron casi todos los cerca de 21.000 defensores japoneses y las bajas estadounidenses superaron las 26.000."
+      }
+    },
+    "tokyo": {
+      "name": { "en": "Tokyo", "es": "Tokio" },
+      "description": {
+        "en": "The Great Kantō earthquake of 1 September 1923 and its fires destroyed much of Tokyo. As capital of an expanding empire, the city was first hit by the Doolittle Raid on 18 April 1942. On the night of 9 to 10 March 1945 American B-29s firebombed it, killing about 100,000 people. Japan signed its surrender in Tokyo Bay on 2 September 1945, and MacArthur's occupation headquarters followed.",
+        "es": "El gran terremoto de Kantō del 1 de septiembre de 1923 y sus incendios destruyeron buena parte de Tokio. Capital de un imperio en expansión, la ciudad sufrió su primer ataque con el bombardeo Doolittle del 18 de abril de 1942. La noche del 9 al 10 de marzo de 1945, los B-29 estadounidenses la bombardearon con incendiarias y mataron a unas 100.000 personas. Japón firmó su rendición en la bahía de Tokio el 2 de septiembre de 1945, y llegó el cuartel de ocupación de MacArthur."
+      }
+    },
+    "kwajalein": {
+      "name": { "en": "Kwajalein", "es": "Kwajalein" },
+      "description": {
+        "en": "Kwajalein Atoll in the Marshall Islands was a Japanese naval and air base, raided by American carriers on 1 February 1942 in one of the first US offensives of the Pacific War. Captured Allied airmen were held and some executed on a small island of the atoll. In early February 1944 the 7th Infantry and 4th Marine Divisions took the atoll in a week of fighting.",
+        "es": "El atolón de Kwajalein, en las islas Marshall, era una base aeronaval japonesa, atacada por portaaviones estadounidenses el 1 de febrero de 1942 en una de las primeras ofensivas de Estados Unidos en el Pacífico. En un islote del atolón se retenía a aviadores aliados capturados, y algunos fueron ejecutados. A comienzos de febrero de 1944, la 7.ª División de Infantería y la 4.ª División de Marines tomaron el atolón en una semana de combates."
+      }
+    },
+    "zhejiang": {
+      "name": { "en": "Zhejiang", "es": "Zhejiang" },
+      "description": {
+        "en": "After bombing Tokyo on 18 April 1942, most of the sixteen B-25s of the Doolittle Raid ran out of fuel and their crews bailed out or crash-landed over Zhejiang and neighbouring Jiangxi, in eastern China. Chinese civilians and guerrillas hid most of the airmen and guided them to safety. In reprisal, the Japanese Zhejiang-Jiangxi campaign killed an estimated 250,000 Chinese civilians.",
+        "es": "Después de bombardear Tokio el 18 de abril de 1942, la mayoría de los dieciséis B-25 del ataque Doolittle se quedaron sin combustible y sus tripulantes saltaron en paracaídas o se estrellaron sobre Zhejiang y la vecina Jiangxi, en el este de China. Civiles y guerrilleros chinos escondieron a casi todos los aviadores y los guiaron a un lugar seguro. En represalia, la campaña japonesa de Zhejiang-Jiangxi mató a unos 250.000 civiles chinos."
+      }
+    },
+    "okinawa": {
+      "name": { "en": "Okinawa", "es": "Okinawa" },
+      "description": {
+        "en": "The last great battle of the Pacific War began on 1 April 1945 with the largest amphibious landing of the campaign. American soldiers and Marines ground their way south against the Shuri Line and positions such as the Maeda Escarpment, while kamikazes battered the fleet offshore. By the end on 22 June, more than 12,000 Americans, some 100,000 Japanese troops and a huge share of Okinawa's civilians had died.",
+        "es": "La última gran batalla de la guerra del Pacífico comenzó el 1 de abril de 1945 con el mayor desembarco anfibio de la campaña. Soldados y marines estadounidenses avanzaron hacia el sur contra la Línea Shuri y posiciones como la escarpadura de Maeda, mientras los kamikazes golpeaban a la flota frente a la costa. Al terminar, el 22 de junio, habían muerto más de 12.000 estadounidenses, unos 100.000 soldados japoneses y una enorme parte de la población civil de Okinawa."
+      }
+    },
+    "guadalcanal": {
+      "name": { "en": "Guadalcanal", "es": "Guadalcanal" },
+      "description": {
+        "en": "On 7 August 1942 the 1st Marine Division landed on Guadalcanal, in the Solomon Islands, and seized the unfinished Japanese airfield that became Henderson Field. For six months both sides fed troops and ships into a battle of jungle fighting, disease and night naval clashes. Army divisions took over in late 1942 and cleared the hills inland, and Japan evacuated its last troops in February 1943.",
+        "es": "El 7 de agosto de 1942, la 1.ª División de Marines desembarcó en Guadalcanal, en las islas Salomón, y tomó el aeródromo japonés sin terminar que se convirtió en Henderson Field. Durante seis meses, ambos bandos lanzaron tropas y barcos a una batalla de combates en la selva, enfermedades y choques navales nocturnos. Divisiones del ejército relevaron a los marines a fines de 1942 y limpiaron las colinas del interior, y Japón evacuó sus últimas tropas en febrero de 1943."
+      }
+    },
+    "nanking": {
+      "name": { "en": "Nanking", "es": "Nankín" },
+      "description": {
+        "en": "China's Nationalist capital fell to the Japanese army on 13 December 1937. Over the following six weeks Japanese troops massacred prisoners and civilians and committed mass rape; estimates of the dead range from tens of thousands to more than 200,000. A small group of Westerners led by the German businessman John Rabe set up the Nanking Safety Zone, which sheltered some 200,000 refugees.",
+        "es": "La capital nacionalista china cayó en manos del ejército japonés el 13 de diciembre de 1937. Durante las seis semanas siguientes, las tropas japonesas masacraron a prisioneros y civiles y cometieron violaciones masivas; las estimaciones de muertos van de decenas de miles a más de 200.000. Un pequeño grupo de occidentales encabezado por el empresario alemán John Rabe creó la Zona de Seguridad de Nankín, que dio refugio a unas 200.000 personas."
+      }
+    },
+    "river-kwai": {
+      "name": { "en": "River Kwai", "es": "Río Kwai" },
+      "description": {
+        "en": "To supply its army in Burma, Japan built a 415-kilometre railway from Thailand in 1942 and 1943 using about 60,000 Allied prisoners of war and more than 200,000 Asian labourers. At Tha Makham near Kanchanaburi, prisoners built wooden and steel bridges over the Khwae Yai. Some 12,000 prisoners and up to 90,000 labourers died of disease, starvation and abuse, and Allied bombers attacked the bridges in 1945.",
+        "es": "Para abastecer a su ejército en Birmania, Japón construyó en 1942 y 1943 un ferrocarril de 415 kilómetros desde Tailandia con unos 60.000 prisioneros de guerra aliados y más de 200.000 trabajadores asiáticos. En Tha Makham, cerca de Kanchanaburi, los prisioneros levantaron puentes de madera y de acero sobre el río Khwae Yai. Murieron unos 12.000 prisioneros y hasta 90.000 trabajadores por enfermedades, hambre y maltratos, y en 1945 los bombarderos aliados atacaron los puentes."
+      }
+    },
+    "honolulu": {
+      "name": { "en": "Honolulu", "es": "Honolulu" },
+      "description": {
+        "en": "Before the war, Honolulu and nearby Schofield Barracks and Pearl Harbor made Oahu the largest American military outpost in the Pacific. After the attack of 7 December 1941, the territory lived under martial law until October 1944. The islands became the rear base of the Pacific offensive, where Marine and Army divisions rested and trained between campaigns such as Tarawa and Iwo Jima.",
+        "es": "Antes de la guerra, Honolulu, junto con el cuartel Schofield y Pearl Harbor, hacía de Oahu el mayor enclave militar estadounidense del Pacífico. Tras el ataque del 7 de diciembre de 1941, el territorio vivió bajo ley marcial hasta octubre de 1944. Las islas se convirtieron en la base de retaguardia de la ofensiva del Pacífico, donde las divisiones de marines y del ejército descansaban y se entrenaban entre campañas como Tarawa e Iwo Jima."
+      }
+    },
+    "los-alamos": {
+      "name": { "en": "Los Alamos", "es": "Los Álamos" },
+      "description": {
+        "en": "In 1943 the Manhattan Project took over a boys' ranch school on a remote New Mexico mesa and built a secret laboratory, Project Y, under J. Robert Oppenheimer. Scientists and their families lived behind fences with a post office box for an address. The lab designed the first atomic bombs: the plutonium device tested at Trinity on 16 July 1945 and the weapons dropped on Hiroshima and Nagasaki.",
+        "es": "En 1943, el Proyecto Manhattan ocupó un internado rural para varones en una remota meseta de Nuevo México y levantó allí un laboratorio secreto, el Proyecto Y, bajo la dirección de J. Robert Oppenheimer. Científicos y familias vivían tras cercas, con una casilla postal como única dirección. El laboratorio diseñó las primeras bombas atómicas: el artefacto de plutonio probado en Trinity el 16 de julio de 1945 y las armas lanzadas sobre Hiroshima y Nagasaki."
+      }
+    },
+    "singapore": {
+      "name": { "en": "Singapore", "es": "Singapur" },
+      "description": {
+        "en": "Britain's 'impregnable' naval fortress fell to General Yamashita on 15 February 1942 after a lightning campaign down the Malay Peninsula. About 80,000 British, Indian and Australian troops went into captivity, many held at Changi before being sent to build the Burma Railway. Ships evacuating civilians in the final days were sunk, and the Japanese Sook Ching massacres targeted the city's Chinese population.",
+        "es": "La fortaleza naval británica considerada inexpugnable cayó ante el general Yamashita el 15 de febrero de 1942, tras una campaña fulminante por la península malaya. Unos 80.000 soldados británicos, indios y australianos cayeron prisioneros, muchos retenidos en Changi antes de ser enviados a construir el ferrocarril de Birmania. Los barcos que evacuaban civiles en los últimos días fueron hundidos, y las masacres japonesas de Sook Ching se ensañaron con la población china de la ciudad."
+      }
+    },
+    "omaha-beach": {
+      "name": { "en": "Omaha Beach", "es": "Playa de Omaha" },
+      "description": {
+        "en": "On 6 June 1944 the US 1st and 29th Infantry Divisions, with Army Rangers, landed on this eight-kilometre stretch of the Normandy coast beneath bluffs held by the German 352nd Infantry Division. Most amphibious tanks sank, and the first waves were cut down on sectors such as Dog Green. Small groups of soldiers finally climbed the bluffs through the draws, at a cost of about 2,400 casualties.",
+        "es": "El 6 de junio de 1944, las divisiones de infantería 1.ª y 29.ª de Estados Unidos, junto con los Rangers, desembarcaron en este tramo de ocho kilómetros de la costa de Normandía, bajo acantilados defendidos por la 352.ª División de Infantería alemana. La mayoría de los tanques anfibios se hundieron y las primeras oleadas fueron barridas en sectores como Dog Green. Pequeños grupos de soldados lograron subir por los barrancos, a un costo de unas 2.400 bajas."
+      }
+    },
+    "bastogne": {
+      "name": { "en": "Bastogne", "es": "Bastogne" },
+      "description": {
+        "en": "When Germany launched the Ardennes offensive on 16 December 1944, this Belgian road junction became its key obstacle. The 101st Airborne Division and armoured units were surrounded from 20 December in freezing cold; asked to surrender on 22 December, General McAuliffe replied 'Nuts!'. Patton's 4th Armored Division broke through on 26 December, and fighting around the town, including at Foy, lasted into January 1945.",
+        "es": "Cuando Alemania lanzó la ofensiva de las Ardenas el 16 de diciembre de 1944, este cruce de caminos belga se volvió su principal obstáculo. La 101.ª División Aerotransportada y unidades blindadas quedaron cercadas desde el 20 de diciembre en medio de un frío extremo; cuando le exigieron rendirse, el 22 de diciembre, el general McAuliffe respondió «Nuts!». La 4.ª División Blindada de Patton rompió el cerco el 26 de diciembre, y los combates alrededor, incluido Foy, siguieron hasta enero de 1945."
+      }
+    },
+    "berchtesgaden": {
+      "name": { "en": "Berchtesgaden", "es": "Berchtesgaden" },
+      "description": {
+        "en": "Above this Bavarian alpine town, Hitler's Berghof on the Obersalzberg served as his second seat of government, where he received Chamberlain in 1938 and held military conferences. In July 1944 Stauffenberg attended briefings there carrying a bomb he did not detonate. The RAF bombed the complex on 25 April 1945, and American and French troops reached the town and the Eagle's Nest in early May.",
+        "es": "Sobre este pueblo alpino de Baviera, el Berghof de Hitler en el Obersalzberg funcionaba como segunda sede de gobierno: allí recibió a Chamberlain en 1938 y celebró reuniones militares. En julio de 1944, Stauffenberg asistió a sesiones en el lugar con una bomba que no llegó a activar. La RAF bombardeó el complejo el 25 de abril de 1945, y tropas estadounidenses y francesas llegaron al pueblo y al Nido del Águila a comienzos de mayo."
+      }
+    },
+    "marseille": {
+      "name": { "en": "Marseille", "es": "Marsella" },
+      "description": {
+        "en": "In 1940 and 1941 Marseille, in the unoccupied zone, was the last exit from France for refugees, and the American Varian Fry helped some 2,000 artists and intellectuals escape from the Villa Air-Bel. German troops occupied the city in November 1942 and demolished its Old Port quarter in early 1943. French Army B, including Algerian riflemen, liberated Marseille on 28 August 1944.",
+        "es": "En 1940 y 1941, Marsella, en la zona no ocupada, era la última salida de Francia para los refugiados, y el estadounidense Varian Fry ayudó a huir a unos 2.000 artistas e intelectuales desde la Villa Air-Bel. Las tropas alemanas ocuparon la ciudad en noviembre de 1942 y demolieron el barrio del Puerto Viejo a comienzos de 1943. El Ejército B francés, con fusileros argelinos, liberó Marsella el 28 de agosto de 1944."
+      }
+    },
+    "lyon": {
+      "name": { "en": "Lyon", "es": "Lyon" },
+      "description": {
+        "en": "Known as the capital of the French Resistance, Lyon hosted the leaders of the main movements. After German troops arrived in November 1942, the Gestapo under Klaus Barbie hunted them from the city; Jean Moulin was arrested at nearby Caluire on 21 June 1943 and tortured. Prisoners were held at Montluc, and on 21 October 1943 Lucie Aubrac's group freed her husband Raymond in an armed ambush.",
+        "es": "Conocida como la capital de la Resistencia francesa, Lyon albergaba a los líderes de los principales movimientos. Tras la llegada de las tropas alemanas en noviembre de 1942, la Gestapo de Klaus Barbie los persiguió desde la ciudad; Jean Moulin fue detenido en la vecina Caluire el 21 de junio de 1943 y torturado. Los presos pasaban por Montluc, y el 21 de octubre de 1943 el grupo de Lucie Aubrac liberó a su esposo Raymond en una emboscada armada."
+      }
+    },
+    "the-hague": {
+      "name": { "en": "The Hague", "es": "La Haya" },
+      "description": {
+        "en": "Seat of the Dutch government, The Hague was occupied in May 1940 after Queen Wilhelmina and her ministers fled to London. The German administration ruled from the city, and resistance fighters were executed in the Waalsdorpervlakte dunes nearby. In 1944 and 1945 V-2 rockets were launched at London from its parks, and on 3 March 1945 a mistaken RAF raid killed some 500 residents of Bezuidenhout.",
+        "es": "Sede del gobierno neerlandés, La Haya fue ocupada en mayo de 1940, después de que la reina Guillermina y sus ministros huyeran a Londres. La administración alemana gobernaba desde la ciudad, y en las dunas cercanas de Waalsdorpervlakte se fusilaba a miembros de la resistencia. En 1944 y 1945 se lanzaron desde sus parques cohetes V-2 contra Londres, y el 3 de marzo de 1945 un bombardeo equivocado de la RAF mató a unos 500 vecinos de Bezuidenhout."
+      }
+    },
+    "amsterdam": {
+      "name": { "en": "Amsterdam", "es": "Ámsterdam" },
+      "description": {
+        "en": "Amsterdam was home to most of the Netherlands' Jews when Germany occupied the country in May 1940. In February 1941 its workers staged a general strike against the first roundups. From July 1942 Anne Frank's family hid in the Secret Annex on the Prinsengracht until their arrest on 4 August 1944. Banker Walraven van Hall secretly financed the resistance. About 75 percent of Dutch Jews were murdered.",
+        "es": "Ámsterdam concentraba a la mayoría de los judíos de los Países Bajos cuando Alemania ocupó el país en mayo de 1940. En febrero de 1941, sus trabajadores hicieron una huelga general contra las primeras redadas. Desde julio de 1942, la familia de Ana Frank se ocultó en la Casa de atrás del Prinsengracht hasta su arresto el 4 de agosto de 1944. El banquero Walraven van Hall financió en secreto a la resistencia. Cerca del 75 % de los judíos neerlandeses fueron asesinados."
+      }
+    },
+    "vel-d-hiv": {
+      "name": { "en": "Vel' d'Hiv", "es": "Velódromo de Invierno" },
+      "description": {
+        "en": "On 16 and 17 July 1942, French police acting on German demands arrested 13,152 Jews in Paris, more than 4,000 of them children. Families were packed into the Vélodrome d'Hiver, an indoor cycling track near the Eiffel Tower, for days with almost no water, food or sanitation, then sent to camps in the Loiret and to Drancy. Nearly all were deported to Auschwitz, and very few survived.",
+        "es": "El 16 y 17 de julio de 1942, la policía francesa, a pedido de los alemanes, detuvo a 13.152 judíos en París, más de 4.000 de ellos niños. Las familias fueron hacinadas durante días en el Velódromo de Invierno, una pista cubierta de ciclismo cerca de la torre Eiffel, casi sin agua, comida ni higiene, y luego enviadas a campos del Loiret y a Drancy. Casi todos fueron deportados a Auschwitz y muy pocos sobrevivieron."
+      }
+    },
+    "beaune-la-rolande": {
+      "name": { "en": "Beaune-la-Rolande", "es": "Beaune-la-Rolande" },
+      "description": {
+        "en": "This internment camp in the Loiret, south of Paris, was run by French authorities and first held foreign Jewish men arrested in May 1941. After the Vel' d'Hiv roundup of July 1942, thousands of women and children were brought here and to nearby Pithiviers. In early August the parents were deported first; the children, left alone, were sent via Drancy to Auschwitz later that month.",
+        "es": "Este campo de internamiento en el Loiret, al sur de París, estaba a cargo de las autoridades francesas y retuvo primero a hombres judíos extranjeros detenidos en mayo de 1941. Tras la redada del Velódromo de Invierno en julio de 1942, miles de mujeres y niños fueron traídos aquí y al vecino Pithiviers. A comienzos de agosto deportaron primero a los padres; los niños, solos, fueron enviados vía Drancy a Auschwitz a fines de ese mes."
+      }
+    },
+    "munich": {
+      "name": { "en": "Munich", "es": "Múnich" },
+      "description": {
+        "en": "Munich was the birthplace of the Nazi party and of Hitler's failed Beer Hall Putsch of November 1923. At the Munich Agreement of September 1938, Britain and France let Germany annex the Sudetenland. On 8 November 1939 Georg Elser's bomb in the Bürgerbräukeller missed Hitler by 13 minutes. In February 1943 Hans and Sophie Scholl of the White Rose were arrested at the university and executed.",
+        "es": "Múnich fue la cuna del partido nazi y del fallido Putsch de la Cervecería de Hitler, en noviembre de 1923. En el Acuerdo de Múnich de septiembre de 1938, Gran Bretaña y Francia permitieron que Alemania se anexara los Sudetes. El 8 de noviembre de 1939, la bomba de Georg Elser en la Bürgerbräukeller falló a Hitler por 13 minutos. En febrero de 1943, Hans y Sophie Scholl, de la Rosa Blanca, fueron detenidos en la universidad y ejecutados."
+      }
+    },
+    "petrograd": {
+      "name": { "en": "Petrograd", "es": "Petrogrado" },
+      "description": {
+        "en": "Renamed from Saint Petersburg in 1914, the Russian capital was the cradle of the 1917 revolutions. The February Revolution toppled the Tsar, and in May the Provisional Government formed women's 'battalions of death' to shame deserting men back to the front. On 7 November 1917 the Bolsheviks, directed from the Smolny Institute, seized power and took the Winter Palace. The capital moved to Moscow in March 1918.",
+        "es": "Llamada San Petersburgo hasta 1914, la capital rusa fue la cuna de las revoluciones de 1917. La Revolución de Febrero derrocó al zar, y en mayo el Gobierno Provisional formó batallones femeninos de la muerte para avergonzar a los desertores y devolverlos al frente. El 7 de noviembre de 1917, los bolcheviques, dirigidos desde el Instituto Smolny, tomaron el poder y el Palacio de Invierno. La capital pasó a Moscú en marzo de 1918."
+      }
+    },
+    "aragon-front": {
+      "name": { "en": "Aragon front", "es": "Frente de Aragón" },
+      "description": {
+        "en": "In July and August 1936, anarchist, POUM and socialist militias marched from Catalonia into Aragon to retake Zaragoza and Huesca from the Nationalist rebels. The advance stalled, and a static front ran through the Sierra de Alcubierre, where volunteers such as George Orwell served in the trenches. The militias were folded into the Republican army in 1937, and the Nationalist Aragon Offensive broke the front in March 1938.",
+        "es": "En julio y agosto de 1936, milicias anarquistas, del POUM y socialistas partieron de Cataluña hacia Aragón para arrebatar Zaragoza y Huesca a los sublevados. El avance se estancó y se formó un frente estático en la sierra de Alcubierre, donde voluntarios como George Orwell sirvieron en las trincheras. En 1937 las milicias se integraron al ejército republicano, y la ofensiva nacional de Aragón rompió el frente en marzo de 1938."
+      }
+    },
+    "barcelona": {
+      "name": { "en": "Barcelona", "es": "Barcelona" },
+      "description": {
+        "en": "On 19 July 1936 workers and loyal police defeated the military uprising in Barcelona, and the city went through a social revolution led by the anarchist CNT. Militias left here for the Aragon front. In the May Days of 1937, fighting broke out between the CNT and POUM on one side and Republican and Communist forces on the other. Italian aircraft bombed the city in March 1938, and it fell in January 1939.",
+        "es": "El 19 de julio de 1936, obreros y policías leales derrotaron el alzamiento militar en Barcelona, y la ciudad vivió una revolución social encabezada por la CNT anarquista. Desde aquí partieron milicias al frente de Aragón. En las Jornadas de Mayo de 1937 estallaron combates entre la CNT y el POUM, por un lado, y las fuerzas republicanas y comunistas, por el otro. La aviación italiana bombardeó la ciudad en marzo de 1938 y cayó en enero de 1939."
+      }
+    },
+    "oxford": {
+      "name": { "en": "Oxford", "es": "Oxford" },
+      "description": {
+        "en": "In 1914 Oxford's colleges emptied as students volunteered, and many never returned; Vera Brittain left Somerville College in 1915 to nurse as a VAD, while Somerville itself became a military hospital. Between the wars the university embodied a new pacifism: in February 1933 the Oxford Union voted that it would not fight for King and Country, a debate watched closely abroad.",
+        "es": "En 1914, los colegios de Oxford se vaciaron cuando sus estudiantes se alistaron, y muchos nunca volvieron; Vera Brittain dejó el Somerville College en 1915 para trabajar como enfermera voluntaria, mientras el propio Somerville se convertía en hospital militar. Entre las dos guerras, la universidad encarnó un nuevo pacifismo: en febrero de 1933, la Oxford Union votó que no lucharía por el rey y la patria, un debate seguido de cerca en el extranjero."
+      }
+    },
+    "rome": {
+      "name": { "en": "Rome", "es": "Roma" },
+      "description": {
+        "en": "Mussolini ruled Italy from the Palazzo Venezia after the March on Rome in 1922 and staged Hitler's state visit in May 1938. After his fall on 25 July 1943, German troops occupied the city in September. A partisan attack in Via Rasella on 23 March 1944 was followed the next day by the Ardeatine Caves massacre of 335 people. The US Fifth Army liberated Rome on 4 June 1944.",
+        "es": "Mussolini gobernó Italia desde el Palazzo Venezia tras la Marcha sobre Roma de 1922 y organizó la visita de Estado de Hitler en mayo de 1938. Después de su caída, el 25 de julio de 1943, las tropas alemanas ocuparon la ciudad en septiembre. A un atentado partisano en la Via Rasella el 23 de marzo de 1944 le siguió al día siguiente la masacre de las Fosas Ardeatinas, con 335 víctimas. El Quinto Ejército estadounidense liberó Roma el 4 de junio de 1944."
+      }
+    },
+    "benghazi": {
+      "name": { "en": "Benghazi", "es": "Bengasi" },
+      "description": {
+        "en": "The main city of Italian Cyrenaica was the base of General Graziani's campaign against the Senussi resistance, which interned much of the population in camps; its leader Omar Mukhtar was hanged at nearby Suluq in September 1931. In the Second World War Benghazi changed hands five times, and in May 1942 David Stirling's SAS slipped into its harbour to raid Axis shipping.",
+        "es": "La principal ciudad de la Cirenaica italiana fue la base de la campaña del general Graziani contra la resistencia senusí, que confinó a buena parte de la población en campos; su líder, Omar Mujtar, fue ahorcado en la cercana Suluq en septiembre de 1931. En la Segunda Guerra Mundial, Bengasi cambió de manos cinco veces, y en mayo de 1942 el SAS de David Stirling se infiltró en su puerto para atacar barcos del Eje."
+      }
+    },
+    "kasserine-pass": {
+      "name": { "en": "Kasserine Pass", "es": "Paso de Kasserine" },
+      "description": {
+        "en": "This gap in Tunisia's Atlas Mountains saw the US Army's first major clash with the Germans. Between 19 and 24 February 1943, Rommel's veteran panzer forces overran inexperienced troops of the American II Corps, inflicting heavy losses before Allied reinforcements and artillery stopped the drive. The defeat led Eisenhower to replace General Fredendall with George S. Patton, and the lessons reshaped American training and command.",
+        "es": "Este paso en los montes Atlas de Túnez fue escenario del primer gran choque del ejército estadounidense con los alemanes. Entre el 19 y el 24 de febrero de 1943, las veteranas fuerzas blindadas de Rommel arrollaron a las tropas inexpertas del II Cuerpo estadounidense y le causaron grandes pérdidas antes de que los refuerzos y la artillería aliados detuvieran el avance. La derrota llevó a Eisenhower a reemplazar al general Fredendall por George S. Patton."
+      }
+    },
+    "gela": {
+      "name": { "en": "Gela", "es": "Gela" },
+      "description": {
+        "en": "On 10 July 1943 the US 1st Infantry Division and Darby's Rangers landed at Gela, on Sicily's southern coast, at the start of Operation Husky, while paratroopers of the 82nd Airborne dropped inland. On 11 July Italian units and the Hermann Göring Panzer Division counterattacked toward the beaches; American infantry and naval gunfire from offshore cruisers and destroyers threw them back.",
+        "es": "El 10 de julio de 1943, la 1.ª División de Infantería estadounidense y los Rangers de Darby desembarcaron en Gela, en la costa sur de Sicilia, al inicio de la Operación Husky, mientras paracaidistas de la 82.ª Aerotransportada saltaban tierra adentro. El 11 de julio, unidades italianas y la División Panzer Hermann Göring contraatacaron hacia las playas; la infantería estadounidense y el fuego de los cruceros y destructores frente a la costa los rechazaron."
+      }
+    },
+    "palermo": {
+      "name": { "en": "Palermo", "es": "Palermo" },
+      "description": {
+        "en": "Sicily's capital was heavily bombed by the Allies in the spring of 1943, leaving much of its old centre in ruins. During Operation Husky, Patton sent his Seventh Army on a rapid drive across western Sicily, and American troops entered Palermo on 22 July 1943 to cheering crowds. The port then became a key Allied supply base for the race to Messina and the campaign in Italy.",
+        "es": "La capital de Sicilia sufrió duros bombardeos aliados en la primavera de 1943, que dejaron en ruinas gran parte de su centro histórico. Durante la Operación Husky, Patton lanzó a su Séptimo Ejército en un avance rápido por el oeste de la isla, y las tropas estadounidenses entraron en Palermo el 22 de julio de 1943 entre multitudes que los vitoreaban. El puerto se volvió después una base clave de abastecimiento aliado para la carrera a Mesina y la campaña de Italia."
+      }
+    },
+    "el-alamein": {
+      "name": { "en": "El Alamein", "es": "El Alamein" },
+      "description": {
+        "en": "At this railway halt between the sea and the impassable Qattara Depression, Britain's Eighth Army stopped Rommel's advance on Egypt in July 1942. Under Montgomery it then launched the Second Battle of El Alamein on 23 October 1942, a set-piece assault through deep minefields. By 11 November the Axis army was in full retreat, and Churchill hailed the victory as 'the end of the beginning'.",
+        "es": "En este apeadero ferroviario entre el mar y la infranqueable depresión de Qattara, el Octavo Ejército británico frenó en julio de 1942 el avance de Rommel hacia Egipto. Bajo el mando de Montgomery, lanzó el 23 de octubre de 1942 la segunda batalla de El Alamein, un asalto metódico a través de extensos campos minados. Para el 11 de noviembre, el ejército del Eje estaba en plena retirada, y Churchill celebró la victoria como «el fin del principio»."
+      }
+    },
+    "cairo": {
+      "name": { "en": "Cairo", "es": "El Cairo" },
+      "description": {
+        "en": "In the First World War Cairo hosted Australian and New Zealand troops training for Gallipoli, filled with military hospitals, and was home to the Arab Bureau, where T. E. Lawrence worked on the Arab Revolt. In the Second World War it was the seat of British Middle East Command, where David Stirling founded the SAS in 1941, and hosted Roosevelt, Churchill and Chiang Kai-shek in November 1943.",
+        "es": "En la Primera Guerra Mundial, El Cairo acogió a las tropas australianas y neozelandesas que se preparaban para Galípoli, se llenó de hospitales militares y albergó la Oficina Árabe, donde T. E. Lawrence trabajó en la Revuelta Árabe. En la Segunda fue sede del Mando británico de Oriente Medio, donde David Stirling fundó el SAS en 1941, y recibió a Roosevelt, Churchill y Chiang Kai-shek en noviembre de 1943."
+      }
+    },
+    "kufra": {
+      "name": { "en": "Kufra", "es": "Kufra" },
+      "description": {
+        "en": "This remote oasis in Libya's southeastern desert was taken by Italian forces in 1931 during the war against the Senussi. Nearby, explorers had mapped the Gilf Kebir in the early 1930s. On 1 March 1941 Free French troops under Colonel Leclerc captured Kufra and swore to fight until the flag flew over Strasbourg. It then became a base for the Long Range Desert Group and for raids on Tobruk.",
+        "es": "Este remoto oasis del desierto del sureste de Libia fue tomado por las fuerzas italianas en 1931, durante la guerra contra los senusíes. En la zona, varios exploradores habían cartografiado el Gilf Kebir a comienzos de los años treinta. El 1 de marzo de 1941, tropas de la Francia Libre al mando del coronel Leclerc capturaron Kufra y juraron luchar hasta ver su bandera en Estrasburgo. Luego fue base del Long Range Desert Group y de incursiones contra Tobruk."
+      }
+    },
+    "florence": {
+      "name": { "en": "Florence", "es": "Florencia" },
+      "description": {
+        "en": "Occupied by German forces from September 1943, Florence saw its art treasures moved to villas in the countryside. As the Allies approached in August 1944, the Germans blew up every bridge over the Arno except the Ponte Vecchio, destroying the medieval streets at its ends. Partisans fought street by street in the northern districts while British and South African troops entered from the south.",
+        "es": "Ocupada por fuerzas alemanas desde septiembre de 1943, Florencia vio cómo sus tesoros artísticos se trasladaban a villas en el campo. Cuando los Aliados se acercaron en agosto de 1944, los alemanes volaron todos los puentes sobre el Arno excepto el Ponte Vecchio y destruyeron las calles medievales de sus extremos. Los partisanos combatieron calle por calle en los barrios del norte mientras tropas británicas y sudafricanas entraban por el sur."
+      }
+    },
+    "pianosa": {
+      "name": { "en": "Pianosa", "es": "Pianosa" },
+      "description": {
+        "en": "A flat island south of Elba, Pianosa had held a penal colony since 1856, and future Italian president Sandro Pertini was imprisoned there in 1932. German troops occupied it in September 1943. In 1944 the B-25 Mitchell groups of the 57th Bomb Wing flew from nearby Corsica against targets in Italy; one of their bombardiers, Joseph Heller, later set his fictional air base on Pianosa.",
+        "es": "Isla llana al sur de Elba, Pianosa albergaba una colonia penal desde 1856, y allí estuvo preso en 1932 el futuro presidente italiano Sandro Pertini. Las tropas alemanas la ocuparon en septiembre de 1943. En 1944, los grupos de B-25 Mitchell del 57.º Ala de Bombardeo operaban desde la cercana Córcega contra objetivos en Italia; uno de sus bombarderos, Joseph Heller, situó luego en Pianosa su base aérea de ficción."
+      }
+    },
+    "malta": {
+      "name": { "en": "Malta", "es": "Malta" },
+      "description": {
+        "en": "The British island base sat astride the Axis supply routes to North Africa, and from June 1940 it endured one of the longest sieges of the war. Italian and German bombers struck its airfields, such as Luqa, and Grand Harbour almost daily. King George VI awarded the island the George Cross in April 1942, and in August the Operation Pedestal convoy, with the tanker Ohio, narrowly saved it from starvation.",
+        "es": "La base insular británica estaba en medio de las rutas de suministro del Eje hacia el norte de África, y desde junio de 1940 soportó uno de los asedios más largos de la guerra. Bombarderos italianos y alemanes atacaban casi a diario sus aeródromos, como Luqa, y el Gran Puerto. El rey Jorge VI concedió a la isla la Cruz de San Jorge en abril de 1942, y en agosto el convoy de la Operación Pedestal, con el petrolero Ohio, la salvó por poco de la hambruna."
+      }
+    },
+    "ypres": {
+      "name": { "en": "Ypres", "es": "Ypres" },
+      "description": {
+        "en": "The Belgian town of Ypres sat in a salient held by British and Commonwealth troops for most of the First World War. The Germans used poison gas on a large scale here in April 1915. On 7 June 1917 nineteen huge mines, including one tunnelled under Hill 60 by Australian miners, opened the Battle of Messines, and the Third Battle of Ypres, Passchendaele, followed from July to November in deep mud.",
+        "es": "La ciudad belga de Ypres quedó en un saliente defendido por tropas británicas y de la Commonwealth durante casi toda la Primera Guerra Mundial. Aquí los alemanes usaron gas venenoso a gran escala en abril de 1915. El 7 de junio de 1917, diecinueve minas enormes, una de ellas excavada bajo la Colina 60 por mineros australianos, abrieron la batalla de Messines, y de julio a noviembre siguió la tercera batalla de Ypres, Passchendaele, en medio del barro."
+      }
+    },
+    "the-somme": {
+      "name": { "en": "The Somme", "es": "El Somme" },
+      "description": {
+        "en": "The Anglo-French offensive on the Somme opened on 1 July 1916 with the bloodiest day in British military history: 57,470 casualties, including more than 19,000 dead. Tanks appeared for the first time on 15 September. By mid-November the Allies had advanced about ten kilometres at a cost of more than a million casualties on both sides, while fighter aces such as Manfred von Richthofen dueled above Bapaume.",
+        "es": "La ofensiva franco-británica del Somme comenzó el 1 de julio de 1916 con el día más sangriento de la historia militar británica: 57.470 bajas, más de 19.000 de ellas muertos. Los tanques aparecieron por primera vez el 15 de septiembre. A mediados de noviembre, los Aliados habían avanzado unos diez kilómetros con más de un millón de bajas entre ambos bandos, mientras ases como Manfred von Richthofen se batían en duelo sobre Bapaume."
+      }
+    },
+    "argonne": {
+      "name": { "en": "Argonne Forest", "es": "Bosque de Argonne" },
+      "description": {
+        "en": "The Meuse-Argonne Offensive, from 26 September to 11 November 1918, was the largest battle in American history, with 1.2 million US soldiers and some 26,000 killed. In the Charlevaux ravine, the 'Lost Battalion' of the 77th Division was cut off from 2 to 7 October. On 8 October, near Châtel-Chéhéry, Corporal Alvin York of the 82nd Division silenced German machine guns and captured 132 prisoners.",
+        "es": "La ofensiva Mosa-Argonne, del 26 de septiembre al 11 de noviembre de 1918, fue la batalla más grande de la historia de Estados Unidos, con 1,2 millones de soldados y unos 26.000 muertos. En el barranco de Charlevaux, el Batallón Perdido de la 77.ª División quedó aislado del 2 al 7 de octubre. El 8 de octubre, cerca de Châtel-Chéhéry, el cabo Alvin York, de la 82.ª División, silenció ametralladoras alemanas y capturó a 132 prisioneros."
+      }
+    },
+    "rouen": {
+      "name": { "en": "Rouen", "es": "Ruan" },
+      "description": {
+        "en": "Throughout the First World War this Seine port was one of the main British bases in France, with depots, camps and a cluster of general hospitals where British, Australian and other Dominion nurses treated the wounded from the Somme and Flanders. Thousands who died in its hospitals lie in the St Sever cemetery. In the Second World War Allied bombing in April 1944 badly damaged the old city.",
+        "es": "Durante toda la Primera Guerra Mundial, este puerto del Sena fue una de las principales bases británicas en Francia, con depósitos, campamentos y numerosos hospitales generales donde enfermeras británicas, australianas y de otros dominios atendían a los heridos del Somme y de Flandes. Miles de fallecidos en esos hospitales descansan en el cementerio de Saint-Sever. En la Segunda Guerra Mundial, los bombardeos aliados de abril de 1944 dañaron gravemente el casco antiguo."
+      }
+    }
+  }
+}
