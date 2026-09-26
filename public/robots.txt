@@ -66,4 +66,4 @@ Allow: /geo/
 Disallow: /api/
 Disallow: /_nuxt/builds/
 
-Sitemap: https://ww2.stevenacz.com/sitemap.xml
+Sitemap: https://ww2.stevenacz.com/sitemap_index.xml

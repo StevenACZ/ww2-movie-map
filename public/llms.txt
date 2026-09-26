@@ -7,7 +7,7 @@
 English: https://ww2.stevenacz.com/
 Spanish: https://ww2.stevenacz.com/es/
 Source code: https://github.com/StevenACZ/ww2-movie-map
-Sitemap: https://ww2.stevenacz.com/sitemap.xml
+Sitemap: https://ww2.stevenacz.com/sitemap_index.xml
 
 ## Key pages
 

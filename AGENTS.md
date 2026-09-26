@@ -114,7 +114,7 @@ bun scripts/geo/build-borders.ts --check
 bun run verify
 ```
 
-For SEO work, inspect the generated `dist/public` output for JSON-LD, canonical and hreflang links, descriptions and Open Graph tags, the CSP meta tag, valid manifests, and valid `sitemap.xml` with both locales.
+For SEO work, inspect the generated `dist/public` output for JSON-LD, canonical and hreflang links, descriptions and Open Graph tags, the CSP meta tag, valid manifests, and a valid `sitemap_index.xml` listing both locale sitemaps (the module turns `/sitemap.xml` into a redirect page).
 
 ## Deploy
 
