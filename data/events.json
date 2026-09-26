@@ -309,7 +309,7 @@
     {
       "id": "october-revolution",
       "date": "1917-11-07",
-      "era": "interwar",
+      "era": "ww1",
       "category": "politics",
       "title": {
         "en": "October Revolution",
@@ -332,7 +332,7 @@
       "id": "russian-civil-war",
       "date": "1917-11-07",
       "endDate": "1922-10-25",
-      "era": "interwar",
+      "era": "ww1",
       "category": "war",
       "title": {
         "en": "Russian Civil War",
@@ -440,7 +440,7 @@
     {
       "id": "treaty-of-versailles",
       "date": "1919-06-28",
-      "era": "ww1",
+      "era": "interwar",
       "category": "diplomacy",
       "title": {
         "en": "Treaty of Versailles",

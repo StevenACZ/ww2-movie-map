@@ -1,0 +1,303 @@
+{
+  "site": {
+    "name": "WW2 Film Map",
+    "tagline": "Cada película de guerra, en el lugar donde ocurrió",
+    "description": "Explora {count} películas y series de la Segunda Guerra Mundial, la Primera y el periodo de entreguerras en un globo 3D interactivo: mira dónde ocurrió cada historia, sigue su recorrido por el mapa, aprende la historia real y descubre dónde verla."
+  },
+  "nav": {
+    "map": "Mapa",
+    "films": "Películas",
+    "timeline": "Línea de tiempo",
+    "places": "Lugares",
+    "about": "Acerca de",
+    "skip": "Saltar al contenido",
+    "language": "Idioma",
+    "menu": "Menú",
+    "close": "Cerrar"
+  },
+  "sound": {
+    "on": "Sonido activado",
+    "off": "Sonido desactivado"
+  },
+  "era": {
+    "all": "Todas las épocas",
+    "ww1": "Primera Guerra Mundial",
+    "interwar": "Entreguerras",
+    "ww2": "Segunda Guerra Mundial",
+    "short": {
+      "all": "Todo",
+      "ww1": "1.ª GM",
+      "interwar": "Entreguerras",
+      "ww2": "2.ª GM"
+    },
+    "years": {
+      "ww1": "1914–1918",
+      "interwar": "1918–1939",
+      "ww2": "1939–1945"
+    }
+  },
+  "theater": {
+    "western-europe": "Europa Occidental",
+    "eastern-europe": "Frente Oriental",
+    "mediterranean": "Mediterráneo y África",
+    "atlantic": "Atlántico y Ártico",
+    "pacific": "Pacífico",
+    "asia": "China y Sudeste Asiático",
+    "americas": "América"
+  },
+  "tag": {
+    "combat": "Combate",
+    "holocaust": "Holocausto",
+    "resistance": "Resistencia",
+    "espionage": "Espionaje",
+    "air": "Guerra aérea",
+    "naval": "Naval",
+    "home-front": "Retaguardia",
+    "prisoners": "Prisioneros de guerra",
+    "civil-war": "Guerra civil",
+    "politics": "Política",
+    "biography": "Biografía",
+    "true-story": "Historia real",
+    "animation": "Animación",
+    "documentary": "Documental",
+    "comedy": "Comedia",
+    "romance": "Romance"
+  },
+  "kind": {
+    "film": "Película",
+    "series": "Serie",
+    "films": "Películas",
+    "seriesPlural": "Series",
+    "all": "Películas y series"
+  },
+  "stopKind": {
+    "battle": "Batalla",
+    "city": "Ciudad",
+    "front": "Frente",
+    "camp": "Campo",
+    "sea": "En el mar",
+    "landing": "Desembarco",
+    "base": "Base",
+    "home": "Hogar",
+    "journey": "En camino"
+  },
+  "status": {
+    "neutral": "Neutral",
+    "war": "En guerra",
+    "entente": "Entente",
+    "central": "Potencias Centrales",
+    "allies": "Aliados",
+    "axis": "Eje",
+    "soviet": "Unión Soviética",
+    "occupied-central": "Ocupado por las Potencias Centrales",
+    "occupied-axis": "Ocupado por el Eje",
+    "occupied-allies": "Ocupado por los Aliados",
+    "occupied-soviet": "Ocupado por la URSS",
+    "civil-war": "Guerra civil",
+    "occupied": "Ocupado"
+  },
+  "gold": {
+    "label": "Imprescindible",
+    "only": "Solo imprescindibles",
+    "why": "Por qué es imprescindible"
+  },
+  "map": {
+    "title": "Películas de la Segunda Guerra Mundial en un globo 3D",
+    "h1": "WW2 Film Map",
+    "intro": "Gira el globo, viaja en el tiempo de 1914 a 1945 y abre cualquier película para seguir su historia por los lugares donde realmente ocurrió.",
+    "search": "Busca películas, series o lugares",
+    "results": "{n} títulos",
+    "noResults": "Ningún título coincide con estos filtros.",
+    "clear": "Limpiar filtros",
+    "filters": "Filtros",
+    "list": "Títulos",
+    "loading": "Cargando el globo…",
+    "webglFallback": "Tu navegador no puede mostrar el globo 3D, pero todas las películas están en la lista.",
+    "legend": "Leyenda",
+    "colorBy": "Colorear países por",
+    "bySide": "Bandos",
+    "byWar": "En guerra",
+    "layers": "Capas",
+    "units": "Unidades",
+    "fronts": "Frentes",
+    "events": "Eventos",
+    "play": "Reproducir la historia",
+    "pause": "Pausar",
+    "speed": "Velocidad",
+    "dateFilter": "Títulos alrededor de {date}",
+    "showAll": "Ver todos",
+    "zoomIn": "Acercar",
+    "zoomOut": "Alejar",
+    "resetView": "Restablecer vista",
+    "cluster": "{n} títulos aquí",
+    "openTitle": "Abrir {title}",
+    "timeline": "Fecha",
+    "hint": "Arrastra para girar · rueda o pellizca para hacer zoom · mueve la fecha para viajar en el tiempo",
+    "warBorder": "Frontera entre bandos en guerra",
+    "layer": {
+      "units": "Tanques, barcos y aviones",
+      "fronts": "Frentes",
+      "events": "Hechos históricos",
+      "labels": "Nombres de países"
+    },
+    "clusterTitle": "{n} títulos en esta zona",
+    "dispatch": "Parte de guerra",
+    "journeyStop": "Parada {n} de {total}",
+    "tourStop": "Siguiente parada",
+    "inProgress": "En curso"
+  },
+  "title": {
+    "journey": "Dónde ocurrió",
+    "journeyIntro": "Sigue la historia por {n} lugares.",
+    "playJourney": "Recorrer la historia",
+    "stop": "Parada {n}",
+    "onScreen": "En la historia",
+    "history": "Lo que pasó de verdad",
+    "context": "La historia detrás",
+    "watch": "Dónde verla",
+    "trailer": "Ver tráiler",
+    "details": "Ficha completa",
+    "directedBy": "Dirigida por",
+    "createdBy": "Creada por",
+    "runtime": "{n} min",
+    "seasons": "{n} temporadas | {n} temporada | {n} temporadas",
+    "released": "Estreno",
+    "setIn": "Ambientada en",
+    "related": "Más películas como esta",
+    "links": "Para saber más",
+    "wikipedia": "Wikipedia",
+    "imdb": "IMDb",
+    "tmdb": "TMDB",
+    "fandom": "Wiki de fans",
+    "backToMap": "Verla en el globo",
+    "cast": "Reparto",
+    "genres": "Géneros",
+    "languages": "Idiomas",
+    "countries": "Países",
+    "rating": "Nota en TMDB",
+    "places": "Lugares de esta historia",
+    "period": "Periodo"
+  },
+  "watch": {
+    "region": "Tu región",
+    "stream": "Streaming",
+    "free": "Gratis",
+    "ads": "Con anuncios",
+    "rent": "Alquiler",
+    "buy": "Compra",
+    "none": "Ahora mismo no está en streaming en {region}.",
+    "search": "Buscar en JustWatch",
+    "attribution": "Datos de streaming de JustWatch vía TMDB",
+    "loading": "Revisando plataformas…"
+  },
+  "trailer": {
+    "play": "Reproducir tráiler",
+    "close": "Cerrar tráiler",
+    "unavailable": "Tráiler no disponible"
+  },
+  "films": {
+    "title": "Películas y series de la Segunda Guerra Mundial",
+    "h1": "La colección",
+    "intro": "{count} películas y series sobre la Segunda Guerra Mundial, la Primera y los años entre ambas, cada una ubicada en los lugares donde ocurrió.",
+    "gold": "Las imprescindibles",
+    "goldIntro": "Las películas que todo fan del cine bélico debería ver al menos una vez.",
+    "sort": "Ordenar",
+    "sortStory": "Fecha histórica",
+    "sortYear": "Año de estreno",
+    "sortRating": "Nota",
+    "sortTitle": "Título",
+    "all": "Todos los títulos",
+    "count": "{n} títulos"
+  },
+  "era_page": {
+    "ww1": {
+      "title": "Mejores películas y series de la Primera Guerra Mundial",
+      "h1": "La Primera Guerra Mundial en pantalla",
+      "intro": "De las trincheras del Somme a los desiertos de Arabia: las películas que dan vida a la Gran Guerra de 1914–1918, ubicadas donde ocurrieron."
+    },
+    "interwar": {
+      "title": "Películas sobre el periodo de entreguerras (1918–1939)",
+      "h1": "Entre dos guerras",
+      "intro": "Revoluciones, guerras civiles y el ascenso del fascismo: las películas que cuentan cómo el mundo pasó de una guerra mundial a la siguiente."
+    },
+    "ww2": {
+      "title": "Mejores películas y series de la Segunda Guerra Mundial",
+      "h1": "La Segunda Guerra Mundial en pantalla",
+      "intro": "De Dunkerque a Iwo Jima: las películas y series esenciales sobre la Segunda Guerra Mundial, ubicadas en los lugares donde transcurren sus historias."
+    }
+  },
+  "places": {
+    "title": "Lugares de la Segunda Guerra Mundial en el cine",
+    "h1": "Lugares",
+    "intro": "Las ciudades, playas, campos y campos de batalla que aparecen en más de una película de guerra. Elige un lugar para ver todas las historias que ocurren allí.",
+    "count": "{n} títulos",
+    "setHere": "Películas y series ambientadas en {place}",
+    "whatHappened": "Qué pasó aquí",
+    "nearby": "Lugares cercanos",
+    "events": "Hechos en {place}",
+    "here": "Aquí en la historia"
+  },
+  "timeline": {
+    "title": "Línea de tiempo de la Segunda Guerra Mundial 1914–1945",
+    "h1": "Línea de tiempo 1914–1945",
+    "intro": "Treinta y un años que cambiaron el mundo, del disparo en Sarajevo a la rendición en la bahía de Tokio, con las películas que cuentan cada capítulo.",
+    "chapter": "Capítulo {n}",
+    "filmsOfThisTime": "Películas de este momento",
+    "readMore": "Leer más en Wikipedia",
+    "jump": "Ir a",
+    "category": {
+      "war": "Guerra",
+      "battle": "Batalla",
+      "politics": "Política",
+      "diplomacy": "Diplomacia",
+      "holocaust": "Holocausto",
+      "home-front": "Retaguardia",
+      "technology": "Tecnología",
+      "naval": "Naval",
+      "air": "Aire"
+    }
+  },
+  "about": {
+    "title": "Acerca del proyecto",
+    "h1": "Acerca de",
+    "intro": "WW2 Film Map empezó como mi lista personal de películas de guerra vistas. Creció hasta convertirse en un atlas 3D del cine bélico: elige una película, mira dónde ocurrió, aprende qué pasó de verdad allí y descubre dónde verla.",
+    "how": "Cómo usarlo",
+    "step1": "Elige un momento",
+    "step1Text": "Mueve la línea de tiempo de 1914 a 1945 y mira cómo cambian las fronteras, los frentes, los tanques, los barcos y los aviones sobre el globo.",
+    "step2": "Abre una película",
+    "step2Text": "Cada póster está donde ocurre su historia. Ábrelo y sigue su recorrido parada por parada.",
+    "step3": "Aprende y mírala",
+    "step3Text": "Lee la historia real detrás de la trama, mira el tráiler y descubre en qué plataforma está en tu país.",
+    "sources": "Fuentes y créditos",
+    "sourcesText": "Los datos de las películas, pósters, tráileres y disponibilidad en streaming vienen de TMDB y JustWatch. Las fronteras históricas vienen del proyecto historical-basemaps; la historia y los lugares se investigaron en Wikipedia y Wikidata.",
+    "tmdbNotice": "Este producto usa la API de TMDB, pero no está respaldado ni certificado por TMDB.",
+    "author": "Hecho por",
+    "authorText": "Steven Coaila Zaa, ingeniero de software. Mira más de mi trabajo en mi portafolio.",
+    "portfolio": "Portafolio",
+    "source": "Código fuente",
+    "stats": {
+      "titles": "Películas y series",
+      "places": "Lugares",
+      "events": "Hechos históricos",
+      "operations": "Operaciones animadas"
+    }
+  },
+  "common": {
+    "loading": "Cargando…",
+    "back": "Volver",
+    "viewAll": "Ver todo",
+    "more": "Más",
+    "less": "Menos",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "external": "(se abre en una pestaña nueva)",
+    "notFound": "Página no encontrada",
+    "notFoundText": "Esta página no existe, pero el globo sí.",
+    "home": "Volver al mapa",
+    "updated": "Actualizado {date}"
+  },
+  "footer": {
+    "made": "Hecho por Steven Coaila Zaa",
+    "tmdb": "Datos e imágenes: TMDB. Streaming: JustWatch."
+  }
+}

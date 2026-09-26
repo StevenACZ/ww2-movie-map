@@ -1,0 +1,43 @@
+{
+  "placesPage": {
+    "eyebrow": "El atlas · {n} lugares",
+    "atlas": "Todos los lugares, de más a menos filmado",
+    "search": "Buscar lugares",
+    "searchPlaceholder": "Ciudad, playa, campo o mar…",
+    "clear": "Borrar búsqueda",
+    "results": "{n} de {total} lugares",
+    "noResults": "Ningún lugar coincide con «{q}».",
+    "back": "Todos los lugares",
+    "seoDescription": "{n} películas y series bélicas ambientadas en {place}, como {titles}. Mira en el mapa dónde ocurre cada historia.",
+    "seoDescriptionShort": "{n} películas y series bélicas ambientadas en {place}. Mira en el mapa dónde ocurre cada historia.",
+    "eraFilter": "Filtrar por época",
+    "map": {
+      "label": "Atlas interactivo de los lugares de las películas",
+      "regions": "Regiones del mapa",
+      "region": {
+        "world": "Mundo",
+        "west": "Europa occidental",
+        "east": "Frente oriental",
+        "med": "Mediterráneo y África",
+        "pacific": "Pacífico",
+        "asia": "Asia oriental"
+      },
+      "area": {
+        "atlantic": "Océano Atlántico",
+        "pacific": "Océano Pacífico",
+        "indian": "Océano Índico",
+        "europe": "Europa",
+        "ussr": "Unión Soviética",
+        "africa": "África",
+        "china": "China",
+        "americas": "América del Norte"
+      },
+      "zoomIn": "Acercar",
+      "zoomOut": "Alejar",
+      "hint": "Arrastra para mover · rueda o pellizca para hacer zoom",
+      "loading": "Desplegando el atlas…",
+      "open": "Abrir lugar",
+      "atSea": "En el mar"
+    }
+  }
+}

@@ -5,6 +5,7 @@ import { readdirSync, readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import type {
   EventsFile,
+  FrontsFile,
   OperationsFile,
   Title,
   TitlesFile,
@@ -353,6 +354,12 @@ function checkOperations(path: string) {
       err(w, "path needs 2+ points");
     o.path?.forEach((p, i) => checkCoords(`${w}.path[${i}]`, p));
   });
+  console.log(`${path}: ${data.operations.length} operations`);
+}
+
+function checkFronts(path: string) {
+  const data = readJson<FrontsFile>(path);
+  if (!data) return;
   data.frontlines.forEach((f) => {
     const w = `${path} frontline ${f.id}`;
     if (!KEBAB.test(f.id ?? "")) err(w, "id must be kebab-case");
@@ -370,9 +377,7 @@ function checkOperations(path: string) {
       );
     });
   });
-  console.log(
-    `${path}: ${data.operations.length} operations, ${data.frontlines.length} frontlines`
-  );
+  console.log(`${path}: ${data.frontlines.length} frontlines`);
 }
 
 const args = process.argv.slice(2);
@@ -386,6 +391,7 @@ const all = [
   ...jsonFiles("data/titles"),
   join(ROOT, "data/events.json"),
   ...jsonFiles("data/operations"),
+  join(ROOT, "data/fronts.json"),
 ];
 const targets = args.length ? args.map((a) => join(ROOT, a)) : all;
 
@@ -410,6 +416,7 @@ for (const path of targets) {
   if (path.includes("/titles/")) checkTitles(path);
   else if (path.endsWith("events.json")) checkEvents(path);
   else if (path.includes("/operations/")) checkOperations(path);
+  else if (path.endsWith("fronts.json")) checkFronts(path);
 }
 
 warnings.forEach((w) => console.log(`warn  ${w}`));

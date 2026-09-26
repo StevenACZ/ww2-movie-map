@@ -1,447 +1,212 @@
 <template>
-  <main class="films-page" role="main" aria-label="WW2 Film Collection">
-    <!-- Background Elements -->
-    <div class="world-map-bg" aria-hidden="true"></div>
-    <div class="grid-pattern" aria-hidden="true"></div>
-
-    <!-- Header -->
-    <header class="page-header">
-      <span class="collection-badge" aria-label="Film count">
-        {{ filteredFilms.length }} Films
-      </span>
-      <h1 class="page-title">Film Collection</h1>
-      <h2 class="page-subtitle">World War II Through Cinema</h2>
-      <p class="page-description">
-        Explore iconic films depicting the events, battles, and human stories of
-        the Second World War
+  <div class="films">
+    <header class="hero container">
+      <p class="hero__eyebrow eyebrow">
+        <span class="hero__dot" aria-hidden="true" />{{
+          t("filmsPage.eyebrow", { n: count })
+        }}
       </p>
+      <h1 class="hero__title">{{ t("films.h1") }}</h1>
+      <p class="hero__intro">{{ t("films.intro", { count }) }}</p>
+      <ul class="hero__eras">
+        <li v-for="era in ERAS" :key="era">
+          <NuxtLinkLocale
+            :to="`/era/${era}`"
+            class="hero__era"
+            :class="`hero__era--${era}`"
+          >
+            <span class="hero__era-name">{{ t(`era.${era}`) }}</span>
+            <span class="hero__era-years mono">{{
+              t(`era.years.${era}`)
+            }}</span>
+            <Icon name="arrow-right" class="hero__era-arrow" />
+          </NuxtLinkLocale>
+        </li>
+      </ul>
     </header>
 
-    <!-- Search and Filter Controls -->
-    <FilmSearchControls
-      v-model:search-query="searchQuery"
-      v-model:sort-by="sortBy"
-      :sort-options="sortOptions"
-      @clear="clearSearch"
-    />
+    <CollectionGold v-if="gold.length" :titles="gold" eager />
 
-    <!-- Films Grid -->
-    <section class="films-container" aria-label="Films list">
-      <TransitionGroup name="film-card">
-        <div
-          v-if="filteredFilms.length === 0"
-          key="no-results"
-          class="no-results"
-          role="status"
-        >
-          <div class="no-results-icon" aria-hidden="true"><FilmIcon /></div>
-          <p class="no-results-text">No films found</p>
-          <p class="no-results-hint">Try adjusting your search</p>
-        </div>
-
-        <FilmCard
-          v-for="(film, index) in filteredFilms"
-          :key="film.id"
-          :film="film"
-          :index="index"
-          @view-on-map="viewOnMap"
-        />
-      </TransitionGroup>
-    </section>
-
-    <!-- Results Info -->
-    <footer class="results-info" role="status" aria-live="polite">
-      <span class="info-text">
-        Showing {{ filteredFilms.length }} of {{ totalFilms }} films
-      </span>
-    </footer>
-  </main>
+    <CollectionBrowser :titles="titles" />
+  </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import { useFilmsFilter, sortOptions } from "../../composables/useFilmsFilter";
-import type { Film } from "../../../types";
-import filmsData from "../../../data/films.json";
-import {
-  buildPageSeo,
-  canonicalUrl,
-  decodeUrlValue,
-  jsonLdScript,
-  robotsForQuery,
-  SITE_URL,
-} from "~/utils/seo";
+import type { Era, Locale } from "~~/types/data";
 
-// Import components
-import FilmSearchControls from "../../components/films/FilmSearchControls.vue";
-import FilmCard from "../../components/films/FilmCard.vue";
-import FilmIcon from "../../components/icons/FilmIcon.vue";
+const ERAS: Era[] = ["ww1", "interwar", "ww2"];
 
-const route = useRoute();
-const router = useRouter();
+const { t, locale } = useI18n();
+const { data } = await useIndexData();
 
-const films = filmsData.films as Film[];
-const queryAwareRobots = computed(() => robotsForQuery(route.query));
+const titles = computed(() => data.value?.titles ?? []);
+const count = computed(() => titles.value.length);
+const gold = computed(() => titles.value.filter((title) => title.gold));
 
-useSeoMeta({
-  ...buildPageSeo({
+usePageSeo(() => {
+  const current = locale.value as Locale;
+  const description = t("films.intro", { count: count.value });
+  return {
     path: "/films",
-    title: "WW2 Film Collection",
-    ogTitle: `World War II Film Collection - ${films.length} Movies`,
-    description:
-      "Browse a curated collection of World War II films including Saving Private Ryan, Schindler's List, Dunkirk, Das Boot, and more. Search by title, year, rating, or location.",
-    ogDescription:
-      "Browse a curated collection of World War II films with ratings, locations, dates, and map links.",
-  }),
-});
-
-useHead({
-  meta: [
-    { name: "robots", content: queryAwareRobots },
-    { name: "googlebot", content: queryAwareRobots },
-  ],
-  link: [{ rel: "canonical", href: canonicalUrl("/films") }],
-  script: [
-    jsonLdScript({
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "@id": `${SITE_URL}/films#collection`,
-      name: "World War II Film Collection",
-      description:
-        "Curated collection of films depicting World War II events, battles, and human stories.",
-      url: canonicalUrl("/films"),
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-      about: {
-        "@type": "Thing",
-        name: "World War II",
-        sameAs: "https://en.wikipedia.org/wiki/World_War_II",
+    title: t("films.title"),
+    description,
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: t("films.title"),
+        description,
+        url: absoluteUrl("/films", current),
+        inLanguage: current,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: titles.value.length,
+          itemListElement: titles.value.map((title, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            url: absoluteUrl(`/films/${title.id}`, current),
+            name: title.title,
+          })),
+        },
       },
-      mainEntity: {
-        "@type": "ItemList",
-        "@id": `${SITE_URL}/films#item-list`,
-        name: "WW2 Films",
-        numberOfItems: films.length,
-        itemListElement: films.map((film, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          url: `${canonicalUrl("/films")}#${encodeURIComponent(film.id)}`,
-          item: {
-            "@type": "Movie",
-            "@id": `${canonicalUrl("/films")}#movie-${encodeURIComponent(film.id)}`,
-            name: film.title,
-            datePublished: String(film.year),
-            description: film.synopsis,
-            image: film.poster,
-            countryOfOrigin: film.country,
-            sameAs: [film.wikipediaUrl, film.imdbUrl].filter(Boolean),
-            contentLocation: film.locations.map((location) => ({
-              "@type": "Place",
-              name: location.name,
-              geo: {
-                "@type": "GeoCoordinates",
-                longitude: location.coordinates[0],
-                latitude: location.coordinates[1],
-              },
-            })),
-          },
-        })),
-      },
-    }),
-  ],
+      breadcrumbGraph(current, [
+        { name: t("nav.map"), path: "/" },
+        { name: t("nav.films"), path: "/films" },
+      ]),
+    ],
+  };
 });
-
-// Use the films filter composable
-const { searchQuery, sortBy, filteredFilms, clearSearch } = useFilmsFilter({
-  films,
-});
-
-const searchHashPrefix = "#search=";
-const searchFromRoute = () => {
-  const querySearch = Array.isArray(route.query.search)
-    ? route.query.search[0]
-    : route.query.search;
-
-  if (typeof querySearch === "string") {
-    return querySearch;
-  }
-
-  return route.hash.startsWith(searchHashPrefix)
-    ? decodeUrlValue(route.hash.slice(searchHashPrefix.length))
-    : "";
-};
-
-watch(searchQuery, async (value) => {
-  const trimmed = value.trim();
-
-  await router.replace({
-    path: "/films/",
-    hash: trimmed ? `${searchHashPrefix}${encodeURIComponent(trimmed)}` : "",
-  });
-});
-
-watch(
-  () => [route.query.search, route.hash],
-  () => {
-    const nextSearch = searchFromRoute();
-
-    if (nextSearch !== searchQuery.value) {
-      searchQuery.value = nextSearch;
-    }
-  },
-  { immediate: true }
-);
-
-const totalFilms = films.length;
-
-// Navigation to map
-const viewOnMap = (filmId: string) => {
-  router.push({
-    path: "/",
-    hash: `#film-${encodeURIComponent(filmId)}`,
-  });
-};
 </script>
 
 <style lang="scss" scoped>
-@use "@/assets/scss/variables" as *;
-@use "@/assets/scss/mixins" as *;
-
-.films-page {
-  min-height: 100vh;
-  background: $bg-page;
-  color: $text-primary;
-  font-family: "Inter", sans-serif;
+.hero {
   position: relative;
-  padding: 120px $spacing-lg 100px;
-
-  @include mobile {
-    padding: 80px $spacing-md 60px;
-  }
-
-  @include mobile-small {
-    padding: 70px $spacing-sm 40px;
-  }
+  padding-block: clamp(48px, 10vw, 120px) clamp(40px, 7vw, 80px);
 }
 
-.world-map-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.03;
-  pointer-events: none;
-  filter: invert(1);
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
 }
 
-.grid-pattern {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 50px 50px;
-  pointer-events: none;
+.hero__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red-2);
+  box-shadow: 0 0 0 4px rgb(227 89 63 / 0.18);
 }
 
-// Header
-.page-header {
-  text-align: center;
-  margin-bottom: $spacing-2xl;
-  position: relative;
-  z-index: $z-dropdown;
-
-  @include mobile {
-    margin-bottom: $spacing-lg;
-  }
-}
-
-.collection-badge {
-  display: inline-block;
-  padding: 6px $spacing-md;
-  background: rgba($beige, 0.12);
-  border: 1px solid rgba($beige, 0.25);
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: $beige;
-  letter-spacing: 2px;
-  margin-bottom: $spacing-md;
-  text-transform: uppercase;
-
-  @include mobile {
-    font-size: 0.75rem;
-    padding: 4px 12px;
-    letter-spacing: 1px;
-    margin-bottom: $spacing-sm;
-  }
-}
-
-.page-title {
-  font-size: 3.5rem;
+.hero__title {
+  margin-top: 18px;
+  font-family: var(--font-stencil);
+  font-size: clamp(3.6rem, 15vw, 11rem);
   font-weight: 800;
-  margin: 0 0 $spacing-sm 0;
-  color: $text-primary;
-  letter-spacing: -1px;
-
-  @include mobile {
-    font-size: 2rem;
-  }
-
-  @include mobile-small {
-    font-size: 1.75rem;
-  }
-}
-
-.page-subtitle {
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin: 0 0 $spacing-md 0;
-  color: $text-secondary;
-  letter-spacing: 4px;
+  line-height: 0.85;
   text-transform: uppercase;
+  background: linear-gradient(
+    180deg,
+    var(--paper) 30%,
+    rgb(233 225 201 / 0.55)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 
-  @include mobile {
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    margin-bottom: $spacing-sm;
-  }
-
-  @include mobile-small {
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-  }
-}
-
-.page-description {
-  color: $text-muted;
-  font-size: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-
-  @include mobile {
-    font-size: 0.9rem;
-    padding: 0 $spacing-sm;
-  }
-
-  @include mobile-small {
-    font-size: 0.85rem;
-    display: none;
+  @include motion {
+    animation: hero-in 0.9s $ease-out both;
   }
 }
 
-// Films Grid
-.films-container {
-  max-width: 1600px;
-  margin: 0 auto;
+.hero__intro {
+  margin-top: clamp(18px, 3vw, 28px);
+  max-width: 58ch;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: var(--muted);
+
+  @include motion {
+    animation: hero-in 0.9s 0.12s $ease-out both;
+  }
+}
+
+.hero__eras {
+  list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: $spacing-lg;
-  position: relative;
-  z-index: $z-dropdown;
+  gap: 10px;
+  margin-top: clamp(28px, 4vw, 44px);
 
-  @include mobile {
-    grid-template-columns: 1fr;
-    gap: $spacing-md;
+  @include up($bp-sm) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @include motion {
+    animation: hero-in 0.9s 0.24s $ease-out both;
   }
 }
 
-.no-results {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 80px $spacing-lg;
+.hero__era {
+  --accent: var(--red-2);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2px 12px;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: inset 0 2px 0 var(--accent);
+  background: var(--surface);
+  transition:
+    border-color 0.25s $ease-out,
+    background-color 0.25s $ease-out;
 
-  @include mobile {
-    padding: 60px $spacing-md;
+  &--ww1 {
+    --accent: var(--olive);
+  }
+
+  &--interwar {
+    --accent: var(--blue);
+  }
+
+  &:hover {
+    border-color: var(--line-strong);
+    background: var(--surface-2);
   }
 }
 
-.no-results-icon {
-  font-size: 4rem;
-  margin-bottom: $spacing-md;
-  opacity: 0.5;
-
-  svg {
-    width: 4rem;
-    height: 4rem;
-  }
-
-  @include mobile {
-    font-size: 3rem;
-
-    svg {
-      width: 3rem;
-      height: 3rem;
-    }
-  }
+.hero__era-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-.no-results-text {
-  font-size: 1.5rem;
-  color: $text-secondary;
-  margin: 0 0 $spacing-sm 0;
+.hero__era-years {
+  grid-row: 2;
+  font-size: 0.74rem;
+  color: var(--accent);
+}
 
-  @include mobile {
-    font-size: 1.25rem;
+.hero__era-arrow {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+  transition: transform 0.3s $ease-out;
+
+  .hero__era:hover & {
+    transform: translateX(4px);
+    color: var(--text);
   }
 }
 
-.no-results-hint {
-  color: $text-muted;
-  margin: 0;
-}
-
-// Results Info
-.results-info {
-  text-align: center;
-  margin-top: $spacing-2xl;
-  position: relative;
-  z-index: $z-dropdown;
-
-  @include mobile {
-    margin-top: $spacing-lg;
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
   }
-}
-
-.info-text {
-  font-size: 0.85rem;
-  color: $text-muted;
-  background: $bg-card;
-  padding: $spacing-sm $spacing-lg;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-
-  @include mobile {
-    font-size: 0.8rem;
-    padding: $spacing-sm $spacing-md;
-  }
-}
-
-// Animations
-.film-card-enter-active {
-  transition: all 0.4s ease;
-  transition-delay: var(--delay, 0s);
-}
-
-.film-card-leave-active {
-  transition: all $transition-normal;
-}
-
-.film-card-enter-from {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.film-card-leave-to {
-  opacity: 0;
-  transform: scale(0.95);
 }
 </style>

@@ -1,913 +1,483 @@
 <template>
-  <main class="about-page" role="main" aria-label="About WW2 Film Map">
-    <!-- Background Elements -->
-    <div class="world-map-bg" aria-hidden="true"></div>
-    <div class="grid-pattern" aria-hidden="true"></div>
+  <article class="about">
+    <header class="hero container">
+      <div class="hero__copy">
+        <p class="eyebrow hero__eyebrow">{{ t("aboutPage.eyebrow") }}</p>
+        <h1 class="hero__title stencil">{{ t("about.h1") }}</h1>
+        <p class="hero__intro">{{ t("about.intro") }}</p>
+      </div>
+      <div class="hero__art">
+        <AboutHeroGlobe />
+      </div>
+    </header>
 
-    <!-- Main Content -->
-    <article class="about-container">
-      <!-- Hero Section with Logo -->
-      <header class="hero-section">
-        <div class="logo-showcase">
-          <span class="logo-ww2">WW2</span>
-          <span class="logo-text">MAP FILMS</span>
-        </div>
-        <h1 class="tagline">Exploring World War II Through Cinema</h1>
-      </header>
+    <section class="stats container" aria-labelledby="about-stats">
+      <h2 id="about-stats" class="visually-hidden">
+        {{ t("aboutPage.statsLabel") }}
+      </h2>
+      <dl class="stats__grid">
+        <AboutStatCounter
+          v-for="stat in stats"
+          :key="stat.key"
+          class="reveal"
+          :value="stat.value"
+          :label="t(`about.stats.${stat.key}`)"
+        />
+      </dl>
+    </section>
 
-      <!-- Mission Section -->
-      <section class="content-section mission-section">
-        <h2 class="section-title">Our Purpose</h2>
-        <p class="section-text">
-          This project was born from the desire to raise awareness and provide
-          knowledge about the timeline of films depicting
-          <strong>World War II</strong> — the largest armed conflict in human
-          history. Through an interactive map and timeline, we aim to give
-          visitors a comprehensive overview of this pivotal period while
-          discovering the cinematic masterpieces that bring these stories to
-          life.
-        </p>
-      </section>
+    <section class="how container" aria-labelledby="about-how">
+      <div class="section-head">
+        <p class="eyebrow">{{ t("aboutPage.howEyebrow") }}</p>
+        <h2 id="about-how" class="section-title">{{ t("about.how") }}</h2>
+      </div>
+      <ol class="how__steps">
+        <li v-for="(step, i) in STEPS" :key="step.key" class="step reveal">
+          <div class="step__art">
+            <AboutStepArt :kind="step.art" />
+          </div>
+          <p class="step__num mono">{{ t("aboutPage.step", { n: i + 1 }) }}</p>
+          <h3 class="step__title">{{ t(`about.${step.key}`) }}</h3>
+          <p class="step__text">{{ t(`about.${step.key}Text`) }}</p>
+        </li>
+      </ol>
+    </section>
 
-      <!-- What You'll Find Section -->
-      <section class="content-section features-section">
-        <h2 class="section-title">What You'll Discover</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+    <section class="eras container" aria-labelledby="about-eras">
+      <div class="section-head">
+        <p class="eyebrow">{{ t("aboutPage.sounds.eyebrow") }}</p>
+        <h2 id="about-eras" class="section-title">
+          {{ t("aboutPage.sounds.title") }}
+        </h2>
+        <p class="section-intro">{{ t("aboutPage.sounds.intro") }}</p>
+      </div>
+      <AboutEraSounds />
+    </section>
+
+    <section class="credits container" aria-labelledby="about-sources">
+      <div class="section-head">
+        <p class="eyebrow">{{ t("aboutPage.credits.eyebrow") }}</p>
+        <h2 id="about-sources" class="section-title">
+          {{ t("about.sources") }}
+        </h2>
+        <p class="section-intro">{{ t("about.sourcesText") }}</p>
+      </div>
+      <ol class="credits__roll">
+        <li
+          v-for="(credit, i) in credits"
+          :key="credit.name"
+          class="credit reveal"
+        >
+          <span class="credit__index mono">{{
+            String(i + 1).padStart(2, "0")
+          }}</span>
+          <div class="credit__body">
+            <p class="credit__role">{{ credit.role }}</p>
+            <p class="credit__name">
+              <a
+                v-if="credit.url"
+                :href="credit.url"
+                target="_blank"
+                rel="noopener"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
-                />
-              </svg>
-            </div>
-            <h3>Interactive Map</h3>
-            <p>
-              Explore filming locations and historical sites across the globe
+                {{ credit.name }}
+                <Icon name="external" />
+                <span class="visually-hidden">{{ t("common.external") }}</span>
+              </a>
+              <template v-else>{{ credit.name }}</template>
             </p>
+            <p v-if="credit.note" class="credit__note">{{ credit.note }}</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"
-                />
-              </svg>
-            </div>
-            <h3>Film Collection</h3>
-            <p>Curated selection of the most impactful WW2 films ever made</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
-            <h3>Historical Timeline</h3>
-            <p>
-              Navigate through key events and their cinematic representations
-            </p>
+          <span v-if="credit.license" class="credit__license mono">{{
+            credit.license
+          }}</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="author container" aria-labelledby="about-author">
+      <div class="author__card reveal">
+        <AppLogo class="author__logo" />
+        <div class="author__copy">
+          <p class="eyebrow">{{ t("aboutPage.authorEyebrow") }}</p>
+          <h2 id="about-author" class="section-title">
+            {{ t("about.author") }}
+          </h2>
+          <p class="author__text">{{ t("about.authorText") }}</p>
+          <div class="author__actions">
+            <a
+              class="btn btn--gold"
+              href="https://stevenacz.com"
+              target="_blank"
+              rel="noopener author"
+            >
+              {{ t("about.portfolio") }}
+              <Icon name="external" />
+              <span class="visually-hidden">{{ t("common.external") }}</span>
+            </a>
+            <a
+              class="btn btn--ghost"
+              href="https://github.com/StevenACZ/ww2-movie-map"
+              target="_blank"
+              rel="noopener"
+            >
+              <Icon name="github" />
+              {{ t("about.source") }}
+              <span class="visually-hidden">{{ t("common.external") }}</span>
+            </a>
           </div>
         </div>
-      </section>
-
-      <!-- Recommendations Section -->
-      <section class="content-section recommendations-section">
-        <h2 class="section-title">Must-Watch Films</h2>
-        <p class="section-text">
-          Whether you're a history enthusiast or simply looking for powerful
-          storytelling, our collection offers something for everyone. From the
-          beaches of Normandy to the Pacific theater, from the home front to the
-          battlefield — immerse yourself in stories of courage, sacrifice, and
-          humanity.
-        </p>
-        <NuxtLink to="/films/" class="explore-btn">
-          <span>Explore Films</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="btn-icon"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M13 7l5 5m0 0l-5 5m5-5H6"
-            />
-          </svg>
-        </NuxtLink>
-      </section>
-
-      <!-- Divider -->
-      <div class="section-divider"></div>
-
-      <!-- Credits Section -->
-      <section class="content-section credits-section">
-        <h2 class="section-title">Created By</h2>
-        <div class="creator-card">
-          <img
-            src="https://github.com/StevenACZ.png"
-            alt="StevenACZ — creator of WW2 Film Map"
-            class="creator-avatar"
-            width="56"
-            height="56"
-            loading="lazy"
-            decoding="async"
-            referrerpolicy="no-referrer"
-          />
-          <div class="creator-info">
-            <h3 class="creator-name">StevenACZ</h3>
-            <p class="creator-role">Full-Stack Developer</p>
-          </div>
-        </div>
-
-        <div class="links-grid">
-          <a
-            href="https://github.com/StevenACZ"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link-card"
-          >
-            <div class="link-icon github-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                />
-              </svg>
-            </div>
-            <div class="link-content">
-              <span class="link-label">GitHub Profile</span>
-              <span class="link-url">@StevenACZ</span>
-            </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="link-arrow"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
-          </a>
-
-          <a
-            href="https://github.com/StevenACZ/ww2-movie-map"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link-card"
-          >
-            <div class="link-icon code-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                />
-              </svg>
-            </div>
-            <div class="link-content">
-              <span class="link-label">Source Code</span>
-              <span class="link-url">View on GitHub</span>
-            </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="link-arrow"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
-          </a>
-
-          <a
-            href="https://github.com/StevenACZ/ww2-movie-map/issues"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link-card issues-card"
-          >
-            <div class="link-icon issues-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
-            <div class="link-content">
-              <span class="link-label">Report Issues</span>
-              <span class="link-url">Bugs & Suggestions</span>
-            </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="link-arrow"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
-          </a>
-        </div>
-      </section>
-
-      <!-- Footer Quote -->
-      <footer class="about-footer">
-        <blockquote class="footer-quote">
-          <p>
-            "Those who cannot remember the past are condemned to repeat it."
-          </p>
-          <cite class="footer-author">— George Santayana</cite>
-        </blockquote>
-        <p class="portfolio-link">
-          Created by
-          <a
-            href="https://stevenacz.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            stevenacz.com
-          </a>
-        </p>
-      </footer>
-    </article>
-  </main>
+      </div>
+    </section>
+  </article>
 </template>
 
 <script setup lang="ts">
-import {
-  buildPageSeo,
-  canonicalUrl,
-  jsonLdScript,
-  SITE_URL,
-} from "~/utils/seo";
+import type { Locale } from "~~/types/data";
 
-useSeoMeta(
-  buildPageSeo({
+const STEPS = [
+  { key: "step1", art: "timeline" },
+  { key: "step2", art: "pin" },
+  { key: "step3", art: "play" },
+] as const;
+
+const { t, locale } = useI18n();
+const config = useRuntimeConfig();
+
+const stats = computed(() => [
+  { key: "titles", value: Number(config.public.titleCount) },
+  { key: "places", value: Number(config.public.placeCount) },
+  { key: "events", value: Number(config.public.eventCount) },
+  { key: "operations", value: Number(config.public.operationCount) },
+]);
+
+const credits = computed(() => [
+  {
+    name: "TMDB",
+    role: t("aboutPage.credits.tmdb"),
+    url: "https://www.themoviedb.org",
+    note: t("about.tmdbNotice"),
+  },
+  {
+    name: "JustWatch",
+    role: t("aboutPage.credits.justwatch"),
+    url: "https://www.justwatch.com",
+  },
+  {
+    name: "historical-basemaps",
+    role: t("aboutPage.credits.borders"),
+    url: "https://github.com/aourednik/historical-basemaps",
+    license: "GPL-3.0",
+  },
+  {
+    name: "Wikipedia · Wikidata",
+    role: t("aboutPage.credits.wiki"),
+    license: "CC BY-SA",
+  },
+  {
+    name: "Big Shoulders · Inter · JetBrains Mono",
+    role: t("aboutPage.credits.fonts"),
+    license: "OFL",
+  },
+  {
+    name: "three.js",
+    role: t("aboutPage.credits.three"),
+    license: "MIT",
+  },
+]);
+
+usePageSeo(() => {
+  const current = locale.value as Locale;
+  return {
     path: "/about",
-    title: "About",
-    ogTitle: "About WW2 Film Map - World War II Through Cinema",
-    description:
-      "Learn about WW2 Film Map, a free interactive project that connects World War II history, film locations, and a curated cinema timeline.",
-    ogDescription:
-      "Learn about the mission behind WW2 Film Map and the public cinema-history project by StevenACZ.",
-  })
-);
-
-useHead({
-  link: [{ rel: "canonical", href: canonicalUrl("/about") }],
-  script: [
-    jsonLdScript({
-      "@context": "https://schema.org",
-      "@type": "AboutPage",
-      "@id": `${SITE_URL}/about#page`,
-      name: "About WW2 Film Map",
-      description:
-        "An interactive project exploring World War II history through cinema, featuring a map, film collection, and timeline.",
-      url: canonicalUrl("/about"),
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-      mainEntity: {
-        "@type": "WebApplication",
-        "@id": `${SITE_URL}/#webapp`,
-        name: "WW2 Film Map",
-        applicationCategory: "EducationalApplication",
-        operatingSystem: "Web Browser",
-        isAccessibleForFree: true,
-        description:
-          "Interactive web application for exploring World War II films, locations, and historical events.",
+    title: t("about.title"),
+    description: t("about.intro"),
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "@id": `${absoluteUrl("/about", current)}#page`,
+        url: absoluteUrl("/about", current),
+        name: t("about.title"),
+        description: t("about.intro"),
+        inLanguage: current,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: { "@id": `${SITE_URL}/#website` },
         author: { "@id": `${SITE_URL}/#person` },
-        creator: { "@id": `${SITE_URL}/#person` },
-        offers: {
-          "@type": "Offer",
-          price: "0",
-          priceCurrency: "USD",
-        },
       },
-    }),
-  ],
+      breadcrumbGraph(current, [
+        { name: t("nav.map"), path: "/" },
+        { name: t("nav.about"), path: "/about" },
+      ]),
+    ],
+  };
 });
 </script>
 
 <style lang="scss" scoped>
-@use "sass:color";
-@use "@/assets/scss/variables" as *;
-@use "@/assets/scss/mixins" as *;
+.about {
+  padding-top: clamp(24px, 6vw, 72px);
+}
 
-.about-page {
-  min-height: 100vh;
-  background: $bg-page;
-  color: $text-primary;
-  font-family: "Inter", sans-serif;
-  position: relative;
-  padding: 120px $spacing-lg 80px;
+.hero {
+  display: grid;
+  align-items: center;
+  gap: clamp(32px, 6vw, 72px);
 
-  @include mobile {
-    padding: 80px $spacing-md 60px;
-  }
-
-  @include mobile-small {
-    padding: 70px $spacing-sm 40px;
+  @include up($bp-md) {
+    grid-template-columns: 1.1fr 0.9fr;
   }
 }
 
-.world-map-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.03;
-  pointer-events: none;
-  filter: invert(1);
+.hero__eyebrow {
+  color: var(--gold);
 }
 
-.grid-pattern {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 50px 50px;
-  pointer-events: none;
-}
-
-.about-container {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  z-index: $z-dropdown;
-}
-
-// ===== HERO SECTION =====
-.hero-section {
-  text-align: center;
-  margin-bottom: $spacing-2xl;
-
-  @include mobile {
-    margin-bottom: $spacing-xl;
-  }
-}
-
-.logo-showcase {
-  display: inline-flex;
-  align-items: baseline;
-  gap: $spacing-sm;
-  margin-bottom: $spacing-md;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  @include mobile {
-    gap: $spacing-xs;
-    margin-bottom: $spacing-sm;
-  }
-}
-
-.logo-ww2 {
-  font-size: 4rem;
+.hero__title {
+  margin: 14px 0 22px;
+  font-size: clamp(4.2rem, 16vw, 11rem);
   font-weight: 800;
-  color: $beige;
-  letter-spacing: -2px;
-  text-shadow: 0 0 40px rgba($beige, 0.3);
-
-  @include mobile {
-    font-size: 2.5rem;
-    letter-spacing: -1px;
-  }
-
-  @include mobile-small {
-    font-size: 2rem;
-  }
-}
-
-.logo-text {
-  font-size: 4rem;
-  font-weight: 300;
-  color: $gray;
-  letter-spacing: 2px;
-
-  @include mobile {
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-  }
-
-  @include mobile-small {
-    font-size: 2rem;
-  }
-}
-
-.tagline {
-  font-size: 1.25rem;
-  color: $text-secondary;
-  letter-spacing: 3px;
+  line-height: 0.82;
   text-transform: uppercase;
-  margin: 0;
+  color: var(--paper);
+}
 
-  @include mobile {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
+.hero__intro {
+  max-width: 56ch;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.hero__art {
+  width: min(100%, 520px);
+  margin-inline: auto;
+  padding: 12px;
+}
+
+@include motion {
+  .hero__copy > * {
+    animation: about-rise 0.9s $ease-out backwards;
   }
 
-  @include mobile-small {
-    font-size: 0.7rem;
-    letter-spacing: 1px;
+  .hero__title {
+    animation-delay: 0.08s;
+  }
+
+  .hero__intro {
+    animation-delay: 0.18s;
   }
 }
 
-// ===== CONTENT SECTIONS =====
-.content-section {
-  margin-bottom: $spacing-2xl;
+.stats {
+  margin-top: clamp(56px, 10vw, 120px);
+}
 
-  @include mobile {
-    margin-bottom: $spacing-xl;
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 24px;
+
+  @include up($bp-md) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+}
+
+section + section {
+  margin-top: clamp(80px, 12vw, 160px);
+}
+
+.section-head {
+  max-width: 720px;
+  margin-bottom: clamp(28px, 5vw, 48px);
 }
 
 .section-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: $text-primary;
-  margin: 0 0 $spacing-md 0;
-  text-align: center;
-  letter-spacing: -0.5px;
-
-  @include mobile {
-    font-size: 1.35rem;
-    margin-bottom: $spacing-sm;
-  }
-
-  @include mobile-small {
-    font-size: 1.2rem;
-  }
+  margin-top: 10px;
+  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  text-transform: uppercase;
 }
 
-.section-text {
-  color: $text-secondary;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  text-align: center;
-  margin: 0;
-
-  @include mobile {
-    font-size: 0.95rem;
-    line-height: 1.7;
-  }
-
-  @include mobile-small {
-    font-size: 0.9rem;
-  }
-
-  strong {
-    color: $beige;
-    font-weight: 600;
-  }
+.section-intro {
+  margin-top: 16px;
+  color: var(--muted);
 }
 
-// ===== FEATURES GRID =====
-.features-grid {
+.how__steps {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: $spacing-md;
-  margin-top: $spacing-lg;
+  gap: 20px;
+  list-style: none;
 
-  @include mobile {
-    grid-template-columns: 1fr;
-    gap: $spacing-sm;
-    margin-top: $spacing-md;
+  @include up($bp-md) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.feature-card {
-  background: $bg-card;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: $border-radius-md;
-  padding: $spacing-lg;
-  text-align: center;
-  transition: all $transition-normal;
-
-  @include mobile {
-    padding: $spacing-md;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    gap: $spacing-md;
-  }
+.step {
+  padding: 18px 18px 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition:
+    border-color 0.3s $ease-out,
+    transform 0.3s $ease-out;
 
   &:hover {
-    border-color: rgba($beige, 0.3);
+    border-color: var(--line-strong);
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-
-    @include mobile {
-      transform: none;
-    }
   }
 }
 
-.feature-icon {
-  width: 48px;
-  height: 48px;
-  margin: 0 auto $spacing-md;
-  color: $beige;
+.step__art {
+  margin-bottom: 22px;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(var(--line) 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 20px 20px,
+    var(--bg-2);
+}
 
-  @include mobile {
-    width: 40px;
-    height: 40px;
-    margin: 0;
-    flex-shrink: 0;
-  }
+.step__num {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
 
-  svg {
-    width: 100%;
-    height: 100%;
+.step__title {
+  margin: 8px 0 10px;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+}
+
+.step__text {
+  color: var(--muted);
+}
+
+.credits__roll {
+  list-style: none;
+  border-top: 1px solid var(--line-strong);
+}
+
+.credit {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 18px;
+  padding: 22px 0;
+  border-bottom: 1px dashed var(--line-strong);
+
+  @include up($bp-sm) {
+    grid-template-columns: 56px 1fr auto;
+    align-items: center;
   }
 }
 
-.feature-card h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: $text-primary;
-  margin: 0 0 $spacing-sm 0;
-
-  @include mobile {
-    font-size: 0.95rem;
-    margin: 0 0 $spacing-xs 0;
-  }
+.credit__index {
+  font-size: 0.8rem;
+  color: var(--faint);
 }
 
-.feature-card p {
-  font-size: 0.85rem;
-  color: $text-muted;
-  margin: 0;
-  line-height: 1.5;
-
-  @include mobile {
-    font-size: 0.8rem;
-  }
+.credit__role {
+  @include eyebrow;
 }
 
-// ===== RECOMMENDATIONS =====
-.recommendations-section {
-  text-align: center;
-}
-
-.explore-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: $spacing-sm;
-  margin-top: $spacing-lg;
-  padding: 14px $spacing-xl;
-  background: rgba($beige, 0.15);
-  border: 1px solid rgba($beige, 0.4);
-  border-radius: $border-radius-md;
-  color: $beige;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all $transition-normal;
-  @include touch-target;
-
-  @include mobile {
-    padding: 14px $spacing-lg;
-    font-size: 0.95rem;
-    width: 100%;
-    justify-content: center;
-  }
-
-  &:hover {
-    background: rgba($beige, 0.25);
-    border-color: $beige;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba($beige, 0.2);
-
-    @include mobile {
-      transform: none;
-    }
-  }
-}
-
-.btn-icon {
-  width: 20px;
-  height: 20px;
-  transition: transform $transition-fast;
-
-  .explore-btn:hover & {
-    transform: translateX(4px);
-  }
-}
-
-// ===== DIVIDER =====
-.section-divider {
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.15),
-    transparent
-  );
-  margin: $spacing-2xl 0;
-
-  @include mobile {
-    margin: $spacing-xl 0;
-  }
-}
-
-// ===== CREDITS SECTION =====
-.credits-section {
-  text-align: center;
-}
-
-.creator-card {
-  display: inline-flex;
-  align-items: center;
-  gap: $spacing-md;
-  background: $bg-card;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: $border-radius-lg;
-  padding: $spacing-md $spacing-xl;
-  margin-bottom: $spacing-xl;
-
-  @include mobile {
-    padding: $spacing-md;
-    margin-bottom: $spacing-lg;
-  }
-}
-
-.creator-avatar {
-  width: 56px;
-  height: 56px;
-  border: 2px solid rgba($beige, 0.3);
-  border-radius: 50%;
-  object-fit: cover;
-
-  @include mobile {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-.creator-info {
-  text-align: left;
-}
-
-.creator-name {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: $text-primary;
-  margin: 0;
-
-  @include mobile {
-    font-size: 1.1rem;
-  }
-}
-
-.creator-role {
-  font-size: 0.9rem;
-  color: $text-muted;
-  margin: $spacing-xs 0 0 0;
-
-  @include mobile {
-    font-size: 0.85rem;
-  }
-}
-
-// ===== LINKS GRID =====
-.links-grid {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-sm;
-}
-
-.link-card {
-  display: flex;
-  align-items: center;
-  gap: $spacing-md;
-  background: $bg-card;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: $border-radius-md;
-  padding: $spacing-md $spacing-lg;
-  text-decoration: none;
-  transition: all $transition-normal;
-
-  @include mobile {
-    padding: $spacing-md;
-    gap: $spacing-sm;
-  }
-
-  &:hover {
-    border-color: rgba($beige, 0.3);
-    background: rgba(255, 255, 255, 0.03);
-
-    .link-arrow {
-      transform: translate(2px, -2px);
-      opacity: 1;
-    }
-  }
-
-  &.issues-card:hover {
-    border-color: rgba($warning, 0.4);
-  }
-}
-
-.link-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: $border-radius-sm;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-
-  @include mobile {
-    width: 40px;
-    height: 40px;
-  }
-
-  svg {
-    width: 22px;
-    height: 22px;
-
-    @include mobile {
-      width: 18px;
-      height: 18px;
-    }
-  }
-
-  &.github-icon {
-    background: rgba(255, 255, 255, 0.1);
-    color: $text-primary;
-  }
-
-  &.code-icon {
-    background: rgba($beige, 0.15);
-    color: $beige;
-  }
-
-  &.issues-icon {
-    background: rgba($warning, 0.15);
-    color: $warning;
-  }
-}
-
-.link-content {
-  flex: 1;
-  text-align: left;
-  min-width: 0;
-}
-
-.link-label {
-  display: block;
-  font-size: 1rem;
-  font-weight: 600;
-  color: $text-primary;
-
-  @include mobile {
-    font-size: 0.95rem;
-  }
-}
-
-.link-url {
-  display: block;
-  font-size: 0.85rem;
-  color: $text-muted;
-  margin-top: 2px;
-
-  @include mobile {
-    font-size: 0.8rem;
-  }
-}
-
-.link-arrow {
-  width: 18px;
-  height: 18px;
-  color: $text-muted;
-  opacity: 0.5;
-  transition: all $transition-fast;
-  flex-shrink: 0;
-}
-
-// ===== FOOTER =====
-.about-footer {
-  text-align: center;
-  margin-top: $spacing-2xl;
-  padding-top: $spacing-xl;
-
-  @include mobile {
-    margin-top: $spacing-xl;
-    padding-top: $spacing-lg;
-  }
-}
-
-.footer-quote {
-  margin: 0;
-  border: none;
-  padding: 0;
-
-  p {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: $text-secondary;
-    margin: 0 0 $spacing-sm 0;
-    line-height: 1.6;
-
-    @include mobile {
-      font-size: 0.95rem;
-    }
-
-    @include mobile-small {
-      font-size: 0.9rem;
-    }
-  }
-}
-
-.footer-author {
-  font-size: 0.9rem;
-  color: $text-muted;
-  font-style: normal;
-  display: block;
-
-  @include mobile {
-    font-size: 0.85rem;
-  }
-}
-
-.portfolio-link {
-  margin-top: $spacing-md;
-  font-size: 0.95rem;
-  color: $text-secondary;
+.credit__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4.4vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
 
   a {
-    color: $beige;
-    text-decoration: none;
-    border-bottom: 1px solid rgba($beige, 0.5);
-    transition: all $transition-fast;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    transition: color 0.2s $ease-out;
 
     &:hover {
-      color: color.adjust($beige, $lightness: 8%);
-      border-bottom-color: rgba($beige, 0.85);
+      color: var(--gold);
     }
+  }
+
+  svg {
+    width: 0.55em;
+    height: 0.55em;
+    opacity: 0.6;
+  }
+}
+
+.credit__note {
+  margin-top: 6px;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.credit__license {
+  grid-column: 2;
+  justify-self: start;
+  padding: 4px 10px;
+  border: 1px solid var(--gold-deep);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: var(--gold);
+
+  @include up($bp-sm) {
+    grid-column: 3;
+  }
+}
+
+.author__card {
+  display: grid;
+  gap: 28px;
+  padding: clamp(24px, 5vw, 56px);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 90% 0%, rgb(216 174 82 / 0.12), transparent 50%),
+    var(--surface);
+
+  @include up($bp-md) {
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+  }
+}
+
+.author__logo {
+  width: clamp(96px, 20vw, 160px);
+  height: auto;
+  color: var(--paper);
+
+  @include motion {
+    transition: transform 0.8s $ease-spring;
+
+    .author__card:hover & {
+      transform: rotate(-12deg) scale(1.05);
+    }
+  }
+}
+
+.author__text {
+  max-width: 56ch;
+  margin: 16px 0 24px;
+  color: var(--muted);
+}
+
+.author__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@keyframes about-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 </style>

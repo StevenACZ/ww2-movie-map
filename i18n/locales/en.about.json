@@ -1,0 +1,35 @@
+{
+  "aboutPage": {
+    "eyebrow": "The project",
+    "statsLabel": "By the numbers",
+    "howEyebrow": "Field manual",
+    "step": "Step {n}",
+    "sounds": {
+      "eyebrow": "Sound design",
+      "title": "Hear the eras",
+      "intro": "Each era on the map has its own signal. Try them here; you can turn sound on or off at any time with the speaker button in the header.",
+      "ww1": "Trench whistle",
+      "interwar": "Radio tuning",
+      "ww2": "M1 Garand ping",
+      "off": "Sound is off. Turn it on with the speaker button in the header to hear the eras.",
+      "playing": "Playing: {sound}"
+    },
+    "credits": {
+      "eyebrow": "Dossier",
+      "tmdb": "Films, series, posters and trailers",
+      "justwatch": "Streaming availability",
+      "borders": "Historical borders",
+      "wiki": "History, places and events",
+      "fonts": "Typefaces",
+      "three": "3D globe engine"
+    },
+    "authorEyebrow": "Author",
+    "error": {
+      "eyebrow": "Signal lost",
+      "title": "Something went wrong",
+      "text": "An unexpected error interrupted this page. Head back to the map and try again.",
+      "status": "Error {code}",
+      "notFoundEyebrow": "Off the map"
+    }
+  }
+}

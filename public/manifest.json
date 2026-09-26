@@ -1,13 +1,13 @@
 {
   "name": "WW2 Film Map",
   "short_name": "WW2 Map",
-  "description": "Explore World War II through cinema with an interactive map, film collection, and historical timeline.",
+  "description": "Explore films and series about WW1, the interwar years, and WW2 on an interactive 3D globe with historical borders, fronts, events, and a timeline.",
   "id": "/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#14191e",
-  "theme_color": "#14191e",
+  "background_color": "#0b0c09",
+  "theme_color": "#0b0c09",
   "orientation": "any",
   "lang": "en",
   "dir": "ltr",
@@ -47,14 +47,14 @@
       "sizes": "1200x630",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "WW2 Film Map interactive map preview"
+      "label": "WW2 Film Map interactive globe preview"
     }
   ],
   "shortcuts": [
     {
       "name": "Film Collection",
       "short_name": "Films",
-      "description": "Browse the curated World War II film collection.",
+      "description": "Browse the curated collection of war films and series.",
       "url": "/films",
       "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
     },

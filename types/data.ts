@@ -171,6 +171,8 @@ export interface Operation {
   path: LonLat[];
   /** Patrols, convoys and bombing runs cycle along the path while active. */
   loop?: boolean;
+  /** Relative importance when the globe picks which operations get units (default 1). */
+  weight?: number;
   wikipediaEn?: string;
 }
 
@@ -178,11 +180,15 @@ export interface Frontline {
   id: string;
   era: Era;
   name: Localized;
+  sources?: string[];
   /** Snapshots ordered by date; the globe interpolates between neighbours. */
   snapshots: { date: IsoDate; line: LonLat[] }[];
 }
 
 export interface OperationsFile {
   operations: Operation[];
+}
+
+export interface FrontsFile {
   frontlines: Frontline[];
 }

@@ -1,0 +1,35 @@
+{
+  "aboutPage": {
+    "eyebrow": "El proyecto",
+    "statsLabel": "En cifras",
+    "howEyebrow": "Manual de campo",
+    "step": "Paso {n}",
+    "sounds": {
+      "eyebrow": "Diseño sonoro",
+      "title": "Escucha las épocas",
+      "intro": "Cada época del mapa tiene su propia señal. Pruébalas aquí; puedes activar o desactivar el sonido cuando quieras con el botón del altavoz en la cabecera.",
+      "ww1": "Silbato de trinchera",
+      "interwar": "Sintonía de radio",
+      "ww2": "Ping del M1 Garand",
+      "off": "El sonido está desactivado. Actívalo con el botón del altavoz en la cabecera para escuchar las épocas.",
+      "playing": "Sonando: {sound}"
+    },
+    "credits": {
+      "eyebrow": "Expediente",
+      "tmdb": "Películas, series, pósters y tráileres",
+      "justwatch": "Disponibilidad en streaming",
+      "borders": "Fronteras históricas",
+      "wiki": "Historia, lugares y hechos",
+      "fonts": "Tipografías",
+      "three": "Motor del globo 3D"
+    },
+    "authorEyebrow": "Autor",
+    "error": {
+      "eyebrow": "Señal perdida",
+      "title": "Algo salió mal",
+      "text": "Un error inesperado interrumpió esta página. Vuelve al mapa e inténtalo de nuevo.",
+      "status": "Error {code}",
+      "notFoundEyebrow": "Fuera del mapa"
+    }
+  }
+}

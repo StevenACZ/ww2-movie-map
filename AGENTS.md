@@ -1,44 +1,62 @@
-# WW2 Movie Map Guide
+# WW2 Film Map Guide
 
 ## Scope
 
-Public Nuxt app for WW2 Movie Map. Keep it production-safe, historically focused, accessible, and free of private infrastructure details.
+Public bilingual Nuxt site for WW2 Film Map: a 3D globe, film and series collection, places, and timeline covering WW1, the interwar years, and WW2. Keep it production-safe, historically accurate, accessible, and free of private infrastructure details.
 
 ## Security and Privacy
 
 - Never commit secrets, tokens, private keys, internal IPs, environment dumps, local machine paths, or private deployment notes.
 - Keep `AGENTS.md`, `README.md`, and `CHANGELOG.md` public-safe.
 - Keep local/private notes in ignored `docs/`.
-- Do not add external scripts, embeds, fonts, map providers, or analytics without updating the CSP and documenting the reason.
-- Use only public HTTPS URLs for film, map, trailer, and metadata references.
+- Do not add external scripts, embeds, fonts, map or tile providers, or analytics without updating the CSP and documenting the reason.
+- Use only public HTTPS URLs for film, trailer, image, and metadata references.
 
 ## Assistant Surface
 
 - `AGENTS.md` is the source of truth for repo guidance.
 - Claude Code 2.1.277+ reads `AGENTS.md` directly; no project bridge is needed.
-- Do not add repo-local `.agents/skills/` or `.claude/skills/` unless a reusable WW2 Movie Map workflow genuinely needs a custom skill. If skills are added later, `.agents/skills/` is canonical and `.claude/skills/*` must be symlinks to it.
+- Do not add repo-local `.agents/skills/` or `.claude/skills/` unless a reusable workflow genuinely needs one. If skills are added later, `.agents/skills/` is canonical and `.claude/skills/*` must be symlinks to it.
 
 ## Project Overview
 
-| Field   | Value                                                                  |
-| ------- | ---------------------------------------------------------------------- |
-| URL     | `https://ww2.stevenacz.com`                                            |
-| Repo    | `https://github.com/StevenACZ/ww2-movie-map`                           |
-| Stack   | Nuxt 4, Vue 3, TypeScript, SCSS, Leaflet, Bun, `@nuxtjs/sitemap`       |
-| Purpose | Interactive map, film collection, and timeline for World War II cinema |
+| Field   | Value                                                                                      |
+| ------- | ------------------------------------------------------------------------------------------ |
+| URL     | `https://ww2.stevenacz.com` (EN at `/`, ES at `/es/`)                                      |
+| Repo    | `https://github.com/StevenACZ/ww2-movie-map`                                               |
+| Stack   | Nuxt 4 SSG, Vue 3, TypeScript, SCSS, three.js, topojson-client, Lenis, Bun 1.4.1           |
+| Modules | `@nuxtjs/i18n` v10 (`prefix_except_default`), `@nuxtjs/sitemap`, Fontsource variable fonts |
+| Output  | `nuxt generate` → `dist/public`, every route prerendered with `crawlLinks` + `failOnError` |
 
 ## Structure
 
-- `app/pages/`: home, films, timeline, and about pages.
-- `app/components/`: map, film, trailer, timeline, and shared UI.
-- `app/components/icons/`: Lucide-style inline SVG icon components (no emoji iconography).
-- `app/composables/`: filtering, Leaflet map, and timeline logic.
-- `app/utils/seo.ts`: canonical URL, page SEO, and JSON-LD helpers.
-- `data/films.json`: canonical film data.
-- `data/historical-events.json`: canonical timeline events.
-- `types/`: shared TypeScript types.
-- `public/`: icons, manifest files, OG image, robots, and security policy contact.
-- `nuxt.config.ts`: CSP, sitemap, app head defaults, and build/runtime configuration.
+- `app/globe/`: own three.js globe engine (countries, historical borders, front lines, units, overlay, palette). No map tiles, no map API keys.
+- `app/pages/`: `/` (globe with 1914–1945 timeline), `/films`, `/films/[id]`, `/era/{ww1,interwar,ww2}`, `/places`, `/places/[id]`, `/timeline`, `/about`.
+- `app/components/{map,title,collection,place,timeline,about}/`: page areas; shared `Icon.vue`, `TitlePoster.vue`, `TitleTile.vue`, `AppHeader`, `AppFooter`, `AppLogo`.
+- `app/composables/`: `usePageSeo`, `useIndexData`, `useSound`, `useLenis`.
+- `app/utils/seo.ts`: site URL, localized paths, TMDB image URLs, JSON-LD helpers.
+- `app/assets/scss/`: `main.scss` (CSS variables, global classes) and `_tokens.scss` (auto-injected breakpoints, easings, mixins).
+- `server/utils/dataset.ts`, `server/api/**`, `server/routes/data/**`: build-time dataset and prerendered JSON payloads.
+- `shared/utils/time.ts`: date helpers and era ranges. `types/data.ts` (source schema), `types/view.ts` (payloads).
+- `i18n/locales/`: base `en.json`/`es.json` plus one file per area (`en.<area>.json`, `es.<area>.json`).
+- `scripts/`: data validator, Wikipedia lookup, border builder, TMDB sync.
+
+## Data
+
+- `data/titles/*.json`: 222 films and series (WW1, interwar, WW2), bilingual text, journeys with stops.
+- `data/events.json`: historical events. `data/places.json`: place descriptions.
+- `data/operations/{europe,world}.json`: animated units and front-line snapshots.
+- `data/geo/countries.json` and `public/geo/borders-{1914,1920,1930,1938,1945}.json`: country metadata and historical borders.
+- `data/tmdb.json` and `public/data/watch/{id}.json`: written only by `scripts/tmdb/sync.ts`; never edit by hand.
+
+Invariants:
+
+- Title `id` is kebab-case `slug-year` and the year matches the release year.
+- Every title journey has exactly one `primary` stop.
+- `bun scripts/data/validate.ts` must pass (errors fail; warnings are reviewed).
+- Borders derive from historical-basemaps (GPL-3.0). Keep `public/geo/LICENSE-historical-basemaps.txt` and the About credit; rebuild only with `scripts/geo/build-borders.ts`.
+- Any page showing TMDB data keeps the notice "This product uses the TMDB API but is not endorsed or certified by TMDB." and credits JustWatch for watch providers.
+- A place page exists only for places referenced by two or more titles; links to other places break static generation.
 
 ## Commands
 
@@ -46,76 +64,64 @@ Public Nuxt app for WW2 Movie Map. Keep it production-safe, historically focused
 bun install
 bun run dev
 bun run format
-bun run format:check
-bun run typecheck
-bun run build
-bun run generate
-bun run preview
+bun run verify
+bun scripts/data/validate.ts
+bun scripts/geo/build-borders.ts --check
+bun scripts/tmdb/sync.ts
+bun scripts/data/wiki-lookup.ts "Stalingrad (1993 film)"
 ```
 
-Use Bun because this repo tracks `bun.lock`. Do not commit generated `.output/`, `.nuxt/`, `dist/`, local docs, or env files.
-
-## Key Features
-
-- Home page with Leaflet map and film markers.
-- Film collection page with search and sorting.
-- Historical timeline page with events and films across 1936-1945.
-- About page with project context and portfolio backlink.
-- Trailer modal that embeds YouTube on desktop and opens YouTube externally on mobile.
-
-## Data Model
-
-Film data lives in `data/films.json` and must match `types/index.ts`. Locations use `[number, number]` coordinates and public HTTPS URLs only.
+- `bun run verify` runs format check, Nuxt typecheck, build, static generation, and `bun audit`.
+- TMDB sync reads `TMDB_API_KEY` or `TMDB_READ_TOKEN`; supports `--only <id,id>` and `--fixture <dir>`.
+- Never run `nuxt build`, `generate`, `typecheck`, or `prepare` while `nuxt dev` runs on the same checkout; they share `.nuxt`. Typecheck against a running dev server with `bunx vue-tsc -b --noEmit`.
+- Use Bun because this repo tracks `bun.lock`. Do not commit `.output/`, `.nuxt/`, `dist/`, local docs, or env files.
 
 ## SEO and Structured Data
 
-- `app/utils/seo.ts` is the source of truth for site URL, canonical URL generation, page SEO defaults, and JSON-LD helpers.
-- `nuxt.config.ts` owns CSP, sitemap configuration, manifest links, app defaults, and security headers.
-- Page components use `useSeoMeta()` and `useHead()` for page-specific title, description, canonical URL, Open Graph details, and page JSON-LD.
-- Keep structured data truthful and non-conflicting. Do not add fake ratings, reviews, awards, availability, event attendance, or claims that are not present in the public data.
-- Use `public/og-image-20260518.png` for social previews unless a newer real replacement asset is committed.
-- Keep `public/manifest.json` and `public/site.webmanifest` aligned while both are published.
-- Keep `robots.txt` and generated sitemap URLs aligned with the production domain.
+- Every page calls `usePageSeo()` with the locale-agnostic path; it owns title, description, canonical, hreflang, Open Graph, robots, and JSON-LD.
+- `nuxt.config.ts` owns CSP, i18n, sitemap, prerender routes, and head defaults.
+- Keep structured data truthful. No fake ratings, reviews, awards, availability, or claims absent from the data.
+- Keep `public/manifest.json` and `public/site.webmanifest` aligned, and `robots.txt` declaring the production sitemap.
+- Update `public/llms.txt` when routes or coverage change.
 
 ## External Content Rules
 
 - Use `https://www.youtube-nocookie.com` for embedded trailers.
-- Any new external image, map, media, or API host must be added deliberately to the CSP in `nuxt.config.ts`.
-- Any URL rendered into HTML/CSS must come from public HTTPS data and should be validated or allowlisted when it can reach attributes, embeds, or inline styles.
+- Any new external image, media, or API host must be added deliberately to the CSP in `nuxt.config.ts`.
+- Any URL rendered into HTML/CSS must come from public HTTPS data and be validated or allowlisted when it can reach attributes, embeds, or inline styles.
 
-## Styling Guidelines
+## UI Guidelines
 
-- Shared SCSS variables live in `app/assets/scss/_variables.scss`.
-- Shared responsive helpers live in `app/assets/scss/_mixins.scss`.
-- The visual identity uses solid surface tokens (`$bg-page`, `$surface`, `$surface-border`); the old beige/gold gradients are flattened to solid color. Do not reintroduce decorative gradients.
-- Icons are inline SVG components under `app/components/icons/`. Do not use emoji as UI icons.
-- Wrap micro-interactions so `prefers-reduced-motion: reduce` disables them (global guard lives in `app/app.vue`).
-- Recompress raster assets in `public/` (oxipng) and lazy-load below-the-fold images.
-- Keep component styles scoped when possible.
-- Aim to keep components focused. Extract subcomponents when a file becomes difficult to scan.
+- Icons are inline SVG through `Icon.vue`. Do not use emoji anywhere in the UI.
+- Content must be visible and usable without JS and under `prefers-reduced-motion: reduce`; wrap motion in the `motion` mixin.
+- Scroll-driven animations live inside `@supports (animation-timeline: view())` with longhand properties.
+- Mobile first: no horizontal overflow at 390px; designed at 1440px.
+- Reserve image space with `aspect-ratio`; lazy-load everything except the LCP image.
+- Component styles are `<style lang="scss" scoped>`; reuse tokens and global classes instead of new ones.
+- Spanish copy is neutral Latin American Spanish with correct accents.
+- Sound plays only on deliberate user actions, never on scroll or hover.
+- Never a left accent border or vertical stripe on cards, callouts, toasts, list items or quotes (`border-left`, `inset Npx 0 0` shadows, left `::before` bars); use a full hairline border, a tint or a top rule.
+- Nothing over the globe uses `backdrop-filter` (use the `panel` mixin, not `glass`); the globe renders on demand and caps DPR at 1.5.
 
 ## Verification
 
-Before marking work complete, run:
+Before any commit or push, run:
 
 ```bash
 bun run format
+bun scripts/data/validate.ts
+bun scripts/geo/build-borders.ts --check
 bun run verify
 ```
 
-Run the same verification before any commit or push. `bun run verify` expands to formatting check, Nuxt typecheck, build, static generation, and dependency audit.
+For SEO work, inspect the generated `dist/public` output for JSON-LD, canonical and hreflang links, descriptions and Open Graph tags, the CSP meta tag, valid manifests, and valid `sitemap.xml` with both locales.
 
-For SEO work, inspect generated output for:
+## Deploy
 
-- `application/ld+json`
-- canonical URL
-- description and Open Graph metadata
-- CSP meta tag
-- valid `manifest.json`
-- valid sitemap XML
-- real social preview image
-
-For release work, also verify GitHub Actions after pushing to `main` and check the production URL after the deploy finishes. The deploy workflow runs on Node 22, only deploys when SSH config is present, and self-validates the live site with `curl` after rsync.
+- Push to `main` triggers GitHub Actions on the self-hosted runner: install, optional TMDB refresh, checks, `generate`, then rsync of `dist/public` to production.
+- A daily schedule rebuilds with fresh TMDB data; the refresh step runs only when the `TMDB_API_KEY` secret exists and never blocks the deploy.
+- The workflow deploys only when its SSH configuration is present and validates the live site, `robots.txt`, and sitemap after rsync.
+- After pushing, verify the Actions run and the production URL.
 
 ## Git Safety
 

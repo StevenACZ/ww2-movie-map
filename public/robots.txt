@@ -3,6 +3,8 @@
 
 User-agent: *
 Allow: /
+Allow: /data/
+Allow: /geo/
 Disallow: /api/
 Disallow: /_nuxt/builds/
 # Cloudflare internal endpoints (email-protection, RUM) — not real pages
@@ -10,41 +12,57 @@ Disallow: /cdn-cgi/
 
 User-agent: OAI-SearchBot
 Allow: /
+Allow: /data/
+Allow: /geo/
 Disallow: /api/
 Disallow: /_nuxt/builds/
 
 User-agent: GPTBot
 Allow: /
+Allow: /data/
+Allow: /geo/
 Disallow: /api/
 Disallow: /_nuxt/builds/
 
 User-agent: ChatGPT-User
 Allow: /
+Allow: /data/
+Allow: /geo/
 Disallow: /api/
 Disallow: /_nuxt/builds/
 
 User-agent: ClaudeBot
 Allow: /
+Allow: /data/
+Allow: /geo/
 Disallow: /api/
 Disallow: /_nuxt/builds/
 
 User-agent: anthropic-ai
 Allow: /
+Allow: /data/
+Allow: /geo/
 Disallow: /api/
 Disallow: /_nuxt/builds/
 
 User-agent: PerplexityBot
 Allow: /
+Allow: /data/
+Allow: /geo/
 Disallow: /api/
 Disallow: /_nuxt/builds/
 
 User-agent: Google-Extended
 Allow: /
+Allow: /data/
+Allow: /geo/
 Disallow: /api/
 Disallow: /_nuxt/builds/
 
 User-agent: CCBot
 Allow: /
+Allow: /data/
+Allow: /geo/
 Disallow: /api/
 Disallow: /_nuxt/builds/
 

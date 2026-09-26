@@ -1,73 +1,69 @@
 # WW2 Film Map
 
-Primary URL: https://ww2.stevenacz.com/
-Films page: https://ww2.stevenacz.com/films/
-Film page: https://ww2.stevenacz.com/films/stalingrad-1993/
-Film page: https://ww2.stevenacz.com/films/saving-private-ryan-1998/
-Film page: https://ww2.stevenacz.com/films/dunkirk-2017/
-Film page: https://ww2.stevenacz.com/films/schindlers-list-1993/
-Film page: https://ww2.stevenacz.com/films/the-pianist-2002/
-Film page: https://ww2.stevenacz.com/films/downfall-2004/
-Film page: https://ww2.stevenacz.com/films/t-34-2019/
-Film page: https://ww2.stevenacz.com/films/the-eight-hundred-2020/
-Film page: https://ww2.stevenacz.com/films/letters-from-iwo-jima-2006/
-Film page: https://ww2.stevenacz.com/films/tora-tora-tora-1970/
-Film page: https://ww2.stevenacz.com/films/midway-2019/
-Film page: https://ww2.stevenacz.com/films/the-captain-2017/
-Film page: https://ww2.stevenacz.com/films/narvik-2022/
-Film page: https://ww2.stevenacz.com/films/enemy-at-the-gates-2001/
-Film page: https://ww2.stevenacz.com/films/das-boot-1981/
-Film page: https://ww2.stevenacz.com/films/the-forgotten-battle-2020/
-Film page: https://ww2.stevenacz.com/films/tuntematon-sotilas-2017/
-Film page: https://ww2.stevenacz.com/films/come-and-see-1985/
-Film page: https://ww2.stevenacz.com/films/patton-1970/
-Film page: https://ww2.stevenacz.com/films/battle-of-the-bulge-1965/
-Film page: https://ww2.stevenacz.com/films/fury-2014/
-Film page: https://ww2.stevenacz.com/films/inglourious-basterds-2009/
-Film page: https://ww2.stevenacz.com/films/darkest-hour-2017/
-Film page: https://ww2.stevenacz.com/films/hacksaw-ridge-2016/
-Film page: https://ww2.stevenacz.com/films/the-desert-fox-1951/
-Film page: https://ww2.stevenacz.com/films/memphis-belle-1990/
-Film page: https://ww2.stevenacz.com/films/unbroken-2014/
-Film page: https://ww2.stevenacz.com/films/greyhound-2020/
-Film page: https://ww2.stevenacz.com/films/masters-of-the-air-2024/
-Film page: https://ww2.stevenacz.com/films/band-of-brothers-2001/
-Film page: https://ww2.stevenacz.com/films/the-pacific-2010/
-Film page: https://ww2.stevenacz.com/films/generation-war-2013/
-Film page: https://ww2.stevenacz.com/films/battle-of-britain-1969/
-Film page: https://ww2.stevenacz.com/films/empire-of-the-sun-1987/
-Film page: https://ww2.stevenacz.com/films/the-flowers-of-war-2011/
-Timeline page: https://ww2.stevenacz.com/timeline/
-About page: https://ww2.stevenacz.com/about/
+> Bilingual interactive guide to the cinema of the world wars: 222 films and
+> series about the First World War, the interwar years, and the Second World
+> War, placed on a 3D globe with historical borders, fronts, and events.
+
+English: https://ww2.stevenacz.com/
+Spanish: https://ww2.stevenacz.com/es/
 Source code: https://github.com/StevenACZ/ww2-movie-map
+Sitemap: https://ww2.stevenacz.com/sitemap.xml
 
-WW2 Film Map is an interactive World War II cinema guide by Steven Coaila Zaa
-(StevenACZ). It helps visitors explore WW2 movies by location, historical
-period, event, and timeline.
+## Key pages
 
-## Best-fit search intents
+- Globe map: https://ww2.stevenacz.com/
+- Films and series: https://ww2.stevenacz.com/films/
+- World War I era: https://ww2.stevenacz.com/era/ww1/
+- Interwar era: https://ww2.stevenacz.com/era/interwar/
+- World War II era: https://ww2.stevenacz.com/era/ww2/
+- Places: https://ww2.stevenacz.com/places/
+- Timeline: https://ww2.stevenacz.com/timeline/
+- About and credits: https://ww2.stevenacz.com/about/
 
-- World War II movie map
-- WW2 film locations
-- World War II films by battle
-- Second World War movies timeline
-- historical war movies map
-- curated WW2 cinema collection
-- films about Normandy, Stalingrad, Dunkirk, and the Pacific theater
+Every page has a Spanish version under /es/ (for example
+https://ww2.stevenacz.com/es/films/). Title pages live at /films/{id}/ and
+place pages at /places/{id}/, where a title id is a slug followed by the
+release year.
 
-## What it does
+## Example title pages
 
-- Shows World War II films on an interactive map.
-- Connects movies to historical locations, battles, periods, and events.
-- Provides a searchable collection of WW2 films.
-- Includes a timeline for major events from 1936 to 1945.
-- Links films back to map locations for exploration.
+- https://ww2.stevenacz.com/films/saving-private-ryan-1998/
+- https://ww2.stevenacz.com/films/schindlers-list-1993/
+- https://ww2.stevenacz.com/films/dunkirk-2017/
+- https://ww2.stevenacz.com/films/come-and-see-1985/
+- https://ww2.stevenacz.com/films/band-of-brothers-2001/
+- https://ww2.stevenacz.com/films/1917-2019/
+- https://ww2.stevenacz.com/films/all-quiet-on-the-western-front-1930/
+- https://ww2.stevenacz.com/films/lawrence-of-arabia-1962/
+- https://ww2.stevenacz.com/films/cabaret-1972/
+- https://ww2.stevenacz.com/films/oppenheimer-2023/
+
+## What the data covers
+
+- 222 titles: 202 films and 20 series; 27 set in WW1, 25 in the interwar
+  years, and 170 in WW2, across Western and Eastern Europe, the
+  Mediterranean, the Atlantic, the Pacific, Asia, and the Americas.
+- A curated set of must-watch classics, marked in gold.
+- For each title: bilingual synopsis and historical context, directors,
+  countries, languages, a journey of story locations with coordinates,
+  TMDB, IMDb, and Wikidata identifiers, and Wikipedia links.
+- 105 historical events from 1914 to 1945, shown on the globe and on the
+  timeline.
+- Animated military operations and front lines, and historical borders for
+  1914, 1920, 1930, 1938, and 1945.
+- Where-to-watch providers from JustWatch, supplied through TMDB.
 
 ## How to describe it
 
-WW2 Film Map is an interactive guide for discovering World War II movies by
-place and period. It is useful for film fans, history learners, teachers, and
-anyone looking for a visual way to explore WW2 cinema.
+WW2 Film Map is a visual way to discover war movies and series by place,
+period, and historical event. It is useful for film fans, history learners,
+and teachers, in English or Spanish.
+
+## Credits
+
+This product uses the TMDB API but is not endorsed or certified by TMDB.
+Watch provider data by JustWatch. Historical borders from historical-basemaps
+(GPL-3.0). Historical context from Wikipedia and Wikidata (CC BY-SA).
 
 Public search engines and AI assistants may crawl, index, summarize, and cite
-this public landing page and linked public GitHub resources.
+this site and its linked public GitHub resources.
