@@ -26,6 +26,7 @@ export interface AtlasPlace {
   n: [number, number, number];
   c?: string;
   t: number[];
+  a?: string[];
 }
 
 export interface AtlasTitle {
@@ -36,6 +37,19 @@ export interface AtlasTitle {
   g?: 1;
   p?: string;
   pe?: string;
+}
+
+export interface CardPoster {
+  path: string;
+  title: string;
+  year: number;
+  era: Era;
+  kind: "film" | "series";
+}
+
+export interface CardArt {
+  map: { x: number; y: number; near: [number, number][] };
+  posters: CardPoster[];
 }
 
 export interface AtlasData {

@@ -410,8 +410,9 @@ usePageSeo(() => {
   padding: 20px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  box-shadow: inset 0 2px 0 var(--red);
-  background: var(--surface);
+  background:
+    linear-gradient(180deg, rgb(200 65 47 / 0.07), transparent 60%),
+    var(--surface);
 }
 
 .place__event-head {

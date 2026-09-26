@@ -26,7 +26,10 @@ export function tmdbImage(
   path: string | undefined,
   size: string
 ): string | undefined {
-  return path ? `${TMDB_IMAGE}/${size}${path}` : undefined;
+  if (!path) return undefined;
+  return path.startsWith("/img/posters/")
+    ? `${SITE_URL}${path}`
+    : `${TMDB_IMAGE}/${size}${path}`;
 }
 
 export function jsonLdScript(graph: unknown) {

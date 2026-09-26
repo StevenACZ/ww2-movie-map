@@ -112,6 +112,11 @@ export interface TitlesFile {
   titles: Title[];
 }
 
+export type PostersFile = Record<
+  string,
+  { src: string; width: number; height: number; source: string }
+>;
+
 export type EventCategory =
   | "war"
   | "battle"
@@ -141,6 +146,16 @@ export interface HistoricalEvent {
 
 export interface EventsFile {
   events: HistoricalEvent[];
+}
+
+export interface PlaceNote {
+  name?: Localized;
+  description?: Localized;
+  aliases?: string[];
+}
+
+export interface PlacesFile {
+  places: Record<string, PlaceNote>;
 }
 
 export type Faction =

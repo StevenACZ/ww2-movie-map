@@ -5,10 +5,29 @@
     :class="{ 'place-card--feature': feature, 'is-active': active }"
   >
     <div class="place-card__map">
-      <PlaceLocator :coordinates="place.coordinates" />
+      <PlaceMiniMap
+        v-if="map"
+        :x="map.x"
+        :y="map.y"
+        :span="feature ? 90 : 64"
+        :near="map.near"
+      />
+      <PlaceLocator v-else :coordinates="place.coordinates" />
       <span v-if="rank" class="place-card__rank mono">{{
         String(rank).padStart(2, "0")
       }}</span>
+      <ul v-if="posters?.length" class="place-card__posters" aria-hidden="true">
+        <li v-for="poster in posters" :key="poster.path">
+          <TitlePoster
+            :path="poster.path"
+            :title="poster.title"
+            :year="poster.year"
+            :era="poster.era"
+            :kind="poster.kind"
+            sizes="92px"
+          />
+        </li>
+      </ul>
     </div>
     <div class="place-card__body">
       <component :is="`h${level}`" class="place-card__name">{{
@@ -23,14 +42,16 @@
           class="place-card__coords"
         />
       </p>
-      <span class="place-card__eras" aria-hidden="true">
-        <span
-          v-for="(n, i) in eras ?? [0, 0, 0]"
-          :key="i"
-          :class="`place-card__era place-card__era--${ATLAS_ERAS[i]}`"
-          :style="{ flexGrow: n }"
-        />
-      </span>
+      <p v-if="eras" class="place-card__eras mono">
+        <template v-for="(n, i) in eras" :key="i">
+          <span
+            v-if="n"
+            class="place-card__era"
+            :class="`place-card__era--${ATLAS_ERAS[i]}`"
+            >{{ t(`era.short.${ATLAS_ERAS[i]}`) }} {{ n }}</span
+          >
+        </template>
+      </p>
     </div>
     <Icon name="arrow-right" class="place-card__arrow" />
   </NuxtLinkLocale>
@@ -38,7 +59,7 @@
 
 <script setup lang="ts">
 import type { PlaceSummary } from "~~/types/view";
-import { ATLAS_ERAS } from "~/utils/atlas";
+import { ATLAS_ERAS, type CardPoster } from "~/utils/atlas";
 
 withDefaults(
   defineProps<{
@@ -48,8 +69,16 @@ withDefaults(
     level?: 2 | 3 | 4;
     eras?: [number, number, number];
     active?: boolean;
+    map?: { x: number; y: number; near: [number, number][] };
+    posters?: CardPoster[];
   }>(),
-  { level: 3, rank: undefined, eras: undefined }
+  {
+    level: 3,
+    rank: undefined,
+    eras: undefined,
+    map: undefined,
+    posters: undefined,
+  }
 );
 
 const { t } = useI18n();
@@ -108,15 +137,51 @@ const { t } = useI18n();
 
 .place-card__map {
   position: relative;
-  padding: 6px;
+  overflow: hidden;
+  border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  background: #0f1511;
+  background: #121812;
+}
+
+.place-card__posters {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  list-style: none;
+
+  li {
+    width: 46px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgb(0 0 0 / 0.55);
+    transition: transform 0.35s $ease-out;
+  }
+
+  li + li {
+    margin-left: -14px;
+  }
+
+  .place-card--feature & li {
+    width: 64px;
+  }
+
+  .place-card:hover & li:nth-child(1) {
+    transform: translateX(-6px) rotate(-3deg);
+  }
+
+  .place-card:hover & li:nth-child(3) {
+    transform: translateX(6px) rotate(3deg);
+  }
 }
 
 .place-card__rank {
   position: absolute;
-  top: 10px;
-  left: 12px;
+  top: 8px;
+  left: 8px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgb(14 15 11 / 0.72);
   font-size: 0.66rem;
   letter-spacing: 0.14em;
   color: var(--gold);
@@ -158,30 +223,38 @@ const { t } = useI18n();
 
 .place-card__eras {
   display: flex;
-  gap: 2px;
-  height: 4px;
-  margin-top: 4px;
-  margin-right: 26px;
-  overflow: hidden;
-  border-radius: 2px;
-  background: var(--line);
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-top: 2px;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .place-card__era {
-  flex-basis: 0;
-  border-radius: 2px;
-  transition: flex-grow 0.6s $ease-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--c);
+  }
 
   &--ww1 {
-    background: #c49a5c;
+    --c: #c49a5c;
   }
 
   &--interwar {
-    background: #c5634f;
+    --c: #c5634f;
   }
 
   &--ww2 {
-    background: #a9b870;
+    --c: #a9b870;
   }
 }
 

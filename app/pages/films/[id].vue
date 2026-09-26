@@ -192,8 +192,9 @@ usePageSeo(() => {
     : f.poster
       ? {
           image: tmdbImage(f.poster, "w780"),
-          imageWidth: 780,
-          imageHeight: 1170,
+          ...(f.poster.startsWith("/img/posters/")
+            ? { imageWidth: 342, imageHeight: 513 }
+            : { imageWidth: 780, imageHeight: 1170 }),
         }
       : {};
   const people = f.directors.map((name) => ({ "@type": "Person", name }));

@@ -162,6 +162,13 @@ export default defineNuxtConfig({
           content: "black-translucent",
         },
       ],
+      script: [
+        {
+          key: "locale-root",
+          innerHTML:
+            'if(location.pathname==="/"){var m=document.cookie.match(/(?:^|; )ww2_locale=([^;]*)/);var l=m?m[1]:(navigator.language||"").slice(0,2).toLowerCase();if(l==="es")location.replace("/es/"+location.search+location.hash)}',
+        },
+      ],
       link: [
         {
           rel: "icon",

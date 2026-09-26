@@ -2,8 +2,12 @@
   <div class="poster" :class="[`poster--${era}`, { 'poster--gold': gold }]">
     <img
       v-if="path"
-      :src="`${TMDB_IMAGE}/w342${path}`"
-      :srcset="SIZES.map((w) => `${TMDB_IMAGE}/w${w}${path} ${w}w`).join(', ')"
+      :src="local ? path : `${TMDB_IMAGE}/w342${path}`"
+      :srcset="
+        local
+          ? `${path.replace('/img/posters/', '/img/posters/sm/')} 92w, ${path} 342w`
+          : SIZES.map((w) => `${TMDB_IMAGE}/w${w}${path} ${w}w`).join(', ')
+      "
       :sizes="sizes"
       :alt="alt ?? ''"
       :loading="eager ? 'eager' : 'lazy'"
@@ -33,7 +37,7 @@ import { TMDB_IMAGE } from "~/utils/seo";
 
 const SIZES = [185, 342, 500, 780];
 
-withDefaults(
+const props = withDefaults(
   defineProps<{
     path?: string;
     title: string;
@@ -49,6 +53,8 @@ withDefaults(
 );
 
 const { t } = useI18n();
+
+const local = computed(() => !!props.path?.startsWith("/img/posters/"));
 </script>
 
 <style lang="scss" scoped>

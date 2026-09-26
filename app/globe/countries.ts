@@ -238,18 +238,34 @@ function buildFill(
         const k = Math.cos((((pa[1] + pb[1]) / 2) * Math.PI) / 180);
         return Math.hypot((pa[0] - pb[0]) * k, pa[1] - pb[1]);
       };
-      const emit = (a: number, b: number, c: number, depth: number) => {
-        if (
-          depth < 7 &&
-          Math.max(span(a, b), span(b, c), span(c, a)) > MAX_EDGE
-        ) {
-          const ab = mid(a, b);
-          const bc = mid(b, c);
-          const ca = mid(c, a);
-          emit(a, ab, ca, depth + 1);
-          emit(ab, b, bc, depth + 1);
-          emit(ca, bc, c, depth + 1);
-          emit(ab, bc, ca, depth + 1);
+      const long = (a: number, b: number, depth: number) =>
+        depth < 24 && span(a, b) > MAX_EDGE;
+      const emit = (a: number, b: number, c: number, depth: number): void => {
+        const ab = long(a, b, depth);
+        const bc = long(b, c, depth);
+        const ca = long(c, a, depth);
+        const next = depth + 1;
+        if (ab && bc && ca) {
+          const mab = mid(a, b);
+          const mbc = mid(b, c);
+          const mca = mid(c, a);
+          emit(a, mab, mca, next);
+          emit(mab, b, mbc, next);
+          emit(mca, mbc, c, next);
+          emit(mab, mbc, mca, next);
+        } else if (ab || bc || ca) {
+          const [p, q, r] =
+            ab && !ca ? [a, b, c] : bc && !ab ? [b, c, a] : [c, a, b];
+          const mpq = mid(p, q);
+          if (long(q, r, depth)) {
+            const mqr = mid(q, r);
+            emit(mpq, q, mqr, next);
+            emit(p, mpq, mqr, next);
+            emit(p, mqr, r, next);
+          } else {
+            emit(p, mpq, r, next);
+            emit(mpq, q, r, next);
+          }
         } else {
           triangles.push(base + a, base + b, base + c);
         }
