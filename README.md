@@ -77,7 +77,7 @@ bun scripts/tmdb/sync.ts
 - `server/`: build-time dataset and prerendered JSON payloads.
 - `data/`: titles, events, operations, places, countries, and TMDB metadata.
 - `public/geo/`: historical border files and their license.
-- `scripts/`: data validation, Wikipedia lookup, border builder, and TMDB sync.
+- `scripts/`: data validation, Wikipedia lookup, border builder, TMDB sync, and event image and poster downloads.
 - `i18n/locales/`: English and Spanish strings.
 
 ## Deployment
@@ -86,10 +86,11 @@ Pushes to `main` and a daily schedule run a GitHub Actions workflow that install
 
 ## Data Sources and Credits
 
-- **TMDB**: posters, ratings, and metadata. This product uses the TMDB API but is not endorsed or certified by TMDB.
+- **TMDB**: ratings and metadata. This product uses the TMDB API but is not endorsed or certified by TMDB.
 - **JustWatch**: where-to-watch provider data, supplied through TMDB.
 - **historical-basemaps** (`aourednik/historical-basemaps`): historical borders, licensed under GPL-3.0. See `public/geo/LICENSE-historical-basemaps.txt`.
 - **Wikipedia and Wikidata**: historical context and identifiers, licensed under CC BY-SA.
+- **Posters**: film and series posters from their Wikipedia articles, shown at small size to identify each title.
 - **Wikimedia Commons**: timeline event images (public domain, CC0, CC BY, CC BY-SA). Author, license, and source for each image are listed in `data/event-images.json` and shown on its card.
 
 ## License

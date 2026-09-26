@@ -260,6 +260,14 @@ onBeforeUnmount(() => {
     transform: scaleX(1);
     transform-origin: left;
   }
+
+  &:focus-visible {
+    outline: none;
+    color: var(--text);
+    border-radius: 6px;
+    background: rgb(216 174 82 / 0.1);
+    box-shadow: inset 0 0 0 1px rgb(216 174 82 / 0.45);
+  }
 }
 
 .header__tools {

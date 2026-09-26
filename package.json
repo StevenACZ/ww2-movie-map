@@ -12,6 +12,7 @@
     "format:check": "prettier --check .",
     "typecheck": "nuxt typecheck",
     "check:data": "bun scripts/data/validate.ts && bun scripts/checks/fronts.ts",
+    "posters": "bun scripts/images/posters.ts",
     "verify": "bun run format:check && bun run check:data && bun run typecheck && bun run build && bun run generate && bun audit"
   },
   "dependencies": {

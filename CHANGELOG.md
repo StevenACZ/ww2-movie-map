@@ -21,6 +21,8 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Added a 2D atlas of places with region presets, pan, and zoom on the places index.
 - Added archival images with credits and licenses to the timeline events.
 - Added 15 dated front lines with a consistency check.
+- Added self-hosted posters for 217 titles, sourced from Wikipedia, letterboxed when the original is not a portrait poster, with small variants for globe markers.
+- Added mini-maps and poster previews to place cards, and search by country, title, and alternative names on the places index.
 
 ### Changed
 
@@ -30,10 +32,18 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Made units move at a calmer pace: planes circle and fly sorties, infantry marches, and density stays capped late in the war.
 - Improved globe performance: idle animation runs at 30 fps, rendering stops offscreen, overlays update only on camera moves, and resolution adapts to slow devices.
 - Made the mouse wheel zoom toward the cursor.
+- Redesigned the era cards on the films index as photo cards.
+- Merged overlapping markers on the places atlas until zoomed in, anchored zoom buttons on the places with titles, and kept the atlas view when returning to it.
+- Made map panels opaque and kept the date bar clear of the legend.
 
 ### Removed
 
 - Removed the Leaflet map and CARTO tiles, which required an API key and stopped rendering.
+
+### Fixed
+
+- Fixed hairline seams across country fills on the globe.
+- Fixed a flash of English and a hydration mismatch for returning Spanish visitors on the home page.
 
 ## [Unreleased]
 

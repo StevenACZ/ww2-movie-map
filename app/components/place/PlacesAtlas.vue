@@ -36,6 +36,7 @@
       @pointermove="onMove"
       @pointerup="onUp"
       @pointercancel="onUp"
+      @dragstart.prevent
     >
       <g ref="world">
         <path class="atlas__ocean" :d="data.outline" />
@@ -75,13 +76,15 @@
               'is-out': !visible.has(marker.id),
               'is-active': active === marker.id,
               'is-linked': linked.has(marker.id),
+              'is-merged': isMerged(marker.id),
             }"
-            :tabindex="visible.has(marker.id) ? 0 : -1"
+            :tabindex="visible.has(marker.id) && !isMerged(marker.id) ? 0 : -1"
             :aria-label="`${marker.name}, ${t('places.count', { n: marker.count })}`"
             :style="{
               ...pin(marker.x, marker.y),
               '--c': marker.color,
               '--i': marker.rank,
+              '--s': 1.5 / marker.r,
             }"
             @pointerenter="onEnter($event, marker.id)"
             @pointerleave="onLeave($event)"
@@ -215,6 +218,8 @@ const shown = ref(false);
 const live = ref(false);
 const pinned = ref<string | null>(null);
 const labelSet = shallowRef<{ id: string; side: LabelSide }[]>([]);
+const merged = shallowRef<Set<string>>(new Set());
+const saved = useState<View | null>("atlas-view", () => null);
 
 const markers = computed(() =>
   props.places.flatMap((place, index) => {
@@ -230,7 +235,7 @@ const markers = computed(() =>
         r: Math.round((2.6 + Math.sqrt(place.count) * 1.5) * 10) / 10,
         color: ERA_COLOR[spot.e],
         rank: index + 1,
-        href: localePath(`/places/${place.id}/`),
+        href: localePath(`/places/${place.id}/`).replace(/\/?$/, "/"),
       },
     ];
   })
@@ -316,6 +321,10 @@ const card = computed(() => {
     }),
   };
 });
+
+function isMerged(id: string) {
+  return merged.value.has(id) && active.value !== id && pinned.value !== id;
+}
 
 function pin(x: number, y: number) {
   return { transform: `translate(${x}px, ${y}px) scale(var(--ik))` };
@@ -459,16 +468,34 @@ function schedule() {
 
 function settle() {
   last = 0;
+  saved.value = currentView();
   relabel();
+}
+
+function declutter() {
+  const kept: { x: number; y: number; r: number }[] = [];
+  const out = new Set<string>();
+  const list = markers.value
+    .filter((m) => props.visible.has(m.id))
+    .sort((a, b) => b.count - a.count || a.rank - b.rank);
+  for (const m of list) {
+    const x = m.x * cam.k + cam.x;
+    const y = m.y * cam.k + cam.y;
+    if (kept.some((o) => Math.hypot(o.x - x, o.y - y) < (o.r + m.r) * 0.85 + 2))
+      out.add(m.id);
+    else kept.push({ x, y, r: m.r });
+  }
+  merged.value = out;
 }
 
 function relabel() {
   if (!size.w) return;
+  declutter();
   const factor = cam.k / worldK;
   const limit = Math.round(Math.min(44, 6 + 7 * (factor - 1)));
   labelSet.value = placeLabels(
     markers.value
-      .filter((m) => props.visible.has(m.id))
+      .filter((m) => props.visible.has(m.id) && !merged.value.has(m.id))
       .map((m) => ({
         id: m.id,
         x: m.x * cam.k + cam.x,
@@ -498,11 +525,24 @@ function fly(id: AtlasRegion) {
 function zoomBy(factor: number) {
   flight = null;
   region.value = null;
-  goal = {
-    k: clampK((goal?.k ?? cam.k) * factor),
-    ax: size.w / 2,
-    ay: size.h / 2,
-  };
+  let ax = size.w / 2;
+  let ay = size.h / 2;
+  if (cam.k <= worldK * 1.15) {
+    let sum = 0;
+    let sx = 0;
+    let sy = 0;
+    for (const m of markers.value) {
+      if (!props.visible.has(m.id) || merged.value.has(m.id)) continue;
+      sum += m.count;
+      sx += m.x * m.count;
+      sy += m.y * m.count;
+    }
+    if (sum) {
+      ax = (sx / sum) * cam.k + cam.x;
+      ay = (sy / sum) * cam.k + cam.y;
+    }
+  }
+  goal = { k: clampK((goal?.k ?? cam.k) * factor), ax, ay };
   schedule();
 }
 
@@ -621,7 +661,8 @@ function leave() {
 }
 
 function onEnter(event: PointerEvent, id: string) {
-  if (event.pointerType === "mouse" && !dragging) enter(id);
+  if (event.pointerType === "mouse" && !dragging && !merged.value.has(id))
+    enter(id);
 }
 
 function onLeave(event: PointerEvent) {
@@ -634,7 +675,7 @@ function onMarkerClick(id: string) {
     enter(id);
     return;
   }
-  navigateTo(localePath(`/places/${id}/`));
+  navigateTo(byId.value.get(id)?.href);
 }
 
 watch(
@@ -655,7 +696,10 @@ onMounted(() => {
     size.w = entry.contentRect.width;
     size.h = entry.contentRect.height;
     worldK = fit("world").k;
-    if (first || region.value) setView(fit(region.value ?? "world"));
+    if (first && saved.value) {
+      region.value = null;
+      setView(saved.value);
+    } else if (first || region.value) setView(fit(region.value ?? "world"));
     else if (view) setView(view);
     clamp();
     apply();
@@ -780,6 +824,12 @@ onBeforeUnmount(() => {
     pointer-events: none;
   }
 
+  &.is-merged {
+    opacity: 0.45;
+    pointer-events: none;
+    transition-duration: 0.2s;
+  }
+
   .has-active &:not(.is-active, .is-linked, .is-out) {
     opacity: 0.28;
   }
@@ -809,6 +859,11 @@ onBeforeUnmount(() => {
     stroke: var(--gold);
     stroke-width: 3;
   }
+
+  .is-merged > & {
+    scale: var(--s);
+    transition-duration: 0.2s;
+  }
 }
 
 .atlas__pulse {
@@ -819,6 +874,10 @@ onBeforeUnmount(() => {
   opacity: 0;
   transform-box: fill-box;
   transform-origin: center;
+
+  .is-merged > & {
+    visibility: hidden;
+  }
 }
 
 .atlas__labels text {

@@ -130,7 +130,9 @@ export class Overlay {
       pin.className = "gm__pin";
       if (data.poster) {
         const img = document.createElement("img");
-        img.src = `${posterBase}${data.poster}`;
+        img.src = data.poster.startsWith("/img/posters/")
+          ? data.poster.replace("/img/posters/", "/img/posters/sm/")
+          : `${posterBase}${data.poster}`;
         img.alt = "";
         img.loading = "lazy";
         img.decoding = "async";

@@ -193,7 +193,7 @@ function openTrailer() {
 
 <style lang="scss" scoped>
 .panel {
-  @include panel(0.96);
+  @include panel(1);
   --tint: #2b3120;
   position: relative;
   display: flex;

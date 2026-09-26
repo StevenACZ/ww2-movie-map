@@ -782,6 +782,14 @@ onBeforeUnmount(() => {
   position: absolute;
   inset: 0;
   overflow: hidden;
+
+  :deep(.globe-overlay) {
+    mask-image: linear-gradient(
+      to bottom,
+      transparent calc(var(--header-h) - 6px),
+      #000 calc(var(--header-h) + 18px)
+    );
+  }
 }
 
 .map__side {
@@ -867,12 +875,18 @@ onBeforeUnmount(() => {
 
 .map__legend {
   position: absolute;
-  z-index: 15;
+  z-index: 19;
   right: var(--edge);
   top: calc(var(--header-h) + 4px);
 
   .has-panel & {
     right: calc(var(--panel-w) + var(--edge) * 2);
+  }
+
+  @media (max-width: 1099px) {
+    .has-panel & {
+      display: none;
+    }
   }
 
   @include down($bp-md) {
@@ -973,18 +987,20 @@ onBeforeUnmount(() => {
 }
 
 .map__dispatch {
+  --legend-room: calc(250px + 12px);
   position: absolute;
   z-index: 18;
-  left: 50%;
-  top: calc(var(--header-h) + 12px);
-  translate: -50% 0;
+  left: calc(var(--side-w) + var(--edge) * 2);
+  right: calc(var(--edge) + var(--legend-room));
+  top: calc(var(--header-h) + 4px);
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: min(440px, calc(100vw - 32px));
+  max-width: 440px;
   padding: 10px 12px 12px;
   border-radius: 12px;
-  @include panel(0.94);
+  @include panel(1);
   box-shadow: var(--shadow);
 
   strong {
@@ -996,8 +1012,31 @@ onBeforeUnmount(() => {
     line-height: 1.1;
   }
 
-  @include down($bp-md) {
+  .has-panel & {
+    right: calc(var(--panel-w) + var(--edge) * 2 + var(--legend-room));
+  }
+
+  @media (max-width: 989px) {
+    --legend-room: 0px;
     top: calc(var(--header-h) + 56px);
+  }
+
+  @media (max-width: 1405px) {
+    .has-panel & {
+      --legend-room: 0px;
+      top: calc(var(--header-h) + 56px);
+    }
+  }
+
+  @media (max-width: 1099px) {
+    .has-panel & {
+      top: calc(var(--header-h) + 4px);
+    }
+  }
+
+  @include down($bp-md) {
+    left: 16px;
+    right: 16px;
   }
 }
 

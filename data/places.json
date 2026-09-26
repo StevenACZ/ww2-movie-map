@@ -124,6 +124,7 @@
     },
     "hardangervidda": {
       "name": { "en": "Hardangervidda", "es": "Hardangervidda" },
+      "aliases": ["Telemark", "heavy water"],
       "description": {
         "en": "This vast, treeless mountain plateau in southern Norway was the staging ground for the sabotage of German heavy water production. Four Norwegian commandos of Operation Grouse parachuted onto it on 18 October 1942 and survived the winter hidden in remote cabins, at times living on reindeer moss. In February 1943 the Gunnerside team dropped in to join them, and the combined group descended on the Vemork plant below.",
         "es": "Esta enorme meseta montañosa y sin árboles del sur de Noruega fue la base para sabotear la producción alemana de agua pesada. Cuatro comandos noruegos de la Operación Grouse saltaron en paracaídas sobre ella el 18 de octubre de 1942 y sobrevivieron al invierno escondidos en cabañas aisladas, a veces alimentándose de liquen de reno. En febrero de 1943 llegó el equipo Gunnerside y el grupo reunido bajó hacia la planta de Vemork."
@@ -131,6 +132,7 @@
     },
     "vemork": {
       "name": { "en": "Vemork", "es": "Vemork" },
+      "aliases": ["Telemark", "heavy water"],
       "description": {
         "en": "Norsk Hydro's power plant at Vemork, above Rjukan, was the only large-scale producer of heavy water in occupied Europe, a key material for Germany's nuclear research. A British glider assault, Operation Freshman, ended in disaster in November 1942. On the night of 27 to 28 February 1943, Norwegian commandos of Operation Gunnerside climbed the gorge, destroyed the high-concentration cells and escaped without firing a shot.",
         "es": "La central de Norsk Hydro en Vemork, sobre Rjukan, era la única productora a gran escala de agua pesada en la Europa ocupada, un material clave para la investigación nuclear alemana. Un asalto británico en planeadores, la Operación Freshman, terminó en desastre en noviembre de 1942. La noche del 27 al 28 de febrero de 1943, comandos noruegos de la Operación Gunnerside escalaron el desfiladero, destruyeron las celdas de concentración y huyeron sin disparar un tiro."
@@ -138,6 +140,7 @@
     },
     "lake-tinn": {
       "name": { "en": "Lake Tinn", "es": "Lago Tinn" },
+      "aliases": ["Telemark", "heavy water"],
       "description": {
         "en": "In February 1944 the Germans tried to move Vemork's remaining heavy water stock to Germany by rail and across Lake Tinn on the ferry SF Hydro. On 20 February, explosives planted by Norwegian saboteur Knut Haukelid and his team sank the ferry in the lake's deepest water, sending the heavy water to the bottom. Eighteen people died, fourteen of them Norwegian crew and passengers.",
         "es": "En febrero de 1944, los alemanes intentaron llevar a Alemania las últimas reservas de agua pesada de Vemork por tren y cruzando el lago Tinn en el transbordador SF Hydro. El 20 de febrero, las cargas que colocaron el saboteador noruego Knut Haukelid y su equipo hundieron la nave en la parte más profunda del lago, con el agua pesada a bordo. Murieron dieciocho personas, catorce de ellas tripulantes y pasajeros noruegos."
@@ -187,6 +190,7 @@
     },
     "pearl-harbor": {
       "name": { "en": "Pearl Harbor", "es": "Pearl Harbor" },
+      "aliases": ["Hawaii", "Hawái"],
       "description": {
         "en": "Home of the US Pacific Fleet since 1940, the base on Oahu was struck without warning on the morning of 7 December 1941 by 353 aircraft from six Japanese carriers. All eight battleships in the harbour were damaged and four sunk, including USS Arizona, and 2,403 Americans were killed. The American carriers were at sea and escaped. The next day the United States declared war on Japan.",
         "es": "Sede de la Flota del Pacífico estadounidense desde 1940, la base de Oahu fue atacada sin previo aviso la mañana del 7 de diciembre de 1941 por 353 aviones de seis portaaviones japoneses. Los ocho acorazados del puerto resultaron dañados y cuatro se hundieron, entre ellos el USS Arizona, y murieron 2.403 estadounidenses. Los portaaviones de Estados Unidos estaban en el mar y se salvaron. Al día siguiente, Estados Unidos declaró la guerra a Japón."
@@ -222,6 +226,7 @@
     },
     "wolfs-lair": {
       "name": { "en": "Wolf's Lair", "es": "La Guarida del Lobo" },
+      "aliases": ["Wolfsschanze", "Rastenburg"],
       "description": {
         "en": "Hidden in the forests of East Prussia near Rastenburg, today's Kętrzyn in Poland, the Wolfsschanze was Hitler's main headquarters from the invasion of the Soviet Union in June 1941, and he spent more than 800 days there. On 20 July 1944 Colonel Claus von Stauffenberg set off a briefcase bomb in its conference hut; Hitler survived. He left in November 1944, and the bunkers were blown up in January 1945.",
         "es": "Oculta en los bosques de Prusia Oriental, cerca de Rastenburg, hoy Kętrzyn, en Polonia, la Wolfsschanze fue el cuartel general principal de Hitler desde la invasión de la Unión Soviética en junio de 1941, y allí pasó más de 800 días. El 20 de julio de 1944, el coronel Claus von Stauffenberg hizo estallar una bomba en su sala de conferencias; Hitler sobrevivió. Se marchó en noviembre de 1944 y los búnkeres fueron volados en enero de 1945."
@@ -250,6 +255,7 @@
     },
     "lwow": {
       "name": { "en": "Lviv (Lwów)", "es": "Leópolis (Lwów)" },
+      "aliases": ["Lemberg", "Lvov"],
       "description": {
         "en": "The Polish city of Lwów was occupied by the Soviet Union in September 1939 and by Germany on 30 June 1941, when deadly pogroms followed. Its large Jewish community was confined to a ghetto from late 1941, deported to the Bełżec death camp and to the Janowska camp, and the ghetto was liquidated in June 1943. A few survived hidden in the city sewers until the Red Army arrived in July 1944.",
         "es": "La ciudad polaca de Lwów fue ocupada por la Unión Soviética en septiembre de 1939 y por Alemania el 30 de junio de 1941, a lo que siguieron pogromos sangrientos. Su numerosa comunidad judía fue encerrada en un gueto desde fines de 1941 y deportada al campo de exterminio de Bełżec y al campo de Janowska; el gueto se liquidó en junio de 1943. Unos pocos sobrevivieron ocultos en las alcantarillas hasta la llegada del Ejército Rojo en julio de 1944."
@@ -313,6 +319,7 @@
     },
     "nanking": {
       "name": { "en": "Nanking", "es": "Nankín" },
+      "aliases": ["Nanjing"],
       "description": {
         "en": "China's Nationalist capital fell to the Japanese army on 13 December 1937. Over the following six weeks Japanese troops massacred prisoners and civilians and committed mass rape; estimates of the dead range from tens of thousands to more than 200,000. A small group of Westerners led by the German businessman John Rabe set up the Nanking Safety Zone, which sheltered some 200,000 refugees.",
         "es": "La capital nacionalista china cayó en manos del ejército japonés el 13 de diciembre de 1937. Durante las seis semanas siguientes, las tropas japonesas masacraron a prisioneros y civiles y cometieron violaciones masivas; las estimaciones de muertos van de decenas de miles a más de 200.000. Un pequeño grupo de occidentales encabezado por el empresario alemán John Rabe creó la Zona de Seguridad de Nankín, que dio refugio a unas 200.000 personas."
@@ -327,6 +334,7 @@
     },
     "honolulu": {
       "name": { "en": "Honolulu", "es": "Honolulu" },
+      "aliases": ["Hawaii", "Hawái"],
       "description": {
         "en": "Before the war, Honolulu and nearby Schofield Barracks and Pearl Harbor made Oahu the largest American military outpost in the Pacific. After the attack of 7 December 1941, the territory lived under martial law until October 1944. The islands became the rear base of the Pacific offensive, where Marine and Army divisions rested and trained between campaigns such as Tarawa and Iwo Jima.",
         "es": "Antes de la guerra, Honolulu, junto con el cuartel Schofield y Pearl Harbor, hacía de Oahu el mayor enclave militar estadounidense del Pacífico. Tras el ataque del 7 de diciembre de 1941, el territorio vivió bajo ley marcial hasta octubre de 1944. Las islas se convirtieron en la base de retaguardia de la ofensiva del Pacífico, donde las divisiones de marines y del ejército descansaban y se entrenaban entre campañas como Tarawa e Iwo Jima."
@@ -334,6 +342,7 @@
     },
     "los-alamos": {
       "name": { "en": "Los Alamos", "es": "Los Álamos" },
+      "aliases": ["Manhattan Project", "Proyecto Manhattan"],
       "description": {
         "en": "In 1943 the Manhattan Project took over a boys' ranch school on a remote New Mexico mesa and built a secret laboratory, Project Y, under J. Robert Oppenheimer. Scientists and their families lived behind fences with a post office box for an address. The lab designed the first atomic bombs: the plutonium device tested at Trinity on 16 July 1945 and the weapons dropped on Hiroshima and Nagasaki.",
         "es": "En 1943, el Proyecto Manhattan ocupó un internado rural para varones en una remota meseta de Nuevo México y levantó allí un laboratorio secreto, el Proyecto Y, bajo la dirección de J. Robert Oppenheimer. Científicos y familias vivían tras cercas, con una casilla postal como única dirección. El laboratorio diseñó las primeras bombas atómicas: el artefacto de plutonio probado en Trinity el 16 de julio de 1945 y las armas lanzadas sobre Hiroshima y Nagasaki."
@@ -348,6 +357,7 @@
     },
     "omaha-beach": {
       "name": { "en": "Omaha Beach", "es": "Playa de Omaha" },
+      "aliases": ["Normandy", "Normandía", "D-Day", "Día D"],
       "description": {
         "en": "On 6 June 1944 the US 1st and 29th Infantry Divisions, with Army Rangers, landed on this eight-kilometre stretch of the Normandy coast beneath bluffs held by the German 352nd Infantry Division. Most amphibious tanks sank, and the first waves were cut down on sectors such as Dog Green. Small groups of soldiers finally climbed the bluffs through the draws, at a cost of about 2,400 casualties.",
         "es": "El 6 de junio de 1944, las divisiones de infantería 1.ª y 29.ª de Estados Unidos, junto con los Rangers, desembarcaron en este tramo de ocho kilómetros de la costa de Normandía, bajo acantilados defendidos por la 352.ª División de Infantería alemana. La mayoría de los tanques anfibios se hundieron y las primeras oleadas fueron barridas en sectores como Dog Green. Pequeños grupos de soldados lograron subir por los barrancos, a un costo de unas 2.400 bajas."
@@ -362,6 +372,7 @@
     },
     "berchtesgaden": {
       "name": { "en": "Berchtesgaden", "es": "Berchtesgaden" },
+      "aliases": ["Eagle's Nest", "Nido del Águila"],
       "description": {
         "en": "Above this Bavarian alpine town, Hitler's Berghof on the Obersalzberg served as his second seat of government, where he received Chamberlain in 1938 and held military conferences. In July 1944 Stauffenberg attended briefings there carrying a bomb he did not detonate. The RAF bombed the complex on 25 April 1945, and American and French troops reached the town and the Eagle's Nest in early May.",
         "es": "Sobre este pueblo alpino de Baviera, el Berghof de Hitler en el Obersalzberg funcionaba como segunda sede de gobierno: allí recibió a Chamberlain en 1938 y celebró reuniones militares. En julio de 1944, Stauffenberg asistió a sesiones en el lugar con una bomba que no llegó a activar. La RAF bombardeó el complejo el 25 de abril de 1945, y tropas estadounidenses y francesas llegaron al pueblo y al Nido del Águila a comienzos de mayo."
@@ -397,6 +408,7 @@
     },
     "vel-d-hiv": {
       "name": { "en": "Vel' d'Hiv", "es": "Velódromo de Invierno" },
+      "aliases": ["Vélodrome d'Hiver"],
       "description": {
         "en": "On 16 and 17 July 1942, French police acting on German demands arrested 13,152 Jews in Paris, more than 4,000 of them children. Families were packed into the Vélodrome d'Hiver, an indoor cycling track near the Eiffel Tower, for days with almost no water, food or sanitation, then sent to camps in the Loiret and to Drancy. Nearly all were deported to Auschwitz, and very few survived.",
         "es": "El 16 y 17 de julio de 1942, la policía francesa, a pedido de los alemanes, detuvo a 13.152 judíos en París, más de 4.000 de ellos niños. Las familias fueron hacinadas durante días en el Velódromo de Invierno, una pista cubierta de ciclismo cerca de la torre Eiffel, casi sin agua, comida ni higiene, y luego enviadas a campos del Loiret y a Drancy. Casi todos fueron deportados a Auschwitz y muy pocos sobrevivieron."
@@ -418,6 +430,12 @@
     },
     "petrograd": {
       "name": { "en": "Petrograd", "es": "Petrogrado" },
+      "aliases": [
+        "Saint Petersburg",
+        "San Petersburgo",
+        "Leningrad",
+        "Leningrado"
+      ],
       "description": {
         "en": "Renamed from Saint Petersburg in 1914, the Russian capital was the cradle of the 1917 revolutions. The February Revolution toppled the Tsar, and in May the Provisional Government formed women's 'battalions of death' to shame deserting men back to the front. On 7 November 1917 the Bolsheviks, directed from the Smolny Institute, seized power and took the Winter Palace. The capital moved to Moscow in March 1918.",
         "es": "Llamada San Petersburgo hasta 1914, la capital rusa fue la cuna de las revoluciones de 1917. La Revolución de Febrero derrocó al zar, y en mayo el Gobierno Provisional formó batallones femeninos de la muerte para avergonzar a los desertores y devolverlos al frente. El 7 de noviembre de 1917, los bolcheviques, dirigidos desde el Instituto Smolny, tomaron el poder y el Palacio de Invierno. La capital pasó a Moscú en marzo de 1918."
@@ -544,6 +562,7 @@
     },
     "rouen": {
       "name": { "en": "Rouen", "es": "Ruan" },
+      "aliases": ["Normandy", "Normandía", "D-Day", "Día D"],
       "description": {
         "en": "Throughout the First World War this Seine port was one of the main British bases in France, with depots, camps and a cluster of general hospitals where British, Australian and other Dominion nurses treated the wounded from the Somme and Flanders. Thousands who died in its hospitals lie in the St Sever cemetery. In the Second World War Allied bombing in April 1944 badly damaged the old city.",
         "es": "Durante toda la Primera Guerra Mundial, este puerto del Sena fue una de las principales bases británicas en Francia, con depósitos, campamentos y numerosos hospitales generales donde enfermeras británicas, australianas y de otros dominios atendían a los heridos del Somme y de Flandes. Miles de fallecidos en esos hospitales descansan en el cementerio de Saint-Sever. En la Segunda Guerra Mundial, los bombardeos aliados de abril de 1944 dañaron gravemente el casco antiguo."

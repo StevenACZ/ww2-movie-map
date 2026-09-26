@@ -17,7 +17,9 @@
           <span class="visually-hidden">{{ t("placesPage.search") }}</span>
           <Icon name="search" class="places__search-icon" />
           <input
+            id="places-search"
             v-model="query"
+            name="q"
             type="search"
             autocomplete="off"
             spellcheck="false"
@@ -90,6 +92,8 @@
             :feature="item.rank <= 3"
             :rank="item.rank"
             :eras="atlas?.places[item.place.id]?.n"
+            :map="art[item.place.id]?.map"
+            :posters="art[item.place.id]?.posters"
             :active="active === item.place.id"
           />
         </li>
@@ -98,15 +102,46 @@
         {{ t("placesPage.noResults", { q: query }) }}
       </p>
     </section>
+
+    <svg
+      v-if="atlas"
+      class="places__defs"
+      width="0"
+      height="0"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <g id="places-land">
+          <path
+            v-for="land in atlas.land"
+            :key="land.id"
+            :d="land.d"
+            :fill="LAND_FILL[land.id] ?? LAND_FILL.neutral"
+            fill-rule="evenodd"
+            stroke="rgb(233 225 201 / 0.2)"
+            stroke-width="0.8"
+            stroke-linejoin="round"
+            vector-effect="non-scaling-stroke"
+          />
+        </g>
+      </defs>
+    </svg>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { Era, Locale } from "~~/types/data";
 import type { PlaceSummary } from "~~/types/view";
-import { ATLAS_ERAS, type AtlasData } from "~/utils/atlas";
+import { ATLAS_ERAS, type AtlasData, type CardArt } from "~/utils/atlas";
 
 const ERA_FILTERS = ["all", ...ATLAS_ERAS] as const;
+const LAND_FILL: Record<string, string> = {
+  allies: "#2c3423",
+  axis: "#3a3024",
+  occupied: "#322f23",
+  neutral: "#262a1f",
+};
 
 const { t, locale } = useI18n();
 
@@ -127,6 +162,38 @@ onMounted(async () => {
   atlas.value = await $fetch<AtlasData>("/data/atlas.json");
 });
 
+const art = computed(() => {
+  const data = atlas.value;
+  const out: Record<string, CardArt> = {};
+  if (!data) return out;
+  const es = locale.value === "es" ? 1 : 0;
+  const entries = Object.entries(data.places);
+  for (const [id, place] of entries) {
+    const near = entries
+      .filter(
+        ([other, p]) =>
+          other !== id &&
+          Math.abs(p.x - place.x) < 45 &&
+          Math.abs(p.y - place.y) < 23
+      )
+      .map(([, p]) => [p.x, p.y] as [number, number]);
+    const posters = place.t
+      .map((i) => data.titles[i])
+      .filter((title) => !!title?.p)
+      .sort((a, b) => (b!.g ?? 0) - (a!.g ?? 0))
+      .slice(0, 3)
+      .map((title) => ({
+        path: ((es && title!.pe) || title!.p)!,
+        title: title!.t[es] ?? title!.t[0],
+        year: title!.y,
+        era: title!.e,
+        kind: title!.k,
+      }));
+    out[id] = { map: { x: place.x, y: place.y, near }, posters };
+  }
+  return out;
+});
+
 const fold = (text: string) =>
   text
     .normalize("NFD")
@@ -134,12 +201,30 @@ const fold = (text: string) =>
     .toLowerCase()
     .trim();
 
+const haystack = computed(
+  () =>
+    new Map(
+      places.value.map((place) => {
+        const spot = atlas.value?.places[place.id];
+        const words = [
+          place.name,
+          ...(spot?.c ? (atlas.value?.countries[spot.c] ?? []) : []),
+          ...(spot?.t.flatMap((i) => atlas.value?.titles[i]?.t ?? []) ?? []),
+          ...(spot?.a ?? []),
+        ];
+        return [place.id, fold(words.join("\n"))];
+      })
+    )
+);
+
 const filtered = computed(() => {
   const needle = fold(query.value);
   const eraIndex = era.value === "all" ? -1 : ATLAS_ERAS.indexOf(era.value);
   return places.value
     .map((place, i) => ({ place, rank: i + 1 }))
-    .filter(({ place }) => !needle || fold(place.name).includes(needle))
+    .filter(
+      ({ place }) => !needle || !!haystack.value.get(place.id)?.includes(needle)
+    )
     .filter(
       ({ place }) =>
         eraIndex < 0 ||
@@ -191,6 +276,13 @@ usePageSeo(() => {
 <style lang="scss" scoped>
 .places {
   padding-bottom: clamp(64px, 10vw, 140px);
+}
+
+.places__defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .places__hero {
@@ -262,11 +354,6 @@ usePageSeo(() => {
   padding: 10px;
   border-radius: 28px;
   @include panel(0.94);
-
-  @include up($bp-sm) {
-    position: sticky;
-    top: calc(var(--header-h) + 8px);
-  }
 }
 
 .places__search {

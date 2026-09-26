@@ -362,7 +362,7 @@ onBeforeUnmount(() => {
   width: min(420px, calc(100vw - var(--side-w) - var(--edge) * 3));
   max-height: calc(100% - var(--header-h) - var(--timeline-h) - 90px);
   border-radius: var(--radius);
-  @include panel(0.95);
+  @include panel(1);
   box-shadow: var(--shadow);
   overflow: hidden;
 
@@ -546,7 +546,7 @@ onBeforeUnmount(() => {
   width: min(760px, calc(100vw - 32px));
   translate: -50% 0;
   border-radius: var(--radius);
-  @include panel(0.94);
+  @include panel(1);
   box-shadow: var(--shadow);
   overflow: hidden;
 

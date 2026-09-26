@@ -255,7 +255,7 @@ function onKey(event: KeyboardEvent) {
 
 <style lang="scss" scoped>
 .tl {
-  @include panel(0.86);
+  @include panel(1);
   display: flex;
   flex-direction: column;
   gap: 10px;

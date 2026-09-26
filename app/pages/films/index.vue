@@ -15,11 +15,27 @@
             class="hero__era"
             :class="`hero__era--${era}`"
           >
-            <span class="hero__era-name">{{ t(`era.${era}`) }}</span>
-            <span class="hero__era-years mono">{{
-              t(`era.years.${era}`)
-            }}</span>
-            <Icon name="arrow-right" class="hero__era-arrow" />
+            <img
+              class="hero__era-img"
+              :src="ERA_IMAGES[era]"
+              alt=""
+              width="720"
+              height="405"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="hero__era-body">
+              <span class="hero__era-meta mono">
+                <span class="hero__era-dot" aria-hidden="true" />{{
+                  t(`era.years.${era}`)
+                }}
+                · {{ t("films.count", { n: eraCounts[era] }) }}
+              </span>
+              <span class="hero__era-name">{{ t(`era.${era}`) }}</span>
+            </span>
+            <span class="hero__era-arrow" aria-hidden="true">
+              <Icon name="arrow-right" />
+            </span>
           </NuxtLinkLocale>
         </li>
       </ul>
@@ -35,12 +51,22 @@
 import type { Era, Locale } from "~~/types/data";
 
 const ERAS: Era[] = ["ww1", "interwar", "ww2"];
+const ERA_IMAGES: Record<Era, string> = {
+  ww1: "/img/events/battle-of-the-somme.webp",
+  interwar: "/img/events/wall-street-crash.webp",
+  ww2: "/img/events/d-day.webp",
+};
 
 const { t, locale } = useI18n();
 const { data } = await useIndexData();
 
 const titles = computed(() => data.value?.titles ?? []);
 const count = computed(() => titles.value.length);
+const eraCounts = computed(() => {
+  const counts: Record<Era, number> = { ww1: 0, interwar: 0, ww2: 0 };
+  for (const title of titles.value) counts[title.era] += 1;
+  return counts;
+});
 const gold = computed(() => titles.value.filter((title) => title.gold));
 
 usePageSeo(() => {
@@ -148,18 +174,32 @@ usePageSeo(() => {
 
 .hero__era {
   --accent: var(--red-2);
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 2px 12px;
-  padding: 14px 18px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 150px;
+  padding: 18px 18px 16px;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  box-shadow: inset 0 2px 0 var(--accent);
   background: var(--surface);
-  transition:
-    border-color 0.25s $ease-out,
-    background-color 0.25s $ease-out;
+  overflow: hidden;
+  isolation: isolate;
+  transition: border-color 0.3s $ease-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      180deg,
+      rgb(14 15 11 / 0.15) 0%,
+      rgb(14 15 11 / 0.55) 45%,
+      rgb(14 15 11 / 0.94) 100%
+    );
+  }
 
   &--ww1 {
     --accent: var(--olive);
@@ -169,37 +209,92 @@ usePageSeo(() => {
     --accent: var(--blue);
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     border-color: var(--line-strong);
-    background: var(--surface-2);
   }
+
+  @include up($bp-md) {
+    min-height: 176px;
+  }
+}
+
+.hero__era-img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) sepia(0.25) contrast(1.05) brightness(0.8);
+  transition:
+    transform 0.6s $ease-out,
+    filter 0.6s $ease-out;
+
+  .hero__era:hover &,
+  .hero__era:focus-visible & {
+    transform: scale(1.04);
+    filter: grayscale(0.6) sepia(0.2) contrast(1.05) brightness(0.9);
+  }
+}
+
+.hero__era-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.hero__era-meta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.hero__era-dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 .hero__era-name {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: clamp(1.4rem, 2.2vw, 1.75rem);
   font-weight: 700;
+  line-height: 1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
-
-.hero__era-years {
-  grid-row: 2;
-  font-size: 0.74rem;
-  color: var(--accent);
+  color: var(--paper);
 }
 
 .hero__era-arrow {
-  grid-row: 1 / span 2;
-  grid-column: 2;
-  width: 18px;
-  height: 18px;
-  color: var(--muted);
-  transition: transform 0.3s $ease-out;
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: rgb(14 15 11 / 0.6);
+  color: var(--text);
+  transition:
+    transform 0.3s $ease-out,
+    border-color 0.3s $ease-out;
 
-  .hero__era:hover & {
-    transform: translateX(4px);
-    color: var(--text);
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero__era:hover &,
+  .hero__era:focus-visible & {
+    transform: translateX(3px);
+    border-color: var(--text);
   }
 }
 

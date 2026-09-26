@@ -210,7 +210,7 @@ function placeOf(title: TitleCard) {
 
 <style lang="scss" scoped>
 .side {
-  @include panel(0.88);
+  @include panel(1);
   display: flex;
   flex-direction: column;
   min-height: 0;

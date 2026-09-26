@@ -1,9 +1,10 @@
 import { feature } from "topojson-client";
 import type { GeometryCollection, Topology } from "topojson-specification";
 import type { Feature, MultiPolygon, Polygon, Position } from "geojson";
-import type { Era, Localized } from "~~/types/data";
+import type { Era, Localized, PlacesFile } from "~~/types/data";
 import borders from "~~/public/geo/borders-1938.json";
 import countriesFile from "~~/data/geo/countries.json";
+import placesFile from "~~/data/places.json";
 
 type Pt = [number, number];
 
@@ -269,6 +270,7 @@ type CountryMeta = { name: Localized; timeline: [string, string][] };
 const COUNTRIES = (
   countriesFile as unknown as { countries: Record<string, CountryMeta> }
 ).countries;
+const NOTES = (placesFile as PlacesFile).places;
 
 function tone(id: string): string {
   const status =
@@ -366,6 +368,7 @@ function build() {
     );
     const dominant = ERAS[counts.indexOf(Math.max(...counts))]!;
     const country = countryAt(shapes, lon, lat);
+    const aliases = NOTES[place.id]?.aliases;
     if (country && COUNTRIES[country]) {
       countryNames[country] = [
         COUNTRIES[country].name.en,
@@ -401,6 +404,7 @@ function build() {
         }
         return index;
       }),
+      ...(aliases?.length ? { a: aliases } : {}),
     };
   }
 

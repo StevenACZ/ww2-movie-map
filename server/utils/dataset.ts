@@ -5,6 +5,7 @@ import type {
   Localized,
   LonLat,
   OperationsFile,
+  PostersFile,
   Stop,
   Title,
   TitlesFile,
@@ -33,6 +34,7 @@ import worldOps from "~~/data/operations/world.json";
 import frontsFile from "~~/data/fronts.json";
 import countriesFile from "~~/data/geo/countries.json";
 import tmdbFile from "~~/data/tmdb.json";
+import postersFile from "~~/data/posters.json";
 import placesFile from "~~/data/places.json";
 
 const TITLES: Title[] = (
@@ -53,6 +55,7 @@ const TITLES: Title[] = (
 
 const EVENTS = (eventsFile as EventsFile).events;
 const TMDB = (tmdbFile as TmdbFile).titles;
+const POSTERS = postersFile as PostersFile;
 const PLACES = (
   placesFile as {
     places: Record<string, { name?: Localized; description?: Localized }>;
@@ -97,6 +100,10 @@ function stopDetail(stop: Stop, locale: Locale): StopDetail {
 export function titleCard(title: Title, locale: Locale): TitleCard {
   const extra = TMDB[title.id] ?? {};
   const name = localTitle(title, locale);
+  const poster =
+    (locale === "es" && extra.posterEs) ||
+    extra.poster ||
+    POSTERS[title.id]?.src;
   return {
     id: title.id,
     kind: title.kind,
@@ -109,9 +116,7 @@ export function titleCard(title: Title, locale: Locale): TitleCard {
     theaters: title.theaters,
     tags: title.tags,
     period: title.period,
-    ...(extra.poster || extra.posterEs
-      ? { poster: (locale === "es" && extra.posterEs) || extra.poster }
-      : {}),
+    ...(poster ? { poster } : {}),
     ...(extra.backdrop ? { backdrop: extra.backdrop } : {}),
     ...(extra.vote ? { vote: extra.vote } : {}),
     synopsis: pick(title.synopsis, locale),
@@ -205,7 +210,9 @@ function placeName(place: PlaceAggregate, locale: Locale): string {
 
 function placeSummary(place: PlaceAggregate, locale: Locale): PlaceSummary {
   const gold = place.titles.find((t) => t.gold) ?? place.titles[0];
-  const poster = gold ? TMDB[gold.id]?.poster : undefined;
+  const poster = gold
+    ? (TMDB[gold.id]?.poster ?? POSTERS[gold.id]?.src)
+    : undefined;
   return {
     id: place.id,
     name: placeName(place, locale),

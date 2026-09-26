@@ -39,7 +39,7 @@ Public bilingual Nuxt site for WW2 Film Map: a 3D globe, film and series collect
 - `server/utils/dataset.ts`, `server/api/**`, `server/routes/data/**`: build-time dataset and prerendered JSON payloads.
 - `shared/utils/time.ts`: date helpers and era ranges. `types/data.ts` (source schema), `types/view.ts` (payloads).
 - `i18n/locales/`: base `en.json`/`es.json` plus one file per area (`en.<area>.json`, `es.<area>.json`).
-- `scripts/`: data validator, Wikipedia lookup, border builder, TMDB sync.
+- `scripts/`: data validator, Wikipedia lookup, border builder, TMDB sync, event images and posters (`scripts/images/`).
 
 ## Data
 
@@ -48,6 +48,7 @@ Public bilingual Nuxt site for WW2 Film Map: a 3D globe, film and series collect
 - `data/operations/{europe,world}.json`: animated units and front-line snapshots.
 - `data/geo/countries.json` and `public/geo/borders-{1914,1920,1930,1938,1945}.json`: country metadata and historical borders.
 - `data/tmdb.json` and `public/data/watch/{id}.json`: written only by `scripts/tmdb/sync.ts`; never edit by hand.
+- `data/posters.json` and `public/img/posters/{,sm/}{id}.webp`: written only by `bun run posters` (Wikipedia infobox posters, 342x513 and 92x138); they take precedence over TMDB poster paths.
 
 Invariants:
 
@@ -100,7 +101,7 @@ bun scripts/data/wiki-lookup.ts "Stalingrad (1993 film)"
 - Component styles are `<style lang="scss" scoped>`; reuse tokens and global classes instead of new ones.
 - Spanish copy is neutral Latin American Spanish with correct accents.
 - Sound plays only on deliberate user actions, never on scroll or hover.
-- Never a left accent border or vertical stripe on cards, callouts, toasts, list items or quotes (`border-left`, `inset Npx 0 0` shadows, left `::before` bars); use a full hairline border, a tint or a top rule.
+- Never a colored accent stripe on any edge of cards, callouts, toasts, list items or quotes (left or top: `border-left`, `inset Npx 0 0` / `inset 0 Npx 0` shadows, `::before` bars); use a full hairline border, a subtle tint, a dot or an image.
 - Nothing over the globe uses `backdrop-filter` (use the `panel` mixin, not `glass`); the globe renders on demand and caps DPR at 1.5.
 
 ## Verification

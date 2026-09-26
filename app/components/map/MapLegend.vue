@@ -99,7 +99,7 @@ const open = ref(props.startOpen ?? false);
 
 <style lang="scss" scoped>
 .legend {
-  @include panel(0.88);
+  @include panel(1);
   width: 250px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
