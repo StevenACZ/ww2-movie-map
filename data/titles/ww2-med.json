@@ -1,0 +1,2841 @@
+{
+  "titles": [
+    {
+      "id": "patton-1970",
+      "kind": "film",
+      "title": "Patton",
+      "titleEs": "Patton",
+      "year": 1970,
+      "era": "ww2",
+      "period": {
+        "start": "1943-03",
+        "end": "1945-10"
+      },
+      "theaters": ["mediterranean", "western-europe"],
+      "tags": ["combat", "biography", "true-story"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won seven Academy Awards, including Best Picture and a Best Actor Oscar that George C. Scott famously refused.",
+        "es": "Ganó siete premios Óscar, entre ellos Mejor Película y un Óscar al Mejor Actor que George C. Scott rechazó."
+      },
+      "directors": ["Franklin J. Schaffner"],
+      "countries": ["US"],
+      "languages": ["en", "de"],
+      "ids": {
+        "tmdb": 11202,
+        "tmdbType": "movie",
+        "imdb": "tt0066206",
+        "wikidata": "Q217220"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Patton_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Patton_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "General George S. Patton takes over a beaten American corps in Tunisia and drives his men from the North African desert to Sicily, Normandy and the Ardennes, while his temper keeps threatening the career he believes he was born for.",
+        "es": "El general George S. Patton toma el mando de un cuerpo estadounidense derrotado en Túnez y lleva a sus hombres del desierto norteafricano a Sicilia, Normandía y las Ardenas, mientras su carácter pone en riesgo la carrera para la que se cree destinado."
+      },
+      "history": {
+        "en": [
+          "Patton took command of the US II Corps on 6 March 1943, two weeks after the rout at Kasserine Pass, and led it to a defensive victory at El Guettar that month. In July he commanded the Seventh Army in the invasion of Sicily, swung west to take Palermo on 22 July and entered Messina on 17 August, just ahead of Montgomery's Eighth Army. Days earlier he had slapped two hospitalised soldiers suffering from combat fatigue, a scandal that cost him the command of the Normandy invasion.",
+          "In 1944 he was used as bait for Operation Fortitude, the deception that made the Germans expect a landing at Calais, before his Third Army broke out of Normandy in August and swept across France. In December 1944 it turned north in days to relieve Bastogne, reaching the town on 26 December. The film compresses events and invents some dialogue, but it closely follows Ladislas Farago's biography and Omar Bradley's memoir; Patton was removed from the Third Army in October 1945 after remarks comparing Nazi party members to ordinary political partisans."
+        ],
+        "es": [
+          "Patton asumió el mando del II Cuerpo estadounidense el 6 de marzo de 1943, dos semanas después de la derrota en el paso de Kasserine, y lo llevó a una victoria defensiva en El Guettar ese mismo mes. En julio dirigió al Séptimo Ejército en la invasión de Sicilia, giró al oeste para tomar Palermo el 22 de julio y entró en Mesina el 17 de agosto, justo antes que el Octavo Ejército de Montgomery. Días antes había abofeteado a dos soldados hospitalizados por fatiga de combate, un escándalo que le costó el mando del desembarco en Normandía.",
+          "En 1944 fue usado como señuelo en la Operación Fortitude, el engaño que hizo esperar a los alemanes un desembarco en Calais, antes de que su Tercer Ejército rompiera el frente de Normandía en agosto y cruzara Francia. En diciembre de 1944 giró al norte en pocos días para liberar Bastogne, adonde llegó el 26 de diciembre. La película comprime hechos e inventa diálogos, pero sigue de cerca la biografía de Ladislas Farago y las memorias de Omar Bradley; Patton fue apartado del Tercer Ejército en octubre de 1945 tras comparar a los miembros del partido nazi con simples militantes políticos."
+        ]
+      },
+      "journey": [
+        {
+          "place": "kasserine-pass",
+          "name": {
+            "en": "Kasserine Pass, Tunisia",
+            "es": "Paso de Kasserine, Túnez"
+          },
+          "coordinates": [8.7424, 35.2596],
+          "date": "1943-03",
+          "kind": "battle",
+          "story": {
+            "en": "Patton arrives among the wrecked vehicles and dead of the American defeat and takes over a demoralised II Corps.",
+            "es": "Patton llega entre los vehículos destruidos y los muertos de la derrota estadounidense y toma el mando de un II Cuerpo desmoralizado."
+          },
+          "history": {
+            "en": "Rommel's attack through the pass on 19-24 February 1943 cost the Americans more than 6,000 casualties in their first big battle against the Germans.",
+            "es": "El ataque de Rommel por el paso entre el 19 y el 24 de febrero de 1943 costó a los estadounidenses más de 6.000 bajas en su primera gran batalla contra los alemanes."
+          }
+        },
+        {
+          "place": "el-guettar",
+          "name": {
+            "en": "El Guettar, Tunisia",
+            "es": "El Guettar, Túnez"
+          },
+          "coordinates": [8.9481, 34.3367],
+          "date": "1943-03",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Having read Rommel's book, Patton waits for the German panzers in the valley and turns the attack into his first victory.",
+            "es": "Tras haber leído el libro de Rommel, Patton espera a los panzer alemanes en el valle y convierte el ataque en su primera victoria."
+          },
+          "history": {
+            "en": "On 23 March 1943 the US 1st Infantry Division and artillery beat back the 10th Panzer Division; Rommel himself had already left Africa.",
+            "es": "El 23 de marzo de 1943 la 1.ª División de Infantería estadounidense y su artillería rechazaron a la 10.ª División Panzer; Rommel ya había salido de África."
+          }
+        },
+        {
+          "place": "gela",
+          "name": {
+            "en": "Gela, Sicily",
+            "es": "Gela, Sicilia"
+          },
+          "coordinates": [14.25, 37.0667],
+          "date": "1943-07",
+          "kind": "landing",
+          "story": {
+            "en": "Relegated to guarding Montgomery's flank, Patton lands his Seventh Army on the south coast of Sicily.",
+            "es": "Relegado a cubrir el flanco de Montgomery, Patton desembarca con su Séptimo Ejército en la costa sur de Sicilia."
+          },
+          "history": {
+            "en": "The Seventh Army landed around Gela, Licata and Scoglitti on 10 July 1943 and repulsed a German-Italian armoured counterattack the next day.",
+            "es": "El Séptimo Ejército desembarcó en torno a Gela, Licata y Scoglitti el 10 de julio de 1943 y rechazó al día siguiente un contraataque blindado germano-italiano."
+          }
+        },
+        {
+          "place": "palermo",
+          "name": {
+            "en": "Palermo, Sicily",
+            "es": "Palermo, Sicilia"
+          },
+          "coordinates": [13.3613, 38.1157],
+          "date": "1943-07",
+          "kind": "city",
+          "story": {
+            "en": "Ignoring the plan, Patton races northwest across the island and enters Palermo to cheering crowds.",
+            "es": "Ignorando el plan, Patton avanza a toda velocidad hacia el noroeste de la isla y entra en Palermo entre multitudes que lo aclaman."
+          },
+          "history": {
+            "en": "American troops entered Palermo on 22 July 1943 after a 160-kilometre dash, taking tens of thousands of Italian prisoners.",
+            "es": "Las tropas estadounidenses entraron en Palermo el 22 de julio de 1943 tras una carrera de 160 kilómetros, capturando a decenas de miles de prisioneros italianos."
+          }
+        },
+        {
+          "place": "messina",
+          "name": {
+            "en": "Messina, Sicily",
+            "es": "Mesina, Sicilia"
+          },
+          "coordinates": [15.5542, 38.1936],
+          "date": "1943-08",
+          "kind": "city",
+          "story": {
+            "en": "Patton wins the race to Messina, but the slapping of a shell-shocked soldier turns triumph into disgrace.",
+            "es": "Patton gana la carrera a Mesina, pero la bofetada a un soldado traumatizado convierte el triunfo en escándalo."
+          },
+          "history": {
+            "en": "US patrols entered Messina on 17 August 1943, but about 100,000 Axis troops had already escaped across the strait to the mainland.",
+            "es": "Las patrullas estadounidenses entraron en Mesina el 17 de agosto de 1943, pero unos 100.000 soldados del Eje ya habían cruzado el estrecho hacia el continente."
+          }
+        },
+        {
+          "place": "knutsford",
+          "name": {
+            "en": "Knutsford, England",
+            "es": "Knutsford, Inglaterra"
+          },
+          "coordinates": [-2.3708, 53.3025],
+          "date": "1944-04",
+          "kind": "base",
+          "story": {
+            "en": "Kept in England as a decoy commander, Patton causes another uproar with an offhand speech at a welcome club.",
+            "es": "Retenido en Inglaterra como comandante señuelo, Patton provoca otro escándalo con un discurso improvisado en un club de bienvenida."
+          },
+          "history": {
+            "en": "On 25 April 1944 Patton told a Knutsford audience that Britain and America were destined to rule the postwar world, angering Washington.",
+            "es": "El 25 de abril de 1944 Patton dijo ante un público de Knutsford que británicos y estadounidenses gobernarían el mundo de posguerra, lo que enfureció a Washington."
+          }
+        },
+        {
+          "place": "bastogne",
+          "name": {
+            "en": "Bastogne, Belgium",
+            "es": "Bastoña, Bélgica"
+          },
+          "coordinates": [5.72, 50.0042],
+          "date": "1944-12",
+          "kind": "battle",
+          "story": {
+            "en": "When the Germans surround Bastogne, Patton promises to turn his army north in 48 hours and prays for clear weather.",
+            "es": "Cuando los alemanes cercan Bastoña, Patton promete girar su ejército hacia el norte en 48 horas y reza por un cielo despejado."
+          },
+          "history": {
+            "en": "The 4th Armored Division broke through to the encircled 101st Airborne on 26 December 1944.",
+            "es": "La 4.ª División Blindada rompió el cerco y llegó a la 101.ª Aerotransportada el 26 de diciembre de 1944."
+          }
+        },
+        {
+          "place": "bad-tolz",
+          "name": {
+            "en": "Bad Tölz, Bavaria",
+            "es": "Bad Tölz, Baviera"
+          },
+          "coordinates": [11.5567, 47.7603],
+          "date": "1945-09",
+          "kind": "base",
+          "story": {
+            "en": "With the war won, the general's careless words to the press cost him his army one last time.",
+            "es": "Con la guerra ganada, unas palabras descuidadas ante la prensa le cuestan al general su ejército una última vez."
+          },
+          "history": {
+            "en": "Patton's Third Army headquarters was at Bad Tölz, where a September 1945 press conference led to his removal the following month.",
+            "es": "El cuartel general del Tercer Ejército estaba en Bad Tölz, donde una conferencia de prensa en septiembre de 1945 llevó a su destitución al mes siguiente."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-desert-fox-1951",
+      "kind": "film",
+      "title": "The Desert Fox: The Story of Rommel",
+      "titleEs": "Rommel, el zorro del desierto",
+      "year": 1951,
+      "era": "ww2",
+      "period": {
+        "start": "1941-11",
+        "end": "1944-10"
+      },
+      "theaters": ["mediterranean", "western-europe"],
+      "tags": ["combat", "biography", "politics", "true-story"],
+      "gold": false,
+      "directors": ["Henry Hathaway"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 26205,
+        "tmdbType": "movie",
+        "imdb": "tt0043461",
+        "wikidata": "Q558258"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Desert_Fox%3A_The_Story_of_Rommel",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/The_Desert_Fox%3A_The_Story_of_Rommel"
+      },
+      "synopsis": {
+        "en": "Field Marshal Erwin Rommel, the Afrika Korps commander admired even by his enemies, loses faith in Hitler after El Alamein and is drawn toward the officers plotting against him while he prepares Normandy's defences.",
+        "es": "El mariscal de campo Erwin Rommel, comandante del Afrika Korps admirado incluso por sus enemigos, pierde la fe en Hitler después de El Alamein y se acerca a los oficiales que conspiran contra él mientras prepara las defensas de Normandía."
+      },
+      "history": {
+        "en": [
+          "Rommel led German forces in North Africa from February 1941 until March 1943. His drive into Egypt was stopped at El Alamein, and Montgomery's offensive of 23 October to 4 November 1942 broke his army; Hitler's order to stand fast came on 3 November and Rommel retreated anyway the next day. In 1944 he commanded Army Group B from the château of La Roche-Guyon, strengthening the Atlantic Wall before and during the Normandy landings.",
+          "On 17 July 1944 his staff car was strafed near Sainte-Foy-de-Montgommery and he was badly wounded, three days before the bomb at the Wolf's Lair. Implicated by conspirators, he was forced to take poison at his home in Herrlingen on 14 October 1944 and given a state funeral. Based on Desmond Young's 1950 biography, the film helped build the postwar image of Rommel as a chivalrous anti-Nazi; historians agree he knew of the plot but still debate how far he supported it. The opening commando raid depicts Operation Flipper of November 1941."
+        ],
+        "es": [
+          "Rommel dirigió las fuerzas alemanas en el norte de África desde febrero de 1941 hasta marzo de 1943. Su avance hacia Egipto fue detenido en El Alamein, y la ofensiva de Montgomery del 23 de octubre al 4 de noviembre de 1942 quebró a su ejército; la orden de Hitler de resistir llegó el 3 de noviembre y Rommel se retiró igualmente al día siguiente. En 1944 dirigió el Grupo de Ejércitos B desde el castillo de La Roche-Guyon, reforzando el Muro Atlántico antes y durante el desembarco de Normandía.",
+          "El 17 de julio de 1944 su auto fue ametrallado cerca de Sainte-Foy-de-Montgommery y quedó gravemente herido, tres días antes de la bomba en la Guarida del Lobo. Implicado por los conspiradores, fue obligado a tomar veneno en su casa de Herrlingen el 14 de octubre de 1944 y recibió un funeral de Estado. Basada en la biografía de Desmond Young de 1950, la película ayudó a construir la imagen de posguerra de un Rommel caballeroso y antinazi; los historiadores coinciden en que conocía el complot, pero aún discuten hasta qué punto lo apoyó. El asalto de comandos del inicio recrea la Operación Flipper de noviembre de 1941."
+        ]
+      },
+      "journey": [
+        {
+          "place": "beda-littoria",
+          "name": {
+            "en": "Beda Littoria, Libya",
+            "es": "Beda Littoria, Libia"
+          },
+          "coordinates": [21.755, 32.7628],
+          "date": "1941-11",
+          "kind": "base",
+          "story": {
+            "en": "British commandos land behind the lines and storm a house they believe is Rommel's headquarters.",
+            "es": "Comandos británicos desembarcan tras las líneas y asaltan una casa que creen que es el cuartel general de Rommel."
+          },
+          "history": {
+            "en": "Operation Flipper struck the building at Beda Littoria, today's Al Bayda, on 17-18 November 1941; Rommel was not there.",
+            "es": "La Operación Flipper atacó el edificio de Beda Littoria, hoy Al Baida, el 17 y 18 de noviembre de 1941; Rommel no estaba allí."
+          }
+        },
+        {
+          "place": "el-alamein",
+          "name": {
+            "en": "El Alamein, Egypt",
+            "es": "El Alamein, Egipto"
+          },
+          "coordinates": [28.95, 30.8333],
+          "date": "1942-11",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Outnumbered and short of fuel, Rommel receives Hitler's order to fight to the last man and decides to disobey it.",
+            "es": "En inferioridad numérica y sin combustible, Rommel recibe la orden de Hitler de luchar hasta el último hombre y decide desobedecerla."
+          },
+          "history": {
+            "en": "The Second Battle of El Alamein, from 23 October to 4 November 1942, ended the Axis threat to Egypt and the Suez Canal.",
+            "es": "La segunda batalla de El Alamein, del 23 de octubre al 4 de noviembre de 1942, acabó con la amenaza del Eje sobre Egipto y el canal de Suez."
+          }
+        },
+        {
+          "place": "la-roche-guyon",
+          "name": {
+            "en": "La Roche-Guyon, France",
+            "es": "La Roche-Guyon, Francia"
+          },
+          "coordinates": [1.6294, 49.0817],
+          "date": "1944-06",
+          "kind": "base",
+          "story": {
+            "en": "Sent to inspect the Atlantic Wall, Rommel watches the Allies land while Hitler refuses to release the reserves.",
+            "es": "Enviado a revisar el Muro Atlántico, Rommel ve desembarcar a los Aliados mientras Hitler se niega a liberar las reservas."
+          },
+          "history": {
+            "en": "Rommel's Army Group B had its headquarters in the château of La Roche-Guyon on the Seine from March to August 1944.",
+            "es": "El Grupo de Ejércitos B de Rommel tuvo su cuartel general en el castillo de La Roche-Guyon, junto al Sena, de marzo a agosto de 1944."
+          }
+        },
+        {
+          "place": "sainte-foy-de-montgommery",
+          "name": {
+            "en": "Sainte-Foy-de-Montgommery, Normandy",
+            "es": "Sainte-Foy-de-Montgommery, Normandía"
+          },
+          "coordinates": [0.1753, 48.9606],
+          "date": "1944-07",
+          "kind": "journey",
+          "story": {
+            "en": "An Allied fighter strafes Rommel's car on a Normandy road and leaves him gravely wounded.",
+            "es": "Un caza aliado ametralla el auto de Rommel en un camino de Normandía y lo deja gravemente herido."
+          },
+          "history": {
+            "en": "Rommel suffered a fractured skull when his car crashed under Allied fighter fire near this village on 17 July 1944.",
+            "es": "Rommel sufrió una fractura de cráneo cuando su auto se estrelló bajo el fuego de cazas aliados cerca de este pueblo el 17 de julio de 1944."
+          }
+        },
+        {
+          "place": "herrlingen",
+          "name": {
+            "en": "Herrlingen, Germany",
+            "es": "Herrlingen, Alemania"
+          },
+          "coordinates": [9.9189, 48.4164],
+          "date": "1944-10",
+          "kind": "home",
+          "story": {
+            "en": "Recovering at home, Rommel receives two generals from Berlin after the failed bomb plot.",
+            "es": "Mientras se recupera en casa, Rommel recibe a dos generales enviados desde Berlín tras el fracaso del atentado."
+          },
+          "history": {
+            "en": "Generals Burgdorf and Maisel came to Rommel's house on 14 October 1944; he died of cyanide that afternoon.",
+            "es": "Los generales Burgdorf y Maisel llegaron a la casa de Rommel el 14 de octubre de 1944; murió por cianuro esa misma tarde."
+          }
+        }
+      ]
+    },
+    {
+      "id": "casablanca-1942",
+      "kind": "film",
+      "title": "Casablanca",
+      "titleEs": "Casablanca",
+      "year": 1942,
+      "era": "ww2",
+      "period": {
+        "start": "1940-06",
+        "end": "1941-12"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["romance", "espionage", "resistance"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won the Academy Award for Best Picture and ranks among the top three on both of the AFI's 100 greatest American films lists.",
+        "es": "Ganó el Óscar a Mejor Película y figura entre los tres primeros en las dos listas del AFI de las 100 mejores películas estadounidenses."
+      },
+      "directors": ["Michael Curtiz"],
+      "countries": ["US"],
+      "languages": ["en", "fr", "de"],
+      "ids": {
+        "tmdb": 289,
+        "tmdbType": "movie",
+        "imdb": "tt0034583",
+        "wikidata": "Q132689"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Casablanca_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Casablanca_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "In Vichy-ruled Casablanca, cynical nightclub owner Rick Blaine holds two letters of transit that could carry a Resistance leader to freedom, just as the woman who left him in Paris walks into his café.",
+        "es": "En la Casablanca gobernada por Vichy, Rick Blaine, un cínico dueño de un club nocturno, guarda dos salvoconductos que podrían sacar a un líder de la Resistencia, justo cuando entra a su café la mujer que lo dejó en París."
+      },
+      "history": {
+        "en": [
+          "After France's defeat in June 1940, French Morocco stayed under the collaborationist Vichy regime, and Casablanca became a waiting room for refugees trying to reach neutral Lisbon and then the Americas. Many had fled south from Paris ahead of the Germans, who entered the city on 14 June 1940; exit visas were scarce, bribery was common and German armistice commissions watched the port.",
+          "The letters of transit signed by de Gaulle are an invention, and no German officer held the power Major Strasser has in the film. History caught up with the story: Allied troops landed at Casablanca on 8 November 1942 during Operation Torch, weeks before the premiere on 26 November, and Roosevelt and Churchill met there in January 1943. Many of the cast were themselves refugees from Nazi Europe."
+        ],
+        "es": [
+          "Tras la derrota de Francia en junio de 1940, el Marruecos francés quedó bajo el régimen colaboracionista de Vichy, y Casablanca se volvió una sala de espera para refugiados que intentaban llegar a la Lisboa neutral y de ahí a América. Muchos habían huido de París antes de la llegada de los alemanes, que entraron en la ciudad el 14 de junio de 1940; los visados de salida escaseaban, los sobornos eran comunes y comisiones alemanas de armisticio vigilaban el puerto.",
+          "Los salvoconductos firmados por De Gaulle son una invención, y ningún oficial alemán tenía el poder que muestra el mayor Strasser. La historia alcanzó a la película: las tropas aliadas desembarcaron en Casablanca el 8 de noviembre de 1942 durante la Operación Torch, semanas antes del estreno del 26 de noviembre, y Roosevelt y Churchill se reunieron allí en enero de 1943. Muchos miembros del reparto eran también refugiados de la Europa nazi."
+        ]
+      },
+      "journey": [
+        {
+          "place": "paris",
+          "name": {
+            "en": "Paris, France",
+            "es": "París, Francia"
+          },
+          "coordinates": [2.3522, 48.8567],
+          "date": "1940-06",
+          "kind": "city",
+          "story": {
+            "en": "In flashback, Rick and Ilsa fall in love in Paris as the German army approaches, and she fails to meet him at the station.",
+            "es": "En un flashback, Rick e Ilsa se enamoran en París mientras se acerca el ejército alemán, y ella no llega a la cita en la estación."
+          },
+          "history": {
+            "en": "German troops entered an undefended Paris on 14 June 1940 after millions of people had fled south.",
+            "es": "Las tropas alemanas entraron en un París sin defensa el 14 de junio de 1940, después de que millones de personas huyeran hacia el sur."
+          }
+        },
+        {
+          "place": "casablanca",
+          "name": {
+            "en": "Casablanca, French Morocco",
+            "es": "Casablanca, Marruecos francés"
+          },
+          "coordinates": [-7.62, 33.5992],
+          "date": "1941-12",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "At Rick's Café Américain, refugees, gamblers, Vichy police and German officers circle the precious letters of transit.",
+            "es": "En el Rick's Café Américain, refugiados, jugadores, policías de Vichy y oficiales alemanes rondan los valiosos salvoconductos."
+          },
+          "history": {
+            "en": "Vichy-controlled Casablanca was a key stop on the refugee route to Lisbon until the Allied landings of November 1942.",
+            "es": "La Casablanca controlada por Vichy fue una escala clave en la ruta de los refugiados hacia Lisboa hasta el desembarco aliado de noviembre de 1942."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-english-patient-1996",
+      "kind": "film",
+      "title": "The English Patient",
+      "titleEs": "El paciente inglés",
+      "year": 1996,
+      "era": "ww2",
+      "period": {
+        "start": "1938",
+        "end": "1945-05"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["romance", "espionage"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won nine Academy Awards, including Best Picture, Best Director and Best Supporting Actress for Juliette Binoche.",
+        "es": "Ganó nueve premios Óscar, entre ellos Mejor Película, Mejor Director y Mejor Actriz de Reparto para Juliette Binoche."
+      },
+      "directors": ["Anthony Minghella"],
+      "countries": ["US", "GB"],
+      "languages": ["en", "it", "de", "ar"],
+      "ids": {
+        "tmdb": 409,
+        "tmdbType": "movie",
+        "imdb": "tt0116209",
+        "wikidata": "Q63026"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_English_Patient_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/El_paciente_ingl%C3%A9s"
+      },
+      "synopsis": {
+        "en": "In a ruined Tuscan monastery at the end of the war, a Canadian nurse cares for a badly burned stranger whose memories of desert maps, the Cave of Swimmers and a forbidden love affair in Cairo slowly return.",
+        "es": "En un monasterio en ruinas de la Toscana al final de la guerra, una enfermera canadiense cuida a un desconocido con quemaduras graves cuyos recuerdos de mapas del desierto, la Cueva de los Nadadores y un amor prohibido en El Cairo vuelven poco a poco."
+      },
+      "history": {
+        "en": [
+          "The patient is based on the real László Almásy, a Hungarian aviator and desert explorer who surveyed the Gilf Kebir plateau in the 1930s and in 1933 found the painted rock shelter now called the Cave of Swimmers. The Cliftons are loosely modelled on the English explorers Robert and Dorothy Clayton-East-Clayton, who both died young: Robert of illness in 1932 and Dorothy in a flying accident in 1933.",
+          "Almásy did work for Germany: in 1942 he guided two Abwehr spies across the desert to Egypt in Operation Salam, but the love affair and the betrayal of the expedition maps come from Michael Ondaatje's 1992 novel. The Italian scenes are set after the Allied advance through Tuscany in the summer of 1944, when British Commonwealth sappers such as Kip cleared the mines and booby traps the retreating Germans left behind."
+        ],
+        "es": [
+          "El paciente está inspirado en el verdadero László Almásy, aviador y explorador húngaro que recorrió la meseta de Gilf Kebir en la década de 1930 y en 1933 encontró el abrigo rocoso pintado que hoy se conoce como la Cueva de los Nadadores. Los Clifton se basan libremente en los exploradores ingleses Robert y Dorothy Clayton-East-Clayton, que murieron jóvenes: Robert por una enfermedad en 1932 y Dorothy en un accidente aéreo en 1933.",
+          "Almásy sí trabajó para Alemania: en 1942 guio a dos espías de la Abwehr a través del desierto hasta Egipto en la Operación Salam, pero el romance y la entrega de los mapas de la expedición salen de la novela de Michael Ondaatje de 1992. Las escenas italianas transcurren tras el avance aliado por la Toscana en el verano de 1944, cuando zapadores de la Commonwealth británica como Kip despejaban las minas y trampas explosivas que dejaban los alemanes en retirada."
+        ]
+      },
+      "journey": [
+        {
+          "place": "cave-of-swimmers",
+          "name": {
+            "en": "Cave of Swimmers, Gilf Kebir",
+            "es": "Cueva de los Nadadores, Gilf Kebir"
+          },
+          "coordinates": [25.2335, 23.5947],
+          "date": "1938",
+          "kind": "journey",
+          "primary": true,
+          "story": {
+            "en": "Almásy's expedition finds a cave painted with ancient swimmers, and he falls for Katharine Clifton while they record it.",
+            "es": "La expedición de Almásy encuentra una cueva pintada con antiguos nadadores, y él se enamora de Katharine Clifton mientras la documentan."
+          },
+          "history": {
+            "en": "Almásy reached the rock art of Wadi Sura, on the edge of the Gilf Kebir in Egypt's Western Desert, in October 1933.",
+            "es": "Almásy llegó al arte rupestre de Wadi Sura, al borde de Gilf Kebir en el desierto occidental de Egipto, en octubre de 1933."
+          }
+        },
+        {
+          "place": "cairo",
+          "name": {
+            "en": "Cairo, Egypt",
+            "es": "El Cairo, Egipto"
+          },
+          "coordinates": [31.2358, 30.0444],
+          "date": "1939",
+          "kind": "city",
+          "story": {
+            "en": "Back in Cairo, their secret affair unfolds among embassy parties and hotel rooms as war approaches.",
+            "es": "De regreso en El Cairo, su romance secreto transcurre entre fiestas de embajada y cuartos de hotel mientras se acerca la guerra."
+          },
+          "history": {
+            "en": "Cairo was the base of the Royal Geographical Society's desert explorers and, from 1939, of British Middle East Command.",
+            "es": "El Cairo era la base de los exploradores del desierto de la Real Sociedad Geográfica y, desde 1939, del Mando británico de Oriente Medio."
+          }
+        },
+        {
+          "place": "kufra",
+          "name": {
+            "en": "Kufra oasis, Libya",
+            "es": "Oasis de Kufra, Libia"
+          },
+          "coordinates": [23.2833, 24.1833],
+          "date": "1939-09",
+          "kind": "journey",
+          "story": {
+            "en": "Walking out of the desert for help, Almásy reaches a British outpost where his foreign name gets him arrested as a spy.",
+            "es": "Tras cruzar el desierto a pie en busca de ayuda, Almásy llega a un puesto británico donde su nombre extranjero hace que lo arresten como espía."
+          },
+          "history": {
+            "en": "Kufra, called El Taj in the film, was an Italian-held oasis until Free French troops captured it in March 1941.",
+            "es": "Kufra, llamada El Taj en la película, fue un oasis en manos italianas hasta que tropas de la Francia Libre lo capturaron en marzo de 1941."
+          }
+        },
+        {
+          "place": "florence",
+          "name": {
+            "en": "Monastery in the hills above Florence",
+            "es": "Monasterio en las colinas de Florencia"
+          },
+          "coordinates": [11.3, 43.8],
+          "date": "1944-10",
+          "kind": "home",
+          "story": {
+            "en": "Hana stays behind with her dying patient in a bombed-out monastery, joined by a Sikh sapper and a tortured Canadian spy.",
+            "es": "Hana se queda con su paciente moribundo en un monasterio bombardeado, acompañada por un zapador sij y un espía canadiense torturado."
+          },
+          "history": {
+            "en": "Florence was liberated in August 1944 as the Germans withdrew north to the Gothic Line, mining roads and buildings as they went.",
+            "es": "Florencia fue liberada en agosto de 1944 mientras los alemanes se retiraban hacia la Línea Gótica, minando caminos y edificios a su paso."
+          }
+        }
+      ]
+    },
+    {
+      "id": "life-is-beautiful-1997",
+      "kind": "film",
+      "title": "Life Is Beautiful",
+      "titleEs": "La vida es bella",
+      "originalTitle": "La vita è bella",
+      "year": 1997,
+      "era": "ww2",
+      "period": {
+        "start": "1939",
+        "end": "1945"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["holocaust", "comedy", "romance"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won the Grand Prix at Cannes and three Academy Awards, including Best Foreign Language Film and Best Actor for Roberto Benigni.",
+        "es": "Ganó el Gran Premio del Jurado en Cannes y tres premios Óscar, entre ellos Mejor Película Extranjera y Mejor Actor para Roberto Benigni."
+      },
+      "directors": ["Roberto Benigni"],
+      "countries": ["IT"],
+      "languages": ["it", "de", "en"],
+      "ids": {
+        "tmdb": 637,
+        "tmdbType": "movie",
+        "imdb": "tt0118799",
+        "wikidata": "Q19355"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Life_Is_Beautiful",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/La_vida_es_bella"
+      },
+      "synopsis": {
+        "en": "Guido, a Jewish waiter with a clown's imagination, charms a schoolteacher in 1930s Arezzo; years later, deported with his little son, he convinces the boy that the camp is an elaborate game with a real tank as the prize.",
+        "es": "Guido, un mesero judío con imaginación de payaso, enamora a una maestra en el Arezzo de los años treinta; años después, deportado con su pequeño hijo, convence al niño de que el campo es un juego complicado cuyo premio es un tanque de verdad."
+      },
+      "history": {
+        "en": [
+          "Mussolini's racial laws of 1938 expelled Italian Jews from schools, public jobs and many professions, the discrimination that creeps into Guido's life in the first half of the film. After Italy's armistice in September 1943 the Germans occupied the north and centre of the country and, with the help of the Salò republic's police, began rounding Jews up; about 7,500 Italian Jews died in the Holocaust, most of them at Auschwitz.",
+          "The camp in the film is deliberately unnamed and stylised, and its liberation by an American tank does not match Auschwitz, which the Soviet army reached in January 1945. Benigni drew on his father's two years in a German labour camp and on the memoir of Auschwitz survivor Rubino Romeo Salmonì."
+        ],
+        "es": [
+          "Las leyes raciales de Mussolini de 1938 expulsaron a los judíos italianos de las escuelas, los empleos públicos y muchas profesiones, la discriminación que se va colando en la vida de Guido en la primera mitad de la película. Tras el armisticio italiano de septiembre de 1943, los alemanes ocuparon el norte y el centro del país y, con ayuda de la policía de la República de Saló, comenzaron a capturar judíos; unos 7.500 judíos italianos murieron en el Holocausto, la mayoría en Auschwitz.",
+          "El campo de la película no tiene nombre y está estilizado a propósito, y su liberación por un tanque estadounidense no corresponde a Auschwitz, al que llegó el ejército soviético en enero de 1945. Benigni se inspiró en los dos años que su padre pasó en un campo de trabajo alemán y en las memorias de Rubino Romeo Salmonì, sobreviviente de Auschwitz."
+        ]
+      },
+      "journey": [
+        {
+          "place": "arezzo",
+          "name": {
+            "en": "Arezzo, Tuscany",
+            "es": "Arezzo, Toscana"
+          },
+          "coordinates": [11.8781, 43.4631],
+          "date": "1939",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "Guido arrives to work at his uncle's hotel and, through a string of comic coincidences, wins over the teacher Dora.",
+            "es": "Guido llega a trabajar al hotel de su tío y, con una serie de coincidencias cómicas, conquista a la maestra Dora."
+          },
+          "history": {
+            "en": "Under the 1938 racial laws, Jewish families in Tuscan towns like Arezzo lost jobs, schooling and property rights.",
+            "es": "Con las leyes raciales de 1938, las familias judías de ciudades toscanas como Arezzo perdieron empleos, escuelas y derechos de propiedad."
+          }
+        },
+        {
+          "place": "arezzo",
+          "name": {
+            "en": "Arezzo under German occupation",
+            "es": "Arezzo bajo la ocupación alemana"
+          },
+          "coordinates": [11.8781, 43.4631],
+          "date": "1944",
+          "kind": "home",
+          "story": {
+            "en": "On Giosuè's birthday, Guido and his son are taken away, and Dora insists on boarding the deportation train with them.",
+            "es": "El día del cumpleaños de Giosuè, Guido y su hijo son detenidos, y Dora insiste en subir con ellos al tren de la deportación."
+          },
+          "history": {
+            "en": "Jews arrested in Tuscany in 1943-44 were usually sent through Florence or the Fossoli transit camp to Auschwitz.",
+            "es": "Los judíos detenidos en la Toscana entre 1943 y 1944 solían ser enviados a Auschwitz a través de Florencia o del campo de tránsito de Fossoli."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-guns-of-navarone-1961",
+      "kind": "film",
+      "title": "The Guns of Navarone",
+      "titleEs": "Los cañones de Navarone",
+      "year": 1961,
+      "era": "ww2",
+      "period": {
+        "start": "1943",
+        "end": "1943"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat", "resistance"],
+      "gold": false,
+      "directors": ["J. Lee Thompson"],
+      "countries": ["GB", "US"],
+      "languages": ["en", "el", "de"],
+      "ids": {
+        "tmdb": 10911,
+        "tmdbType": "movie",
+        "imdb": "tt0054953",
+        "wikidata": "Q756882"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Guns_of_Navarone_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Los_ca%C3%B1ones_de_Navarone"
+      },
+      "synopsis": {
+        "en": "A small Allied commando team disguised as Greek fishermen must scale a sheer cliff and destroy two giant German guns on an Aegean island before a Royal Navy flotilla sails past to rescue 2,000 trapped British soldiers.",
+        "es": "Un pequeño comando aliado disfrazado de pescadores griegos debe escalar un acantilado y destruir dos enormes cañones alemanes en una isla del Egeo antes de que pase la flota británica que va a rescatar a 2.000 soldados atrapados."
+      },
+      "history": {
+        "en": [
+          "Navarone and Keros are fictional, but Alistair MacLean's novel was inspired by the Dodecanese campaign of autumn 1943. After Italy's armistice in September, British forces occupied Kos, Leros and other Italian-held islands hoping to draw Turkey into the war, but without air cover they were quickly overwhelmed: Kos fell on 3-4 October and Leros, after a German air and sea assault, on 16 November 1943, with thousands of British and Italian soldiers captured.",
+          "The real coastal guns on Leros were 152 mm naval pieces, nothing like the radar-directed monsters of the film, and there was no dramatic rescue fleet. Greek resistance fighters, British commandos and the Special Boat Service did raid Aegean islands throughout 1943 and 1944, which gives the story its backdrop."
+        ],
+        "es": [
+          "Navarone y Keros son ficticias, pero la novela de Alistair MacLean se inspiró en la campaña del Dodecaneso del otoño de 1943. Tras el armisticio italiano de septiembre, fuerzas británicas ocuparon Cos, Leros y otras islas en manos italianas con la esperanza de sumar a Turquía a la guerra, pero sin cobertura aérea fueron arrolladas rápidamente: Cos cayó el 3 y 4 de octubre y Leros, tras un asalto alemán por aire y mar, el 16 de noviembre de 1943, con miles de soldados británicos e italianos capturados.",
+          "Los verdaderos cañones costeros de Leros eran piezas navales de 152 mm, nada parecidas a los monstruos guiados por radar de la película, y no hubo ningún rescate naval espectacular. Guerrilleros griegos, comandos británicos y el Special Boat Service sí atacaron islas del Egeo durante 1943 y 1944, lo que da a la historia su contexto."
+        ]
+      },
+      "journey": [
+        {
+          "place": "leros",
+          "name": {
+            "en": "Navarone, a fictional island inspired by Leros",
+            "es": "Navarone, isla ficticia inspirada en Leros"
+          },
+          "coordinates": [26.8419, 37.1467],
+          "date": "1943",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Shipwrecked below the island's cliffs, the team climbs ashore, links up with two resistance women and closes in on the fortress guns.",
+            "es": "Tras naufragar al pie de los acantilados, el equipo escala hasta la isla, se une a dos mujeres de la resistencia y se acerca a los cañones de la fortaleza."
+          },
+          "history": {
+            "en": "German paratroopers and seaborne troops captured Leros from its British and Italian garrison between 12 and 16 November 1943.",
+            "es": "Paracaidistas y tropas desembarcadas alemanas tomaron Leros a su guarnición británica e italiana entre el 12 y el 16 de noviembre de 1943."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tobruk-1967",
+      "kind": "film",
+      "title": "Tobruk",
+      "titleEs": "Tobruk",
+      "year": 1967,
+      "era": "ww2",
+      "period": {
+        "start": "1942-09",
+        "end": "1942-09"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Arthur Hiller"],
+      "countries": ["US"],
+      "languages": ["en", "de"],
+      "ids": {
+        "tmdb": 25385,
+        "tmdbType": "movie",
+        "imdb": "tt0062377",
+        "wikidata": "Q1406378"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Tobruk_(1967_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Tobruk_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "A captured desert navigator is freed by German-speaking Jewish commandos and guides a column posing as prisoners across hundreds of kilometres of Axis-held desert to blow up Rommel's fuel depots at Tobruk.",
+        "es": "Un navegante del desierto capturado es liberado por comandos judíos que hablan alemán y guía a una columna disfrazada de prisioneros a través de cientos de kilómetros de desierto enemigo para volar los depósitos de combustible de Rommel en Tobruk."
+      },
+      "history": {
+        "en": [
+          "The film is loosely based on Operation Agreement, a combined raid on Axis-held Tobruk on the night of 13-14 September 1942. A Long Range Desert Group column carrying commandos and German-speaking Jewish soldiers of the Special Interrogation Group, some disguised as German guards escorting prisoners, drove north from Kufra across hundreds of kilometres of desert to seize the harbour defences for an amphibious landing.",
+          "In reality the raid was a disaster: the landings failed, the destroyers HMS Sikh and HMS Zulu and the cruiser HMS Coventry were sunk, and several hundred British soldiers, sailors and marines were killed or captured, while Tobruk's fuel stocks were barely touched. The Vichy prison ship in Algiers and the traitors are inventions of the script."
+        ],
+        "es": [
+          "La película se basa libremente en la Operación Agreement, un ataque combinado contra Tobruk, en manos del Eje, en la noche del 13 al 14 de septiembre de 1942. Una columna del Long Range Desert Group con comandos y soldados judíos germanoparlantes del Special Interrogation Group, algunos disfrazados de guardias alemanes que escoltaban prisioneros, recorrió cientos de kilómetros de desierto desde Kufra para tomar las defensas del puerto antes de un desembarco.",
+          "En realidad el ataque fue un desastre: los desembarcos fracasaron, se hundieron los destructores HMS Sikh y HMS Zulu y el crucero HMS Coventry, y varios cientos de soldados, marineros e infantes de marina británicos murieron o fueron capturados, mientras el combustible de Tobruk apenas sufrió daños. El barco prisión de Vichy en Argel y los traidores son invenciones del guion."
+        ]
+      },
+      "journey": [
+        {
+          "place": "algiers",
+          "name": {
+            "en": "Algiers harbour",
+            "es": "Puerto de Argel"
+          },
+          "coordinates": [3.0586, 36.7764],
+          "date": "1942-09",
+          "kind": "city",
+          "story": {
+            "en": "Major Craig is sprung from a Vichy French prison ship by commandos in German uniform.",
+            "es": "El mayor Craig es liberado de un barco prisión de la Francia de Vichy por comandos con uniforme alemán."
+          },
+          "history": {
+            "en": "Algiers stayed under Vichy control until the Allied landings of Operation Torch on 8 November 1942.",
+            "es": "Argel siguió bajo control de Vichy hasta el desembarco aliado de la Operación Torch, el 8 de noviembre de 1942."
+          }
+        },
+        {
+          "place": "kufra",
+          "name": {
+            "en": "Kufra oasis, Libya",
+            "es": "Oasis de Kufra, Libia"
+          },
+          "coordinates": [23.2833, 24.1833],
+          "date": "1942-09",
+          "kind": "base",
+          "story": {
+            "en": "The raiders join a Long Range Desert Group column and set off north, posing as prisoners and their German guards.",
+            "es": "Los atacantes se unen a una columna del Long Range Desert Group y parten hacia el norte, fingiendo ser prisioneros con sus guardias alemanes."
+          },
+          "history": {
+            "en": "Kufra was the Long Range Desert Group's main base in 1942 and the real starting point of the Tobruk raiders.",
+            "es": "Kufra fue la base principal del Long Range Desert Group en 1942 y el verdadero punto de partida de los atacantes de Tobruk."
+          }
+        },
+        {
+          "place": "tobruk",
+          "name": {
+            "en": "Tobruk, Libya",
+            "es": "Tobruk, Libia"
+          },
+          "coordinates": [23.95, 32.0833],
+          "date": "1942-09",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Inside the port, the commandos go for the fuel bunkers and the guns covering the harbour as the landing force approaches.",
+            "es": "Dentro del puerto, los comandos van por los depósitos de combustible y los cañones que protegen la bahía mientras se acerca la fuerza de desembarco."
+          },
+          "history": {
+            "en": "Operation Agreement failed on 13-14 September 1942, costing the Royal Navy a cruiser and two destroyers.",
+            "es": "La Operación Agreement fracasó el 13 y 14 de septiembre de 1942 y costó a la Marina Real un crucero y dos destructores."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sahara-1943",
+      "kind": "film",
+      "title": "Sahara",
+      "titleEs": "Sahara",
+      "year": 1943,
+      "era": "ww2",
+      "period": {
+        "start": "1942-06",
+        "end": "1942-07"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Zoltan Korda"],
+      "countries": ["US"],
+      "languages": ["en", "de", "it"],
+      "ids": {
+        "tmdb": 18783,
+        "tmdbType": "movie",
+        "imdb": "tt0036323",
+        "wikidata": "Q769280"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Sahara_(1943_American_film)"
+      },
+      "synopsis": {
+        "en": "Cut off after the fall of Tobruk, an American tank crew picks up a mixed band of Allied stragglers and a prisoner, and makes a stand at a desert well against a thirsty German battalion.",
+        "es": "Aislada tras la caída de Tobruk, la tripulación de un tanque estadounidense recoge a un grupo variado de soldados aliados dispersos y a un prisionero, y resiste en un pozo del desierto frente a un batallón alemán sediento."
+      },
+      "history": {
+        "en": [
+          "Rommel's victory at Gazala in late May and June 1942 sent the British Eighth Army reeling back into Egypt, and Tobruk, which had resisted a siege for most of 1941, fell in a single day on 21 June 1942 with some 33,000 Allied soldiers captured. Thousands of stragglers crossed the desert to reach the new line at El Alamein.",
+          "American-built M3 tanks were already fighting in British units, but the Lulubelle's American crew is fiction. The plot is a remake of the 1936 Soviet film The Thirteen, and water really was the decisive supply problem for both armies in the Western Desert, where wells such as those around Acroma were fought over."
+        ],
+        "es": [
+          "La victoria de Rommel en Gazala, entre finales de mayo y junio de 1942, hizo retroceder al Octavo Ejército británico hasta Egipto, y Tobruk, que había resistido un asedio durante gran parte de 1941, cayó en un solo día, el 21 de junio de 1942, con unos 33.000 soldados aliados capturados. Miles de rezagados cruzaron el desierto para llegar a la nueva línea de El Alamein.",
+          "Los tanques M3 de fabricación estadounidense ya combatían en unidades británicas, pero la tripulación estadounidense del Lulubelle es ficción. La trama es una nueva versión de la película soviética Los trece, de 1936, y el agua fue de verdad el problema de abastecimiento decisivo para ambos ejércitos en el desierto occidental, donde se combatió por pozos como los de Acroma."
+        ]
+      },
+      "journey": [
+        {
+          "place": "tobruk",
+          "name": {
+            "en": "Desert south of Tobruk",
+            "es": "Desierto al sur de Tobruk"
+          },
+          "coordinates": [23.95, 31.9],
+          "date": "1942-06",
+          "kind": "journey",
+          "story": {
+            "en": "Separated from its unit in the retreat, the tank Lulubelle heads south and collects British, South African, Free French and Sudanese soldiers.",
+            "es": "Separado de su unidad en la retirada, el tanque Lulubelle se dirige al sur y recoge a soldados británicos, sudafricanos, franceses libres y sudaneses."
+          },
+          "history": {
+            "en": "Tobruk surrendered to Rommel on 21 June 1942 after the collapse of the Gazala line.",
+            "es": "Tobruk se rindió ante Rommel el 21 de junio de 1942 tras el derrumbe de la línea de Gazala."
+          }
+        },
+        {
+          "place": "acroma",
+          "name": {
+            "en": "Bir Acroma well, Libya",
+            "es": "Pozo de Bir Acroma, Libia"
+          },
+          "coordinates": [23.6989, 32.0528],
+          "date": "1942-07",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "At a nearly dry well, the handful of men bluff that they have water and hold off wave after wave of German attacks.",
+            "es": "En un pozo casi seco, el puñado de hombres finge tener agua y resiste una oleada tras otra de ataques alemanes."
+          },
+          "history": {
+            "en": "Acroma, west of Tobruk, was a crossroads and supply area repeatedly fought over during the Gazala battles of June 1942.",
+            "es": "Acroma, al oeste de Tobruk, era un cruce y zona de abastecimiento disputado varias veces durante las batallas de Gazala de junio de 1942."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ice-cold-in-alex-1958",
+      "kind": "film",
+      "title": "Ice Cold in Alex",
+      "titleEs": "Fugitivos del desierto",
+      "year": 1958,
+      "era": "ww2",
+      "period": {
+        "start": "1942-06",
+        "end": "1942-07"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat", "espionage"],
+      "gold": false,
+      "directors": ["J. Lee Thompson"],
+      "countries": ["GB"],
+      "languages": ["en", "de"],
+      "ids": {
+        "tmdb": 16284,
+        "tmdbType": "movie",
+        "imdb": "tt0053935",
+        "wikidata": "Q739141"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Ice_Cold_in_Alex"
+      },
+      "synopsis": {
+        "en": "A burnt-out British officer, his sergeant major, two nurses and a suspicious South African drive a battered ambulance from besieged Tobruk across minefields and the Qattara Depression, dreaming of an ice-cold beer in Alexandria.",
+        "es": "Un oficial británico agotado, su sargento mayor, dos enfermeras y un sospechoso sudafricano cruzan en una ambulancia destartalada desde Tobruk, campos minados y la depresión de Qattara, soñando con una cerveza helada en Alejandría."
+      },
+      "history": {
+        "en": [
+          "In June 1942 the Axis offensive at Gazala broke the British line, and Tobruk fell on 21 June. Units that escaped streamed east toward Egypt while Rommel's columns chased them, and the Eighth Army finally dug in at El Alamein, a line anchored in the south on the Qattara Depression, a vast salt basin considered impassable for armies.",
+          "The film follows Christopher Landon's 1957 novel, based on his own service in the desert, and the crossing of the depression and the escarpment is dramatic licence. German agents really were sent into Egypt in 1942 through the desert, most famously in Operation Salam, which gives weight to the spy subplot."
+        ],
+        "es": [
+          "En junio de 1942 la ofensiva del Eje en Gazala rompió la línea británica, y Tobruk cayó el 21 de junio. Las unidades que escaparon huyeron hacia Egipto perseguidas por las columnas de Rommel, y el Octavo Ejército se atrincheró finalmente en El Alamein, una línea apoyada al sur en la depresión de Qattara, una enorme cuenca salina considerada intransitable para un ejército.",
+          "La película sigue la novela de Christopher Landon de 1957, basada en su propio servicio en el desierto, y el cruce de la depresión y del escarpado es una licencia dramática. Alemania sí envió agentes a Egipto a través del desierto en 1942, sobre todo en la Operación Salam, lo que da peso a la trama de espionaje."
+        ]
+      },
+      "journey": [
+        {
+          "place": "tobruk",
+          "name": {
+            "en": "Tobruk, Libya",
+            "es": "Tobruk, Libia"
+          },
+          "coordinates": [23.95, 32.0833],
+          "date": "1942-06",
+          "kind": "base",
+          "story": {
+            "en": "As the Afrika Korps closes in, Captain Anson's ambulance unit is ordered out of Tobruk and his vehicle gets separated from the rest.",
+            "es": "Mientras el Afrika Korps se acerca, la unidad de ambulancias del capitán Anson recibe la orden de salir de Tobruk y su vehículo se separa del resto."
+          },
+          "history": {
+            "en": "Tobruk fell on 21 June 1942, one of Britain's worst defeats of the desert war.",
+            "es": "Tobruk cayó el 21 de junio de 1942, una de las peores derrotas británicas de la guerra del desierto."
+          }
+        },
+        {
+          "place": "qattara-depression",
+          "name": {
+            "en": "Qattara Depression, Egypt",
+            "es": "Depresión de Qattara, Egipto"
+          },
+          "coordinates": [27.5, 30],
+          "date": "1942-07",
+          "kind": "journey",
+          "primary": true,
+          "story": {
+            "en": "The ambulance Katy crosses quicksand and has to be winched backwards up a huge dune while suspicions grow about van der Poel.",
+            "es": "La ambulancia Katy cruza arenas movedizas y tiene que subir en reversa una enorme duna mientras crecen las sospechas sobre van der Poel."
+          },
+          "history": {
+            "en": "The depression's salt marshes protected the southern end of the El Alamein line, since no army could cross them in force.",
+            "es": "Las marismas salinas de la depresión protegían el extremo sur de la línea de El Alamein, porque ningún ejército podía cruzarlas en fuerza."
+          }
+        },
+        {
+          "place": "alexandria",
+          "name": {
+            "en": "Alexandria, Egypt",
+            "es": "Alejandría, Egipto"
+          },
+          "coordinates": [29.8925, 31.1975],
+          "date": "1942-07",
+          "kind": "city",
+          "story": {
+            "en": "The survivors finally reach a bar in Alexandria and face a choice about what to do with their passenger.",
+            "es": "Los sobrevivientes llegan por fin a un bar de Alejandría y deben decidir qué hacer con su pasajero."
+          },
+          "history": {
+            "en": "In July 1942 Alexandria, home of the Royal Navy's Mediterranean Fleet, lay barely 100 kilometres behind the front.",
+            "es": "En julio de 1942 Alejandría, sede de la Flota del Mediterráneo británica, quedaba a apenas 100 kilómetros del frente."
+          }
+        }
+      ]
+    },
+    {
+      "id": "five-graves-to-cairo-1943",
+      "kind": "film",
+      "title": "Five Graves to Cairo",
+      "titleEs": "Cinco tumbas al Cairo",
+      "year": 1943,
+      "era": "ww2",
+      "period": {
+        "start": "1942-06",
+        "end": "1942-11"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["espionage"],
+      "gold": false,
+      "directors": ["Billy Wilder"],
+      "countries": ["US"],
+      "languages": ["en", "de", "fr"],
+      "ids": {
+        "tmdb": 60216,
+        "tmdbType": "movie",
+        "imdb": "tt0035884",
+        "wikidata": "Q743795"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Five_Graves_to_Cairo",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Five_Graves_to_Cairo"
+      },
+      "synopsis": {
+        "en": "The lone survivor of a British tank crew stumbles into a desert hotel and takes the identity of its dead waiter, only to learn the man was a German spy just as Rommel moves in upstairs.",
+        "es": "El único sobreviviente de la tripulación de un tanque británico llega a un hotel del desierto y adopta la identidad del mesero muerto, solo para descubrir que era un espía alemán justo cuando Rommel se instala en el piso de arriba."
+      },
+      "history": {
+        "en": [
+          "After taking Tobruk on 21 June 1942, Rommel pushed the Eighth Army back across the Egyptian frontier at Sollum and Halfaya Pass and on to El Alamein, just over 100 kilometres from Alexandria. The Allied victory at the Second Battle of El Alamein in October and November 1942 ended that threat.",
+          "Billy Wilder made the film while the campaign was still being fought, adapting a Lajos Bíró play set in the First World War. Erich von Stroheim plays Rommel; the five secret supply dumps buried before the war are pure invention, but Axis supply lines stretched across the desert were Rommel's real weakness."
+        ],
+        "es": [
+          "Tras tomar Tobruk el 21 de junio de 1942, Rommel hizo retroceder al Octavo Ejército a través de la frontera egipcia por Sollum y el paso de Halfaya hasta El Alamein, a poco más de 100 kilómetros de Alejandría. La victoria aliada en la segunda batalla de El Alamein, en octubre y noviembre de 1942, acabó con esa amenaza.",
+          "Billy Wilder rodó la película mientras la campaña seguía en marcha, adaptando una obra de Lajos Bíró ambientada en la Primera Guerra Mundial. Erich von Stroheim interpreta a Rommel; los cinco depósitos secretos enterrados antes de la guerra son pura invención, pero las largas líneas de abastecimiento del Eje a través del desierto fueron la verdadera debilidad de Rommel."
+        ]
+      },
+      "journey": [
+        {
+          "place": "halfaya-pass",
+          "name": {
+            "en": "Sidi Halfaya, Egyptian frontier",
+            "es": "Sidi Halfaya, frontera egipcia"
+          },
+          "coordinates": [25.1875, 31.505],
+          "date": "1942-06",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "Corporal Bramble poses as a waiter in a half-empty hotel that becomes Rommel's headquarters and hunts for the secret of the five graves.",
+            "es": "El cabo Bramble se hace pasar por mesero en un hotel medio vacío que se convierte en cuartel general de Rommel y busca el secreto de las cinco tumbas."
+          },
+          "history": {
+            "en": "Halfaya Pass, on the coastal escarpment near Sollum, changed hands several times and was overrun by the Axis advance in late June 1942.",
+            "es": "El paso de Halfaya, en el escarpado costero cerca de Sollum, cambió de manos varias veces y fue ocupado por el avance del Eje a finales de junio de 1942."
+          }
+        },
+        {
+          "place": "el-alamein",
+          "name": {
+            "en": "El Alamein, Egypt",
+            "es": "El Alamein, Egipto"
+          },
+          "coordinates": [28.95, 30.8333],
+          "date": "1942-11",
+          "kind": "battle",
+          "story": {
+            "en": "The fate of Rommel's drive on Cairo is decided on the El Alamein line, where Bramble's secret is put to use.",
+            "es": "El destino del avance de Rommel sobre El Cairo se decide en la línea de El Alamein, donde se aprovecha el secreto de Bramble."
+          },
+          "history": {
+            "en": "Montgomery's Eighth Army broke through at El Alamein on 4 November 1942 and forced Rommel into a long retreat.",
+            "es": "El Octavo Ejército de Montgomery rompió el frente en El Alamein el 4 de noviembre de 1942 y obligó a Rommel a una larga retirada."
+          }
+        }
+      ]
+    },
+    {
+      "id": "rome-open-city-1945",
+      "kind": "film",
+      "title": "Rome, Open City",
+      "titleEs": "Roma, ciudad abierta",
+      "originalTitle": "Roma città aperta",
+      "year": 1945,
+      "era": "ww2",
+      "period": {
+        "start": "1944-03",
+        "end": "1944-04"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["resistance", "true-story"],
+      "gold": true,
+      "goldReason": {
+        "en": "Shared the Grand Prix at the first Cannes Film Festival in 1946 and is regarded as the founding work of Italian neorealism.",
+        "es": "Compartió el Gran Premio del primer Festival de Cannes en 1946 y se considera la obra fundacional del neorrealismo italiano."
+      },
+      "directors": ["Roberto Rossellini"],
+      "countries": ["IT"],
+      "languages": ["it", "de"],
+      "ids": {
+        "tmdb": 307,
+        "tmdbType": "movie",
+        "imdb": "tt0038890",
+        "wikidata": "Q721146"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Rome%2C_Open_City",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Roma%2C_ciudad_abierta"
+      },
+      "synopsis": {
+        "en": "In German-occupied Rome, a Resistance leader on the run turns to a widow about to marry, her fiancé and a parish priest, while the Gestapo tightens its net around the working-class neighbourhood that hides him.",
+        "es": "En la Roma ocupada por los alemanes, un líder de la Resistencia perseguido busca ayuda en una viuda a punto de casarse, su prometido y un cura de barrio, mientras la Gestapo cierra el cerco sobre el barrio obrero que lo esconde."
+      },
+      "history": {
+        "en": [
+          "German troops occupied Rome after Italy's armistice in September 1943 and held it for nine months, despite the city having been declared open, or undefended, on 14 August 1943. The SS ran a prison and interrogation centre in Via Tasso, Jews were rounded up on 16 October 1943, and after a partisan bombing in Via Rasella the Germans shot 335 hostages at the Ardeatine Caves on 24 March 1944. Allied troops entered Rome on 4 June 1944.",
+          "Rossellini began shooting only months after liberation, with little film stock and many non-professional actors. Pina's death recalls Teresa Gullace, shot by a German soldier on 3 March 1944, and Don Pietro combines two real priests: Giuseppe Morosini, executed at Forte Bravetta on 3 April 1944, and Pietro Pappagallo, killed at the Ardeatine Caves."
+        ],
+        "es": [
+          "Las tropas alemanas ocuparon Roma tras el armisticio italiano de septiembre de 1943 y la mantuvieron nueve meses, aunque la ciudad había sido declarada abierta, es decir, sin defensa, el 14 de agosto de 1943. Las SS tenían una cárcel y centro de interrogatorios en la Via Tasso, los judíos fueron detenidos en masa el 16 de octubre de 1943 y, tras un atentado partisano en la Via Rasella, los alemanes fusilaron a 335 rehenes en las Fosas Ardeatinas el 24 de marzo de 1944. Las tropas aliadas entraron en Roma el 4 de junio de 1944.",
+          "Rossellini empezó a rodar pocos meses después de la liberación, con poca película virgen y muchos actores no profesionales. La muerte de Pina recuerda a Teresa Gullace, asesinada por un soldado alemán el 3 de marzo de 1944, y don Pietro combina a dos sacerdotes reales: Giuseppe Morosini, fusilado en Forte Bravetta el 3 de abril de 1944, y Pietro Pappagallo, asesinado en las Fosas Ardeatinas."
+        ]
+      },
+      "journey": [
+        {
+          "place": "rome",
+          "name": {
+            "en": "Prenestino district, Rome",
+            "es": "Barrio Prenestino, Roma"
+          },
+          "coordinates": [12.5381, 41.8852],
+          "date": "1944-03",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "In a crowded working-class block, Manfredi hides with Pina and Francesco while the SS raid the building and round up the men.",
+            "es": "En un edificio obrero lleno de gente, Manfredi se esconde con Pina y Francesco mientras las SS registran el edificio y se llevan a los hombres."
+          },
+          "history": {
+            "en": "SS and fascist police carried out mass round-ups of men in Rome's eastern working-class districts in early 1944.",
+            "es": "Las SS y la policía fascista hicieron redadas masivas de hombres en los barrios obreros del este de Roma a comienzos de 1944."
+          }
+        },
+        {
+          "place": "rome",
+          "name": {
+            "en": "Gestapo headquarters, Rome",
+            "es": "Cuartel de la Gestapo, Roma"
+          },
+          "coordinates": [12.4828, 41.8931],
+          "date": "1944-03",
+          "kind": "camp",
+          "story": {
+            "en": "Betrayed, Manfredi and Don Pietro are brought before Major Bergmann, who tries to break them before morning.",
+            "es": "Traicionados, Manfredi y don Pietro son llevados ante el mayor Bergmann, que intenta quebrarlos antes del amanecer."
+          },
+          "history": {
+            "en": "Hundreds of partisans passed through the SS prison in Via Tasso, today the Museum of the Liberation of Rome.",
+            "es": "Cientos de partisanos pasaron por la cárcel de las SS en la Via Tasso, hoy Museo de la Liberación de Roma."
+          }
+        }
+      ]
+    },
+    {
+      "id": "paisan-1946",
+      "kind": "film",
+      "title": "Paisan",
+      "titleEs": "Paisà",
+      "originalTitle": "Paisà",
+      "year": 1946,
+      "era": "ww2",
+      "period": {
+        "start": "1943-07",
+        "end": "1944-12"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat", "resistance"],
+      "gold": false,
+      "directors": ["Roberto Rossellini"],
+      "countries": ["IT"],
+      "languages": ["it", "en", "de"],
+      "ids": {
+        "tmdb": 8429,
+        "tmdbType": "movie",
+        "imdb": "tt0038823",
+        "wikidata": "Q1764086"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Paisan",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Pais%C3%A0"
+      },
+      "synopsis": {
+        "en": "Six episodes follow the Allied advance up Italy, from Sicily to the Po delta, through brief encounters between American soldiers and Italians who often cannot understand each other's language.",
+        "es": "Seis episodios siguen el avance aliado por Italia, de Sicilia al delta del Po, a través de encuentros breves entre soldados estadounidenses e italianos que a menudo no entienden el idioma del otro."
+      },
+      "history": {
+        "en": [
+          "The Allied campaign in Italy began with the landings in Sicily on 10 July 1943 and ground north for almost two years. Naples was liberated on 1 October 1943 after a four-day popular uprising, Rome on 4 June 1944, and Florence in August 1944, when the Germans blew up every bridge over the Arno except the Ponte Vecchio and partisans fought in the northern districts.",
+          "By winter 1944 the front had stalled on the Gothic Line, and in the marshes of the Po delta partisans and Allied liaison officers kept fighting behind German lines; reprisals against civilians who helped them were common. Rossellini filmed on location with mostly non-professional actors, and the German surrender in Italy came on 2 May 1945."
+        ],
+        "es": [
+          "La campaña aliada en Italia comenzó con el desembarco en Sicilia el 10 de julio de 1943 y avanzó lentamente hacia el norte durante casi dos años. Nápoles fue liberada el 1 de octubre de 1943 tras un levantamiento popular de cuatro días, Roma el 4 de junio de 1944 y Florencia en agosto de 1944, cuando los alemanes volaron todos los puentes sobre el Arno salvo el Ponte Vecchio y los partisanos combatieron en los barrios del norte.",
+          "En el invierno de 1944 el frente se había estancado en la Línea Gótica, y en los pantanos del delta del Po partisanos y oficiales de enlace aliados siguieron combatiendo tras las líneas alemanas; las represalias contra los civiles que los ayudaban eran frecuentes. Rossellini filmó en escenarios reales con actores casi siempre no profesionales, y la rendición alemana en Italia llegó el 2 de mayo de 1945."
+        ]
+      },
+      "journey": [
+        {
+          "place": "sicily",
+          "name": {
+            "en": "South coast of Sicily",
+            "es": "Costa sur de Sicilia"
+          },
+          "coordinates": [14.25, 37.0667],
+          "date": "1943-07",
+          "kind": "landing",
+          "story": {
+            "en": "On the night of the landings, a village girl guides an American patrol past a minefield and is left alone with a young GI.",
+            "es": "La noche del desembarco, una muchacha del pueblo guía a una patrulla estadounidense entre un campo minado y se queda sola con un joven soldado."
+          },
+          "history": {
+            "en": "American and British troops landed on Sicily's southern and eastern coasts on 10 July 1943.",
+            "es": "Tropas estadounidenses y británicas desembarcaron en las costas sur y este de Sicilia el 10 de julio de 1943."
+          }
+        },
+        {
+          "place": "naples",
+          "name": {
+            "en": "Naples",
+            "es": "Nápoles"
+          },
+          "coordinates": [14.2486, 40.8358],
+          "date": "1943-10",
+          "kind": "city",
+          "story": {
+            "en": "A street orphan steals the boots of a drunk Black military policeman, who follows him home to the city's caves.",
+            "es": "Un niño de la calle le roba las botas a un policía militar negro borracho, que lo sigue hasta las cuevas donde vive."
+          },
+          "history": {
+            "en": "Allied troops entered a starving, heavily damaged Naples on 1 October 1943.",
+            "es": "Las tropas aliadas entraron en una Nápoles hambrienta y muy dañada el 1 de octubre de 1943."
+          }
+        },
+        {
+          "place": "rome",
+          "name": {
+            "en": "Rome",
+            "es": "Roma"
+          },
+          "coordinates": [12.4828, 41.8931],
+          "date": "1944-06",
+          "kind": "city",
+          "story": {
+            "en": "A GI who fell for a girl on liberation day meets her again months later without recognising what the city has made of her.",
+            "es": "Un soldado que se enamoró de una muchacha el día de la liberación la vuelve a encontrar meses después sin reconocer en qué la convirtió la ciudad."
+          },
+          "history": {
+            "en": "The US Fifth Army entered Rome on 4 June 1944, two days before D-Day in Normandy.",
+            "es": "El Quinto Ejército estadounidense entró en Roma el 4 de junio de 1944, dos días antes del desembarco de Normandía."
+          }
+        },
+        {
+          "place": "florence",
+          "name": {
+            "en": "Florence, Ponte Vecchio",
+            "es": "Florencia, Ponte Vecchio"
+          },
+          "coordinates": [11.2532, 43.768],
+          "date": "1944-08",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "An American nurse and a partisan cross the Arno through the Vasari Corridor into the half of the city where fighting still rages.",
+            "es": "Una enfermera estadounidense y un partisano cruzan el Arno por el Corredor Vasariano hacia la mitad de la ciudad donde aún se combate."
+          },
+          "history": {
+            "en": "On 3-4 August 1944 the retreating Germans destroyed all of Florence's bridges except the Ponte Vecchio.",
+            "es": "El 3 y 4 de agosto de 1944 los alemanes en retirada destruyeron todos los puentes de Florencia salvo el Ponte Vecchio."
+          }
+        },
+        {
+          "place": "po-delta",
+          "name": {
+            "en": "Po delta, near Porto Tolle",
+            "es": "Delta del Po, cerca de Porto Tolle"
+          },
+          "coordinates": [12.3167, 44.95],
+          "date": "1944-12",
+          "kind": "front",
+          "story": {
+            "en": "OSS men and partisans rescue downed airmen in the marshes, but German patrols close in on the families who shelter them.",
+            "es": "Agentes de la OSS y partisanos rescatan a aviadores derribados en los pantanos, pero las patrullas alemanas cercan a las familias que los protegen."
+          },
+          "history": {
+            "en": "The Po delta stayed behind German lines until the Allied spring offensive of April 1945.",
+            "es": "El delta del Po siguió tras las líneas alemanas hasta la ofensiva aliada de primavera de abril de 1945."
+          }
+        }
+      ]
+    },
+    {
+      "id": "two-women-1960",
+      "kind": "film",
+      "title": "Two Women",
+      "titleEs": "Dos mujeres",
+      "originalTitle": "La ciociara",
+      "year": 1960,
+      "era": "ww2",
+      "period": {
+        "start": "1943-07",
+        "end": "1944-06"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["home-front"],
+      "gold": false,
+      "directors": ["Vittorio De Sica"],
+      "countries": ["IT", "FR"],
+      "languages": ["it"],
+      "ids": {
+        "tmdb": 24167,
+        "tmdbType": "movie",
+        "imdb": "tt0054749",
+        "wikidata": "Q128761"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Two_Women",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Dos_mujeres_(pel%C3%ADcula_de_1960)"
+      },
+      "synopsis": {
+        "en": "To escape the bombing of Rome, widowed shopkeeper Cesira takes her twelve-year-old daughter back to her native mountains of Ciociaria, where they wait out the war among refugees, Germans and approaching Allied armies.",
+        "es": "Para escapar de los bombardeos sobre Roma, Cesira, una viuda que tiene una tienda, lleva a su hija de doce años a sus montañas natales de la Ciociaria, donde esperan el fin de la guerra entre refugiados, alemanes y ejércitos aliados que se acercan."
+      },
+      "history": {
+        "en": [
+          "The first Allied raid on Rome, on 19 July 1943, struck the San Lorenzo district and killed well over a thousand civilians. Many Romans fled to the countryside, and the hills of southern Lazio soon lay just behind the Gustav Line, where the Allies were held for months around Cassino, with German requisitions, forced labour and hunger falling on the villages.",
+          "When the French Expeditionary Corps broke through in May 1944, some of its Moroccan goumiers committed mass rapes and killings of civilians in the villages of the Ciociaria, crimes remembered in Italy as the marocchinate. Alberto Moravia based his 1957 novel on the months he spent hiding in the mountains above Fondi, and Sophia Loren's performance won the Academy Award for Best Actress."
+        ],
+        "es": [
+          "El primer bombardeo aliado sobre Roma, el 19 de julio de 1943, golpeó el barrio de San Lorenzo y mató a más de mil civiles. Muchos romanos huyeron al campo, y las colinas del sur del Lacio quedaron pronto justo detrás de la Línea Gustav, donde los Aliados fueron detenidos durante meses en torno a Cassino, mientras requisas alemanas, trabajos forzados y hambre caían sobre los pueblos.",
+          "Cuando el Cuerpo Expedicionario Francés rompió el frente en mayo de 1944, parte de sus goumiers marroquíes cometieron violaciones masivas y asesinatos de civiles en los pueblos de la Ciociaria, crímenes recordados en Italia como las marocchinate. Alberto Moravia basó su novela de 1957 en los meses que pasó escondido en las montañas sobre Fondi, y la actuación de Sophia Loren ganó el Óscar a Mejor Actriz."
+        ]
+      },
+      "journey": [
+        {
+          "place": "rome",
+          "name": {
+            "en": "San Lorenzo, Rome",
+            "es": "San Lorenzo, Roma"
+          },
+          "coordinates": [12.5157, 41.8971],
+          "date": "1943-07",
+          "kind": "home",
+          "story": {
+            "en": "After the air raids, Cesira leaves her shop in a neighbour's hands and boards a crowded train south with Rosetta.",
+            "es": "Tras los bombardeos, Cesira deja su tienda en manos de un vecino y sube con Rosetta a un tren repleto rumbo al sur."
+          },
+          "history": {
+            "en": "The raid of 19 July 1943 on the San Lorenzo rail yards devastated the surrounding working-class district.",
+            "es": "El bombardeo del 19 de julio de 1943 sobre la estación de San Lorenzo arrasó el barrio obrero que la rodea."
+          }
+        },
+        {
+          "place": "fondi",
+          "name": {
+            "en": "Mountains above Fondi, Ciociaria",
+            "es": "Montañas sobre Fondi, Ciociaria"
+          },
+          "coordinates": [13.4167, 41.35],
+          "date": "1944-05",
+          "kind": "home",
+          "primary": true,
+          "story": {
+            "en": "Among refugees in the hills, Rosetta grows close to the idealistic Michele, until the front passes through and the road home turns brutal.",
+            "es": "Entre refugiados en los cerros, Rosetta se encariña con el idealista Michele, hasta que el frente pasa por allí y el camino a casa se vuelve brutal."
+          },
+          "history": {
+            "en": "Fondi and the nearby Aurunci mountains were overrun in May 1944 during the Allied breakthrough of the Gustav Line.",
+            "es": "Fondi y los cercanos montes Aurunci fueron ocupados en mayo de 1944 durante la ruptura aliada de la Línea Gustav."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-garden-of-the-finzi-continis-1970",
+      "kind": "film",
+      "title": "The Garden of the Finzi-Continis",
+      "titleEs": "El jardín de los Finzi-Contini",
+      "originalTitle": "Il giardino dei Finzi-Contini",
+      "year": 1970,
+      "era": "ww2",
+      "period": {
+        "start": "1938",
+        "end": "1943-11"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["holocaust", "romance"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won both the Golden Bear at Berlin and the Academy Award for Best Foreign Language Film.",
+        "es": "Ganó el Oso de Oro de Berlín y el Óscar a Mejor Película Extranjera."
+      },
+      "directors": ["Vittorio De Sica"],
+      "countries": ["IT", "DE"],
+      "languages": ["it"],
+      "ids": {
+        "tmdb": 4789,
+        "tmdbType": "movie",
+        "imdb": "tt0065777",
+        "wikidata": "Q683014"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Garden_of_the_Finzi-Continis_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/El_jard%C3%ADn_de_los_Finzi-Contini_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "In Ferrara, as the racial laws shut Jews out of Italian life, young Giorgio spends long afternoons in the walled garden of a wealthy Jewish family and falls for their elusive daughter Micòl.",
+        "es": "En Ferrara, mientras las leyes raciales excluyen a los judíos de la vida italiana, el joven Giorgio pasa largas tardes en el jardín amurallado de una rica familia judía y se enamora de su esquiva hija Micòl."
+      },
+      "history": {
+        "en": [
+          "Ferrara had one of Italy's oldest Jewish communities, and many of its members had supported fascism before Mussolini's racial laws of autumn 1938 barred them from state schools, universities, public libraries, clubs and mixed marriages. The film, like Giorgio Bassani's 1962 novel, shows that exclusion arriving through small humiliations: a tennis club membership withdrawn, a library door closed.",
+          "After the German occupation in September 1943, the Italian Social Republic declared Jews enemy aliens, and in November 1943 Ferrara's Jews were arrested and sent through Italian prisons and the Fossoli camp to Auschwitz, from which very few returned. Bassani, himself from Ferrara's Jewish community, drew on real families and places in the city."
+        ],
+        "es": [
+          "Ferrara tenía una de las comunidades judías más antiguas de Italia, y muchos de sus miembros habían apoyado al fascismo antes de que las leyes raciales de Mussolini del otoño de 1938 les prohibieran las escuelas públicas, las universidades, las bibliotecas públicas, los clubes y los matrimonios mixtos. La película, como la novela de Giorgio Bassani de 1962, muestra esa exclusión a través de pequeñas humillaciones: una membresía del club de tenis retirada, la puerta de una biblioteca cerrada.",
+          "Tras la ocupación alemana de septiembre de 1943, la República Social Italiana declaró a los judíos extranjeros enemigos, y en noviembre de 1943 los judíos de Ferrara fueron arrestados y enviados por cárceles italianas y el campo de Fossoli a Auschwitz, de donde muy pocos regresaron. Bassani, miembro él mismo de la comunidad judía de Ferrara, se inspiró en familias y lugares reales de la ciudad."
+        ]
+      },
+      "journey": [
+        {
+          "place": "ferrara",
+          "name": {
+            "en": "Ferrara, Emilia-Romagna",
+            "es": "Ferrara, Emilia-Romaña"
+          },
+          "coordinates": [11.6175, 44.8392],
+          "date": "1938",
+          "kind": "home",
+          "primary": true,
+          "story": {
+            "en": "Barred from the tennis club, Jewish youths gather to play on the Finzi-Continis' private court behind the estate's high walls.",
+            "es": "Expulsados del club de tenis, jóvenes judíos se reúnen a jugar en la cancha privada de los Finzi-Contini, tras los altos muros de la finca."
+          },
+          "history": {
+            "en": "The racial laws of 1938 expelled Ferrara's Jews from schools, clubs and public institutions.",
+            "es": "Las leyes raciales de 1938 expulsaron a los judíos de Ferrara de escuelas, clubes e instituciones públicas."
+          }
+        },
+        {
+          "place": "ferrara",
+          "name": {
+            "en": "Ferrara under German occupation",
+            "es": "Ferrara bajo la ocupación alemana"
+          },
+          "coordinates": [11.6175, 44.8392],
+          "date": "1943-11",
+          "kind": "home",
+          "story": {
+            "en": "The war reaches the garden's gates as the police come for the city's Jewish families.",
+            "es": "La guerra llega a las puertas del jardín cuando la policía viene por las familias judías de la ciudad."
+          },
+          "history": {
+            "en": "Arrests of Ferrara's Jews began in November 1943, followed by deportation via Fossoli to Auschwitz.",
+            "es": "Las detenciones de judíos en Ferrara comenzaron en noviembre de 1943, seguidas de la deportación a Auschwitz vía Fossoli."
+          }
+        }
+      ]
+    },
+    {
+      "id": "mediterraneo-1991",
+      "kind": "film",
+      "title": "Mediterraneo",
+      "titleEs": "Mediterráneo",
+      "year": 1991,
+      "era": "ww2",
+      "period": {
+        "start": "1941",
+        "end": "1943"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["comedy", "romance"],
+      "gold": false,
+      "directors": ["Gabriele Salvatores"],
+      "countries": ["IT"],
+      "languages": ["it", "el"],
+      "ids": {
+        "tmdb": 38251,
+        "tmdbType": "movie",
+        "imdb": "tt0102426",
+        "wikidata": "Q661660"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Mediterraneo",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Mediterr%C3%A1neo_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "Eight misfit Italian soldiers are left to watch over a tiny Aegean island, lose their radio and their ship, and slowly forget the war as the islanders draw them into their lives.",
+        "es": "Ocho soldados italianos poco aptos para la guerra quedan a cargo de una pequeña isla del Egeo, pierden la radio y el barco, y poco a poco olvidan el conflicto mientras los isleños los integran a su vida."
+      },
+      "history": {
+        "en": [
+          "Kastellorizo, or Megisti, the easternmost Greek-speaking island, had been ruled by Italy as part of the Dodecanese since 1912. In February 1941 British commandos landed there in Operation Abstention and were driven off by an Italian counterattack; the island's Greek population lived under Italian rule until Italy's armistice in September 1943, when the British took over.",
+          "The film's idyll is a fable: the Italian occupation of Greece from 1941 also meant requisitions and a famine that killed tens of thousands in the winter of 1941-42. After 1943 Kastellorizo's remaining inhabitants were evacuated, and a fire in 1944 destroyed much of the town. The film won the Academy Award for Best Foreign Language Film."
+        ],
+        "es": [
+          "Kastellorizo, o Megisti, la isla de habla griega más oriental, estaba bajo dominio italiano como parte del Dodecaneso desde 1912. En febrero de 1941 comandos británicos desembarcaron allí en la Operación Abstention y fueron expulsados por un contraataque italiano; la población griega vivió bajo gobierno italiano hasta el armisticio de septiembre de 1943, cuando los británicos tomaron el control.",
+          "El idilio de la película es una fábula: la ocupación italiana de Grecia desde 1941 trajo también requisas y una hambruna que mató a decenas de miles de personas en el invierno de 1941-42. Después de 1943 los habitantes que quedaban en Kastellorizo fueron evacuados, y un incendio en 1944 destruyó buena parte del pueblo. La película ganó el Óscar a Mejor Película Extranjera."
+        ]
+      },
+      "journey": [
+        {
+          "place": "kastellorizo",
+          "name": {
+            "en": "Megisti (Kastellorizo), Aegean Sea",
+            "es": "Megisti (Kastellorizo), mar Egeo"
+          },
+          "coordinates": [29.585, 36.145],
+          "date": "1941",
+          "kind": "base",
+          "primary": true,
+          "story": {
+            "en": "The soldiers find an empty village, then watch the islanders return; soon they are painting church murals, playing football and falling in love.",
+            "es": "Los soldados encuentran un pueblo vacío y luego ven regresar a los isleños; pronto están pintando murales en la iglesia, jugando fútbol y enamorándose."
+          },
+          "history": {
+            "en": "British commandos briefly seized Kastellorizo in February 1941 before an Italian counterattack forced them out.",
+            "es": "Comandos británicos tomaron brevemente Kastellorizo en febrero de 1941 antes de que un contraataque italiano los expulsara."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anzio-1968",
+      "kind": "film",
+      "title": "Anzio",
+      "titleEs": "La batalla de Anzio",
+      "year": 1968,
+      "era": "ww2",
+      "period": {
+        "start": "1944-01",
+        "end": "1944-06"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Edward Dmytryk"],
+      "countries": ["IT", "US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 35284,
+        "tmdbType": "movie",
+        "imdb": "tt0062673",
+        "wikidata": "Q600205"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Anzio_(film)"
+      },
+      "synopsis": {
+        "en": "A war correspondent lands with the Allies behind the German lines south of Rome, finds the road to the capital open, and watches a cautious command waste the chance while a band of Rangers fights its way back from disaster.",
+        "es": "Un corresponsal de guerra desembarca con los Aliados detrás de las líneas alemanas al sur de Roma, descubre que el camino a la capital está libre y ve cómo un mando demasiado prudente desperdicia la oportunidad mientras un grupo de Rangers intenta volver de un desastre."
+      },
+      "history": {
+        "en": [
+          "Operation Shingle put some 36,000 Allied troops ashore at Anzio and Nettuno on 22 January 1944, almost unopposed, to outflank the Gustav Line and open the road to Rome. Major General John Lucas, the model for the film's General Lesley, chose to consolidate the beachhead, and Kesselring rushed in divisions that soon hemmed it in.",
+          "On 30 January two battalions of US Rangers were ambushed near Cisterna: of 767 men only six made it back. The beachhead held through German counterattacks in February, and Lucas was replaced by Lucian Truscott. The breakout came on 23 May; General Mark Clark then turned toward Rome, which his troops entered on 4 June 1944, instead of cutting off the retreating German Tenth Army."
+        ],
+        "es": [
+          "La Operación Shingle desembarcó a unos 36.000 soldados aliados en Anzio y Nettuno el 22 de enero de 1944, casi sin oposición, para flanquear la Línea Gustav y abrir el camino a Roma. El general John Lucas, modelo del general Lesley de la película, prefirió consolidar la cabeza de playa, y Kesselring envió a toda prisa divisiones que pronto la encerraron.",
+          "El 30 de enero dos batallones de Rangers estadounidenses cayeron en una emboscada cerca de Cisterna: de 767 hombres solo seis lograron regresar. La cabeza de playa resistió los contraataques alemanes de febrero, y Lucas fue reemplazado por Lucian Truscott. La ruptura llegó el 23 de mayo; el general Mark Clark giró entonces hacia Roma, donde entraron sus tropas el 4 de junio de 1944, en lugar de cortar la retirada del Décimo Ejército alemán."
+        ]
+      },
+      "journey": [
+        {
+          "place": "anzio",
+          "name": {
+            "en": "Anzio beachhead",
+            "es": "Cabeza de playa de Anzio"
+          },
+          "coordinates": [12.6283, 41.4472],
+          "date": "1944-01",
+          "kind": "landing",
+          "primary": true,
+          "story": {
+            "en": "The landing meets no resistance, and Ennis drives inland by jeep to find almost nothing between the beaches and Rome.",
+            "es": "El desembarco no encuentra resistencia, y Ennis avanza en jeep tierra adentro para descubrir que casi nada separa las playas de Roma."
+          },
+          "history": {
+            "en": "The Allies landed at Anzio and Nettuno on 22 January 1944 with minimal losses but did not push inland for a week.",
+            "es": "Los Aliados desembarcaron en Anzio y Nettuno el 22 de enero de 1944 con pocas bajas, pero no avanzaron tierra adentro durante una semana."
+          }
+        },
+        {
+          "place": "cisterna",
+          "name": {
+            "en": "Cisterna, south of Rome",
+            "es": "Cisterna, al sur de Roma"
+          },
+          "coordinates": [12.8306, 41.5889],
+          "date": "1944-01",
+          "kind": "battle",
+          "story": {
+            "en": "The Rangers march into a German trap, and a few survivors with Ennis escape across a minefield behind enemy lines.",
+            "es": "Los Rangers caen en una trampa alemana, y unos pocos sobrevivientes escapan con Ennis por un campo minado tras las líneas enemigas."
+          },
+          "history": {
+            "en": "At Cisterna on 30 January 1944 the 1st and 3rd Ranger Battalions were surrounded and almost entirely killed or captured.",
+            "es": "En Cisterna, el 30 de enero de 1944, los batallones 1.º y 3.º de Rangers fueron rodeados y casi todos sus hombres murieron o cayeron prisioneros."
+          }
+        },
+        {
+          "place": "rome",
+          "name": {
+            "en": "Rome",
+            "es": "Roma"
+          },
+          "coordinates": [12.4828, 41.8931],
+          "date": "1944-06",
+          "kind": "city",
+          "story": {
+            "en": "Months after the landing, the Allied columns finally roll toward the city that seemed within reach on the first day.",
+            "es": "Meses después del desembarco, las columnas aliadas avanzan por fin hacia la ciudad que parecía al alcance de la mano el primer día."
+          },
+          "history": {
+            "en": "US troops entered Rome on 4 June 1944, four and a half months after the Anzio landing.",
+            "es": "Las tropas estadounidenses entraron en Roma el 4 de junio de 1944, cuatro meses y medio después del desembarco de Anzio."
+          }
+        }
+      ]
+    },
+    {
+      "id": "captain-corellis-mandolin-2001",
+      "kind": "film",
+      "title": "Captain Corelli's Mandolin",
+      "titleEs": "La mandolina del capitán Corelli",
+      "year": 2001,
+      "era": "ww2",
+      "period": {
+        "start": "1940",
+        "end": "1943-09"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["romance", "true-story"],
+      "gold": false,
+      "directors": ["John Madden"],
+      "countries": ["GB", "US", "FR"],
+      "languages": ["en", "it", "el", "de"],
+      "ids": {
+        "tmdb": 1722,
+        "tmdbType": "movie",
+        "imdb": "tt0238112",
+        "wikidata": "Q1424825"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Captain_Corelli's_Mandolin_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/La_mandolina_del_capit%C3%A1n_Corelli"
+      },
+      "synopsis": {
+        "en": "On the Greek island of Cephalonia, a music-loving Italian artillery captain billeted in the doctor's house falls for the doctor's daughter, whose fiancé has gone to fight on the mainland, until Italy's surrender turns the Germans against their former allies.",
+        "es": "En la isla griega de Cefalonia, un capitán de artillería italiano amante de la música, alojado en la casa del médico, se enamora de la hija de este, cuyo prometido se fue a combatir al continente, hasta que la rendición de Italia vuelve a los alemanes contra sus antiguos aliados."
+      },
+      "history": {
+        "en": [
+          "Italy invaded Greece in October 1940 and was held back in the mountains of Epirus and Albania until Germany intervened in April 1941. Cephalonia was then garrisoned by the Italian 33rd Acqui Division, with a small German contingent. When Italy announced its armistice on 8 September 1943, the Germans demanded that the division hand over its weapons; after days of negotiation its men chose to resist.",
+          "Fighting from 15 to 22 September ended with the division's surrender, and German troops then executed thousands of Italian prisoners, officers first, in one of the worst war crimes committed against surrendering soldiers; estimates of the dead range from about 2,000 to over 5,000. The film softens Louis de Bernières' novel, especially its portrait of the Greek communist partisans."
+        ],
+        "es": [
+          "Italia invadió Grecia en octubre de 1940 y fue frenada en las montañas del Epiro y Albania hasta que Alemania intervino en abril de 1941. Cefalonia quedó entonces en manos de la 33.ª División Acqui italiana, con un pequeño contingente alemán. Cuando Italia anunció el armisticio el 8 de septiembre de 1943, los alemanes exigieron que la división entregara las armas; tras días de negociación, sus hombres decidieron resistir.",
+          "Los combates del 15 al 22 de septiembre terminaron con la rendición de la división, y las tropas alemanas ejecutaron después a miles de prisioneros italianos, primero a los oficiales, en uno de los peores crímenes de guerra cometidos contra soldados rendidos; las estimaciones de muertos van de unos 2.000 a más de 5.000. La película suaviza la novela de Louis de Bernières, sobre todo su retrato de los partisanos comunistas griegos."
+        ]
+      },
+      "journey": [
+        {
+          "place": "cephalonia",
+          "name": {
+            "en": "Argostoli, Cephalonia",
+            "es": "Argostoli, Cefalonia"
+          },
+          "coordinates": [20.4883, 38.1739],
+          "date": "1941",
+          "kind": "home",
+          "story": {
+            "en": "The Italian garrison arrives, and Captain Corelli, lodged in the doctor's house, slowly wins over the proud Pelagia with his mandolin.",
+            "es": "Llega la guarnición italiana, y el capitán Corelli, alojado en la casa del médico, conquista poco a poco a la orgullosa Pelagia con su mandolina."
+          },
+          "history": {
+            "en": "Italian troops occupied the Ionian Islands in spring 1941 after the German conquest of Greece.",
+            "es": "Las tropas italianas ocuparon las islas Jónicas en la primavera de 1941 tras la conquista alemana de Grecia."
+          }
+        },
+        {
+          "place": "cephalonia",
+          "name": {
+            "en": "Cephalonia",
+            "es": "Cefalonia"
+          },
+          "coordinates": [20.5525, 38.265],
+          "date": "1943-09",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "After the armistice, the Italians refuse to give up their guns and fight the Germans, with terrible consequences for Corelli's battery.",
+            "es": "Tras el armisticio, los italianos se niegan a entregar sus armas y combaten a los alemanes, con terribles consecuencias para la batería de Corelli."
+          },
+          "history": {
+            "en": "In September 1943 German troops crushed the Acqui Division on Cephalonia and massacred thousands of its men after they surrendered.",
+            "es": "En septiembre de 1943 las tropas alemanas aplastaron a la División Acqui en Cefalonia y masacraron a miles de sus hombres después de su rendición."
+          }
+        }
+      ]
+    },
+    {
+      "id": "catch-22-1970",
+      "kind": "film",
+      "title": "Catch-22",
+      "titleEs": "Trampa 22",
+      "year": 1970,
+      "era": "ww2",
+      "period": {
+        "start": "1944",
+        "end": "1944"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["air", "comedy"],
+      "gold": false,
+      "directors": ["Mike Nichols"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 10364,
+        "tmdbType": "movie",
+        "imdb": "tt0065528",
+        "wikidata": "Q1050533"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Catch-22_(film)"
+      },
+      "synopsis": {
+        "en": "Bombardier Yossarian wants only to survive the war, but every time he nears the required number of missions his colonel raises it, and the rule called Catch-22 makes sure no sane man can ever be grounded.",
+        "es": "El bombardero Yossarian solo quiere sobrevivir a la guerra, pero cada vez que se acerca al número de misiones exigido su coronel lo aumenta, y la regla llamada Trampa 22 garantiza que ningún hombre cuerdo pueda dejar de volar."
+      },
+      "history": {
+        "en": [
+          "Joseph Heller flew 60 combat missions in 1944 as a B-25 bombardier with the 488th Bomb Squadron of the 340th Bomb Group, based on Corsica, attacking bridges, rail lines and ports in Italy and southern France. Bomber crews in the Mediterranean did see their tour requirements raised as losses fell and demand grew, the grievance at the heart of the story.",
+          "Heller moved his squadron to Pianosa, a real island off Elba that is far too small for a bomber base, and turned the war into black comedy. Mike Nichols' film gathered a fleet of restored B-25s in Mexico to recreate the missions."
+        ],
+        "es": [
+          "Joseph Heller cumplió 60 misiones de combate en 1944 como bombardero de un B-25 en el 488.º Escuadrón de Bombardeo del 340.º Grupo, con base en Córcega, atacando puentes, vías férreas y puertos en Italia y el sur de Francia. Las tripulaciones de bombarderos en el Mediterráneo sí vieron aumentar el número de misiones exigidas a medida que bajaban las pérdidas y crecía la demanda, el agravio central de la historia.",
+          "Heller trasladó su escuadrón a Pianosa, una isla real cerca de Elba demasiado pequeña para una base de bombarderos, y convirtió la guerra en comedia negra. La película de Mike Nichols reunió en México una flota de B-25 restaurados para recrear las misiones."
+        ]
+      },
+      "journey": [
+        {
+          "place": "pianosa",
+          "name": {
+            "en": "Pianosa, Tuscan Archipelago",
+            "es": "Pianosa, archipiélago toscano"
+          },
+          "coordinates": [10.0833, 42.5833],
+          "date": "1944",
+          "kind": "base",
+          "primary": true,
+          "story": {
+            "en": "On the island base, Yossarian begs the doctor to ground him, Milo turns the mess hall into a global business and Colonel Cathcart keeps raising the missions.",
+            "es": "En la base de la isla, Yossarian le ruega al médico que lo deje en tierra, Milo convierte el comedor en un negocio mundial y el coronel Cathcart sigue aumentando las misiones."
+          },
+          "history": {
+            "en": "Pianosa never hosted bombers; Heller's real group flew B-25s from Alesani airfield on nearby Corsica.",
+            "es": "Pianosa nunca tuvo bombarderos; el grupo real de Heller volaba en B-25 desde el aeródromo de Alesani, en la cercana Córcega."
+          }
+        },
+        {
+          "place": "rome",
+          "name": {
+            "en": "Rome",
+            "es": "Roma"
+          },
+          "coordinates": [12.4828, 41.8931],
+          "date": "1944",
+          "kind": "city",
+          "story": {
+            "en": "On leave in liberated Rome, Yossarian searches the ruined streets and brothels for a missing girl and sees the war's cruelty up close.",
+            "es": "De permiso en la Roma liberada, Yossarian busca a una muchacha desaparecida entre calles en ruinas y burdeles y ve de cerca la crueldad de la guerra."
+          },
+          "history": {
+            "en": "After June 1944 Rome became the main leave city for Allied troops in Italy.",
+            "es": "Desde junio de 1944 Roma se convirtió en la principal ciudad de permiso para las tropas aliadas en Italia."
+          }
+        }
+      ]
+    },
+    {
+      "id": "catch-22-2019",
+      "kind": "series",
+      "title": "Catch-22",
+      "titleEs": "Catch-22",
+      "year": 2019,
+      "endYear": 2019,
+      "seasons": 1,
+      "era": "ww2",
+      "period": {
+        "start": "1944",
+        "end": "1944"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["air", "comedy"],
+      "gold": false,
+      "directors": ["Luke Davies", "David Michôd"],
+      "countries": ["US", "IT"],
+      "languages": ["en", "it"],
+      "ids": {
+        "tmdb": 82744,
+        "tmdbType": "tv",
+        "imdb": "tt7642246",
+        "wikidata": "Q48743233"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Catch-22_(miniseries)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Catch-22_(miniserie)"
+      },
+      "synopsis": {
+        "en": "A six-part retelling of Joseph Heller's novel follows bombardier Yossarian from training to an island air base, where every attempt to stop flying runs into the same absurd rule.",
+        "es": "Una nueva versión en seis capítulos de la novela de Joseph Heller sigue al bombardero Yossarian desde el entrenamiento hasta una base aérea en una isla, donde cada intento de dejar de volar choca con la misma regla absurda."
+      },
+      "history": {
+        "en": [
+          "Heller drew on his 60 missions in 1944 as a B-25 bombardier with the 340th Bomb Group, which flew from Corsica against bridges, railways and ports in Italy and southern France. Medium bombers of the Twelfth Air Force spent 1944 cutting German supply lines in Italy, and crews watched the number of missions needed to go home rise more than once.",
+          "The series moves between the fictional base on Pianosa, the black-market empire Milo builds across the Mediterranean, and leave in Rome. The Bologna mission Yossarian dreads echoes the real Allied raids on the city's rail yards and bridges in 1944."
+        ],
+        "es": [
+          "Heller se basó en sus 60 misiones de 1944 como bombardero de un B-25 del 340.º Grupo de Bombardeo, que operaba desde Córcega contra puentes, vías férreas y puertos de Italia y el sur de Francia. Los bombarderos medios de la Duodécima Fuerza Aérea pasaron 1944 cortando las líneas de abastecimiento alemanas en Italia, y las tripulaciones vieron subir más de una vez el número de misiones necesario para volver a casa.",
+          "La serie se mueve entre la base ficticia de Pianosa, el imperio de mercado negro que Milo construye por todo el Mediterráneo y los permisos en Roma. La misión sobre Bolonia que tanto teme Yossarian recuerda los ataques aliados reales contra sus estaciones y puentes en 1944."
+        ]
+      },
+      "journey": [
+        {
+          "place": "pianosa",
+          "name": {
+            "en": "Pianosa, Tuscan Archipelago",
+            "es": "Pianosa, archipiélago toscano"
+          },
+          "coordinates": [10.0833, 42.5833],
+          "date": "1944",
+          "kind": "base",
+          "primary": true,
+          "story": {
+            "en": "Yossarian poisons the soup and moves the bomb line on the map to dodge a raid on Bologna, while the mission count keeps climbing.",
+            "es": "Yossarian envenena la sopa y mueve la línea de bombardeo en el mapa para evitar un ataque a Bolonia, mientras el número de misiones sigue subiendo."
+          },
+          "history": {
+            "en": "Pianosa, a tiny island near Elba, never hosted an air base; Heller's group flew from Corsica.",
+            "es": "Pianosa, una pequeña isla cerca de Elba, nunca tuvo base aérea; el grupo de Heller volaba desde Córcega."
+          }
+        },
+        {
+          "place": "palermo",
+          "name": {
+            "en": "Palermo, Sicily",
+            "es": "Palermo, Sicilia"
+          },
+          "coordinates": [13.3613, 38.1157],
+          "date": "1944",
+          "kind": "city",
+          "story": {
+            "en": "Yossarian tags along on Milo's business trip to Sicily, where the mess officer has somehow been elected mayor.",
+            "es": "Yossarian acompaña a Milo en un viaje de negocios a Sicilia, donde el oficial del comedor ha sido elegido alcalde sin que nadie sepa cómo."
+          },
+          "history": {
+            "en": "Allied-occupied Sicily had a thriving black market in military supplies from 1943 onward.",
+            "es": "La Sicilia ocupada por los Aliados tuvo desde 1943 un floreciente mercado negro de suministros militares."
+          }
+        },
+        {
+          "place": "malta",
+          "name": {
+            "en": "Valletta, Malta",
+            "es": "La Valeta, Malta"
+          },
+          "coordinates": [14.5125, 35.8978],
+          "date": "1944",
+          "kind": "city",
+          "story": {
+            "en": "The trip continues to a fancy dinner in Malta held in Milo's honour.",
+            "es": "El viaje sigue con una elegante cena en Malta en honor de Milo."
+          },
+          "history": {
+            "en": "By 1944 Malta, besieged until late 1942, had become a rear base for Allied operations in Italy.",
+            "es": "En 1944 Malta, sitiada hasta finales de 1942, se había convertido en una base de retaguardia para las operaciones aliadas en Italia."
+          }
+        },
+        {
+          "place": "rome",
+          "name": {
+            "en": "Rome",
+            "es": "Roma"
+          },
+          "coordinates": [12.4828, 41.8931],
+          "date": "1944",
+          "kind": "city",
+          "story": {
+            "en": "On leave in Rome, Yossarian tries to deliver sad news to a girl's family and runs into the ugliest side of his own comrades.",
+            "es": "De permiso en Roma, Yossarian intenta llevar una triste noticia a la familia de una muchacha y se topa con la cara más fea de sus propios compañeros."
+          },
+          "history": {
+            "en": "Liberated in June 1944, Rome was the main leave destination for Allied airmen in Italy.",
+            "es": "Liberada en junio de 1944, Roma era el principal destino de permiso para los aviadores aliados en Italia."
+          }
+        }
+      ]
+    },
+    {
+      "id": "days-of-glory-2006",
+      "kind": "film",
+      "title": "Days of Glory",
+      "titleEs": "Días de gloria",
+      "originalTitle": "Indigènes",
+      "year": 2006,
+      "era": "ww2",
+      "period": {
+        "start": "1943",
+        "end": "1945"
+      },
+      "theaters": ["mediterranean", "western-europe"],
+      "tags": ["combat", "true-story"],
+      "gold": false,
+      "directors": ["Rachid Bouchareb"],
+      "countries": ["FR", "DZ", "MA", "BE"],
+      "languages": ["fr", "ar"],
+      "ids": {
+        "tmdb": 2016,
+        "tmdbType": "movie",
+        "imdb": "tt0444182",
+        "wikidata": "Q1466744"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Days_of_Glory_(2006_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Indig%C3%A8nes"
+      },
+      "synopsis": {
+        "en": "Four North African volunteers of the Free French army fight their way from the mountains of Italy to Provence and the snows of eastern France, liberating a country that still treats them as second-class soldiers.",
+        "es": "Cuatro voluntarios norteafricanos del ejército de la Francia Libre combaten desde las montañas de Italia hasta la Provenza y la nieve del este de Francia, liberando un país que todavía los trata como soldados de segunda."
+      },
+      "history": {
+        "en": [
+          "After the Allied landings in North Africa in November 1942, the Free French rebuilt their army largely from the colonies: Algerian, Moroccan and Tunisian riflemen, goumiers and Senegalese tirailleurs served alongside pieds-noirs. The French Expeditionary Corps fought in Italy in 1943-44, including in the mountains around Cassino, and the First French Army landed in Provence in August 1944 during Operation Dragoon, liberating Toulon and Marseille before pushing into the Vosges and Alsace.",
+          "In autumn 1944 many African soldiers were withdrawn from the front and replaced by white French volunteers, and colonial veterans' pensions were frozen from 1959. The film's success led the French government in 2006 to announce the alignment of their basic pensions, and its five lead actors shared the Best Actor award at Cannes."
+        ],
+        "es": [
+          "Tras el desembarco aliado en el norte de África en noviembre de 1942, la Francia Libre reconstruyó su ejército en gran parte con tropas coloniales: fusileros argelinos, marroquíes y tunecinos, goumiers y tiradores senegaleses sirvieron junto a los pieds-noirs. El Cuerpo Expedicionario Francés combatió en Italia en 1943 y 1944, incluso en las montañas en torno a Cassino, y el Primer Ejército francés desembarcó en la Provenza en agosto de 1944 durante la Operación Dragoon, liberó Tolón y Marsella y avanzó luego hacia los Vosgos y Alsacia.",
+          "En el otoño de 1944 muchos soldados africanos fueron retirados del frente y reemplazados por voluntarios franceses blancos, y las pensiones de los veteranos coloniales quedaron congeladas desde 1959. El éxito de la película llevó al gobierno francés a anunciar en 2006 la equiparación de sus pensiones básicas, y sus cinco protagonistas compartieron el premio al Mejor Actor en Cannes."
+        ]
+      },
+      "journey": [
+        {
+          "place": "monte-cassino",
+          "name": {
+            "en": "Mountain front near Cassino, Italy",
+            "es": "Frente de montaña cerca de Cassino, Italia"
+          },
+          "coordinates": [13.8139, 41.49],
+          "date": "1944-01",
+          "kind": "battle",
+          "story": {
+            "en": "In their first action the tirailleurs are sent up a heavily defended mountain as bait for the artillery, and pay dearly for the victory.",
+            "es": "En su primera acción, los tiradores son enviados a una montaña muy defendida como carnada para la artillería y pagan caro la victoria."
+          },
+          "history": {
+            "en": "The 3rd Algerian Infantry Division, which included the 7th Algerian Tirailleurs, fought in the mountains north of Cassino in early 1944.",
+            "es": "La 3.ª División de Infantería Argelina, que incluía al 7.º Regimiento de Tiradores Argelinos, combatió en las montañas al norte de Cassino a comienzos de 1944."
+          }
+        },
+        {
+          "place": "marseille",
+          "name": {
+            "en": "Marseille, Provence",
+            "es": "Marsella, Provenza"
+          },
+          "coordinates": [5.3764, 43.2967],
+          "date": "1944-08",
+          "kind": "city",
+          "story": {
+            "en": "Landed in Provence, the colonial troops are cheered as liberators in Marseille, and Messaoud falls for a French woman.",
+            "es": "Tras desembarcar en la Provenza, las tropas coloniales son aclamadas como libertadoras en Marsella, y Messaoud se enamora de una francesa."
+          },
+          "history": {
+            "en": "Algerian and Moroccan units played a leading part in the liberation of Marseille, completed on 28 August 1944.",
+            "es": "Unidades argelinas y marroquíes tuvieron un papel central en la liberación de Marsella, completada el 28 de agosto de 1944."
+          }
+        },
+        {
+          "place": "vosges",
+          "name": {
+            "en": "Village on the Vosges front",
+            "es": "Pueblo en el frente de los Vosgos"
+          },
+          "coordinates": [7, 48],
+          "date": "1944-11",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Sent through the snow with ammunition, the last men of the section defend an Alsatian village against a German counterattack.",
+            "es": "Enviados a través de la nieve con municiones, los últimos hombres de la sección defienden un pueblo alsaciano de un contraataque alemán."
+          },
+          "history": {
+            "en": "The First French Army fought through the Vosges in the autumn of 1944 and into Alsace, where combat lasted until February 1945.",
+            "es": "El Primer Ejército francés combatió en los Vosgos en el otoño de 1944 y luego en Alsacia, donde los combates duraron hasta febrero de 1945."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-big-red-one-1980",
+      "kind": "film",
+      "title": "The Big Red One",
+      "titleEs": "Uno rojo, división de choque",
+      "year": 1980,
+      "era": "ww2",
+      "period": {
+        "start": "1942-11",
+        "end": "1945-05"
+      },
+      "theaters": ["mediterranean", "western-europe"],
+      "tags": ["combat", "holocaust", "true-story"],
+      "gold": false,
+      "directors": ["Samuel Fuller"],
+      "countries": ["US"],
+      "languages": ["en", "de", "fr"],
+      "ids": {
+        "tmdb": 16121,
+        "tmdbType": "movie",
+        "imdb": "tt0080437",
+        "wikidata": "Q303136"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Big_Red_One",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/The_Big_Red_One"
+      },
+      "synopsis": {
+        "en": "A veteran sergeant of the First World War leads a squad of young riflemen of the US 1st Infantry Division through the whole war, from the beaches of Algeria to Sicily, Omaha Beach and a concentration camp in Czechoslovakia.",
+        "es": "Un sargento veterano de la Primera Guerra Mundial guía a un pelotón de jóvenes fusileros de la 1.ª División de Infantería estadounidense durante toda la guerra, de las playas de Argelia a Sicilia, la playa de Omaha y un campo de concentración en Checoslovaquia."
+      },
+      "history": {
+        "en": [
+          "Samuel Fuller served as a rifleman in the 16th Infantry Regiment of the 1st Infantry Division, the Big Red One, and built the film on what he lived through: the landings near Oran in November 1942, the defeat at Kasserine Pass in February 1943, the invasion of Sicily at Gela in July 1943 and the first wave at Omaha Beach on 6 June 1944, followed by the fighting across France, Belgium and the Hürtgen Forest.",
+          "In May 1945 the division reached Falkenau, today Sokolov in the Czech Republic, a subcamp of Flossenbürg, and Fuller filmed the burial of its victims with a 16 mm camera. The episodes are compressed and the squad is fictional, but the film is one of the few Hollywood war films written and directed by a combat infantryman; a restored cut with more than 40 extra minutes premiered in 2004."
+        ],
+        "es": [
+          "Samuel Fuller sirvió como fusilero en el 16.º Regimiento de Infantería de la 1.ª División, la Big Red One, y construyó la película con lo que vivió: el desembarco cerca de Orán en noviembre de 1942, la derrota del paso de Kasserine en febrero de 1943, la invasión de Sicilia en Gela en julio de 1943 y la primera oleada en la playa de Omaha el 6 de junio de 1944, seguida de los combates por Francia, Bélgica y el bosque de Hürtgen.",
+          "En mayo de 1945 la división llegó a Falkenau, hoy Sokolov en la República Checa, un subcampo de Flossenbürg, y Fuller filmó con una cámara de 16 mm el entierro de sus víctimas. Los episodios están comprimidos y el pelotón es ficticio, pero es una de las pocas películas bélicas de Hollywood escritas y dirigidas por un soldado de infantería que combatió; en 2004 se estrenó una versión restaurada con más de 40 minutos adicionales."
+        ]
+      },
+      "journey": [
+        {
+          "place": "arzew",
+          "name": {
+            "en": "Arzew, near Oran, Algeria",
+            "es": "Arzew, cerca de Orán, Argelia"
+          },
+          "coordinates": [-0.3167, 35.85],
+          "date": "1942-11",
+          "kind": "landing",
+          "story": {
+            "en": "The squad's first landing is against Vichy French troops who are expected to change sides but open fire.",
+            "es": "El primer desembarco del pelotón es contra tropas francesas de Vichy de las que se espera que cambien de bando, pero que abren fuego."
+          },
+          "history": {
+            "en": "The 1st Infantry Division landed at Arzew on 8 November 1942 during Operation Torch; Oran surrendered two days later.",
+            "es": "La 1.ª División de Infantería desembarcó en Arzew el 8 de noviembre de 1942 durante la Operación Torch; Orán se rindió dos días después."
+          }
+        },
+        {
+          "place": "kasserine-pass",
+          "name": {
+            "en": "Kasserine Pass, Tunisia",
+            "es": "Paso de Kasserine, Túnez"
+          },
+          "coordinates": [8.7424, 35.2596],
+          "date": "1943-02",
+          "kind": "battle",
+          "story": {
+            "en": "German panzers rout the Americans, and the wounded sergeant ends up a prisoner in a makeshift hospital.",
+            "es": "Los panzer alemanes derrotan a los estadounidenses, y el sargento herido termina prisionero en un hospital improvisado."
+          },
+          "history": {
+            "en": "At Kasserine on 19-24 February 1943 inexperienced American troops suffered their first major defeat against the Germans.",
+            "es": "En Kasserine, entre el 19 y el 24 de febrero de 1943, las inexpertas tropas estadounidenses sufrieron su primera gran derrota frente a los alemanes."
+          }
+        },
+        {
+          "place": "gela",
+          "name": {
+            "en": "Gela, Sicily",
+            "es": "Gela, Sicilia"
+          },
+          "coordinates": [14.25, 37.0667],
+          "date": "1943-07",
+          "kind": "landing",
+          "story": {
+            "en": "Reunited, the four surviving riflemen land in Sicily and fight their way through its hill towns.",
+            "es": "Reunidos, los cuatro fusileros que sobreviven desembarcan en Sicilia y combaten por sus pueblos en las colinas."
+          },
+          "history": {
+            "en": "The 1st Infantry Division landed at Gela on 10 July 1943 and beat off a German-Italian tank counterattack.",
+            "es": "La 1.ª División de Infantería desembarcó en Gela el 10 de julio de 1943 y rechazó un contraataque de tanques germano-italianos."
+          }
+        },
+        {
+          "place": "omaha-beach",
+          "name": {
+            "en": "Omaha Beach, Normandy",
+            "es": "Playa de Omaha, Normandía"
+          },
+          "coordinates": [-0.8686, 49.3689],
+          "date": "1944-06",
+          "kind": "landing",
+          "primary": true,
+          "story": {
+            "en": "In the first wave on D-Day, the squad is pinned on the beach and has to blow a gap in the German defences.",
+            "es": "En la primera oleada del Día D, el pelotón queda inmovilizado en la playa y debe abrir una brecha en las defensas alemanas."
+          },
+          "history": {
+            "en": "The 16th Infantry Regiment landed in the first wave at Omaha Beach on 6 June 1944 and took heavy losses.",
+            "es": "El 16.º Regimiento de Infantería desembarcó en la primera oleada en la playa de Omaha el 6 de junio de 1944 y sufrió grandes pérdidas."
+          }
+        },
+        {
+          "place": "hurtgen-forest",
+          "name": {
+            "en": "Hürtgen Forest, Germany",
+            "es": "Bosque de Hürtgen, Alemania"
+          },
+          "coordinates": [6.3, 50.7],
+          "date": "1944-11",
+          "kind": "front",
+          "story": {
+            "en": "The squad enters Germany through dark, shell-torn woods where the fighting is at its most brutal.",
+            "es": "El pelotón entra en Alemania por bosques oscuros y destrozados por la artillería, donde los combates son de los más brutales."
+          },
+          "history": {
+            "en": "The 1st Infantry Division attacked in the Hürtgen Forest in November 1944, part of a battle that cost the US Army over 30,000 casualties.",
+            "es": "La 1.ª División de Infantería atacó en el bosque de Hürtgen en noviembre de 1944, parte de una batalla que costó al ejército estadounidense más de 30.000 bajas."
+          }
+        },
+        {
+          "place": "falkenau",
+          "name": {
+            "en": "Falkenau camp (Sokolov), Czechoslovakia",
+            "es": "Campo de Falkenau (Sokolov), Checoslovaquia"
+          },
+          "coordinates": [12.6402, 50.1814],
+          "date": "1945-05",
+          "kind": "camp",
+          "story": {
+            "en": "In the last days of the war the squad liberates a concentration camp, and what they find there changes them.",
+            "es": "En los últimos días de la guerra el pelotón libera un campo de concentración, y lo que encuentran allí los cambia."
+          },
+          "history": {
+            "en": "Troops of the 1st Infantry Division liberated the Falkenau subcamp of Flossenbürg in May 1945.",
+            "es": "Tropas de la 1.ª División de Infantería liberaron el subcampo de Falkenau, dependiente de Flossenbürg, en mayo de 1945."
+          }
+        }
+      ]
+    },
+    {
+      "id": "road-47-2013",
+      "kind": "film",
+      "title": "Road 47",
+      "titleEs": "La ruta 47",
+      "originalTitle": "A Estrada 47",
+      "year": 2013,
+      "era": "ww2",
+      "period": {
+        "start": "1944-11",
+        "end": "1945-02"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat", "true-story"],
+      "gold": false,
+      "directors": ["Vicente Ferraz"],
+      "countries": ["BR", "IT", "PT"],
+      "languages": ["pt", "it", "de"],
+      "ids": {
+        "tmdb": 253020,
+        "tmdbType": "movie",
+        "imdb": "tt1841490",
+        "wikidata": "Q17053260"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Road_47"
+      },
+      "synopsis": {
+        "en": "After a night of collective panic on the Gothic Line, four Brazilian mine-clearers and their lieutenant, lost from their company in the snowbound Apennines, try to redeem themselves by clearing a mined road toward a village held by the Germans.",
+        "es": "Tras una noche de pánico colectivo en la Línea Gótica, cuatro desminadores brasileños y su teniente, separados de su compañía en los Apeninos nevados, intentan redimirse despejando un camino minado hacia un pueblo en manos alemanas."
+      },
+      "history": {
+        "en": [
+          "Brazil declared war on Germany and Italy in August 1942 after U-boats sank Brazilian merchant ships, and in 1944 sent the Brazilian Expeditionary Force, about 25,000 men, to Italy, the only Latin American ground force to fight in Europe. Most of its soldiers came from poor rural backgrounds and had never seen snow before the winter of 1944 in the Apennines.",
+          "Attached to the US Fifth Army, the Brazilians held a sector of the Gothic Line in the Reno valley, where they failed in several costly attacks on Monte Castello in November and December 1944 before taking it on 21 February 1945. About 450 Brazilian soldiers died in Italy. The film's unit and village are fictional, built from veterans' diaries, letters and interviews."
+        ],
+        "es": [
+          "Brasil declaró la guerra a Alemania e Italia en agosto de 1942, después de que submarinos alemanes hundieran barcos mercantes brasileños, y en 1944 envió a Italia la Fuerza Expedicionaria Brasileña, unos 25.000 hombres, la única fuerza terrestre latinoamericana que combatió en Europa. La mayoría de sus soldados venía de zonas rurales pobres y nunca había visto la nieve antes del invierno de 1944 en los Apeninos.",
+          "Integrados en el Quinto Ejército estadounidense, los brasileños defendieron un sector de la Línea Gótica en el valle del Reno, donde fracasaron en varios costosos ataques contra Monte Castello en noviembre y diciembre de 1944 antes de tomarlo el 21 de febrero de 1945. Unos 450 soldados brasileños murieron en Italia. La unidad y el pueblo de la película son ficticios, construidos a partir de diarios, cartas y entrevistas de veteranos."
+        ]
+      },
+      "journey": [
+        {
+          "place": "monte-castello",
+          "name": {
+            "en": "Brazilian sector of the Gothic Line, near Monte Castello",
+            "es": "Sector brasileño de la Línea Gótica, cerca de Monte Castello"
+          },
+          "coordinates": [10.9542, 44.2218],
+          "date": "1944-12",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Fearing a court-martial for abandoning their post, the men team up with a war correspondent and set out to clear an active minefield on a mountain road.",
+            "es": "Por miedo a un consejo de guerra por abandonar su puesto, los hombres se unen a un corresponsal de guerra y se proponen despejar un campo minado activo en un camino de montaña."
+          },
+          "history": {
+            "en": "The Brazilian Expeditionary Force spent the winter of 1944-45 facing German positions on Monte Castello, which it captured on 21 February 1945.",
+            "es": "La Fuerza Expedicionaria Brasileña pasó el invierno de 1944-45 frente a las posiciones alemanas de Monte Castello, que capturó el 21 de febrero de 1945."
+          }
+        }
+      ]
+    },
+    {
+      "id": "malta-story-1953",
+      "kind": "film",
+      "title": "Malta Story",
+      "titleEs": "Historia de Malta",
+      "year": 1953,
+      "era": "ww2",
+      "period": {
+        "start": "1942",
+        "end": "1942"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["air", "naval", "romance"],
+      "gold": false,
+      "directors": ["Brian Desmond Hurst"],
+      "countries": ["GB"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 65489,
+        "tmdbType": "movie",
+        "imdb": "tt0046029",
+        "wikidata": "Q1887789"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Malta_Story",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Historia_de_Malta_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "Stranded on Malta during the worst of the siege, an RAF reconnaissance pilot falls for a Maltese woman in the operations room while the island starves under constant bombing and waits for a convoy to get through.",
+        "es": "Varado en Malta en el peor momento del asedio, un piloto de reconocimiento de la RAF se enamora de una mujer maltesa de la sala de operaciones mientras la isla pasa hambre bajo bombardeos constantes y espera que llegue un convoy."
+      },
+      "history": {
+        "en": [
+          "Malta sat astride the Axis supply route from Italy to Libya, and from June 1940 to late 1942 Italian and German aircraft tried to bomb it into surrender. The spring of 1942 was the worst period: thousands of tons of bombs fell on the island, food and fuel ran out, and on 15 April King George VI awarded the whole island the George Cross.",
+          "Spitfires flown off the carriers USS Wasp and HMS Eagle restored air defence, and in August 1942 Operation Pedestal fought a convoy through; only five of fourteen merchant ships arrived, the crippled tanker Ohio last of all on 15 August. Reconnaissance aircraft and submarines from Malta then helped strangle Rommel's supplies. Alec Guinness's pilot is loosely inspired by the RAF reconnaissance ace Adrian Warburton."
+        ],
+        "es": [
+          "Malta estaba en medio de la ruta de abastecimiento del Eje entre Italia y Libia, y desde junio de 1940 hasta finales de 1942 aviones italianos y alemanes intentaron rendirla a bombazos. La primavera de 1942 fue el peor momento: miles de toneladas de bombas cayeron sobre la isla, se acabaron la comida y el combustible, y el 15 de abril el rey Jorge VI concedió a toda la isla la Cruz de Jorge.",
+          "Los Spitfire que despegaron de los portaaviones USS Wasp y HMS Eagle recuperaron la defensa aérea, y en agosto de 1942 la Operación Pedestal logró pasar un convoy; solo llegaron cinco de catorce mercantes, el último el petrolero averiado Ohio, el 15 de agosto. Los aviones de reconocimiento y submarinos de Malta ayudaron luego a asfixiar los suministros de Rommel. El piloto de Alec Guinness se inspira libremente en el as del reconocimiento de la RAF Adrian Warburton."
+        ]
+      },
+      "journey": [
+        {
+          "place": "malta",
+          "name": {
+            "en": "RAF Luqa, Malta",
+            "es": "RAF Luqa, Malta"
+          },
+          "coordinates": [14.4775, 35.8575],
+          "date": "1942",
+          "kind": "base",
+          "story": {
+            "en": "Peter Ross's plane is bombed while refuelling, and the air commander keeps him on the island to fly photo reconnaissance.",
+            "es": "El avión de Peter Ross es bombardeado mientras carga combustible, y el comandante aéreo lo retiene en la isla para vuelos de reconocimiento fotográfico."
+          },
+          "history": {
+            "en": "Luqa was Malta's main bomber and reconnaissance airfield and one of the most heavily bombed places on earth in 1942.",
+            "es": "Luqa era el principal aeródromo de bombarderos y reconocimiento de Malta y uno de los lugares más bombardeados del mundo en 1942."
+          }
+        },
+        {
+          "place": "malta",
+          "name": {
+            "en": "Ħaġar Qim temples, Malta",
+            "es": "Templos de Ħaġar Qim, Malta"
+          },
+          "coordinates": [14.4422, 35.8278],
+          "date": "1942",
+          "kind": "home",
+          "story": {
+            "en": "Peter, an archaeologist in civilian life, spends a few stolen hours with Maria among the island's Neolithic temples.",
+            "es": "Peter, arqueólogo en la vida civil, pasa unas pocas horas robadas con Maria entre los templos neolíticos de la isla."
+          },
+          "history": {
+            "en": "The megalithic temples of Ħaġar Qim and Mnajdra on Malta's south coast date from about 3600-3200 BC.",
+            "es": "Los templos megalíticos de Ħaġar Qim y Mnajdra, en la costa sur de Malta, datan de alrededor de 3600 a 3200 a. C."
+          }
+        },
+        {
+          "place": "malta",
+          "name": {
+            "en": "Grand Harbour, Valletta",
+            "es": "Gran Puerto, La Valeta"
+          },
+          "coordinates": [14.5206, 35.895],
+          "date": "1942-08",
+          "kind": "sea",
+          "primary": true,
+          "story": {
+            "en": "With famine close, the island watches the battered survivors of a relief convoy, among them the tanker Ohio, limp into harbour.",
+            "es": "Con el hambre cerca, la isla ve entrar al puerto a los maltrechos sobrevivientes de un convoy de auxilio, entre ellos el petrolero Ohio."
+          },
+          "history": {
+            "en": "The tanker Ohio, lashed between two destroyers, reached the Grand Harbour on 15 August 1942 and saved Malta's fuel supply.",
+            "es": "El petrolero Ohio, sujeto entre dos destructores, llegó al Gran Puerto el 15 de agosto de 1942 y salvó el suministro de combustible de Malta."
+          }
+        },
+        {
+          "place": "malta",
+          "name": {
+            "en": "Lascaris War Rooms, Valletta",
+            "es": "Salas de guerra de Lascaris, La Valeta"
+          },
+          "coordinates": [14.511, 35.8945],
+          "date": "1942-10",
+          "kind": "base",
+          "story": {
+            "en": "In the underground operations room, Maria follows by radio as Peter hunts for an Axis convoy bound for Libya.",
+            "es": "En la sala de operaciones subterránea, Maria sigue por radio a Peter mientras busca un convoy del Eje rumbo a Libia."
+          },
+          "history": {
+            "en": "The Lascaris tunnels under Valletta housed the RAF fighter control room that directed Malta's air defence.",
+            "es": "Los túneles de Lascaris bajo La Valeta albergaban la sala de control de cazas de la RAF que dirigía la defensa aérea de Malta."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-battle-of-neretva-1969",
+      "kind": "film",
+      "title": "The Battle of Neretva",
+      "titleEs": "La batalla del río Neretva",
+      "originalTitle": "Bitka na Neretvi",
+      "year": 1969,
+      "era": "ww2",
+      "period": {
+        "start": "1943-01",
+        "end": "1943-03"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat", "resistance", "true-story"],
+      "gold": false,
+      "directors": ["Veljko Bulajić"],
+      "countries": ["YU", "IT", "DE", "US"],
+      "languages": ["sh", "de", "it", "en"],
+      "ids": {
+        "tmdb": 34449,
+        "tmdbType": "movie",
+        "imdb": "tt0064091",
+        "wikidata": "Q510641"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Neretva_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/La_batalla_del_r%C3%ADo_Neretva"
+      },
+      "synopsis": {
+        "en": "Encircled by German, Italian and Chetnik forces in the mountains of Bosnia and Herzegovina, Tito's Partisans must get thousands of wounded and typhus-stricken comrades across the Neretva river.",
+        "es": "Cercados por fuerzas alemanas, italianas y chetniks en las montañas de Bosnia y Herzegovina, los partisanos de Tito deben cruzar el río Neretva con miles de compañeros heridos y enfermos de tifus."
+      },
+      "history": {
+        "en": [
+          "In January 1943 the Axis launched Case White, known in Yugoslavia as the Fourth Enemy Offensive, to destroy Tito's Partisans in western Bosnia. The Partisans broke south toward the Neretva, taking Prozor from its Italian garrison in February, while carrying a hospital column of about 4,000 wounded and sick.",
+          "Trapped against the river, Tito ordered the bridges at Jablanica destroyed to convince the Germans he was heading north, then turned, crossed on a makeshift bridge and defeated the Chetniks on the far bank in March 1943. The film, Yugoslavia's most expensive production, mixed international stars with Partisan legend and was nominated for the Academy Award for Best Foreign Language Film; the bridge it blew up for the cameras still lies in the river as a memorial."
+        ],
+        "es": [
+          "En enero de 1943 el Eje lanzó el Caso Blanco, conocido en Yugoslavia como la Cuarta Ofensiva Enemiga, para destruir a los partisanos de Tito en el oeste de Bosnia. Los partisanos se abrieron paso hacia el sur, hacia el Neretva, tomando Prozor a su guarnición italiana en febrero, mientras transportaban una columna hospital de unos 4.000 heridos y enfermos.",
+          "Atrapado contra el río, Tito ordenó destruir los puentes de Jablanica para convencer a los alemanes de que iba hacia el norte, luego dio media vuelta, cruzó por un puente improvisado y derrotó a los chetniks en la otra orilla en marzo de 1943. La película, la producción más cara de Yugoslavia, mezcló estrellas internacionales con la leyenda partisana y fue nominada al Óscar a Mejor Película Extranjera; el puente que voló para las cámaras sigue en el río como monumento."
+        ]
+      },
+      "journey": [
+        {
+          "place": "prozor",
+          "name": {
+            "en": "Prozor, Herzegovina",
+            "es": "Prozor, Herzegovina"
+          },
+          "coordinates": [17.61, 43.82],
+          "date": "1943-02",
+          "kind": "battle",
+          "story": {
+            "en": "The Partisans storm the Italian-held town of Prozor, and an Italian officer begins to doubt the war he is fighting.",
+            "es": "Los partisanos asaltan el pueblo de Prozor, en manos italianas, y un oficial italiano empieza a dudar de la guerra que libra."
+          },
+          "history": {
+            "en": "Partisan brigades destroyed the Italian garrison of Prozor in mid-February 1943 on their way to the Neretva.",
+            "es": "Brigadas partisanas destruyeron la guarnición italiana de Prozor a mediados de febrero de 1943 en su camino hacia el Neretva."
+          }
+        },
+        {
+          "place": "jablanica",
+          "name": {
+            "en": "Neretva bridge at Jablanica",
+            "es": "Puente del Neretva en Jablanica"
+          },
+          "coordinates": [17.7625, 43.6542],
+          "date": "1943-03",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Hemmed in on all sides, the Partisans blow up the bridge they need, bewildering the Germans, and fight to get the wounded across.",
+            "es": "Rodeados por todos lados, los partisanos vuelan el puente que necesitan, desconciertan a los alemanes y luchan por cruzar a los heridos."
+          },
+          "history": {
+            "en": "In March 1943 the Partisans crossed the Neretva at Jablanica on an improvised bridge after demolishing the original ones.",
+            "es": "En marzo de 1943 los partisanos cruzaron el Neretva en Jablanica por un puente improvisado tras demoler los originales."
+          }
+        }
+      ]
+    },
+    {
+      "id": "battle-of-sutjeska-1973",
+      "kind": "film",
+      "title": "Battle of Sutjeska",
+      "titleEs": "La quinta ofensiva",
+      "originalTitle": "Sutjeska",
+      "year": 1973,
+      "era": "ww2",
+      "period": {
+        "start": "1943-05",
+        "end": "1943-06"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat", "resistance", "true-story"],
+      "gold": false,
+      "directors": ["Stipe Delić"],
+      "countries": ["YU"],
+      "languages": ["sh", "de"],
+      "ids": {
+        "tmdb": 143355,
+        "tmdbType": "movie",
+        "imdb": "tt0070758",
+        "wikidata": "Q648289"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Sutjeska_(film)"
+      },
+      "synopsis": {
+        "en": "Tito's exhausted Partisans, resting in the Durmitor mountains, are surrounded by a vastly larger Axis force and must break out across the Sutjeska gorge in a month-long fight for survival.",
+        "es": "Los agotados partisanos de Tito, que descansan en las montañas de Durmitor, son rodeados por una fuerza del Eje muy superior y deben romper el cerco a través del cañón del Sutjeska en una lucha de un mes por sobrevivir."
+      },
+      "history": {
+        "en": [
+          "Only weeks after the Neretva, the Axis launched Case Black, the Fifth Enemy Offensive, on 15 May 1943: more than 120,000 German, Italian, Bulgarian and Croatian troops against about 22,000 Partisans encircled around the Durmitor massif in Montenegro. Tito's main force fought its way north across the Sutjeska river and through the Zelengora mountains into eastern Bosnia by mid-June.",
+          "The breakout cost the Partisans heavy losses, including many wounded who could not be carried, and Tito himself was wounded by a bomb on 9 June 1943. Richard Burton plays Tito in this state-backed epic, which Yugoslavia submitted for the Academy Awards; the battlefield at Tjentište is now a memorial park."
+        ],
+        "es": [
+          "Pocas semanas después del Neretva, el Eje lanzó el 15 de mayo de 1943 el Caso Negro, la Quinta Ofensiva Enemiga: más de 120.000 soldados alemanes, italianos, búlgaros y croatas contra unos 22.000 partisanos cercados en torno al macizo de Durmitor, en Montenegro. La fuerza principal de Tito se abrió paso hacia el norte cruzando el río Sutjeska y los montes Zelengora hasta el este de Bosnia a mediados de junio.",
+          "La ruptura del cerco costó a los partisanos grandes pérdidas, entre ellas muchos heridos que no pudieron ser trasladados, y el propio Tito fue herido por una bomba el 9 de junio de 1943. Richard Burton interpreta a Tito en esta superproducción respaldada por el Estado, que Yugoslavia presentó a los premios Óscar; el campo de batalla de Tjentište es hoy un parque memorial."
+        ]
+      },
+      "journey": [
+        {
+          "place": "durmitor",
+          "name": {
+            "en": "Durmitor mountains, Montenegro",
+            "es": "Montañas de Durmitor, Montenegro"
+          },
+          "coordinates": [19.0167, 43.1333],
+          "date": "1943-05",
+          "kind": "front",
+          "story": {
+            "en": "The Partisans' brief rest in the mountains ends as Axis divisions close in from every side.",
+            "es": "El breve descanso de los partisanos en las montañas termina cuando las divisiones del Eje los cercan por todos lados."
+          },
+          "history": {
+            "en": "Case Black began on 15 May 1943 with the encirclement of the Partisan main force around Durmitor.",
+            "es": "El Caso Negro comenzó el 15 de mayo de 1943 con el cerco de la fuerza principal partisana en torno a Durmitor."
+          }
+        },
+        {
+          "place": "sutjeska",
+          "name": {
+            "en": "Sutjeska valley at Tjentište, Bosnia",
+            "es": "Valle del Sutjeska en Tjentište, Bosnia"
+          },
+          "coordinates": [18.6906, 43.3483],
+          "date": "1943-06",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Commanders and ordinary fighters alike are thrown into a desperate breakout across the river and up the mountain slopes.",
+            "es": "Comandantes y combatientes rasos por igual se lanzan a una ruptura desesperada a través del río y por las laderas de la montaña."
+          },
+          "history": {
+            "en": "The Partisans broke through the Axis ring across the Sutjeska in June 1943 at a terrible cost in dead and wounded.",
+            "es": "Los partisanos rompieron el cerco del Eje a través del Sutjeska en junio de 1943 con un costo terrible en muertos y heridos."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sas-rogue-heroes-2022",
+      "kind": "series",
+      "title": "SAS: Rogue Heroes",
+      "titleEs": "SAS: Rogue Heroes",
+      "year": 2022,
+      "endYear": 2025,
+      "seasons": 2,
+      "era": "ww2",
+      "period": {
+        "start": "1941",
+        "end": "1944"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat", "true-story"],
+      "gold": false,
+      "directors": ["Steven Knight"],
+      "countries": ["GB"],
+      "languages": ["en", "fr", "de", "it"],
+      "ids": {
+        "tmdb": 93870,
+        "tmdbType": "tv",
+        "imdb": "tt10405370",
+        "wikidata": "Q106153037"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/SAS%3A_Rogue_Heroes"
+      },
+      "synopsis": {
+        "en": "From a Cairo hospital bed, David Stirling dreams up a tiny unit of misfits to strike deep behind Rommel's lines; with Paddy Mayne and Jock Lewes he turns it into the Special Air Service, which later fights its way through Sicily and Italy.",
+        "es": "Desde una cama de hospital en El Cairo, David Stirling imagina una pequeña unidad de inadaptados para golpear muy detrás de las líneas de Rommel; con Paddy Mayne y Jock Lewes la convierte en el Special Air Service, que luego combate en Sicilia e Italia."
+      },
+      "history": {
+        "en": [
+          "L Detachment, Special Air Service Brigade, was formed in July 1941 at Kabrit on the Suez Canal. Its first parachute operation, during Operation Crusader in November 1941, was a disaster in which only about a third of the men returned; the survivors then used Long Range Desert Group trucks to raid Axis airfields, destroying dozens of aircraft at Tamet and Agedabia in December 1941. Jock Lewes was killed at the end of that month, and Stirling was captured in Tunisia in January 1943.",
+          "Reorganised under Paddy Mayne as the Special Raiding Squadron, the unit took the coastal battery at Capo Murro di Porco on 10 July 1943, captured Augusta two days later and in October held Termoli against the 16th Panzer Division. The series is based on Ben Macintyre's 2016 book; Eve Mansour is fictional and many scenes are embellished, as the show itself warns."
+        ],
+        "es": [
+          "El Destacamento L de la Brigada del Special Air Service se formó en julio de 1941 en Kabrit, junto al canal de Suez. Su primera operación en paracaídas, durante la Operación Crusader en noviembre de 1941, fue un desastre del que volvió solo cerca de un tercio de los hombres; los sobrevivientes usaron entonces camiones del Long Range Desert Group para atacar aeródromos del Eje y destruyeron decenas de aviones en Tamet y Agedabia en diciembre de 1941. Jock Lewes murió a fines de ese mes, y Stirling fue capturado en Túnez en enero de 1943.",
+          "Reorganizada bajo el mando de Paddy Mayne como Special Raiding Squadron, la unidad tomó la batería costera de Capo Murro di Porco el 10 de julio de 1943, capturó Augusta dos días después y en octubre defendió Termoli frente a la 16.ª División Panzer. La serie se basa en el libro de Ben Macintyre de 2016; Eve Mansour es ficticia y muchas escenas están adornadas, como advierte la propia serie."
+        ]
+      },
+      "journey": [
+        {
+          "place": "cairo",
+          "name": {
+            "en": "Cairo, Egypt",
+            "es": "El Cairo, Egipto"
+          },
+          "coordinates": [31.2358, 30.0444],
+          "date": "1941-07",
+          "kind": "city",
+          "story": {
+            "en": "Injured in a parachute jump, Stirling talks his way past the generals and wins approval for a small raiding force.",
+            "es": "Herido en un salto en paracaídas, Stirling logra convencer a los generales y consigue aprobación para una pequeña fuerza de asalto."
+          },
+          "history": {
+            "en": "Stirling pitched his idea to the Middle East Command in Cairo in July 1941 after injuring himself in a training jump.",
+            "es": "Stirling presentó su idea al Mando de Oriente Medio en El Cairo en julio de 1941 tras lesionarse en un salto de entrenamiento."
+          }
+        },
+        {
+          "place": "kabrit",
+          "name": {
+            "en": "Kabrit camp, Suez Canal",
+            "es": "Campamento de Kabrit, canal de Suez"
+          },
+          "coordinates": [32.49, 30.2458],
+          "date": "1941-08",
+          "kind": "base",
+          "story": {
+            "en": "Lewes and Mayne train a band of recruits from the stockade and the ranks, stealing tents and supplies to build their camp.",
+            "es": "Lewes y Mayne entrenan a un grupo de reclutas sacados del calabozo y de la tropa, robando carpas y suministros para montar su campamento."
+          },
+          "history": {
+            "en": "L Detachment's first camp was at Kabrit on the Great Bitter Lake, where it trained from August 1941.",
+            "es": "El primer campamento del Destacamento L estuvo en Kabrit, junto al Gran Lago Amargo, donde entrenó desde agosto de 1941."
+          }
+        },
+        {
+          "place": "agedabia",
+          "name": {
+            "en": "Agedabia airfield, Libya",
+            "es": "Aeródromo de Agedabia, Libia"
+          },
+          "coordinates": [20.2253, 30.7556],
+          "date": "1941-12",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "After the failed first drop, the SAS ride in with the Long Range Desert Group and wreck rows of parked aircraft at night.",
+            "es": "Tras el fracaso del primer salto, el SAS llega con el Long Range Desert Group y destruye de noche filas de aviones estacionados."
+          },
+          "history": {
+            "en": "SAS raids on Tamet and Agedabia in December 1941 destroyed dozens of Axis aircraft on the ground.",
+            "es": "Los ataques del SAS contra Tamet y Agedabia en diciembre de 1941 destruyeron decenas de aviones del Eje en tierra."
+          }
+        },
+        {
+          "place": "benghazi",
+          "name": {
+            "en": "Benghazi harbour, Libya",
+            "es": "Puerto de Bengasi, Libia"
+          },
+          "coordinates": [20.0667, 32.1167],
+          "date": "1942-05",
+          "kind": "city",
+          "story": {
+            "en": "Stirling drives into the Axis-held port in disguise with Churchill's son Randolph to plant explosives on shipping.",
+            "es": "Stirling entra disfrazado al puerto en manos del Eje con Randolph, el hijo de Churchill, para colocar explosivos en los barcos."
+          },
+          "history": {
+            "en": "Stirling's party, including Randolph Churchill, slipped into Benghazi in May 1942 but its boats failed and no ships were sunk.",
+            "es": "El grupo de Stirling, con Randolph Churchill, entró en Bengasi en mayo de 1942, pero sus botes fallaron y no hundieron ningún barco."
+          }
+        },
+        {
+          "place": "sicily",
+          "name": {
+            "en": "Capo Murro di Porco, near Syracuse",
+            "es": "Capo Murro di Porco, cerca de Siracusa"
+          },
+          "coordinates": [15.2875, 37.0692],
+          "date": "1943-07",
+          "kind": "landing",
+          "story": {
+            "en": "Now under Mayne, the renamed squadron lands in Sicily past drowning glider troops and storms a coastal battery.",
+            "es": "Ahora bajo el mando de Mayne, el escuadrón renombrado desembarca en Sicilia entre soldados de planeadores que se ahogan y asalta una batería costera."
+          },
+          "history": {
+            "en": "On 10 July 1943 the Special Raiding Squadron destroyed the Italian battery at Capo Murro di Porco south of Syracuse.",
+            "es": "El 10 de julio de 1943 el Special Raiding Squadron destruyó la batería italiana de Capo Murro di Porco, al sur de Siracusa."
+          }
+        },
+        {
+          "place": "augusta",
+          "name": {
+            "en": "Augusta, Sicily",
+            "es": "Augusta, Sicilia"
+          },
+          "coordinates": [15.2194, 37.2303],
+          "date": "1943-07",
+          "kind": "city",
+          "story": {
+            "en": "The squadron seizes the port and gets tangled up with the local mafia, a double-dealing priest and German dive bombers.",
+            "es": "El escuadrón toma el puerto y se enreda con la mafia local, un cura con doble juego y bombarderos en picada alemanes."
+          },
+          "history": {
+            "en": "The Special Raiding Squadron landed in Augusta harbour on 12 July 1943 and held the town until the main army arrived.",
+            "es": "El Special Raiding Squadron desembarcó en el puerto de Augusta el 12 de julio de 1943 y sostuvo el pueblo hasta la llegada del ejército."
+          }
+        },
+        {
+          "place": "termoli",
+          "name": {
+            "en": "Termoli, Adriatic coast",
+            "es": "Termoli, costa adriática"
+          },
+          "coordinates": [14.9947, 42.0028],
+          "date": "1943-10",
+          "kind": "battle",
+          "story": {
+            "en": "Landed from the sea, the SAS take the town and then dig in against a panzer counterattack that falls on soldiers and civilians alike.",
+            "es": "Desembarcados desde el mar, los del SAS toman el pueblo y luego resisten un contraataque de blindados que cae sobre soldados y civiles por igual."
+          },
+          "history": {
+            "en": "Commandos and the Special Raiding Squadron seized Termoli on 3 October 1943 and held it against the 16th Panzer Division.",
+            "es": "Comandos y el Special Raiding Squadron tomaron Termoli el 3 de octubre de 1943 y la defendieron frente a la 16.ª División Panzer."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ill-met-by-moonlight-1957",
+      "kind": "film",
+      "title": "Ill Met by Moonlight",
+      "titleEs": "Emboscada nocturna",
+      "year": 1957,
+      "era": "ww2",
+      "period": {
+        "start": "1944-04",
+        "end": "1944-05"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["resistance", "espionage", "true-story"],
+      "gold": false,
+      "directors": ["Michael Powell", "Emeric Pressburger"],
+      "countries": ["GB"],
+      "languages": ["en", "de", "el"],
+      "ids": {
+        "tmdb": 54797,
+        "tmdbType": "movie",
+        "imdb": "tt0049357",
+        "wikidata": "Q3422374"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Ill_Met_by_Moonlight_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Emboscada_nocturna"
+      },
+      "synopsis": {
+        "en": "Two British officers and a band of Cretan partisans kidnap the German general commanding occupied Crete, bluff their way through the checkpoints in his own car and march him across the mountains with the whole garrison hunting them.",
+        "es": "Dos oficiales británicos y un grupo de partisanos cretenses secuestran al general alemán que manda en la Creta ocupada, pasan los controles en su propio auto y lo llevan a pie por las montañas mientras toda la guarnición los persigue."
+      },
+      "history": {
+        "en": [
+          "Germany took Crete in May 1941 in the largest airborne invasion attempted up to that time, and the island's resistance, supplied by British Special Operations Executive agents, fought on in the mountains. On the night of 26 April 1944 Patrick Leigh Fermor, William Stanley Moss and Cretan partisans stopped the car of General Heinrich Kreipe on the road from Archanes to Knossos and drove him through Heraklion's checkpoints.",
+          "For nearly three weeks they led him on foot across Mount Ida and the southern mountains until a British motor launch took them off the south coast near Rodakino on 14 May 1944. The film follows Moss's 1950 account closely; the Germans later razed villages including Anogeia in reprisals in August 1944."
+        ],
+        "es": [
+          "Alemania tomó Creta en mayo de 1941 con la mayor invasión aerotransportada intentada hasta entonces, y la resistencia de la isla, abastecida por agentes británicos del Special Operations Executive, siguió luchando en las montañas. La noche del 26 de abril de 1944, Patrick Leigh Fermor, William Stanley Moss y partisanos cretenses detuvieron el auto del general Heinrich Kreipe en la carretera de Archanes a Cnosos y lo llevaron a través de los controles de Heraclión.",
+          "Durante casi tres semanas lo condujeron a pie por el monte Ida y las montañas del sur hasta que una lancha británica los recogió en la costa sur, cerca de Rodakino, el 14 de mayo de 1944. La película sigue de cerca el relato de Moss de 1950; en agosto de 1944 los alemanes arrasaron pueblos como Anogeia en represalia."
+        ]
+      },
+      "journey": [
+        {
+          "place": "archanes",
+          "name": {
+            "en": "Archanes road, near Knossos",
+            "es": "Carretera de Archanes, cerca de Cnosos"
+          },
+          "coordinates": [25.1636, 35.2367],
+          "date": "1944-04",
+          "kind": "journey",
+          "primary": true,
+          "story": {
+            "en": "Disguised as German military police, the two officers stop the general's car at night and take the wheel.",
+            "es": "Disfrazados de policías militares alemanes, los dos oficiales detienen de noche el auto del general y toman el volante."
+          },
+          "history": {
+            "en": "General Kreipe was seized on 26 April 1944 at a road junction between Archanes and his residence at Knossos.",
+            "es": "El general Kreipe fue capturado el 26 de abril de 1944 en un cruce entre Archanes y su residencia en Cnosos."
+          }
+        },
+        {
+          "place": "anogeia",
+          "name": {
+            "en": "Anogeia, Crete",
+            "es": "Anogeia, Creta"
+          },
+          "coordinates": [24.8835, 35.2905],
+          "date": "1944-04",
+          "kind": "journey",
+          "story": {
+            "en": "Having abandoned the car, the group reaches the mountain villages, where Cretans hide and feed them.",
+            "es": "Tras abandonar el auto, el grupo llega a los pueblos de montaña, donde los cretenses los esconden y alimentan."
+          },
+          "history": {
+            "en": "The kidnappers passed through Anogeia, which the Germans destroyed in August 1944 in reprisal for resistance activity.",
+            "es": "Los secuestradores pasaron por Anogeia, que los alemanes destruyeron en agosto de 1944 en represalia por la actividad de la resistencia."
+          }
+        },
+        {
+          "place": "mount-ida",
+          "name": {
+            "en": "Mount Ida (Psiloritis), Crete",
+            "es": "Monte Ida (Psiloritis), Creta"
+          },
+          "coordinates": [24.7707, 35.2264],
+          "date": "1944-05",
+          "kind": "journey",
+          "story": {
+            "en": "Marching by night over the mountain, the captors play cat and mouse with German search parties while the general leaves clues behind.",
+            "es": "Caminando de noche por la montaña, los captores juegan al gato y al ratón con las patrullas alemanas mientras el general deja pistas a su paso."
+          },
+          "history": {
+            "en": "The party crossed Mount Ida, Crete's highest mountain, in late April and early May 1944 on the way to the south coast.",
+            "es": "El grupo cruzó el monte Ida, la montaña más alta de Creta, entre finales de abril y comienzos de mayo de 1944 camino a la costa sur."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-story-of-gi-joe-1945",
+      "kind": "film",
+      "title": "The Story of G.I. Joe",
+      "titleEs": "También somos seres humanos",
+      "year": 1945,
+      "era": "ww2",
+      "period": {
+        "start": "1943-02",
+        "end": "1944-05"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat", "biography", "true-story"],
+      "gold": false,
+      "directors": ["William A. Wellman"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 46614,
+        "tmdbType": "movie",
+        "imdb": "tt0038120",
+        "wikidata": "Q2033247"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Story_of_G.I._Joe"
+      },
+      "synopsis": {
+        "en": "War correspondent Ernie Pyle follows a green infantry company from its first defeat in Tunisia to the mud and caves in front of Monte Cassino, writing about the ordinary soldiers who do the fighting.",
+        "es": "El corresponsal de guerra Ernie Pyle sigue a una compañía de infantería novata desde su primera derrota en Túnez hasta el barro y las cuevas frente a Montecassino, escribiendo sobre los soldados comunes que hacen la guerra."
+      },
+      "history": {
+        "en": [
+          "Ernie Pyle was America's best-known war correspondent, writing about enlisted men rather than generals; he won the Pulitzer Prize in 1944. He covered the defeat at Kasserine Pass in February 1943 and then the Italian campaign, where the Allies spent the winter of 1943-44 stalled before the Gustav Line in rain, mud and mountains. The Italian scenes draw on his time with the 36th Division at San Pietro in December 1943 and with troops at Cassino.",
+          "His most famous column described soldiers bringing down the body of Captain Henry Waskow, killed on Monte Sammucro above San Pietro on 14 December 1943, the basis for Lieutenant Walker. Monte Cassino fell only on 18 May 1944. Pyle was killed by a Japanese machine gunner on Ie Shima on 18 April 1945, about two months before the film's release, and many of the extras were real veterans of the Italian campaign."
+        ],
+        "es": [
+          "Ernie Pyle fue el corresponsal de guerra más conocido de Estados Unidos, y escribía sobre los soldados rasos y no sobre los generales; ganó el Premio Pulitzer en 1944. Cubrió la derrota del paso de Kasserine en febrero de 1943 y luego la campaña de Italia, donde los Aliados pasaron el invierno de 1943-44 detenidos frente a la Línea Gustav entre lluvia, barro y montañas. Las escenas italianas se basan en su tiempo con la 36.ª División en San Pietro en diciembre de 1943 y con las tropas en Cassino.",
+          "Su columna más famosa describía a los soldados bajando el cuerpo del capitán Henry Waskow, muerto en el monte Sammucro, sobre San Pietro, el 14 de diciembre de 1943, que inspiró al teniente Walker. Montecassino no cayó hasta el 18 de mayo de 1944. Pyle murió por el disparo de un ametrallador japonés en Ie Shima el 18 de abril de 1945, unos dos meses antes del estreno de la película, y muchos de los extras eran veteranos reales de la campaña de Italia."
+        ]
+      },
+      "journey": [
+        {
+          "place": "kasserine-pass",
+          "name": {
+            "en": "Kasserine Pass, Tunisia",
+            "es": "Paso de Kasserine, Túnez"
+          },
+          "coordinates": [8.7424, 35.2596],
+          "date": "1943-02",
+          "kind": "battle",
+          "story": {
+            "en": "Pyle joins the company on its way to the front, and its baptism of fire turns into a chaotic, bloody defeat.",
+            "es": "Pyle se une a la compañía camino al frente, y su bautismo de fuego se convierte en una derrota caótica y sangrienta."
+          },
+          "history": {
+            "en": "At Kasserine in February 1943 German armour routed inexperienced American units in their first big battle against the Wehrmacht.",
+            "es": "En Kasserine, en febrero de 1943, los blindados alemanes derrotaron a unidades estadounidenses inexpertas en su primera gran batalla contra la Wehrmacht."
+          }
+        },
+        {
+          "place": "san-pietro-infine",
+          "name": {
+            "en": "Hill town near San Pietro Infine, Italy",
+            "es": "Pueblo de montaña cerca de San Pietro Infine, Italia"
+          },
+          "coordinates": [13.9625, 41.4469],
+          "date": "1943-12",
+          "kind": "battle",
+          "story": {
+            "en": "Months later Pyle finds the company, now hardened veterans, clearing a German-held Italian town house by house.",
+            "es": "Meses después Pyle encuentra a la compañía, ya convertida en veteranos endurecidos, limpiando casa por casa un pueblo italiano en manos alemanas."
+          },
+          "history": {
+            "en": "The 36th Division took San Pietro Infine after ten days of fighting in December 1943, leaving the village in ruins.",
+            "es": "La 36.ª División tomó San Pietro Infine tras diez días de combate en diciembre de 1943 y dejó el pueblo en ruinas."
+          }
+        },
+        {
+          "place": "monte-cassino",
+          "name": {
+            "en": "Before Monte Cassino, Italy",
+            "es": "Frente a Montecassino, Italia"
+          },
+          "coordinates": [13.8139, 41.49],
+          "date": "1944-01",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Stuck in front of the monastery hill, the men live in caves through rain, shelling and endless patrols, and the losses mount.",
+            "es": "Detenidos frente al cerro del monasterio, los hombres viven en cuevas entre lluvia, bombardeos y patrullas sin fin, y las bajas no dejan de crecer."
+          },
+          "history": {
+            "en": "Four battles were needed between January and May 1944 before Polish troops raised their flag over the ruins of Monte Cassino on 18 May.",
+            "es": "Hicieron falta cuatro batallas entre enero y mayo de 1944 hasta que las tropas polacas izaron su bandera sobre las ruinas de Montecassino el 18 de mayo."
+          }
+        }
+      ]
+    }
+  ]
+}

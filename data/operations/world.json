@@ -1,0 +1,2602 @@
+{
+  "operations": [
+    {
+      "id": "schlieffen-advance-marne",
+      "era": "ww1",
+      "name": {
+        "en": "German First Army: Belgium to the Marne",
+        "es": "Primer Ejército alemán: de Bélgica al Marne"
+      },
+      "summary": {
+        "en": "Von Kluck's First Army swings through Liège and Brussels, pushes the British back from Mons and Le Cateau and reaches the Marne east of Paris, where the Schlieffen Plan stalls.",
+        "es": "El Primer Ejército de von Kluck cruza Lieja y Bruselas, rechaza a los británicos en Mons y Le Cateau y llega al Marne al este de París, donde el Plan Schlieffen se detiene."
+      },
+      "faction": "central",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1914-08-04",
+      "end": "1914-09-09",
+      "path": [
+        [6.08, 50.78],
+        [5.57, 50.64],
+        [4.35, 50.85],
+        [3.95, 50.45],
+        [3.54, 50.11],
+        [3.29, 49.85],
+        [2.83, 49.42],
+        [2.89, 48.96]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/German_invasion_of_Belgium_(1914)"
+    },
+    {
+      "id": "great-retreat-marne",
+      "era": "ww1",
+      "name": {
+        "en": "Great Retreat and the Marne counterattack",
+        "es": "La Gran Retirada y el contraataque del Marne"
+      },
+      "summary": {
+        "en": "The British Expeditionary Force and the French Fifth Army fall back from Mons to south of the Marne, then turn and strike the gap between the German armies on 6 September.",
+        "es": "La Fuerza Expedicionaria Británica y el Quinto Ejército francés retroceden desde Mons hasta el sur del Marne y el 6 de septiembre contraatacan la brecha entre los ejércitos alemanes."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1914-08-23",
+      "end": "1914-09-13",
+      "path": [
+        [3.95, 50.45],
+        [3.54, 50.11],
+        [3.3, 49.6],
+        [2.95, 48.85],
+        [3.2, 49.05],
+        [3.5, 49.4]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/First_Battle_of_the_Marne"
+    },
+    {
+      "id": "german-retreat-aisne",
+      "era": "ww1",
+      "name": {
+        "en": "German retreat to the Aisne",
+        "es": "Retirada alemana al Aisne"
+      },
+      "summary": {
+        "en": "After the Marne the German right wing withdraws north to the heights of the Chemin des Dames above the Aisne, where the first trenches of the Western Front are dug.",
+        "es": "Tras el Marne, el ala derecha alemana se retira al norte hasta las alturas del Chemin des Dames sobre el Aisne, donde se cavan las primeras trincheras del frente occidental."
+      },
+      "faction": "central",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1914-09-09",
+      "end": "1914-09-14",
+      "path": [
+        [2.89, 48.96],
+        [3.1, 49.05],
+        [3.32, 49.38],
+        [3.55, 49.45]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/First_Battle_of_the_Aisne"
+    },
+    {
+      "id": "tannenberg-russian-second-army",
+      "era": "ww1",
+      "name": {
+        "en": "Tannenberg: Samsonov's Second Army",
+        "es": "Tannenberg: el Segundo Ejército de Samsónov"
+      },
+      "summary": {
+        "en": "The Russian Second Army marches north from Poland into East Prussia through Neidenburg toward Hohenstein and is encircled and destroyed by the German Eighth Army.",
+        "es": "El Segundo Ejército ruso avanza desde Polonia hacia Prusia Oriental por Neidenburg rumbo a Hohenstein y es cercado y destruido por el Octavo Ejército alemán."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1914-08-20",
+      "end": "1914-08-30",
+      "path": [
+        [20.37, 53.12],
+        [20.43, 53.36],
+        [20.28, 53.58]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Tannenberg"
+    },
+    {
+      "id": "tannenberg-german-eighth-army",
+      "era": "ww1",
+      "name": {
+        "en": "Tannenberg: German Eighth Army closes the ring",
+        "es": "Tannenberg: el Octavo Ejército alemán cierra el cerco"
+      },
+      "summary": {
+        "en": "Hindenburg and Ludendorff shift corps from the Gumbinnen front south by road and rail to close around Samsonov's army; over 90,000 Russians are captured.",
+        "es": "Hindenburg y Ludendorff trasladan cuerpos desde el frente de Gumbinnen hacia el sur por carretera y tren para cercar al ejército de Samsónov; más de 90 000 rusos caen prisioneros."
+      },
+      "faction": "central",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1914-08-21",
+      "end": "1914-08-30",
+      "path": [
+        [22.2, 54.59],
+        [20.96, 53.86],
+        [20.79, 53.65],
+        [20.8, 53.4]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Tannenberg"
+    },
+    {
+      "id": "tsingtao-blockade",
+      "era": "ww1",
+      "name": {
+        "en": "Siege of Tsingtao: Japanese and British blockade",
+        "es": "Sitio de Tsingtao: bloqueo japonés y británico"
+      },
+      "summary": {
+        "en": "Japanese warships with the British battleship Triumph blockade and shell the German naval base of Tsingtao in China until its surrender on 7 November 1914.",
+        "es": "Buques japoneses junto al acorazado británico Triumph bloquean y bombardean la base naval alemana de Tsingtao en China hasta su rendición el 7 de noviembre de 1914."
+      },
+      "faction": "entente",
+      "unit": "ship",
+      "count": 3,
+      "start": "1914-08-27",
+      "end": "1914-11-07",
+      "path": [
+        [120.55, 35.85],
+        [120.75, 35.98],
+        [120.62, 36.1],
+        [120.42, 35.95],
+        [120.55, 35.85]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Siege_of_Tsingtao"
+    },
+    {
+      "id": "tsingtao-landing",
+      "era": "ww1",
+      "name": {
+        "en": "Siege of Tsingtao: landing at Longkou",
+        "es": "Sitio de Tsingtao: desembarco en Longkou"
+      },
+      "summary": {
+        "en": "The Japanese 18th Division lands at Longkou on the Shandong coast, marches south through Jimo and, joined by a British battalion, besieges Tsingtao from land.",
+        "es": "La 18.ª División japonesa desembarca en Longkou, en la costa de Shandong, avanza al sur por Jimo y, junto a un batallón británico, sitia Tsingtao por tierra."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1914-09-02",
+      "end": "1914-11-07",
+      "path": [
+        [120.33, 37.65],
+        [120.71, 36.98],
+        [120.47, 36.38],
+        [120.4, 36.15],
+        [120.35, 36.07]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Siege_of_Tsingtao"
+    },
+    {
+      "id": "von-spee-squadron",
+      "era": "ww1",
+      "name": {
+        "en": "Von Spee's squadron: Coronel and the Falklands",
+        "es": "La escuadra de von Spee: Coronel y las Malvinas"
+      },
+      "summary": {
+        "en": "The German East Asia Squadron crosses the Pacific from the Marianas to Easter Island, sinks Cradock's cruisers off Coronel on 1 November and is destroyed at the Falklands on 8 December.",
+        "es": "La Escuadra alemana de Asia Oriental cruza el Pacífico desde las Marianas hasta la Isla de Pascua, hunde los cruceros de Cradock frente a Coronel el 1 de noviembre y es destruida en las Malvinas el 8 de diciembre."
+      },
+      "faction": "central",
+      "unit": "ship",
+      "count": 5,
+      "start": "1914-08-13",
+      "end": "1914-12-08",
+      "path": [
+        [145.77, 18.12],
+        [162.3, 11.5],
+        [171.2, 7.1],
+        [-157.4, 1.9],
+        [-140.1, -8.9],
+        [-109.35, -27.12],
+        [-80.78, -33.76],
+        [-73.9, -36.9],
+        [-76.0, -47.5],
+        [-67.3, -56.0],
+        [-57.5, -52.0]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Falkland_Islands"
+    },
+    {
+      "id": "sturdee-battlecruisers-falklands",
+      "era": "ww1",
+      "name": {
+        "en": "Sturdee's battlecruisers sail for the Falklands",
+        "es": "Los cruceros de batalla de Sturdee zarpan hacia las Malvinas"
+      },
+      "summary": {
+        "en": "After Coronel the Admiralty sends HMS Invincible and Inflexible from Devonport to the South Atlantic; they reach Port Stanley a day before von Spee arrives.",
+        "es": "Tras Coronel, el Almirantazgo envía los HMS Invincible e Inflexible desde Devonport al Atlántico Sur; llegan a Puerto Stanley un día antes que von Spee."
+      },
+      "faction": "entente",
+      "unit": "ship",
+      "count": 2,
+      "start": "1914-11-11",
+      "end": "1914-12-08",
+      "path": [
+        [-4.17, 50.37],
+        [-17.0, 28.0],
+        [-24.5, 15.5],
+        [-38.7, -18.0],
+        [-57.85, -51.69]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Falkland_Islands"
+    },
+    {
+      "id": "gallipoli-anzac-landing",
+      "era": "ww1",
+      "name": {
+        "en": "Gallipoli: landing at Anzac Cove",
+        "es": "Galípoli: desembarco en la cala Anzac"
+      },
+      "summary": {
+        "en": "Australian and New Zealand troops sail from Mudros and land at Anzac Cove on 25 April 1915; they fight for the heights of Chunuk Bair until the evacuation in December.",
+        "es": "Tropas australianas y neozelandesas zarpan de Mudros y desembarcan en la cala Anzac el 25 de abril de 1915; luchan por las alturas de Chunuk Bair hasta la evacuación en diciembre."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1915-04-25",
+      "end": "1915-12-20",
+      "path": [
+        [25.27, 39.87],
+        [26.2, 40.24],
+        [26.28, 40.25],
+        [26.31, 40.25]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Landing_at_Anzac_Cove"
+    },
+    {
+      "id": "gallipoli-helles-landing",
+      "era": "ww1",
+      "name": {
+        "en": "Gallipoli: landing at Cape Helles",
+        "es": "Galípoli: desembarco en el cabo Helles"
+      },
+      "summary": {
+        "en": "British and French troops land at the tip of the peninsula and attack Krithia and Achi Baba again and again without success; Helles is the last sector evacuated, on 9 January 1916.",
+        "es": "Tropas británicas y francesas desembarcan en la punta de la península y atacan Krithia y Achi Baba una y otra vez sin éxito; Helles es el último sector evacuado, el 9 de enero de 1916."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1915-04-25",
+      "end": "1916-01-09",
+      "path": [
+        [25.27, 39.87],
+        [26.1, 40.02],
+        [26.18, 40.05],
+        [26.23, 40.09]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Landing_at_Cape_Helles"
+    },
+    {
+      "id": "uboat-campaign-western-approaches",
+      "era": "ww1",
+      "name": {
+        "en": "U-boat campaign west of Britain",
+        "es": "Campaña de los submarinos alemanes al oeste de Gran Bretaña"
+      },
+      "summary": {
+        "en": "U-boats from the German Bight sail around Scotland to hunt merchant ships off Ireland and in the Western Approaches, including the sinking of the Lusitania in May 1915.",
+        "es": "Los U-boot parten de la bahía Alemana, rodean Escocia y cazan mercantes frente a Irlanda y en los accesos occidentales, incluido el hundimiento del Lusitania en mayo de 1915."
+      },
+      "faction": "central",
+      "unit": "submarine",
+      "count": 4,
+      "start": "1915-02-04",
+      "end": "1918-11-11",
+      "path": [
+        [7.88, 54.18],
+        [4.0, 57.5],
+        [-1.6, 59.6],
+        [-7.5, 58.0],
+        [-11.0, 54.5],
+        [-10.5, 51.0],
+        [-8.55, 51.2],
+        [-6.5, 49.8]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/U-boat_campaign"
+    },
+    {
+      "id": "uboat-flanders-flotilla",
+      "era": "ww1",
+      "name": {
+        "en": "Flanders U-boat flotilla in the Channel",
+        "es": "Flotilla de submarinos de Flandes en el canal de la Mancha"
+      },
+      "summary": {
+        "en": "Small coastal U-boats based at Zeebrugge and Bruges slip through the Dover Strait to attack shipping in the English Channel until the Flanders bases are abandoned in October 1918.",
+        "es": "Pequeños submarinos costeros con base en Zeebrugge y Brujas cruzan el estrecho de Dover para atacar el tráfico del canal de la Mancha hasta que se abandonan las bases de Flandes en octubre de 1918."
+      },
+      "faction": "central",
+      "unit": "submarine",
+      "count": 3,
+      "start": "1915-03-29",
+      "end": "1918-10-01",
+      "path": [
+        [3.2, 51.33],
+        [1.5, 51.0],
+        [-1.5, 50.2],
+        [-4.5, 49.8]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Flanders_U-boat_flotilla"
+    },
+    {
+      "id": "verdun-german-assault",
+      "era": "ww1",
+      "name": {
+        "en": "Verdun: German assault on the forts",
+        "es": "Verdún: asalto alemán a los fuertes"
+      },
+      "summary": {
+        "en": "From 21 February 1916 the German Fifth Army attacks from the Bois des Caures, takes Fort Douaumont and reaches Fleury before the French recover the ground by December.",
+        "es": "Desde el 21 de febrero de 1916 el Quinto Ejército alemán ataca desde el bosque de Caures, toma el fuerte de Douaumont y llega a Fleury antes de que los franceses recuperen el terreno en diciembre."
+      },
+      "faction": "central",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1916-02-21",
+      "end": "1916-12-18",
+      "path": [
+        [5.39, 49.28],
+        [5.44, 49.22],
+        [5.43, 49.2],
+        [5.43, 49.18]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Verdun"
+    },
+    {
+      "id": "verdun-voie-sacree",
+      "era": "ww1",
+      "name": {
+        "en": "Verdun: the Voie Sacrée",
+        "es": "Verdún: la Vía Sagrada"
+      },
+      "summary": {
+        "en": "French divisions rotate into Verdun along the single road from Bar-le-Duc, the Voie Sacrée, which carries men and supplies day and night for the whole battle.",
+        "es": "Las divisiones francesas se relevan en Verdún por la única carretera desde Bar-le-Duc, la Vía Sagrada, que lleva hombres y suministros día y noche durante toda la batalla."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1916-02-22",
+      "end": "1916-12-18",
+      "path": [
+        [5.16, 48.77],
+        [5.25, 48.95],
+        [5.38, 49.16]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Voie_Sacr%C3%A9e"
+    },
+    {
+      "id": "somme-british-infantry",
+      "era": "ww1",
+      "name": { "en": "Battle of the Somme", "es": "Batalla del Somme" },
+      "summary": {
+        "en": "British and French armies attack astride the Somme on 1 July 1916, the bloodiest day in British military history, and grind forward about ten kilometres from Albert to Le Sars by November.",
+        "es": "Los ejércitos británico y francés atacan a ambos lados del Somme el 1 de julio de 1916, el día más sangriento del ejército británico, y avanzan unos diez kilómetros de Albert a Le Sars hasta noviembre."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1916-07-01",
+      "end": "1916-11-18",
+      "path": [
+        [2.65, 50.0],
+        [2.69, 50.02],
+        [2.73, 50.04],
+        [2.75, 50.06],
+        [2.78, 50.07]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Somme"
+    },
+    {
+      "id": "somme-first-tanks",
+      "era": "ww1",
+      "name": {
+        "en": "Flers-Courcelette: the first tanks",
+        "es": "Flers-Courcelette: los primeros tanques"
+      },
+      "summary": {
+        "en": "On 15 September 1916 British Mark I tanks go into battle for the first time, rolling from Delville Wood through Flers toward Gueudecourt.",
+        "es": "El 15 de septiembre de 1916 los tanques británicos Mark I entran en combate por primera vez y avanzan desde el bosque de Delville por Flers hacia Gueudecourt."
+      },
+      "faction": "entente",
+      "unit": "tank",
+      "count": 3,
+      "start": "1916-09-15",
+      "end": "1916-11-18",
+      "path": [
+        [2.81, 50.03],
+        [2.82, 50.05],
+        [2.84, 50.06]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Flers%E2%80%93Courcelette"
+    },
+    {
+      "id": "jutland-grand-fleet",
+      "era": "ww1",
+      "name": {
+        "en": "Jutland: the Grand Fleet",
+        "es": "Jutlandia: la Gran Flota"
+      },
+      "summary": {
+        "en": "Jellicoe's Grand Fleet sails from Scapa Flow and meets the German High Seas Fleet off Jutland in the largest battleship clash of the war.",
+        "es": "La Gran Flota de Jellicoe zarpa de Scapa Flow y se enfrenta a la Flota de Alta Mar alemana frente a Jutlandia en el mayor choque de acorazados de la guerra."
+      },
+      "faction": "entente",
+      "unit": "ship",
+      "count": 5,
+      "start": "1916-05-31",
+      "end": "1916-06-01",
+      "path": [
+        [-3.05, 58.9],
+        [0.5, 57.9],
+        [5.2, 57.0],
+        [6.3, 56.3]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Jutland"
+    },
+    {
+      "id": "jutland-battlecruisers",
+      "era": "ww1",
+      "name": {
+        "en": "Jutland: Beatty's battlecruisers",
+        "es": "Jutlandia: los cruceros de batalla de Beatty"
+      },
+      "summary": {
+        "en": "Beatty's battlecruisers from Rosyth open the battle against Hipper's scouting group and lose Indefatigable and Queen Mary before leading the Germans toward Jellicoe.",
+        "es": "Los cruceros de batalla de Beatty, desde Rosyth, abren la batalla contra el grupo de exploración de Hipper y pierden el Indefatigable y el Queen Mary antes de atraer a los alemanes hacia Jellicoe."
+      },
+      "faction": "entente",
+      "unit": "ship",
+      "count": 3,
+      "start": "1916-05-31",
+      "end": "1916-06-01",
+      "path": [
+        [-3.43, 56.03],
+        [2.5, 56.6],
+        [5.6, 56.8],
+        [6.2, 56.4]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Jutland"
+    },
+    {
+      "id": "jutland-high-seas-fleet",
+      "era": "ww1",
+      "name": {
+        "en": "Jutland: the High Seas Fleet",
+        "es": "Jutlandia: la Flota de Alta Mar"
+      },
+      "summary": {
+        "en": "Scheer's High Seas Fleet sorties from the Jade, fights the British off Jutland and escapes at night past Horns Reef back to Wilhelmshaven.",
+        "es": "La Flota de Alta Mar de Scheer sale del Jade, combate a los británicos frente a Jutlandia y escapa de noche por Horns Reef de vuelta a Wilhelmshaven."
+      },
+      "faction": "central",
+      "unit": "ship",
+      "count": 5,
+      "start": "1916-05-31",
+      "end": "1916-06-01",
+      "path": [
+        [8.03, 53.73],
+        [7.3, 55.3],
+        [6.2, 56.7],
+        [7.4, 55.6],
+        [8.1, 53.53]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Jutland"
+    },
+    {
+      "id": "brusilov-offensive-lutsk",
+      "era": "ww1",
+      "name": {
+        "en": "Brusilov Offensive: the Lutsk breakthrough",
+        "es": "Ofensiva Brusílov: la ruptura de Lutsk"
+      },
+      "summary": {
+        "en": "The Russian Eighth Army breaks the Austro-Hungarian line at Olyka on 4 June 1916, takes Lutsk and drives toward Kovel until it stalls on the Stokhid river.",
+        "es": "El Octavo Ejército ruso rompe la línea austrohúngara en Olyka el 4 de junio de 1916, toma Lutsk y avanza hacia Kovel hasta detenerse en el río Stojid."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1916-06-04",
+      "end": "1916-09-20",
+      "path": [
+        [25.82, 50.72],
+        [25.32, 50.75],
+        [24.95, 51.1]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Brusilov_offensive"
+    },
+    {
+      "id": "brusilov-offensive-bukovina",
+      "era": "ww1",
+      "name": {
+        "en": "Brusilov Offensive: Bukovina",
+        "es": "Ofensiva Brusílov: Bucovina"
+      },
+      "summary": {
+        "en": "In the south the Russian Ninth Army takes Czernowitz on 18 June and pushes through Kolomyia to the Carpathian passes.",
+        "es": "En el sur, el Noveno Ejército ruso toma Chernivtsí el 18 de junio y avanza por Kolomyia hasta los pasos de los Cárpatos."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1916-06-04",
+      "end": "1916-09-20",
+      "path": [
+        [26.2, 48.45],
+        [25.93, 48.29],
+        [25.03, 48.52],
+        [24.6, 48.2]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Brusilov_offensive"
+    },
+    {
+      "id": "arab-revolt-aqaba",
+      "era": "ww1",
+      "name": {
+        "en": "Arab Revolt: the march on Aqaba",
+        "es": "Rebelión árabe: la marcha sobre Áqaba"
+      },
+      "summary": {
+        "en": "Auda abu Tayi, Sharif Nasir and T. E. Lawrence ride from Wejh across the desert through Wadi Sirhan, defeat the Ottomans at Aba el Lissan and take Aqaba from the landward side on 6 July 1917.",
+        "es": "Auda abu Tayi, el jerife Nasir y T. E. Lawrence cabalgan desde Wejh por el desierto y el Wadi Sirhan, vencen a los otomanos en Aba el Lissan y toman Áqaba por tierra el 6 de julio de 1917."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 3,
+      "start": "1917-05-09",
+      "end": "1917-07-06",
+      "path": [
+        [36.42, 26.28],
+        [37.3, 27.6],
+        [37.8, 30.6],
+        [36.68, 30.77],
+        [35.62, 30.22],
+        [35.01, 29.53]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Aqaba"
+    },
+    {
+      "id": "beersheba-to-jerusalem",
+      "era": "ww1",
+      "name": {
+        "en": "Beersheba and the road to Jerusalem",
+        "es": "Beerseba y el camino a Jerusalén"
+      },
+      "summary": {
+        "en": "The Egyptian Expeditionary Force takes Beersheba with the Australian Light Horse charge on 31 October 1917, breaks the Gaza line and enters Jerusalem on 9 December.",
+        "es": "La Fuerza Expedicionaria Egipcia toma Beerseba con la carga de la Caballería Ligera australiana el 31 de octubre de 1917, rompe la línea de Gaza y entra en Jerusalén el 9 de diciembre."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1917-10-31",
+      "end": "1917-12-09",
+      "path": [
+        [34.79, 31.25],
+        [34.64, 31.37],
+        [34.6, 31.51],
+        [34.85, 31.78],
+        [34.98, 31.84],
+        [35.18, 31.83],
+        [35.23, 31.78]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Jerusalem"
+    },
+    {
+      "id": "spring-offensive-michael",
+      "era": "ww1",
+      "name": {
+        "en": "Spring Offensive: Operation Michael",
+        "es": "Ofensiva de primavera: Operación Michael"
+      },
+      "summary": {
+        "en": "On 21 March 1918 German storm troops break the British Fifth Army near Saint-Quentin and advance over 60 kilometres until they are stopped at Villers-Bretonneux, short of Amiens.",
+        "es": "El 21 de marzo de 1918 las tropas de asalto alemanas rompen el Quinto Ejército británico cerca de Saint-Quentin y avanzan más de 60 kilómetros hasta ser detenidas en Villers-Bretonneux, antes de Amiens."
+      },
+      "faction": "central",
+      "unit": "infantry",
+      "count": 6,
+      "start": "1918-03-21",
+      "end": "1918-04-05",
+      "path": [
+        [3.29, 49.85],
+        [3.07, 49.75],
+        [2.93, 49.93],
+        [2.65, 50.0],
+        [2.52, 49.87]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Michael"
+    },
+    {
+      "id": "spring-offensive-georgette",
+      "era": "ww1",
+      "name": {
+        "en": "Spring Offensive: Battle of the Lys",
+        "es": "Ofensiva de primavera: batalla del Lys"
+      },
+      "summary": {
+        "en": "Operation Georgette strikes in Flanders from Armentières toward Hazebrouck and takes Mount Kemmel before the British and French hold the line.",
+        "es": "La Operación Georgette ataca en Flandes desde Armentières hacia Hazebrouck y toma el monte Kemmel antes de que británicos y franceses contengan la línea."
+      },
+      "faction": "central",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1918-04-09",
+      "end": "1918-04-29",
+      "path": [
+        [2.88, 50.69],
+        [2.72, 50.65],
+        [2.64, 50.64],
+        [2.81, 50.78]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Lys_(1918)"
+    },
+    {
+      "id": "spring-offensive-aisne-marne",
+      "era": "ww1",
+      "name": {
+        "en": "Spring Offensive: the Aisne to the Marne",
+        "es": "Ofensiva de primavera: del Aisne al Marne"
+      },
+      "summary": {
+        "en": "The Germans storm the Chemin des Dames on 27 May 1918 and reach the Marne at Château-Thierry; their last crossing near Dormans is thrown back by the Allied counterstroke of 18 July.",
+        "es": "Los alemanes asaltan el Chemin des Dames el 27 de mayo de 1918 y llegan al Marne en Château-Thierry; su último cruce cerca de Dormans es rechazado por el contraataque aliado del 18 de julio."
+      },
+      "faction": "central",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1918-05-27",
+      "end": "1918-07-18",
+      "path": [
+        [3.6, 49.45],
+        [3.69, 49.31],
+        [3.4, 49.05],
+        [3.64, 49.07]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Third_Battle_of_the_Aisne"
+    },
+    {
+      "id": "hundred-days-tanks",
+      "era": "ww1",
+      "name": {
+        "en": "Hundred Days: Amiens and the Hindenburg Line",
+        "es": "Cien Días: Amiens y la línea Hindenburg"
+      },
+      "summary": {
+        "en": "Hundreds of British tanks lead the attack at Amiens on 8 August 1918, the black day of the German army, then help break the Hindenburg Line at Bellicourt and push on to Le Cateau.",
+        "es": "Cientos de tanques británicos encabezan el ataque en Amiens el 8 de agosto de 1918, el día negro del ejército alemán, y luego ayudan a romper la línea Hindenburg en Bellicourt y avanzan hasta Le Cateau."
+      },
+      "faction": "entente",
+      "unit": "tank",
+      "count": 6,
+      "start": "1918-08-08",
+      "end": "1918-11-11",
+      "path": [
+        [2.52, 49.87],
+        [2.67, 49.85],
+        [2.93, 49.93],
+        [3.23, 49.96],
+        [3.54, 50.11]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Amiens_(1918)"
+    },
+    {
+      "id": "hundred-days-british-advance",
+      "era": "ww1",
+      "name": {
+        "en": "Hundred Days: Arras to Mons",
+        "es": "Cien Días: de Arras a Mons"
+      },
+      "summary": {
+        "en": "British and Canadian infantry cross the Canal du Nord, take Cambrai and Valenciennes and are back in Mons, where the British war began, when the armistice comes into force.",
+        "es": "La infantería británica y canadiense cruza el Canal du Nord, toma Cambrai y Valenciennes y está de vuelta en Mons, donde comenzó la guerra británica, cuando entra en vigor el armisticio."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1918-08-26",
+      "end": "1918-11-11",
+      "path": [
+        [2.78, 50.29],
+        [3.07, 50.18],
+        [3.24, 50.18],
+        [3.52, 50.36],
+        [3.95, 50.45]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Hundred_Days_Offensive"
+    },
+    {
+      "id": "meuse-argonne-offensive",
+      "era": "ww1",
+      "name": {
+        "en": "Meuse-Argonne Offensive",
+        "es": "Ofensiva Mosa-Argonne"
+      },
+      "summary": {
+        "en": "The American Expeditionary Forces attack through the Argonne Forest and along the Meuse from 26 September 1918 and reach the heights above Sedan by the armistice.",
+        "es": "Las Fuerzas Expedicionarias estadounidenses atacan por el bosque de Argonne y a lo largo del Mosa desde el 26 de septiembre de 1918 y llegan a las alturas sobre Sedán al llegar el armisticio."
+      },
+      "faction": "entente",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1918-09-26",
+      "end": "1918-11-11",
+      "path": [
+        [5.04, 49.23],
+        [5.14, 49.27],
+        [5.08, 49.33],
+        [4.96, 49.43],
+        [4.94, 49.68]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Meuse%E2%80%93Argonne_offensive"
+    },
+    {
+      "id": "siberian-intervention-japan",
+      "era": "ww1",
+      "name": {
+        "en": "Siberian intervention: Japanese landing at Vladivostok",
+        "es": "Intervención en Siberia: desembarco japonés en Vladivostok"
+      },
+      "summary": {
+        "en": "Japanese troopships cross the Sea of Japan in August 1918 and land the 12th Division at Vladivostok, the largest Allied contingent sent into Siberia.",
+        "es": "Transportes japoneses cruzan el mar de Japón en agosto de 1918 y desembarcan la 12.ª División en Vladivostok, el mayor contingente aliado enviado a Siberia."
+      },
+      "faction": "entente",
+      "unit": "ship",
+      "count": 3,
+      "start": "1918-08-03",
+      "end": "1918-08-12",
+      "path": [
+        [130.96, 33.95],
+        [129.8, 34.4],
+        [131.2, 38.5],
+        [131.89, 43.1]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Siberian_intervention"
+    },
+    {
+      "id": "siberian-intervention-usa",
+      "era": "ww1",
+      "name": {
+        "en": "Siberian intervention: US troops from Manila",
+        "es": "Intervención en Siberia: tropas de EE. UU. desde Manila"
+      },
+      "summary": {
+        "en": "The US 27th Infantry sails from Manila to Vladivostok in August 1918 to guard the Trans-Siberian Railway and the Czechoslovak Legion's route east.",
+        "es": "El 27.º Regimiento de Infantería de EE. UU. zarpa de Manila hacia Vladivostok en agosto de 1918 para custodiar el Transiberiano y la ruta al este de la Legión Checoslovaca."
+      },
+      "faction": "entente",
+      "unit": "ship",
+      "count": 2,
+      "start": "1918-08-07",
+      "end": "1918-08-16",
+      "path": [
+        [120.97, 14.6],
+        [121.3, 19.5],
+        [125.5, 28.5],
+        [129.8, 34.4],
+        [131.2, 38.5],
+        [131.89, 43.1]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/American_Expeditionary_Force,_Siberia"
+    },
+    {
+      "id": "north-russia-intervention",
+      "era": "ww1",
+      "name": {
+        "en": "North Russia intervention: Arkhangelsk",
+        "es": "Intervención en el norte de Rusia: Arcángel"
+      },
+      "summary": {
+        "en": "A British-led squadron sails from Murmansk into the White Sea and lands Allied troops at Arkhangelsk on 2 August 1918.",
+        "es": "Una escuadra dirigida por los británicos zarpa de Múrmansk hacia el mar Blanco y desembarca tropas aliadas en Arcángel el 2 de agosto de 1918."
+      },
+      "faction": "entente",
+      "unit": "ship",
+      "count": 3,
+      "start": "1918-07-31",
+      "end": "1918-08-02",
+      "path": [
+        [33.08, 68.97],
+        [41.0, 68.3],
+        [41.3, 66.5],
+        [40.2, 65.0],
+        [40.54, 64.54]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/North_Russia_intervention"
+    },
+    {
+      "id": "denikin-march-on-moscow",
+      "era": "interwar",
+      "name": {
+        "en": "Denikin's march on Moscow",
+        "es": "La marcha de Denikin sobre Moscú"
+      },
+      "summary": {
+        "en": "The White Armed Forces of South Russia advance from the Don through Kharkiv and Kursk and take Oryol in October 1919, the closest the Whites come to Moscow.",
+        "es": "Las Fuerzas Armadas del Sur de Rusia, del bando blanco, avanzan desde el Don por Járkov y Kursk y toman Oriol en octubre de 1919, lo más cerca que llegan los blancos a Moscú."
+      },
+      "faction": "neutral",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1919-05-19",
+      "end": "1919-10-13",
+      "path": [
+        [39.72, 47.24],
+        [36.23, 49.99],
+        [36.59, 50.6],
+        [36.19, 51.73],
+        [36.08, 52.97]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Armed_Forces_of_South_Russia"
+    },
+    {
+      "id": "red-army-southern-counteroffensive",
+      "era": "interwar",
+      "name": {
+        "en": "Red Army counteroffensive in the south",
+        "es": "Contraofensiva del Ejército Rojo en el sur"
+      },
+      "summary": {
+        "en": "The Red Army stops Denikin at Oryol, retakes Kursk, Kharkiv and Rostov and drives the Whites to Novorossiysk, where they evacuate to Crimea in March 1920.",
+        "es": "El Ejército Rojo detiene a Denikin en Oriol, recupera Kursk, Járkov y Rostov y empuja a los blancos hasta Novorosíisk, desde donde evacúan a Crimea en marzo de 1920."
+      },
+      "faction": "soviet",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1919-10-20",
+      "end": "1920-03-27",
+      "path": [
+        [36.08, 52.97],
+        [36.19, 51.73],
+        [36.23, 49.99],
+        [39.72, 47.24],
+        [37.77, 44.72]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Southern_Front_of_the_Russian_Civil_War"
+    },
+    {
+      "id": "red-army-eastern-front",
+      "era": "interwar",
+      "name": {
+        "en": "Red Army drives Kolchak across Siberia",
+        "es": "El Ejército Rojo empuja a Kolchak a través de Siberia"
+      },
+      "summary": {
+        "en": "After taking Ufa in June 1919 the Red Army crosses the Urals, captures Chelyabinsk and Omsk, and reaches Irkutsk in March 1920 after Kolchak's execution.",
+        "es": "Tras tomar Ufá en junio de 1919, el Ejército Rojo cruza los Urales, captura Cheliábinsk y Omsk y llega a Irkutsk en marzo de 1920 tras la ejecución de Kolchak."
+      },
+      "faction": "soviet",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1919-06-09",
+      "end": "1920-03-07",
+      "path": [
+        [55.97, 54.73],
+        [61.4, 55.16],
+        [73.37, 54.98],
+        [82.92, 55.03],
+        [92.87, 56.01],
+        [104.28, 52.29]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Eastern_Front_of_the_Russian_Civil_War"
+    },
+    {
+      "id": "tukhachevsky-advance-on-warsaw",
+      "era": "interwar",
+      "name": {
+        "en": "Tukhachevsky's advance on Warsaw",
+        "es": "El avance de Tujachevski sobre Varsovia"
+      },
+      "summary": {
+        "en": "The Soviet Western Front drives west from the Berezina through Minsk, Vilnius, Grodno and Białystok and reaches the outskirts of Warsaw at Radzymin in August 1920.",
+        "es": "El Frente Occidental soviético avanza desde el Berézina por Minsk, Vilna, Grodno y Białystok y llega a las afueras de Varsovia en Radzymin en agosto de 1920."
+      },
+      "faction": "soviet",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1920-07-04",
+      "end": "1920-08-15",
+      "path": [
+        [28.6, 54.6],
+        [27.56, 53.9],
+        [25.28, 54.69],
+        [23.83, 53.68],
+        [23.16, 53.13],
+        [21.18, 52.42]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Warsaw_(1920)"
+    },
+    {
+      "id": "polish-counteroffensive-wieprz",
+      "era": "interwar",
+      "name": {
+        "en": "Battle of Warsaw: Piłsudski's counterstroke",
+        "es": "Batalla de Varsovia: el contragolpe de Piłsudski"
+      },
+      "summary": {
+        "en": "On 16 August 1920 Polish forces strike north from the Wieprz river into the Soviet rear, rout Tukhachevsky's armies and pursue them to the Niemen.",
+        "es": "El 16 de agosto de 1920 las fuerzas polacas atacan hacia el norte desde el río Wieprz contra la retaguardia soviética, derrotan a los ejércitos de Tujachevski y los persiguen hasta el Niemen."
+      },
+      "faction": "allies",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1920-08-16",
+      "end": "1920-09-26",
+      "path": [
+        [21.85, 51.56],
+        [22.26, 52.17],
+        [22.59, 52.91],
+        [23.16, 53.13],
+        [23.83, 53.68]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Warsaw_(1920)"
+    },
+    {
+      "id": "march-on-rome",
+      "era": "interwar",
+      "name": { "en": "March on Rome", "es": "Marcha sobre Roma" },
+      "summary": {
+        "en": "Fascist Blackshirt columns gather around Perugia and north of Rome from 27 October 1922; the king refuses martial law and Mussolini is named prime minister.",
+        "es": "Columnas de camisas negras fascistas se concentran en Perugia y al norte de Roma desde el 27 de octubre de 1922; el rey rechaza la ley marcial y Mussolini es nombrado primer ministro."
+      },
+      "faction": "axis",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1922-10-27",
+      "end": "1922-10-31",
+      "path": [
+        [12.39, 43.11],
+        [12.7, 42.95],
+        [12.62, 42.05],
+        [12.48, 41.89]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/March_on_Rome"
+    },
+    {
+      "id": "japanese-invasion-manchuria",
+      "era": "interwar",
+      "name": {
+        "en": "Japanese invasion of Manchuria",
+        "es": "Invasión japonesa de Manchuria"
+      },
+      "summary": {
+        "en": "After staging the Mukden Incident on 18 September 1931, the Kwantung Army takes Changchun, crosses the Nenjiang to Qiqihar and enters Harbin in February 1932.",
+        "es": "Tras fabricar el incidente de Mukden el 18 de septiembre de 1931, el Ejército de Kwantung toma Changchun, cruza el Nen hasta Qiqihar y entra en Harbin en febrero de 1932."
+      },
+      "faction": "axis",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1931-09-18",
+      "end": "1932-02-05",
+      "path": [
+        [123.43, 41.8],
+        [125.32, 43.88],
+        [124.2, 46.9],
+        [123.95, 47.34],
+        [126.63, 45.75]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Japanese_invasion_of_Manchuria"
+    },
+    {
+      "id": "jinzhou-operation",
+      "era": "interwar",
+      "name": { "en": "Jinzhou operation", "es": "Operación de Jinzhou" },
+      "summary": {
+        "en": "Japanese troops move southwest from Mukden along the railway and take Jinzhou on 3 January 1932, the last seat of Zhang Xueliang's government in Manchuria.",
+        "es": "Tropas japonesas avanzan al suroeste desde Mukden por el ferrocarril y toman Jinzhou el 3 de enero de 1932, última sede del gobierno de Zhang Xueliang en Manchuria."
+      },
+      "faction": "axis",
+      "unit": "infantry",
+      "count": 3,
+      "start": "1931-12-28",
+      "end": "1932-01-03",
+      "path": [
+        [123.43, 41.8],
+        [122.07, 41.2],
+        [121.13, 41.1]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Jinzhou_Operation"
+    },
+    {
+      "id": "chaco-war-paraguayan-offensive",
+      "era": "interwar",
+      "name": {
+        "en": "Chaco War: Paraguay's advance across the Chaco",
+        "es": "Guerra del Chaco: el avance paraguayo por el Chaco"
+      },
+      "summary": {
+        "en": "Paraguayan troops supplied from Puerto Casado win at Boquerón in 1932, encircle the Bolivians at Campo Vía and push west to the Pilcomayo and the outskirts of Villamontes by 1935. Inland points are approximate.",
+        "es": "Tropas paraguayas abastecidas desde Puerto Casado vencen en Boquerón en 1932, cercan a los bolivianos en Campo Vía y avanzan al oeste hasta el Pilcomayo y las afueras de Villamontes en 1935."
+      },
+      "faction": "neutral",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1932-09-09",
+      "end": "1935-06-12",
+      "path": [
+        [-57.94, -22.29],
+        [-60.7, -21.52],
+        [-61.2, -22.1],
+        [-62.2, -22.4],
+        [-63.3, -21.3]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Chaco_War"
+    },
+    {
+      "id": "chaco-war-bolivian-advance",
+      "era": "interwar",
+      "name": {
+        "en": "Chaco War: Bolivian advance to Boquerón",
+        "es": "Guerra del Chaco: avance boliviano a Boquerón"
+      },
+      "summary": {
+        "en": "Bolivian columns push east from Villamontes into the disputed Chaco Boreal in mid-1932 and seize the Paraguayan fort of Boquerón, which becomes the first great battle of the war.",
+        "es": "Columnas bolivianas avanzan al este desde Villamontes hacia el Chaco Boreal disputado a mediados de 1932 y ocupan el fortín paraguayo de Boquerón, escenario de la primera gran batalla."
+      },
+      "faction": "neutral",
+      "unit": "infantry",
+      "count": 3,
+      "start": "1932-06-15",
+      "end": "1932-09-09",
+      "path": [
+        [-63.46, -21.26],
+        [-62.3, -21.6],
+        [-61.5, -21.5],
+        [-60.7, -21.52]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Boquer%C3%B3n_(1932)"
+    },
+    {
+      "id": "italian-invasion-ethiopia",
+      "era": "interwar",
+      "name": {
+        "en": "Italian invasion of Ethiopia: the northern front",
+        "es": "Invasión italiana de Etiopía: el frente norte"
+      },
+      "summary": {
+        "en": "Italian columns with tankettes cross from Eritrea on 3 October 1935, take Adwa and Mek'ele, win at Amba Aradam and Maychew and enter Addis Ababa on 5 May 1936.",
+        "es": "Columnas italianas con tanquetas cruzan desde Eritrea el 3 de octubre de 1935, toman Adua y Mekele, vencen en Amba Aradam y Maychew y entran en Adís Abeba el 5 de mayo de 1936."
+      },
+      "faction": "axis",
+      "unit": "tank",
+      "count": 5,
+      "start": "1935-10-03",
+      "end": "1936-05-05",
+      "path": [
+        [38.9, 14.8],
+        [38.9, 14.17],
+        [39.47, 13.5],
+        [39.5, 13.3],
+        [39.54, 12.78],
+        [39.63, 11.13],
+        [38.75, 9.03]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Second_Italo-Ethiopian_War"
+    },
+    {
+      "id": "italian-bombers-ethiopia",
+      "era": "interwar",
+      "name": {
+        "en": "Italian bombing of Ethiopia",
+        "es": "Bombardeos italianos en Etiopía"
+      },
+      "summary": {
+        "en": "Italian Caproni bombers fly from Eritrea over the northern front, dropping bombs and mustard gas on Ethiopian armies and towns.",
+        "es": "Bombarderos Caproni italianos despegan de Eritrea sobre el frente norte y lanzan bombas y gas mostaza contra los ejércitos y pueblos etíopes."
+      },
+      "faction": "axis",
+      "unit": "bomber",
+      "count": 3,
+      "start": "1935-10-03",
+      "end": "1936-05-05",
+      "path": [
+        [38.93, 15.32],
+        [39.47, 13.5],
+        [39.54, 12.78],
+        [39.63, 11.13]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Second_Italo-Ethiopian_War"
+    },
+    {
+      "id": "nationalist-advance-on-madrid",
+      "era": "interwar",
+      "name": {
+        "en": "Army of Africa's advance on Madrid",
+        "es": "Avance del Ejército de África sobre Madrid"
+      },
+      "summary": {
+        "en": "Franco's Army of Africa marches from Seville through Mérida and Badajoz, relieves the Alcázar of Toledo and reaches the Casa de Campo on 8 November 1936, where Madrid holds.",
+        "es": "El Ejército de África de Franco avanza desde Sevilla por Mérida y Badajoz, libera el Alcázar de Toledo y llega a la Casa de Campo el 8 de noviembre de 1936, donde Madrid resiste."
+      },
+      "faction": "nationalist",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1936-08-02",
+      "end": "1936-11-08",
+      "path": [
+        [-5.99, 37.39],
+        [-6.34, 38.92],
+        [-6.97, 38.88],
+        [-5.5, 39.88],
+        [-4.83, 39.97],
+        [-4.03, 39.86],
+        [-3.75, 40.42]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Siege_of_Madrid"
+    },
+    {
+      "id": "bombing-of-guernica",
+      "era": "interwar",
+      "name": {
+        "en": "Condor Legion bombing of Guernica",
+        "es": "Bombardeo de Guernica por la Legión Cóndor"
+      },
+      "summary": {
+        "en": "On 26 April 1937 German Condor Legion and Italian bombers flying from Burgos and Vitoria destroy the Basque town of Guernica on market day.",
+        "es": "El 26 de abril de 1937 bombarderos alemanes de la Legión Cóndor e italianos, desde Burgos y Vitoria, destruyen la villa vasca de Guernica en día de mercado."
+      },
+      "faction": "axis",
+      "unit": "bomber",
+      "count": 4,
+      "start": "1937-04-26",
+      "end": "1937-04-26",
+      "path": [
+        [-3.7, 42.34],
+        [-2.67, 42.85],
+        [-2.68, 43.32]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Bombing_of_Guernica"
+    },
+    {
+      "id": "battle-of-the-ebro",
+      "era": "interwar",
+      "name": { "en": "Battle of the Ebro", "es": "Batalla del Ebro" },
+      "summary": {
+        "en": "The Republican army crosses the Ebro on 25 July 1938 and nearly reaches Gandesa, then is ground down for months and recrosses the river on 16 November.",
+        "es": "El ejército republicano cruza el Ebro el 25 de julio de 1938 y casi alcanza Gandesa; luego es desgastado durante meses y vuelve a cruzar el río el 16 de noviembre."
+      },
+      "faction": "republican",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1938-07-25",
+      "end": "1938-11-16",
+      "path": [
+        [0.82, 41.15],
+        [0.64, 41.09],
+        [0.47, 41.07],
+        [0.45, 41.06],
+        [0.47, 41.07],
+        [0.64, 41.09],
+        [0.55, 41.23]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Ebro"
+    },
+    {
+      "id": "catalonia-offensive",
+      "era": "interwar",
+      "name": {
+        "en": "Nationalist offensive in Catalonia",
+        "es": "Ofensiva nacional sobre Cataluña"
+      },
+      "summary": {
+        "en": "Nationalist armies break out of the Segre front on 23 December 1938, take Tarragona and Barcelona in January and reach the French border in February 1939.",
+        "es": "Los ejércitos nacionales salen del frente del Segre el 23 de diciembre de 1938, toman Tarragona y Barcelona en enero y llegan a la frontera francesa en febrero de 1939."
+      },
+      "faction": "nationalist",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1938-12-23",
+      "end": "1939-02-10",
+      "path": [
+        [0.62, 41.61],
+        [0.87, 41.52],
+        [1.16, 41.38],
+        [1.7, 41.35],
+        [2.18, 41.38],
+        [2.82, 41.98],
+        [2.96, 42.27],
+        [2.86, 42.46]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Catalonia_Offensive"
+    },
+    {
+      "id": "north-china-offensive-1937",
+      "era": "ww2",
+      "name": {
+        "en": "Marco Polo Bridge and the North China offensive",
+        "es": "El puente de Marco Polo y la ofensiva del norte de China"
+      },
+      "summary": {
+        "en": "After the clash at the Marco Polo Bridge on 7 July 1937, Japanese armies take Beiping, drive south down the railways to Baoding and Shijiazhuang and capture Taiyuan in November.",
+        "es": "Tras el choque en el puente de Marco Polo el 7 de julio de 1937, los ejércitos japoneses toman Beiping, bajan por los ferrocarriles hasta Baoding y Shijiazhuang y capturan Taiyuan en noviembre."
+      },
+      "faction": "axis",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1937-07-07",
+      "end": "1937-11-08",
+      "path": [
+        [116.21, 39.85],
+        [115.46, 38.87],
+        [114.51, 38.04],
+        [113.58, 37.86],
+        [112.55, 37.87]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Taiyuan"
+    },
+    {
+      "id": "shanghai-to-nanjing",
+      "era": "ww2",
+      "name": { "en": "Shanghai to Nanjing", "es": "De Shanghái a Nankín" },
+      "summary": {
+        "en": "After three months of fighting in Shanghai from 13 August 1937 and the landing at Hangzhou Bay, Japanese armies race up the Yangtze delta and take Nanjing on 13 December, followed by the massacre.",
+        "es": "Tras tres meses de combates en Shanghái desde el 13 de agosto de 1937 y el desembarco en la bahía de Hangzhou, los ejércitos japoneses avanzan por el delta del Yangtsé y toman Nankín el 13 de diciembre, seguido de la masacre."
+      },
+      "faction": "axis",
+      "unit": "infantry",
+      "count": 6,
+      "start": "1937-08-13",
+      "end": "1937-12-13",
+      "path": [
+        [121.47, 31.23],
+        [121.25, 31.3],
+        [120.62, 31.3],
+        [120.3, 31.57],
+        [119.95, 31.78],
+        [119.43, 32.19],
+        [118.78, 32.06]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Nanking"
+    },
+    {
+      "id": "pearl-harbor-strike-force",
+      "era": "ww2",
+      "name": {
+        "en": "Pearl Harbor: the Kido Butai crosses the Pacific",
+        "es": "Pearl Harbor: la Kido Butai cruza el Pacífico"
+      },
+      "summary": {
+        "en": "Six Japanese carriers leave Hitokappu Bay on 26 November 1941 and cross the empty North Pacific in radio silence to a launch point north of Oahu.",
+        "es": "Seis portaaviones japoneses salen de la bahía de Hitokappu el 26 de noviembre de 1941 y cruzan en silencio de radio el Pacífico norte hasta un punto de lanzamiento al norte de Oahu."
+      },
+      "faction": "axis",
+      "unit": "carrier",
+      "count": 6,
+      "start": "1941-11-26",
+      "end": "1941-12-07",
+      "path": [
+        [147.67, 44.97],
+        [160.0, 43.0],
+        [175.0, 42.0],
+        [-170.0, 41.5],
+        [-163.0, 38.0],
+        [-158.0, 26.0]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor"
+    },
+    {
+      "id": "pearl-harbor-air-attack",
+      "era": "ww2",
+      "name": {
+        "en": "Pearl Harbor: the air attack",
+        "es": "Pearl Harbor: el ataque aéreo"
+      },
+      "summary": {
+        "en": "Two waves of 353 Japanese aircraft fly south from the carriers on 7 December 1941 and strike the US Pacific Fleet at Pearl Harbor and the airfields of Oahu.",
+        "es": "Dos oleadas de 353 aviones japoneses vuelan al sur desde los portaaviones el 7 de diciembre de 1941 y atacan la Flota del Pacífico en Pearl Harbor y los aeródromos de Oahu."
+      },
+      "faction": "axis",
+      "unit": "bomber",
+      "count": 6,
+      "start": "1941-12-07",
+      "end": "1941-12-07",
+      "path": [
+        [-158.0, 26.0],
+        [-158.1, 23.5],
+        [-157.95, 21.36]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor"
+    },
+    {
+      "id": "malaya-and-singapore",
+      "era": "ww2",
+      "name": {
+        "en": "Malaya and the fall of Singapore",
+        "es": "Malasia y la caída de Singapur"
+      },
+      "summary": {
+        "en": "Yamashita's 25th Army lands at Singora and Kota Bharu on 8 December 1941, drives down the Malay Peninsula on bicycles and roads and forces Singapore to surrender on 15 February 1942.",
+        "es": "El 25.º Ejército de Yamashita desembarca en Singora y Kota Bharu el 8 de diciembre de 1941, baja por la península malaya en bicicletas y carreteras y obliga a Singapur a rendirse el 15 de febrero de 1942."
+      },
+      "faction": "axis",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1941-12-08",
+      "end": "1942-02-15",
+      "path": [
+        [100.6, 7.21],
+        [100.42, 6.27],
+        [101.15, 4.3],
+        [101.69, 3.14],
+        [102.57, 2.05],
+        [103.76, 1.46],
+        [103.82, 1.35]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Malayan_campaign"
+    },
+    {
+      "id": "force-z",
+      "era": "ww2",
+      "name": {
+        "en": "Force Z: Prince of Wales and Repulse",
+        "es": "Fuerza Z: el Prince of Wales y el Repulse"
+      },
+      "summary": {
+        "en": "The British battleship Prince of Wales and battlecruiser Repulse sail from Singapore to attack the Japanese landings and are sunk by land-based bombers off Kuantan on 10 December 1941.",
+        "es": "El acorazado británico Prince of Wales y el crucero de batalla Repulse zarpan de Singapur contra los desembarcos japoneses y son hundidos por bombarderos basados en tierra frente a Kuantan el 10 de diciembre de 1941."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 2,
+      "start": "1941-12-08",
+      "end": "1941-12-10",
+      "path": [
+        [103.98, 1.43],
+        [105.0, 3.5],
+        [104.7, 5.5],
+        [104.4, 3.6]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Sinking_of_Prince_of_Wales_and_Repulse"
+    },
+    {
+      "id": "philippines-1941-1942",
+      "era": "ww2",
+      "name": {
+        "en": "Philippines: Lingayen to Corregidor",
+        "es": "Filipinas: de Lingayen a Corregidor"
+      },
+      "summary": {
+        "en": "Homma's 14th Army lands at Lingayen Gulf on 22 December 1941, takes Manila, besieges the Americans and Filipinos on Bataan until April and captures Corregidor on 6 May 1942.",
+        "es": "El 14.º Ejército de Homma desembarca en el golfo de Lingayen el 22 de diciembre de 1941, toma Manila, sitia a estadounidenses y filipinos en Bataán hasta abril y captura Corregidor el 6 de mayo de 1942."
+      },
+      "faction": "axis",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1941-12-22",
+      "end": "1942-05-06",
+      "path": [
+        [120.3, 16.1],
+        [120.6, 15.48],
+        [120.98, 14.6],
+        [120.69, 15.03],
+        [120.53, 14.73],
+        [120.48, 14.43],
+        [120.57, 14.39]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Philippines_campaign_(1941%E2%80%931942)"
+    },
+    {
+      "id": "dutch-east-indies-invasion",
+      "era": "ww2",
+      "name": {
+        "en": "Invasion of the Dutch East Indies",
+        "es": "Invasión de las Indias Orientales Neerlandesas"
+      },
+      "summary": {
+        "en": "Japanese invasion convoys seize the oil ports of Tarakan and Balikpapan, cross the Java Sea after defeating the ABDA fleet and land on Java, which surrenders on 9 March 1942.",
+        "es": "Convoyes de invasión japoneses toman los puertos petroleros de Tarakan y Balikpapan, cruzan el mar de Java tras derrotar a la flota ABDA y desembarcan en Java, que se rinde el 9 de marzo de 1942."
+      },
+      "faction": "axis",
+      "unit": "ship",
+      "count": 4,
+      "start": "1942-01-11",
+      "end": "1942-03-09",
+      "path": [
+        [125.61, 7.07],
+        [117.6, 3.3],
+        [116.83, -1.27],
+        [118.0, -4.0],
+        [112.5, -6.0],
+        [111.5, -6.7]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Dutch_East_Indies_campaign"
+    },
+    {
+      "id": "battle-of-the-java-sea",
+      "era": "ww2",
+      "name": {
+        "en": "Battle of the Java Sea: ABDA striking force",
+        "es": "Batalla del mar de Java: la fuerza de ataque ABDA"
+      },
+      "summary": {
+        "en": "Doorman's Dutch, British, American and Australian cruisers sail from Surabaya on 27 February 1942 to stop the invasion of Java and are destroyed by Japanese cruisers and torpedoes.",
+        "es": "Los cruceros neerlandeses, británicos, estadounidenses y australianos de Doorman zarpan de Surabaya el 27 de febrero de 1942 para frenar la invasión de Java y son destruidos por cruceros y torpedos japoneses."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 3,
+      "start": "1942-02-26",
+      "end": "1942-02-28",
+      "path": [
+        [112.75, -7.2],
+        [112.9, -6.5],
+        [112.5, -6.0],
+        [111.8, -6.1]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Java_Sea"
+    },
+    {
+      "id": "coral-sea-us-carriers",
+      "era": "ww2",
+      "name": {
+        "en": "Coral Sea: Task Force 17",
+        "es": "Mar del Coral: la Fuerza de Tarea 17"
+      },
+      "summary": {
+        "en": "The US carriers Yorktown and Lexington strike Tulagi and then fight the first battle between carriers, in which neither fleet sees the other; the Japanese invasion of Port Moresby is called off.",
+        "es": "Los portaaviones estadounidenses Yorktown y Lexington atacan Tulagi y luego libran la primera batalla entre portaaviones, en la que ninguna flota ve a la otra; se cancela la invasión japonesa de Port Moresby."
+      },
+      "faction": "allies",
+      "unit": "carrier",
+      "count": 2,
+      "start": "1942-05-04",
+      "end": "1942-05-08",
+      "path": [
+        [158.7, -12.5],
+        [157.0, -14.0],
+        [155.5, -14.5],
+        [153.5, -15.3]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Coral_Sea"
+    },
+    {
+      "id": "coral-sea-japanese-carriers",
+      "era": "ww2",
+      "name": {
+        "en": "Coral Sea: Shokaku and Zuikaku",
+        "es": "Mar del Coral: el Shokaku y el Zuikaku"
+      },
+      "summary": {
+        "en": "The Japanese carriers Shokaku and Zuikaku sweep around the eastern Solomons into the Coral Sea, sink Lexington and withdraw damaged, too weakened to fight at Midway.",
+        "es": "Los portaaviones japoneses Shokaku y Zuikaku rodean las Salomón orientales hacia el mar del Coral, hunden el Lexington y se retiran dañados, demasiado debilitados para combatir en Midway."
+      },
+      "faction": "axis",
+      "unit": "carrier",
+      "count": 2,
+      "start": "1942-05-01",
+      "end": "1942-05-08",
+      "path": [
+        [151.8, 7.4],
+        [157.0, -6.0],
+        [162.0, -11.0],
+        [160.0, -13.5],
+        [156.5, -13.5]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Coral_Sea"
+    },
+    {
+      "id": "midway-japanese-carriers",
+      "era": "ww2",
+      "name": {
+        "en": "Midway: Nagumo's carriers",
+        "es": "Midway: los portaaviones de Nagumo"
+      },
+      "summary": {
+        "en": "Four Japanese carriers sail from Japan to strike Midway and are sunk on 4 June 1942 by American dive bombers northwest of the atoll.",
+        "es": "Cuatro portaaviones japoneses zarpan de Japón para atacar Midway y son hundidos el 4 de junio de 1942 por bombarderos en picada estadounidenses al noroeste del atolón."
+      },
+      "faction": "axis",
+      "unit": "carrier",
+      "count": 4,
+      "start": "1942-05-27",
+      "end": "1942-06-04",
+      "path": [
+        [132.3, 34.1],
+        [150.0, 32.0],
+        [170.0, 31.0],
+        [-179.2, 30.8]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Midway"
+    },
+    {
+      "id": "midway-us-carriers",
+      "era": "ww2",
+      "name": {
+        "en": "Midway: Enterprise, Hornet and Yorktown",
+        "es": "Midway: el Enterprise, el Hornet y el Yorktown"
+      },
+      "summary": {
+        "en": "Forewarned by codebreakers, three US carriers wait at Point Luck northeast of Midway and launch the strikes that sink four Japanese carriers; Yorktown is lost on 7 June.",
+        "es": "Advertidos por los descifradores de códigos, tres portaaviones estadounidenses esperan en Point Luck al noreste de Midway y lanzan los ataques que hunden cuatro portaaviones japoneses; el Yorktown se pierde el 7 de junio."
+      },
+      "faction": "allies",
+      "unit": "carrier",
+      "count": 3,
+      "start": "1942-05-28",
+      "end": "1942-06-07",
+      "path": [
+        [-157.95, 21.35],
+        [-166.0, 27.0],
+        [-173.6, 32.0],
+        [-176.3, 31.6]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Midway"
+    },
+    {
+      "id": "midway-dive-bombers",
+      "era": "ww2",
+      "name": {
+        "en": "Midway: the dive bomber strike",
+        "es": "Midway: el ataque de los bombarderos en picada"
+      },
+      "summary": {
+        "en": "Dauntless dive bombers from Enterprise and Yorktown find the Japanese carriers on the morning of 4 June and set Akagi, Kaga and Soryu ablaze within minutes.",
+        "es": "Los bombarderos en picada Dauntless del Enterprise y el Yorktown encuentran los portaaviones japoneses la mañana del 4 de junio e incendian el Akagi, el Kaga y el Soryu en minutos."
+      },
+      "faction": "allies",
+      "unit": "bomber",
+      "count": 4,
+      "start": "1942-06-04",
+      "end": "1942-06-04",
+      "path": [
+        [-176.3, 31.6],
+        [-178.0, 31.3],
+        [-179.2, 30.8]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Midway"
+    },
+    {
+      "id": "guadalcanal-landing-convoy",
+      "era": "ww2",
+      "name": {
+        "en": "Guadalcanal: the invasion convoy",
+        "es": "Guadalcanal: el convoy de invasión"
+      },
+      "summary": {
+        "en": "After rehearsals at Koro in Fiji, the US amphibious force sails northwest and lands the 1st Marine Division at Guadalcanal and Tulagi on 7 August 1942.",
+        "es": "Tras los ensayos en Koro, en Fiyi, la fuerza anfibia estadounidense navega al noroeste y desembarca la 1.ª División de Marines en Guadalcanal y Tulagi el 7 de agosto de 1942."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 4,
+      "start": "1942-07-31",
+      "end": "1942-08-07",
+      "path": [
+        [179.3, -17.3],
+        [168.0, -14.0],
+        [162.0, -11.0],
+        [160.05, -9.4]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Guadalcanal_campaign"
+    },
+    {
+      "id": "guadalcanal-campaign",
+      "era": "ww2",
+      "name": { "en": "Guadalcanal campaign", "es": "Campaña de Guadalcanal" },
+      "summary": {
+        "en": "US Marines and Army troops hold Henderson Field against repeated Japanese attacks, then push west across the Matanikau to Cape Esperance, where the last Japanese are evacuated by 9 February 1943.",
+        "es": "Marines y tropas del Ejército de EE. UU. defienden el aeródromo Henderson de repetidos ataques japoneses y luego avanzan al oeste por el Matanikau hasta el cabo Esperanza, desde donde los últimos japoneses son evacuados el 9 de febrero de 1943."
+      },
+      "faction": "allies",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1942-08-07",
+      "end": "1943-02-09",
+      "path": [
+        [160.08, -9.4],
+        [160.05, -9.43],
+        [159.93, -9.42],
+        [159.85, -9.43],
+        [159.63, -9.25]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Guadalcanal_campaign"
+    },
+    {
+      "id": "tokyo-express",
+      "era": "ww2",
+      "name": {
+        "en": "The Tokyo Express down the Slot",
+        "es": "El Expreso de Tokio por el Slot"
+      },
+      "summary": {
+        "en": "Japanese destroyers run troops and supplies at night from the Shortland Islands down New Georgia Sound to Guadalcanal, returning before dawn to avoid American aircraft.",
+        "es": "Destructores japoneses llevan de noche tropas y suministros desde las islas Shortland por el estrecho de Nueva Georgia hasta Guadalcanal y regresan antes del amanecer para evitar a los aviones estadounidenses."
+      },
+      "faction": "axis",
+      "unit": "ship",
+      "count": 4,
+      "start": "1942-08-29",
+      "end": "1943-02-08",
+      "path": [
+        [155.87, -7.07],
+        [157.2, -7.8],
+        [158.2, -8.3],
+        [159.3, -8.9],
+        [159.63, -9.25]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Tokyo_Express"
+    },
+    {
+      "id": "us-submarine-campaign",
+      "era": "ww2",
+      "name": {
+        "en": "US submarine campaign: Luzon Strait and East China Sea",
+        "es": "Campaña submarina de EE. UU.: estrecho de Luzón y mar de China Oriental"
+      },
+      "summary": {
+        "en": "American submarines patrol the choke points between Japan and its southern empire, sinking most of Japan's merchant fleet and cutting off oil from the Indies.",
+        "es": "Los submarinos estadounidenses patrullan los pasos entre Japón y su imperio del sur, hunden la mayor parte de la flota mercante japonesa y cortan el petróleo de las Indias."
+      },
+      "faction": "allies",
+      "unit": "submarine",
+      "count": 5,
+      "start": "1943-01-01",
+      "end": "1945-08-15",
+      "path": [
+        [121.0, 20.0],
+        [123.0, 22.0],
+        [124.0, 26.0],
+        [125.0, 29.0],
+        [124.0, 31.5],
+        [127.0, 30.0],
+        [127.5, 26.0],
+        [122.5, 20.5]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Allied_submarines_in_the_Pacific_War"
+    },
+    {
+      "id": "kokoda-japanese-advance",
+      "era": "ww2",
+      "name": {
+        "en": "Kokoda Track: the Japanese advance",
+        "es": "Sendero de Kokoda: el avance japonés"
+      },
+      "summary": {
+        "en": "The Japanese South Seas Detachment lands near Gona in July 1942, takes Kokoda and climbs the Owen Stanley Range to Ioribaiwa, within sight of Port Moresby, before being ordered back.",
+        "es": "El Destacamento de los Mares del Sur japonés desembarca cerca de Gona en julio de 1942, toma Kokoda y cruza la cordillera Owen Stanley hasta Ioribaiwa, a la vista de Port Moresby, antes de recibir la orden de retirada."
+      },
+      "faction": "axis",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1942-07-21",
+      "end": "1942-09-26",
+      "path": [
+        [148.22, -8.63],
+        [147.94, -8.83],
+        [147.74, -8.88],
+        [147.73, -9.0],
+        [147.64, -9.15],
+        [147.42, -9.33]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Kokoda_Track_campaign"
+    },
+    {
+      "id": "kokoda-australian-counteroffensive",
+      "era": "ww2",
+      "name": {
+        "en": "Kokoda Track: Australians to Buna and Gona",
+        "es": "Sendero de Kokoda: los australianos hasta Buna y Gona"
+      },
+      "summary": {
+        "en": "Australian troops push the Japanese back over the Owen Stanleys, retake Kokoda on 2 November 1942 and, with US troops, destroy the beachheads at Buna and Gona by January 1943.",
+        "es": "Tropas australianas empujan a los japoneses de vuelta por las Owen Stanley, recuperan Kokoda el 2 de noviembre de 1942 y, con tropas de EE. UU., destruyen las cabezas de playa de Buna y Gona en enero de 1943."
+      },
+      "faction": "allies",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1942-09-26",
+      "end": "1943-01-22",
+      "path": [
+        [147.18, -9.44],
+        [147.4, -9.38],
+        [147.64, -9.15],
+        [147.74, -8.88],
+        [147.94, -8.83],
+        [148.4, -8.67]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Kokoda_Track_campaign"
+    },
+    {
+      "id": "central-pacific-island-hopping",
+      "era": "ww2",
+      "name": {
+        "en": "Central Pacific: Tarawa to Tinian",
+        "es": "Pacífico central: de Tarawa a Tinian"
+      },
+      "summary": {
+        "en": "The US Fifth Fleet leaps from Pearl Harbor to Tarawa in November 1943, then Kwajalein, Eniwetok, Saipan and Tinian by August 1944, bringing Japan within B-29 range.",
+        "es": "La Quinta Flota de EE. UU. salta de Pearl Harbor a Tarawa en noviembre de 1943 y luego a Kwajalein, Eniwetok, Saipán y Tinian en agosto de 1944, dejando Japón al alcance de los B-29."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 5,
+      "start": "1943-11-10",
+      "end": "1944-08-01",
+      "path": [
+        [-157.95, 21.35],
+        [-175.0, 12.0],
+        [172.98, 1.42],
+        [167.73, 8.72],
+        [162.33, 11.5],
+        [145.75, 15.18],
+        [145.63, 15.0]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Gilbert_and_Marshall_Islands_campaign"
+    },
+    {
+      "id": "philippine-sea-us-carriers",
+      "era": "ww2",
+      "name": {
+        "en": "Philippine Sea: Task Force 58",
+        "es": "Mar de Filipinas: la Fuerza de Tarea 58"
+      },
+      "summary": {
+        "en": "Fifteen US fast carriers covering Saipan destroy Japanese carrier aviation in the Marianas Turkey Shoot on 19 June 1944 and chase Ozawa's fleet westward the next day.",
+        "es": "Quince portaaviones rápidos de EE. UU. que cubren Saipán destruyen la aviación embarcada japonesa en el tiro al pavo de las Marianas el 19 de junio de 1944 y persiguen al oeste la flota de Ozawa al día siguiente."
+      },
+      "faction": "allies",
+      "unit": "carrier",
+      "count": 5,
+      "start": "1944-06-19",
+      "end": "1944-06-20",
+      "path": [
+        [143.5, 15.0],
+        [141.5, 15.3],
+        [138.5, 15.3],
+        [136.5, 15.5]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Philippine_Sea"
+    },
+    {
+      "id": "philippine-sea-japanese-carriers",
+      "era": "ww2",
+      "name": {
+        "en": "Philippine Sea: Ozawa's Mobile Fleet",
+        "es": "Mar de Filipinas: la Flota Móvil de Ozawa"
+      },
+      "summary": {
+        "en": "Nine Japanese carriers sail from Tawi-Tawi through San Bernardino Strait to attack the Americans off Saipan; they lose Taiho, Shokaku and Hiyo and most of their aircraft.",
+        "es": "Nueve portaaviones japoneses zarpan de Tawi-Tawi por el estrecho de San Bernardino para atacar a los estadounidenses frente a Saipán; pierden el Taiho, el Shokaku, el Hiyo y la mayoría de sus aviones."
+      },
+      "faction": "axis",
+      "unit": "carrier",
+      "count": 5,
+      "start": "1944-06-13",
+      "end": "1944-06-20",
+      "path": [
+        [120.0, 5.2],
+        [122.6, 10.6],
+        [124.3, 12.55],
+        [130.0, 14.5],
+        [135.5, 15.3]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Philippine_Sea"
+    },
+    {
+      "id": "leyte-gulf-center-force",
+      "era": "ww2",
+      "name": {
+        "en": "Leyte Gulf: Kurita's Center Force",
+        "es": "Golfo de Leyte: la Fuerza Central de Kurita"
+      },
+      "summary": {
+        "en": "Kurita's battleships, including Yamato and Musashi, sail from Brunei through the Palawan Passage and Sibuyan Sea, lose Musashi, and fall on the escort carriers off Samar before turning back.",
+        "es": "Los acorazados de Kurita, entre ellos el Yamato y el Musashi, zarpan de Brunéi por el paso de Palawan y el mar de Sibuyan, pierden el Musashi y atacan a los portaaviones de escolta frente a Sámar antes de retirarse."
+      },
+      "faction": "axis",
+      "unit": "ship",
+      "count": 5,
+      "start": "1944-10-22",
+      "end": "1944-10-26",
+      "path": [
+        [114.95, 4.9],
+        [117.5, 9.5],
+        [122.5, 12.7],
+        [124.3, 12.55],
+        [126.0, 11.6],
+        [124.3, 12.55]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Leyte_Gulf"
+    },
+    {
+      "id": "leyte-gulf-surigao-strait",
+      "era": "ww2",
+      "name": {
+        "en": "Leyte Gulf: Surigao Strait",
+        "es": "Golfo de Leyte: estrecho de Surigao"
+      },
+      "summary": {
+        "en": "Nishimura's Southern Force crosses the Sulu and Mindanao seas and enters Surigao Strait on the night of 24-25 October 1944, where it is annihilated by Oldendorf's battleships.",
+        "es": "La Fuerza Sur de Nishimura cruza los mares de Joló y Mindanao y entra en el estrecho de Surigao la noche del 24 al 25 de octubre de 1944, donde es aniquilada por los acorazados de Oldendorf."
+      },
+      "faction": "axis",
+      "unit": "ship",
+      "count": 3,
+      "start": "1944-10-22",
+      "end": "1944-10-25",
+      "path": [
+        [114.95, 4.9],
+        [121.0, 8.5],
+        [124.5, 9.2],
+        [125.4, 10.2]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Leyte_Gulf"
+    },
+    {
+      "id": "leyte-gulf-ozawa-decoy",
+      "era": "ww2",
+      "name": {
+        "en": "Leyte Gulf: Ozawa's decoy carriers",
+        "es": "Golfo de Leyte: los portaaviones señuelo de Ozawa"
+      },
+      "summary": {
+        "en": "Ozawa's nearly empty carriers sail south from Japan to lure Halsey north; all four are sunk off Cape Engaño on 25 October 1944.",
+        "es": "Los portaaviones casi vacíos de Ozawa zarpan de Japón hacia el sur para atraer a Halsey al norte; los cuatro son hundidos frente al cabo Engaño el 25 de octubre de 1944."
+      },
+      "faction": "axis",
+      "unit": "carrier",
+      "count": 4,
+      "start": "1944-10-20",
+      "end": "1944-10-25",
+      "path": [
+        [132.3, 32.9],
+        [129.0, 26.0],
+        [127.0, 21.0],
+        [126.3, 19.2]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Leyte_Gulf"
+    },
+    {
+      "id": "leyte-gulf-halsey-third-fleet",
+      "era": "ww2",
+      "name": {
+        "en": "Leyte Gulf: Halsey's run north",
+        "es": "Golfo de Leyte: la carrera de Halsey al norte"
+      },
+      "summary": {
+        "en": "Halsey's fast carriers strike Kurita in the Sibuyan Sea, then race north after Ozawa's decoy, leaving San Bernardino Strait unguarded.",
+        "es": "Los portaaviones rápidos de Halsey atacan a Kurita en el mar de Sibuyan y luego corren al norte tras el señuelo de Ozawa, dejando sin vigilancia el estrecho de San Bernardino."
+      },
+      "faction": "allies",
+      "unit": "carrier",
+      "count": 5,
+      "start": "1944-10-24",
+      "end": "1944-10-25",
+      "path": [
+        [125.5, 13.5],
+        [126.5, 15.5],
+        [126.5, 18.0],
+        [126.5, 19.5]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Leyte_Gulf"
+    },
+    {
+      "id": "imphal-japanese-advance",
+      "era": "ww2",
+      "name": {
+        "en": "U-Go: the Japanese drive on Imphal",
+        "es": "U-Go: la ofensiva japonesa sobre Imphal"
+      },
+      "summary": {
+        "en": "The Japanese 15th Army crosses the Chindwin in March 1944 and closes on Imphal from the south through Tiddim; the siege fails and the survivors retreat through the monsoon.",
+        "es": "El 15.º Ejército japonés cruza el Chindwin en marzo de 1944 y se acerca a Imphal desde el sur por Tiddim; el sitio fracasa y los supervivientes se retiran bajo el monzón."
+      },
+      "faction": "axis",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1944-03-08",
+      "end": "1944-07-18",
+      "path": [
+        [94.3, 23.2],
+        [93.67, 23.37],
+        [93.77, 24.6],
+        [93.95, 24.82]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Imphal"
+    },
+    {
+      "id": "kohima-japanese-advance",
+      "era": "ww2",
+      "name": {
+        "en": "U-Go: the march on Kohima",
+        "es": "U-Go: la marcha sobre Kohima"
+      },
+      "summary": {
+        "en": "The Japanese 31st Division crosses the Chindwin at Homalin and marches through the hills to Kohima, where the small garrison holds from 5 April 1944 until relieved.",
+        "es": "La 31.ª División japonesa cruza el Chindwin en Homalin y marcha por las colinas hasta Kohima, donde la pequeña guarnición resiste desde el 5 de abril de 1944 hasta ser socorrida."
+      },
+      "faction": "axis",
+      "unit": "infantry",
+      "count": 3,
+      "start": "1944-03-15",
+      "end": "1944-06-22",
+      "path": [
+        [94.9, 24.87],
+        [94.53, 25.6],
+        [94.12, 25.67]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Kohima"
+    },
+    {
+      "id": "kohima-imphal-relief",
+      "era": "ww2",
+      "name": {
+        "en": "Relief of Kohima and Imphal",
+        "es": "Socorro de Kohima e Imphal"
+      },
+      "summary": {
+        "en": "British and Indian divisions advance from Dimapur, relieve Kohima and fight down the road until they meet the Imphal garrison on 22 June 1944.",
+        "es": "Divisiones británicas e indias avanzan desde Dimapur, socorren Kohima y combaten a lo largo de la carretera hasta unirse a la guarnición de Imphal el 22 de junio de 1944."
+      },
+      "faction": "allies",
+      "unit": "infantry",
+      "count": 4,
+      "start": "1944-04-05",
+      "end": "1944-06-22",
+      "path": [
+        [93.73, 25.9],
+        [94.12, 25.67],
+        [94.1, 25.2],
+        [93.95, 24.82]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Kohima"
+    },
+    {
+      "id": "the-hump-airlift",
+      "era": "ww2",
+      "name": {
+        "en": "The Hump airlift",
+        "es": "El puente aéreo de la Joroba"
+      },
+      "summary": {
+        "en": "With the Burma Road cut, Allied transports fly supplies from Assam over the eastern Himalaya to Kunming, the only route into China until 1945. Transports are drawn as bombers.",
+        "es": "Con la carretera de Birmania cortada, transportes aliados llevan suministros desde Assam sobre el Himalaya oriental hasta Kunming, la única ruta hacia China hasta 1945."
+      },
+      "faction": "allies",
+      "unit": "bomber",
+      "count": 4,
+      "start": "1942-04-08",
+      "end": "1945-11-15",
+      "path": [
+        [95.18, 27.48],
+        [98.5, 26.8],
+        [102.71, 25.04]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/The_Hump"
+    },
+    {
+      "id": "iwo-jima-fleet",
+      "era": "ww2",
+      "name": {
+        "en": "Iwo Jima: the invasion fleet",
+        "es": "Iwo Jima: la flota de invasión"
+      },
+      "summary": {
+        "en": "The invasion fleet carrying three Marine divisions sails from Saipan and anchors off Iwo Jima for the landing on 19 February 1945.",
+        "es": "La flota de invasión con tres divisiones de Marines zarpa de Saipán y fondea frente a Iwo Jima para el desembarco del 19 de febrero de 1945."
+      },
+      "faction": "allies",
+      "unit": "ship",
+      "count": 4,
+      "start": "1945-02-16",
+      "end": "1945-02-19",
+      "path": [
+        [145.75, 15.18],
+        [143.5, 20.0],
+        [141.35, 24.7]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Iwo_Jima"
+    },
+    {
+      "id": "iwo-jima",
+      "era": "ww2",
+      "name": { "en": "Battle of Iwo Jima", "es": "Batalla de Iwo Jima" },
+      "summary": {
+        "en": "US Marines land on the southeast beaches on 19 February 1945, raise the flag on Mount Suribachi and fight north across the airfields until the island is secured on 26 March.",
+        "es": "Los Marines de EE. UU. desembarcan en las playas del sureste el 19 de febrero de 1945, izan la bandera en el monte Suribachi y combaten al norte por los aeródromos hasta asegurar la isla el 26 de marzo."
+      },
+      "faction": "allies",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1945-02-19",
+      "end": "1945-03-26",
+      "path": [
+        [141.31, 24.76],
+        [141.29, 24.75],
+        [141.32, 24.78],
+        [141.33, 24.8]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Iwo_Jima"
+    },
+    {
+      "id": "okinawa",
+      "era": "ww2",
+      "name": { "en": "Battle of Okinawa", "es": "Batalla de Okinawa" },
+      "summary": {
+        "en": "US Army and Marine divisions land at the Hagushi beaches on 1 April 1945, cut the island in two and grind south through Kakazu Ridge and the Shuri Line to the last stand at Mabuni.",
+        "es": "Divisiones del Ejército y de Marines de EE. UU. desembarcan en las playas de Hagushi el 1 de abril de 1945, parten la isla en dos y avanzan al sur por la cresta de Kakazu y la línea Shuri hasta la última resistencia en Mabuni."
+      },
+      "faction": "allies",
+      "unit": "infantry",
+      "count": 6,
+      "start": "1945-04-01",
+      "end": "1945-06-22",
+      "path": [
+        [127.74, 26.36],
+        [127.8, 26.34],
+        [127.75, 26.27],
+        [127.72, 26.22],
+        [127.71, 26.1]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Okinawa"
+    },
+    {
+      "id": "operation-ten-go",
+      "era": "ww2",
+      "name": {
+        "en": "Operation Ten-Go: the last sortie of Yamato",
+        "es": "Operación Ten-Go: la última salida del Yamato"
+      },
+      "summary": {
+        "en": "The battleship Yamato sails from Tokuyama on a one-way mission to Okinawa and is sunk by US carrier aircraft southwest of Kyushu on 7 April 1945.",
+        "es": "El acorazado Yamato zarpa de Tokuyama en una misión sin retorno hacia Okinawa y es hundido por aviones de portaaviones de EE. UU. al suroeste de Kyushu el 7 de abril de 1945."
+      },
+      "faction": "axis",
+      "unit": "ship",
+      "count": 2,
+      "start": "1945-04-06",
+      "end": "1945-04-07",
+      "path": [
+        [131.8, 34.05],
+        [132.1, 32.9],
+        [130.8, 31.2],
+        [128.07, 30.72]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Japanese_battleship_Yamato"
+    },
+    {
+      "id": "kamikaze-attacks-okinawa",
+      "era": "ww2",
+      "name": {
+        "en": "Kamikaze attacks off Okinawa",
+        "es": "Ataques kamikaze frente a Okinawa"
+      },
+      "summary": {
+        "en": "Waves of kamikaze aircraft take off from Kanoya and other Kyushu airfields to dive on the American fleet off Okinawa, sinking or damaging hundreds of ships.",
+        "es": "Oleadas de aviones kamikaze despegan de Kanoya y otros aeródromos de Kyushu para lanzarse contra la flota estadounidense frente a Okinawa, hundiendo o dañando cientos de buques."
+      },
+      "faction": "axis",
+      "unit": "fighter",
+      "count": 4,
+      "start": "1945-04-06",
+      "end": "1945-06-22",
+      "path": [
+        [130.85, 31.37],
+        [129.5, 29.0],
+        [127.9, 26.6]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Kamikaze"
+    },
+    {
+      "id": "b29-raids-from-marianas",
+      "era": "ww2",
+      "name": {
+        "en": "B-29 raids from the Marianas",
+        "es": "Bombardeos de B-29 desde las Marianas"
+      },
+      "summary": {
+        "en": "From November 1944 B-29 Superfortresses fly from Saipan, Tinian and Guam past Iwo Jima to Japan, culminating in the firebombing of Tokyo on 9-10 March 1945.",
+        "es": "Desde noviembre de 1944 los B-29 Superfortress despegan de Saipán, Tinian y Guam, pasan por Iwo Jima hacia Japón y culminan en el bombardeo incendiario de Tokio del 9 al 10 de marzo de 1945."
+      },
+      "faction": "allies",
+      "unit": "bomber",
+      "count": 6,
+      "start": "1944-11-24",
+      "end": "1945-08-15",
+      "path": [
+        [145.72, 15.13],
+        [141.32, 24.78],
+        [138.73, 35.36],
+        [139.69, 35.69]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Air_raids_on_Japan"
+    },
+    {
+      "id": "enola-gay-hiroshima",
+      "era": "ww2",
+      "name": {
+        "en": "Enola Gay: Tinian to Hiroshima",
+        "es": "Enola Gay: de Tinian a Hiroshima"
+      },
+      "summary": {
+        "en": "The B-29 Enola Gay takes off from North Field on Tinian and drops the Little Boy atomic bomb on Hiroshima at 8:15 a.m. on 6 August 1945.",
+        "es": "El B-29 Enola Gay despega del North Field en Tinian y lanza la bomba atómica Little Boy sobre Hiroshima a las 8:15 del 6 de agosto de 1945."
+      },
+      "faction": "allies",
+      "unit": "bomber",
+      "count": 1,
+      "start": "1945-08-06",
+      "end": "1945-08-06",
+      "path": [
+        [145.63, 15.07],
+        [141.32, 24.78],
+        [133.5, 33.0],
+        [132.45, 34.39]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
+    },
+    {
+      "id": "bockscar-nagasaki",
+      "era": "ww2",
+      "name": {
+        "en": "Bockscar: Tinian to Nagasaki",
+        "es": "Bockscar: de Tinian a Nagasaki"
+      },
+      "summary": {
+        "en": "The B-29 Bockscar flies from Tinian to Kokura, finds it obscured by smoke and cloud and drops the Fat Man bomb on its secondary target, Nagasaki, on 9 August 1945.",
+        "es": "El B-29 Bockscar vuela de Tinian a Kokura, la encuentra cubierta de humo y nubes y lanza la bomba Fat Man sobre su objetivo secundario, Nagasaki, el 9 de agosto de 1945."
+      },
+      "faction": "allies",
+      "unit": "bomber",
+      "count": 1,
+      "start": "1945-08-09",
+      "end": "1945-08-09",
+      "path": [
+        [145.63, 15.07],
+        [130.5, 30.35],
+        [130.88, 33.88],
+        [129.88, 32.75]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
+    },
+    {
+      "id": "soviet-manchuria-transbaikal",
+      "era": "ww2",
+      "name": {
+        "en": "Soviet invasion of Manchuria: Transbaikal Front",
+        "es": "Invasión soviética de Manchuria: Frente Transbaikal"
+      },
+      "summary": {
+        "en": "Soviet tank armies drive from Mongolia across the Greater Khingan range on 9 August 1945 and reach Changchun and Mukden within ten days, destroying the Kwantung Army.",
+        "es": "Los ejércitos de tanques soviéticos avanzan desde Mongolia por la cordillera del Gran Khingan el 9 de agosto de 1945 y llegan a Changchun y Mukden en diez días, destruyendo el Ejército de Kwantung."
+      },
+      "faction": "allies",
+      "unit": "tank",
+      "count": 6,
+      "start": "1945-08-09",
+      "end": "1945-08-20",
+      "path": [
+        [117.3, 47.2],
+        [120.5, 46.3],
+        [122.78, 45.34],
+        [125.32, 43.88],
+        [123.43, 41.8]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Soviet_invasion_of_Manchuria"
+    },
+    {
+      "id": "soviet-manchuria-first-far-eastern",
+      "era": "ww2",
+      "name": {
+        "en": "Soviet invasion of Manchuria: 1st Far Eastern Front",
+        "es": "Invasión soviética de Manchuria: 1.er Frente del Lejano Oriente"
+      },
+      "summary": {
+        "en": "From Primorye the 1st Far Eastern Front breaks the fortified border, takes Mudanjiang on 16 August 1945 and reaches Harbin on 20 August.",
+        "es": "Desde Primorie, el 1.er Frente del Lejano Oriente rompe la frontera fortificada, toma Mudanjiang el 16 de agosto de 1945 y llega a Harbin el 20 de agosto."
+      },
+      "faction": "allies",
+      "unit": "infantry",
+      "count": 5,
+      "start": "1945-08-09",
+      "end": "1945-08-20",
+      "path": [
+        [131.38, 44.41],
+        [130.6, 44.5],
+        [129.6, 44.59],
+        [127.9, 45.1],
+        [126.63, 45.75]
+      ],
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Soviet_invasion_of_Manchuria"
+    }
+  ],
+  "frontlines": [
+    {
+      "id": "western-front-ww1",
+      "era": "ww1",
+      "name": { "en": "Western Front", "es": "Frente occidental" },
+      "snapshots": [
+        {
+          "date": "1914-09-15",
+          "line": [
+            [2.8, 49.63],
+            [2.82, 49.62],
+            [2.85, 49.61],
+            [2.88, 49.6],
+            [2.92, 49.59],
+            [2.95, 49.58],
+            [3.45, 49.42],
+            [4.08, 49.3],
+            [4.6, 49.2],
+            [4.95, 49.21],
+            [5.42, 49.25],
+            [5.7, 49.0],
+            [6.5, 48.7],
+            [7.05, 48.3],
+            [7.15, 47.5]
+          ]
+        },
+        {
+          "date": "1914-11-22",
+          "line": [
+            [2.75, 51.14],
+            [2.95, 50.85],
+            [2.9, 50.66],
+            [2.82, 50.3],
+            [2.72, 50.0],
+            [2.95, 49.58],
+            [3.45, 49.42],
+            [4.08, 49.3],
+            [4.6, 49.2],
+            [4.95, 49.21],
+            [5.42, 49.25],
+            [5.55, 48.9],
+            [6.55, 48.65],
+            [7.05, 48.3],
+            [7.15, 47.5]
+          ]
+        },
+        {
+          "date": "1916-07-01",
+          "line": [
+            [2.75, 51.14],
+            [2.93, 50.87],
+            [2.9, 50.66],
+            [2.78, 50.35],
+            [2.72, 50.0],
+            [2.95, 49.58],
+            [3.45, 49.42],
+            [4.08, 49.3],
+            [4.6, 49.2],
+            [4.95, 49.21],
+            [5.43, 49.2],
+            [5.55, 48.9],
+            [6.55, 48.65],
+            [7.05, 48.3],
+            [7.15, 47.5]
+          ]
+        },
+        {
+          "date": "1916-11-18",
+          "line": [
+            [2.75, 51.14],
+            [2.93, 50.87],
+            [2.9, 50.66],
+            [2.78, 50.35],
+            [2.8, 50.07],
+            [2.95, 49.58],
+            [3.45, 49.42],
+            [4.08, 49.3],
+            [4.6, 49.2],
+            [4.95, 49.21],
+            [5.42, 49.24],
+            [5.55, 48.9],
+            [6.55, 48.65],
+            [7.05, 48.3],
+            [7.15, 47.5]
+          ]
+        },
+        {
+          "date": "1917-04-01",
+          "line": [
+            [2.75, 51.14],
+            [2.93, 50.87],
+            [2.9, 50.66],
+            [2.83, 50.3],
+            [3.1, 50.03],
+            [3.2, 49.83],
+            [3.45, 49.45],
+            [4.08, 49.3],
+            [4.6, 49.2],
+            [4.95, 49.21],
+            [5.42, 49.24],
+            [5.55, 48.9],
+            [6.55, 48.65],
+            [7.05, 48.3],
+            [7.15, 47.5]
+          ]
+        },
+        {
+          "date": "1917-12-01",
+          "line": [
+            [2.75, 51.14],
+            [3.0, 50.9],
+            [2.9, 50.66],
+            [2.87, 50.33],
+            [3.1, 50.08],
+            [3.2, 49.83],
+            [3.6, 49.45],
+            [4.08, 49.3],
+            [4.6, 49.2],
+            [4.95, 49.21],
+            [5.42, 49.28],
+            [5.55, 48.9],
+            [6.55, 48.65],
+            [7.05, 48.3],
+            [7.15, 47.5]
+          ]
+        },
+        {
+          "date": "1918-03-20",
+          "line": [
+            [2.75, 51.14],
+            [2.98, 50.89],
+            [2.9, 50.66],
+            [2.87, 50.33],
+            [3.08, 50.07],
+            [3.2, 49.83],
+            [3.6, 49.45],
+            [4.08, 49.3],
+            [4.6, 49.2],
+            [4.95, 49.21],
+            [5.42, 49.28],
+            [5.55, 48.9],
+            [6.55, 48.65],
+            [7.05, 48.3],
+            [7.15, 47.5]
+          ]
+        },
+        {
+          "date": "1918-07-17",
+          "line": [
+            [2.75, 51.14],
+            [2.85, 50.83],
+            [2.6, 50.68],
+            [2.82, 50.3],
+            [2.55, 49.9],
+            [2.57, 49.65],
+            [3.4, 49.05],
+            [4.03, 49.25],
+            [4.6, 49.2],
+            [4.95, 49.21],
+            [5.42, 49.28],
+            [5.55, 48.9],
+            [6.55, 48.65],
+            [7.05, 48.3],
+            [7.15, 47.5]
+          ]
+        },
+        {
+          "date": "1918-09-25",
+          "line": [
+            [2.75, 51.14],
+            [2.93, 50.87],
+            [2.85, 50.65],
+            [3.02, 50.29],
+            [3.13, 50.02],
+            [3.2, 49.83],
+            [3.45, 49.45],
+            [4.08, 49.3],
+            [4.6, 49.2],
+            [4.95, 49.2],
+            [5.3, 49.25],
+            [5.85, 49.0],
+            [6.55, 48.65],
+            [7.05, 48.3],
+            [7.15, 47.5]
+          ]
+        },
+        {
+          "date": "1918-11-11",
+          "line": [
+            [3.8, 51.25],
+            [3.72, 51.05],
+            [3.88, 50.77],
+            [3.95, 50.45],
+            [3.97, 50.28],
+            [4.08, 49.92],
+            [4.5, 49.8],
+            [4.72, 49.77],
+            [4.94, 49.7],
+            [5.19, 49.49],
+            [5.5, 49.25],
+            [5.85, 49.0],
+            [6.55, 48.65],
+            [7.05, 48.3],
+            [7.15, 47.5]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eastern-front-ww1",
+      "era": "ww1",
+      "name": { "en": "Eastern Front", "es": "Frente oriental" },
+      "snapshots": [
+        {
+          "date": "1914-09-15",
+          "line": [
+            [21.3, 55.7],
+            [22.8, 54.6],
+            [22.5, 53.8],
+            [21.0, 53.1],
+            [18.5, 52.0],
+            [19.5, 50.8],
+            [21.8, 50.6],
+            [22.4, 49.9],
+            [22.8, 49.1],
+            [25.2, 47.9]
+          ]
+        },
+        {
+          "date": "1915-05-01",
+          "line": [
+            [21.1, 56.0],
+            [23.0, 53.85],
+            [22.0, 53.4],
+            [20.6, 52.9],
+            [20.2, 52.2],
+            [20.8, 50.6],
+            [20.8, 50.0],
+            [21.5, 49.5],
+            [23.3, 48.9],
+            [25.7, 48.1]
+          ]
+        },
+        {
+          "date": "1915-10-01",
+          "line": [
+            [23.8, 56.95],
+            [26.5, 55.87],
+            [26.4, 54.7],
+            [26.0, 53.13],
+            [26.1, 52.1],
+            [25.8, 50.75],
+            [25.6, 49.9],
+            [25.3, 49.3],
+            [25.6, 48.7],
+            [26.0, 48.1]
+          ]
+        },
+        {
+          "date": "1916-09-20",
+          "line": [
+            [23.8, 56.95],
+            [26.5, 55.87],
+            [26.4, 54.7],
+            [26.0, 53.13],
+            [26.1, 52.1],
+            [25.0, 51.1],
+            [25.2, 50.3],
+            [24.7, 49.4],
+            [24.2, 48.8],
+            [24.9, 47.8]
+          ]
+        },
+        {
+          "date": "1917-12-15",
+          "line": [
+            [24.4, 57.4],
+            [26.5, 55.87],
+            [26.4, 54.7],
+            [26.0, 53.13],
+            [26.1, 52.1],
+            [25.0, 51.1],
+            [25.7, 49.8],
+            [26.0, 49.2],
+            [26.2, 48.6],
+            [26.4, 46.2]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sino-japanese-front",
+      "era": "ww2",
+      "name": { "en": "Sino-Japanese front", "es": "Frente chino-japonés" },
+      "snapshots": [
+        {
+          "date": "1937-12-31",
+          "line": [
+            [111.7, 40.8],
+            [112.5, 37.9],
+            [114.4, 36.1],
+            [117.0, 36.6],
+            [118.6, 32.1],
+            [118.38, 31.33],
+            [119.4, 30.9],
+            [120.15, 30.25],
+            [120.5, 30.3],
+            [121.0, 30.3]
+          ]
+        },
+        {
+          "date": "1938-10-31",
+          "line": [
+            [109.8, 40.65],
+            [111.3, 35.6],
+            [114.3, 34.8],
+            [114.07, 32.13],
+            [114.3, 30.6],
+            [115.99, 29.7],
+            [117.5, 30.6],
+            [120.15, 30.25],
+            [120.5, 30.3],
+            [121.0, 30.3]
+          ]
+        },
+        {
+          "date": "1940-12-31",
+          "line": [
+            [109.8, 40.65],
+            [111.0, 35.5],
+            [114.3, 34.8],
+            [113.3, 31.7],
+            [111.3, 30.7],
+            [113.1, 29.4],
+            [115.86, 28.68],
+            [119.4, 29.9],
+            [120.5, 30.1],
+            [121.0, 30.3]
+          ]
+        },
+        {
+          "date": "1944-12-31",
+          "line": [
+            [109.8, 40.65],
+            [110.9, 34.5],
+            [112.4, 34.0],
+            [111.3, 30.7],
+            [112.3, 27.7],
+            [111.5, 26.5],
+            [110.29, 25.27],
+            [109.4, 24.3],
+            [108.3, 22.8],
+            [106.8, 22.0]
+          ]
+        },
+        {
+          "date": "1945-08-15",
+          "line": [
+            [109.8, 40.65],
+            [110.9, 34.5],
+            [112.4, 34.0],
+            [111.3, 30.7],
+            [112.3, 27.7],
+            [112.6, 26.9],
+            [113.2, 25.8],
+            [113.6, 24.8],
+            [113.26, 23.13],
+            [114.1, 22.5]
+          ]
+        }
+      ]
+    }
+  ]
+}

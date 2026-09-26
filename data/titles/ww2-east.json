@@ -1,0 +1,3196 @@
+{
+  "titles": [
+    {
+      "id": "stalingrad-1993",
+      "kind": "film",
+      "title": "Stalingrad",
+      "titleEs": "Stalingrado",
+      "year": 1993,
+      "era": "ww2",
+      "period": { "start": "1942-08", "end": "1943-02" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Joseph Vilsmaier"],
+      "countries": ["DE"],
+      "languages": ["de", "ru"],
+      "ids": {
+        "tmdb": 11101,
+        "tmdbType": "movie",
+        "imdb": "tt0108211",
+        "wikidata": "Q316225"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Stalingrad_(1993_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Stalingrado_(pel%C3%ADcula_de_1993)"
+      },
+      "synopsis": {
+        "en": "A German assault-engineer platoon goes from a sunny rest stop on the Italian Riviera to the ruins of Stalingrad, where the fighting, the winter and the Soviet encirclement strip away every illusion they had about the war.",
+        "es": "Un pelotón de zapadores alemán pasa de un descanso soleado en la Riviera italiana a las ruinas de Stalingrado, donde el combate, el invierno y el cerco soviético les arrancan todas las ilusiones que tenían sobre la guerra."
+      },
+      "history": {
+        "en": [
+          "Joseph Vilsmaier's film follows soldiers of the German 6th Army, which reached the Volga in late August 1942 during the summer offensive known as Case Blue and spent the autumn in house-to-house combat for the city's factories against determined Soviet defenders.",
+          "On 19 November 1942 the Soviet counter-offensive, Operation Uranus, broke through the Romanian armies on the flanks and closed the ring four days later. Roughly a quarter of a million Axis soldiers were trapped without winter clothing or supplies; the Luftwaffe airlift failed, and the starving remnants of the 6th Army surrendered between 31 January and 2 February 1943."
+        ],
+        "es": [
+          "La película de Joseph Vilsmaier sigue a soldados del 6.º Ejército alemán, que llegó al Volga a finales de agosto de 1942 durante la ofensiva de verano conocida como Caso Azul y pasó el otoño combatiendo casa por casa por las fábricas de la ciudad contra una defensa soviética tenaz.",
+          "El 19 de noviembre de 1942 la contraofensiva soviética, la Operación Urano, rompió los ejércitos rumanos de los flancos y cerró el cerco cuatro días después. Cerca de un cuarto de millón de soldados del Eje quedaron atrapados sin ropa de invierno ni suministros; el puente aéreo de la Luftwaffe fracasó y los restos hambrientos del 6.º Ejército se rindieron entre el 31 de enero y el 2 de febrero de 1943."
+        ]
+      },
+      "journey": [
+        {
+          "place": "cervo",
+          "name": {
+            "en": "Cervo, Italian Riviera",
+            "es": "Cervo, Riviera italiana"
+          },
+          "coordinates": [8.1146, 43.9264],
+          "date": "1942-08",
+          "kind": "base",
+          "story": {
+            "en": "On leave by the sea, the platoon is decorated for the fighting at El Alamein and then boards a train bound for the Eastern Front.",
+            "es": "De permiso junto al mar, el pelotón es condecorado por los combates de El Alamein y luego sube a un tren rumbo al Frente Oriental."
+          },
+          "history": {
+            "en": "Axis units rotated through rest areas in Italy and France before being sent east to reinforce the 1942 summer offensive.",
+            "es": "Las unidades del Eje rotaban por zonas de descanso en Italia y Francia antes de ser enviadas al este para reforzar la ofensiva de verano de 1942."
+          }
+        },
+        {
+          "place": "stalingrad",
+          "name": {
+            "en": "Stalingrad factory district",
+            "es": "Distrito fabril de Stalingrado"
+          },
+          "coordinates": [44.562, 48.762],
+          "date": "1942-10",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Thrown into the city, the men assault a factory and fight room by room, even arranging a brief truce with the Soviets to recover the wounded.",
+            "es": "Lanzados a la ciudad, los hombres asaltan una fábrica y combaten habitación por habitación, e incluso pactan una breve tregua con los soviéticos para recoger a los heridos."
+          },
+          "history": {
+            "en": "From September to November 1942 the 6th Army ground its way through the Tractor, Barrikady and Red October factories along the Volga.",
+            "es": "Entre septiembre y noviembre de 1942 el 6.º Ejército avanzó a duras penas por las fábricas Tractor, Barrikady y Octubre Rojo junto al Volga."
+          }
+        },
+        {
+          "place": "stalingrad",
+          "name": {
+            "en": "The Stalingrad pocket",
+            "es": "La bolsa de Stalingrado"
+          },
+          "coordinates": [44.3, 48.72],
+          "date": "1942-12",
+          "kind": "front",
+          "story": {
+            "en": "Stripped of their rank, the survivors clear mines in a penal unit while winter sets in and the Red Army closes the ring.",
+            "es": "Degradados, los supervivientes limpian minas en una unidad de castigo mientras llega el invierno y el Ejército Rojo cierra el cerco."
+          },
+          "history": {
+            "en": "Operation Uranus encircled the 6th Army and parts of the 4th Panzer Army on 23 November 1942.",
+            "es": "La Operación Urano cercó al 6.º Ejército y a parte del 4.º Ejército Panzer el 23 de noviembre de 1942."
+          }
+        },
+        {
+          "place": "pitomnik-airfield",
+          "name": { "en": "Pitomnik airfield", "es": "Aeródromo de Pitomnik" },
+          "coordinates": [44.25, 48.7425],
+          "date": "1943-01",
+          "kind": "base",
+          "story": {
+            "en": "Desperate to get out, three of them race to the airfield hoping to board one of the last planes leaving the pocket.",
+            "es": "Desesperados por salir, tres de ellos corren al aeródromo con la esperanza de subir a uno de los últimos aviones que salen de la bolsa."
+          },
+          "history": {
+            "en": "Pitomnik was the main airfield of the failed Luftwaffe airlift until the Red Army captured it on 16 January 1943.",
+            "es": "Pitomnik fue el aeródromo principal del fallido puente aéreo de la Luftwaffe hasta que el Ejército Rojo lo capturó el 16 de enero de 1943."
+          }
+        },
+        {
+          "place": "stalingrad",
+          "name": {
+            "en": "Frozen steppe outside Stalingrad",
+            "es": "Estepa helada a las afueras de Stalingrado"
+          },
+          "coordinates": [44.1, 48.64],
+          "date": "1943-02",
+          "kind": "front",
+          "story": {
+            "en": "As the 6th Army collapses, the last men of the platoon try to slip away from the city across the snow.",
+            "es": "Mientras el 6.º Ejército se derrumba, los últimos hombres del pelotón intentan escapar de la ciudad a través de la nieve."
+          },
+          "history": {
+            "en": "Field Marshal Paulus surrendered on 31 January 1943 and the northern pocket followed on 2 February, ending the battle.",
+            "es": "El mariscal de campo Paulus se rindió el 31 de enero de 1943 y la bolsa norte lo hizo el 2 de febrero, poniendo fin a la batalla."
+          }
+        }
+      ]
+    },
+    {
+      "id": "schindlers-list-1993",
+      "kind": "film",
+      "title": "Schindler's List",
+      "titleEs": "La lista de Schindler",
+      "year": 1993,
+      "era": "ww2",
+      "period": { "start": "1939-10", "end": "1945-05" },
+      "theaters": ["eastern-europe"],
+      "tags": ["holocaust", "biography", "true-story"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won seven Academy Awards including Best Picture and ranks eighth on AFI's 2007 list of the 100 greatest American films.",
+        "es": "Ganó siete premios Óscar, incluido el de Mejor Película, y ocupa el octavo lugar en la lista del AFI de 2007 de las 100 mejores películas estadounidenses."
+      },
+      "directors": ["Steven Spielberg"],
+      "countries": ["US"],
+      "languages": ["en", "de", "pl"],
+      "ids": {
+        "tmdb": 424,
+        "tmdbType": "movie",
+        "imdb": "tt0108052",
+        "wikidata": "Q483941"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Schindler's_List",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/La_lista_de_Schindler",
+        "fandom": "https://movies.fandom.com/wiki/Schindler's_List"
+      },
+      "synopsis": {
+        "en": "A German businessman and Nazi Party member arrives in occupied Kraków to get rich on cheap Jewish labor, and slowly turns his enamelware factory into a refuge for the people the SS wants to kill.",
+        "es": "Un empresario alemán y miembro del Partido Nazi llega a la Cracovia ocupada para enriquecerse con mano de obra judía barata y, poco a poco, convierte su fábrica de esmaltados en un refugio para quienes las SS quieren matar."
+      },
+      "history": {
+        "en": [
+          "Oskar Schindler took over an enamelware plant in Kraków's Zabłocie district in late 1939 and staffed it largely with Jews from the ghetto the Germans sealed in Podgórze in March 1941. When the ghetto was liquidated on 13–14 March 1943, about 8,000 people were sent to the Płaszów camp run by Amon Göth and some 2,000 were murdered or deported to Auschwitz.",
+          "In October 1944, as the Red Army approached, Schindler moved about 1,100 Jewish workers to a munitions factory at Brünnlitz (Brněnec) in the Sudetenland; a transport of his women was diverted to Auschwitz-Birkenau and later released to him. The film compresses and dramatises events, and the famous list was actually typed by Schindler's staff, but its core is drawn from survivors' testimony collected by Thomas Keneally."
+        ],
+        "es": [
+          "Oskar Schindler se hizo cargo de una fábrica de esmaltados en el barrio cracoviano de Zabłocie a fines de 1939 y la llenó sobre todo de judíos del gueto que los alemanes cerraron en Podgórze en marzo de 1941. Cuando el gueto fue liquidado el 13 y 14 de marzo de 1943, unas 8.000 personas fueron enviadas al campo de Płaszów, dirigido por Amon Göth, y unas 2.000 fueron asesinadas o deportadas a Auschwitz.",
+          "En octubre de 1944, con el Ejército Rojo cada vez más cerca, Schindler trasladó a unos 1.100 trabajadores judíos a una fábrica de municiones en Brünnlitz (Brněnec), en los Sudetes; un transporte con sus trabajadoras fue desviado a Auschwitz-Birkenau y luego liberado. La película condensa y dramatiza los hechos, y la famosa lista la mecanografiaron en realidad sus empleados, pero su núcleo proviene de los testimonios de sobrevivientes que reunió Thomas Keneally."
+        ]
+      },
+      "journey": [
+        {
+          "place": "krakow",
+          "name": {
+            "en": "Schindler's Emalia factory, Kraków",
+            "es": "Fábrica Emalia de Schindler, Cracovia"
+          },
+          "coordinates": [19.9618, 50.0475],
+          "date": "1939-11",
+          "kind": "city",
+          "story": {
+            "en": "Schindler charms SS officers, takes over an enamelware factory and hires Jewish workers through the accountant Itzhak Stern.",
+            "es": "Schindler seduce a oficiales de las SS, se queda con una fábrica de esmaltados y contrata trabajadores judíos a través del contador Itzhak Stern."
+          },
+          "history": {
+            "en": "Schindler leased the bankrupt Rekord works in Zabłocie in November 1939 and renamed it Deutsche Emailwarenfabrik (Emalia).",
+            "es": "Schindler arrendó la quebrada fábrica Rekord de Zabłocie en noviembre de 1939 y la rebautizó Deutsche Emailwarenfabrik (Emalia)."
+          }
+        },
+        {
+          "place": "krakow",
+          "name": {
+            "en": "Kraków Ghetto, Podgórze",
+            "es": "Gueto de Cracovia, Podgórze"
+          },
+          "coordinates": [19.9547, 50.0453],
+          "date": "1943-03",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "From a hill above the ghetto, Schindler watches the SS clear it street by street and notices a little girl in a red coat.",
+            "es": "Desde una colina sobre el gueto, Schindler ve cómo las SS lo vacían calle por calle y se fija en una niña de abrigo rojo."
+          },
+          "history": {
+            "en": "The Kraków Ghetto was liquidated on 13–14 March 1943; its survivors were marched to Płaszów or deported to Auschwitz.",
+            "es": "El gueto de Cracovia fue liquidado el 13 y 14 de marzo de 1943; sus sobrevivientes fueron llevados a Płaszów o deportados a Auschwitz."
+          }
+        },
+        {
+          "place": "plaszow",
+          "name": { "en": "Płaszów camp", "es": "Campo de Płaszów" },
+          "coordinates": [19.9618, 50.0327],
+          "date": "1943-03",
+          "kind": "camp",
+          "story": {
+            "en": "Commandant Amon Göth terrorises the prisoners from his villa, while Schindler bribes him to keep his workers at a sub-camp beside the factory.",
+            "es": "El comandante Amon Göth aterroriza a los prisioneros desde su villa, mientras Schindler lo soborna para mantener a sus obreros en un subcampo junto a la fábrica."
+          },
+          "history": {
+            "en": "Built on two Jewish cemeteries, Płaszów held up to about 25,000 prisoners; Göth was tried and hanged in Kraków in 1946.",
+            "es": "Construido sobre dos cementerios judíos, Płaszów llegó a retener a unos 25.000 prisioneros; Göth fue juzgado y ahorcado en Cracovia en 1946."
+          }
+        },
+        {
+          "place": "auschwitz",
+          "name": { "en": "Auschwitz-Birkenau", "es": "Auschwitz-Birkenau" },
+          "coordinates": [19.1783, 50.0358],
+          "date": "1944-10",
+          "kind": "camp",
+          "story": {
+            "en": "The train carrying Schindler's women is sent to Birkenau by mistake, and he rushes there to bargain for their release.",
+            "es": "El tren con las mujeres de Schindler es enviado por error a Birkenau, y él corre hasta allí para negociar su liberación."
+          },
+          "history": {
+            "en": "About 300 women from Schindler's list spent several weeks in Birkenau in autumn 1944 before being sent on to Brünnlitz.",
+            "es": "Unas 300 mujeres de la lista de Schindler pasaron varias semanas en Birkenau en el otoño de 1944 antes de ser enviadas a Brünnlitz."
+          }
+        },
+        {
+          "place": "brunnlitz",
+          "name": { "en": "Brünnlitz (Brněnec)", "es": "Brünnlitz (Brněnec)" },
+          "coordinates": [16.5221, 49.6274],
+          "date": "1945-05",
+          "kind": "camp",
+          "story": {
+            "en": "In the new munitions plant Schindler keeps the SS out of the workshops, lets his workers pray and makes sure nothing useful is produced.",
+            "es": "En la nueva fábrica de municiones, Schindler mantiene a las SS fuera de los talleres, deja rezar a sus trabajadores y se asegura de que no se produzca nada útil."
+          },
+          "history": {
+            "en": "Around 1,200 Jews survived at Brünnlitz until the Red Army liberated the camp on 9 May 1945.",
+            "es": "Unos 1.200 judíos sobrevivieron en Brünnlitz hasta que el Ejército Rojo liberó el campo el 9 de mayo de 1945."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-pianist-2002",
+      "kind": "film",
+      "title": "The Pianist",
+      "titleEs": "El pianista",
+      "year": 2002,
+      "era": "ww2",
+      "period": { "start": "1939-09", "end": "1945-01" },
+      "theaters": ["eastern-europe"],
+      "tags": ["holocaust", "biography", "true-story"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won the Palme d'Or at Cannes in 2002 and three Academy Awards, for Best Director, Best Actor and Best Adapted Screenplay.",
+        "es": "Ganó la Palma de Oro en Cannes en 2002 y tres premios Óscar: Mejor Director, Mejor Actor y Mejor Guion Adaptado."
+      },
+      "directors": ["Roman Polanski"],
+      "countries": ["FR", "PL", "DE", "GB"],
+      "languages": ["en", "de"],
+      "ids": {
+        "tmdb": 423,
+        "tmdbType": "movie",
+        "imdb": "tt0253474",
+        "wikidata": "Q150804"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Pianist_(2002_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/El_pianista"
+      },
+      "synopsis": {
+        "en": "Władysław Szpilman, a Jewish pianist on Polish Radio, watches Warsaw close in around him: the armbands, the ghetto, the deportations, and then years alone in hiding as the city is destroyed.",
+        "es": "Władysław Szpilman, pianista judío de la Radio Polaca, ve cómo Varsovia se cierra a su alrededor: los brazaletes, el gueto, las deportaciones y luego años escondido y solo mientras la ciudad es destruida."
+      },
+      "history": {
+        "en": [
+          "Roman Polanski adapted Szpilman's 1946 memoir almost scene by scene. In November 1940 the Germans sealed about 400,000 Jews into the Warsaw Ghetto, where hunger and typhus killed tens of thousands; between July and September 1942 some 265,000 were deported from the Umschlagplatz to be murdered at Treblinka, Szpilman's parents and siblings among them.",
+          "Szpilman escaped the deportation, worked as a labourer and then hid on the 'Aryan' side with help from the Polish underground, witnessing both the Ghetto Uprising of April 1943 and the Warsaw Uprising of August 1944. In November 1944 Wehrmacht captain Wilm Hosenfeld found him in a ruined building on Aleja Niepodległości and brought him food; Hosenfeld died in Soviet captivity in 1952."
+        ],
+        "es": [
+          "Roman Polanski adaptó casi escena por escena las memorias que Szpilman publicó en 1946. En noviembre de 1940 los alemanes encerraron a unos 400.000 judíos en el gueto de Varsovia, donde el hambre y el tifus mataron a decenas de miles; entre julio y septiembre de 1942 unas 265.000 personas fueron deportadas desde la Umschlagplatz para ser asesinadas en Treblinka, entre ellas los padres y hermanos de Szpilman.",
+          "Szpilman se salvó de la deportación, trabajó como obrero y luego se escondió en el lado «ario» con ayuda de la resistencia polaca, y fue testigo del levantamiento del gueto en abril de 1943 y del Alzamiento de Varsovia en agosto de 1944. En noviembre de 1944 el capitán de la Wehrmacht Wilm Hosenfeld lo encontró en un edificio en ruinas de la avenida Niepodległości y le llevó comida; Hosenfeld murió en cautiverio soviético en 1952."
+        ]
+      },
+      "journey": [
+        {
+          "place": "warsaw",
+          "name": {
+            "en": "Polish Radio, Warsaw",
+            "es": "Radio Polaca, Varsovia"
+          },
+          "coordinates": [21.0052, 52.2336],
+          "date": "1939-09",
+          "kind": "city",
+          "story": {
+            "en": "Szpilman is playing Chopin live on the air when German bombs hit the radio building.",
+            "es": "Szpilman está tocando a Chopin en vivo cuando las bombas alemanas alcanzan el edificio de la radio."
+          },
+          "history": {
+            "en": "Polish Radio went off the air on 23 September 1939 as Warsaw was besieged; the city surrendered on 28 September.",
+            "es": "La Radio Polaca dejó de transmitir el 23 de septiembre de 1939 durante el sitio de Varsovia; la ciudad capituló el 28 de septiembre."
+          }
+        },
+        {
+          "place": "warsaw",
+          "name": { "en": "Warsaw Ghetto", "es": "Gueto de Varsovia" },
+          "coordinates": [21.0, 52.25],
+          "date": "1940-11",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "The family is forced behind the ghetto wall, where Szpilman plays in a café for the privileged while people starve on the pavement outside.",
+            "es": "La familia es obligada a vivir tras el muro del gueto, donde Szpilman toca en un café para privilegiados mientras la gente muere de hambre en la vereda."
+          },
+          "history": {
+            "en": "Sealed on 16 November 1940, the Warsaw Ghetto was the largest in occupied Europe, crowding over 400,000 people into about 3.4 km².",
+            "es": "Cerrado el 16 de noviembre de 1940, el gueto de Varsovia fue el más grande de la Europa ocupada, con más de 400.000 personas en unos 3,4 km²."
+          }
+        },
+        {
+          "place": "warsaw",
+          "name": { "en": "Umschlagplatz", "es": "Umschlagplatz" },
+          "coordinates": [20.9891, 52.2523],
+          "date": "1942-08",
+          "kind": "camp",
+          "story": {
+            "en": "At the loading square a Jewish policeman pulls Szpilman out of the crowd while his family is pushed into the cattle cars.",
+            "es": "En la plaza de embarque, un policía judío saca a Szpilman de la multitud mientras su familia es empujada a los vagones de ganado."
+          },
+          "history": {
+            "en": "From this square the Germans deported about 265,000 Jews to Treblinka during the Great Action of summer 1942.",
+            "es": "Desde esta plaza los alemanes deportaron a unos 265.000 judíos a Treblinka durante la Gran Acción del verano de 1942."
+          }
+        },
+        {
+          "place": "warsaw",
+          "name": {
+            "en": "Hideout on Aleja Niepodległości",
+            "es": "Escondite en la avenida Niepodległości"
+          },
+          "coordinates": [21.0081, 52.2127],
+          "date": "1944-08",
+          "kind": "home",
+          "story": {
+            "en": "Hidden in a flat facing a German hospital, he watches the Home Army attack in the street below and has to flee when a tank shells the building.",
+            "es": "Escondido en un departamento frente a un hospital alemán, ve atacar al Ejército Nacional en la calle y debe huir cuando un tanque cañonea el edificio."
+          },
+          "history": {
+            "en": "The Warsaw Uprising began on 1 August 1944 and ended in surrender on 2 October after 63 days of fighting.",
+            "es": "El Alzamiento de Varsovia comenzó el 1 de agosto de 1944 y terminó con la capitulación el 2 de octubre, tras 63 días de lucha."
+          }
+        },
+        {
+          "place": "warsaw",
+          "name": { "en": "Ruins of Warsaw", "es": "Ruinas de Varsovia" },
+          "coordinates": [21.0085, 52.2118],
+          "date": "1944-11",
+          "kind": "city",
+          "story": {
+            "en": "Starving in an attic of the razed city, Szpilman is found by a German officer who asks him to play the piano.",
+            "es": "Hambriento en un altillo de la ciudad arrasada, Szpilman es descubierto por un oficial alemán que le pide que toque el piano."
+          },
+          "history": {
+            "en": "After the uprising the Germans expelled the population and systematically demolished most of the left-bank city.",
+            "es": "Tras el alzamiento, los alemanes expulsaron a la población y demolieron sistemáticamente la mayor parte de la ciudad en la orilla izquierda."
+          }
+        }
+      ]
+    },
+    {
+      "id": "downfall-2004",
+      "kind": "film",
+      "title": "Downfall",
+      "titleEs": "La caída",
+      "originalTitle": "Der Untergang",
+      "year": 2004,
+      "era": "ww2",
+      "period": { "start": "1942-11", "end": "1945-05" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat", "politics", "biography", "true-story"],
+      "gold": true,
+      "goldReason": {
+        "en": "Nominated for the Academy Award for Best Foreign Language Film and a long-standing entry in IMDb's Top 250.",
+        "es": "Nominada al Óscar a la Mejor Película de Habla No Inglesa y presente desde hace años en el Top 250 de IMDb."
+      },
+      "directors": ["Oliver Hirschbiegel"],
+      "countries": ["DE", "AT", "IT"],
+      "languages": ["de", "ru"],
+      "ids": {
+        "tmdb": 613,
+        "tmdbType": "movie",
+        "imdb": "tt0363163",
+        "wikidata": "Q152857"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Downfall_(2004_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Der_Untergang"
+      },
+      "synopsis": {
+        "en": "Through the eyes of his young secretary, Hitler's last days unfold underground in the Führerbunker while the Red Army closes in on Berlin and the city above is left to die.",
+        "es": "A través de los ojos de su joven secretaria, los últimos días de Hitler transcurren bajo tierra en el Führerbunker mientras el Ejército Rojo cerca Berlín y la ciudad de arriba queda abandonada a su suerte."
+      },
+      "history": {
+        "en": [
+          "The film draws on Joachim Fest's history 'Inside Hitler's Bunker' and the memoirs of Traudl Junge, who became Hitler's secretary at the Wolf's Lair in East Prussia in late 1942. The Soviet assault on Berlin began on 16 April 1945; by 25 April the city was encircled by some 1.5 million Red Army soldiers against a garrison of old men, boys of the Hitler Youth and remnants of broken divisions.",
+          "Hitler married Eva Braun and dictated his political testament before both killed themselves on 30 April 1945; Goebbels and his wife poisoned their six children the next day. General Weidling surrendered the city on 2 May. Critics debated the film's humanised portrait of Hitler, but its reconstruction of the bunker's final days is widely considered close to the historical record."
+        ],
+        "es": [
+          "La película se basa en el libro de historia de Joachim Fest 'El hundimiento' y en las memorias de Traudl Junge, que se convirtió en secretaria de Hitler en la Guarida del Lobo, en Prusia Oriental, a fines de 1942. El asalto soviético a Berlín comenzó el 16 de abril de 1945; para el 25 de abril la ciudad estaba cercada por cerca de 1,5 millones de soldados del Ejército Rojo frente a una guarnición de ancianos, chicos de las Juventudes Hitlerianas y restos de divisiones deshechas.",
+          "Hitler se casó con Eva Braun y dictó su testamento político antes de que ambos se suicidaran el 30 de abril de 1945; Goebbels y su esposa envenenaron a sus seis hijos al día siguiente. El general Weidling rindió la ciudad el 2 de mayo. La crítica debatió el retrato humanizado de Hitler, pero su reconstrucción de los últimos días del búnker se considera en general muy fiel al registro histórico."
+        ]
+      },
+      "journey": [
+        {
+          "place": "wolfs-lair",
+          "name": {
+            "en": "Wolf's Lair, East Prussia",
+            "es": "Guarida del Lobo, Prusia Oriental"
+          },
+          "coordinates": [21.4936, 54.0794],
+          "date": "1942-11",
+          "kind": "base",
+          "story": {
+            "en": "In a forest headquarters, Hitler interviews young typists and chooses Traudl Junge as his secretary.",
+            "es": "En un cuartel general en medio del bosque, Hitler entrevista a jóvenes mecanógrafas y elige a Traudl Junge como secretaria."
+          },
+          "history": {
+            "en": "Hitler spent more than 800 days at the Wolf's Lair near Rastenburg between 1941 and November 1944.",
+            "es": "Hitler pasó más de 800 días en la Guarida del Lobo, cerca de Rastenburg, entre 1941 y noviembre de 1944."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Führerbunker, Berlin",
+            "es": "Führerbunker, Berlín"
+          },
+          "coordinates": [13.3815, 52.5125],
+          "date": "1945-04",
+          "kind": "base",
+          "primary": true,
+          "story": {
+            "en": "Under the Reich Chancellery garden, Hitler moves phantom armies on maps, rages at his generals and turns on those who try to leave.",
+            "es": "Bajo el jardín de la Cancillería del Reich, Hitler mueve ejércitos fantasma sobre los mapas, estalla contra sus generales y se vuelve contra quienes intentan irse."
+          },
+          "history": {
+            "en": "Hitler lived in the bunker from mid-January 1945 and killed himself there on 30 April 1945.",
+            "es": "Hitler vivió en el búnker desde mediados de enero de 1945 y se suicidó allí el 30 de abril de 1945."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Streets of central Berlin",
+            "es": "Calles del centro de Berlín"
+          },
+          "coordinates": [13.3819, 52.5117],
+          "date": "1945-04",
+          "kind": "battle",
+          "story": {
+            "en": "Hitler Youth boys man anti-tank guns in the ruins, and an SS doctor tries to care for civilians as Soviet shells fall.",
+            "es": "Chicos de las Juventudes Hitlerianas manejan cañones antitanque entre las ruinas, y un médico de las SS intenta atender a civiles bajo los obuses soviéticos."
+          },
+          "history": {
+            "en": "The fighting for the government quarter cost tens of thousands of lives, many of them civilians and teenage conscripts.",
+            "es": "Los combates por el barrio gubernamental costaron decenas de miles de vidas, muchas de ellas civiles y reclutas adolescentes."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Weidendammer Bridge breakout",
+            "es": "Escape por el puente Weidendammer"
+          },
+          "coordinates": [13.3881, 52.5222],
+          "date": "1945-05",
+          "kind": "journey",
+          "story": {
+            "en": "After the deaths in the bunker, the survivors split into groups and try to slip through the Soviet lines across the Spree.",
+            "es": "Tras las muertes en el búnker, los sobrevivientes se dividen en grupos e intentan colarse entre las líneas soviéticas cruzando el Spree."
+          },
+          "history": {
+            "en": "On the night of 1–2 May 1945 breakout groups from the bunker tried to cross the Spree at the Weidendammer Bridge; most were killed or captured.",
+            "es": "La noche del 1 al 2 de mayo de 1945, grupos del búnker intentaron cruzar el Spree por el puente Weidendammer; la mayoría murió o fue capturada."
+          }
+        }
+      ]
+    },
+    {
+      "id": "t-34-2019",
+      "kind": "film",
+      "title": "T-34",
+      "titleEs": "T-34",
+      "year": 2019,
+      "era": "ww2",
+      "period": { "start": "1941-11", "end": "1944" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat", "prisoners"],
+      "gold": false,
+      "directors": ["Aleksey Sidorov"],
+      "countries": ["RU"],
+      "languages": ["ru", "de"],
+      "ids": {
+        "tmdb": 505954,
+        "tmdbType": "movie",
+        "imdb": "tt8820590",
+        "wikidata": "Q39293164"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/T-34_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/T-34_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "A young Soviet tank lieutenant captured outside Moscow is forced, years later, to crew a T-34 as a live target for SS tank cadets, and plans an escape with the tank itself.",
+        "es": "Un joven teniente de tanques soviético capturado a las puertas de Moscú es obligado, años después, a tripular un T-34 como blanco vivo para cadetes de las SS, y planea escapar con el propio tanque."
+      },
+      "history": {
+        "en": [
+          "The opening duel is set during Operation Typhoon, the German drive on Moscow in autumn 1941, when single Soviet tanks and small ambush groups were used to delay panzer columns on the roads west of the capital. Of the roughly 5.7 million Red Army soldiers the Germans captured, more than 3 million died in captivity.",
+          "The escape itself is fiction, loosely inspired by stories of Soviet prisoners who seized vehicles to flee; the film plays like an action movie, with slow-motion shell hits and a chivalrous tank duel that owes more to westerns than to the war. Its T-34-85 and Panther tanks, though, are largely real or faithful replicas."
+        ],
+        "es": [
+          "El duelo inicial transcurre durante la Operación Tifón, la ofensiva alemana sobre Moscú en el otoño de 1941, cuando tanques soviéticos aislados y pequeños grupos de emboscada se usaban para frenar a las columnas panzer en los caminos al oeste de la capital. De los cerca de 5,7 millones de soldados del Ejército Rojo capturados por los alemanes, más de 3 millones murieron en cautiverio.",
+          "La fuga en sí es ficción, inspirada libremente en relatos de prisioneros soviéticos que se apoderaron de vehículos para huir; la película funciona como cine de acción, con impactos en cámara lenta y un duelo caballeresco de tanques más cercano al western que a la guerra. Sus T-34-85 y Panther, eso sí, son en gran parte reales o réplicas fieles."
+        ]
+      },
+      "journey": [
+        {
+          "place": "volokolamsk",
+          "name": {
+            "en": "Western approaches to Moscow",
+            "es": "Accesos occidentales a Moscú"
+          },
+          "coordinates": [35.95, 56.0333],
+          "date": "1941-11",
+          "kind": "battle",
+          "story": {
+            "en": "With a single damaged T-34, Ivushkin ambushes a column of panzers in a village to buy time for the defence of Moscow.",
+            "es": "Con un solo T-34 dañado, Ivushkin embosca a una columna de panzers en una aldea para ganar tiempo en la defensa de Moscú."
+          },
+          "history": {
+            "en": "In November 1941 German panzer groups pushed along the Volokolamsk highway toward Moscow before the Soviet counter-offensive of 5 December.",
+            "es": "En noviembre de 1941 los grupos panzer alemanes avanzaron por la carretera de Volokolamsk hacia Moscú antes de la contraofensiva soviética del 5 de diciembre."
+          }
+        },
+        {
+          "place": "ohrdruf",
+          "name": {
+            "en": "Camp and training ground in Thuringia",
+            "es": "Campo y polígono de entrenamiento en Turingia"
+          },
+          "coordinates": [10.7328, 50.8281],
+          "date": "1944",
+          "kind": "camp",
+          "primary": true,
+          "story": {
+            "en": "Chosen as a target crew for Panzer training, Ivushkin and three prisoners secretly stash live shells found in their captured tank.",
+            "es": "Elegidos como tripulación blanco para el entrenamiento panzer, Ivushkin y tres prisioneros esconden en secreto proyectiles reales hallados en su tanque capturado."
+          },
+          "history": {
+            "en": "The Ohrdruf military training area in Thuringia housed a Buchenwald sub-camp that US troops liberated in April 1945.",
+            "es": "El campo de entrenamiento militar de Ohrdruf, en Turingia, albergaba un subcampo de Buchenwald que las tropas estadounidenses liberaron en abril de 1945."
+          }
+        },
+        {
+          "place": "klingenthal",
+          "name": { "en": "Klingenthal, Saxony", "es": "Klingenthal, Sajonia" },
+          "coordinates": [12.4686, 50.3669],
+          "date": "1944",
+          "kind": "battle",
+          "story": {
+            "en": "Racing for the Czech border, the fugitive tank runs into an ambush of Panthers in a small town and fights its way through the streets.",
+            "es": "Rumbo a la frontera checa, el tanque fugitivo cae en una emboscada de Panther en un pueblo y se abre paso a cañonazos por sus calles."
+          },
+          "history": {
+            "en": "Klingenthal lies on the Saxon border with Bohemia and saw no tank battle; it was occupied by US and then Soviet troops in 1945.",
+            "es": "Klingenthal está en la frontera sajona con Bohemia y no vivió ninguna batalla de tanques; fue ocupada por tropas estadounidenses y luego soviéticas en 1945."
+          }
+        }
+      ]
+    },
+    {
+      "id": "enemy-at-the-gates-2001",
+      "kind": "film",
+      "title": "Enemy at the Gates",
+      "titleEs": "Enemigo al acecho",
+      "year": 2001,
+      "era": "ww2",
+      "period": { "start": "1942-09", "end": "1943-02" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat", "true-story", "romance"],
+      "gold": false,
+      "directors": ["Jean-Jacques Annaud"],
+      "countries": ["US", "DE", "GB", "IE"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 853,
+        "tmdbType": "movie",
+        "imdb": "tt0215750",
+        "wikidata": "Q271006"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Enemy_at_the_Gates",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Enemy_at_the_Gates",
+        "fandom": "https://movies.fandom.com/wiki/Enemy_at_the_Gates"
+      },
+      "synopsis": {
+        "en": "A shepherd from the Urals becomes the Red Army's star sniper in the ruins of Stalingrad, and the Germans send their best marksman to hunt him down.",
+        "es": "Un pastor de los Urales se convierte en el francotirador estrella del Ejército Rojo entre las ruinas de Stalingrado, y los alemanes envían a su mejor tirador para cazarlo."
+      },
+      "history": {
+        "en": [
+          "Vasily Zaitsev was a real sniper of the 284th Rifle Division, credited with 225 kills between October and December 1942 and turned into a hero by Soviet propaganda. The film's opening, with conscripts ferried across the Volga under fire and sent forward with one rifle for every two men, echoes the desperate reinforcement of Chuikov's 62nd Army in September 1942.",
+          "The duel with Major König comes from Zaitsev's memoirs and William Craig's book, but historians have found no record of such a German officer and consider the duel largely legend. The love triangle with Tania Chernova is also embellished; the real battle ended with the surrender of the encircled 6th Army on 2 February 1943."
+        ],
+        "es": [
+          "Vasili Záitsev fue un francotirador real de la 284.ª División de Fusileros, al que se le atribuyen 225 bajas entre octubre y diciembre de 1942 y al que la propaganda soviética convirtió en héroe. El inicio de la película, con reclutas cruzando el Volga bajo el fuego y enviados al frente con un fusil cada dos hombres, recuerda los refuerzos desesperados del 62.º Ejército de Chuikov en septiembre de 1942.",
+          "El duelo con el mayor König proviene de las memorias de Záitsev y del libro de William Craig, pero los historiadores no han hallado registro de ese oficial alemán y lo consideran en gran parte una leyenda. El triángulo amoroso con Tania Chernova también está adornado; la batalla real terminó con la rendición del 6.º Ejército cercado el 2 de febrero de 1943."
+        ]
+      },
+      "journey": [
+        {
+          "place": "stalingrad",
+          "name": {
+            "en": "Volga crossing at Stalingrad",
+            "es": "Cruce del Volga en Stalingrado"
+          },
+          "coordinates": [44.539, 48.719],
+          "date": "1942-09",
+          "kind": "landing",
+          "story": {
+            "en": "Packed onto barges under Stuka attack, Vassili lands in the burning city and is thrown straight into a suicidal assault.",
+            "es": "Hacinado en barcazas bajo el ataque de los Stuka, Vasili desembarca en la ciudad en llamas y es lanzado directo a un asalto suicida."
+          },
+          "history": {
+            "en": "Soviet reinforcements crossed the Volga mostly at night under constant fire; the 13th Guards Division landed on 14–15 September 1942.",
+            "es": "Los refuerzos soviéticos cruzaban el Volga sobre todo de noche y bajo fuego constante; la 13.ª División de Guardias desembarcó el 14 y 15 de septiembre de 1942."
+          }
+        },
+        {
+          "place": "stalingrad",
+          "name": {
+            "en": "Ruins of central Stalingrad",
+            "es": "Ruinas del centro de Stalingrado"
+          },
+          "coordinates": [44.516, 48.708],
+          "date": "1942-10",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Among gutted buildings and a wrecked railway yard, Vassili and König stalk each other in a game of patience and bait.",
+            "es": "Entre edificios destripados y un patio ferroviario destruido, Vasili y König se acechan en un juego de paciencia y señuelos."
+          },
+          "history": {
+            "en": "By October 1942 the Soviets held only narrow strips along the Volga, and snipers became a key weapon in the rubble.",
+            "es": "Para octubre de 1942 los soviéticos solo conservaban franjas estrechas junto al Volga, y los francotiradores se volvieron un arma clave entre los escombros."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tuntematon-sotilas-2017",
+      "kind": "film",
+      "title": "The Unknown Soldier",
+      "titleEs": "El soldado desconocido",
+      "originalTitle": "Tuntematon sotilas",
+      "year": 2017,
+      "era": "ww2",
+      "period": { "start": "1941-06", "end": "1944-09" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Aku Louhimies"],
+      "countries": ["FI"],
+      "languages": ["fi", "sv", "ru"],
+      "ids": {
+        "tmdb": 400728,
+        "tmdbType": "movie",
+        "imdb": "tt4065552",
+        "wikidata": "Q18633732"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Unknown_Soldier_(2017_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Tuntematon_sotilas_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "A Finnish machine-gun company marches into Soviet Karelia in 1941 sure of a quick war, then spends three years in swamps and trenches before the great Soviet offensive of 1944 throws it back.",
+        "es": "Una compañía finlandesa de ametralladoras entra en la Carelia soviética en 1941 convencida de una guerra rápida, y pasa tres años en pantanos y trincheras hasta que la gran ofensiva soviética de 1944 la hace retroceder."
+      },
+      "history": {
+        "en": [
+          "The film adapts Väinö Linna's 1954 novel, based on his own service as a machine-gun squad leader in Infantry Regiment 8 during the Continuation War. Finland joined the German invasion of the USSR in June 1941 to recover the land lost in the Winter War, then pushed beyond the old border into East Karelia, taking Petrozavodsk on 1 October 1941 and reaching the Svir River.",
+          "The front then froze into trench warfare until 9 June 1944, when the Red Army's Vyborg–Petrozavodsk offensive forced the Finns back with heavy losses. Finland signed the Moscow Armistice on 19 September 1944. The character Antero Rokka is modelled on Viljam Pylkäs, who stopped a Soviet assault at Nietjärvi on 28 June 1944."
+        ],
+        "es": [
+          "La película adapta la novela de Väinö Linna de 1954, basada en su propio servicio como jefe de escuadra de ametralladoras en el Regimiento de Infantería 8 durante la Guerra de Continuación. Finlandia se sumó a la invasión alemana de la URSS en junio de 1941 para recuperar lo perdido en la Guerra de Invierno, y luego avanzó más allá de la antigua frontera hacia la Carelia Oriental, tomó Petrozavodsk el 1 de octubre de 1941 y llegó al río Svir.",
+          "El frente se congeló después en una guerra de trincheras hasta el 9 de junio de 1944, cuando la ofensiva Víborg–Petrozavodsk del Ejército Rojo hizo retroceder a los finlandeses con fuertes pérdidas. Finlandia firmó el Armisticio de Moscú el 19 de septiembre de 1944. El personaje de Antero Rokka se inspira en Viljam Pylkäs, que frenó un asalto soviético en Nietjärvi el 28 de junio de 1944."
+        ]
+      },
+      "journey": [
+        {
+          "place": "petrozavodsk",
+          "name": {
+            "en": "Petroskoi (Petrozavodsk), Karelia",
+            "es": "Petroskoi (Petrozavodsk), Carelia"
+          },
+          "coordinates": [34.35, 61.7833],
+          "date": "1941-10",
+          "kind": "city",
+          "story": {
+            "en": "After weeks of advance the company enters the captured Karelian capital and the men mix with the locals.",
+            "es": "Tras semanas de avance, la compañía entra en la capital carelia recién tomada y los hombres se mezclan con los lugareños."
+          },
+          "history": {
+            "en": "Finnish troops entered Petrozavodsk on 1 October 1941 and renamed it Äänislinna for the occupation.",
+            "es": "Las tropas finlandesas entraron en Petrozavodsk el 1 de octubre de 1941 y la rebautizaron Äänislinna durante la ocupación."
+          }
+        },
+        {
+          "place": "svir-river",
+          "name": { "en": "Svir River front", "es": "Frente del río Svir" },
+          "coordinates": [35.4917, 61.0089],
+          "date": "1941-12",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Dug in on the Svir, the company beats back winter attacks and then settles into years of trench life, sniper fire and home-brewed kilju.",
+            "es": "Atrincherada en el Svir, la compañía rechaza los ataques del invierno y luego se acomoda a años de vida en la trinchera, disparos de francotiradores y kilju casero."
+          },
+          "history": {
+            "en": "From December 1941 to June 1944 the Svir was a static front between Lakes Ladoga and Onega.",
+            "es": "Desde diciembre de 1941 hasta junio de 1944 el Svir fue un frente estático entre los lagos Ládoga y Onega."
+          }
+        },
+        {
+          "place": "helsinki",
+          "name": { "en": "Helsinki Cathedral", "es": "Catedral de Helsinki" },
+          "coordinates": [24.9521, 60.1704],
+          "date": "1942",
+          "kind": "home",
+          "story": {
+            "en": "On leave, Lieutenant Kariluoto marries his fiancée in the capital's cathedral in the middle of the war.",
+            "es": "De permiso, el teniente Kariluoto se casa con su novia en la catedral de la capital en plena guerra."
+          },
+          "history": {
+            "en": "Helsinki stayed far from the front until the heavy Soviet air raids of February 1944.",
+            "es": "Helsinki estuvo lejos del frente hasta los fuertes bombardeos soviéticos de febrero de 1944."
+          }
+        },
+        {
+          "place": "nietjarvi",
+          "name": {
+            "en": "Retreat through Ladoga Karelia",
+            "es": "Retirada por la Carelia del Ládoga"
+          },
+          "coordinates": [31.491, 61.615],
+          "date": "1944-07",
+          "kind": "front",
+          "story": {
+            "en": "Under the 1944 offensive the company loses its guns and its officers, and makes a last stand before the ceasefire.",
+            "es": "Bajo la ofensiva de 1944 la compañía pierde sus ametralladoras y a sus oficiales, y resiste una última vez antes del alto el fuego."
+          },
+          "history": {
+            "en": "Infantry Regiment 8 held the line at Nietjärvi in late June and July 1944 as the Finns fell back from the Svir.",
+            "es": "El Regimiento de Infantería 8 sostuvo la línea en Nietjärvi a fines de junio y en julio de 1944 mientras los finlandeses se replegaban del Svir."
+          }
+        }
+      ]
+    },
+    {
+      "id": "come-and-see-1985",
+      "kind": "film",
+      "title": "Come and See",
+      "titleEs": "Ven y mira",
+      "originalTitle": "Idi i smotri",
+      "year": 1985,
+      "era": "ww2",
+      "period": { "start": "1943", "end": "1943" },
+      "theaters": ["eastern-europe"],
+      "tags": ["resistance", "holocaust"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won the Golden Prize at the 1985 Moscow International Film Festival and is a long-standing entry in IMDb's Top 250.",
+        "es": "Ganó el Premio de Oro del Festival Internacional de Cine de Moscú de 1985 y figura desde hace años en el Top 250 de IMDb."
+      },
+      "directors": ["Elem Klimov"],
+      "countries": ["SU"],
+      "languages": ["be", "ru", "de"],
+      "ids": {
+        "tmdb": 25237,
+        "tmdbType": "movie",
+        "imdb": "tt0091251",
+        "wikidata": "Q1130395"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Come_and_See",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Id%C3%AD_i_Smotr%C3%AD"
+      },
+      "synopsis": {
+        "en": "A Belarusian boy digs up a rifle to join the partisans and is dragged through the German anti-partisan terror that wipes whole villages off the map.",
+        "es": "Un chico bielorruso desentierra un fusil para unirse a los partisanos y es arrastrado por el terror antipartisano alemán que borra aldeas enteras del mapa."
+      },
+      "history": {
+        "en": [
+          "Elem Klimov and the writer Ales Adamovich built the film on survivors' accounts of the German occupation of Belarus, where anti-partisan operations served as cover for the mass murder of civilians. More than 600 villages were burned together with their inhabitants, and roughly a quarter of Belarus's population died during the war.",
+          "The massacre that closes the film recalls Khatyn, where on 22 March 1943 Schutzmannschaft Battalion 118 and the SS Dirlewanger unit herded 149 villagers, half of them children, into a barn and set it alight. The village in the film is fictional, but almost every atrocity it shows is documented."
+        ],
+        "es": [
+          "Elem Klimov y el escritor Alés Adamóvich construyeron la película a partir de testimonios de sobrevivientes de la ocupación alemana de Bielorrusia, donde las operaciones contra los partisanos sirvieron de pantalla para el asesinato masivo de civiles. Más de 600 aldeas fueron quemadas junto con sus habitantes, y cerca de una cuarta parte de la población bielorrusa murió durante la guerra.",
+          "La masacre final evoca Jatín, donde el 22 de marzo de 1943 el Batallón de Schutzmannschaft 118 y la unidad SS Dirlewanger encerraron a 149 aldeanos, la mitad niños, en un granero y le prendieron fuego. La aldea de la película es ficticia, pero casi todas las atrocidades que muestra están documentadas."
+        ]
+      },
+      "journey": [
+        {
+          "place": "khatyn",
+          "name": {
+            "en": "Burned village in Belarus (after Khatyn)",
+            "es": "Aldea quemada en Bielorrusia (inspirada en Jatín)"
+          },
+          "coordinates": [27.945, 54.335],
+          "date": "1943-03",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "After weeks with the partisans, Flyora is caught in a village as German troops and collaborators round up its people and drive them into a barn.",
+            "es": "Tras semanas con los partisanos, Fliora queda atrapado en una aldea mientras tropas alemanas y colaboracionistas reúnen a sus habitantes y los meten en un granero."
+          },
+          "history": {
+            "en": "Khatyn was destroyed on 22 March 1943; it became Belarus's national memorial to its more than 600 burned villages.",
+            "es": "Jatín fue destruida el 22 de marzo de 1943 y se convirtió en el memorial nacional bielorruso de sus más de 600 aldeas quemadas."
+          }
+        }
+      ]
+    },
+    {
+      "id": "generation-war-2013",
+      "kind": "series",
+      "title": "Generation War",
+      "titleEs": "Hijos del Tercer Reich",
+      "originalTitle": "Unsere Mütter, unsere Väter",
+      "year": 2013,
+      "seasons": 1,
+      "era": "ww2",
+      "period": { "start": "1941-06", "end": "1945-07" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat", "holocaust", "home-front"],
+      "gold": false,
+      "directors": ["Stefan Kolditz"],
+      "countries": ["DE"],
+      "languages": ["de", "ru", "pl"],
+      "ids": {
+        "tmdb": 46849,
+        "tmdbType": "tv",
+        "imdb": "tt1883092",
+        "wikidata": "Q7903650"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Generation_War",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Hijos_del_Tercer_Reich"
+      },
+      "synopsis": {
+        "en": "Five young friends say goodbye in a Berlin bar in 1941: two brothers leave for the Eastern Front, a nurse follows them, a singer chases fame and their Jewish friend is left to face the Reich alone.",
+        "es": "Cinco jóvenes amigos se despiden en un bar de Berlín en 1941: dos hermanos parten al Frente Oriental, una enfermera los sigue, una cantante persigue la fama y su amigo judío queda solo frente al Reich."
+      },
+      "history": {
+        "en": [
+          "The three-part ZDF drama follows the arc of the German war in the East, from the confident invasion of June 1941 to the failed Kursk offensive of July 1943, Operation Citadel, and the collapse of 1945. It was praised in Germany for showing ordinary soldiers taking part in the murder of Jews and civilians, a subject long kept out of popular war stories.",
+          "It was also sharply criticised, above all in Poland, for portraying the Home Army partisans as antisemitic almost to a man, and by historians who felt its likeable heroes let an entire generation off too lightly. Viktor's escape from a deportation train and the execution of dissenters like Greta reflect real cases, but the characters are fictional."
+        ],
+        "es": [
+          "El drama de ZDF en tres partes sigue el arco de la guerra alemana en el Este, desde la invasión confiada de junio de 1941 hasta la fallida ofensiva de Kursk de julio de 1943, la Operación Ciudadela, y el derrumbe de 1945. En Alemania fue elogiado por mostrar a soldados comunes participando en el asesinato de judíos y civiles, un tema que las historias populares de guerra evitaron durante mucho tiempo.",
+          "También recibió duras críticas, sobre todo en Polonia, por presentar a los partisanos del Ejército Nacional como antisemitas casi sin excepción, y de historiadores que sintieron que sus simpáticos protagonistas absolvían con demasiada facilidad a toda una generación. La fuga de Viktor de un tren de deportación y la ejecución de disidentes como Greta reflejan casos reales, pero los personajes son ficticios."
+        ]
+      },
+      "journey": [
+        {
+          "place": "berlin",
+          "name": { "en": "Berlin", "es": "Berlín" },
+          "coordinates": [13.405, 52.52],
+          "date": "1941-06",
+          "kind": "home",
+          "story": {
+            "en": "On the eve of the invasion of the Soviet Union, the five friends celebrate together and promise to meet again by Christmas.",
+            "es": "En vísperas de la invasión de la Unión Soviética, los cinco amigos celebran juntos y se prometen volver a verse para Navidad."
+          },
+          "history": {
+            "en": "Operation Barbarossa began on 22 June 1941 with more than three million Axis soldiers crossing the Soviet border.",
+            "es": "La Operación Barbarroja comenzó el 22 de junio de 1941 con más de tres millones de soldados del Eje cruzando la frontera soviética."
+          }
+        },
+        {
+          "place": "kursk",
+          "name": { "en": "Kursk salient", "es": "Saliente de Kursk" },
+          "coordinates": [36.1872, 51.7372],
+          "date": "1943-07",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Worn down by two years in Russia, the brothers' platoon is thrown into the great summer offensive as the war turns against Germany.",
+            "es": "Desgastado por dos años en Rusia, el pelotón de los hermanos es lanzado a la gran ofensiva de verano mientras la guerra se vuelve contra Alemania."
+          },
+          "history": {
+            "en": "Operation Citadel, launched on 5 July 1943, was Germany's last major offensive in the East and was halted within two weeks.",
+            "es": "La Operación Ciudadela, lanzada el 5 de julio de 1943, fue la última gran ofensiva alemana en el Este y quedó frenada en dos semanas."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Gestapo prison, Berlin",
+            "es": "Cárcel de la Gestapo, Berlín"
+          },
+          "coordinates": [13.3, 52.5167],
+          "date": "1944",
+          "kind": "camp",
+          "story": {
+            "en": "Arrested for defeatist remarks, Greta waits in a cell while her former protector in the SS decides her fate.",
+            "es": "Arrestada por comentarios derrotistas, Greta espera en una celda mientras su antiguo protector en las SS decide su destino."
+          },
+          "history": {
+            "en": "Nazi courts sentenced thousands of Germans to death for 'undermining military morale', often for a single remark.",
+            "es": "Los tribunales nazis condenaron a muerte a miles de alemanes por «socavar la moral militar», a menudo por un solo comentario."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": { "en": "Ruins of Berlin", "es": "Ruinas de Berlín" },
+          "coordinates": [13.405, 52.52],
+          "date": "1945-07",
+          "kind": "city",
+          "story": {
+            "en": "When the war is over, whoever is left comes back to the ruined bar where it all began.",
+            "es": "Cuando termina la guerra, los que quedan vuelven al bar en ruinas donde todo comenzó."
+          },
+          "history": {
+            "en": "Berlin surrendered to the Red Army on 2 May 1945 and was divided into four occupation sectors that July.",
+            "es": "Berlín se rindió al Ejército Rojo el 2 de mayo de 1945 y en julio fue dividida en cuatro sectores de ocupación."
+          }
+        }
+      ]
+    },
+    {
+      "id": "stalingrad-2013",
+      "kind": "film",
+      "title": "Stalingrad",
+      "titleEs": "Stalingrado",
+      "year": 2013,
+      "era": "ww2",
+      "period": { "start": "1942-10", "end": "1942-11" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Fyodor Bondarchuk"],
+      "countries": ["RU"],
+      "languages": ["ru", "de"],
+      "ids": {
+        "tmdb": 203793,
+        "tmdbType": "movie",
+        "imdb": "tt1966566",
+        "wikidata": "Q552725"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Stalingrad_(2013_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Stalingrado_(pel%C3%ADcula_de_2013)"
+      },
+      "synopsis": {
+        "en": "A handful of Soviet soldiers hold an apartment block by the Volga crossing, protecting the teenage girl who still lives there, while a German captain across the square falls for a Russian woman.",
+        "es": "Un puñado de soldados soviéticos defiende un edificio junto al cruce del Volga y protege a la adolescente que aún vive allí, mientras al otro lado de la plaza un capitán alemán se enamora de una mujer rusa."
+      },
+      "history": {
+        "en": [
+          "The story is loosely inspired by Pavlov's House, a four-storey apartment block on 9 January Square that a small garrison of the 13th Guards Rifle Division held for about two months from late September 1942, covering the approaches to the Volga landing. Civilians sheltered in its cellars during the siege.",
+          "Russia's first IMAX 3D feature favours spectacle over accuracy: its slow-motion combat, burning soldiers and romantic subplots are invented, and the frame story set in Japan after the 2011 earthquake has no historical basis. The ruined centre and the scale of civilian suffering, however, reflect the real battle, in which tens of thousands of Stalingrad's inhabitants died."
+        ],
+        "es": [
+          "La historia se inspira libremente en la Casa de Pávlov, un edificio de cuatro pisos en la plaza 9 de Enero que una pequeña guarnición de la 13.ª División de Fusileros de la Guardia defendió durante unos dos meses desde fines de septiembre de 1942, cubriendo los accesos al embarcadero del Volga. Durante el asedio, civiles se refugiaron en sus sótanos.",
+          "La primera película rusa en IMAX 3D privilegia el espectáculo sobre la exactitud: sus combates en cámara lenta, soldados en llamas y subtramas románticas son inventados, y el relato marco ambientado en Japón tras el terremoto de 2011 no tiene base histórica. El centro en ruinas y la magnitud del sufrimiento civil, en cambio, reflejan la batalla real, en la que murieron decenas de miles de habitantes de Stalingrado."
+        ]
+      },
+      "journey": [
+        {
+          "place": "stalingrad",
+          "name": {
+            "en": "Apartment block near the Volga (after Pavlov's House)",
+            "es": "Edificio junto al Volga (inspirado en la Casa de Pávlov)"
+          },
+          "coordinates": [44.5314, 48.7161],
+          "date": "1942-10",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Five soldiers turn a ruined apartment block into a fortress and adopt Katya, a girl who refused to leave her home.",
+            "es": "Cinco soldados convierten un edificio en ruinas en una fortaleza y adoptan a Katia, una chica que se negó a abandonar su casa."
+          },
+          "history": {
+            "en": "Pavlov's House was held from 27 September to 25 November 1942 and was one of the few buildings on its square left standing.",
+            "es": "La Casa de Pávlov resistió del 27 de septiembre al 25 de noviembre de 1942 y fue uno de los pocos edificios de su plaza que quedaron en pie."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-cranes-are-flying-1957",
+      "kind": "film",
+      "title": "The Cranes Are Flying",
+      "titleEs": "Cuando pasan las cigüeñas",
+      "originalTitle": "Letyat zhuravli",
+      "year": 1957,
+      "era": "ww2",
+      "period": { "start": "1941-06", "end": "1945-05" },
+      "theaters": ["eastern-europe"],
+      "tags": ["home-front", "romance"],
+      "gold": true,
+      "goldReason": {
+        "en": "The only Soviet film ever to win the Palme d'Or at Cannes, in 1958.",
+        "es": "La única película soviética que ganó la Palma de Oro en Cannes, en 1958."
+      },
+      "directors": ["Mikhail Kalatozov"],
+      "countries": ["SU"],
+      "languages": ["ru"],
+      "ids": {
+        "tmdb": 38360,
+        "tmdbType": "movie",
+        "imdb": "tt0050634",
+        "wikidata": "Q714524"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Cranes_Are_Flying",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Cuando_pasan_las_cig%C3%BCe%C3%B1as"
+      },
+      "synopsis": {
+        "en": "Veronika and Boris watch the cranes fly over Moscow at dawn on the day the war begins; he volunteers for the front, and she is left to face bombs, loneliness and a choice she will regret.",
+        "es": "Verónika y Borís ven pasar las grullas sobre Moscú al amanecer del día en que empieza la guerra; él se alista como voluntario y ella queda sola frente a las bombas, la soledad y una decisión de la que se arrepentirá."
+      },
+      "history": {
+        "en": [
+          "Released during Khrushchev's Thaw, Mikhail Kalatozov's film broke with the heroic Stalin-era war movie by centring on a woman's grief and guilt. Its home-front setting is real: Germany invaded on 22 June 1941, Moscow was bombed from late July, and in October 1941 much of the population, industry and government was evacuated east as the Wehrmacht approached.",
+          "Hundreds of thousands of Muscovites volunteered for the people's militia and the Red Army in the first weeks; many of those units were destroyed in the autumn battles around Vyazma. Sergey Urusevsky's hand-held camera and the final scene of soldiers returning to Moscow in May 1945 became landmarks of world cinema."
+        ],
+        "es": [
+          "Estrenada durante el deshielo de Jruschov, la película de Mijaíl Kalatózov rompió con el cine bélico heroico de la era de Stalin al centrarse en el duelo y la culpa de una mujer. Su retaguardia es real: Alemania invadió el 22 de junio de 1941, Moscú fue bombardeada desde fines de julio y en octubre de 1941 buena parte de la población, la industria y el gobierno fue evacuada al este ante el avance de la Wehrmacht.",
+          "Cientos de miles de moscovitas se alistaron en las milicias populares y en el Ejército Rojo en las primeras semanas; muchas de esas unidades fueron destruidas en las batallas de otoño en torno a Viazma. La cámara en mano de Serguéi Urusevski y la escena final de los soldados que regresan a Moscú en mayo de 1945 se volvieron hitos del cine mundial."
+        ]
+      },
+      "journey": [
+        {
+          "place": "moscow",
+          "name": { "en": "Moscow", "es": "Moscú" },
+          "coordinates": [37.6173, 55.7558],
+          "date": "1941-06",
+          "kind": "home",
+          "primary": true,
+          "story": {
+            "en": "Hours after a dawn walk by the river, Boris enlists; Veronika misses his departure and later loses her parents in an air raid.",
+            "es": "Horas después de un paseo al amanecer junto al río, Borís se alista; Verónika no llega a despedirlo y luego pierde a sus padres en un bombardeo."
+          },
+          "history": {
+            "en": "The Luftwaffe first bombed Moscow on the night of 21–22 July 1941, a month after the invasion.",
+            "es": "La Luftwaffe bombardeó Moscú por primera vez la noche del 21 al 22 de julio de 1941, un mes después de la invasión."
+          }
+        },
+        {
+          "place": "moscow",
+          "name": {
+            "en": "Belorussky Rail Terminal, Moscow",
+            "es": "Estación Belorusski, Moscú"
+          },
+          "coordinates": [37.5818, 55.7764],
+          "date": "1945-05",
+          "kind": "city",
+          "story": {
+            "en": "With flowers in her arms, Veronika searches the crowd for a face among the soldiers coming home from the war.",
+            "es": "Con flores en los brazos, Verónika busca un rostro entre la multitud de soldados que vuelven de la guerra."
+          },
+          "history": {
+            "en": "Trains from the Western Front arrived at the Belorussky terminal, where crowds met the first returning soldiers in 1945.",
+            "es": "Los trenes del frente occidental llegaban a la estación Belorusski, donde multitudes recibieron a los primeros soldados en 1945."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ivans-childhood-1962",
+      "kind": "film",
+      "title": "Ivan's Childhood",
+      "titleEs": "La infancia de Iván",
+      "originalTitle": "Ivanovo detstvo",
+      "year": 1962,
+      "era": "ww2",
+      "period": { "start": "1943-10", "end": "1945-05" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat", "espionage"],
+      "gold": false,
+      "directors": ["Andrei Tarkovsky"],
+      "countries": ["SU"],
+      "languages": ["ru", "de"],
+      "ids": {
+        "tmdb": 31442,
+        "tmdbType": "movie",
+        "imdb": "tt0056111",
+        "wikidata": "Q147878"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Ivan's_Childhood",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/La_infancia_de_Iv%C3%A1n"
+      },
+      "synopsis": {
+        "en": "A twelve-year-old orphan scouts behind German lines for the Red Army, crossing a flooded river at night, while dreams of the summer before the war keep coming back to him.",
+        "es": "Un huérfano de doce años explora tras las líneas alemanas para el Ejército Rojo, cruzando de noche un río inundado, mientras vuelven a él los sueños del verano anterior a la guerra."
+      },
+      "history": {
+        "en": [
+          "Andrei Tarkovsky's first feature adapts Vladimir Bogomolov's 1957 story 'Ivan', set on the Dnieper front in autumn 1943, when the Red Army forced the river along hundreds of kilometres after the victory at Kursk. It was shot largely near Kanev, where the Bukrin bridgehead battles had been fought.",
+          "The Red Army and partisan units did use children as scouts and messengers, and thousands of 'sons of the regiment' served at the front. The film's final scenes in the captured archives of Berlin in May 1945 point to the fate of those who never came back. It won the Golden Lion at Venice in 1962."
+        ],
+        "es": [
+          "El primer largometraje de Andréi Tarkovski adapta el relato «Iván» de Vladímir Bogomólov, de 1957, ambientado en el frente del Dniéper en el otoño de 1943, cuando el Ejército Rojo cruzó el río a lo largo de cientos de kilómetros tras la victoria de Kursk. Se filmó en gran parte cerca de Kániv, donde se libraron los combates de la cabeza de puente de Bukrin.",
+          "El Ejército Rojo y los partisanos sí usaron niños como exploradores y mensajeros, y miles de «hijos del regimiento» sirvieron en el frente. Las escenas finales en los archivos capturados de Berlín en mayo de 1945 apuntan al destino de quienes nunca volvieron. Ganó el León de Oro en Venecia en 1962."
+        ]
+      },
+      "journey": [
+        {
+          "place": "dnieper-kanev",
+          "name": {
+            "en": "Dnieper front near Kanev",
+            "es": "Frente del Dniéper cerca de Kániv"
+          },
+          "coordinates": [31.4667, 49.75],
+          "date": "1943-10",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Ivan swims out of enemy territory, reports to a young lieutenant and insists on being sent back across the river on one more mission.",
+            "es": "Iván sale a nado del territorio enemigo, se presenta ante un joven teniente e insiste en que lo manden otra vez al otro lado del río en una misión más."
+          },
+          "history": {
+            "en": "In September and October 1943 Soviet troops fought to expand the Bukrin bridgehead across the Dnieper near Kanev.",
+            "es": "En septiembre y octubre de 1943 las tropas soviéticas lucharon por ampliar la cabeza de puente de Bukrin sobre el Dniéper, cerca de Kániv."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Reich Chancellery, Berlin",
+            "es": "Cancillería del Reich, Berlín"
+          },
+          "coordinates": [13.3819, 52.5117],
+          "date": "1945-05",
+          "kind": "city",
+          "story": {
+            "en": "In captured Berlin, an officer sifts through Gestapo files looking for what became of the boy.",
+            "es": "En el Berlín capturado, un oficial revisa los archivos de la Gestapo buscando qué fue del chico."
+          },
+          "history": {
+            "en": "Soviet troops took the Reich Chancellery on 2 May 1945 and seized large quantities of Nazi records.",
+            "es": "Las tropas soviéticas tomaron la Cancillería del Reich el 2 de mayo de 1945 y se apoderaron de gran cantidad de archivos nazis."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-dawns-here-are-quiet-1972",
+      "kind": "film",
+      "title": "The Dawns Here Are Quiet",
+      "titleEs": "Los amaneceres son aquí más apacibles",
+      "originalTitle": "A zori zdes tikhiye",
+      "year": 1972,
+      "era": "ww2",
+      "period": { "start": "1942-05", "end": "1942-06" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Stanislav Rostotsky"],
+      "countries": ["SU"],
+      "languages": ["ru", "de"],
+      "ids": {
+        "tmdb": 49106,
+        "tmdbType": "movie",
+        "imdb": "tt0068161",
+        "wikidata": "Q714531"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Dawns_Here_Are_Quiet_(1972_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Los_amaneceres_son_aqu%C3%AD_m%C3%A1s_apacibles"
+      },
+      "synopsis": {
+        "en": "A gruff sergeant major in the Karelian backwoods takes five young anti-aircraft gunners into the forest to catch two German saboteurs, and finds sixteen.",
+        "es": "Un sargento mayor gruñón en los bosques de Carelia sale con cinco jóvenes artilleras antiaéreas a atrapar a dos saboteadores alemanes, y se encuentra con dieciséis."
+      },
+      "history": {
+        "en": [
+          "Based on Boris Vasilyev's 1969 novella, the story is set in 1942 behind the Karelian front, where the Kirov Railway to Murmansk carried Allied Lend-Lease supplies and was a constant target of German and Finnish raiders. Small anti-aircraft detachments guarded sidings and bridges along the line.",
+          "More than 800,000 Soviet women served in the armed forces during the war, many of them as anti-aircraft gunners freeing men for the front. The five heroines and their battle are fictional, but Vasilyev drew on stories of women's units, and the film became one of the most loved Soviet war dramas."
+        ],
+        "es": [
+          "Basada en la novela corta de Borís Vasíliev de 1969, la historia transcurre en 1942 detrás del frente de Carelia, donde el ferrocarril de Kírov a Múrmansk transportaba la ayuda aliada del Préstamo y Arriendo y era blanco constante de incursiones alemanas y finlandesas. Pequeños destacamentos antiaéreos custodiaban apartaderos y puentes a lo largo de la línea.",
+          "Más de 800.000 mujeres soviéticas sirvieron en las fuerzas armadas durante la guerra, muchas como artilleras antiaéreas para liberar hombres para el frente. Las cinco protagonistas y su combate son ficticios, pero Vasíliev se inspiró en historias de unidades femeninas, y la película se convirtió en uno de los dramas bélicos soviéticos más queridos."
+        ]
+      },
+      "journey": [
+        {
+          "place": "karelia",
+          "name": {
+            "en": "Railway siding in Karelia",
+            "es": "Apartadero ferroviario en Carelia"
+          },
+          "coordinates": [34.8, 62.8],
+          "date": "1942-05",
+          "kind": "base",
+          "primary": true,
+          "story": {
+            "en": "Vaskov's quiet post fills with young women gunners; one of them spots two German paratroopers in the woods and the hunt begins.",
+            "es": "El tranquilo puesto de Vaskov se llena de jóvenes artilleras; una de ellas ve a dos paracaidistas alemanes en el bosque y comienza la persecución."
+          },
+          "history": {
+            "en": "German and Finnish saboteurs repeatedly tried to cut the Kirov Railway and the White Sea–Baltic Canal in 1942.",
+            "es": "Saboteadores alemanes y finlandeses intentaron varias veces cortar el ferrocarril de Kírov y el canal del mar Blanco al Báltico en 1942."
+          }
+        }
+      ]
+    },
+    {
+      "id": "brest-fortress-2010",
+      "kind": "film",
+      "title": "Brest Fortress",
+      "titleEs": "La fortaleza de Brest",
+      "originalTitle": "Brestskaya krepost",
+      "year": 2010,
+      "era": "ww2",
+      "period": { "start": "1941-06", "end": "1941-07" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat", "true-story"],
+      "gold": false,
+      "directors": ["Alexander Kott"],
+      "countries": ["BY", "RU"],
+      "languages": ["ru", "de"],
+      "ids": {
+        "tmdb": 50618,
+        "tmdbType": "movie",
+        "imdb": "tt1343703",
+        "wikidata": "Q23871"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Fortress_of_War",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Brestskaya_krepost"
+      },
+      "synopsis": {
+        "en": "A boy bugler in a Red Army regiment wakes on 22 June 1941 to bombs falling on the border fortress of Brest, and becomes a runner between the cut-off pockets that refuse to surrender.",
+        "es": "Un chico corneta de un regimiento del Ejército Rojo despierta el 22 de junio de 1941 bajo las bombas que caen sobre la fortaleza fronteriza de Brest, y se convierte en mensajero entre los focos aislados que se niegan a rendirse."
+      },
+      "history": {
+        "en": [
+          "The fortress on the Bug River was one of the first targets of Operation Barbarossa. At 04:15 on 22 June 1941 German artillery opened fire, and the 45th Infantry Division expected to take it within hours; instead scattered groups of soldiers, border guards and NKVD troops held out for days, and the last organised resistance at the Eastern Fort ended only on 29 June.",
+          "The film follows real commanders such as Commissar Yefim Fomin, shot on capture, Lieutenant Andrei Kizhevatov and Major Pyotr Gavrilov, who was captured wounded on 23 July. The narrator is inspired by Pyotr Klypa, a 14-year-old regimental pupil who survived the siege. Soviet legend later made the fortress a symbol of heroic defence."
+        ],
+        "es": [
+          "La fortaleza junto al río Bug fue uno de los primeros objetivos de la Operación Barbarroja. A las 04:15 del 22 de junio de 1941 la artillería alemana abrió fuego y la 45.ª División de Infantería esperaba tomarla en pocas horas; en cambio, grupos dispersos de soldados, guardias fronterizos y tropas del NKVD resistieron durante días, y la última resistencia organizada en el Fuerte Este terminó recién el 29 de junio.",
+          "La película sigue a comandantes reales como el comisario Yefim Fomín, fusilado al ser capturado, el teniente Andréi Kizhevátov y el mayor Piotr Gavrílov, capturado herido el 23 de julio. El narrador se inspira en Piotr Klypa, un alumno del regimiento de 14 años que sobrevivió al asedio. La leyenda soviética convirtió después la fortaleza en símbolo de la defensa heroica."
+        ]
+      },
+      "journey": [
+        {
+          "place": "brest-fortress",
+          "name": {
+            "en": "Brest Fortress citadel",
+            "es": "Ciudadela de la fortaleza de Brest"
+          },
+          "coordinates": [23.6528, 52.0833],
+          "date": "1941-06",
+          "kind": "base",
+          "story": {
+            "en": "On a peaceful Saturday evening Sasha plays in the regimental band as officers worry about German troops massing across the river.",
+            "es": "Un sábado tranquilo por la tarde, Sasha toca en la banda del regimiento mientras los oficiales se inquietan por las tropas alemanas reunidas al otro lado del río."
+          },
+          "history": {
+            "en": "About 7,000–8,000 Soviet soldiers and several hundred family members were inside the fortress when the attack began.",
+            "es": "Había unos 7.000 u 8.000 soldados soviéticos y varios cientos de familiares dentro de la fortaleza cuando comenzó el ataque."
+          }
+        },
+        {
+          "place": "brest-fortress",
+          "name": { "en": "Kholm Gate", "es": "Puerta de Jolm" },
+          "coordinates": [23.6564, 52.0814],
+          "date": "1941-06",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Under shellfire, Commissar Fomin gathers the survivors around the gate while Sasha crawls between pockets carrying messages.",
+            "es": "Bajo el fuego de artillería, el comisario Fomín reúne a los sobrevivientes en torno a la puerta mientras Sasha se arrastra entre los focos de resistencia llevando mensajes."
+          },
+          "history": {
+            "en": "The Kholm Gate area was one of the main centres of resistance in the citadel during the first days of the siege.",
+            "es": "La zona de la Puerta de Jolm fue uno de los principales centros de resistencia de la ciudadela en los primeros días del asedio."
+          }
+        }
+      ]
+    },
+    {
+      "id": "defiance-2008",
+      "kind": "film",
+      "title": "Defiance",
+      "titleEs": "Resistencia",
+      "year": 2008,
+      "era": "ww2",
+      "period": { "start": "1941-08", "end": "1943" },
+      "theaters": ["eastern-europe"],
+      "tags": ["holocaust", "resistance", "true-story"],
+      "gold": false,
+      "directors": ["Edward Zwick"],
+      "countries": ["US"],
+      "languages": ["en", "ru", "de"],
+      "ids": {
+        "tmdb": 13813,
+        "tmdbType": "movie",
+        "imdb": "tt1034303",
+        "wikidata": "Q842094"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Defiance_(2008_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Defiance"
+      },
+      "synopsis": {
+        "en": "After their parents are murdered, the Bielski brothers flee into the Belarusian forest and end up protecting a growing camp of Jewish refugees from hunger, winter and German raids.",
+        "es": "Tras el asesinato de sus padres, los hermanos Bielski huyen al bosque bielorruso y terminan protegiendo un campamento cada vez más grande de refugiados judíos del hambre, el invierno y las incursiones alemanas."
+      },
+      "history": {
+        "en": [
+          "Tuvia, Zus, Asael and Aron Bielski came from a village near Novogrudok in western Belarus. After German units and local police murdered most of the region's Jews in 1941 and 1942, the brothers organised a partisan group in the Naliboki Forest that took in anyone who could escape the ghettos, including the elderly, women and children.",
+          "By the summer of 1944 the Bielski camp had about 1,200 members, the largest rescue of Jews by Jews in occupied Europe. The film condenses two years into one and invents the final tank battle; historians have also noted accounts that the group killed suspected collaborators, which the film touches on only briefly."
+        ],
+        "es": [
+          "Tuvia, Zus, Asael y Aron Bielski eran de una aldea cercana a Novogrúdok, en el oeste de Bielorrusia. Después de que unidades alemanas y policías locales asesinaran a la mayoría de los judíos de la región en 1941 y 1942, los hermanos organizaron un grupo partisano en el bosque de Naliboki que acogía a cualquiera que lograra escapar de los guetos, incluidos ancianos, mujeres y niños.",
+          "Para el verano de 1944 el campamento Bielski tenía unos 1.200 integrantes, el mayor rescate de judíos por judíos en la Europa ocupada. La película condensa dos años en uno e inventa la batalla final con un tanque; los historiadores también han señalado testimonios de que el grupo mató a supuestos colaboradores, algo que la película apenas toca."
+        ]
+      },
+      "journey": [
+        {
+          "place": "novogrudok",
+          "name": {
+            "en": "Novogrudok area",
+            "es": "Alrededores de Novogrúdok"
+          },
+          "coordinates": [25.8256, 53.5992],
+          "date": "1941-08",
+          "kind": "home",
+          "story": {
+            "en": "The brothers return home to find their parents killed by local police working for the Germans, and run for the woods.",
+            "es": "Los hermanos vuelven a casa y encuentran a sus padres asesinados por policías locales al servicio de los alemanes, y huyen al bosque."
+          },
+          "history": {
+            "en": "In December 1941 the Germans shot about 5,100 Jews of Novogrudok; the Bielskis' parents were killed in the ghetto in 1941.",
+            "es": "En diciembre de 1941 los alemanes fusilaron a unos 5.100 judíos de Novogrúdok; los padres de los Bielski murieron en el gueto en 1941."
+          }
+        },
+        {
+          "place": "naliboki-forest",
+          "name": { "en": "Naliboki Forest", "es": "Bosque de Naliboki" },
+          "coordinates": [26.4425, 53.8844],
+          "date": "1942",
+          "kind": "camp",
+          "primary": true,
+          "story": {
+            "en": "Tuvia builds a forest camp for every Jew who reaches them, enforcing hard rules through a winter of hunger, sickness and mutiny.",
+            "es": "Tuvia levanta un campamento en el bosque para todo judío que llegue hasta ellos e impone reglas duras durante un invierno de hambre, enfermedad y motines."
+          },
+          "history": {
+            "en": "The Naliboki Forest sheltered Soviet, Polish and Jewish partisan groups; the Bielski camp there became a small village.",
+            "es": "El bosque de Naliboki dio refugio a grupos partisanos soviéticos, polacos y judíos; el campamento Bielski llegó a ser una pequeña aldea."
+          }
+        },
+        {
+          "place": "naliboki-forest",
+          "name": {
+            "en": "Marshes of the Naliboki Forest",
+            "es": "Pantanos del bosque de Naliboki"
+          },
+          "coordinates": [26.3, 53.85],
+          "date": "1943",
+          "kind": "journey",
+          "story": {
+            "en": "Hunted by a German sweep, the whole camp has to abandon its dugouts and cross a marsh that seems impassable.",
+            "es": "Acosado por una batida alemana, todo el campamento debe abandonar sus refugios y cruzar un pantano que parece imposible de atravesar."
+          },
+          "history": {
+            "en": "In August 1943 the German anti-partisan Operation Hermann swept the Naliboki Forest; the Bielski group escaped into the swamps.",
+            "es": "En agosto de 1943 la operación antipartisana alemana Hermann barrió el bosque de Naliboki; el grupo Bielski escapó hacia los pantanos."
+          }
+        }
+      ]
+    },
+    {
+      "id": "cross-of-iron-1977",
+      "kind": "film",
+      "title": "Cross of Iron",
+      "titleEs": "La cruz de hierro",
+      "year": 1977,
+      "era": "ww2",
+      "period": { "start": "1943", "end": "1943-10" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Sam Peckinpah"],
+      "countries": ["GB", "DE"],
+      "languages": ["en", "ru"],
+      "ids": {
+        "tmdb": 10839,
+        "tmdbType": "movie",
+        "imdb": "tt0074695",
+        "wikidata": "Q699679"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Cross_of_Iron",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/La_cruz_de_hierro"
+      },
+      "synopsis": {
+        "en": "A cynical German corporal and his reconnaissance platoon fight to survive the Soviet onslaught in the Kuban bridgehead, and a vain new captain who wants an Iron Cross at any price.",
+        "es": "Un cabo alemán cínico y su pelotón de reconocimiento luchan por sobrevivir a la embestida soviética en la cabeza de puente del Kubán y a un nuevo capitán vanidoso que quiere la Cruz de Hierro a cualquier precio."
+      },
+      "history": {
+        "en": [
+          "Sam Peckinpah's film adapts Willi Heinrich's 1956 novel 'The Willing Flesh', based on his own service with the 101st Jäger Division. After Stalingrad, the German 17th Army held a bridgehead on the Kuban and the Taman Peninsula in 1943, defending the fortified 'Blue Line' against repeated Soviet assaults.",
+          "In September and October 1943 the Germans evacuated the bridgehead across the Kerch Strait into Crimea. Steiner and Stransky are fictional, but the film's picture of exhausted, disillusioned front soldiers and medal-hungry officers was shaped by veterans' memoirs; its slow-motion violence reflects Peckinpah's style more than the record."
+        ],
+        "es": [
+          "La película de Sam Peckinpah adapta la novela de Willi Heinrich de 1956 'La carne dispuesta', basada en su propio servicio en la 101.ª División de Cazadores. Tras Stalingrado, el 17.º Ejército alemán mantuvo en 1943 una cabeza de puente en el Kubán y la península de Tamán, defendiendo la fortificada «Línea Azul» frente a repetidos asaltos soviéticos.",
+          "En septiembre y octubre de 1943 los alemanes evacuaron la cabeza de puente a través del estrecho de Kerch hacia Crimea. Steiner y Stransky son ficticios, pero el retrato de soldados agotados y desencantados y de oficiales ávidos de medallas se nutrió de memorias de veteranos; su violencia en cámara lenta refleja más el estilo de Peckinpah que el registro histórico."
+        ]
+      },
+      "journey": [
+        {
+          "place": "kuban-bridgehead",
+          "name": {
+            "en": "Kuban bridgehead (Blue Line)",
+            "es": "Cabeza de puente del Kubán (Línea Azul)"
+          },
+          "coordinates": [38.0, 44.9333],
+          "date": "1943",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Steiner's platoon raids Soviet positions, shelters a captured boy soldier and faces a massive assault that the new captain spends hiding in his bunker.",
+            "es": "El pelotón de Steiner asalta posiciones soviéticas, protege a un niño soldado capturado y enfrenta un ataque masivo que el nuevo capitán pasa escondido en su búnker."
+          },
+          "history": {
+            "en": "The Blue Line ran through Krymsk and the Kuban marshes; Soviet offensives there from April to September 1943 cost both sides heavily.",
+            "es": "La Línea Azul pasaba por Krymsk y los pantanos del Kubán; las ofensivas soviéticas allí entre abril y septiembre de 1943 costaron caro a ambos bandos."
+          }
+        },
+        {
+          "place": "kerch-strait",
+          "name": {
+            "en": "Retreat toward the Kerch Strait",
+            "es": "Retirada hacia el estrecho de Kerch"
+          },
+          "coordinates": [36.65, 45.35],
+          "date": "1943-10",
+          "kind": "journey",
+          "story": {
+            "en": "Left behind by their own battalion, Steiner's men cross enemy territory to reach the German lines as the army pulls back toward Crimea.",
+            "es": "Abandonados por su propio batallón, los hombres de Steiner cruzan territorio enemigo para llegar a las líneas alemanas mientras el ejército se repliega hacia Crimea."
+          },
+          "history": {
+            "en": "The Germans ferried about 250,000 men across the Kerch Strait to Crimea between September and 9 October 1943.",
+            "es": "Los alemanes trasladaron a unos 250.000 hombres por el estrecho de Kerch hacia Crimea entre septiembre y el 9 de octubre de 1943."
+          }
+        }
+      ]
+    },
+    {
+      "id": "panfilovs-28-2016",
+      "kind": "film",
+      "title": "Panfilov's 28 Men",
+      "titleEs": "Los 28 de Panfilov",
+      "originalTitle": "28 panfilovtsev",
+      "year": 2016,
+      "era": "ww2",
+      "period": { "start": "1941-11", "end": "1941-11" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Kim Druzhinin", "Andrei Shalopa"],
+      "countries": ["RU", "KZ"],
+      "languages": ["ru", "de"],
+      "ids": {
+        "tmdb": 427342,
+        "tmdbType": "movie",
+        "imdb": "tt5207204",
+        "wikidata": "Q16514509"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Panfilov's_28_Men"
+      },
+      "synopsis": {
+        "en": "In November 1941, a company of the 316th Rifle Division dug in at a railway halt west of Moscow waits for a German tank attack with rifles, grenades and a few anti-tank guns.",
+        "es": "En noviembre de 1941, una compañía de la 316.ª División de Fusileros atrincherada junto a un apeadero ferroviario al oeste de Moscú espera un ataque de tanques alemanes con fusiles, granadas y unos pocos fusiles antitanque."
+      },
+      "history": {
+        "en": [
+          "On 16 November 1941 the German offensive on Moscow resumed, and the 316th Rifle Division of General Ivan Panfilov, raised largely in Kazakhstan and Kyrgyzstan, fought hard defensive battles along the Volokolamsk axis, including at the Dubosekovo railway halt. The division was renamed the 8th Guards for its stand.",
+          "The story of exactly 28 men who destroyed 18 tanks and died to the last was written by the army newspaper Krasnaya Zvezda. A Soviet military prosecutor's investigation in 1948 concluded it was largely invented, and several of the '28' were in fact alive. The crowd-funded film retells the legend, not the investigated events."
+        ],
+        "es": [
+          "El 16 de noviembre de 1941 se reanudó la ofensiva alemana sobre Moscú, y la 316.ª División de Fusileros del general Iván Pánfilov, formada sobre todo en Kazajistán y Kirguistán, libró duros combates defensivos en el eje de Volokolamsk, incluido el apeadero de Dubosékovo. La división fue rebautizada 8.ª de la Guardia por su resistencia.",
+          "El relato de exactamente 28 hombres que destruyeron 18 tanques y murieron hasta el último lo escribió el periódico militar Krásnaya Zvezdá. Una investigación de la fiscalía militar soviética de 1948 concluyó que era en gran parte inventado, y varios de los «28» en realidad seguían vivos. La película, financiada con micromecenazgo, recrea la leyenda, no los hechos investigados."
+        ]
+      },
+      "journey": [
+        {
+          "place": "dubosekovo",
+          "name": {
+            "en": "Dubosekovo railway halt",
+            "es": "Apeadero de Dubosékovo"
+          },
+          "coordinates": [36.0385, 55.9781],
+          "date": "1941-11",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "The company digs trenches across the tank route, waits through the night and meets wave after wave of German armour and infantry.",
+            "es": "La compañía cava trincheras en la ruta de los tanques, espera durante la noche y enfrenta oleada tras oleada de blindados e infantería alemanes."
+          },
+          "history": {
+            "en": "Units of the 316th Rifle Division fought here on 16 November 1941 before falling back toward Moscow; a large memorial stands at the site.",
+            "es": "Unidades de la 316.ª División de Fusileros combatieron aquí el 16 de noviembre de 1941 antes de replegarse hacia Moscú; en el lugar hay un gran memorial."
+          }
+        }
+      ]
+    },
+    {
+      "id": "battle-for-sevastopol-2015",
+      "kind": "film",
+      "title": "Battle for Sevastopol",
+      "titleEs": "La batalla por Sebastopol",
+      "originalTitle": "Bitva za Sevastopol",
+      "year": 2015,
+      "era": "ww2",
+      "period": { "start": "1937", "end": "1942-09" },
+      "theaters": ["eastern-europe", "americas"],
+      "tags": ["combat", "biography", "true-story"],
+      "gold": false,
+      "directors": ["Sergey Mokritskiy"],
+      "countries": ["RU", "UA"],
+      "languages": ["ru", "en", "uk"],
+      "ids": {
+        "tmdb": 332270,
+        "tmdbType": "movie",
+        "imdb": "tt4084744",
+        "wikidata": "Q16692754"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_for_Sevastopol",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Bitva_za_Sevastopol"
+      },
+      "synopsis": {
+        "en": "A history student from Kiev becomes the Red Army's deadliest woman sniper at Odessa and Sevastopol, and is then sent to America to be the face of the Soviet war effort.",
+        "es": "Una estudiante de historia de Kiev se convierte en la francotiradora más letal del Ejército Rojo en Odesa y Sebastopol, y luego es enviada a Estados Unidos como rostro del esfuerzo bélico soviético."
+      },
+      "history": {
+        "en": [
+          "Lyudmila Pavlichenko volunteered in June 1941 and was credited with 309 kills, the highest score of any woman sniper, during the siege of Odessa (August–October 1941) and the siege of Sevastopol, which held out from October 1941 until 4 July 1942. She was wounded and evacuated in June 1942, shortly before the city fell.",
+          "In the late summer of 1942 she toured the United States, stayed at the White House as a guest of Eleanor Roosevelt and told a Chicago crowd that they had been 'hiding behind my back for too long'. The Russian-Ukrainian co-production invents her romances and compresses events, but follows the main line of her memoir."
+        ],
+        "es": [
+          "Liudmila Pavlichenko se alistó como voluntaria en junio de 1941 y se le atribuyeron 309 bajas, la cifra más alta de una francotiradora, durante el sitio de Odesa (agosto a octubre de 1941) y el de Sebastopol, que resistió desde octubre de 1941 hasta el 4 de julio de 1942. Fue herida y evacuada en junio de 1942, poco antes de la caída de la ciudad.",
+          "A fines del verano de 1942 recorrió Estados Unidos, se alojó en la Casa Blanca como invitada de Eleanor Roosevelt y le dijo a un público de Chicago que llevaban «demasiado tiempo escondidos detrás de mi espalda». La coproducción ruso-ucraniana inventa sus romances y condensa los hechos, pero sigue la línea principal de sus memorias."
+        ]
+      },
+      "journey": [
+        {
+          "place": "kyiv",
+          "name": {
+            "en": "Kiev State University",
+            "es": "Universidad Estatal de Kiev"
+          },
+          "coordinates": [30.5113, 50.4419],
+          "date": "1937",
+          "kind": "home",
+          "story": {
+            "en": "A new history student, Lyudmila shows such accuracy at a shooting range that the army recruits her for sniper training.",
+            "es": "Recién ingresada en historia, Liudmila muestra tal puntería en un campo de tiro que el ejército la recluta para formarse como francotiradora."
+          },
+          "history": {
+            "en": "Pavlichenko studied history at Kiev University and trained at an Osoaviakhim marksmanship school before the war.",
+            "es": "Pavlichenko estudió historia en la Universidad de Kiev y se formó en una escuela de tiro de Osoaviajim antes de la guerra."
+          }
+        },
+        {
+          "place": "odesa",
+          "name": { "en": "Odessa", "es": "Odesa" },
+          "coordinates": [30.7326, 46.4775],
+          "date": "1941-08",
+          "kind": "battle",
+          "story": {
+            "en": "Paired with a veteran sniper on the Odessa perimeter, she makes her first kills and is wounded as the front collapses.",
+            "es": "Junto a un francotirador veterano en el perímetro de Odesa, logra sus primeras bajas y resulta herida mientras el frente se derrumba."
+          },
+          "history": {
+            "en": "Odessa resisted Romanian and German forces for 73 days before being evacuated by sea in October 1941.",
+            "es": "Odesa resistió a las fuerzas rumanas y alemanas durante 73 días antes de ser evacuada por mar en octubre de 1941."
+          }
+        },
+        {
+          "place": "sevastopol",
+          "name": { "en": "Sevastopol", "es": "Sebastopol" },
+          "coordinates": [33.5225, 44.605],
+          "date": "1942-06",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "In the besieged naval base she fights a day-long duel with a German sniper and is carried aboard one of the last submarines out.",
+            "es": "En la base naval sitiada libra un duelo de un día entero con un francotirador alemán y es subida a uno de los últimos submarinos que salen."
+          },
+          "history": {
+            "en": "Manstein's 11th Army took Sevastopol on 4 July 1942 after an eight-month siege; most of its defenders were captured.",
+            "es": "El 11.º Ejército de Manstein tomó Sebastopol el 4 de julio de 1942 tras un asedio de ocho meses; la mayoría de sus defensores fue capturada."
+          }
+        },
+        {
+          "place": "washington-dc",
+          "name": {
+            "en": "The White House, Washington",
+            "es": "La Casa Blanca, Washington"
+          },
+          "coordinates": [-77.0367, 38.8978],
+          "date": "1942-08",
+          "kind": "city",
+          "story": {
+            "en": "Sent abroad as a propaganda star, Lyudmila befriends Eleanor Roosevelt and learns to speak for herself on American stages.",
+            "es": "Enviada al extranjero como estrella de la propaganda, Liudmila se hace amiga de Eleanor Roosevelt y aprende a hablar por sí misma en escenarios estadounidenses."
+          },
+          "history": {
+            "en": "Pavlichenko was received at the White House in August 1942 while touring the United States with a Soviet student delegation.",
+            "es": "Pavlichenko fue recibida en la Casa Blanca en agosto de 1942 mientras recorría Estados Unidos con una delegación estudiantil soviética."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-winter-war-1989",
+      "kind": "film",
+      "title": "The Winter War",
+      "titleEs": "La guerra de invierno",
+      "originalTitle": "Talvisota",
+      "year": 1989,
+      "era": "ww2",
+      "period": { "start": "1939-10", "end": "1940-03" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Pekka Parikka"],
+      "countries": ["FI"],
+      "languages": ["fi", "ru"],
+      "ids": {
+        "tmdb": 29383,
+        "tmdbType": "movie",
+        "imdb": "tt0098437",
+        "wikidata": "Q1754126"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Winter_War_(film)"
+      },
+      "synopsis": {
+        "en": "Two farmer brothers from Ostrobothnia are called up in autumn 1939 and spend the Winter War in the trenches of the Karelian Isthmus, facing wave after wave of Soviet attacks.",
+        "es": "Dos hermanos granjeros de Ostrobotnia son llamados a filas en el otoño de 1939 y pasan la Guerra de Invierno en las trincheras del istmo de Carelia, enfrentando oleada tras oleada de ataques soviéticos."
+      },
+      "history": {
+        "en": [
+          "The film adapts Antti Tuuri's novel about Infantry Regiment 23, a reserve unit from South Ostrobothnia. The Soviet Union attacked Finland on 30 November 1939 after Helsinki refused to cede territory on the Karelian Isthmus; at Taipale, where the Mannerheim Line met Lake Ladoga, Finnish troops held out for three months against constant shelling and mass assaults.",
+          "In February 1940 the Red Army broke through at Summa, and fighting shifted to the Vuoksi waterway around Vuosalmi, where the regiment suffered heavy losses in early March. The Moscow Peace Treaty ended the war at 11:00 on 13 March 1940; Finland kept its independence but lost about a tenth of its territory."
+        ],
+        "es": [
+          "La película adapta la novela de Antti Tuuri sobre el Regimiento de Infantería 23, una unidad de reservistas de Ostrobotnia del Sur. La Unión Soviética atacó Finlandia el 30 de noviembre de 1939 después de que Helsinki se negara a ceder territorio en el istmo de Carelia; en Taipale, donde la Línea Mannerheim llegaba al lago Ládoga, las tropas finlandesas resistieron tres meses bajo bombardeos constantes y asaltos masivos.",
+          "En febrero de 1940 el Ejército Rojo rompió el frente en Summa y los combates se trasladaron al curso del Vuoksi en torno a Vuosalmi, donde el regimiento sufrió grandes pérdidas a comienzos de marzo. El Tratado de Paz de Moscú puso fin a la guerra a las 11:00 del 13 de marzo de 1940; Finlandia conservó su independencia pero perdió cerca de una décima parte de su territorio."
+        ]
+      },
+      "journey": [
+        {
+          "place": "kauhava",
+          "name": {
+            "en": "Kauhava, South Ostrobothnia",
+            "es": "Kauhava, Ostrobotnia del Sur"
+          },
+          "coordinates": [23.0639, 63.1014],
+          "date": "1939-10",
+          "kind": "home",
+          "story": {
+            "en": "Martti and Paavo Hakala muster with the other reservists of their parish and board the train for training.",
+            "es": "Martti y Paavo Hakala se presentan con los demás reservistas de su parroquia y suben al tren rumbo a la instrucción."
+          },
+          "history": {
+            "en": "Finland called up its reserves for 'extra refresher training' in October 1939 as negotiations with Moscow stalled.",
+            "es": "Finlandia convocó a sus reservistas para «ejercicios adicionales» en octubre de 1939, cuando las negociaciones con Moscú se estancaron."
+          }
+        },
+        {
+          "place": "taipale",
+          "name": { "en": "Taipale", "es": "Taipale" },
+          "coordinates": [30.506, 60.6265],
+          "date": "1939-12",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Dug in by the Taipale River, the men endure artillery, air attacks and tank-supported human waves from Independence Day onward.",
+            "es": "Atrincherados junto al río Taipale, los hombres soportan artillería, ataques aéreos y oleadas humanas con apoyo de tanques desde el Día de la Independencia."
+          },
+          "history": {
+            "en": "The Battle of Taipale began on 6 December 1939 and Finnish defenders held the sector until the end of the war.",
+            "es": "La batalla de Taipale comenzó el 6 de diciembre de 1939 y los defensores finlandeses mantuvieron el sector hasta el final de la guerra."
+          }
+        },
+        {
+          "place": "vuosalmi",
+          "name": {
+            "en": "Vuosalmi, Vuoksi River",
+            "es": "Vuosalmi, río Vuoksi"
+          },
+          "coordinates": [29.5934, 60.6945],
+          "date": "1940-03",
+          "kind": "battle",
+          "story": {
+            "en": "Moved to the Vuoksi to stop a river crossing, the depleted company is nearly overrun in the last days before the ceasefire.",
+            "es": "Trasladada al Vuoksi para impedir un cruce del río, la diezmada compañía está a punto de ser arrollada en los últimos días antes del alto el fuego."
+          },
+          "history": {
+            "en": "Soviet forces crossed the Vuoksi at Vuosalmi in early March 1940 and fighting there continued until the armistice on 13 March.",
+            "es": "Las fuerzas soviéticas cruzaron el Vuoksi en Vuosalmi a comienzos de marzo de 1940 y los combates siguieron hasta el armisticio del 13 de marzo."
+          }
+        }
+      ]
+    },
+    {
+      "id": "katyn-2007",
+      "kind": "film",
+      "title": "Katyń",
+      "titleEs": "Katyn",
+      "year": 2007,
+      "era": "ww2",
+      "period": { "start": "1939-09", "end": "1945" },
+      "theaters": ["eastern-europe"],
+      "tags": ["prisoners", "politics", "true-story"],
+      "gold": false,
+      "directors": ["Andrzej Wajda"],
+      "countries": ["PL"],
+      "languages": ["pl", "ru", "de"],
+      "ids": {
+        "tmdb": 13614,
+        "tmdbType": "movie",
+        "imdb": "tt0879843",
+        "wikidata": "Q714713"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Katy%C5%84_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Katy%C5%84_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "A Polish cavalry captain taken prisoner by the Red Army in 1939 keeps a diary in captivity, while his wife and daughter in Kraków wait years for the truth about what happened to him.",
+        "es": "Un capitán de caballería polaco capturado por el Ejército Rojo en 1939 lleva un diario en cautiverio, mientras su esposa y su hija esperan en Cracovia durante años la verdad sobre lo que le pasó."
+      },
+      "history": {
+        "en": [
+          "After the Soviet invasion of eastern Poland on 17 September 1939, the NKVD held Polish officers, police and members of the intelligentsia in camps at Kozelsk, Starobelsk and Ostashkov. In April and May 1940, on Politburo orders signed by Stalin, about 22,000 of them were shot, some 4,400 of the Kozelsk prisoners in the Katyn Forest near Smolensk.",
+          "Germany announced the discovery of the graves in April 1943; Moscow blamed the Germans and kept that lie until 1990. Andrzej Wajda's father, Captain Jakub Wajda, was murdered in the massacre. The film also shows Sonderaktion Krakau, the German arrest of 183 Kraków academics in November 1939, and the postwar pressure to stay silent."
+        ],
+        "es": [
+          "Tras la invasión soviética del este de Polonia el 17 de septiembre de 1939, el NKVD recluyó a oficiales, policías e intelectuales polacos en los campos de Kozelsk, Starobelsk y Ostáshkov. En abril y mayo de 1940, por orden del Politburó firmada por Stalin, unos 22.000 fueron fusilados, entre ellos unos 4.400 prisioneros de Kozelsk en el bosque de Katyn, cerca de Smolensk.",
+          "Alemania anunció el hallazgo de las fosas en abril de 1943; Moscú culpó a los alemanes y mantuvo esa mentira hasta 1990. El padre de Andrzej Wajda, el capitán Jakub Wajda, fue asesinado en la masacre. La película también muestra la Sonderaktion Krakau, el arresto alemán de 183 académicos de Cracovia en noviembre de 1939, y la presión de posguerra para guardar silencio."
+        ]
+      },
+      "journey": [
+        {
+          "place": "krakow",
+          "name": {
+            "en": "Jagiellonian University, Kraków",
+            "es": "Universidad Jagellónica, Cracovia"
+          },
+          "coordinates": [19.9339, 50.0617],
+          "date": "1939-11",
+          "kind": "city",
+          "story": {
+            "en": "Back in Kraków, Anna sees her father-in-law, a professor, arrested by the Germans together with his colleagues.",
+            "es": "De vuelta en Cracovia, Anna ve cómo los alemanes arrestan a su suegro, profesor, junto con sus colegas."
+          },
+          "history": {
+            "en": "On 6 November 1939 the Gestapo arrested 183 professors and staff and sent most of them to Sachsenhausen.",
+            "es": "El 6 de noviembre de 1939 la Gestapo arrestó a 183 profesores y trabajadores y envió a la mayoría a Sachsenhausen."
+          }
+        },
+        {
+          "place": "kozelsk",
+          "name": {
+            "en": "Kozelsk prisoner camp",
+            "es": "Campo de prisioneros de Kozelsk"
+          },
+          "coordinates": [35.7767, 54.0353],
+          "date": "1939-12",
+          "kind": "camp",
+          "story": {
+            "en": "In a freezing monastery camp, Andrzej records in his diary the names of every officer taken away.",
+            "es": "En un campo helado instalado en un monasterio, Andrzej anota en su diario el nombre de cada oficial que se llevan."
+          },
+          "history": {
+            "en": "The NKVD camp in the Optina monastery at Kozelsk held about 4,500 Polish prisoners over the winter of 1939–40.",
+            "es": "El campo del NKVD en el monasterio de Óptina, en Kozelsk, retuvo a unos 4.500 prisioneros polacos durante el invierno de 1939-40."
+          }
+        },
+        {
+          "place": "katyn",
+          "name": { "en": "Katyn Forest", "es": "Bosque de Katyn" },
+          "coordinates": [31.7889, 54.7733],
+          "date": "1940-04",
+          "kind": "camp",
+          "primary": true,
+          "story": {
+            "en": "The prisoners are driven into the forest in groups; the diary stops.",
+            "es": "Los prisioneros son llevados al bosque en grupos; el diario se interrumpe."
+          },
+          "history": {
+            "en": "NKVD executioners shot about 4,400 officers at Katyn in April and May 1940 and buried them in mass graves.",
+            "es": "Los verdugos del NKVD fusilaron a unos 4.400 oficiales en Katyn en abril y mayo de 1940 y los enterraron en fosas comunes."
+          }
+        },
+        {
+          "place": "krakow",
+          "name": { "en": "Kraków", "es": "Cracovia" },
+          "coordinates": [19.945, 50.0614],
+          "date": "1945",
+          "kind": "home",
+          "story": {
+            "en": "After years of German lists and then Soviet silence, the family finally learns the truth, at a price.",
+            "es": "Tras años de listas alemanas y luego de silencio soviético, la familia por fin conoce la verdad, a un alto precio."
+          },
+          "history": {
+            "en": "In communist Poland speaking of Soviet guilt for Katyn could cost a job or freedom until 1989.",
+            "es": "En la Polonia comunista, hablar de la culpa soviética en Katyn podía costar el trabajo o la libertad hasta 1989."
+          }
+        }
+      ]
+    },
+    {
+      "id": "warsaw-44-2014",
+      "kind": "film",
+      "title": "Warsaw 44",
+      "titleEs": "Miasto 44",
+      "originalTitle": "Miasto 44",
+      "year": 2014,
+      "era": "ww2",
+      "period": { "start": "1944-07", "end": "1944-10" },
+      "theaters": ["eastern-europe"],
+      "tags": ["resistance", "combat", "romance"],
+      "gold": false,
+      "directors": ["Jan Komasa"],
+      "countries": ["PL"],
+      "languages": ["pl", "de"],
+      "ids": {
+        "tmdb": 293982,
+        "tmdbType": "movie",
+        "imdb": "tt3765326",
+        "wikidata": "Q16576446"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Warsaw_44",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Miasto_44"
+      },
+      "synopsis": {
+        "en": "Teenagers of the Home Army join the Warsaw Uprising full of hope and first love, and are carried through 63 days of fighting as the city is destroyed around them.",
+        "es": "Adolescentes del Ejército Nacional se suman al Alzamiento de Varsovia llenos de esperanza y primer amor, y atraviesan 63 días de combate mientras la ciudad es destruida a su alrededor."
+      },
+      "history": {
+        "en": [
+          "The Home Army launched the Warsaw Uprising on 1 August 1944, expecting the Red Army on the far bank of the Vistula to arrive within days. Poorly armed insurgents seized much of the city and freed 348 Jewish prisoners from the Gęsiówka camp on 5 August, but the Soviets halted and the Germans brought in SS and police units to crush the revolt.",
+          "In the Wola massacre of 5–12 August, Dirlewanger and Reinefarth's troops murdered some 40,000–50,000 civilians. The Old Town fell on 2 September after its defenders escaped through the sewers, and the uprising capitulated on 2 October. About 16,000 insurgents and up to 200,000 civilians died; Hitler then ordered the city razed."
+        ],
+        "es": [
+          "El Ejército Nacional lanzó el Alzamiento de Varsovia el 1 de agosto de 1944, esperando que el Ejército Rojo, en la otra orilla del Vístula, llegara en pocos días. Los insurgentes, mal armados, tomaron gran parte de la ciudad y liberaron a 348 prisioneros judíos del campo de Gęsiówka el 5 de agosto, pero los soviéticos se detuvieron y los alemanes trajeron unidades de las SS y de la policía para aplastar la revuelta.",
+          "En la masacre de Wola, entre el 5 y el 12 de agosto, las tropas de Dirlewanger y Reinefarth asesinaron a unos 40.000 a 50.000 civiles. La Ciudad Vieja cayó el 2 de septiembre, después de que sus defensores escaparan por las alcantarillas, y el alzamiento capituló el 2 de octubre. Murieron unos 16.000 insurgentes y hasta 200.000 civiles; Hitler ordenó luego arrasar la ciudad."
+        ]
+      },
+      "journey": [
+        {
+          "place": "warsaw",
+          "name": {
+            "en": "Gęsiówka camp, Wola",
+            "es": "Campo de Gęsiówka, Wola"
+          },
+          "coordinates": [20.9789, 52.2446],
+          "date": "1944-08",
+          "kind": "battle",
+          "story": {
+            "en": "In the first days Stefan's unit captures a German depot and helps free Jewish prisoners from a labour camp.",
+            "es": "En los primeros días la unidad de Stefan captura un depósito alemán y ayuda a liberar a prisioneros judíos de un campo de trabajo."
+          },
+          "history": {
+            "en": "The Zośka battalion took Gęsiówka on 5 August 1944, freeing 348 Jewish prisoners, many of whom joined the fighting.",
+            "es": "El batallón Zośka tomó Gęsiówka el 5 de agosto de 1944 y liberó a 348 prisioneros judíos, muchos de los cuales se sumaron a la lucha."
+          }
+        },
+        {
+          "place": "warsaw",
+          "name": { "en": "Old Town, Warsaw", "es": "Ciudad Vieja, Varsovia" },
+          "coordinates": [21.0122, 52.2497],
+          "date": "1944-08",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Wounded and in shock, Stefan is dragged by Ala through the bombed Old Town and down into the sewers.",
+            "es": "Herido y en shock, Stefan es arrastrado por Ala a través de la Ciudad Vieja bombardeada y hacia las alcantarillas."
+          },
+          "history": {
+            "en": "About 5,000 insurgents escaped the Old Town through the sewers on 1–2 September 1944, just before it fell.",
+            "es": "Unos 5.000 insurgentes escaparon de la Ciudad Vieja por las alcantarillas el 1 y 2 de septiembre de 1944, justo antes de su caída."
+          }
+        },
+        {
+          "place": "warsaw",
+          "name": {
+            "en": "Czerniaków on the Vistula",
+            "es": "Czerniaków, junto al Vístula"
+          },
+          "coordinates": [21.0511, 52.2074],
+          "date": "1944-09",
+          "kind": "battle",
+          "story": {
+            "en": "Stefan and Kama fight beside Polish soldiers who crossed the river from the Soviet side, in a hopeless riverside pocket.",
+            "es": "Stefan y Kama combaten junto a soldados polacos que cruzaron el río desde el lado soviético, en un reducto sin esperanza junto a la orilla."
+          },
+          "history": {
+            "en": "In mid-September 1944 units of Berling's 1st Polish Army crossed the Vistula to reinforce the insurgents and were largely destroyed.",
+            "es": "A mediados de septiembre de 1944 unidades del 1.er Ejército Polaco de Berling cruzaron el Vístula para reforzar a los insurgentes y fueron casi destruidas."
+          }
+        },
+        {
+          "place": "warsaw",
+          "name": {
+            "en": "Vistula by Poniatowski Bridge",
+            "es": "Vístula junto al puente Poniatowski"
+          },
+          "coordinates": [21.0414, 52.236],
+          "date": "1944-10",
+          "kind": "city",
+          "story": {
+            "en": "After the surrender Stefan wanders through a burning city and swims out to a sandbank in the river.",
+            "es": "Tras la capitulación, Stefan deambula por una ciudad en llamas y nada hasta un banco de arena en el río."
+          },
+          "history": {
+            "en": "The Germans blew up Poniatowski Bridge on 13 September 1944 and began demolishing the city after the capitulation.",
+            "es": "Los alemanes volaron el puente Poniatowski el 13 de septiembre de 1944 y empezaron a demoler la ciudad tras la capitulación."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kanal-1957",
+      "kind": "film",
+      "title": "Kanał",
+      "titleEs": "Kanal",
+      "year": 1957,
+      "era": "ww2",
+      "period": { "start": "1944-09", "end": "1944-09" },
+      "theaters": ["eastern-europe"],
+      "tags": ["resistance", "combat"],
+      "gold": false,
+      "directors": ["Andrzej Wajda"],
+      "countries": ["PL"],
+      "languages": ["pl", "de"],
+      "ids": {
+        "tmdb": 29933,
+        "tmdbType": "movie",
+        "imdb": "tt0050585",
+        "wikidata": "Q94792"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Kana%C5%82",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Kanal"
+      },
+      "synopsis": {
+        "en": "In the last days of the Warsaw Uprising, a cut-off Home Army company is ordered to retreat from Mokotów through the city sewers, a labyrinth of darkness and filth.",
+        "es": "En los últimos días del Alzamiento de Varsovia, una compañía aislada del Ejército Nacional recibe la orden de retirarse de Mokotów por las alcantarillas de la ciudad, un laberinto de oscuridad e inmundicia."
+      },
+      "history": {
+        "en": [
+          "The Mokotów district held out until 27 September 1944, when German attacks forced its defenders to try to escape through the sewers toward the city centre. Many lost their way underground, were trapped by grates and German grenades, or climbed out into German-held streets.",
+          "On Dworkowa Street the Germans shot about 120 insurgents as they came out of a manhole on 27 September. Screenwriter Jerzy Stefan Stawiński had fought in the uprising and gone through the sewers himself. Made only 13 years later under a communist government that distrusted the Home Army, the film shared the Special Jury Prize at Cannes in 1957."
+        ],
+        "es": [
+          "El distrito de Mokotów resistió hasta el 27 de septiembre de 1944, cuando los ataques alemanes obligaron a sus defensores a intentar escapar por las alcantarillas hacia el centro. Muchos se perdieron bajo tierra, quedaron atrapados por rejas y granadas alemanas o salieron a calles en poder de los alemanes.",
+          "En la calle Dworkowa los alemanes fusilaron a unos 120 insurgentes a medida que salían de una boca de alcantarilla el 27 de septiembre. El guionista Jerzy Stefan Stawiński había combatido en el alzamiento y cruzado él mismo las alcantarillas. Rodada apenas 13 años después bajo un gobierno comunista que desconfiaba del Ejército Nacional, la película compartió el Premio Especial del Jurado en Cannes en 1957."
+        ]
+      },
+      "journey": [
+        {
+          "place": "warsaw",
+          "name": { "en": "Mokotów, Warsaw", "es": "Mokotów, Varsovia" },
+          "coordinates": [21.0169, 52.2],
+          "date": "1944-09",
+          "kind": "battle",
+          "story": {
+            "en": "Lieutenant Zadra's exhausted company takes up a new position in the ruins and is then ordered into the sewers.",
+            "es": "La agotada compañía del teniente Zadra ocupa una nueva posición entre las ruinas y luego recibe la orden de entrar en las alcantarillas."
+          },
+          "history": {
+            "en": "Mokotów was the last major insurgent district south of the centre and capitulated on 27 September 1944.",
+            "es": "Mokotów fue el último gran distrito insurgente al sur del centro y capituló el 27 de septiembre de 1944."
+          }
+        },
+        {
+          "place": "warsaw",
+          "name": {
+            "en": "Sewers under Warsaw",
+            "es": "Alcantarillas bajo Varsovia"
+          },
+          "coordinates": [21.017, 52.215],
+          "date": "1944-09",
+          "kind": "journey",
+          "primary": true,
+          "story": {
+            "en": "Underground the group splits up; some wander in circles, others reach exits blocked by bars or booby traps.",
+            "es": "Bajo tierra el grupo se divide; algunos dan vueltas en círculo y otros llegan a salidas bloqueadas por rejas o trampas explosivas."
+          },
+          "history": {
+            "en": "Couriers mapped sewer routes during the uprising; the Germans answered with grenades, gas and barricades in the tunnels.",
+            "es": "Durante el alzamiento, los enlaces trazaron rutas por las alcantarillas; los alemanes respondieron con granadas, gas y barricadas en los túneles."
+          }
+        },
+        {
+          "place": "warsaw",
+          "name": {
+            "en": "Dworkowa Street exit",
+            "es": "Salida de la calle Dworkowa"
+          },
+          "coordinates": [21.023, 52.2035],
+          "date": "1944-09",
+          "kind": "city",
+          "story": {
+            "en": "One officer climbs out of a manhole into daylight, straight into the hands of German soldiers.",
+            "es": "Un oficial sale por una boca de alcantarilla a la luz del día, directo a manos de soldados alemanes."
+          },
+          "history": {
+            "en": "On 27 September 1944 German police executed about 120 insurgents who emerged from the sewer on Dworkowa Street.",
+            "es": "El 27 de septiembre de 1944 la policía alemana ejecutó a unos 120 insurgentes que salieron de la alcantarilla en la calle Dworkowa."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-zookeepers-wife-2017",
+      "kind": "film",
+      "title": "The Zookeeper's Wife",
+      "titleEs": "La casa de la esperanza",
+      "year": 2017,
+      "era": "ww2",
+      "period": { "start": "1939-09", "end": "1945-01" },
+      "theaters": ["eastern-europe"],
+      "tags": ["holocaust", "resistance", "true-story"],
+      "gold": false,
+      "directors": ["Niki Caro"],
+      "countries": ["US", "CZ", "GB"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 289222,
+        "tmdbType": "movie",
+        "imdb": "tt1730768",
+        "wikidata": "Q21528262"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Zookeeper's_Wife_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/The_Zookeeper's_Wife"
+      },
+      "synopsis": {
+        "en": "Antonina and Jan Żabiński, keepers of the Warsaw Zoo, turn their empty cages and villa into a hiding place for Jews smuggled out of the ghetto.",
+        "es": "Antonina y Jan Żabiński, cuidadores del zoológico de Varsovia, convierten sus jaulas vacías y su villa en un escondite para judíos sacados a escondidas del gueto."
+      },
+      "history": {
+        "en": [
+          "The film is based on Diane Ackerman's book drawn from Antonina Żabińska's memoir. The Warsaw Zoo was bombed in September 1939, and Lutz Heck of the Berlin Zoo took its best animals to Germany. Jan Żabiński, a zoologist and Home Army member, used his permit to enter the ghetto to smuggle people out, and the couple sheltered them at the zoo.",
+          "About 300 people passed through the zoo during the war, most staying briefly before moving to other safe houses. Jan fought in the 1944 uprising and was taken prisoner. In 1965 Yad Vashem recognised the couple as Righteous Among the Nations. The film invents much of Heck's personal pursuit of Antonina."
+        ],
+        "es": [
+          "La película se basa en el libro de Diane Ackerman, a su vez basado en las memorias de Antonina Żabińska. El zoológico de Varsovia fue bombardeado en septiembre de 1939, y Lutz Heck, del zoológico de Berlín, se llevó sus mejores animales a Alemania. Jan Żabiński, zoólogo y miembro del Ejército Nacional, usó su permiso para entrar al gueto y sacar personas, y la pareja las escondió en el zoológico.",
+          "Unas 300 personas pasaron por el zoológico durante la guerra; la mayoría se quedó poco tiempo antes de ir a otras casas seguras. Jan combatió en el alzamiento de 1944 y fue hecho prisionero. En 1965 Yad Vashem reconoció a la pareja como Justos entre las Naciones. La película inventa buena parte del acoso personal de Heck hacia Antonina."
+        ]
+      },
+      "journey": [
+        {
+          "place": "warsaw",
+          "name": {
+            "en": "Warsaw Zoo, Praga",
+            "es": "Zoológico de Varsovia, Praga"
+          },
+          "coordinates": [21.0222, 52.2578],
+          "date": "1939-09",
+          "kind": "home",
+          "primary": true,
+          "story": {
+            "en": "Bombs tear through the zoo; soon the Żabińskis' villa and empty enclosures fill with hidden 'guests' from the ghetto.",
+            "es": "Las bombas destrozan el zoológico; pronto la villa de los Żabiński y los recintos vacíos se llenan de «huéspedes» ocultos venidos del gueto."
+          },
+          "history": {
+            "en": "The zoo sat on the right bank of the Vistula, across the river from the ghetto, and its villa still stands.",
+            "es": "El zoológico estaba en la orilla derecha del Vístula, frente al gueto al otro lado del río, y su villa sigue en pie."
+          }
+        },
+        {
+          "place": "warsaw",
+          "name": { "en": "Umschlagplatz", "es": "Umschlagplatz" },
+          "coordinates": [20.9891, 52.2523],
+          "date": "1942-08",
+          "kind": "camp",
+          "story": {
+            "en": "Jan watches children loaded onto cattle cars and offers a way out to Janusz Korczak, who will not leave his orphans.",
+            "es": "Jan ve cómo cargan niños en vagones de ganado y le ofrece una salida a Janusz Korczak, que no quiere abandonar a sus huérfanos."
+          },
+          "history": {
+            "en": "Janusz Korczak went to Treblinka with about 200 children from his orphanage in early August 1942.",
+            "es": "Janusz Korczak fue a Treblinka con unos 200 niños de su orfanato a comienzos de agosto de 1942."
+          }
+        },
+        {
+          "place": "warsaw",
+          "name": {
+            "en": "Warsaw Zoo villa",
+            "es": "Villa del zoológico de Varsovia"
+          },
+          "coordinates": [21.0222, 52.2578],
+          "date": "1945-01",
+          "kind": "home",
+          "story": {
+            "en": "With Jan missing after the uprising, Antonina has to protect her last guests as the Germans evacuate the city.",
+            "es": "Con Jan desaparecido tras el alzamiento, Antonina debe proteger a sus últimos huéspedes mientras los alemanes evacuan la ciudad."
+          },
+          "history": {
+            "en": "Soviet and Polish troops entered the ruins of Warsaw on 17 January 1945.",
+            "es": "Las tropas soviéticas y polacas entraron en las ruinas de Varsovia el 17 de enero de 1945."
+          }
+        }
+      ]
+    },
+    {
+      "id": "son-of-saul-2015",
+      "kind": "film",
+      "title": "Son of Saul",
+      "titleEs": "El hijo de Saúl",
+      "originalTitle": "Saul fia",
+      "year": 2015,
+      "era": "ww2",
+      "period": { "start": "1944-10", "end": "1944-10" },
+      "theaters": ["eastern-europe"],
+      "tags": ["holocaust", "prisoners"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won the Grand Prix at Cannes in 2015 and the Academy Award for Best Foreign Language Film.",
+        "es": "Ganó el Gran Premio del Jurado en Cannes en 2015 y el Óscar a la Mejor Película de Habla No Inglesa."
+      },
+      "directors": ["László Nemes"],
+      "countries": ["HU"],
+      "languages": ["hu", "de", "yi", "pl"],
+      "ids": {
+        "tmdb": 336050,
+        "tmdbType": "movie",
+        "imdb": "tt3808342",
+        "wikidata": "Q19816400"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Son_of_Saul",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/El_hijo_de_Sa%C3%BAl"
+      },
+      "synopsis": {
+        "en": "Over a day and a half in Auschwitz-Birkenau, a Hungarian Jew forced to work in the crematoria tries to give a murdered boy a proper burial while his unit plans a revolt.",
+        "es": "Durante un día y medio en Auschwitz-Birkenau, un judío húngaro obligado a trabajar en los crematorios intenta dar un entierro digno a un niño asesinado mientras su unidad prepara una revuelta."
+      },
+      "history": {
+        "en": [
+          "In the spring and summer of 1944 about 430,000 Hungarian Jews were deported to Auschwitz-Birkenau, most of them gassed on arrival. The Sonderkommando, prisoners forced to empty the gas chambers and burn the bodies, were themselves periodically killed to erase witnesses.",
+          "On 7 October 1944 members of the Sonderkommando revolted, blew up Crematorium IV with gunpowder smuggled by women prisoners, and some broke out; about 250 were killed that day. The film also recreates the secret 'Sonderkommando photographs' taken in August 1944, and relies on the hidden writings of prisoners found buried near the crematoria."
+        ],
+        "es": [
+          "En la primavera y el verano de 1944 unos 430.000 judíos húngaros fueron deportados a Auschwitz-Birkenau, y la mayoría fue gaseada al llegar. Los Sonderkommando, prisioneros obligados a vaciar las cámaras de gas y quemar los cuerpos, eran a su vez asesinados periódicamente para eliminar testigos.",
+          "El 7 de octubre de 1944 miembros del Sonderkommando se rebelaron, volaron el Crematorio IV con pólvora que habían sacado a escondidas unas prisioneras, y algunos lograron escapar; unos 250 murieron ese día. La película también recrea las «fotografías del Sonderkommando» tomadas en secreto en agosto de 1944 y se apoya en los escritos ocultos de prisioneros hallados enterrados junto a los crematorios."
+        ]
+      },
+      "journey": [
+        {
+          "place": "auschwitz",
+          "name": {
+            "en": "Crematoria of Auschwitz-Birkenau",
+            "es": "Crematorios de Auschwitz-Birkenau"
+          },
+          "coordinates": [19.1783, 50.0358],
+          "date": "1944-10",
+          "kind": "camp",
+          "primary": true,
+          "story": {
+            "en": "Saul moves through the gas chambers, the pits and the barracks, carrying the boy's body and searching for a rabbi as the revolt approaches.",
+            "es": "Saul recorre las cámaras de gas, las fosas y los barracones cargando el cuerpo del niño y buscando a un rabino mientras se acerca la revuelta."
+          },
+          "history": {
+            "en": "About one million Jews were murdered at Auschwitz-Birkenau, most of them in its four crematoria and gas chambers.",
+            "es": "Alrededor de un millón de judíos fueron asesinados en Auschwitz-Birkenau, la mayoría en sus cuatro crematorios y cámaras de gas."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-zone-of-interest-2023",
+      "kind": "film",
+      "title": "The Zone of Interest",
+      "titleEs": "Zona de interés",
+      "year": 2023,
+      "era": "ww2",
+      "period": { "start": "1943", "end": "1944-05" },
+      "theaters": ["eastern-europe"],
+      "tags": ["holocaust", "biography", "true-story"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won the Grand Prix at Cannes in 2023 and the Academy Awards for Best International Feature Film and Best Sound.",
+        "es": "Ganó el Gran Premio del Jurado en Cannes en 2023 y los Óscar a la Mejor Película Internacional y al Mejor Sonido."
+      },
+      "directors": ["Jonathan Glazer"],
+      "countries": ["GB", "PL", "US"],
+      "languages": ["de", "pl", "yi"],
+      "ids": {
+        "tmdb": 467244,
+        "tmdbType": "movie",
+        "imdb": "tt7160372",
+        "wikidata": "Q115993222"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Zone_of_Interest_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/The_Zone_of_Interest"
+      },
+      "synopsis": {
+        "en": "The commandant of Auschwitz and his wife raise their children in a house with a beautiful garden, separated from the camp only by a wall and the sounds that come over it.",
+        "es": "El comandante de Auschwitz y su esposa crían a sus hijos en una casa con un hermoso jardín, separada del campo solo por un muro y por los sonidos que llegan por encima de él."
+      },
+      "history": {
+        "en": [
+          "Rudolf Höss commanded Auschwitz from May 1940 to November 1943 and lived with his family in a villa just outside the wall of the main camp. Under his command it grew into the largest killing centre of the Holocaust, where about 1.1 million people were murdered, around a million of them Jews.",
+          "Transferred to the SS concentration camp inspectorate at Oranienburg in late 1943, Höss returned in May 1944 to oversee 'Aktion Höss', the murder of Hungarian Jews. He was tried in Poland and hanged beside the old camp in April 1947. The film, loosely based on Martin Amis's novel, uses the real names and the reconstructed house."
+        ],
+        "es": [
+          "Rudolf Höss dirigió Auschwitz desde mayo de 1940 hasta noviembre de 1943 y vivía con su familia en una villa junto al muro del campo principal. Bajo su mando se convirtió en el mayor centro de exterminio del Holocausto, donde fueron asesinadas cerca de 1,1 millones de personas, alrededor de un millón de ellas judías.",
+          "Trasladado a la inspección de campos de concentración de las SS en Oranienburg a fines de 1943, Höss volvió en mayo de 1944 para dirigir la «Aktion Höss», el asesinato de los judíos húngaros. Fue juzgado en Polonia y ahorcado junto al antiguo campo en abril de 1947. La película, basada libremente en la novela de Martin Amis, usa los nombres reales y la casa reconstruida."
+        ]
+      },
+      "journey": [
+        {
+          "place": "auschwitz",
+          "name": {
+            "en": "Höss family villa, Auschwitz",
+            "es": "Villa de la familia Höss, Auschwitz"
+          },
+          "coordinates": [19.201, 50.0287],
+          "date": "1943",
+          "kind": "home",
+          "primary": true,
+          "story": {
+            "en": "Hedwig tends her flowers and hosts her mother while trains, shots and furnaces are heard beyond the garden wall.",
+            "es": "Hedwig cuida sus flores y recibe a su madre mientras se oyen trenes, disparos y hornos más allá del muro del jardín."
+          },
+          "history": {
+            "en": "The Höss villa stood next to the main camp, Auschwitz I, a few kilometres from the gas chambers of Birkenau.",
+            "es": "La villa de los Höss estaba junto al campo principal, Auschwitz I, a pocos kilómetros de las cámaras de gas de Birkenau."
+          }
+        },
+        {
+          "place": "oranienburg",
+          "name": {
+            "en": "SS camp inspectorate, Oranienburg",
+            "es": "Inspección de campos de las SS, Oranienburg"
+          },
+          "coordinates": [13.2369, 52.7544],
+          "date": "1944-05",
+          "kind": "base",
+          "story": {
+            "en": "Promoted away from Auschwitz, Höss works in an office near Berlin until he is chosen to run the deportation of Hungary's Jews.",
+            "es": "Ascendido y alejado de Auschwitz, Höss trabaja en una oficina cerca de Berlín hasta que es elegido para dirigir la deportación de los judíos de Hungría."
+          },
+          "history": {
+            "en": "The Inspectorate of Concentration Camps, part of the SS Economic Administration from 1942, was based beside Sachsenhausen in Oranienburg.",
+            "es": "La Inspección de Campos de Concentración, parte de la Administración Económica de las SS desde 1942, tenía su sede junto a Sachsenhausen, en Oranienburg."
+          }
+        }
+      ]
+    },
+    {
+      "id": "escape-from-sobibor-1987",
+      "kind": "film",
+      "title": "Escape from Sobibor",
+      "titleEs": "Escape de Sobibor",
+      "year": 1987,
+      "era": "ww2",
+      "period": { "start": "1943", "end": "1943-10" },
+      "theaters": ["eastern-europe"],
+      "tags": ["holocaust", "prisoners", "resistance", "true-story"],
+      "gold": false,
+      "directors": ["Jack Gold"],
+      "countries": ["GB", "YU"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 25318,
+        "tmdbType": "movie",
+        "imdb": "tt0092978",
+        "wikidata": "Q701759"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Escape_from_Sobibor",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Escape_de_Sobibor"
+      },
+      "synopsis": {
+        "en": "Jewish prisoners kept alive to serve a death camp plan to kill their SS guards one by one and walk out of Sobibor, with the help of newly arrived Soviet Jewish POWs.",
+        "es": "Prisioneros judíos a los que mantienen vivos para servir en un campo de exterminio planean matar a sus guardias de las SS uno por uno y salir caminando de Sobibor, con ayuda de prisioneros de guerra judíos soviéticos recién llegados."
+      },
+      "history": {
+        "en": [
+          "Sobibor, in eastern Poland, was one of the three Operation Reinhard extermination camps; around 170,000–250,000 Jews were murdered there between May 1942 and October 1943. A small group of prisoners was kept alive to sort the victims' belongings and serve the SS.",
+          "On 14 October 1943, prisoners led by Leon Feldhendler and Soviet POW Alexander Pechersky killed eleven SS men and several guards and about 300 broke out; roughly 50–60 survived the war. The SS closed the camp soon after and planted trees over it. The TV film is based on Richard Rashke's book and interviews with survivors."
+        ],
+        "es": [
+          "Sobibor, en el este de Polonia, fue uno de los tres campos de exterminio de la Operación Reinhard; entre mayo de 1942 y octubre de 1943 fueron asesinados allí entre 170.000 y 250.000 judíos. Un pequeño grupo de prisioneros era mantenido con vida para clasificar las pertenencias de las víctimas y servir a las SS.",
+          "El 14 de octubre de 1943, prisioneros encabezados por Leon Feldhendler y el prisionero de guerra soviético Alexander Pechersky mataron a once hombres de las SS y a varios guardias, y unos 300 escaparon; alrededor de 50 o 60 sobrevivieron a la guerra. Las SS cerraron el campo poco después y plantaron árboles encima. El telefilme se basa en el libro de Richard Rashke y en entrevistas con sobrevivientes."
+        ]
+      },
+      "journey": [
+        {
+          "place": "sobibor",
+          "name": {
+            "en": "Sobibor extermination camp",
+            "es": "Campo de exterminio de Sobibor"
+          },
+          "coordinates": [23.5941, 51.447],
+          "date": "1943-10",
+          "kind": "camp",
+          "primary": true,
+          "story": {
+            "en": "Feldhendler and Pechersky lure SS officers into workshops one at a time, then the prisoners rush the fences and the minefield.",
+            "es": "Feldhendler y Pechersky atraen a los oficiales de las SS a los talleres de uno en uno, y luego los prisioneros se lanzan contra las alambradas y el campo minado."
+          },
+          "history": {
+            "en": "The Sobibor uprising of 14 October 1943 was one of the few successful mass escapes from a Nazi death camp.",
+            "es": "La rebelión de Sobibor del 14 de octubre de 1943 fue una de las pocas fugas masivas exitosas de un campo de exterminio nazi."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-counterfeiters-2007",
+      "kind": "film",
+      "title": "The Counterfeiters",
+      "titleEs": "Los falsificadores",
+      "originalTitle": "Die Fälscher",
+      "year": 2007,
+      "era": "ww2",
+      "period": { "start": "1936", "end": "1945-05" },
+      "theaters": ["western-europe"],
+      "tags": ["holocaust", "prisoners", "true-story"],
+      "gold": false,
+      "directors": ["Stefan Ruzowitzky"],
+      "countries": ["AT", "DE"],
+      "languages": ["de", "ru"],
+      "ids": {
+        "tmdb": 7862,
+        "tmdbType": "movie",
+        "imdb": "tt0813547",
+        "wikidata": "Q167411"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Counterfeiters_(2007_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Los_falsificadores"
+      },
+      "synopsis": {
+        "en": "A Jewish master forger from Berlin is pulled out of the camps to run a secret SS workshop forging pounds and dollars, and must decide how far to help the enemy in order to survive.",
+        "es": "Un maestro falsificador judío de Berlín es sacado de los campos para dirigir un taller secreto de las SS que falsifica libras y dólares, y debe decidir hasta dónde ayudar al enemigo para sobrevivir."
+      },
+      "history": {
+        "en": [
+          "Operation Bernhard was an SS plan to wreck the British economy with counterfeit money. From 1942 about 140 Jewish prisoners, printers, engravers and bankers, were gathered in isolated Blocks 18 and 19 of Sachsenhausen and produced some 134 million pounds in near-perfect Bank of England notes; their attempts at the dollar were deliberately slowed.",
+          "The film adapts the memoir of printer Adolf Burger, one of the saboteurs, while its hero is based on the Russian-born forger Salomon Smolianoff. In reality the workshop was moved in early 1945 to Mauthausen and then to Redl-Zipf and Ebensee, where US troops liberated the prisoners in May 1945; the film shows their liberation at Sachsenhausen instead. It won the 2008 Oscar for Best Foreign Language Film."
+        ],
+        "es": [
+          "La Operación Bernhard fue un plan de las SS para hundir la economía británica con dinero falso. Desde 1942 unos 140 prisioneros judíos, impresores, grabadores y banqueros, fueron reunidos en los bloques aislados 18 y 19 de Sachsenhausen y produjeron unos 134 millones de libras en billetes casi perfectos del Banco de Inglaterra; sus intentos con el dólar fueron frenados a propósito.",
+          "La película adapta las memorias del impresor Adolf Burger, uno de los saboteadores, mientras que su protagonista se basa en el falsificador de origen ruso Salomon Smolianoff. En realidad, el taller fue trasladado a comienzos de 1945 a Mauthausen y luego a Redl-Zipf y Ebensee, donde tropas estadounidenses liberaron a los prisioneros en mayo de 1945; la película muestra en cambio su liberación en Sachsenhausen. Ganó el Óscar de 2008 a la Mejor Película de Habla No Inglesa."
+        ]
+      },
+      "journey": [
+        {
+          "place": "berlin",
+          "name": { "en": "Berlin", "es": "Berlín" },
+          "coordinates": [13.405, 52.52],
+          "date": "1936",
+          "kind": "city",
+          "story": {
+            "en": "Salomon Sorowitsch lives well off forged passports and banknotes in Berlin's nightlife until a police detective arrests him.",
+            "es": "Salomon Sorowitsch vive bien de pasaportes y billetes falsos en la vida nocturna de Berlín hasta que un detective de la policía lo arresta."
+          },
+          "history": {
+            "en": "In Nazi Germany Jews with criminal records were among the first sent to concentration camps as 'asocials'.",
+            "es": "En la Alemania nazi, los judíos con antecedentes penales estuvieron entre los primeros enviados a campos de concentración como «asociales»."
+          }
+        },
+        {
+          "place": "mauthausen",
+          "name": {
+            "en": "Mauthausen concentration camp",
+            "es": "Campo de concentración de Mauthausen"
+          },
+          "coordinates": [14.5004, 48.2575],
+          "date": "1939",
+          "kind": "camp",
+          "story": {
+            "en": "In the camp he survives by painting portraits of the SS guards in exchange for food.",
+            "es": "En el campo sobrevive pintando retratos de los guardias de las SS a cambio de comida."
+          },
+          "history": {
+            "en": "Mauthausen, near Linz, was one of the harshest camps; prisoners were worked to death in its granite quarry.",
+            "es": "Mauthausen, cerca de Linz, fue uno de los campos más duros; los prisioneros morían de agotamiento en su cantera de granito."
+          }
+        },
+        {
+          "place": "sachsenhausen",
+          "name": {
+            "en": "Sachsenhausen, Blocks 18 and 19",
+            "es": "Sachsenhausen, bloques 18 y 19"
+          },
+          "coordinates": [13.2624, 52.7662],
+          "date": "1944",
+          "kind": "camp",
+          "primary": true,
+          "story": {
+            "en": "Behind a fence inside the camp, the forgers get beds, food and music, and argue over whether to sabotage the dollar.",
+            "es": "Tras una cerca dentro del campo, los falsificadores reciben camas, comida y música, y discuten si sabotear el dólar."
+          },
+          "history": {
+            "en": "Operation Bernhard ran in Sachsenhausen from 1942 until the workshop was evacuated to Austria in early 1945.",
+            "es": "La Operación Bernhard funcionó en Sachsenhausen desde 1942 hasta que el taller fue evacuado a Austria a comienzos de 1945."
+          }
+        },
+        {
+          "place": "monte-carlo",
+          "name": { "en": "Monte Carlo Casino", "es": "Casino de Montecarlo" },
+          "coordinates": [7.428, 43.7392],
+          "date": "1945",
+          "kind": "city",
+          "story": {
+            "en": "After the war a quiet man with a camp number on his arm gambles away a suitcase of money at the casino.",
+            "es": "Después de la guerra, un hombre callado con un número de campo en el brazo se juega una maleta de dinero en el casino."
+          },
+          "history": {
+            "en": "Salomon Smolianoff moved to South America after the war; many forged pounds had been dumped into Lake Toplitz in Austria.",
+            "es": "Salomon Smolianoff se mudó a Sudamérica tras la guerra; muchas libras falsas habían sido arrojadas al lago Toplitz, en Austria."
+          }
+        }
+      ]
+    },
+    {
+      "id": "in-darkness-2011",
+      "kind": "film",
+      "title": "In Darkness",
+      "titleEs": "En la oscuridad",
+      "originalTitle": "W ciemności",
+      "year": 2011,
+      "era": "ww2",
+      "period": { "start": "1943-05", "end": "1944-07" },
+      "theaters": ["eastern-europe"],
+      "tags": ["holocaust", "true-story"],
+      "gold": false,
+      "directors": ["Agnieszka Holland"],
+      "countries": ["PL", "DE", "CA"],
+      "languages": ["pl", "de", "yi", "uk"],
+      "ids": {
+        "tmdb": 73686,
+        "tmdbType": "movie",
+        "imdb": "tt1417075",
+        "wikidata": "Q699338"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/In_Darkness_(2011_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/In_Darkness"
+      },
+      "synopsis": {
+        "en": "A Polish sewer worker and petty thief in occupied Lvov agrees to hide a group of Jews in the sewers for money, and slowly becomes their only protector.",
+        "es": "Un trabajador de las alcantarillas y ladronzuelo polaco en el Lvov ocupado acepta esconder por dinero a un grupo de judíos en las cloacas, y poco a poco se convierte en su único protector."
+      },
+      "history": {
+        "en": [
+          "Lwów had one of the largest Jewish communities in Poland, about 110,000 people before the war and more with refugees. After the German occupation of June 1941 most were murdered in pogroms, at the Janowska camp or in the Bełżec death camp; the ghetto was liquidated in June 1943.",
+          "Leopold Socha and his colleague Stefan Wróblewski hid about twenty Jews in the city's sewers during the liquidation; ten of them, including the Chiger family, survived fourteen months underground until the Red Army took the city in late July 1944. Socha was later recognised as Righteous Among the Nations. The film was based on Robert Marshall's book and Krystyna Chiger's memoir."
+        ],
+        "es": [
+          "Lwów tenía una de las mayores comunidades judías de Polonia, unas 110.000 personas antes de la guerra y más con los refugiados. Tras la ocupación alemana de junio de 1941 la mayoría fue asesinada en pogromos, en el campo de Janowska o en el campo de exterminio de Bełżec; el gueto fue liquidado en junio de 1943.",
+          "Leopold Socha y su compañero Stefan Wróblewski escondieron a una veintena de judíos en las alcantarillas de la ciudad durante la liquidación; diez de ellos, incluida la familia Chiger, sobrevivieron catorce meses bajo tierra hasta que el Ejército Rojo tomó la ciudad a fines de julio de 1944. Socha fue reconocido después como Justo entre las Naciones. La película se basó en el libro de Robert Marshall y en las memorias de Krystyna Chiger."
+        ]
+      },
+      "journey": [
+        {
+          "place": "lwow",
+          "name": { "en": "Lvov Ghetto", "es": "Gueto de Leópolis" },
+          "coordinates": [24.0328, 49.8394],
+          "date": "1943-05",
+          "kind": "city",
+          "story": {
+            "en": "Searching the sewers under the ghetto, Socha finds Jews digging an escape route and makes them a deal.",
+            "es": "Recorriendo las cloacas bajo el gueto, Socha encuentra a judíos cavando una vía de escape y les propone un trato."
+          },
+          "history": {
+            "en": "The Germans liquidated the Lwów Ghetto in June 1943, shooting thousands on the spot and sending the rest to Janowska.",
+            "es": "Los alemanes liquidaron el gueto de Lwów en junio de 1943, fusilaron allí mismo a miles y enviaron al resto a Janowska."
+          }
+        },
+        {
+          "place": "lwow",
+          "name": {
+            "en": "Sewers under Lvov",
+            "es": "Alcantarillas bajo Leópolis"
+          },
+          "coordinates": [24.0316, 49.842],
+          "date": "1943-06",
+          "kind": "home",
+          "primary": true,
+          "story": {
+            "en": "Months in the dark follow: hunger, quarrels, a birth, floods from the river, and Socha risking his family to keep bringing food.",
+            "es": "Siguen meses en la oscuridad: hambre, peleas, un parto, crecidas del río y Socha arriesgando a su familia para seguir llevando comida."
+          },
+          "history": {
+            "en": "The group hid near the covered Poltva River, which runs in a culvert beneath the city centre.",
+            "es": "El grupo se escondió cerca del río Poltva, que corre entubado bajo el centro de la ciudad."
+          }
+        },
+        {
+          "place": "lwow",
+          "name": { "en": "Liberated Lvov", "es": "Leópolis liberada" },
+          "coordinates": [24.0316, 49.842],
+          "date": "1944-07",
+          "kind": "city",
+          "story": {
+            "en": "When the Soviets enter the city, Socha opens a manhole and the survivors climb out into the daylight.",
+            "es": "Cuando los soviéticos entran en la ciudad, Socha abre una tapa y los sobrevivientes salen a la luz del día."
+          },
+          "history": {
+            "en": "The Red Army captured Lwów on 27 July 1944 in the Lvov–Sandomierz offensive.",
+            "es": "El Ejército Rojo tomó Lwów el 27 de julio de 1944 en la ofensiva Lvov–Sandomierz."
+          }
+        }
+      ]
+    },
+    {
+      "id": "europa-europa-1990",
+      "kind": "film",
+      "title": "Europa Europa",
+      "titleEs": "Europa, Europa",
+      "originalTitle": "Hitlerjunge Salomon",
+      "year": 1990,
+      "era": "ww2",
+      "period": { "start": "1938-11", "end": "1945-04" },
+      "theaters": ["eastern-europe"],
+      "tags": ["holocaust", "biography", "true-story"],
+      "gold": false,
+      "directors": ["Agnieszka Holland"],
+      "countries": ["DE", "FR", "PL"],
+      "languages": ["de", "ru", "pl"],
+      "ids": {
+        "tmdb": 8996,
+        "tmdbType": "movie",
+        "imdb": "tt0099776",
+        "wikidata": "Q176626"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Europa_Europa",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Europa_Europa_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "A Jewish teenager from Germany survives the war by passing first as a Soviet Komsomol member and then as an ethnic German interpreter and Hitler Youth cadet, always one glance away from exposure.",
+        "es": "Un adolescente judío de Alemania sobrevive a la guerra haciéndose pasar primero por miembro del Komsomol soviético y luego por intérprete de origen alemán y cadete de las Juventudes Hitlerianas, siempre a una mirada de ser descubierto."
+      },
+      "history": {
+        "en": [
+          "The film follows the memoir of Solomon Perel, born in Peine in 1925. His family fled to Łódź, where his parents were later confined in the ghetto and murdered. Separated from his brother in 1939, he spent two years in a Soviet orphanage in Grodno before German troops captured him in 1941 and he claimed to be an ethnic German.",
+          "He served as an interpreter with a Wehrmacht unit and was sent to a Hitler Youth school in Braunschweig, hiding his circumcision for four years. At the end of the war he was captured by the Red Army near Berlin. Holland compresses some episodes, but the extraordinary outline of Perel's survival is his own account."
+        ],
+        "es": [
+          "La película sigue las memorias de Solomon Perel, nacido en Peine en 1925. Su familia huyó a Łódź, donde sus padres fueron luego encerrados en el gueto y asesinados. Separado de su hermano en 1939, pasó dos años en un orfanato soviético en Grodno antes de que las tropas alemanas lo capturaran en 1941 y él se hiciera pasar por alemán étnico.",
+          "Sirvió como intérprete en una unidad de la Wehrmacht y fue enviado a una escuela de las Juventudes Hitlerianas en Brunswick, ocultando su circuncisión durante cuatro años. Al final de la guerra fue capturado por el Ejército Rojo cerca de Berlín. Holland condensa algunos episodios, pero el extraordinario contorno de su supervivencia es el relato del propio Perel."
+        ]
+      },
+      "journey": [
+        {
+          "place": "peine",
+          "name": { "en": "Peine, Lower Saxony", "es": "Peine, Baja Sajonia" },
+          "coordinates": [10.2336, 52.3203],
+          "date": "1938-11",
+          "kind": "home",
+          "story": {
+            "en": "On the eve of his bar mitzvah, Solek hides in a barrel during the Kristallnacht attack on his family's home.",
+            "es": "En vísperas de su bar mitzvá, Solek se esconde en un barril durante el ataque de la Noche de los Cristales Rotos contra la casa de su familia."
+          },
+          "history": {
+            "en": "During Kristallnacht on 9–10 November 1938 synagogues, shops and homes were attacked across Germany.",
+            "es": "Durante la Noche de los Cristales Rotos, el 9 y 10 de noviembre de 1938, se atacaron sinagogas, tiendas y casas en toda Alemania."
+          }
+        },
+        {
+          "place": "lodz",
+          "name": { "en": "Łódź", "es": "Lodz" },
+          "coordinates": [19.4667, 51.75],
+          "date": "1939-09",
+          "kind": "home",
+          "story": {
+            "en": "When Germany invades Poland, his parents send Solek and his brother east to escape.",
+            "es": "Cuando Alemania invade Polonia, sus padres envían a Solek y a su hermano al este para que escapen."
+          },
+          "history": {
+            "en": "German troops entered Łódź on 8 September 1939 and annexed the city to the Reich as Litzmannstadt.",
+            "es": "Las tropas alemanas entraron en Łódź el 8 de septiembre de 1939 y anexionaron la ciudad al Reich como Litzmannstadt."
+          }
+        },
+        {
+          "place": "grodno",
+          "name": { "en": "Grodno", "es": "Grodno" },
+          "coordinates": [23.8167, 53.6667],
+          "date": "1941-06",
+          "kind": "city",
+          "story": {
+            "en": "After two years in a Soviet orphanage, Solek is caught by the advancing Germans and saves himself by claiming to be a Volksdeutscher.",
+            "es": "Tras dos años en un orfanato soviético, Solek es atrapado por el avance alemán y se salva diciendo que es un Volksdeutscher."
+          },
+          "history": {
+            "en": "Grodno, annexed by the USSR in 1939, fell to the Germans in the first days of Operation Barbarossa.",
+            "es": "Grodno, anexionada por la URSS en 1939, cayó en manos alemanas en los primeros días de la Operación Barbarroja."
+          }
+        },
+        {
+          "place": "braunschweig",
+          "name": {
+            "en": "Hitler Youth school, Braunschweig",
+            "es": "Escuela de las Juventudes Hitlerianas, Brunswick"
+          },
+          "coordinates": [10.5211, 52.2692],
+          "date": "1942",
+          "kind": "base",
+          "primary": true,
+          "story": {
+            "en": "Adopted by his unit as a mascot, 'Jupp' is sent to an elite Nazi school, where race lessons and a girlfriend put him in constant danger.",
+            "es": "Adoptado como mascota por su unidad, «Jupp» es enviado a una escuela nazi de élite, donde las clases de raza y una novia lo ponen en peligro constante."
+          },
+          "history": {
+            "en": "Perel spent about three years at a Hitler Youth school in Braunschweig without being discovered.",
+            "es": "Perel pasó cerca de tres años en una escuela de las Juventudes Hitlerianas en Brunswick sin ser descubierto."
+          }
+        },
+        {
+          "place": "lodz",
+          "name": {
+            "en": "Łódź Ghetto (Litzmannstadt)",
+            "es": "Gueto de Lodz (Litzmannstadt)"
+          },
+          "coordinates": [19.4414, 51.8014],
+          "date": "1943",
+          "kind": "city",
+          "story": {
+            "en": "On leave, he rides a tram through the sealed ghetto looking for his parents in the windows.",
+            "es": "De permiso, recorre en tranvía el gueto cerrado buscando a sus padres en las ventanas."
+          },
+          "history": {
+            "en": "Trams crossed the Łódź Ghetto on sealed routes; the ghetto held about 160,000 people at its peak.",
+            "es": "Los tranvías atravesaban el gueto de Lodz por rutas cerradas; el gueto llegó a albergar a unas 160.000 personas."
+          }
+        },
+        {
+          "place": "berlin",
+          "name": { "en": "Berlin", "es": "Berlín" },
+          "coordinates": [13.405, 52.52],
+          "date": "1945-04",
+          "kind": "front",
+          "story": {
+            "en": "Drafted to defend the capital, he surrenders to the Soviets and must convince them who he really is.",
+            "es": "Reclutado para defender la capital, se rinde a los soviéticos y debe convencerlos de quién es en realidad."
+          },
+          "history": {
+            "en": "In April 1945 teenage Hitler Youth members were thrown into the last defence of Berlin.",
+            "es": "En abril de 1945 adolescentes de las Juventudes Hitlerianas fueron lanzados a la última defensa de Berlín."
+          }
+        }
+      ]
+    },
+    {
+      "id": "a-woman-in-berlin-2008",
+      "kind": "film",
+      "title": "A Woman in Berlin",
+      "titleEs": "Anonyma: Una mujer en Berlín",
+      "originalTitle": "Anonyma – Eine Frau in Berlin",
+      "year": 2008,
+      "era": "ww2",
+      "period": { "start": "1945-04", "end": "1945-06" },
+      "theaters": ["eastern-europe"],
+      "tags": ["home-front", "true-story"],
+      "gold": false,
+      "directors": ["Max Färberböck"],
+      "countries": ["DE", "PL"],
+      "languages": ["de", "ru"],
+      "ids": {
+        "tmdb": 12832,
+        "tmdbType": "movie",
+        "imdb": "tt1035730",
+        "wikidata": "Q567598"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/A_Woman_in_Berlin_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Anonyma_%E2%80%93_Una_mujer_en_Berl%C3%ADn"
+      },
+      "synopsis": {
+        "en": "As the Red Army takes Berlin, a journalist sheltering in her apartment building's cellar survives repeated assaults by seeking the protection of a Soviet officer, and writes it all down.",
+        "es": "Mientras el Ejército Rojo toma Berlín, una periodista refugiada en el sótano de su edificio sobrevive a repetidas agresiones buscando la protección de un oficial soviético, y lo escribe todo."
+      },
+      "history": {
+        "en": [
+          "The film adapts the anonymous diary 'A Woman in Berlin', which covers 20 April to 22 June 1945, the fall of the city and the first weeks of Soviet occupation. Its author, identified after her death as the journalist Marta Hillers, described mass rape by Soviet soldiers and women's strategies to survive it.",
+          "Historians estimate that at least 100,000 women were raped in Berlin in those months, and many more across eastern Germany. When the diary first appeared in German in 1959 it was attacked for 'shaming' German women; its republication in 2003 became a bestseller and opened a long-suppressed chapter of the war's end."
+        ],
+        "es": [
+          "La película adapta el diario anónimo 'Una mujer en Berlín', que abarca del 20 de abril al 22 de junio de 1945, la caída de la ciudad y las primeras semanas de ocupación soviética. Su autora, identificada tras su muerte como la periodista Marta Hillers, describió las violaciones masivas cometidas por soldados soviéticos y las estrategias de las mujeres para sobrevivir.",
+          "Los historiadores calculan que al menos 100.000 mujeres fueron violadas en Berlín en esos meses, y muchas más en todo el este de Alemania. Cuando el diario se publicó por primera vez en alemán en 1959, fue atacado por «avergonzar» a las mujeres alemanas; su reedición de 2003 fue un éxito de ventas y abrió un capítulo del final de la guerra silenciado durante décadas."
+        ]
+      },
+      "journey": [
+        {
+          "place": "berlin",
+          "name": { "en": "Berlin-Tempelhof", "es": "Berlín-Tempelhof" },
+          "coordinates": [13.3833, 52.4667],
+          "date": "1945-04",
+          "kind": "home",
+          "primary": true,
+          "story": {
+            "en": "From the cellar to the ruined flats upstairs, the residents of one building live through the arrival of the Soviet troops and the weeks that follow.",
+            "es": "Del sótano a los departamentos en ruinas de arriba, los vecinos de un edificio viven la llegada de las tropas soviéticas y las semanas que siguen."
+          },
+          "history": {
+            "en": "Soviet troops reached Tempelhof in the south of the city around 24–26 April 1945 during the Battle of Berlin.",
+            "es": "Las tropas soviéticas llegaron a Tempelhof, en el sur de la ciudad, hacia el 24 a 26 de abril de 1945 durante la batalla de Berlín."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-tattooist-of-auschwitz-2024",
+      "kind": "series",
+      "title": "The Tattooist of Auschwitz",
+      "titleEs": "El tatuador de Auschwitz",
+      "year": 2024,
+      "seasons": 1,
+      "era": "ww2",
+      "period": { "start": "1942-04", "end": "1945" },
+      "theaters": ["eastern-europe"],
+      "tags": ["holocaust", "prisoners", "romance", "true-story"],
+      "gold": false,
+      "directors": ["Jacquelin Perske"],
+      "countries": ["GB", "US"],
+      "languages": ["en", "de", "sk"],
+      "ids": {
+        "tmdb": 222405,
+        "tmdbType": "tv",
+        "imdb": "tt9022422",
+        "wikidata": "Q117704007"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Tattooist_of_Auschwitz_(TV_series)"
+      },
+      "synopsis": {
+        "en": "A young Slovak Jew in Auschwitz-Birkenau is made to tattoo numbers on the arms of fellow prisoners, and falls in love with one of them; decades later, in old age, he tells his story to a writer.",
+        "es": "Un joven judío eslovaco en Auschwitz-Birkenau es obligado a tatuar números en los brazos de otros prisioneros y se enamora de una de ellas; décadas después, ya anciano, le cuenta su historia a una escritora."
+      },
+      "history": {
+        "en": [
+          "Lali Sokolov, born Ludwig Eisenberg in Krompachy, was deported from Slovakia to Auschwitz in April 1942 and became a Tätowierer, one of the prisoners who tattooed numbers on new arrivals; Auschwitz was the only Nazi camp to tattoo its prisoners. There he met Gita Furman, and after the war the two found each other again in Bratislava and married.",
+          "The six-part series adapts Heather Morris's 2018 novel, drawn from her interviews with Sokolov in Melbourne. The Auschwitz Memorial's research centre criticised the book for many factual errors, and the series openly frames the story as the memory of one survivor, recalled more than fifty years later."
+        ],
+        "es": [
+          "Lali Sokolov, nacido Ludwig Eisenberg en Krompachy, fue deportado de Eslovaquia a Auschwitz en abril de 1942 y se convirtió en Tätowierer, uno de los prisioneros que tatuaban números a los recién llegados; Auschwitz fue el único campo nazi que tatuó a sus prisioneros. Allí conoció a Gita Furman, y tras la guerra ambos volvieron a encontrarse en Bratislava y se casaron.",
+          "La serie de seis capítulos adapta la novela de Heather Morris de 2018, basada en sus entrevistas con Sokolov en Melbourne. El centro de investigación del Memorial de Auschwitz criticó el libro por numerosos errores de hecho, y la serie enmarca abiertamente la historia como el recuerdo de un sobreviviente evocado más de cincuenta años después."
+        ]
+      },
+      "journey": [
+        {
+          "place": "krompachy",
+          "name": {
+            "en": "Krompachy, Slovakia",
+            "es": "Krompachy, Eslovaquia"
+          },
+          "coordinates": [20.8744, 48.9167],
+          "date": "1942-04",
+          "kind": "home",
+          "story": {
+            "en": "Hoping to protect his family, Lali reports for what he is told is labour service in Germany.",
+            "es": "Con la esperanza de proteger a su familia, Lali se presenta a lo que le dicen que es un servicio de trabajo en Alemania."
+          },
+          "history": {
+            "en": "In spring 1942 the Slovak state deported about 58,000 Jews to Auschwitz and the Lublin district, paying Germany for each one.",
+            "es": "En la primavera de 1942 el Estado eslovaco deportó a unos 58.000 judíos a Auschwitz y al distrito de Lublin, y pagó a Alemania por cada uno."
+          }
+        },
+        {
+          "place": "auschwitz",
+          "name": { "en": "Auschwitz-Birkenau", "es": "Auschwitz-Birkenau" },
+          "coordinates": [19.1783, 50.0358],
+          "date": "1942-07",
+          "kind": "camp",
+          "primary": true,
+          "story": {
+            "en": "Given the tattooist's needle, Lali gains small privileges he uses to smuggle food, and meets Gita when he marks her arm.",
+            "es": "Con la aguja del tatuador, Lali obtiene pequeños privilegios que usa para pasar comida a escondidas, y conoce a Gita cuando marca su brazo."
+          },
+          "history": {
+            "en": "From 1942 Auschwitz tattooed registered prisoners' numbers on the left forearm; those gassed on arrival were never registered.",
+            "es": "Desde 1942 Auschwitz tatuaba el número de los prisioneros registrados en el antebrazo izquierdo; quienes eran gaseados al llegar nunca se registraban."
+          }
+        },
+        {
+          "place": "bratislava",
+          "name": { "en": "Bratislava", "es": "Bratislava" },
+          "coordinates": [17.1093, 48.1517],
+          "date": "1945",
+          "kind": "city",
+          "story": {
+            "en": "After the camps are emptied, Lali searches for Gita among the survivors returning home.",
+            "es": "Después de que se vacían los campos, Lali busca a Gita entre los sobrevivientes que vuelven a casa."
+          },
+          "history": {
+            "en": "The Red Army took Bratislava on 4 April 1945; survivors returning to Slovakia often passed through the city.",
+            "es": "El Ejército Rojo tomó Bratislava el 4 de abril de 1945; muchos sobrevivientes que volvían a Eslovaquia pasaban por la ciudad."
+          }
+        }
+      ]
+    },
+    {
+      "id": "we-were-the-lucky-ones-2024",
+      "kind": "series",
+      "title": "We Were the Lucky Ones",
+      "titleEs": "We Were the Lucky Ones",
+      "year": 2024,
+      "seasons": 1,
+      "era": "ww2",
+      "period": { "start": "1939-03", "end": "1945" },
+      "theaters": ["eastern-europe", "mediterranean", "americas"],
+      "tags": ["holocaust", "true-story"],
+      "gold": false,
+      "directors": ["Erica Lipez"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 200908,
+        "tmdbType": "tv",
+        "imdb": "tt9114512",
+        "wikidata": "Q116910342"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/We_Were_the_Lucky_Ones",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/We_Were_the_Lucky_Ones"
+      },
+      "synopsis": {
+        "en": "A Jewish family from Radom is scattered by the war across ghettos, Soviet labour camps, battlefields and other continents, each of them determined to survive and find the others.",
+        "es": "Una familia judía de Radom queda dispersa por la guerra entre guetos, campos de trabajo soviéticos, campos de batalla y otros continentes, y cada uno está decidido a sobrevivir y reencontrar a los demás."
+      },
+      "history": {
+        "en": [
+          "The eight-part series adapts Georgia Hunter's 2017 novel about her grandfather's family, the Kurcs of Radom. Poland's partition in 1939 split them between German-occupied Radom, where about 30,000 Jews were confined in a ghetto and deported to Treblinka in August 1942, and Soviet-occupied Lwów, from where the NKVD deported hundreds of thousands of Polish citizens to the interior of the USSR.",
+          "Genek was sent to a labour camp at Altynai in the Urals and later joined the Polish army of General Anders, which left the USSR through Persia and fought at Monte Cassino in May 1944. His brother Addy, stranded in France in 1939, reached Brazil. Others survived in Warsaw on forged papers. The dramatisation compresses and invents scenes but follows the family's documented routes."
+        ],
+        "es": [
+          "La serie de ocho capítulos adapta la novela de Georgia Hunter de 2017 sobre la familia de su abuelo, los Kurc de Radom. La partición de Polonia en 1939 los dividió entre Radom, ocupada por Alemania, donde unos 30.000 judíos fueron encerrados en un gueto y deportados a Treblinka en agosto de 1942, y Lwów, ocupada por los soviéticos, desde donde el NKVD deportó a cientos de miles de ciudadanos polacos al interior de la URSS.",
+          "Genek fue enviado a un campo de trabajo en Altynái, en los Urales, y luego se unió al ejército polaco del general Anders, que salió de la URSS por Persia y combatió en Montecassino en mayo de 1944. Su hermano Addy, varado en Francia en 1939, llegó a Brasil. Otros sobrevivieron en Varsovia con papeles falsos. La dramatización condensa e inventa escenas, pero sigue las rutas documentadas de la familia."
+        ]
+      },
+      "journey": [
+        {
+          "place": "radom",
+          "name": { "en": "Radom", "es": "Radom" },
+          "coordinates": [21.15, 51.4167],
+          "date": "1939-03",
+          "kind": "home",
+          "primary": true,
+          "story": {
+            "en": "The Kurcs gather for Passover in their comfortable Radom home, the last time the whole family will be together.",
+            "es": "Los Kurc se reúnen para Pésaj en su cómoda casa de Radom, la última vez que toda la familia estará junta."
+          },
+          "history": {
+            "en": "Radom's Jews, about a third of the city, were forced into two ghettos in April 1941.",
+            "es": "Los judíos de Radom, cerca de un tercio de la ciudad, fueron obligados a vivir en dos guetos en abril de 1941."
+          }
+        },
+        {
+          "place": "lwow",
+          "name": { "en": "Lwów", "es": "Leópolis" },
+          "coordinates": [24.0316, 49.842],
+          "date": "1939-12",
+          "kind": "city",
+          "story": {
+            "en": "Genek, Jakob and Halina try to rebuild their lives in Soviet-held Lwów, until the NKVD comes for Genek and his wife.",
+            "es": "Genek, Jakob y Halina intentan rehacer su vida en el Lwów soviético, hasta que el NKVD viene a buscar a Genek y a su esposa."
+          },
+          "history": {
+            "en": "Lwów was occupied by the Red Army on 22 September 1939 and absorbed into Soviet Ukraine.",
+            "es": "Lwów fue ocupada por el Ejército Rojo el 22 de septiembre de 1939 y anexionada a la Ucrania soviética."
+          }
+        },
+        {
+          "place": "altynai",
+          "name": {
+            "en": "Labour camp at Altynai, Urals",
+            "es": "Campo de trabajo de Altynái, Urales"
+          },
+          "coordinates": [61.9833, 57.0667],
+          "date": "1940-07",
+          "kind": "camp",
+          "story": {
+            "en": "Genek and Herta cut timber in a remote camp, where their son is born in brutal conditions.",
+            "es": "Genek y Herta talan árboles en un campo remoto, donde nace su hijo en condiciones brutales."
+          },
+          "history": {
+            "en": "Polish deportees were released under the Sikorski–Mayski agreement of July 1941 and many headed south to join the Anders Army.",
+            "es": "Los deportados polacos fueron liberados por el acuerdo Sikorski–Maiski de julio de 1941 y muchos fueron al sur para unirse al Ejército de Anders."
+          }
+        },
+        {
+          "place": "rio-de-janeiro",
+          "name": { "en": "Rio de Janeiro", "es": "Río de Janeiro" },
+          "coordinates": [-43.2056, -22.9111],
+          "date": "1941-12",
+          "kind": "city",
+          "story": {
+            "en": "After a long journey from France through Africa, Addy finally lands in Brazil, desperate for news from Poland.",
+            "es": "Tras un largo viaje desde Francia a través de África, Addy por fin llega a Brasil, desesperado por noticias de Polonia."
+          },
+          "history": {
+            "en": "Brazil restricted Jewish immigration during the war, but some refugees entered with visas issued by sympathetic diplomats.",
+            "es": "Brasil restringió la inmigración judía durante la guerra, pero algunos refugiados entraron con visados de diplomáticos solidarios."
+          }
+        },
+        {
+          "place": "warsaw",
+          "name": { "en": "Warsaw", "es": "Varsovia" },
+          "coordinates": [21.0122, 52.2297],
+          "date": "1943",
+          "kind": "city",
+          "story": {
+            "en": "Halina, Mila and Jakob live on the 'Aryan' side under false names, one document check away from death.",
+            "es": "Halina, Mila y Jakob viven en el lado «ario» con nombres falsos, a un control de documentos de la muerte."
+          },
+          "history": {
+            "en": "Thousands of Jews hid in Warsaw outside the ghetto, helped by the Polish council Żegota and threatened by blackmailers.",
+            "es": "Miles de judíos se escondieron en Varsovia fuera del gueto, ayudados por el consejo polaco Żegota y amenazados por chantajistas."
+          }
+        },
+        {
+          "place": "monte-cassino",
+          "name": { "en": "Monte Cassino", "es": "Montecassino" },
+          "coordinates": [13.8139, 41.49],
+          "date": "1944-05",
+          "kind": "battle",
+          "story": {
+            "en": "Now a soldier in the Polish II Corps, Genek goes into the final assault on the mountain in Italy.",
+            "es": "Ya como soldado del II Cuerpo Polaco, Genek participa en el asalto final a la montaña en Italia."
+          },
+          "history": {
+            "en": "The Polish II Corps captured the ruins of the Monte Cassino monastery on 18 May 1944.",
+            "es": "El II Cuerpo Polaco tomó las ruinas del monasterio de Montecassino el 18 de mayo de 1944."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tali-ihantala-1944-2007",
+      "kind": "film",
+      "title": "Tali-Ihantala 1944",
+      "titleEs": "Tali-Ihantala 1944",
+      "year": 2007,
+      "era": "ww2",
+      "period": { "start": "1944-06", "end": "1944-07" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat", "true-story"],
+      "gold": false,
+      "directors": ["Åke Lindman", "Sakari Kirjavainen"],
+      "countries": ["FI"],
+      "languages": ["fi", "ru", "de"],
+      "ids": {
+        "tmdb": 49322,
+        "tmdbType": "movie",
+        "imdb": "tt0378848",
+        "wikidata": "Q1897674"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Tali-Ihantala_1944"
+      },
+      "synopsis": {
+        "en": "In June 1944 the Finnish army, driven back across the Karelian Isthmus, makes a stand north-east of Vyborg against the largest Soviet offensive ever launched against Finland.",
+        "es": "En junio de 1944 el ejército finlandés, empujado a través del istmo de Carelia, resiste al noreste de Víborg la mayor ofensiva soviética lanzada jamás contra Finlandia."
+      },
+      "history": {
+        "en": [
+          "The Vyborg–Petrozavodsk offensive opened on 9 June 1944 and broke the Finnish lines on the Karelian Isthmus within days; Vyborg fell on 20 June. Between Tali and Ihantala, just north-east of the city, the Finns stopped the Soviet advance in the largest battle in Nordic history, fought from 25 June to 9 July 1944.",
+          "About 50,000 Finnish soldiers, supported by German StuG assault guns and the Luftwaffe's Detachment Kuhlmey, held off roughly 150,000 Soviet troops with massed artillery fire. The defence allowed Finland to negotiate the armistice of September 1944 instead of surrendering. The film uses museum tanks, some of which fought in the battle."
+        ],
+        "es": [
+          "La ofensiva Víborg–Petrozavodsk comenzó el 9 de junio de 1944 y rompió en pocos días las líneas finlandesas en el istmo de Carelia; Víborg cayó el 20 de junio. Entre Tali e Ihantala, justo al noreste de la ciudad, los finlandeses detuvieron el avance soviético en la mayor batalla de la historia nórdica, librada del 25 de junio al 9 de julio de 1944.",
+          "Unos 50.000 soldados finlandeses, apoyados por cañones de asalto StuG alemanes y el Destacamento Kuhlmey de la Luftwaffe, contuvieron a cerca de 150.000 soldados soviéticos con fuego de artillería concentrado. Esa defensa permitió a Finlandia negociar el armisticio de septiembre de 1944 en lugar de rendirse. La película usa tanques de museo, algunos de los cuales combatieron en la batalla."
+        ]
+      },
+      "journey": [
+        {
+          "place": "vyborg",
+          "name": { "en": "Viipuri (Vyborg)", "es": "Viipuri (Víborg)" },
+          "coordinates": [28.7497, 60.7106],
+          "date": "1944-06",
+          "kind": "city",
+          "story": {
+            "en": "The broken Finnish divisions pull back through the Isthmus as Finland's second city is lost.",
+            "es": "Las divisiones finlandesas deshechas se repliegan por el istmo mientras se pierde la segunda ciudad de Finlandia."
+          },
+          "history": {
+            "en": "The Red Army took Vyborg on 20 June 1944, a shock for Finland after its hurried abandonment.",
+            "es": "El Ejército Rojo tomó Víborg el 20 de junio de 1944, un golpe para Finlandia tras su abandono apresurado."
+          }
+        },
+        {
+          "place": "ihantala",
+          "name": {
+            "en": "Tali–Ihantala battlefield",
+            "es": "Campo de batalla de Tali–Ihantala"
+          },
+          "coordinates": [28.8786, 60.7681],
+          "date": "1944-07",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Tanks, artillery and aircraft collide in the fields and woods as Finnish units counter-attack to close the breach.",
+            "es": "Tanques, artillería y aviones chocan en campos y bosques mientras las unidades finlandesas contraatacan para cerrar la brecha."
+          },
+          "history": {
+            "en": "The Soviet breakthrough attempt at Ihantala was halted in early July 1944 and the front stabilised.",
+            "es": "El intento soviético de ruptura en Ihantala fue detenido a comienzos de julio de 1944 y el frente se estabilizó."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-last-frontier-2020",
+      "kind": "film",
+      "title": "The Last Frontier",
+      "titleEs": "La última frontera",
+      "originalTitle": "Podolskiye kursanty",
+      "year": 2020,
+      "era": "ww2",
+      "period": { "start": "1941-10", "end": "1941-10" },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat", "true-story"],
+      "gold": false,
+      "directors": ["Vadim Shmelyov"],
+      "countries": ["RU"],
+      "languages": ["ru", "de"],
+      "ids": {
+        "tmdb": 579831,
+        "tmdbType": "movie",
+        "imdb": "tt12216986",
+        "wikidata": "Q96680099"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Last_Frontier_(2020_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/La_%C3%BAltima_frontera_(pel%C3%ADcula_de_2020)"
+      },
+      "synopsis": {
+        "en": "In October 1941, with the front broken and German tanks heading for Moscow, cadets from the Podolsk military schools are sent to hold a half-built defensive line.",
+        "es": "En octubre de 1941, con el frente roto y tanques alemanes rumbo a Moscú, los cadetes de las escuelas militares de Podolsk son enviados a sostener una línea defensiva a medio construir."
+      },
+      "history": {
+        "en": [
+          "After the German Operation Typhoon encircled several Soviet armies at Vyazma in early October 1941, the road to Moscow through Maloyaroslavets lay almost open. About 3,500 cadets of the Podolsk artillery and infantry schools were rushed to the Ilyinskoye sector of the Mozhaisk defence line on 5 October.",
+          "Together with a few reinforcements, they held the Warsaw highway against German forces for about two weeks, buying time for reserves to reach Moscow. Around 2,500 of them were killed. The film dramatises the defence with fictional characters around a real episode commemorated by the Ilyinsky Frontiers memorial."
+        ],
+        "es": [
+          "Después de que la Operación Tifón alemana cercara a varios ejércitos soviéticos en Viazma a comienzos de octubre de 1941, el camino a Moscú por Maloyaroslávets quedó casi abierto. Unos 3.500 cadetes de las escuelas de artillería e infantería de Podolsk fueron enviados a toda prisa al sector de Ilínskoye de la línea defensiva de Mozhaisk el 5 de octubre.",
+          "Con unos pocos refuerzos, defendieron la carretera de Varsovia frente a las fuerzas alemanas durante unas dos semanas y ganaron tiempo para que las reservas llegaran a Moscú. Cerca de 2.500 de ellos murieron. La película dramatiza la defensa con personajes ficticios en torno a un episodio real que recuerda el memorial de las Líneas de Ilínskoye."
+        ]
+      },
+      "journey": [
+        {
+          "place": "podolsk",
+          "name": {
+            "en": "Podolsk military schools",
+            "es": "Escuelas militares de Podolsk"
+          },
+          "coordinates": [37.5456, 55.4311],
+          "date": "1941-10",
+          "kind": "base",
+          "story": {
+            "en": "Days from graduation, the cadets and their rivalries are interrupted by the order to march to the front.",
+            "es": "A días de graduarse, los cadetes y sus rivalidades se ven interrumpidos por la orden de marchar al frente."
+          },
+          "history": {
+            "en": "The Podolsk artillery and infantry schools were mobilised on 5 October 1941 and sent south-west toward Maloyaroslavets.",
+            "es": "Las escuelas de artillería e infantería de Podolsk fueron movilizadas el 5 de octubre de 1941 y enviadas al suroeste, hacia Maloyaroslávets."
+          }
+        },
+        {
+          "place": "ilyinskoye-line",
+          "name": {
+            "en": "Ilyinskoye defence line",
+            "es": "Línea defensiva de Ilínskoye"
+          },
+          "coordinates": [36.1662, 54.9772],
+          "date": "1941-10",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "In unfinished bunkers along the highway, the cadets face tanks, bombers and infantry assaults day after day.",
+            "es": "En búnkeres sin terminar junto a la carretera, los cadetes enfrentan tanques, bombarderos y asaltos de infantería día tras día."
+          },
+          "history": {
+            "en": "The Ilyinskoye sector held from about 6 to 20 October 1941 before the survivors were ordered to withdraw.",
+            "es": "El sector de Ilínskoye resistió aproximadamente del 6 al 20 de octubre de 1941 antes de que los sobrevivientes recibieran la orden de retirarse."
+          }
+        }
+      ]
+    },
+    {
+      "id": "attack-on-leningrad-2009",
+      "kind": "film",
+      "title": "Attack on Leningrad",
+      "titleEs": "Leningrado",
+      "originalTitle": "Leningrad",
+      "year": 2009,
+      "era": "ww2",
+      "period": { "start": "1941-09", "end": "1942-01" },
+      "theaters": ["eastern-europe"],
+      "tags": ["home-front"],
+      "gold": false,
+      "directors": ["Aleksandr Buravsky"],
+      "countries": ["RU"],
+      "languages": ["en", "ru"],
+      "ids": {
+        "tmdb": 2325,
+        "tmdbType": "movie",
+        "imdb": "tt0432314",
+        "wikidata": "Q2628076"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Attack_on_Leningrad",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Leningrado_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "A British journalist left behind in besieged Leningrad survives the first winter of the blockade with the help of a young Soviet policewoman.",
+        "es": "Una periodista británica que queda atrapada en el Leningrado sitiado sobrevive al primer invierno del bloqueo con la ayuda de una joven policía soviética."
+      },
+      "history": {
+        "en": [
+          "German and Finnish forces cut Leningrad off by land on 8 September 1941, trapping about 2.5 million civilians. Hitler intended to starve the city rather than storm it; rations for dependants fell to 125 grams of bread a day in November 1941, and in the first winter hundreds of thousands died of hunger and cold.",
+          "Supplies came only across Lake Ladoga, by boat and then over the ice 'Road of Life' from late November. The siege lasted 872 days until 27 January 1944, and estimates of civilian deaths range from about 650,000 to over a million. The foreign journalist at the centre of the film is fictional."
+        ],
+        "es": [
+          "Las fuerzas alemanas y finlandesas aislaron Leningrado por tierra el 8 de septiembre de 1941 y dejaron atrapados a unos 2,5 millones de civiles. Hitler pretendía rendir la ciudad por hambre en lugar de asaltarla; en noviembre de 1941 la ración de pan para los dependientes bajó a 125 gramos diarios, y en el primer invierno cientos de miles murieron de hambre y frío.",
+          "Los suministros llegaban solo a través del lago Ládoga, en barco y luego desde fines de noviembre por el «Camino de la Vida» sobre el hielo. El sitio duró 872 días, hasta el 27 de enero de 1944, y las estimaciones de muertes civiles van de unas 650.000 a más de un millón. La periodista extranjera protagonista de la película es ficticia."
+        ]
+      },
+      "journey": [
+        {
+          "place": "leningrad",
+          "name": { "en": "Leningrad", "es": "Leningrado" },
+          "coordinates": [30.3167, 59.95],
+          "date": "1941-11",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "Presumed dead after an air raid and left behind by her colleagues, Kate learns to survive among queues, air raids and frozen streets.",
+            "es": "Dada por muerta tras un bombardeo y abandonada por sus colegas, Kate aprende a sobrevivir entre colas, ataques aéreos y calles congeladas."
+          },
+          "history": {
+            "en": "In the winter of 1941–42 the city had no heating, water or transport, and the dead were carried through the streets on sledges.",
+            "es": "En el invierno de 1941-42 la ciudad no tenía calefacción, agua ni transporte, y los muertos eran llevados por las calles en trineos."
+          }
+        }
+      ]
+    }
+  ]
+}

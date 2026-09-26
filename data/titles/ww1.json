@@ -1,0 +1,2537 @@
+{
+  "titles": [
+    {
+      "id": "all-quiet-on-the-western-front-1930",
+      "kind": "film",
+      "title": "All Quiet on the Western Front",
+      "titleEs": "Sin novedad en el frente",
+      "year": 1930,
+      "era": "ww1",
+      "period": {
+        "start": "1914-08",
+        "end": "1918-10"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["combat"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won the Academy Award for Best Picture in 1930 and is preserved in the US National Film Registry as one of the defining anti-war films.",
+        "es": "Ganó el Óscar a la mejor película en 1930 y se conserva en el Registro Nacional de Cine de EE. UU. como una de las grandes películas antibélicas."
+      },
+      "directors": ["Lewis Milestone"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 143,
+        "tmdbType": "movie",
+        "imdb": "tt0020629",
+        "wikidata": "Q272599"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/All_Quiet_on_the_Western_Front_(1930_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Sin_novedad_en_el_frente_(pel%C3%ADcula_de_1930)"
+      },
+      "synopsis": {
+        "en": "Fired up by their teacher's speeches, Paul Bäumer and his classmates rush to enlist, only to discover in the trenches of the Western Front that nothing they were promised about glory survives the first bombardment.",
+        "es": "Encendidos por los discursos de su profesor, Paul Bäumer y sus compañeros de clase corren a alistarse y descubren en las trincheras del Frente Occidental que nada de la gloria prometida sobrevive al primer bombardeo."
+      },
+      "history": {
+        "en": [
+          "The film adapts Erich Maria Remarque's 1929 novel, drawn from his own service: born in Osnabrück, he was sent to the Western Front in June 1917, fought in Flanders between Torhout and Houthulst and was wounded by shrapnel on 31 July 1917, the first day of the Third Battle of Ypres.",
+          "Neither the book nor the film names its town or its sector, so Paul's war stands for that of the roughly 13 million men Germany mobilised, about two million of whom died. The Nazi regime later banned the novel and burned it in 1933, and Nazi-led riots disrupted the film's Berlin screenings in December 1930."
+        ],
+        "es": [
+          "La película adapta la novela de 1929 de Erich Maria Remarque, basada en su propio servicio: nacido en Osnabrück, fue enviado al Frente Occidental en junio de 1917, combatió en Flandes entre Torhout y Houthulst y fue herido por metralla el 31 de julio de 1917, primer día de la tercera batalla de Ypres.",
+          "Ni el libro ni la película nombran el pueblo ni el sector, así que la guerra de Paul representa la de los cerca de 13 millones de hombres que movilizó Alemania, de los cuales murieron unos dos millones. El régimen nazi prohibió y quemó la novela en 1933, y disturbios encabezados por los nazis interrumpieron las funciones de la película en Berlín en diciembre de 1930."
+        ]
+      },
+      "journey": [
+        {
+          "place": "osnabruck",
+          "name": {
+            "en": "Paul's hometown (Remarque's Osnabrück)",
+            "es": "El pueblo de Paul (la Osnabrück de Remarque)"
+          },
+          "coordinates": [8.0431, 52.2789],
+          "date": "1914-08",
+          "kind": "home",
+          "story": {
+            "en": "Professor Kantorek's patriotic lecture sends the whole class marching to the recruiting office, and a brutal drill sergeant turns them into soldiers.",
+            "es": "La arenga patriótica del profesor Kantorek lleva a toda la clase a la oficina de reclutamiento, y un sargento brutal los convierte en soldados."
+          },
+          "history": {
+            "en": "In August 1914 German schools and universities sent tens of thousands of young volunteers into the army on a wave of patriotic enthusiasm.",
+            "es": "En agosto de 1914 escuelas y universidades alemanas enviaron al ejército a decenas de miles de jóvenes voluntarios en medio de una ola de entusiasmo patriótico."
+          }
+        },
+        {
+          "place": "houthulst",
+          "name": {
+            "en": "Western Front in Flanders",
+            "es": "Frente Occidental en Flandes"
+          },
+          "coordinates": [2.9506, 50.9783],
+          "date": "1916",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Under endless shelling the recruits learn from the veteran Kat how to survive, and Paul spends a night in a shell hole beside a French soldier he has stabbed.",
+            "es": "Bajo un bombardeo interminable los reclutas aprenden del veterano Kat a sobrevivir, y Paul pasa una noche en un cráter junto a un soldado francés al que apuñaló."
+          },
+          "history": {
+            "en": "Remarque's own company held trenches near Houthulst Forest in the summer of 1917, the sector he drew on for the novel's front.",
+            "es": "La compañía del propio Remarque ocupó trincheras cerca del bosque de Houthulst en el verano de 1917, el sector en que se inspiró para el frente de la novela."
+          }
+        },
+        {
+          "place": "osnabruck",
+          "name": {
+            "en": "Home on leave",
+            "es": "De vuelta a casa con permiso"
+          },
+          "coordinates": [8.0431, 52.2789],
+          "date": "1917",
+          "kind": "home",
+          "story": {
+            "en": "On leave, Paul finds that no one at home understands the war, and when he tells his old classroom the truth the boys call him a coward.",
+            "es": "De permiso, Paul descubre que en casa nadie entiende la guerra, y cuando cuenta la verdad en su antiguo salón de clases los muchachos lo llaman cobarde."
+          },
+          "history": {
+            "en": "By 1917 the British naval blockade had brought severe food shortages to German cities, remembered as the 'turnip winter'.",
+            "es": "Hacia 1917 el bloqueo naval británico había provocado una grave escasez de alimentos en las ciudades alemanas, recordada como el «invierno de los nabos»."
+          }
+        },
+        {
+          "place": "houthulst",
+          "name": {
+            "en": "Back at the front",
+            "es": "De regreso al frente"
+          },
+          "coordinates": [2.9506, 50.9783],
+          "date": "1918",
+          "kind": "front",
+          "story": {
+            "en": "Paul returns to a company filled with boys even younger than he was, where only a few familiar faces remain.",
+            "es": "Paul vuelve a una compañía llena de muchachos aún más jóvenes que él, donde quedan muy pocas caras conocidas."
+          },
+          "history": {
+            "en": "After the failure of its spring offensives in 1918 the German army was forced into a long retreat until the Armistice of 11 November.",
+            "es": "Tras el fracaso de sus ofensivas de primavera de 1918, el ejército alemán tuvo que emprender una larga retirada hasta el armisticio del 11 de noviembre."
+          }
+        }
+      ]
+    },
+    {
+      "id": "all-quiet-on-the-western-front-2022",
+      "kind": "film",
+      "title": "All Quiet on the Western Front",
+      "titleEs": "Sin novedad en el frente",
+      "originalTitle": "Im Westen nichts Neues",
+      "year": 2022,
+      "era": "ww1",
+      "period": {
+        "start": "1917",
+        "end": "1918-11"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["combat", "politics"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won four Academy Awards including Best International Feature Film, plus the BAFTA for Best Film, in 2023.",
+        "es": "Ganó cuatro premios Óscar, entre ellos el de mejor película internacional, además del BAFTA a la mejor película en 2023."
+      },
+      "directors": ["Edward Berger"],
+      "countries": ["DE"],
+      "languages": ["de", "fr"],
+      "ids": {
+        "tmdb": 49046,
+        "tmdbType": "movie",
+        "imdb": "tt1016150",
+        "wikidata": "Q108837349"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/All_Quiet_on_the_Western_Front_(2022_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Sin_novedad_en_el_frente_(pel%C3%ADcula_de_2022)"
+      },
+      "synopsis": {
+        "en": "Seventeen-year-old Paul Bäumer enlists with his school friends in 1917 and is thrown into the mud of northern France, while far from the trenches politicians and generals argue over whether to end the war.",
+        "es": "Paul Bäumer, de 17 años, se alista con sus amigos del colegio en 1917 y termina en el lodo del norte de Francia, mientras lejos de las trincheras políticos y generales discuten si poner fin a la guerra."
+      },
+      "history": {
+        "en": [
+          "Edward Berger's version keeps Remarque's soldiers but adds a storyline the novel never had: the armistice talks. On 8 November 1918 the German delegation led by Matthias Erzberger met Marshal Ferdinand Foch in a railway carriage in the Forest of Compiègne and signed the armistice there at 5:00 a.m. on 11 November, to take effect at 11:00.",
+          "The film's final attack ordered just before 11:00 is invented, but fighting really did continue until the last minute: about 2,700 men were killed on the last day of the war. The fictional General Friedrichs stands in for the German commanders who resisted the end, while Paul's first posting near La Malmaison recalls the Chemin des Dames sector fought over in 1917."
+        ],
+        "es": [
+          "La versión de Edward Berger mantiene a los soldados de Remarque pero añade una trama que la novela no tenía: las negociaciones del armisticio. El 8 de noviembre de 1918 la delegación alemana encabezada por Matthias Erzberger se reunió con el mariscal Ferdinand Foch en un vagón de tren en el bosque de Compiègne y allí firmó el armisticio a las 5:00 del 11 de noviembre, con entrada en vigor a las 11:00.",
+          "El ataque final ordenado justo antes de las 11:00 es una invención, pero los combates sí continuaron hasta el último minuto: unos 2700 hombres murieron el último día de la guerra. El general Friedrichs, personaje ficticio, representa a los mandos alemanes que se resistían al final, y el primer destino de Paul cerca de La Malmaison evoca el sector del Chemin des Dames disputado en 1917."
+        ]
+      },
+      "journey": [
+        {
+          "place": "la-malmaison",
+          "name": {
+            "en": "Trenches near La Malmaison",
+            "es": "Trincheras cerca de La Malmaison"
+          },
+          "coordinates": [3.5226, 49.461],
+          "date": "1917",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Wearing uniforms taken from dead men, Paul and his friends reach the front, lose one of their own on the first night and befriend the veteran Kat.",
+            "es": "Con uniformes sacados de soldados muertos, Paul y sus amigos llegan al frente, pierden a uno de ellos la primera noche y se hacen amigos del veterano Kat."
+          },
+          "history": {
+            "en": "Fort de la Malmaison on the Chemin des Dames fell to the French in the Battle of La Malmaison in October 1917.",
+            "es": "El fuerte de La Malmaison, en el Chemin des Dames, cayó en manos francesas en la batalla de La Malmaison en octubre de 1917."
+          }
+        },
+        {
+          "place": "spa",
+          "name": {
+            "en": "German Supreme Army Command, Spa",
+            "es": "Mando Supremo alemán, Spa"
+          },
+          "coordinates": [5.8622, 50.4923],
+          "date": "1918-11-07",
+          "kind": "base",
+          "story": {
+            "en": "Weary of the endless losses, Matthias Erzberger presses the High Command to let him seek a ceasefire.",
+            "es": "Agotado por las pérdidas interminables, Matthias Erzberger presiona al Alto Mando para que le permita buscar un alto el fuego."
+          },
+          "history": {
+            "en": "The German Supreme Army Command was based in the Belgian spa town in 1918, and Kaiser Wilhelm II left it for exile on 10 November.",
+            "es": "El Mando Supremo del ejército alemán tenía su sede en esta ciudad balnearia belga en 1918, y el káiser Guillermo II partió desde allí al exilio el 10 de noviembre."
+          }
+        },
+        {
+          "place": "compiegne",
+          "name": {
+            "en": "Glade of the Armistice, Forest of Compiègne",
+            "es": "Claro del Armisticio, bosque de Compiègne"
+          },
+          "coordinates": [2.9064, 49.4272],
+          "date": "1918-11-08",
+          "kind": "city",
+          "story": {
+            "en": "In Foch's railway carriage the delegation is handed non-negotiable terms and 72 hours to sign, while Paul's regiment is ordered into one more attack.",
+            "es": "En el vagón de Foch la delegación recibe condiciones innegociables y 72 horas para firmar, mientras el regimiento de Paul recibe la orden de un último ataque."
+          },
+          "history": {
+            "en": "The armistice was signed here in the early hours of 11 November 1918 and took effect at 11:00 the same morning.",
+            "es": "El armisticio se firmó aquí en la madrugada del 11 de noviembre de 1918 y entró en vigor a las 11:00 de esa misma mañana."
+          }
+        }
+      ]
+    },
+    {
+      "id": "1917-2019",
+      "kind": "film",
+      "title": "1917",
+      "titleEs": "1917",
+      "year": 2019,
+      "era": "ww1",
+      "period": {
+        "start": "1917-04-06",
+        "end": "1917-04-07"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["combat"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won three Academy Awards and the BAFTA and Golden Globe for Best Film, and is listed in the IMDb Top 250.",
+        "es": "Ganó tres premios Óscar y el BAFTA y el Globo de Oro a la mejor película, y figura en el Top 250 de IMDb."
+      },
+      "directors": ["Sam Mendes"],
+      "countries": ["GB", "US"],
+      "languages": ["en", "de", "fr"],
+      "ids": {
+        "tmdb": 530915,
+        "tmdbType": "movie",
+        "imdb": "tt8579674",
+        "wikidata": "Q62721520"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/1917_(2019_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/1917_(pel%C3%ADcula)",
+        "fandom": "https://movies.fandom.com/wiki/1917_(2019)"
+      },
+      "synopsis": {
+        "en": "Two young British soldiers have one day to cross enemy territory and stop an attack that walks straight into a German trap, in a film staged as one continuous, breathless shot.",
+        "es": "Dos jóvenes soldados británicos tienen un solo día para cruzar territorio enemigo y detener un ataque que va directo a una trampa alemana, en una película rodada como si fuera un único plano sin respiro."
+      },
+      "history": {
+        "en": [
+          "The mission is fictional, inspired by a story Sam Mendes heard from his grandfather Alfred, a messenger on the Western Front. Its backdrop is real: between February and April 1917 the German army carried out Operation Alberich, falling back up to 40 km to the heavily fortified Hindenburg Line and leaving behind wrecked villages, felled orchards and booby traps.",
+          "The film is set on 6 April 1917, the day the United States declared war and three days before the British opened the Battle of Arras. In reality the British Fifth Army already held Écoust-Saint-Mein by early April and was closing up to the Hindenburg Line from there; the film places it behind German lines to build its ruined, flare-lit town."
+        ],
+        "es": [
+          "La misión es ficticia, inspirada en una historia que Sam Mendes escuchó de su abuelo Alfred, mensajero en el Frente Occidental. El contexto sí es real: entre febrero y abril de 1917 el ejército alemán ejecutó la Operación Alberich, un repliegue de hasta 40 km hacia la fortificada Línea Hindenburg que dejó atrás pueblos destruidos, huertos talados y trampas explosivas.",
+          "La película transcurre el 6 de abril de 1917, el día en que Estados Unidos declaró la guerra y tres días antes de que los británicos iniciaran la batalla de Arras. En realidad, el Quinto Ejército británico ya ocupaba Écoust-Saint-Mein a principios de abril y desde allí se acercaba a la Línea Hindenburg; la película lo sitúa tras las líneas alemanas para construir su pueblo en ruinas iluminado por bengalas."
+        ]
+      },
+      "journey": [
+        {
+          "place": "arras",
+          "name": {
+            "en": "British trenches south of Arras",
+            "es": "Trincheras británicas al sur de Arrás"
+          },
+          "coordinates": [2.78, 50.2892],
+          "date": "1917-04-06",
+          "kind": "front",
+          "story": {
+            "en": "Schofield and Blake are handed General Erinmore's order and climb out across no man's land into the abandoned German trenches.",
+            "es": "Schofield y Blake reciben la orden del general Erinmore y cruzan la tierra de nadie hasta las trincheras alemanas abandonadas."
+          },
+          "history": {
+            "en": "British and Commonwealth troops massed around Arras in early April 1917 for the offensive that began on 9 April.",
+            "es": "Las tropas británicas y de la Mancomunidad se concentraron alrededor de Arrás a principios de abril de 1917 para la ofensiva que comenzó el 9 de abril."
+          }
+        },
+        {
+          "place": "ecoust-saint-mein",
+          "name": {
+            "en": "Écoust-Saint-Mein",
+            "es": "Écoust-Saint-Mein"
+          },
+          "coordinates": [2.9103, 50.1819],
+          "date": "1917-04-06",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "Past a destroyed canal bridge, Schofield crosses the burning ruins of the town at night, dodging a sniper and German patrols.",
+            "es": "Tras un puente destruido sobre el canal, Schofield atraviesa de noche las ruinas en llamas del pueblo esquivando a un francotirador y a patrullas alemanas."
+          },
+          "history": {
+            "en": "Écoust-Saint-Mein lay on the approaches to the Hindenburg Line and was fought over in the April 1917 advance toward Bullecourt.",
+            "es": "Écoust-Saint-Mein estaba en los accesos a la Línea Hindenburg y fue disputado en el avance de abril de 1917 hacia Bullecourt."
+          }
+        }
+      ]
+    },
+    {
+      "id": "paths-of-glory-1957",
+      "kind": "film",
+      "title": "Paths of Glory",
+      "titleEs": "La patrulla infernal",
+      "year": 1957,
+      "era": "ww1",
+      "period": {
+        "start": "1916",
+        "end": "1916"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["combat", "politics"],
+      "gold": true,
+      "goldReason": {
+        "en": "Stanley Kubrick's anti-war classic is listed in the IMDb Top 250 and preserved in the US National Film Registry.",
+        "es": "El clásico antibélico de Stanley Kubrick figura en el Top 250 de IMDb y se conserva en el Registro Nacional de Cine de EE. UU."
+      },
+      "directors": ["Stanley Kubrick"],
+      "countries": ["US"],
+      "languages": ["en", "de"],
+      "ids": {
+        "tmdb": 975,
+        "tmdbType": "movie",
+        "imdb": "tt0050825",
+        "wikidata": "Q747936"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Paths_of_Glory",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Paths_of_Glory"
+      },
+      "synopsis": {
+        "en": "When an ambitious French general's suicidal attack collapses, three soldiers are picked to be tried for cowardice, and Colonel Dax, a lawyer in civilian life, sets out to defend them.",
+        "es": "Cuando fracasa el ataque suicida de un ambicioso general francés, tres soldados son elegidos para ser juzgados por cobardía, y el coronel Dax, abogado en la vida civil, decide defenderlos."
+      },
+      "history": {
+        "en": [
+          "Kubrick adapted Humphrey Cobb's 1935 novel, which was based on the Souain corporals affair: in March 1915, after a failed attack near Souain in Champagne, four French corporals were executed by firing squad for refusing to leave their trench. They were posthumously exonerated in 1934.",
+          "The French army executed around 600 of its own soldiers during the war, many after the 1917 mutinies. The film was not shown in France until 1975 because of its portrayal of the French high command, and the 'Anthill' it depicts is invented rather than a real position."
+        ],
+        "es": [
+          "Kubrick adaptó la novela de Humphrey Cobb de 1935, basada en el caso de los cabos de Souain: en marzo de 1915, tras un ataque fallido cerca de Souain, en Champaña, cuatro cabos franceses fueron fusilados por negarse a salir de su trinchera. Fueron rehabilitados de forma póstuma en 1934.",
+          "El ejército francés ejecutó a unos 600 de sus propios soldados durante la guerra, muchos tras los motines de 1917. La película no se exhibió en Francia hasta 1975 por su retrato del alto mando francés, y el «Hormiguero» que muestra es una posición inventada."
+        ]
+      },
+      "journey": [
+        {
+          "place": "souain",
+          "name": {
+            "en": "The Anthill, Champagne front",
+            "es": "El Hormiguero, frente de Champaña"
+          },
+          "coordinates": [4.5436, 49.1836],
+          "date": "1916",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Dax leads the doomed assault on the Anthill; when it fails, three men are chosen for a court-martial held in an elegant château behind the lines.",
+            "es": "Dax encabeza el asalto condenado al Hormiguero; cuando fracasa, tres hombres son elegidos para un consejo de guerra celebrado en un elegante castillo detrás de las líneas."
+          },
+          "history": {
+            "en": "Near Souain in March 1915, four corporals were shot as an example after their company refused a hopeless attack.",
+            "es": "Cerca de Souain, en marzo de 1915, cuatro cabos fueron fusilados para dar un escarmiento después de que su compañía se negara a un ataque sin esperanza."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lawrence-of-arabia-1962",
+      "kind": "film",
+      "title": "Lawrence of Arabia",
+      "titleEs": "Lawrence de Arabia",
+      "year": 1962,
+      "era": "ww1",
+      "period": {
+        "start": "1916-10",
+        "end": "1918-10"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat", "biography", "true-story"],
+      "gold": true,
+      "goldReason": {
+        "en": "Won seven Academy Awards including Best Picture and ranks in the top ten of the American Film Institute's 100 greatest American films.",
+        "es": "Ganó siete premios Óscar, incluido el de mejor película, y está entre las diez primeras de la lista del American Film Institute de las 100 mejores películas estadounidenses."
+      },
+      "directors": ["David Lean"],
+      "countries": ["GB", "US"],
+      "languages": ["en", "ar", "tr"],
+      "ids": {
+        "tmdb": 947,
+        "tmdbType": "movie",
+        "imdb": "tt0056172",
+        "wikidata": "Q228186"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Lawrence_of_Arabia_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Lawrence_de_Arabia_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "A restless British officer is sent from Cairo to assess Prince Faisal's revolt and ends up leading Arab tribes across the desert against the Ottoman Empire, becoming a legend he cannot control.",
+        "es": "Un inquieto oficial británico es enviado desde El Cairo a evaluar la rebelión del príncipe Faisal y termina guiando a las tribus árabes por el desierto contra el Imperio otomano, convertido en una leyenda que ya no puede controlar."
+      },
+      "history": {
+        "en": [
+          "T. E. Lawrence was a British liaison officer to the Arab Revolt, launched by Sharif Hussein of Mecca in June 1916. On 6 July 1917 Arab irregulars under Auda abu Tayi and Lawrence took the Red Sea port of Aqaba from the landward side after a long desert march, giving the British a supply base for the campaign north into Palestine and Syria.",
+          "The film compresses and dramatises: the Nefud crossing and Aqaba are accurate in outline, the Deraa episode comes from Lawrence's own disputed account, and the Tafas massacre of September 1918 happened amid a brutal Ottoman retreat. Arab forces entered Damascus on 1 October 1918, but the Sykes-Picot agreement of 1916 had already divided the region between Britain and France."
+        ],
+        "es": [
+          "T. E. Lawrence fue oficial de enlace británico ante la Rebelión Árabe, iniciada por el jerife Husein de La Meca en junio de 1916. El 6 de julio de 1917, irregulares árabes al mando de Auda abu Tayi y Lawrence tomaron por tierra el puerto de Áqaba, en el mar Rojo, tras una larga marcha por el desierto, lo que dio a los británicos una base de suministros para la campaña hacia Palestina y Siria.",
+          "La película condensa y dramatiza: el cruce del Nefud y la toma de Áqaba son fieles en lo esencial, el episodio de Daraa proviene del relato discutido del propio Lawrence y la masacre de Tafas de septiembre de 1918 ocurrió en medio de una brutal retirada otomana. Las fuerzas árabes entraron en Damasco el 1 de octubre de 1918, pero el acuerdo Sykes-Picot de 1916 ya había repartido la región entre Gran Bretaña y Francia."
+        ]
+      },
+      "journey": [
+        {
+          "place": "cairo",
+          "name": {
+            "en": "Arab Bureau, Cairo",
+            "es": "Oficina Árabe, El Cairo"
+          },
+          "coordinates": [31.2358, 30.0444],
+          "date": "1916-10",
+          "kind": "city",
+          "story": {
+            "en": "A bored map officer at British headquarters, Lawrence is chosen to go into the Hejaz and find out what Prince Faisal intends.",
+            "es": "Aburrido como oficial de mapas en el cuartel británico, Lawrence es elegido para ir al Hiyaz y averiguar qué pretende el príncipe Faisal."
+          },
+          "history": {
+            "en": "The Arab Bureau in Cairo coordinated British intelligence and support for the Arab Revolt from 1916.",
+            "es": "La Oficina Árabe de El Cairo coordinó desde 1916 la inteligencia británica y el apoyo a la Rebelión Árabe."
+          }
+        },
+        {
+          "place": "nefud",
+          "name": {
+            "en": "Nefud Desert",
+            "es": "Desierto de Nefud"
+          },
+          "coordinates": [41, 28.3],
+          "date": "1917-06",
+          "kind": "journey",
+          "story": {
+            "en": "Lawrence leads a small force across the 'Sun's Anvil' that no one believes can be crossed, and turns back alone to rescue a straggler.",
+            "es": "Lawrence guía a una pequeña fuerza a través del «yunque del sol», que nadie cree posible cruzar, y regresa solo para rescatar a un rezagado."
+          },
+          "history": {
+            "en": "Lawrence and Auda's column left Wejh in May 1917 on a long loop through the northern desert to approach Aqaba from inland.",
+            "es": "La columna de Lawrence y Auda salió de Wejh en mayo de 1917 en un largo rodeo por el desierto del norte para llegar a Áqaba desde el interior."
+          }
+        },
+        {
+          "place": "aqaba",
+          "name": {
+            "en": "Aqaba",
+            "es": "Áqaba"
+          },
+          "coordinates": [35.0061, 29.5322],
+          "date": "1917-07-06",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Joined by Auda abu Tayi's Howeitat, the Arab army charges down on the port whose great guns all point out to sea.",
+            "es": "Con los howeitat de Auda abu Tayi, el ejército árabe se lanza sobre el puerto, cuyos grandes cañones apuntan todos hacia el mar."
+          },
+          "history": {
+            "en": "The Ottoman garrison of Aqaba surrendered on 6 July 1917 after its landward outposts were overrun.",
+            "es": "La guarnición otomana de Áqaba se rindió el 6 de julio de 1917 después de que cayeran sus puestos del lado de tierra."
+          }
+        },
+        {
+          "place": "deraa",
+          "name": {
+            "en": "Deraa",
+            "es": "Daraa"
+          },
+          "coordinates": [36.1061, 32.6253],
+          "date": "1917-11",
+          "kind": "city",
+          "story": {
+            "en": "Scouting the railway junction in disguise, Lawrence is captured and brutally beaten by the Ottoman governor's men, an ordeal that breaks something in him.",
+            "es": "Mientras explora disfrazado el nudo ferroviario, Lawrence es capturado y golpeado brutalmente por los hombres del gobernador otomano, una experiencia que lo quiebra por dentro."
+          },
+          "history": {
+            "en": "Deraa was a key junction of the Hejaz Railway; Lawrence later wrote that he was captured and abused there in November 1917.",
+            "es": "Daraa era un nudo clave del ferrocarril del Hiyaz; Lawrence escribió después que fue capturado y maltratado allí en noviembre de 1917."
+          }
+        },
+        {
+          "place": "tafas",
+          "name": {
+            "en": "Tafas",
+            "es": "Tafas"
+          },
+          "coordinates": [36.0669, 32.7356],
+          "date": "1918-09",
+          "kind": "battle",
+          "story": {
+            "en": "Finding a village massacred by retreating Ottoman troops, Lawrence gives the order that no prisoners be taken.",
+            "es": "Al encontrar una aldea masacrada por tropas otomanas en retirada, Lawrence da la orden de no tomar prisioneros."
+          },
+          "history": {
+            "en": "On 27 September 1918 Arab forces caught an Ottoman column that had killed villagers at Tafas and few of its men survived.",
+            "es": "El 27 de septiembre de 1918 las fuerzas árabes alcanzaron a una columna otomana que había matado a los aldeanos de Tafas y pocos de sus hombres sobrevivieron."
+          }
+        },
+        {
+          "place": "damascus",
+          "name": {
+            "en": "Damascus",
+            "es": "Damasco"
+          },
+          "coordinates": [36.2919, 33.5131],
+          "date": "1918-10",
+          "kind": "city",
+          "story": {
+            "en": "The Arabs reach Damascus ahead of the British and try to govern it through a quarrelling Arab council.",
+            "es": "Los árabes llegan a Damasco antes que los británicos e intentan gobernarla mediante un consejo árabe dividido por disputas."
+          },
+          "history": {
+            "en": "Australian and Arab forces entered Damascus on 1 October 1918 and Faisal set up an Arab administration days later.",
+            "es": "Fuerzas australianas y árabes entraron en Damasco el 1 de octubre de 1918 y Faisal estableció una administración árabe pocos días después."
+          }
+        }
+      ]
+    },
+    {
+      "id": "gallipoli-1981",
+      "kind": "film",
+      "title": "Gallipoli",
+      "titleEs": "Gallipoli",
+      "year": 1981,
+      "era": "ww1",
+      "period": {
+        "start": "1915-05",
+        "end": "1915-08"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Peter Weir"],
+      "countries": ["AU"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 11646,
+        "tmdbType": "movie",
+        "imdb": "tt0082432",
+        "wikidata": "Q1077160"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Gallipoli_(1981_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Gallipoli_(pel%C3%ADcula_de_1981)"
+      },
+      "synopsis": {
+        "en": "Two young sprinters from Western Australia, one idealistic and one cynical, race each other to enlist and follow the adventure from the outback to Egypt and on to the cliffs of Gallipoli.",
+        "es": "Dos jóvenes velocistas de Australia Occidental, uno idealista y otro escéptico, compiten hasta para alistarse y siguen la aventura desde el interior australiano hasta Egipto y los acantilados de Galípoli."
+      },
+      "history": {
+        "en": [
+          "The Allied landings on the Gallipoli peninsula began on 25 April 1915, in a bid to knock the Ottoman Empire out of the war and open the Dardanelles. Australian and New Zealand troops came ashore at what became Anzac Cove and spent eight months clinging to steep ridges; about 8,700 Australians died before the evacuation of December 1915.",
+          "The film's climax is the charge at the Nek on 7 August 1915, launched by dismounted men of the 3rd Light Horse Brigade to support the August offensive. Of about 600 Australians who attacked in four waves across a narrow ridge, 234 were killed. The film suggests British officers ordered the final waves; in fact the decision to keep attacking was made by Australian brigade officers."
+        ],
+        "es": [
+          "Los desembarcos aliados en la península de Galípoli comenzaron el 25 de abril de 1915 con el objetivo de sacar al Imperio otomano de la guerra y abrir los Dardanelos. Las tropas australianas y neozelandesas desembarcaron en lo que se conoció como la cala Anzac y pasaron ocho meses aferradas a crestas empinadas; unos 8700 australianos murieron antes de la evacuación de diciembre de 1915.",
+          "El clímax de la película es la carga de The Nek del 7 de agosto de 1915, lanzada por jinetes desmontados de la 3.ª Brigada de Caballería Ligera en apoyo de la ofensiva de agosto. De los cerca de 600 australianos que atacaron en cuatro oleadas por una cresta estrecha, 234 murieron. La película sugiere que oficiales británicos ordenaron las últimas oleadas; en realidad, la decisión de seguir atacando la tomaron oficiales australianos de la brigada."
+        ]
+      },
+      "journey": [
+        {
+          "place": "perth",
+          "name": {
+            "en": "Perth, Western Australia",
+            "es": "Perth, Australia Occidental"
+          },
+          "coordinates": [115.8597, -31.9558],
+          "date": "1915-05",
+          "kind": "home",
+          "story": {
+            "en": "After a race meeting and a trek across a dry lake bed, Archy and Frank reach Perth, where Archy joins the Light Horse and Frank the infantry.",
+            "es": "Tras una carrera y una travesía por un lago seco, Archy y Frank llegan a Perth, donde Archy se une a la Caballería Ligera y Frank a la infantería."
+          },
+          "history": {
+            "en": "Western Australia's volunteers joined the Australian Imperial Force, including the 10th Light Horse Regiment raised in Perth.",
+            "es": "Los voluntarios de Australia Occidental se unieron a la Fuerza Imperial Australiana, entre ellos el 10.º Regimiento de Caballería Ligera formado en Perth."
+          }
+        },
+        {
+          "place": "giza",
+          "name": {
+            "en": "Mena Camp by the Pyramids",
+            "es": "Campamento de Mena junto a las pirámides"
+          },
+          "coordinates": [31.1328, 29.9856],
+          "date": "1915-06",
+          "kind": "base",
+          "story": {
+            "en": "The friends meet again while training in the desert beside the Pyramids and spend their leave in the bars and bazaars of Cairo.",
+            "es": "Los amigos se reencuentran mientras entrenan en el desierto junto a las pirámides y pasan sus permisos en los bares y bazares de El Cairo."
+          },
+          "history": {
+            "en": "The Australian Imperial Force trained at Mena Camp near Giza before and during the Gallipoli campaign.",
+            "es": "La Fuerza Imperial Australiana entrenó en el campamento de Mena, cerca de Giza, antes y durante la campaña de Galípoli."
+          }
+        },
+        {
+          "place": "gallipoli",
+          "name": {
+            "en": "Anzac Cove",
+            "es": "Cala Anzac"
+          },
+          "coordinates": [26.2778, 40.2461],
+          "date": "1915-08",
+          "kind": "landing",
+          "story": {
+            "en": "Landing at night under fire, the Light Horsemen settle into trenches on the cliffs and swim in the cove between shellings.",
+            "es": "Tras desembarcar de noche bajo el fuego, los jinetes se instalan en trincheras sobre los acantilados y se bañan en la cala entre bombardeos."
+          },
+          "history": {
+            "en": "Anzac Cove was the main Australian and New Zealand beachhead from the landing of 25 April 1915 to the evacuation in December.",
+            "es": "La cala Anzac fue la principal cabeza de playa australiana y neozelandesa desde el desembarco del 25 de abril de 1915 hasta la evacuación de diciembre."
+          }
+        },
+        {
+          "place": "gallipoli",
+          "name": {
+            "en": "The Nek",
+            "es": "The Nek"
+          },
+          "coordinates": [26.2884, 40.2414],
+          "date": "1915-08-07",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Frank becomes a runner as the Light Horse waits to charge across a strip of ground swept by Turkish machine guns.",
+            "es": "Frank se convierte en mensajero mientras la Caballería Ligera espera para cargar por una franja de terreno barrida por las ametralladoras turcas."
+          },
+          "history": {
+            "en": "At dawn on 7 August 1915 four waves of the 8th and 10th Light Horse charged at the Nek and were cut down within metres.",
+            "es": "Al amanecer del 7 de agosto de 1915, cuatro oleadas del 8.º y el 10.º de Caballería Ligera cargaron en The Nek y cayeron a pocos metros."
+          }
+        }
+      ]
+    },
+    {
+      "id": "war-horse-2011",
+      "kind": "film",
+      "title": "War Horse",
+      "titleEs": "Caballo de guerra",
+      "year": 2011,
+      "era": "ww1",
+      "period": {
+        "start": "1912",
+        "end": "1918-11"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Steven Spielberg"],
+      "countries": ["US", "GB", "IN"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 57212,
+        "tmdbType": "movie",
+        "imdb": "tt1568911",
+        "wikidata": "Q218589"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/War_Horse_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/War_Horse"
+      },
+      "synopsis": {
+        "en": "A Devon farm boy's beloved horse, Joey, is sold to the army in 1914 and passes from British cavalry to German gunners and a French farm girl, while the boy grows up and goes to war to find him.",
+        "es": "Joey, el querido caballo de un muchacho de una granja de Devon, es vendido al ejército en 1914 y pasa de la caballería británica a artilleros alemanes y a una niña francesa, mientras el chico crece y va a la guerra a buscarlo."
+      },
+      "history": {
+        "en": [
+          "Spielberg's film adapts Michael Morpurgo's 1982 novel and the stage play it inspired. Joey is fictional, but his path follows what happened to real animals: in August 1914 the British Army requisitioned horses from farms across the country, and cavalry still expected to charge, as squadrons did in the opening weeks before machine guns and trenches ended mounted warfare in the West.",
+          "Horses stayed indispensable for hauling guns and supplies to the end of the war. Of about a million horses Britain sent abroad, only some 62,000 came home. The film's 1918 scenes are set during the Second Battle of the Somme, when the German spring offensive and the Allied counter-attack briefly brought movement back to the front."
+        ],
+        "es": [
+          "La película de Spielberg adapta la novela de Michael Morpurgo de 1982 y la obra de teatro que inspiró. Joey es ficticio, pero su recorrido refleja lo que vivieron animales reales: en agosto de 1914 el ejército británico requisó caballos de granjas de todo el país, y la caballería todavía esperaba cargar, como hicieron algunos escuadrones en las primeras semanas antes de que las ametralladoras y las trincheras acabaran con la guerra montada en el oeste.",
+          "Los caballos siguieron siendo indispensables para arrastrar cañones y suministros hasta el final. De cerca de un millón de caballos que Gran Bretaña envió al extranjero, solo unos 62 000 regresaron. Las escenas de 1918 transcurren durante la segunda batalla del Somme, cuando la ofensiva alemana de primavera y el contraataque aliado devolvieron por un tiempo el movimiento al frente."
+        ]
+      },
+      "journey": [
+        {
+          "place": "dartmoor",
+          "name": {
+            "en": "Narracott farm, Devon",
+            "es": "Granja de los Narracott, Devon"
+          },
+          "coordinates": [-4, 50.5667],
+          "date": "1912",
+          "kind": "home",
+          "story": {
+            "en": "Albert trains the colt his father overpaid for and together they plough a stony field that saves the family farm.",
+            "es": "Albert entrena al potro por el que su padre pagó de más y juntos aran un campo pedregoso que salva la granja familiar."
+          },
+          "history": {
+            "en": "Rural Devon supplied many of the horses the British Army bought or requisitioned when war broke out in August 1914.",
+            "es": "El Devon rural aportó muchos de los caballos que el ejército británico compró o requisó al estallar la guerra en agosto de 1914."
+          }
+        },
+        {
+          "place": "ypres",
+          "name": {
+            "en": "Cavalry charge in Flanders",
+            "es": "Carga de caballería en Flandes"
+          },
+          "coordinates": [2.885, 50.8508],
+          "date": "1914",
+          "kind": "battle",
+          "story": {
+            "en": "Joey and the black stallion Topthorn charge a German camp with Captain Nicholls, straight into hidden machine guns.",
+            "es": "Joey y el semental negro Topthorn cargan con el capitán Nicholls contra un campamento alemán, directo hacia ametralladoras ocultas."
+          },
+          "history": {
+            "en": "British cavalry fought mounted and dismounted around Ypres in the autumn of 1914 before the front froze into trenches.",
+            "es": "La caballería británica combatió a caballo y a pie en torno a Ypres en el otoño de 1914 antes de que el frente se congelara en trincheras."
+          }
+        },
+        {
+          "place": "the-somme",
+          "name": {
+            "en": "No man's land on the Somme",
+            "es": "Tierra de nadie en el Somme"
+          },
+          "coordinates": [2.6522, 50.0019],
+          "date": "1918",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Freed from hauling German guns, Joey bolts across the battlefield and ends up tangled in barbed wire between the trenches.",
+            "es": "Liberado de arrastrar cañones alemanes, Joey huye a galope por el campo de batalla y queda atrapado en alambre de púas entre las trincheras."
+          },
+          "history": {
+            "en": "The town of Albert changed hands during the German spring offensive of 1918 and was retaken by the British in August.",
+            "es": "La ciudad de Albert cambió de manos durante la ofensiva alemana de primavera de 1918 y fue recuperada por los británicos en agosto."
+          }
+        },
+        {
+          "place": "dartmoor",
+          "name": {
+            "en": "Home to Devon",
+            "es": "De regreso a Devon"
+          },
+          "coordinates": [-4, 50.5667],
+          "date": "1918-11",
+          "kind": "home",
+          "story": {
+            "en": "When the war ends, the question is whether Albert and Joey will ever see the farm again.",
+            "es": "Cuando termina la guerra, la pregunta es si Albert y Joey volverán a ver la granja algún día."
+          },
+          "history": {
+            "en": "After the Armistice most surviving army horses were sold abroad rather than shipped back to Britain.",
+            "es": "Tras el armisticio, la mayoría de los caballos del ejército que sobrevivieron se vendieron en el extranjero en lugar de volver a Gran Bretaña."
+          }
+        }
+      ]
+    },
+    {
+      "id": "they-shall-not-grow-old-2018",
+      "kind": "film",
+      "title": "They Shall Not Grow Old",
+      "titleEs": "Ellos no envejecerán",
+      "year": 2018,
+      "era": "ww1",
+      "period": {
+        "start": "1914-08",
+        "end": "1918-11"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["documentary", "combat", "true-story"],
+      "gold": false,
+      "directors": ["Peter Jackson"],
+      "countries": ["NZ", "GB"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 543580,
+        "tmdbType": "movie",
+        "imdb": "tt7905466",
+        "wikidata": "Q57414487"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/They_Shall_Not_Grow_Old",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/They_Shall_Not_Grow_Old"
+      },
+      "synopsis": {
+        "en": "Century-old film of British soldiers, restored, colourised and set to the voices of veterans, turns the Western Front from flickering archive into faces you feel you could talk to.",
+        "es": "Filmaciones centenarias de soldados británicos, restauradas, coloreadas y acompañadas por las voces de los veteranos, convierten el Frente Occidental de un archivo borroso en rostros con los que parece posible conversar."
+      },
+      "history": {
+        "en": [
+          "Commissioned for the centenary of the Armistice, Peter Jackson's documentary uses footage from the Imperial War Museum's archive, cleaned up, retimed to natural speed and colourised, and narrated only by British veterans recorded by the BBC and the museum in the 1960s and 1970s.",
+          "It follows the ordinary infantryman rather than any single battle: the rush of volunteers in 1914, many of them under age, training, life and death in the trenches of France and Belgium, an attack against the German line, and the uneasy return home in 1918. Over 700,000 men from the United Kingdom died in the war."
+        ],
+        "es": [
+          "Encargado para el centenario del armisticio, el documental de Peter Jackson usa material del archivo del Imperial War Museum, restaurado, ajustado a velocidad natural y coloreado, narrado solo por veteranos británicos grabados por la BBC y el museo en las décadas de 1960 y 1970.",
+          "Sigue al soldado de infantería común y no a una batalla concreta: la avalancha de voluntarios de 1914, muchos menores de edad, el entrenamiento, la vida y la muerte en las trincheras de Francia y Bélgica, un ataque contra la línea alemana y el difícil regreso a casa en 1918. Más de 700 000 hombres del Reino Unido murieron en la guerra."
+        ]
+      },
+      "journey": [
+        {
+          "place": "london",
+          "name": {
+            "en": "Recruiting offices, Britain",
+            "es": "Oficinas de reclutamiento, Gran Bretaña"
+          },
+          "coordinates": [-0.1275, 51.5072],
+          "date": "1914-08",
+          "kind": "home",
+          "story": {
+            "en": "Veterans remember lying about their age to join up and the excitement of the first weeks of training.",
+            "es": "Los veteranos recuerdan cómo mintieron sobre su edad para alistarse y la emoción de las primeras semanas de entrenamiento."
+          },
+          "history": {
+            "en": "Over a million men volunteered for the British Army in the first five months of the war.",
+            "es": "Más de un millón de hombres se ofrecieron como voluntarios al ejército británico en los primeros cinco meses de la guerra."
+          }
+        },
+        {
+          "place": "ypres",
+          "name": {
+            "en": "Trenches of the Ypres Salient",
+            "es": "Trincheras del saliente de Ypres"
+          },
+          "coordinates": [2.885, 50.8508],
+          "date": "1915",
+          "kind": "front",
+          "story": {
+            "en": "Soldiers describe the routine of the line: rats, lice, trench foot, tea brewed under fire and the constant presence of the dead.",
+            "es": "Los soldados describen la rutina de la línea: ratas, piojos, pie de trinchera, té preparado bajo el fuego y la presencia constante de los muertos."
+          },
+          "history": {
+            "en": "The Ypres Salient in Belgium was held by British and Commonwealth troops for almost the whole war.",
+            "es": "El saliente de Ypres, en Bélgica, estuvo en manos de tropas británicas y de la Mancomunidad durante casi toda la guerra."
+          }
+        },
+        {
+          "place": "the-somme",
+          "name": {
+            "en": "Over the top on the Somme",
+            "es": "Al ataque en el Somme"
+          },
+          "coordinates": [2.6889, 50.0544],
+          "date": "1916",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "The film's heart is an infantry attack, told through the men who crossed no man's land behind the tanks and the few who reached the German wire.",
+            "es": "El corazón del filme es un ataque de infantería contado por quienes cruzaron la tierra de nadie detrás de los tanques y los pocos que llegaron a la alambrada alemana."
+          },
+          "history": {
+            "en": "On 1 July 1916, the first day of the Somme, the British Army suffered 57,470 casualties, its worst day in history.",
+            "es": "El 1 de julio de 1916, primer día del Somme, el ejército británico sufrió 57 470 bajas, el peor día de su historia."
+          }
+        }
+      ]
+    },
+    {
+      "id": "joyeux-noel-2005",
+      "kind": "film",
+      "title": "Joyeux Noël",
+      "titleEs": "Feliz Navidad",
+      "year": 2005,
+      "era": "ww1",
+      "period": {
+        "start": "1914-08",
+        "end": "1914-12"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["combat", "true-story"],
+      "gold": false,
+      "directors": ["Christian Carion"],
+      "countries": ["FR", "DE", "GB", "BE", "RO", "JP"],
+      "languages": ["fr", "en", "de"],
+      "ids": {
+        "tmdb": 11661,
+        "tmdbType": "movie",
+        "imdb": "tt0424205",
+        "wikidata": "Q72090"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Joyeux_No%C3%ABl",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Joyeux_No%C3%ABl"
+      },
+      "synopsis": {
+        "en": "On Christmas Eve 1914, a German tenor sings in the trenches, Scottish bagpipes answer, and French, Scottish and German soldiers climb out to share a night of peace their generals never approved.",
+        "es": "En la Nochebuena de 1914, un tenor alemán canta en las trincheras, le responden las gaitas escocesas y soldados franceses, escoceses y alemanes salen a compartir una noche de paz que sus generales nunca aprobaron."
+      },
+      "history": {
+        "en": [
+          "The Christmas truce of 1914 was real: along much of the British sector, and in places facing French and Belgian troops, soldiers stopped fighting on 24 and 25 December, sang carols, exchanged food and souvenirs, buried their dead and in some places played football. Near Frelinghien, men of the Royal Welch Fusiliers came out to meet Saxon troops.",
+          "Carion built one fictional sector from several documented episodes. The tenor Nikolaus Sprink is based on Walter Kirchhoff of the Berlin court opera, who sang for Württemberg regiments at the front and drew applause from the opposite trenches. High commands on both sides condemned the fraternisation, and no truce on that scale happened again."
+        ],
+        "es": [
+          "La tregua de Navidad de 1914 fue real: en buena parte del sector británico, y en algunos puntos frente a tropas francesas y belgas, los soldados dejaron de combatir el 24 y el 25 de diciembre, cantaron villancicos, intercambiaron comida y recuerdos, enterraron a sus muertos y en algunos lugares jugaron al fútbol. Cerca de Frelinghien, hombres de los Royal Welch Fusiliers salieron a encontrarse con tropas sajonas.",
+          "Carion construyó un sector ficticio a partir de varios episodios documentados. El tenor Nikolaus Sprink está inspirado en Walter Kirchhoff, de la ópera de la corte de Berlín, que cantó para regimientos de Wurtemberg en el frente y arrancó aplausos de las trincheras enemigas. Los altos mandos de ambos bandos condenaron la confraternización, y nunca volvió a haber una tregua de esa magnitud."
+        ]
+      },
+      "journey": [
+        {
+          "place": "berlin",
+          "name": {
+            "en": "Berlin opera",
+            "es": "Ópera de Berlín"
+          },
+          "coordinates": [13.3833, 52.5167],
+          "date": "1914-08",
+          "kind": "city",
+          "story": {
+            "en": "Sprink's performance with Anna is interrupted by an officer announcing the call-up of reservists.",
+            "es": "La función de Sprink con Anna se interrumpe cuando un oficial anuncia la movilización de los reservistas."
+          },
+          "history": {
+            "en": "Germany ordered general mobilisation on 1 August 1914 and declared war on Russia the same day.",
+            "es": "Alemania decretó la movilización general el 1 de agosto de 1914 y ese mismo día declaró la guerra a Rusia."
+          }
+        },
+        {
+          "place": "stenay",
+          "name": {
+            "en": "Crown Prince's headquarters",
+            "es": "Cuartel general del príncipe heredero"
+          },
+          "coordinates": [5.1856, 49.49],
+          "date": "1914-12",
+          "kind": "base",
+          "story": {
+            "en": "Anna wins permission to sing for Crown Prince Wilhelm, and Sprink, disgusted by the generals' comfort, decides to sing for the troops instead.",
+            "es": "Anna consigue permiso para cantar ante el príncipe heredero Guillermo, y Sprink, asqueado por la comodidad de los generales, decide cantar para la tropa."
+          },
+          "history": {
+            "en": "Crown Prince Wilhelm commanded the German 5th Army, headquartered at Stenay on the Meuse.",
+            "es": "El príncipe heredero Guillermo comandaba el 5.º Ejército alemán, con cuartel general en Stenay, junto al Mosa."
+          }
+        },
+        {
+          "place": "frelinghien",
+          "name": {
+            "en": "Christmas truce front, French Flanders",
+            "es": "Frente de la tregua de Navidad, Flandes francés"
+          },
+          "coordinates": [2.9339, 50.7119],
+          "date": "1914-12-24",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Carols, bagpipes and a small Christmas tree bring three enemy lieutenants into no man's land to agree a ceasefire for the night.",
+            "es": "Villancicos, gaitas y un pequeño árbol de Navidad llevan a tres tenientes enemigos a la tierra de nadie para pactar un alto el fuego esa noche."
+          },
+          "history": {
+            "en": "A memorial at Frelinghien marks where British and German soldiers left their trenches to meet on Christmas Day 1914.",
+            "es": "Un monumento en Frelinghien marca el lugar donde soldados británicos y alemanes salieron de sus trincheras para encontrarse el día de Navidad de 1914."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sergeant-york-1941",
+      "kind": "film",
+      "title": "Sergeant York",
+      "titleEs": "El sargento York",
+      "year": 1941,
+      "era": "ww1",
+      "period": {
+        "start": "1916",
+        "end": "1919"
+      },
+      "theaters": ["western-europe", "americas"],
+      "tags": ["combat", "biography", "true-story"],
+      "gold": false,
+      "directors": ["Howard Hawks"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 16442,
+        "tmdbType": "movie",
+        "imdb": "tt0034167",
+        "wikidata": "Q939424"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Sergeant_York_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Sergeant_York"
+      },
+      "synopsis": {
+        "en": "A hard-drinking Tennessee sharpshooter finds religion, tries to refuse the draft as a conscientious objector, and ends up in the Argonne Forest facing the choice that makes him America's most famous soldier.",
+        "es": "Un tirador de Tennessee aficionado a la bebida encuentra la fe, intenta evitar el reclutamiento como objetor de conciencia y termina en el bosque de Argonne ante la decisión que lo convertirá en el soldado más famoso de Estados Unidos."
+      },
+      "history": {
+        "en": [
+          "Alvin York, a farmer from Pall Mall, Tennessee, was drafted in 1917 despite seeking exemption on religious grounds and served with the 328th Infantry of the 82nd Division. On 8 October 1918, during the Meuse-Argonne offensive near Châtel-Chéhéry, he silenced a German machine-gun position, killing about 25 soldiers and capturing 132.",
+          "He received the Medal of Honor and returned home in 1919 to a hero's welcome, turning down lucrative offers. York long refused to sell his story and agreed only when Hollywood promised to fund a Bible school; released months before Pearl Harbor, the film became the year's top earner and won Gary Cooper the Oscar for Best Actor. Its farm gift is simplified: the land was bought through a fund raised by the Nashville Rotary Club."
+        ],
+        "es": [
+          "Alvin York, un granjero de Pall Mall, Tennessee, fue reclutado en 1917 pese a pedir la exención por motivos religiosos y sirvió en el 328.º de Infantería de la 82.ª División. El 8 de octubre de 1918, durante la ofensiva Mosa-Argonne cerca de Châtel-Chéhéry, neutralizó una posición de ametralladoras alemana, mató a unos 25 soldados y capturó a 132.",
+          "Recibió la Medalla de Honor y volvió a casa en 1919 recibido como héroe, rechazando ofertas lucrativas. York se negó durante años a vender su historia y solo aceptó cuando Hollywood prometió financiar una escuela bíblica; estrenada meses antes de Pearl Harbor, la película fue la más taquillera del año y le dio a Gary Cooper el Óscar al mejor actor. El regalo de la granja está simplificado: el terreno se compró con un fondo reunido por el Club Rotario de Nashville."
+        ]
+      },
+      "journey": [
+        {
+          "place": "pall-mall",
+          "name": {
+            "en": "Pall Mall, Tennessee",
+            "es": "Pall Mall, Tennessee"
+          },
+          "coordinates": [-84.9678, 36.5506],
+          "date": "1916",
+          "kind": "home",
+          "story": {
+            "en": "Alvin brawls, drinks and shoots for prize money to buy a patch of bottomland, until a lightning strike turns him toward the church.",
+            "es": "Alvin pelea, bebe y participa en concursos de tiro para comprar un terreno fértil, hasta que un rayo lo acerca a la iglesia."
+          },
+          "history": {
+            "en": "York grew up in the Valley of the Three Forks of the Wolf in Fentress County, where he joined a small pacifist church.",
+            "es": "York creció en el valle de las Tres Horquillas del Wolf, en el condado de Fentress, donde se unió a una pequeña iglesia pacifista."
+          }
+        },
+        {
+          "place": "argonne",
+          "name": {
+            "en": "Hill 223 near Châtel-Chéhéry, Argonne",
+            "es": "Colina 223 cerca de Châtel-Chéhéry, Argonne"
+          },
+          "coordinates": [4.9544, 49.2831],
+          "date": "1918-10-08",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "With his sergeant and corporals cut down, York works around a German machine-gun nest and takes command of what is left of his squad.",
+            "es": "Con su sargento y sus cabos abatidos, York rodea un nido de ametralladoras alemán y toma el mando de lo que queda de su escuadra."
+          },
+          "history": {
+            "en": "On 8 October 1918 York's patrol of 17 men captured 132 Germans in the woods west of Châtel-Chéhéry.",
+            "es": "El 8 de octubre de 1918 la patrulla de York, de 17 hombres, capturó a 132 alemanes en los bosques al oeste de Châtel-Chéhéry."
+          }
+        },
+        {
+          "place": "new-york",
+          "name": {
+            "en": "New York",
+            "es": "Nueva York"
+          },
+          "coordinates": [-74.0061, 40.7128],
+          "date": "1919-05",
+          "kind": "city",
+          "story": {
+            "en": "Feted as a national hero, York is offered fortunes for endorsements and stage appearances and turns them all down.",
+            "es": "Agasajado como héroe nacional, a York le ofrecen fortunas por publicidad y presentaciones, y las rechaza todas."
+          },
+          "history": {
+            "en": "York landed in New York in May 1919 to a hero's reception before heading home to Tennessee.",
+            "es": "York desembarcó en Nueva York en mayo de 1919 entre honores de héroe antes de volver a Tennessee."
+          }
+        },
+        {
+          "place": "pall-mall",
+          "name": {
+            "en": "Home to Pall Mall",
+            "es": "De regreso a Pall Mall"
+          },
+          "coordinates": [-84.9678, 36.5506],
+          "date": "1919-06",
+          "kind": "home",
+          "story": {
+            "en": "Back in the valley, Alvin marries Gracie and finds a surprise waiting on the land he once dreamed of.",
+            "es": "De vuelta en el valle, Alvin se casa con Gracie y encuentra una sorpresa en la tierra con la que siempre soñó."
+          },
+          "history": {
+            "en": "York married Gracie Williams in Pall Mall on 7 June 1919, days after his discharge.",
+            "es": "York se casó con Gracie Williams en Pall Mall el 7 de junio de 1919, pocos días después de su baja."
+          }
+        }
+      ]
+    },
+    {
+      "id": "wings-1927",
+      "kind": "film",
+      "title": "Wings",
+      "titleEs": "Alas",
+      "year": 1927,
+      "era": "ww1",
+      "period": {
+        "start": "1917",
+        "end": "1918-11"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["air", "combat", "romance"],
+      "gold": false,
+      "directors": ["William A. Wellman"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 28966,
+        "tmdbType": "movie",
+        "imdb": "tt0018578",
+        "wikidata": "Q272036"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Wings_(1927_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Alas_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "Two small-town rivals in love with the same girl become fighter pilots and best friends over France, in the silent epic whose dogfights were filmed for real in the air.",
+        "es": "Dos rivales de un pueblo, enamorados de la misma chica, se convierten en pilotos de caza y mejores amigos sobre Francia, en la epopeya muda cuyos combates aéreos se filmaron de verdad en el aire."
+      },
+      "history": {
+        "en": [
+          "Wings won the first Academy Award for Best Picture (then 'Outstanding Picture') in 1929. Its director, William A. Wellman, had flown in France during the war, and the production used US Army pilots, aircraft and thousands of troops at Camp Stanley and Kelly Field in Texas to stage its battles.",
+          "The climax recreates the Battle of Saint-Mihiel of 12 to 15 September 1918, the first major offensive led by the American Expeditionary Forces. Colonel Billy Mitchell massed about 1,500 Allied aircraft for it, the largest air operation of the war, and the Americans cut off the salient in four days."
+        ],
+        "es": [
+          "Alas ganó el primer Óscar a la mejor película (entonces «Outstanding Picture») en 1929. Su director, William A. Wellman, había volado en Francia durante la guerra, y la producción usó pilotos, aviones y miles de soldados del ejército de EE. UU. en Camp Stanley y Kelly Field, en Texas, para recrear sus batallas.",
+          "El clímax recrea la batalla de Saint-Mihiel, del 12 al 15 de septiembre de 1918, la primera gran ofensiva dirigida por la Fuerza Expedicionaria Estadounidense. El coronel Billy Mitchell reunió cerca de 1500 aviones aliados, la mayor operación aérea de la guerra, y los estadounidenses cortaron el saliente en cuatro días."
+        ]
+      },
+      "journey": [
+        {
+          "place": "paris",
+          "name": {
+            "en": "Paris on leave",
+            "es": "París de permiso"
+          },
+          "coordinates": [2.3522, 48.8567],
+          "date": "1918",
+          "kind": "city",
+          "story": {
+            "en": "On leave in a Paris nightclub, the ace Jack is too drunk to recognise Mary, the girl next door now driving ambulances in France.",
+            "es": "De permiso en un cabaret de París, el as Jack está demasiado ebrio para reconocer a Mary, la vecina que ahora maneja ambulancias en Francia."
+          },
+          "history": {
+            "en": "Paris was the main leave destination for American troops in France and was shelled by German long-range guns in 1918.",
+            "es": "París era el principal destino de permiso de las tropas estadounidenses en Francia y fue bombardeada por cañones alemanes de largo alcance en 1918."
+          }
+        },
+        {
+          "place": "saint-mihiel",
+          "name": {
+            "en": "Saint-Mihiel salient",
+            "es": "Saliente de Saint-Mihiel"
+          },
+          "coordinates": [5.54, 48.8894],
+          "date": "1918-09",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "During the great American offensive, David is shot down behind German lines and Jack hunts the skies for revenge.",
+            "es": "Durante la gran ofensiva estadounidense, David es derribado tras las líneas alemanas y Jack recorre el cielo en busca de venganza."
+          },
+          "history": {
+            "en": "The US First Army eliminated the Saint-Mihiel salient between 12 and 15 September 1918 under massive air cover.",
+            "es": "El Primer Ejército de EE. UU. eliminó el saliente de Saint-Mihiel entre el 12 y el 15 de septiembre de 1918 con un enorme apoyo aéreo."
+          }
+        }
+      ]
+    },
+    {
+      "id": "la-grande-illusion-1937",
+      "kind": "film",
+      "title": "La Grande Illusion",
+      "titleEs": "La gran ilusión",
+      "year": 1937,
+      "era": "ww1",
+      "period": {
+        "start": "1916",
+        "end": "1917"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["prisoners"],
+      "gold": true,
+      "goldReason": {
+        "en": "The first foreign-language film nominated for the Academy Award for Best Picture, and a fixture of Sight and Sound's greatest-films polls.",
+        "es": "Fue la primera película en lengua no inglesa nominada al Óscar a la mejor película y aparece siempre en las encuestas de Sight and Sound sobre las mejores películas."
+      },
+      "directors": ["Jean Renoir"],
+      "countries": ["FR"],
+      "languages": ["fr", "de", "en"],
+      "ids": {
+        "tmdb": 777,
+        "tmdbType": "movie",
+        "imdb": "tt0028950",
+        "wikidata": "Q470336"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/La_Grande_Illusion",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/La_gran_ilusi%C3%B3n"
+      },
+      "synopsis": {
+        "en": "Two French airmen, an aristocrat and a mechanic, are shot down and passed from camp to camp until they land in a mountain fortress run by a German aristocrat who treats one of them as an equal.",
+        "es": "Dos aviadores franceses, un aristócrata y un mecánico, son derribados y pasan de un campo a otro hasta llegar a una fortaleza de montaña dirigida por un aristócrata alemán que trata a uno de ellos como a un igual."
+      },
+      "history": {
+        "en": [
+          "Jean Renoir flew reconnaissance missions during the war, and built the story partly from the escapes of the French airman Armand Pinsard, who had saved his life in 1915 and later told him of breaking out of German prison camps. Roughly 500,000 French soldiers were taken prisoner during the war, and officers were held in separate camps where escape was considered a duty.",
+          "The Battle of Verdun runs through the film: Fort Douaumont fell to the Germans on 25 February 1916 and was retaken by the French on 24 October. The fortress of Wintersborn is fictional; its scenes were shot at Haut-Kœnigsbourg castle in Alsace, which Kaiser Wilhelm II had rebuilt when the region belonged to Germany. Joseph Goebbels branded the film 'Cinematic Public Enemy No. 1'."
+        ],
+        "es": [
+          "Jean Renoir voló en misiones de reconocimiento durante la guerra, y construyó la historia en parte a partir de las fugas del aviador francés Armand Pinsard, que le había salvado la vida en 1915 y años después le contó cómo escapó de campos de prisioneros alemanes. Cerca de 500 000 soldados franceses fueron hechos prisioneros durante la guerra, y los oficiales estaban en campos aparte donde fugarse se consideraba un deber.",
+          "La batalla de Verdún atraviesa la película: el fuerte de Douaumont cayó en manos alemanas el 25 de febrero de 1916 y los franceses lo recuperaron el 24 de octubre. La fortaleza de Wintersborn es ficticia; sus escenas se rodaron en el castillo de Haut-Kœnigsbourg, en Alsacia, que el káiser Guillermo II había reconstruido cuando la región pertenecía a Alemania. Joseph Goebbels calificó la película como «enemigo público cinematográfico número 1»."
+        ]
+      },
+      "journey": [
+        {
+          "place": "haut-koenigsbourg",
+          "name": {
+            "en": "Wintersborn fortress (Haut-Kœnigsbourg)",
+            "es": "Fortaleza de Wintersborn (Haut-Kœnigsbourg)"
+          },
+          "coordinates": [7.3442, 48.2494],
+          "date": "1917",
+          "kind": "camp",
+          "primary": true,
+          "story": {
+            "en": "In a castle said to be escape-proof, Boëldieu, Maréchal and Rosenthal plan one last attempt under the eyes of the wounded commandant von Rauffenstein.",
+            "es": "En un castillo del que se dice que nadie puede escapar, Boëldieu, Maréchal y Rosenthal planean un último intento bajo la mirada del comandante herido von Rauffenstein."
+          },
+          "history": {
+            "en": "Haut-Kœnigsbourg stood in German Alsace during the war, having been restored for Wilhelm II between 1900 and 1908.",
+            "es": "Haut-Kœnigsbourg estaba en la Alsacia alemana durante la guerra, tras haber sido restaurado para Guillermo II entre 1900 y 1908."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-lost-battalion-2001",
+      "kind": "film",
+      "title": "The Lost Battalion",
+      "titleEs": "El batallón perdido",
+      "year": 2001,
+      "era": "ww1",
+      "period": {
+        "start": "1918-10-02",
+        "end": "1918-10-08"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["combat", "true-story"],
+      "gold": false,
+      "directors": ["Russell Mulcahy"],
+      "countries": ["US"],
+      "languages": ["en", "de"],
+      "ids": {
+        "tmdb": 35583,
+        "tmdbType": "movie",
+        "imdb": "tt0287535",
+        "wikidata": "Q2316202"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Lost_Battalion_(2001_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/The_Lost_Battalion_(pel%C3%ADcula_de_2001)"
+      },
+      "synopsis": {
+        "en": "A New York lawyer turned major leads more than 500 men deep into the Argonne Forest, where they are cut off and surrounded, and must hold out with no food, no water and shells falling from both sides.",
+        "es": "Un abogado de Nueva York convertido en mayor guía a más de 500 hombres al interior del bosque de Argonne, donde quedan aislados y rodeados, y deben resistir sin comida, sin agua y con proyectiles cayendo desde ambos bandos."
+      },
+      "history": {
+        "en": [
+          "During the Meuse-Argonne offensive, about 550 men of the US 77th Division under Major Charles Whittlesey advanced into a ravine near Charlevaux Mill on 2 October 1918. Flanking units were held back, and the Germans closed in behind them, leaving the 'Lost Battalion' surrounded for six days.",
+          "They beat off repeated attacks, including flamethrowers, and endured American artillery falling on them until the carrier pigeon Cher Ami got a message through. Whittlesey refused a German demand to surrender, and on 8 October relief arrived; only about 194 men walked out unhurt. Whittlesey, George McMurtry and Nelson Holderman received the Medal of Honor."
+        ],
+        "es": [
+          "Durante la ofensiva Mosa-Argonne, unos 550 hombres de la 77.ª División de EE. UU. al mando del mayor Charles Whittlesey avanzaron hasta una hondonada cerca del molino de Charlevaux el 2 de octubre de 1918. Las unidades de los flancos fueron frenadas y los alemanes cerraron el paso por detrás, dejando al «Batallón Perdido» rodeado durante seis días.",
+          "Rechazaron ataques repetidos, incluso con lanzallamas, y soportaron la artillería estadounidense cayendo sobre ellos hasta que la paloma mensajera Cher Ami logró pasar un mensaje. Whittlesey rechazó una exigencia alemana de rendición, y el 8 de octubre llegó el relevo; solo unos 194 hombres salieron ilesos. Whittlesey, George McMurtry y Nelson Holderman recibieron la Medalla de Honor."
+        ]
+      },
+      "journey": [
+        {
+          "place": "argonne",
+          "name": {
+            "en": "Charlevaux ravine, Argonne Forest",
+            "es": "Hondonada de Charlevaux, bosque de Argonne"
+          },
+          "coordinates": [4.8939, 49.2397],
+          "date": "1918-10",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Pushing through the German line as ordered, Whittlesey's men find themselves alone on a hillside, sending pigeons for help as the enemy attacks from every side.",
+            "es": "Tras atravesar la línea alemana como se les ordenó, los hombres de Whittlesey se encuentran solos en una ladera, enviando palomas para pedir ayuda mientras el enemigo ataca por todos lados."
+          },
+          "history": {
+            "en": "The pocket lay on a slope below Binarville, where the battalion held out from 2 to 8 October 1918.",
+            "es": "La bolsa estaba en una ladera por debajo de Binarville, donde el batallón resistió del 2 al 8 de octubre de 1918."
+          }
+        }
+      ]
+    },
+    {
+      "id": "passchendaele-2008",
+      "kind": "film",
+      "title": "Passchendaele",
+      "titleEs": "Passchendaele",
+      "year": 2008,
+      "era": "ww1",
+      "period": {
+        "start": "1917-04",
+        "end": "1917-11"
+      },
+      "theaters": ["western-europe", "americas"],
+      "tags": ["combat", "romance", "home-front"],
+      "gold": false,
+      "directors": ["Paul Gross"],
+      "countries": ["CA"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 14582,
+        "tmdbType": "movie",
+        "imdb": "tt1092082",
+        "wikidata": "Q2060453"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Passchendaele_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Passchendaele_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "A shell-shocked Canadian sergeant sent home to Calgary falls for a nurse and re-enlists to protect her fragile younger brother, following him into the mud of Passchendaele.",
+        "es": "Un sargento canadiense traumatizado por la guerra y enviado a casa en Calgary se enamora de una enfermera y vuelve a alistarse para proteger al frágil hermano menor de ella, siguiéndolo hasta el lodo de Passchendaele."
+      },
+      "history": {
+        "en": [
+          "Paul Gross drew on the stories of his grandfather, who served with the Canadian Expeditionary Force. The Canadian Corps took Vimy Ridge in April 1917, a victory that became a founding moment of Canadian identity, and in October was sent to Flanders to finish the Third Battle of Ypres.",
+          "Between 26 October and 10 November 1917 the Canadians captured the ruined village of Passchendaele through flooded, shell-churned ground, at a cost of about 15,600 casualties. The film's crucifixion image nods to a 1915 wartime legend of a Canadian soldier crucified by German troops, a story that was never proven."
+        ],
+        "es": [
+          "Paul Gross se inspiró en las historias de su abuelo, que sirvió en la Fuerza Expedicionaria Canadiense. El Cuerpo Canadiense tomó la cresta de Vimy en abril de 1917, una victoria que se volvió un momento fundacional de la identidad canadiense, y en octubre fue enviado a Flandes para terminar la tercera batalla de Ypres.",
+          "Entre el 26 de octubre y el 10 de noviembre de 1917 los canadienses capturaron las ruinas de la aldea de Passchendaele a través de un terreno inundado y revuelto por los obuses, con un costo de unas 15 600 bajas. La imagen de la crucifixión en la película alude a una leyenda de 1915 sobre un soldado canadiense crucificado por tropas alemanas, una historia que nunca se comprobó."
+        ]
+      },
+      "journey": [
+        {
+          "place": "vimy-ridge",
+          "name": {
+            "en": "Vimy Ridge",
+            "es": "Cresta de Vimy"
+          },
+          "coordinates": [2.7736, 50.3794],
+          "date": "1917-04",
+          "kind": "battle",
+          "story": {
+            "en": "Sergeant Michael Dunne survives the fighting at Vimy but comes out of it with his nerves shattered.",
+            "es": "El sargento Michael Dunne sobrevive a los combates de Vimy pero sale de ellos con los nervios destrozados."
+          },
+          "history": {
+            "en": "All four Canadian divisions attacked together for the first time on 9 April 1917 and took the ridge within days.",
+            "es": "Las cuatro divisiones canadienses atacaron juntas por primera vez el 9 de abril de 1917 y tomaron la cresta en pocos días."
+          }
+        },
+        {
+          "place": "calgary",
+          "name": {
+            "en": "Calgary, Alberta",
+            "es": "Calgary, Alberta"
+          },
+          "coordinates": [-114.0625, 51.0475],
+          "date": "1917-06",
+          "kind": "home",
+          "story": {
+            "en": "Recovering in hospital, Dunne meets nurse Sarah Mann, whose family is shunned because her German-born father died fighting for Germany.",
+            "es": "Mientras se recupera en el hospital, Dunne conoce a la enfermera Sarah Mann, cuya familia es rechazada porque su padre, de origen alemán, murió luchando por Alemania."
+          },
+          "history": {
+            "en": "German Canadians faced suspicion and internment during the war, and Berlin, Ontario, was renamed Kitchener in 1916.",
+            "es": "Los canadienses de origen alemán sufrieron sospechas e internamiento durante la guerra, y Berlin, en Ontario, pasó a llamarse Kitchener en 1916."
+          }
+        },
+        {
+          "place": "passchendaele",
+          "name": {
+            "en": "Passchendaele",
+            "es": "Passchendaele"
+          },
+          "coordinates": [3.0206, 50.9003],
+          "date": "1917-10",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "In a sea of mud, Dunne leads a platoon to reinforce a battered battalion while Sarah works at a dressing station just behind the line.",
+            "es": "En un mar de lodo, Dunne encabeza un pelotón para reforzar a un batallón maltrecho mientras Sarah trabaja en un puesto de curación justo detrás de la línea."
+          },
+          "history": {
+            "en": "Canadian troops captured Passchendaele village on 6 November 1917 and the high ground beyond it four days later.",
+            "es": "Las tropas canadienses capturaron la aldea de Passchendaele el 6 de noviembre de 1917 y las alturas cercanas cuatro días después."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-red-baron-2008",
+      "kind": "film",
+      "title": "The Red Baron",
+      "titleEs": "El Barón Rojo",
+      "year": 2008,
+      "era": "ww1",
+      "period": {
+        "start": "1916",
+        "end": "1918-04"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["air", "biography", "romance"],
+      "gold": false,
+      "directors": ["Nikolai Müllerschön"],
+      "countries": ["DE"],
+      "languages": ["en", "de", "fr"],
+      "ids": {
+        "tmdb": 8349,
+        "tmdbType": "movie",
+        "imdb": "tt0365675",
+        "wikidata": "Q835581"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Red_Baron_(2008_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/El_Bar%C3%B3n_Rojo_(pel%C3%ADcula)"
+      },
+      "synopsis": {
+        "en": "Young aristocrat Manfred von Richthofen treats air combat as a sport until his fame, his red aircraft and a nurse who has seen the field hospitals force him to face what the war really is.",
+        "es": "El joven aristócrata Manfred von Richthofen ve el combate aéreo como un deporte hasta que su fama, su avión rojo y una enfermera que conoce los hospitales de campaña lo obligan a ver lo que realmente es la guerra."
+      },
+      "history": {
+        "en": [
+          "Manfred von Richthofen became the war's top-scoring ace with 80 confirmed victories. He shot down the British ace Lanoe Hawker near Bapaume on 23 November 1916, took command of Jasta 11 in January 1917, painted his Albatros red and from June 1917 led Jagdgeschwader 1, the 'Flying Circus'. He was badly wounded in the head on 6 July 1917.",
+          "He was killed on 21 April 1918 over the Morlancourt ridge near Vaux-sur-Somme. The RAF credited Canadian pilot Roy Brown, but most historians now believe a single bullet fired by Australian ground gunners killed him. The film invents his friendship with Brown, the Jewish pilot Sternberg and much of his romance with nurse Käte Otersdorf, who did treat him after his head wound."
+        ],
+        "es": [
+          "Manfred von Richthofen fue el as con más victorias de la guerra, con 80 confirmadas. Derribó al as británico Lanoe Hawker cerca de Bapaume el 23 de noviembre de 1916, asumió el mando de la Jasta 11 en enero de 1917, pintó de rojo su Albatros y desde junio de 1917 dirigió el Jagdgeschwader 1, el «Circo Volante». Sufrió una grave herida en la cabeza el 6 de julio de 1917.",
+          "Murió el 21 de abril de 1918 sobre la cresta de Morlancourt, cerca de Vaux-sur-Somme. La RAF atribuyó el derribo al piloto canadiense Roy Brown, pero la mayoría de los historiadores cree hoy que lo mató una sola bala disparada por artilleros australianos desde tierra. La película inventa su amistad con Brown, al piloto judío Sternberg y buena parte de su romance con la enfermera Käte Otersdorf, que sí lo atendió tras la herida en la cabeza."
+        ]
+      },
+      "journey": [
+        {
+          "place": "the-somme",
+          "name": {
+            "en": "Skies over Bapaume",
+            "es": "Cielo sobre Bapaume"
+          },
+          "coordinates": [2.8511, 50.1036],
+          "date": "1916-11",
+          "kind": "battle",
+          "story": {
+            "en": "Richthofen's squadron clashes with Lanoe Hawker's British fighters, and his victory over the famous ace earns him the Pour le Mérite.",
+            "es": "La escuadrilla de Richthofen choca con los cazas británicos de Lanoe Hawker, y su victoria sobre el famoso as le vale la Pour le Mérite."
+          },
+          "history": {
+            "en": "Hawker, a Victoria Cross holder, was shot down just south of Bapaume on 23 November 1916 as Richthofen's 11th victory.",
+            "es": "Hawker, condecorado con la Cruz Victoria, fue derribado justo al sur de Bapaume el 23 de noviembre de 1916 como la 11.ª victoria de Richthofen."
+          }
+        },
+        {
+          "place": "douai",
+          "name": {
+            "en": "Jasta 11 airfield near Douai",
+            "es": "Aeródromo de la Jasta 11 cerca de Douai"
+          },
+          "coordinates": [3.0792, 50.3708],
+          "date": "1917",
+          "kind": "base",
+          "primary": true,
+          "story": {
+            "en": "Given his own squadron, Manfred paints his plane red, is joined by his brother Lothar and turns his pilots into the 'Flying Circus'.",
+            "es": "Al recibir su propia escuadrilla, Manfred pinta su avión de rojo, se le une su hermano Lothar y convierte a sus pilotos en el «Circo Volante»."
+          },
+          "history": {
+            "en": "Jasta 11 flew from La Brayelle near Douai during 'Bloody April' 1917, when the British lost about 245 aircraft.",
+            "es": "La Jasta 11 operó desde La Brayelle, cerca de Douai, durante el «Abril sangriento» de 1917, cuando los británicos perdieron unos 245 aviones."
+          }
+        },
+        {
+          "place": "the-somme",
+          "name": {
+            "en": "Morlancourt ridge, Vaux-sur-Somme",
+            "es": "Cresta de Morlancourt, Vaux-sur-Somme"
+          },
+          "coordinates": [2.5506, 49.9214],
+          "date": "1918-04-21",
+          "kind": "battle",
+          "story": {
+            "en": "Refusing a safe staff post, Richthofen flies again during the great German offensive of spring 1918.",
+            "es": "Tras rechazar un cargo seguro en el estado mayor, Richthofen vuelve a volar durante la gran ofensiva alemana de la primavera de 1918."
+          },
+          "history": {
+            "en": "Richthofen's Fokker triplane came down near Vaux-sur-Somme on 21 April 1918, inside Australian lines.",
+            "es": "El triplano Fokker de Richthofen cayó cerca de Vaux-sur-Somme el 21 de abril de 1918, dentro de las líneas australianas."
+          }
+        }
+      ]
+    },
+    {
+      "id": "journeys-end-2017",
+      "kind": "film",
+      "title": "Journey's End",
+      "titleEs": "Senderos de honor",
+      "year": 2017,
+      "era": "ww1",
+      "period": {
+        "start": "1918-03-18",
+        "end": "1918-03-21"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["combat"],
+      "gold": false,
+      "directors": ["Saul Dibb"],
+      "countries": ["GB"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 438259,
+        "tmdbType": "movie",
+        "imdb": "tt3780500",
+        "wikidata": "Q28173308"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Journey%27s_End_(2017_film)"
+      },
+      "synopsis": {
+        "en": "A fresh young officer asks to join the company of his school hero, only to find him drinking to hold himself together as the whole dugout waits for a German offensive everyone knows is coming.",
+        "es": "Un joven oficial recién llegado pide unirse a la compañía de su héroe del colegio y lo encuentra bebiendo para mantenerse en pie, mientras todo el refugio espera una ofensiva alemana que todos saben que llegará."
+      },
+      "history": {
+        "en": [
+          "The film adapts R. C. Sherriff's 1928 play, written from his own service as an officer with the East Surrey Regiment, who was wounded at Passchendaele in 1917. The story unfolds in a British dugout facing the German line near Saint-Quentin in the days before 21 March 1918.",
+          "That morning Germany launched Operation Michael, the opening blow of its spring offensive. After a bombardment of more than a million shells in about five hours, German storm troops overran the British Fifth Army's forward positions in fog; the British suffered around 38,000 casualties on the first day, some 21,000 of them taken prisoner."
+        ],
+        "es": [
+          "La película adapta la obra de teatro de R. C. Sherriff de 1928, escrita a partir de su propio servicio como oficial del Regimiento East Surrey, que fue herido en Passchendaele en 1917. La historia transcurre en un refugio británico frente a la línea alemana cerca de San Quintín en los días previos al 21 de marzo de 1918.",
+          "Esa mañana Alemania lanzó la Operación Michael, el primer golpe de su ofensiva de primavera. Tras un bombardeo de más de un millón de proyectiles en unas cinco horas, las tropas de asalto alemanas arrollaron entre la niebla las posiciones avanzadas del Quinto Ejército británico; los británicos sufrieron unas 38 000 bajas el primer día, de las cuales unas 21 000 fueron prisioneros."
+        ]
+      },
+      "journey": [
+        {
+          "place": "saint-quentin",
+          "name": {
+            "en": "British trenches before Saint-Quentin",
+            "es": "Trincheras británicas frente a San Quintín"
+          },
+          "coordinates": [3.2856, 49.8478],
+          "date": "1918-03",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Raleigh settles into C Company's dugout, where Captain Stanhope orders a daylight raid to capture a German prisoner days before the expected attack.",
+            "es": "Raleigh se instala en el refugio de la Compañía C, donde el capitán Stanhope ordena una incursión a plena luz del día para capturar a un prisionero alemán días antes del ataque esperado."
+          },
+          "history": {
+            "en": "On 21 March 1918 the German offensive struck the British Fifth Army along a front stretching south past Saint-Quentin.",
+            "es": "El 21 de marzo de 1918 la ofensiva alemana golpeó al Quinto Ejército británico en un frente que se extendía al sur más allá de San Quintín."
+          }
+        }
+      ]
+    },
+    {
+      "id": "beneath-hill-60-2010",
+      "kind": "film",
+      "title": "Beneath Hill 60",
+      "titleEs": "Beneath Hill 60",
+      "year": 2010,
+      "era": "ww1",
+      "period": {
+        "start": "1916-05",
+        "end": "1917-06"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["combat", "true-story"],
+      "gold": false,
+      "directors": ["Jeremy Sims"],
+      "countries": ["AU"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 43418,
+        "tmdbType": "movie",
+        "imdb": "tt1418646",
+        "wikidata": "Q2986009"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Beneath_Hill_60"
+      },
+      "synopsis": {
+        "en": "An Australian mining engineer leads a company of tunnellers in a silent war thirty metres below the Western Front, racing German diggers to guard the huge mines under Hill 60.",
+        "es": "Un ingeniero de minas australiano dirige una compañía de zapadores en una guerra silenciosa a treinta metros bajo el Frente Occidental, compitiendo con los excavadores alemanes para proteger las enormes minas bajo la Colina 60."
+      },
+      "history": {
+        "en": [
+          "The film is based on the diaries of Oliver Woodward of the 1st Australian Tunnelling Company. Tunnelling companies, many recruited from miners, dug under no man's land to plant explosives beneath enemy lines while listening for enemy tunnellers doing the same.",
+          "In November 1916 the Australians took over the Hill 60 and Caterpillar mines near Ypres, dug by British and Canadian tunnellers, and kept them dry and undiscovered for months. At 3:10 a.m. on 7 June 1917 they were fired with 17 others to open the Battle of Messines; the blasts, heard as far away as London, killed thousands of German soldiers, and Woodward himself pressed the plunger."
+        ],
+        "es": [
+          "La película se basa en los diarios de Oliver Woodward, de la 1.ª Compañía Australiana de Túneles. Las compañías de túneles, muchas reclutadas entre mineros, cavaban bajo la tierra de nadie para colocar explosivos debajo de las líneas enemigas mientras escuchaban a los excavadores enemigos que hacían lo mismo.",
+          "En noviembre de 1916 los australianos se hicieron cargo de las minas de la Colina 60 y de la Oruga, cerca de Ypres, excavadas por zapadores británicos y canadienses, y las mantuvieron secas y sin ser descubiertas durante meses. A las 3:10 del 7 de junio de 1917 se detonaron junto con otras 17 para abrir la batalla de Messines; las explosiones, que se oyeron hasta en Londres, mataron a miles de soldados alemanes, y fue el propio Woodward quien accionó el detonador."
+        ]
+      },
+      "journey": [
+        {
+          "place": "armentieres",
+          "name": {
+            "en": "Tunnels near Armentières",
+            "es": "Túneles cerca de Armentières"
+          },
+          "coordinates": [2.8803, 50.6872],
+          "date": "1916-05",
+          "kind": "front",
+          "story": {
+            "en": "Underground below the front, Woodward's men fight German tunnellers hand to hand and cross no man's land to blow up a fortified house.",
+            "es": "Bajo el frente, los hombres de Woodward luchan cuerpo a cuerpo con zapadores alemanes y cruzan la tierra de nadie para volar una casa fortificada."
+          },
+          "history": {
+            "en": "The 1st Australian Tunnelling Company began work near Armentières in May 1916, soon after arriving in France.",
+            "es": "La 1.ª Compañía Australiana de Túneles empezó a trabajar cerca de Armentières en mayo de 1916, poco después de llegar a Francia."
+          }
+        },
+        {
+          "place": "ypres",
+          "name": {
+            "en": "Hill 60, Ypres Salient",
+            "es": "Colina 60, saliente de Ypres"
+          },
+          "coordinates": [2.93, 50.8242],
+          "date": "1917-06-07",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Guarding two enormous mines beneath the German-held hill, the tunnellers must keep them hidden and dry until the day they are needed.",
+            "es": "Encargados de dos enormes minas bajo la colina en poder alemán, los zapadores deben mantenerlas ocultas y secas hasta el día en que se necesiten."
+          },
+          "history": {
+            "en": "The Hill 60 and Caterpillar mines were among 19 detonated under the Messines Ridge on 7 June 1917.",
+            "es": "Las minas de la Colina 60 y de la Oruga estuvieron entre las 19 que estallaron bajo la cresta de Messines el 7 de junio de 1917."
+          }
+        }
+      ]
+    },
+    {
+      "id": "a-very-long-engagement-2004",
+      "kind": "film",
+      "title": "A Very Long Engagement",
+      "titleEs": "Un largo domingo de noviazgo",
+      "originalTitle": "Un long dimanche de fiançailles",
+      "year": 2004,
+      "era": "ww1",
+      "period": {
+        "start": "1917-01",
+        "end": "1920"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["romance", "combat"],
+      "gold": false,
+      "directors": ["Jean-Pierre Jeunet"],
+      "countries": ["FR", "US"],
+      "languages": ["fr"],
+      "ids": {
+        "tmdb": 2841,
+        "tmdbType": "movie",
+        "imdb": "tt0344510",
+        "wikidata": "Q936425"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/A_Very_Long_Engagement",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Un_long_dimanche_de_fian%C3%A7ailles"
+      },
+      "synopsis": {
+        "en": "Told her fiancé died after being thrown into no man's land as punishment, a stubborn young woman refuses to believe it and pieces together what really happened in one frozen trench on the Somme.",
+        "es": "Le dicen que su prometido murió tras ser arrojado a la tierra de nadie como castigo, pero una joven obstinada se niega a creerlo y reconstruye lo que realmente pasó en una trinchera helada del Somme."
+      },
+      "history": {
+        "en": [
+          "Jeunet adapts Sébastien Japrisot's 1991 novel. Its five condemned men and the 'Bingo Crépuscule' trench are invented, but the punishment it describes has roots in reality: the French army treated self-inflicted wounds as desertion in the face of the enemy, and its courts-martial sentenced hundreds of soldiers to death, especially in the first years of the war.",
+          "The trench scenes take place in January 1917, in the brutally cold winter that followed the Battle of the Somme, where the French and British armies had suffered more than 600,000 casualties between July and November 1916. Mathilde's search after the war reflects the fate of hundreds of thousands of French soldiers listed as missing, whose families waited years for answers."
+        ],
+        "es": [
+          "Jeunet adapta la novela de Sébastien Japrisot de 1991. Sus cinco condenados y la trinchera «Bingo Crépuscule» son inventados, pero el castigo que describe tiene raíces reales: el ejército francés trataba las heridas autoinfligidas como deserción frente al enemigo, y sus consejos de guerra condenaron a muerte a cientos de soldados, sobre todo en los primeros años de la guerra.",
+          "Las escenas de la trinchera transcurren en enero de 1917, en el invierno brutalmente frío que siguió a la batalla del Somme, donde los ejércitos francés y británico sufrieron más de 600 000 bajas entre julio y noviembre de 1916. La búsqueda de Mathilde después de la guerra refleja el destino de cientos de miles de soldados franceses declarados desaparecidos, cuyas familias esperaron años por una respuesta."
+        ]
+      },
+      "journey": [
+        {
+          "place": "the-somme",
+          "name": {
+            "en": "Bingo Crépuscule trench, the Somme",
+            "es": "Trinchera Bingo Crépuscule, el Somme"
+          },
+          "coordinates": [2.6889, 50.0544],
+          "date": "1917-01",
+          "kind": "front",
+          "primary": true,
+          "story": {
+            "en": "Five soldiers convicted of wounding themselves are pushed over the parapet into the snow of no man's land, among them Mathilde's fiancé Manech.",
+            "es": "Cinco soldados condenados por herirse a sí mismos son empujados por encima del parapeto a la nieve de la tierra de nadie, entre ellos Manech, el prometido de Mathilde."
+          },
+          "history": {
+            "en": "After the Somme offensive ended in November 1916, both sides held the flooded, frozen battlefield through one of the harshest winters of the war.",
+            "es": "Tras el fin de la ofensiva del Somme en noviembre de 1916, ambos bandos ocuparon el campo de batalla inundado y helado durante uno de los inviernos más duros de la guerra."
+          }
+        },
+        {
+          "place": "paris",
+          "name": {
+            "en": "Paris",
+            "es": "París"
+          },
+          "coordinates": [2.3522, 48.8567],
+          "date": "1919",
+          "kind": "city",
+          "story": {
+            "en": "With a private detective and a stack of letters, Mathilde tracks down survivors, widows and a vengeful lover of one of the condemned men.",
+            "es": "Con un detective privado y un montón de cartas, Mathilde busca a sobrevivientes, viudas y a la amante vengativa de uno de los condenados."
+          },
+          "history": {
+            "en": "After 1918 French families pressed the state for news of missing soldiers, and many bodies were identified only years later, if ever.",
+            "es": "Después de 1918 las familias francesas presionaron al Estado por noticias de los soldados desaparecidos, y muchos cuerpos se identificaron años después o nunca."
+          }
+        }
+      ]
+    },
+    {
+      "id": "testament-of-youth-2014",
+      "kind": "film",
+      "title": "Testament of Youth",
+      "titleEs": "Testamento de juventud",
+      "year": 2014,
+      "era": "ww1",
+      "period": {
+        "start": "1914-07",
+        "end": "1918-11"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["biography", "true-story", "home-front", "romance"],
+      "gold": false,
+      "directors": ["James Kent"],
+      "countries": ["GB"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 284689,
+        "tmdbType": "movie",
+        "imdb": "tt1441953",
+        "wikidata": "Q17018891"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Testament_of_Youth_(film)"
+      },
+      "synopsis": {
+        "en": "Vera Brittain fights her family for a place at Oxford, then leaves it to nurse the wounded as the war takes, one by one, the young men she loves.",
+        "es": "Vera Brittain pelea con su familia por un lugar en Oxford y luego lo deja para cuidar a los heridos mientras la guerra se lleva, uno a uno, a los jóvenes que ama."
+      },
+      "history": {
+        "en": [
+          "The film adapts Vera Brittain's 1933 memoir, one of the best-known British accounts of the war. She won a place at Somerville College, Oxford, in 1914, then left in 1915 to serve as a Voluntary Aid Detachment nurse in Buxton, London, Malta and France, where at Étaples she nursed German prisoners.",
+          "Her fiancé Roland Leighton died of a sniper's wound at Louvencourt on 23 December 1915; their friend Victor Richardson was blinded at Arras and died in June 1917; her brother Edward was killed on the Asiago plateau in Italy on 15 June 1918. The film leaves out her posting in Malta. After the war Brittain became a prominent pacifist."
+        ],
+        "es": [
+          "La película adapta las memorias de Vera Brittain de 1933, uno de los relatos británicos más conocidos sobre la guerra. En 1914 obtuvo un lugar en el Somerville College de Oxford y en 1915 lo dejó para servir como enfermera voluntaria del Voluntary Aid Detachment en Buxton, Londres, Malta y Francia, donde en Étaples atendió a prisioneros alemanes.",
+          "Su prometido Roland Leighton murió por la herida de un francotirador en Louvencourt el 23 de diciembre de 1915; su amigo Victor Richardson quedó ciego en Arrás y murió en junio de 1917; su hermano Edward murió en la meseta de Asiago, en Italia, el 15 de junio de 1918. La película omite su destino en Malta. Después de la guerra Brittain se convirtió en una destacada pacifista."
+        ]
+      },
+      "journey": [
+        {
+          "place": "buxton",
+          "name": {
+            "en": "Buxton, Derbyshire",
+            "es": "Buxton, Derbyshire"
+          },
+          "coordinates": [-1.911, 53.259],
+          "date": "1914-07",
+          "kind": "home",
+          "story": {
+            "en": "Against her father's wishes, Vera prepares for the Oxford entrance exam and falls for her brother's school friend Roland.",
+            "es": "Contra la voluntad de su padre, Vera se prepara para el examen de ingreso a Oxford y se enamora de Roland, amigo de colegio de su hermano."
+          },
+          "history": {
+            "en": "The Brittains lived in the spa town of Buxton, where Vera first nursed at the Devonshire Hospital in 1915.",
+            "es": "Los Brittain vivían en la ciudad balneario de Buxton, donde Vera trabajó por primera vez como enfermera en el Devonshire Hospital en 1915."
+          }
+        },
+        {
+          "place": "oxford",
+          "name": {
+            "en": "Somerville College, Oxford",
+            "es": "Somerville College, Universidad de Oxford"
+          },
+          "coordinates": [-1.2625, 51.7592],
+          "date": "1914-10",
+          "kind": "city",
+          "story": {
+            "en": "Vera starts at Oxford while Roland, Edward and Victor put on uniforms, and the casualty lists in the newspapers grow longer.",
+            "es": "Vera empieza en Oxford mientras Roland, Edward y Victor se ponen el uniforme y las listas de bajas en los periódicos se alargan."
+          },
+          "history": {
+            "en": "Somerville's buildings were turned into a military hospital in 1915 and its students moved to Oriel College.",
+            "es": "Los edificios de Somerville se convirtieron en hospital militar en 1915 y sus estudiantes se trasladaron al Oriel College."
+          }
+        },
+        {
+          "place": "london",
+          "name": {
+            "en": "Military hospital in London",
+            "es": "Hospital militar en Londres"
+          },
+          "coordinates": [-0.0912, 51.4736],
+          "date": "1915-12",
+          "kind": "city",
+          "story": {
+            "en": "Nursing wounded soldiers, Vera waits for Roland's Christmas leave and a telephone call changes everything.",
+            "es": "Mientras cuida a soldados heridos, Vera espera el permiso navideño de Roland y una llamada telefónica lo cambia todo."
+          },
+          "history": {
+            "en": "Vera served at the 1st London General Hospital in Camberwell, one of the capital's large military hospitals.",
+            "es": "Vera sirvió en el 1st London General Hospital de Camberwell, uno de los grandes hospitales militares de la capital."
+          }
+        },
+        {
+          "place": "etaples",
+          "name": {
+            "en": "Étaples base hospitals",
+            "es": "Hospitales de base de Étaples"
+          },
+          "coordinates": [1.6406, 50.5178],
+          "date": "1917-08",
+          "kind": "base",
+          "primary": true,
+          "story": {
+            "en": "Posted to France, Vera is assigned to a ward of wounded Germans, then finds her own brother among the casualties brought in.",
+            "es": "Destinada a Francia, Vera es asignada a una sala de alemanes heridos y luego encuentra a su propio hermano entre las bajas que llegan."
+          },
+          "history": {
+            "en": "Étaples was the largest British base camp in France, with hospitals able to treat some 22,000 wounded at a time.",
+            "es": "Étaples era el mayor campamento de base británico en Francia, con hospitales capaces de atender a unos 22 000 heridos a la vez."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-african-queen-1951",
+      "kind": "film",
+      "title": "The African Queen",
+      "titleEs": "La reina africana",
+      "year": 1951,
+      "era": "ww1",
+      "period": {
+        "start": "1914-08",
+        "end": "1914-12"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["naval", "romance"],
+      "gold": true,
+      "goldReason": {
+        "en": "Ranked 17th on the American Film Institute's 1998 list of the 100 greatest American films, and won Humphrey Bogart his only Academy Award.",
+        "es": "Ocupó el puesto 17 en la lista de 1998 del American Film Institute de las 100 mejores películas estadounidenses y le dio a Humphrey Bogart su único Óscar."
+      },
+      "directors": ["John Huston"],
+      "countries": ["GB", "US"],
+      "languages": ["en", "de"],
+      "ids": {
+        "tmdb": 488,
+        "tmdbType": "movie",
+        "imdb": "tt0043265",
+        "wikidata": "Q384397"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_African_Queen",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/The_African_Queen"
+      },
+      "synopsis": {
+        "en": "When war reaches German East Africa, a prim missionary and a gin-soaked riverboat captain set off down a wild river with a crazy plan to sink a German gunboat, and slowly fall for each other.",
+        "es": "Cuando la guerra llega al África Oriental Alemana, una recatada misionera y un capitán de barco aficionado a la ginebra bajan por un río salvaje con el loco plan de hundir un cañonero alemán, y poco a poco se enamoran."
+      },
+      "history": {
+        "en": [
+          "C. S. Forester's 1935 novel, which Huston adapted, is set on a thinly disguised Lake Tanganyika, where German East Africa (today Tanzania) faced the Belgian Congo. Germany controlled the lake early in the war with armed steamers, above all the Graf von Götzen, launched at Kigoma in 1915, which inspired the film's Königin Luise.",
+          "In reality the lake was won by an even stranger expedition: in 1915 the Royal Navy hauled two motor boats, Mimi and Toutou, overland across Africa and sank or captured German vessels in December 1915 and February 1916. The Graf von Götzen was scuttled in July 1916, later refloated and still sails the lake as the ferry MV Liemba."
+        ],
+        "es": [
+          "La novela de C. S. Forester de 1935, que Huston adaptó, está ambientada en un lago Tanganica apenas disfrazado, donde el África Oriental Alemana (hoy Tanzania) limitaba con el Congo Belga. Alemania dominó el lago al comienzo de la guerra con vapores armados, sobre todo el Graf von Götzen, botado en Kigoma en 1915, que inspiró al Königin Luise de la película.",
+          "En la realidad, el lago se ganó con una expedición todavía más extraña: en 1915 la Marina Real arrastró por tierra a través de África dos lanchas, Mimi y Toutou, que hundieron o capturaron barcos alemanes en diciembre de 1915 y febrero de 1916. El Graf von Götzen fue hundido por su tripulación en julio de 1916, luego reflotado, y todavía navega por el lago como el ferry MV Liemba."
+        ]
+      },
+      "journey": [
+        {
+          "place": "lake-tanganyika",
+          "name": {
+            "en": "The lake of the Königin Luise (Lake Tanganyika)",
+            "es": "El lago del Königin Luise (lago Tanganica)"
+          },
+          "coordinates": [29.6333, -4.8833],
+          "date": "1914-09",
+          "kind": "sea",
+          "primary": true,
+          "story": {
+            "en": "After running rapids, a German fort and a swamp of reeds, Rose and Charlie reach the lake and turn their battered launch into a homemade torpedo.",
+            "es": "Tras pasar rápidos, un fuerte alemán y un pantano de juncos, Rose y Charlie llegan al lago y convierten su maltrecha lancha en un torpedo casero."
+          },
+          "history": {
+            "en": "Kigoma was the German base on Lake Tanganyika and home port of the Graf von Götzen until 1916.",
+            "es": "Kigoma era la base alemana en el lago Tanganica y puerto del Graf von Götzen hasta 1916."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-lighthorsemen-1987",
+      "kind": "film",
+      "title": "The Lighthorsemen",
+      "titleEs": "The Lighthorsemen",
+      "year": 1987,
+      "era": "ww1",
+      "period": {
+        "start": "1917",
+        "end": "1917-10-31"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["combat", "true-story"],
+      "gold": false,
+      "directors": ["Simon Wincer"],
+      "countries": ["AU"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 18389,
+        "tmdbType": "movie",
+        "imdb": "tt0093416",
+        "wikidata": "Q2682416"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Lighthorsemen_(film)"
+      },
+      "synopsis": {
+        "en": "Four Australian horsemen in the Palestine desert, joined by a young recruit who cannot bring himself to shoot, ride toward one of the last great cavalry charges in history.",
+        "es": "Cuatro jinetes australianos en el desierto de Palestina, junto a un joven recluta incapaz de disparar, cabalgan hacia una de las últimas grandes cargas de caballería de la historia."
+      },
+      "history": {
+        "en": [
+          "In October 1917 the British Egyptian Expeditionary Force, after two failed attacks on Gaza, planned to break the Ottoman line at its inland end, Beersheba, whose wells were vital to thousands of men and horses. A staff officer, Richard Meinertzhagen, later claimed credit for a ruse in which a haversack of false plans was dropped to convince the Ottomans the main blow would fall on Gaza.",
+          "Late on 31 October 1917, with the wells still in Ottoman hands and daylight fading, about 800 men of the 4th and 12th Light Horse Regiments charged across open ground with bayonets in hand. They overran the trenches and took the town and most of its wells; 31 Australians were killed. The victory opened the road to Jerusalem, which fell in December."
+        ],
+        "es": [
+          "En octubre de 1917 la Fuerza Expedicionaria Egipcia británica, tras dos ataques fallidos contra Gaza, planeó romper la línea otomana por su extremo interior, Beerseba, cuyos pozos eran vitales para miles de hombres y caballos. Un oficial de estado mayor, Richard Meinertzhagen, se atribuyó después el mérito de un engaño en el que se dejó caer una mochila con planes falsos para convencer a los otomanos de que el golpe principal sería en Gaza.",
+          "Al final de la tarde del 31 de octubre de 1917, con los pozos todavía en manos otomanas y la luz del día apagándose, unos 800 hombres de los regimientos 4.º y 12.º de Caballería Ligera cargaron a campo abierto con la bayoneta en la mano. Arrollaron las trincheras y tomaron el pueblo y la mayoría de sus pozos; murieron 31 australianos. La victoria abrió el camino a Jerusalén, que cayó en diciembre."
+        ]
+      },
+      "journey": [
+        {
+          "place": "beersheba",
+          "name": {
+            "en": "Beersheba",
+            "es": "Beerseba"
+          },
+          "coordinates": [34.7867, 31.2522],
+          "date": "1917-10-31",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "Out of water and out of time, the Light Horse lines up at dusk for a charge the Turkish defenders expect to end in a dismount that never comes.",
+            "es": "Sin agua y sin tiempo, la Caballería Ligera se forma al atardecer para una carga que los defensores turcos creen que acabará con los jinetes desmontando, algo que nunca ocurre."
+          },
+          "history": {
+            "en": "The charge of the 4th Light Horse Brigade at Beersheba on 31 October 1917 captured the town and its wells before they could be destroyed.",
+            "es": "La carga de la 4.ª Brigada de Caballería Ligera en Beerseba el 31 de octubre de 1917 tomó el pueblo y sus pozos antes de que pudieran ser destruidos."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hells-angels-1930",
+      "kind": "film",
+      "title": "Hell's Angels",
+      "titleEs": "Los ángeles del infierno",
+      "year": 1930,
+      "era": "ww1",
+      "period": {
+        "start": "1914",
+        "end": "1917"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["air", "romance"],
+      "gold": false,
+      "directors": ["Howard Hughes"],
+      "countries": ["US"],
+      "languages": ["en", "de"],
+      "ids": {
+        "tmdb": 22301,
+        "tmdbType": "movie",
+        "imdb": "tt0020960",
+        "wikidata": "Q1068328"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Hell%27s_Angels_(film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Los_%C3%A1ngeles_del_infierno"
+      },
+      "synopsis": {
+        "en": "Two very different British brothers join the Royal Flying Corps and fall for the same woman, in Howard Hughes' lavish aviation epic of Zeppelin raids and roaring dogfights.",
+        "es": "Dos hermanos británicos muy distintos se unen al Real Cuerpo Aéreo y se enamoran de la misma mujer, en la lujosa epopeya aérea de Howard Hughes llena de ataques de zepelines y combates aéreos."
+      },
+      "history": {
+        "en": [
+          "Howard Hughes spent three years and nearly four million dollars on the film, assembling a private air force of vintage aircraft; three pilots and a mechanic died during filming. Begun as a silent picture, it was largely reshot with sound, and made Jean Harlow a star.",
+          "Its Zeppelin raid recalls a real campaign: from 1915 German airships bombed London and other British towns, killing more than 500 people, until improved fighters armed with incendiary bullets began shooting them down in flames from late 1916. The final mission against a German munitions dump and the clash with Richthofen's 'Flying Circus' are fictional."
+        ],
+        "es": [
+          "Howard Hughes dedicó tres años y casi cuatro millones de dólares a la película, reuniendo una fuerza aérea privada de aviones antiguos; tres pilotos y un mecánico murieron durante el rodaje. Comenzó como película muda, en gran parte se volvió a rodar con sonido y convirtió a Jean Harlow en estrella.",
+          "Su ataque de zepelín evoca una campaña real: desde 1915 los dirigibles alemanes bombardearon Londres y otras ciudades británicas y mataron a más de 500 personas, hasta que desde fines de 1916 cazas mejorados con balas incendiarias empezaron a derribarlos en llamas. La misión final contra un depósito de municiones alemán y el choque con el «Circo Volante» de Richthofen son ficticios."
+        ]
+      },
+      "journey": [
+        {
+          "place": "oxford",
+          "name": {
+            "en": "Oxford",
+            "es": "Oxford"
+          },
+          "coordinates": [-1.2578, 51.7519],
+          "date": "1914",
+          "kind": "city",
+          "story": {
+            "en": "At Oxford, the idealist Roy, the womaniser Monte and their German friend Karl hope a war between their countries never comes.",
+            "es": "En Oxford, el idealista Roy, el mujeriego Monte y su amigo alemán Karl esperan que nunca llegue una guerra entre sus países."
+          }
+        },
+        {
+          "place": "munich",
+          "name": {
+            "en": "Munich",
+            "es": "Múnich"
+          },
+          "coordinates": [11.575, 48.1375],
+          "date": "1914",
+          "kind": "city",
+          "story": {
+            "en": "Caught with an officer's wife, Monte flees a duel, and Roy takes his place and his bullet.",
+            "es": "Sorprendido con la esposa de un oficial, Monte huye de un duelo, y Roy ocupa su lugar y recibe la bala."
+          },
+          "history": {
+            "en": "Duelling was still tolerated among German officers before the war despite being illegal.",
+            "es": "Antes de la guerra el duelo aún se toleraba entre los oficiales alemanes pese a ser ilegal."
+          }
+        },
+        {
+          "place": "london",
+          "name": {
+            "en": "Zeppelin raid on London",
+            "es": "Ataque de zepelín sobre Londres"
+          },
+          "coordinates": [-0.1281, 51.5081],
+          "date": "1916",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "Karl, now a Zeppelin observer, is lowered below the clouds to guide bombs onto Trafalgar Square while the brothers take off to intercept.",
+            "es": "Karl, ahora observador de un zepelín, es descendido bajo las nubes para guiar las bombas sobre Trafalgar Square mientras los hermanos despegan para interceptarlo."
+          },
+          "history": {
+            "en": "London suffered its first Zeppelin raid on 31 May 1915, and airships kept bombing the capital until 1918.",
+            "es": "Londres sufrió su primer ataque de zepelín el 31 de mayo de 1915, y los dirigibles siguieron bombardeando la capital hasta 1918."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anzac-girls-2014",
+      "kind": "series",
+      "title": "ANZAC Girls",
+      "titleEs": "ANZAC Girls",
+      "year": 2014,
+      "seasons": 1,
+      "era": "ww1",
+      "period": {
+        "start": "1915",
+        "end": "1918"
+      },
+      "theaters": ["mediterranean", "western-europe"],
+      "tags": ["true-story", "home-front", "romance"],
+      "gold": false,
+      "directors": ["Ken Cameron", "Ian Watson"],
+      "countries": ["AU"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 61444,
+        "tmdbType": "tv",
+        "imdb": "tt3078602",
+        "wikidata": "Q16525714"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/ANZAC_Girls",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/ANZAC_Girls"
+      },
+      "synopsis": {
+        "en": "Five real Australian and New Zealand army nurses follow the war from Cairo to the island of Lemnos and the casualty clearing stations of the Western Front, finding love and grief among the wounded.",
+        "es": "Cinco enfermeras militares reales de Australia y Nueva Zelanda siguen la guerra desde El Cairo hasta la isla de Lemnos y los puestos de evacuación del Frente Occidental, entre amores y duelos junto a los heridos."
+      },
+      "history": {
+        "en": [
+          "The series is based on Peter Rees' book The Other ANZACs and on the diaries and letters of real nurses, including Matron Grace Wilson, Alice Ross-King, Olive Haynes, Elsie Cook and the New Zealander Hilda Steele. More than 2,000 nurses of the Australian Army Nursing Service served overseas during the war.",
+          "In August 1915 Grace Wilson's 3rd Australian General Hospital arrived on Lemnos to receive Gallipoli wounded and found no shelter, little water and dysentery everywhere. On the Western Front, Alice Ross-King was at the 2nd Casualty Clearing Station near Trois Arbres when German aircraft bombed it on 22 July 1917; she was one of only seven Australian nurses awarded the Military Medal."
+        ],
+        "es": [
+          "La serie se basa en el libro The Other ANZACs, de Peter Rees, y en los diarios y cartas de enfermeras reales, entre ellas la jefa Grace Wilson, Alice Ross-King, Olive Haynes, Elsie Cook y la neozelandesa Hilda Steele. Más de 2000 enfermeras del Servicio de Enfermería del Ejército Australiano sirvieron en el extranjero durante la guerra.",
+          "En agosto de 1915 el 3.er Hospital General Australiano de Grace Wilson llegó a Lemnos para recibir a los heridos de Galípoli y se encontró sin refugio, con poca agua y disentería por todas partes. En el Frente Occidental, Alice Ross-King estaba en el 2.º Puesto de Evacuación de Heridos cerca de Trois Arbres cuando aviones alemanes lo bombardearon el 22 de julio de 1917; fue una de solo siete enfermeras australianas que recibieron la Medalla Militar."
+        ]
+      },
+      "journey": [
+        {
+          "place": "cairo",
+          "name": {
+            "en": "Cairo hospitals",
+            "es": "Hospitales de El Cairo"
+          },
+          "coordinates": [31.2358, 30.0444],
+          "date": "1915",
+          "kind": "base",
+          "story": {
+            "en": "Fresh from Australia, the nurses start work in Cairo and meet the soldiers who will shape their lives, before the Gallipoli wounded pour in.",
+            "es": "Recién llegadas de Australia, las enfermeras empiezan a trabajar en El Cairo y conocen a los soldados que marcarán sus vidas, antes de que lleguen en masa los heridos de Galípoli."
+          },
+          "history": {
+            "en": "Cairo hosted the main Australian general hospitals serving the Gallipoli campaign in 1915.",
+            "es": "El Cairo albergó los principales hospitales generales australianos que atendieron la campaña de Galípoli en 1915."
+          }
+        },
+        {
+          "place": "mudros",
+          "name": {
+            "en": "Mudros, Lemnos",
+            "es": "Mudros, Lemnos"
+          },
+          "coordinates": [25.2706, 39.8744],
+          "date": "1915-08",
+          "kind": "base",
+          "story": {
+            "en": "Matron Wilson and Olive build a field hospital on a bare island with no shelter and little water, while dysentery spreads through staff and patients.",
+            "es": "La jefa Wilson y Olive levantan un hospital de campaña en una isla desnuda, sin refugio y con poca agua, mientras la disentería se extiende entre el personal y los pacientes."
+          },
+          "history": {
+            "en": "The harbour of Mudros on Lemnos was the forward Allied base for Gallipoli, ringed by tent hospitals in 1915.",
+            "es": "El puerto de Mudros, en Lemnos, fue la base aliada avanzada para Galípoli, rodeada de hospitales de campaña en 1915."
+          }
+        },
+        {
+          "place": "rouen",
+          "name": {
+            "en": "Rouen",
+            "es": "Ruan"
+          },
+          "coordinates": [1.1025, 49.4431],
+          "date": "1916-07",
+          "kind": "base",
+          "story": {
+            "en": "Posted to a British hospital in France, the nurses clash with British discipline as the wounded of the Somme arrive.",
+            "es": "Destinadas a un hospital británico en Francia, las enfermeras chocan con la disciplina británica mientras llegan los heridos del Somme."
+          },
+          "history": {
+            "en": "Rouen was a major British hospital and supply base throughout the war.",
+            "es": "Ruan fue una importante base británica de hospitales y suministros durante toda la guerra."
+          }
+        },
+        {
+          "place": "steenwerck",
+          "name": {
+            "en": "Casualty clearing station, Trois Arbres",
+            "es": "Puesto de evacuación, Trois Arbres"
+          },
+          "coordinates": [2.7775, 50.7003],
+          "date": "1917-07",
+          "kind": "base",
+          "primary": true,
+          "story": {
+            "en": "Close to the front, Alice and Hilda work through gas attacks and air raids that tear down the tents around their patients.",
+            "es": "Cerca del frente, Alice y Hilda trabajan entre ataques con gas y bombardeos aéreos que derriban las carpas sobre sus pacientes."
+          },
+          "history": {
+            "en": "German bombers hit the 2nd Casualty Clearing Station near Trois Arbres on 22 July 1917, killing four men.",
+            "es": "Bombarderos alemanes atacaron el 2.º Puesto de Evacuación de Heridos cerca de Trois Arbres el 22 de julio de 1917 y mataron a cuatro hombres."
+          }
+        }
+      ]
+    },
+    {
+      "id": "parades-end-2012",
+      "kind": "series",
+      "title": "Parade's End",
+      "titleEs": "Parade's End",
+      "year": 2012,
+      "seasons": 1,
+      "era": "ww1",
+      "period": {
+        "start": "1908",
+        "end": "1918-11"
+      },
+      "theaters": ["western-europe"],
+      "tags": ["romance", "home-front", "politics"],
+      "gold": false,
+      "directors": ["Susanna White"],
+      "countries": ["GB"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 39644,
+        "tmdbType": "tv",
+        "imdb": "tt1956017",
+        "wikidata": "Q2081513"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Parade%27s_End_(TV_series)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Parade%27s_End"
+      },
+      "synopsis": {
+        "en": "A brilliant, rigidly honourable Tory statistician is trapped between his cruel, dazzling wife and a young suffragette, as the war sweeps away the Edwardian world he was built to serve.",
+        "es": "Un estadístico conservador brillante y de una honestidad inflexible queda atrapado entre su esposa, cruel y deslumbrante, y una joven sufragista, mientras la guerra arrasa el mundo eduardiano al que él estaba hecho para servir."
+      },
+      "history": {
+        "en": [
+          "Tom Stoppard adapted Ford Madox Ford's four novels published between 1924 and 1928. Ford enlisted at 41, served as an officer with the Welch Regiment and was concussed by a shell during the Battle of the Somme in 1916, experiences he gave to Christopher Tietjens, whose war moves from a Whitehall statistics office to a base depot in Rouen and the front line.",
+          "The series also follows the home front: the suffragette campaign that the war interrupted, the social scandal around a crumbling marriage and the gradual collapse of the old governing class. Women over 30 who met a property qualification gained the vote in February 1918, months before the Armistice on 11 November brought the story to its close."
+        ],
+        "es": [
+          "Tom Stoppard adaptó las cuatro novelas de Ford Madox Ford publicadas entre 1924 y 1928. Ford se alistó a los 41 años, sirvió como oficial en el Regimiento Welch y sufrió una conmoción por un obús durante la batalla del Somme en 1916, experiencias que trasladó a Christopher Tietjens, cuya guerra pasa de una oficina de estadística en Whitehall a un depósito de base en Ruan y a la primera línea.",
+          "La serie también sigue el frente interno: la campaña sufragista que la guerra interrumpió, el escándalo social en torno a un matrimonio que se derrumba y la caída gradual de la vieja clase dirigente. Las mujeres mayores de 30 años que cumplían un requisito de propiedad obtuvieron el voto en febrero de 1918, meses antes de que el armisticio del 11 de noviembre cerrara la historia."
+        ]
+      },
+      "journey": [
+        {
+          "place": "london",
+          "name": {
+            "en": "Edwardian London",
+            "es": "Londres eduardiano"
+          },
+          "coordinates": [-0.1275, 51.5072],
+          "date": "1912",
+          "kind": "city",
+          "story": {
+            "en": "Christopher marries the pregnant Sylvia, endures her infidelities for the sake of honour and meets Valentine Wannop at a disrupted golf match.",
+            "es": "Christopher se casa con Sylvia, embarazada, soporta sus infidelidades por honor y conoce a Valentine Wannop en un partido de golf interrumpido."
+          },
+          "history": {
+            "en": "Suffragettes of the Women's Social and Political Union escalated to window-smashing and arson in London in 1912 and 1913.",
+            "es": "Las sufragistas de la Unión Social y Política de las Mujeres llegaron a romper vitrinas e incendiar edificios en Londres en 1912 y 1913."
+          }
+        },
+        {
+          "place": "rouen",
+          "name": {
+            "en": "Base depot, Rouen",
+            "es": "Depósito de base, Ruan"
+          },
+          "coordinates": [1.1025, 49.4431],
+          "date": "1917",
+          "kind": "base",
+          "primary": true,
+          "story": {
+            "en": "Running a camp that sends drafts up the line, Tietjens is pursued there by Sylvia, and a scandal with a general pushes him toward the trenches.",
+            "es": "Mientras dirige un campamento que envía refuerzos al frente, Tietjens es perseguido hasta allí por Sylvia, y un escándalo con un general lo empuja hacia las trincheras."
+          },
+          "history": {
+            "en": "Rouen held some of the largest British base depots, through which reinforcements passed on their way to the front.",
+            "es": "Ruan albergaba algunos de los mayores depósitos de base británicos, por donde pasaban los refuerzos camino al frente."
+          }
+        },
+        {
+          "place": "london",
+          "name": {
+            "en": "Armistice night, London",
+            "es": "Noche del armisticio, Londres"
+          },
+          "coordinates": [-0.1275, 51.5072],
+          "date": "1918-11-11",
+          "kind": "city",
+          "story": {
+            "en": "As the city celebrates the end of the war, Christopher must decide what kind of life is left for him.",
+            "es": "Mientras la ciudad celebra el fin de la guerra, Christopher debe decidir qué clase de vida le queda."
+          },
+          "history": {
+            "en": "Crowds filled central London on 11 November 1918 as news of the Armistice spread.",
+            "es": "Multitudes llenaron el centro de Londres el 11 de noviembre de 1918 al conocerse la noticia del armisticio."
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-big-parade-1925",
+      "kind": "film",
+      "title": "The Big Parade",
+      "titleEs": "El gran desfile",
+      "year": 1925,
+      "era": "ww1",
+      "period": {
+        "start": "1917-04",
+        "end": "1918"
+      },
+      "theaters": ["western-europe", "americas"],
+      "tags": ["combat", "romance"],
+      "gold": false,
+      "directors": ["King Vidor"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 3060,
+        "tmdbType": "movie",
+        "imdb": "tt0015624",
+        "wikidata": "Q1218520"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/The_Big_Parade",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/El_gran_desfile"
+      },
+      "synopsis": {
+        "en": "A rich idler swept into the army by a patriotic parade falls for a French farm girl in a Marne village, until the order comes to march to the front with his two new friends.",
+        "es": "Un joven rico y ocioso, arrastrado al ejército por un desfile patriótico, se enamora de una campesina francesa en una aldea del Marne, hasta que llega la orden de marchar al frente con sus dos nuevos amigos."
+      },
+      "history": {
+        "en": [
+          "King Vidor's silent epic was written from a story by Laurence Stallings, a US Marine who lost a leg after being wounded at Belleau Wood in June 1918. It became one of the most profitable films of the silent era and was among the first Hollywood films to show the war from the viewpoint of an ordinary American soldier.",
+          "The United States declared war in April 1917, and by the summer of 1918 more than a million American troops were in France, many billeted in villages behind the Marne front. In June and July 1918 they fought at Château-Thierry and Belleau Wood to stop the German drive on Paris, taking heavy losses in attacks through woods swept by machine guns, as the film shows."
+        ],
+        "es": [
+          "La epopeya muda de King Vidor partió de una historia de Laurence Stallings, un marine estadounidense que perdió una pierna tras ser herido en el bosque de Belleau en junio de 1918. Fue una de las películas más rentables de la época muda y una de las primeras de Hollywood en mostrar la guerra desde la mirada de un soldado estadounidense común.",
+          "Estados Unidos declaró la guerra en abril de 1917 y para el verano de 1918 había más de un millón de soldados estadounidenses en Francia, muchos alojados en aldeas detrás del frente del Marne. En junio y julio de 1918 combatieron en Château-Thierry y en el bosque de Belleau para frenar el avance alemán sobre París, con grandes pérdidas en ataques a través de bosques barridos por ametralladoras, como muestra la película."
+        ]
+      },
+      "journey": [
+        {
+          "place": "champillon",
+          "name": {
+            "en": "Champillon, Marne",
+            "es": "Champillon, Marne"
+          },
+          "coordinates": [3.9781, 49.0847],
+          "date": "1918",
+          "kind": "base",
+          "primary": true,
+          "story": {
+            "en": "Billeted on a farm, Jim courts Melisande with chewing gum and gestures, until the column moves out and she runs after the trucks.",
+            "es": "Alojado en una granja, Jim corteja a Melisande con chicle y gestos, hasta que la columna parte y ella corre detrás de los camiones."
+          },
+          "history": {
+            "en": "American divisions were billeted in Marne villages like Champillon, near Épernay, in 1918 before moving up to the front.",
+            "es": "En 1918 las divisiones estadounidenses se alojaron en aldeas del Marne como Champillon, cerca de Épernay, antes de avanzar hacia el frente."
+          }
+        }
+      ]
+    },
+    {
+      "id": "a-farewell-to-arms-1932",
+      "kind": "film",
+      "title": "A Farewell to Arms",
+      "titleEs": "Adiós a las armas",
+      "year": 1932,
+      "era": "ww1",
+      "period": {
+        "start": "1917",
+        "end": "1918"
+      },
+      "theaters": ["mediterranean"],
+      "tags": ["romance"],
+      "gold": false,
+      "directors": ["Frank Borzage"],
+      "countries": ["US"],
+      "languages": ["en"],
+      "ids": {
+        "tmdb": 22649,
+        "tmdbType": "movie",
+        "imdb": "tt0022879",
+        "wikidata": "Q1575490"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/A_Farewell_to_Arms_(1932_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Adi%C3%B3s_a_las_armas_(pel%C3%ADcula_de_1932)"
+      },
+      "synopsis": {
+        "en": "An American ambulance driver in the Italian army and an English nurse fall in love between air raids and hospital wards, while the war keeps tearing them apart.",
+        "es": "Un conductor de ambulancias estadounidense en el ejército italiano y una enfermera inglesa se enamoran entre bombardeos y salas de hospital, mientras la guerra los separa una y otra vez."
+      },
+      "history": {
+        "en": [
+          "The film adapts Ernest Hemingway's 1929 novel, drawn from his own war: at 18 he drove ambulances for the American Red Cross in Italy, was badly wounded at Fossalta di Piave on 8 July 1918 and recovered in a Milan hospital, where he fell in love with the American nurse Agnes von Kurowsky.",
+          "Italy entered the war in May 1915 and fought eleven battles along the Isonzo river, taking Gorizia in August 1916, before the Austro-German breakthrough at Caporetto in October 1917 forced a chaotic retreat to the Piave. The novel's front is the Isonzo sector around Gorizia; the film keeps it vague and concentrates on the love story."
+        ],
+        "es": [
+          "La película adapta la novela de Ernest Hemingway de 1929, basada en su propia guerra: a los 18 años manejó ambulancias para la Cruz Roja estadounidense en Italia, fue herido de gravedad en Fossalta di Piave el 8 de julio de 1918 y se recuperó en un hospital de Milán, donde se enamoró de la enfermera estadounidense Agnes von Kurowsky.",
+          "Italia entró en la guerra en mayo de 1915 y libró once batallas a lo largo del río Isonzo, tomando Gorizia en agosto de 1916, antes de que la ruptura austroalemana en Caporetto en octubre de 1917 obligara a una retirada caótica hasta el Piave. El frente de la novela es el sector del Isonzo alrededor de Gorizia; la película lo deja en términos vagos y se concentra en la historia de amor."
+        ]
+      },
+      "journey": [
+        {
+          "place": "gorizia",
+          "name": {
+            "en": "Italian front on the Isonzo",
+            "es": "Frente italiano del Isonzo"
+          },
+          "coordinates": [13.6193, 45.9352],
+          "date": "1917",
+          "kind": "front",
+          "story": {
+            "en": "During a bombing raid Frederic meets Catherine on a dark staircase, then leaves for the front, where a shell badly wounds him.",
+            "es": "Durante un bombardeo Frederic conoce a Catherine en una escalera oscura y luego parte al frente, donde un obús lo hiere de gravedad."
+          },
+          "history": {
+            "en": "Italian troops took Gorizia in August 1916, during the Sixth Battle of the Isonzo.",
+            "es": "Las tropas italianas tomaron Gorizia en agosto de 1916, durante la sexta batalla del Isonzo."
+          }
+        },
+        {
+          "place": "milan",
+          "name": {
+            "en": "Military hospital, Milan",
+            "es": "Hospital militar, Milán"
+          },
+          "coordinates": [9.19, 45.4669],
+          "date": "1917",
+          "kind": "city",
+          "primary": true,
+          "story": {
+            "en": "Catherine rushes to Frederic's bedside, a priest quietly marries them, and their happiness lasts only until his leave is cancelled.",
+            "es": "Catherine corre junto a la cama de Frederic, un sacerdote los casa en secreto y su felicidad dura solo hasta que le cancelan el permiso."
+          },
+          "history": {
+            "en": "Hemingway recovered at the American Red Cross hospital in Milan in the summer and autumn of 1918.",
+            "es": "Hemingway se recuperó en el hospital de la Cruz Roja estadounidense en Milán en el verano y el otoño de 1918."
+          }
+        },
+        {
+          "place": "turin",
+          "name": {
+            "en": "Turin",
+            "es": "Turín"
+          },
+          "coordinates": [7.6761, 45.0792],
+          "date": "1918",
+          "kind": "city",
+          "story": {
+            "en": "Separated from Catherine, Frederic writes letters that never arrive, unaware that Rinaldi is intercepting them.",
+            "es": "Separado de Catherine, Frederic escribe cartas que nunca llegan, sin saber que Rinaldi las está interceptando."
+          }
+        },
+        {
+          "place": "brissago",
+          "name": {
+            "en": "Brissago, Switzerland",
+            "es": "Brissago, Suiza"
+          },
+          "coordinates": [8.7, 46.1167],
+          "date": "1918",
+          "kind": "city",
+          "story": {
+            "en": "Deserting the army, Frederic races across the border to the lakeside town where Catherine is waiting to give birth.",
+            "es": "Tras desertar del ejército, Frederic cruza la frontera a toda prisa hacia el pueblo junto al lago donde Catherine espera dar a luz."
+          },
+          "history": {
+            "en": "Neutral Switzerland, just across Lake Maggiore from Italy, sheltered deserters and refugees throughout the war.",
+            "es": "La Suiza neutral, al otro lado del lago Mayor desde Italia, acogió a desertores y refugiados durante toda la guerra."
+          }
+        }
+      ]
+    },
+    {
+      "id": "battalion-2015",
+      "kind": "film",
+      "title": "Battalion",
+      "titleEs": "Batalon",
+      "originalTitle": "Батальонъ",
+      "year": 2015,
+      "era": "ww1",
+      "period": {
+        "start": "1917-05",
+        "end": "1917-07"
+      },
+      "theaters": ["eastern-europe"],
+      "tags": ["combat", "true-story", "biography"],
+      "gold": false,
+      "directors": ["Dmitry Meskhiev"],
+      "countries": ["RU"],
+      "languages": ["ru"],
+      "ids": {
+        "tmdb": 326011,
+        "tmdbType": "movie",
+        "imdb": "tt4187590",
+        "wikidata": "Q19329909"
+      },
+      "links": {
+        "wikipediaEn": "https://en.wikipedia.org/wiki/Battalion_(2015_film)",
+        "wikipediaEs": "https://es.wikipedia.org/wiki/Batalon"
+      },
+      "synopsis": {
+        "en": "In revolutionary 1917, with Russia's army falling apart, a tough peasant veteran forms a battalion of women volunteers to shame the men back into the fight.",
+        "es": "En el revolucionario 1917, con el ejército ruso desmoronándose, una dura veterana de origen campesino forma un batallón de mujeres voluntarias para avergonzar a los hombres y hacerlos volver a combatir."
+      },
+      "history": {
+        "en": [
+          "After the February Revolution of 1917, Russian soldiers were deserting and fraternising with the enemy. Maria Bochkareva, a peasant woman who had fought at the front since 1915, won approval from the Provisional Government to form the 1st Russian Women's Battalion of Death in Petrograd. About 2,000 women volunteered, but her harsh discipline left only around 300.",
+          "The battalion was blessed at St Isaac's Cathedral in June 1917, attached to the 1st Siberian Corps and sent to the Western Front for the Kerensky Offensive. In July it fought near Smorgon, where the women performed well but most of the demoralised male troops refused to advance; Bochkareva was wounded. The Bolsheviks disbanded the women's units in November 1917."
+        ],
+        "es": [
+          "Tras la Revolución de Febrero de 1917, los soldados rusos desertaban y confraternizaban con el enemigo. Maria Bochkariova, una mujer campesina que combatía en el frente desde 1915, obtuvo del Gobierno Provisional la autorización para formar en Petrogrado el 1.er Batallón Femenino de la Muerte. Se ofrecieron unas 2000 voluntarias, pero su dura disciplina dejó solo a unas 300.",
+          "El batallón fue bendecido en la catedral de San Isaac en junio de 1917, agregado al 1.er Cuerpo Siberiano y enviado al Frente Occidental ruso para la ofensiva Kérenski. En julio combatió cerca de Smorgón, donde las mujeres se desempeñaron bien pero la mayoría de los soldados varones, desmoralizados, se negó a avanzar; Bochkariova resultó herida. Los bolcheviques disolvieron las unidades femeninas en noviembre de 1917."
+        ]
+      },
+      "journey": [
+        {
+          "place": "petrograd",
+          "name": {
+            "en": "Petrograd",
+            "es": "Petrogrado"
+          },
+          "coordinates": [30.3167, 59.95],
+          "date": "1917-05",
+          "kind": "city",
+          "story": {
+            "en": "Women from every class answer Bochkareva's call, and her brutal training weeds out all but the toughest before the battalion is blessed and sent off.",
+            "es": "Mujeres de todas las clases responden al llamado de Bochkariova, y su entrenamiento brutal descarta a todas salvo a las más duras antes de que el batallón sea bendecido y enviado al frente."
+          },
+          "history": {
+            "en": "Petrograd, renamed from Saint Petersburg in 1914, was the centre of the 1917 revolutions.",
+            "es": "Petrogrado, nombre que recibió San Petersburgo en 1914, fue el centro de las revoluciones de 1917."
+          }
+        },
+        {
+          "place": "smorgon",
+          "name": {
+            "en": "Smorgon front",
+            "es": "Frente de Smorgón"
+          },
+          "coordinates": [26.4, 54.4836],
+          "date": "1917-07",
+          "kind": "battle",
+          "primary": true,
+          "story": {
+            "en": "In trenches where the men would rather make peace with the Germans, the women go over the top and face gas and machine guns.",
+            "es": "En trincheras donde los hombres prefieren hacer las paces con los alemanes, las mujeres salen al ataque y enfrentan gas y ametralladoras."
+          },
+          "history": {
+            "en": "The women's battalion attacked near Smorgon in July 1917 as part of the failed Kerensky Offensive.",
+            "es": "El batallón femenino atacó cerca de Smorgón en julio de 1917 como parte de la fracasada ofensiva Kérenski."
+          }
+        }
+      ]
+    }
+  ]
+}
