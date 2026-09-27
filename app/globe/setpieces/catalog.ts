@@ -42,9 +42,9 @@ export const SET_PIECES: SetPieceMeta[] = [
     at: [2.3764, 51.0378],
     clock: "",
     era: "ww2",
-    duration: 30,
-    beats: [0, 5, 10, 15, 20, 26],
-    stills: [3, 8, 13, 17.5, 23, 28.5],
+    duration: 72,
+    beats: [0, 10, 20, 33, 44, 56, 65],
+    stills: [4, 15, 25, 39.5, 48, 61, 68],
     vignette:
       '<path d="M4 46c6 2 10 2 16 0s10-2 16 0 10 2 16 0 6-2 8-1" /><path d="M14 40h14l-3 4H17z" fill="currentColor" fill-opacity=".35"/><path d="M36 38h16l-3 5H39z" fill="currentColor" fill-opacity=".35"/><path d="M21 40v-8l5 6M44 38v-7" /><path d="M50 10c-4 2-5 6-3 10s0 8-4 10M56 8c-3 3-3 7-1 10" stroke-width="2.4" opacity=".7"/>',
   },

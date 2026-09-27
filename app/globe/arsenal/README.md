@@ -6,7 +6,9 @@ place it in any scene by id.
 ## Conventions
 
 - Units: every model is normalized to length 1 along its main axis. The scene
-  passes the on-screen length when it places an instance.
+  passes the on-screen length when it places an instance. Exception: `bef-soldier`
+  is normalized to height 1, feet at y=0; its `meters: 1.75` and the scalar
+  passed to `kit.unit` describe height, not length. Do not reuse the squad scale.
 - Axes: `+z` is forward (bow, nose or gun), `+y` is up, `x` is the beam or
   wingspan. The origin sits at the waterline or on the ground, in the middle of
   the model.
@@ -39,6 +41,27 @@ place it in any scene by id.
 | `mg-nest`              | Tobruk machine-gun nest                           | Axis    |
 | `hedgehog`             | Czech hedgehog beach obstacle                     | Axis    |
 | `village`              | Normandy village with a church                    | Neutral |
+
+## Dunkirk (1940)
+
+| Id                 | Model                                                        | Scale       | Side   |
+| ------------------ | ------------------------------------------------------------ | ----------- | ------ |
+| `vw-destroyer`     | V/W-class destroyer, four single shields and two funnels     | 95 m long   | Allied |
+| `dunkirk-yacht`    | Cream and blue motor yacht, varnished cabin, open aft deck   | 15 m long   | Allied |
+| `dunkirk-trawler`  | Fishing trawler, ochre wheelhouse, working boom and winch    | 22 m long   | Allied |
+| `dunkirk-lifeboat` | Open lifeboat, thwarts, oars and seated helmsman             | 8 m long    | Allied |
+| `spitfire-mk1`     | Elliptical-wing Spitfire Mk I, earth/green, RAF roundels     | 9.1 m long  | Allied |
+| `ju87b`            | Ju 87 B, inverted gull wings and fixed spatted undercarriage | 11 m long   | Axis   |
+| `bef-soldier`      | One BEF soldier with Brodie helmet, webbing and pack         | 1.75 m tall | Allied |
+
+These original procedural models depict representative 1940 silhouettes, not
+specific named vessels or aircraft serials. They have no 1944 invasion stripes.
+Ship origins are at waterline y=0; length 1 follows +z, including the lifeboat's
+perimeter gunwale. Ships contain no evacuation passengers; the lifeboat has
+only its seated helmsman. The scene instances passengers separately. Aircraft
+have no baked bombs. Each builder returns one merged vertex-colour geometry,
+with no material groups, for one instanced draw per type. Target budgets are
+8,000 triangles per vehicle and 600 per individual soldier.
 
 ## Adding a model
 

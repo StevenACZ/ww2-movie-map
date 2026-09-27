@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2026-09-27]
+
+### Changed
+
+- Rebuilt Dunkirk as a seven-chapter evacuation with a detailed East Mole, boarding troops, varied rescue boats, V/W-class destroyers, Spitfires and Ju 87s.
+- Added animated surf, ship wakes, diving aircraft, water impacts and a slower cinematic camera journey.
+- Added licensed sea, boat-engine and Spitfire recordings with stereo positioning, synchronized ambience and live sound controls.
+
 ## [2026-09-26]
 
 ### Added

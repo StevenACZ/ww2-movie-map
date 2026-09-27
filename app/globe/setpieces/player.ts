@@ -163,6 +163,21 @@ export class SetPiecePlayer {
     this.dirty = true;
   }
 
+  setSound(enabled: boolean) {
+    if (!this.kit || this.still) return;
+    this.audio?.dispose();
+    this.audio = null;
+    if (!enabled || this.phase === "outro") return;
+    this.audio = new SetPieceAudio(true);
+    if (!this.playing) this.audio.pause();
+    if (this.phase !== "run" || !this.scene) return;
+    for (const [at, kind, duration, pan] of this.scene.cues) {
+      if (kind !== "drone" && kind !== "surf" && kind !== "engine") continue;
+      if (at <= this.t && at + duration > this.t)
+        this.audio.play(kind, at + duration - this.t, pan, this.scene.pace);
+    }
+  }
+
   replay() {
     if (!this.meta) return;
     this.step = 0;
@@ -172,6 +187,7 @@ export class SetPiecePlayer {
     if (this.phase === "outro") this.phase = "run";
     if (!this.still) {
       this.playing = true;
+      this.audio?.stop();
       this.audio?.resume();
       this.hooks.state(true);
     }
@@ -196,7 +212,7 @@ export class SetPiecePlayer {
     this.phaseU = 0;
     this.phaseLength = 1.8;
     this.arc = 0.08;
-    this.audio?.pause();
+    this.audio?.stop();
     this.grade(false);
   }
 
@@ -388,7 +404,7 @@ export class SetPiecePlayer {
       const cues = scene.cues;
       while (this.cue < cues.length && cues[this.cue]![0] <= this.t) {
         const cue = cues[this.cue++]!;
-        this.audio?.play(cue[1], cue[2]);
+        this.audio?.play(cue[1], cue[2], cue[3], scene.pace);
       }
       if (this.t >= meta.duration) this.beginOutro();
     }

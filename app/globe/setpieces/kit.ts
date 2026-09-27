@@ -640,8 +640,9 @@ export const WHITE = new Color(1, 1, 1);
 
 export type Cue = [
   at: number,
-  kind: "boom" | "far" | "drone" | "rumble",
+  kind: "boom" | "far" | "drone" | "rumble" | "surf" | "engine" | "flyby",
   level: number,
+  pan?: number,
 ];
 
 export interface Label {

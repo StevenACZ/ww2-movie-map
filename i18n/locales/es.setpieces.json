@@ -49,31 +49,35 @@
       "dunkirk": {
         "title": "Evacuación de Dunkerque",
         "place": "Dunkerque, Francia",
-        "teaser": "Destructores y los Little Ships devuelven un ejército a casa cruzando el Canal.",
+        "teaser": "El espigón, la playa y el Canal: un ejército escapa por mar bajo el fuego enemigo.",
         "beats": [
           {
-            "time": "26 de mayo",
-            "text": "Cercadas en Dunkerque, tropas británicas y francesas esperan en las playas y a lo largo del espigón del puerto."
+            "time": "26 de mayo de 1940",
+            "text": "Cercadas en la costa, tropas británicas y francesas esperan en largas filas. Comienza la Operación Dinamo."
           },
           {
-            "time": "Día y noche",
-            "text": "Destructores, ferris y transportes van y vienen por el Canal hacia Dover y otros puertos ingleses."
+            "time": "El espigón este",
+            "text": "El estrecho espigón se convierte en una vía de escape. Destructores y otros buques grandes embarcan a los soldados directamente."
           },
           {
-            "time": "En las playas",
-            "text": "Cientos de Little Ships llevan soldados desde la orilla hasta los barcos grandes fondeados mar adentro."
+            "time": "Los Little Ships",
+            "text": "Yates, pesqueros y botes llegan a las aguas poco profundas y trasladan soldados desde la playa hasta los buques mar adentro."
           },
           {
-            "time": "Sobre la ciudad",
-            "text": "Los bombardeos alemanes incendiaron los tanques de petróleo del puerto; el humo negro cubre la costa."
+            "time": "Bajo ataque",
+            "text": "Los bombarderos Ju 87 atacan la evacuación. Las bombas levantan columnas de agua mientras continúa el rescate."
           },
           {
-            "time": "Desde el aire",
-            "text": "Los Stukas se lanzan sobre los barcos. Los ataques aéreos hunden seis destructores británicos y tres franceses."
+            "time": "La cobertura de la RAF",
+            "text": "Spitfires y Hurricanes ayudan a proteger la evacuación e interceptan aviones alemanes sobre la costa y tierra adentro."
           },
           {
-            "time": "4 de junio",
-            "text": "Al terminar, unos 338 000 soldados han sido puestos a salvo."
+            "time": "A través del Canal",
+            "text": "Los buques cargados ponen rumbo a Inglaterra. Las tripulaciones navales y las embarcaciones pequeñas regresan por más hombres."
+          },
+          {
+            "time": "4 de junio de 1940",
+            "text": "Dinamo termina con 338 226 soldados evacuados. La retaguardia francesa ganó un tiempo vital; muchos hombres quedaron atrás."
           }
         ]
       },

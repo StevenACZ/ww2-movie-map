@@ -49,31 +49,35 @@
       "dunkirk": {
         "title": "Dunkirk evacuation",
         "place": "Dunkirk, France",
-        "teaser": "Destroyers and the Little Ships bring an army home across the Channel.",
+        "teaser": "The mole, the beach and the Channel: an army escapes by sea under fire.",
         "beats": [
           {
-            "time": "26 May",
-            "text": "Cut off at Dunkirk, British and French troops wait on the beaches and along the harbour mole."
+            "time": "26 May 1940",
+            "text": "Trapped on the coast, British and French troops wait in long queues. Operation Dynamo begins."
           },
           {
-            "time": "Day and night",
-            "text": "Destroyers, ferries and transports shuttle across the Channel to Dover and other English ports."
+            "time": "The East Mole",
+            "text": "The narrow breakwater becomes a lifeline. Destroyers and other large vessels take soldiers aboard directly from the mole."
           },
           {
-            "time": "On the beaches",
-            "text": "Hundreds of Little Ships ferry soldiers from the shallows out to the larger ships offshore."
+            "time": "The Little Ships",
+            "text": "Yachts, fishing boats and lifeboats reach the shallows, ferrying men from the beach to ships offshore."
           },
           {
-            "time": "Over the town",
-            "text": "German bombing has set the port's oil tanks ablaze; black smoke hangs over the coast."
+            "time": "Under attack",
+            "text": "Ju 87 dive-bombers attack the evacuation. Bombs throw up columns of seawater as the rescue continues."
           },
           {
-            "time": "From the air",
-            "text": "Stukas dive on the ships. Air attacks sink six British and three French destroyers."
+            "time": "RAF cover",
+            "text": "Spitfires and Hurricanes help defend the evacuation, intercepting German aircraft over the coast and inland."
           },
           {
-            "time": "4 June",
-            "text": "When it ends, about 338,000 soldiers have been brought to safety."
+            "time": "Across the Channel",
+            "text": "Loaded vessels head for England. Naval crews and small craft keep returning for more men."
+          },
+          {
+            "time": "4 June 1940",
+            "text": "Dynamo ends with 338,226 troops evacuated. French rear guards bought vital time; many men were still left behind."
           }
         ]
       },
