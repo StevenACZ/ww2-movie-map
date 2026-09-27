@@ -12,6 +12,7 @@ export type SetPieceId =
 export interface SetPieceMeta {
   id: SetPieceId;
   date: string;
+  at: [number, number];
   clock: string;
   era: "ww1" | "ww2";
   event?: string;
@@ -25,6 +26,7 @@ export const SET_PIECES: SetPieceMeta[] = [
   {
     id: "messines",
     date: "1917-06-07",
+    at: [2.895, 50.763],
     clock: "03:10",
     era: "ww1",
     duration: 28,
@@ -37,6 +39,7 @@ export const SET_PIECES: SetPieceMeta[] = [
     id: "dunkirk",
     event: "dunkirk-evacuation",
     date: "1940-05-26",
+    at: [2.3764, 51.0378],
     clock: "",
     era: "ww2",
     duration: 30,
@@ -49,6 +52,7 @@ export const SET_PIECES: SetPieceMeta[] = [
     id: "pearl-harbor",
     event: "attack-on-pearl-harbor",
     date: "1941-12-07",
+    at: [-157.9536, 21.3619],
     clock: "07:48",
     era: "ww2",
     duration: 32,
@@ -61,6 +65,7 @@ export const SET_PIECES: SetPieceMeta[] = [
     id: "midway",
     event: "battle-of-midway",
     date: "1942-06-04",
+    at: [-177.35, 28.2075],
     clock: "10:25",
     era: "ww2",
     duration: 32,
@@ -73,6 +78,7 @@ export const SET_PIECES: SetPieceMeta[] = [
     id: "d-day",
     event: "d-day",
     date: "1944-06-06",
+    at: [-0.8686, 49.3689],
     clock: "06:30",
     era: "ww2",
     duration: 32,
@@ -85,6 +91,7 @@ export const SET_PIECES: SetPieceMeta[] = [
     id: "hiroshima",
     event: "atomic-bombing-of-hiroshima",
     date: "1945-08-06",
+    at: [132.4536, 34.3956],
     clock: "08:15",
     era: "ww2",
     duration: 32,
@@ -97,6 +104,7 @@ export const SET_PIECES: SetPieceMeta[] = [
     id: "nagasaki",
     event: "atomic-bombing-of-nagasaki",
     date: "1945-08-09",
+    at: [129.8796, 32.7495],
     clock: "11:02",
     era: "ww2",
     duration: 32,

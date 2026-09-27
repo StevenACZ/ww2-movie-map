@@ -23,7 +23,9 @@
       "fonts": "Tipografías",
       "three": "Motor del globo 3D",
       "sounds": "Efectos de sonido",
-      "soundsNote": "Grabaciones de juskiddink y duckduckpony (CC BY 4.0) y de autores CC0, recortadas y mezcladas para este sitio."
+      "soundsNote": "Grabaciones de juskiddink y duckduckpony (CC BY 4.0) y de autores CC0, recortadas y mezcladas para este sitio.",
+      "flags": "Banderas históricas",
+      "flagsNote": "Banderas de cada fecha, de Wikimedia Commons; autores y licencias en /flags/CREDITS.md."
     },
     "authorEyebrow": "Autor",
     "error": {

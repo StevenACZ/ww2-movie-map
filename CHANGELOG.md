@@ -23,6 +23,8 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Added 15 dated front lines with a consistency check.
 - Added self-hosted posters for 217 titles, sourced from Wikipedia, letterboxed when the original is not a portrait poster, with small variants for globe markers.
 - Added mini-maps and poster previews to place cards, and search by country, title, and alternative names on the places index.
+- Added 3D event pins on the globe that open each special event with one click.
+- Added a nations-at-war panel that lists the belligerents of the current date by side with the flags they flew, and flags in the country tooltip, from 110 Wikimedia Commons flags.
 
 ### Changed
 
@@ -49,6 +51,9 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Fixed hairline seams across country fills on the globe.
 - Fixed a flash of English and a hydration mismatch for returning Spanish visitors on the home page.
+- Fixed country fills breaking into triangles while the borders of two eras crossfade.
+- Fixed place cards pulsing and vanishing on hover because a scoped style leaked to the whole card.
+- Fixed slow panning over Europe by keeping globe markers and labels on their own compositor layers and skipping unchanged DOM writes.
 
 ## [Unreleased]
 

@@ -73,9 +73,9 @@ const dot = computed(() => props.span * 0.02);
 }
 
 @include motion {
-  :global(.place-card:hover) .mini__ping,
-  :global(.place-card:focus-visible) .mini__ping,
-  :global(.place-card.is-active) .mini__ping {
+  .place-card:hover .mini__ping,
+  .place-card:focus-visible .mini__ping,
+  .place-card.is-active .mini__ping {
     animation: mini-ping 1.6s $ease-out infinite;
   }
 }

@@ -33,6 +33,7 @@ import europeOps from "~~/data/operations/europe.json";
 import worldOps from "~~/data/operations/world.json";
 import frontsFile from "~~/data/fronts.json";
 import countriesFile from "~~/data/geo/countries.json";
+import flagsFile from "~~/data/flags.json";
 import tmdbFile from "~~/data/tmdb.json";
 import postersFile from "~~/data/posters.json";
 import placesFile from "~~/data/places.json";
@@ -358,6 +359,10 @@ export function worldData(): WorldData {
       }
     >;
   };
+  const flags = flagsFile as unknown as {
+    flags: Record<string, { file: string; ratio: number }>;
+    countries: Record<string, [string, string | null][]>;
+  };
   return {
     operations: ops.map((op) => ({
       id: op.id,
@@ -391,7 +396,21 @@ export function worldData(): WorldData {
             toMonths(date),
             status,
           ]),
+          ...(flags.countries[id]
+            ? {
+                flags: flags.countries[id].map(([date, slug]) => [
+                  toMonths(date),
+                  slug,
+                ]),
+              }
+            : {}),
         },
+      ])
+    ),
+    flags: Object.fromEntries(
+      Object.entries(flags.flags).map(([slug, flag]) => [
+        slug,
+        { file: flag.file, ratio: flag.ratio },
       ])
     ),
     sets: Object.fromEntries(

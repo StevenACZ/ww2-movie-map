@@ -23,6 +23,7 @@ import {
   Overlay,
   type LabelInput,
   type MarkerInput,
+  type PieceInput,
   type TagInput,
 } from "./overlay";
 import type { PaletteMode } from "./palette";
@@ -157,6 +158,7 @@ export class GlobeEngine {
     from: number;
     to: number;
     start: number;
+    hold?: boolean;
   }[] = [];
   private paletteFade: { layer: CountryLayer; start: number } | null = null;
   private t = 0;
@@ -355,6 +357,7 @@ export class GlobeEngine {
   setTime(t: number, animate = true) {
     this.t = t;
     this.dirty = true;
+    this.overlay.setPieceTime(t);
     const key = this.setFor(t);
     if (key !== this.lastSet) {
       this.lastSet = key;
@@ -367,9 +370,17 @@ export class GlobeEngine {
         this.fading = this.fading.filter(
           (f) => f.layer !== layer && f.layer !== previous
         );
-        this.fading.push({ layer, from: 0, to: 1, start: now });
+        previous?.raise(false);
+        layer.raise(true);
+        this.fading.push({ layer, from: layer.opacity, to: 1, start: now });
         if (previous && previous !== layer)
-          this.fading.push({ layer: previous, from: 1, to: 0, start: now });
+          this.fading.push({
+            layer: previous,
+            from: previous.opacity,
+            to: 0,
+            start: now,
+            hold: true,
+          });
         this.overlay.setLabelFilter(new Set(layer.ids));
         this.dirty = true;
       });
@@ -414,6 +425,7 @@ export class GlobeEngine {
     this.units.group.visible = this.layers.units;
     this.fronts.group.visible = this.layers.fronts;
     this.pulses.group.visible = this.layers.events;
+    this.overlay.setPieces(this.layers.events ? this.pieces : []);
     this.dirty = true;
     this.overlayStale = true;
   }
@@ -432,6 +444,14 @@ export class GlobeEngine {
     this.pulses.setEvents(events);
     this.dirty = true;
   }
+
+  setPieces(pieces: PieceInput[]) {
+    this.pieces = pieces;
+    this.overlay.setPieces(this.layers.events ? pieces : []);
+    this.dirty = true;
+  }
+
+  private pieces: PieceInput[] = [];
 
   setTags(tags: TagInput[]) {
     this.overlay.setTags(this.layers.units ? tags : []);
@@ -733,8 +753,8 @@ export class GlobeEngine {
 
     for (const fade of this.fading) {
       const u = Math.min(1, (now - fade.start) / 650);
-      fade.layer.setOpacity(fade.from + (fade.to - fade.from) * u);
-      if (u >= 1) fade.layer.setOpacity(fade.to);
+      const value = fade.from + (fade.to - fade.from) * u;
+      fade.layer.setOpacity(fade.hold && u < 1 ? fade.from : value, value);
       this.dirty = true;
     }
     this.fading = this.fading.filter((fade) => now - fade.start < 650);

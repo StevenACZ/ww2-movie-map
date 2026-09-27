@@ -299,5 +299,9 @@
   "footer": {
     "made": "Hecho por Steven Coaila Zaa",
     "tmdb": "Datos e imágenes: TMDB. Streaming: JustWatch."
+  },
+  "nations": {
+    "title": "Naciones",
+    "note": "Banderas de esa fecha. Toca una para verla en el globo."
   }
 }

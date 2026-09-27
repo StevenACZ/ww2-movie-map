@@ -1,0 +1,988 @@
+{
+  "flags": {
+    "albania-1912": {
+      "file": "/flags/albania-1912.webp",
+      "ratio": 1.499,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Provisional_Government_of_Albania_(1912%E2%80%931914).svg",
+      "license": "Public domain",
+      "author": "Vectorized by Kj1595"
+    },
+    "albania-1914": {
+      "file": "/flags/albania-1914.webp",
+      "ratio": 1.399,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Albania_(1914%E2%80%931920).svg",
+      "license": "Public domain",
+      "author": "Jaume Ollé (original);"
+    },
+    "albania-1920": {
+      "file": "/flags/albania-1920.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Albania_(1920%E2%80%931926).svg",
+      "license": "Public domain",
+      "author": "Orange Tuesday ( talk )"
+    },
+    "albania-1928": {
+      "file": "/flags/albania-1928.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Albania_(1928%E2%80%931934).svg",
+      "license": "Public domain",
+      "author": "Orange Tuesday (Later version was uploaded by AceDouble )"
+    },
+    "albania-1939": {
+      "file": "/flags/albania-1939.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Albania_(1939%E2%80%931943).svg",
+      "license": "Public domain",
+      "author": "F l a n k e r"
+    },
+    "albania-1943": {
+      "file": "/flags/albania-1943.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Albania_(1943%E2%80%931944).svg",
+      "license": "CC BY-SA 3.0",
+      "author": "SeNeKa"
+    },
+    "albania-1944": {
+      "file": "/flags/albania-1944.webp",
+      "ratio": 1.499,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Democratic_Government_of_Albania_(1944%E2%80%931946).svg",
+      "license": "Public domain",
+      "author": "Vectorized by Kj1595"
+    },
+    "argentina": {
+      "file": "/flags/argentina.webp",
+      "ratio": 1.6,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Argentina.svg",
+      "license": "Public domain",
+      "author": "Manuel Belgrano"
+    },
+    "australia": {
+      "file": "/flags/australia.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Australia.svg",
+      "license": "Public domain",
+      "author": "Original: Ivor Evans, Leslie John Hawkins, Egbert John Nuttall, Annie Dorrington and William Stevens Vector: Ian Fieggen"
+    },
+    "austria": {
+      "file": "/flags/austria.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Austria.svg",
+      "license": "Public domain",
+      "author": "Bundesministerium für Landesverteidigung"
+    },
+    "austria-hungary": {
+      "file": "/flags/austria-hungary.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Civil_Ensign_of_Austria-Hungary_(1869%E2%80%931918).svg",
+      "license": "CC BY-SA 3.0",
+      "author": "TRAJAN 117 This W3C-unspecified vector image was created with Inkscape ."
+    },
+    "belgium": {
+      "file": "/flags/belgium.webp",
+      "ratio": 1.154,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Belgium.svg",
+      "license": "Public domain",
+      "author": "Dbenbenn and others"
+    },
+    "bolivia": {
+      "file": "/flags/bolivia.webp",
+      "ratio": 1.467,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Bolivia.svg",
+      "license": "Public domain",
+      "author": "See file history' below for details."
+    },
+    "brazil-1889": {
+      "file": "/flags/brazil-1889.webp",
+      "ratio": 1.429,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Brazil_(1889%E2%80%931960).svg",
+      "license": "Public domain",
+      "author": "Raimundo Teixeira Mendes"
+    },
+    "british-raj": {
+      "file": "/flags/british-raj.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:British_Raj_Red_Ensign.svg",
+      "license": "Public domain",
+      "author": "Barryob"
+    },
+    "bulgaria": {
+      "file": "/flags/bulgaria.webp",
+      "ratio": 1.667,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Bulgaria.svg",
+      "license": "Public domain",
+      "author": "SKopp"
+    },
+    "canada-1868": {
+      "file": "/flags/canada-1868.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Canada_(1868%E2%80%931921).svg",
+      "license": "Public domain",
+      "author": "Greentubing~commonswiki"
+    },
+    "canada-1921": {
+      "file": "/flags/canada-1921.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Canada_(1921%E2%80%931957).svg",
+      "license": "Public domain",
+      "author": "Hoshie"
+    },
+    "chile": {
+      "file": "/flags/chile.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Chile.svg",
+      "license": "Public domain",
+      "author": "See file history below for details."
+    },
+    "china-1912": {
+      "file": "/flags/china-1912.webp",
+      "ratio": 1.6,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_China_(1912%E2%80%931928).svg",
+      "license": "Public domain",
+      "author": "Original: en:Provisional Government of the Republic of China (1912) Vector: Kibinsky"
+    },
+    "china-1928": {
+      "file": "/flags/china-1928.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Republic_of_China.svg",
+      "license": "Public domain",
+      "author": "Sun Yat-sen"
+    },
+    "colombia": {
+      "file": "/flags/colombia.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Colombia.svg",
+      "license": "Public domain",
+      "author": "See File history below for details."
+    },
+    "costa-rica": {
+      "file": "/flags/costa-rica.webp",
+      "ratio": 1.667,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Costa_Rica_(state).svg",
+      "license": "Public domain",
+      "author": "See File history below for details."
+    },
+    "cuba": {
+      "file": "/flags/cuba.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Cuba.svg",
+      "license": "Public domain",
+      "author": "Miguel Teurbe Tolón and Narciso López"
+    },
+    "czechoslovakia": {
+      "file": "/flags/czechoslovakia.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Czech_Republic.svg",
+      "license": "Public domain",
+      "author": "Jaroslav Kursa"
+    },
+    "czechoslovakia-1918": {
+      "file": "/flags/czechoslovakia-1918.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Bohemia.svg",
+      "license": "Public domain",
+      "author": "No machine-readable author provided. Urmas assumed (based on copyright claims)."
+    },
+    "danzig": {
+      "file": "/flags/danzig.webp",
+      "ratio": 1.489,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Free_City_of_Danzig.svg",
+      "license": "Public domain",
+      "author": "Mnmazur"
+    },
+    "denmark": {
+      "file": "/flags/denmark.webp",
+      "ratio": 1.323,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Denmark.svg",
+      "license": "Public domain",
+      "author": "Madden and others"
+    },
+    "dominican-republic": {
+      "file": "/flags/dominican-republic.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Dominican_Republic.svg",
+      "license": "Public domain",
+      "author": "Juan Pablo Duarte"
+    },
+    "ecuador-1900": {
+      "file": "/flags/ecuador-1900.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Ecuador_(1900%E2%80%932009).svg",
+      "license": "Public domain",
+      "author": "Original: Unknown author Vector: Indoor-Fanatiker"
+    },
+    "egypt-1882": {
+      "file": "/flags/egypt-1882.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Egypt_(1882%E2%80%931922).svg",
+      "license": "Public domain",
+      "author": "Converted to svg by Daniel78"
+    },
+    "egypt-1923": {
+      "file": "/flags/egypt-1923.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Egypt_(1922-1958).svg",
+      "license": "Public domain",
+      "author": "Mysid"
+    },
+    "el-salvador": {
+      "file": "/flags/el-salvador.webp",
+      "ratio": 1.772,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_El_Salvador.svg",
+      "license": "Public domain",
+      "author": "See File history below for details."
+    },
+    "el-salvador-1912": {
+      "file": "/flags/el-salvador-1912.webp",
+      "ratio": 1.772,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_El_Salvador_(1912%E2%80%931916).svg",
+      "license": "Public domain",
+      "author": "PizzaKing13"
+    },
+    "estonia": {
+      "file": "/flags/estonia.webp",
+      "ratio": 1.571,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Estonia.svg",
+      "license": "Public domain",
+      "author": "Original: Unknown author Vector: SKopp , PeepP and ‍others"
+    },
+    "ethiopia": {
+      "file": "/flags/ethiopia.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Ethiopia_(1897%E2%80%931974).svg",
+      "license": "Public domain",
+      "author": "Oren neu dag"
+    },
+    "finland": {
+      "file": "/flags/finland.webp",
+      "ratio": 1.636,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Finland.svg",
+      "license": "Public domain",
+      "author": "Unknown"
+    },
+    "finland-1917": {
+      "file": "/flags/finland-1917.webp",
+      "ratio": 1.538,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Finland_1918_(state).svg",
+      "license": "Public domain",
+      "author": "Ningyou"
+    },
+    "france": {
+      "file": "/flags/france.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_France.svg",
+      "license": "Public domain",
+      "author": "Original: Unknown Vector: SKopp"
+    },
+    "germany-1867": {
+      "file": "/flags/germany-1867.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany_(1867%E2%80%931918).svg",
+      "license": "Public domain",
+      "author": "Original: Adolf Soetbeer , Otto von Bismarck Vector: B1mbo , Madden"
+    },
+    "germany-1919": {
+      "file": "/flags/germany-1919.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany_(3-2).svg",
+      "license": "Public domain",
+      "author": "User:Mmxx"
+    },
+    "germany-1933": {
+      "file": "/flags/germany-1933.webp",
+      "ratio": 1.668,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany_(1933%E2%80%931935).svg",
+      "license": "Public domain",
+      "author": "SeNeKa @ commons (+ Alkari , Illegitimate Barrister , GeMet ) R-41 @ ENWP"
+    },
+    "germany-1935": {
+      "file": "/flags/germany-1935.webp",
+      "ratio": 1.667,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany_(1935%E2%80%931945).svg",
+      "license": "Public domain",
+      "author": "German government"
+    },
+    "greece": {
+      "file": "/flags/greece.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Greece_(1822-1978).svg",
+      "license": "Public domain",
+      "author": "(of code) User:Makaristos"
+    },
+    "guatemala-1871": {
+      "file": "/flags/guatemala-1871.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Guatemala_(1871%E2%80%931968).svg",
+      "license": "Public domain",
+      "author": "SVG-image-maker"
+    },
+    "haiti": {
+      "file": "/flags/haiti.webp",
+      "ratio": 1.667,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Haiti_(1820%E2%80%931849,_1859%E2%80%931964).svg",
+      "license": "Public domain",
+      "author": "Wrestlingring"
+    },
+    "honduras-1866": {
+      "file": "/flags/honduras-1866.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Honduras_(1866%E2%80%931949).svg",
+      "license": "Public domain",
+      "author": "AquaVacation"
+    },
+    "hungary-1915": {
+      "file": "/flags/hungary-1915.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Hungary_(1915-1918,_1919-1946).svg",
+      "license": "Public domain",
+      "author": "User:Zscout370 , colour correction: User:R-41 , current version: Thommy"
+    },
+    "hungary-1918": {
+      "file": "/flags/hungary-1918.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Hungary_(1918%E2%80%931919).svg",
+      "license": "Public domain",
+      "author": "Thommy"
+    },
+    "hungary-1919": {
+      "file": "/flags/hungary-1919.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Hungary_(1919).svg",
+      "license": "Public domain",
+      "author": "Thommy"
+    },
+    "iran-1907": {
+      "file": "/flags/iran-1907.webp",
+      "ratio": 3,
+      "source": "https://commons.wikimedia.org/wiki/File:State_flag_of_Persia_(1907%E2%80%931933).svg",
+      "license": "Public domain",
+      "author": "SeNeKa"
+    },
+    "iran-1933": {
+      "file": "/flags/iran-1933.webp",
+      "ratio": 3,
+      "source": "https://commons.wikimedia.org/wiki/File:State_flag_of_Iran_(1933%E2%80%931964).svg",
+      "license": "Public domain",
+      "author": "Orange Tuesday ( talk )"
+    },
+    "iraq-1921": {
+      "file": "/flags/iraq-1921.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Arab_Federation.svg",
+      "license": "Public domain",
+      "author": "Orange Tuesday ( talk )"
+    },
+    "iraq-1924": {
+      "file": "/flags/iraq-1924.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Iraq_(1924%E2%80%931959).svg",
+      "license": "Public domain",
+      "author": ""
+    },
+    "ireland": {
+      "file": "/flags/ireland.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Ireland.svg",
+      "license": "Public domain",
+      "author": "Éire"
+    },
+    "italy-1861": {
+      "file": "/flags/italy-1861.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Italy_(1861%E2%80%931946).svg",
+      "license": "Public domain",
+      "author": "F l a n k e r"
+    },
+    "japan-1870": {
+      "file": "/flags/japan-1870.webp",
+      "ratio": 1.429,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Japan_(1870%E2%80%931999).svg",
+      "license": "Public domain",
+      "author": "kahusi - (Talk)"
+    },
+    "latvia": {
+      "file": "/flags/latvia.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Latvia.svg",
+      "license": "Public domain",
+      "author": "Original: Ansis Cīrulis Vector: SKopp"
+    },
+    "liberia": {
+      "file": "/flags/liberia.webp",
+      "ratio": 1.9,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Liberia.svg",
+      "license": "Public domain",
+      "author": "Government of Liberia"
+    },
+    "lithuania-1918": {
+      "file": "/flags/lithuania-1918.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Lithuania_(1918%E2%80%931940).svg",
+      "license": "Public domain",
+      "author": "Original: Jonas Basanavičius, Tadas Daugirdas and Antanas Žmuidzinavičius Vector: Conti The SVG code is valid . This flag was created with a text editor . Previous version had been created with Inkscape (1930 bytes) f now 14.15% of previous size Please do not replace the simplified code of this file with a version created with Inkscape or any other graphical vector graphics editor"
+    },
+    "luxembourg": {
+      "file": "/flags/luxembourg.webp",
+      "ratio": 1.668,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Luxembourg.svg",
+      "license": "Public domain",
+      "author": "Drawn by User:SKopp"
+    },
+    "mexico-1893": {
+      "file": "/flags/mexico-1893.webp",
+      "ratio": 1.75,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Mexico_(1893%E2%80%931916).svg",
+      "license": "Public domain",
+      "author": "TownDown"
+    },
+    "mexico-1916": {
+      "file": "/flags/mexico-1916.webp",
+      "ratio": 1.75,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Mexico_(1916%E2%80%931934).svg",
+      "license": "Public domain",
+      "author": "SVG by TownDown"
+    },
+    "mexico-1934": {
+      "file": "/flags/mexico-1934.webp",
+      "ratio": 1.75,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Mexico_(1934-1968).svg",
+      "license": "Public domain",
+      "author": "TownDown"
+    },
+    "mongolia-1911": {
+      "file": "/flags/mongolia-1911.webp",
+      "ratio": 0.818,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Bogd_Khaanate_Mongolia.svg",
+      "license": "CC BY-SA 4.0",
+      "author": "Joins2003"
+    },
+    "mongolia-1924": {
+      "file": "/flags/mongolia-1924.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Mongolia_(1924%E2%80%931940).svg",
+      "license": "Public domain",
+      "author": "Drawn by Joins2003"
+    },
+    "mongolia-1940": {
+      "file": "/flags/mongolia-1940.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Mongolia_(1940%E2%80%931945).svg",
+      "license": "CC BY-SA 4.0",
+      "author": "Ericmetro"
+    },
+    "mongolia-1945": {
+      "file": "/flags/mongolia-1945.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Mongolian_People%27s_Republic_(1945%E2%80%931992).svg",
+      "license": "Public domain",
+      "author": "Drawn by User:latebird"
+    },
+    "montenegro-1905": {
+      "file": "/flags/montenegro-1905.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Montenegro_(1905%E2%80%931918).svg",
+      "license": "Public domain",
+      "author": "w:Kingdom of Montenegro (Vector graphics image by B1mbo )"
+    },
+    "muscat": {
+      "file": "/flags/muscat.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Muscat.svg",
+      "license": "Public domain",
+      "author": ""
+    },
+    "nepal-1856": {
+      "file": "/flags/nepal-1856.webp",
+      "ratio": 0.75,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Nepal_(1856-c.1930).svg",
+      "license": "CC BY-SA 3.0",
+      "author": "Germenfer"
+    },
+    "nepal-1930": {
+      "file": "/flags/nepal-1930.webp",
+      "ratio": 0.676,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Nepal_(1743%E2%80%931962).svg",
+      "license": "CC BY-SA 3.0",
+      "author": "Orange Tuesday"
+    },
+    "netherlands": {
+      "file": "/flags/netherlands.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Netherlands.svg",
+      "license": "Public domain",
+      "author": "Zscout370"
+    },
+    "new-zealand": {
+      "file": "/flags/new-zealand.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_New_Zealand.svg",
+      "license": "Public domain",
+      "author": "Original: Albert Hastings Markham Vector: Zscout370 , Hugh Jass , s. File history"
+    },
+    "newfoundland-1904": {
+      "file": "/flags/newfoundland-1904.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Newfoundland_(1904%E2%80%931949).svg",
+      "license": "Public domain",
+      "author": "Lrenhrda"
+    },
+    "nicaragua-1908": {
+      "file": "/flags/nicaragua-1908.webp",
+      "ratio": 1.667,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Nicaragua_(1908%E2%80%931971).svg",
+      "license": "Public domain",
+      "author": "Nightstallion"
+    },
+    "norway": {
+      "file": "/flags/norway.webp",
+      "ratio": 1.376,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Norway.svg",
+      "license": "Public domain",
+      "author": "Original: Fredrik Meltzer Vector: Gutten på Hemsen"
+    },
+    "ottoman-empire": {
+      "file": "/flags/ottoman-empire.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Ottoman_Empire_(1844%E2%80%931922).svg",
+      "license": "Public domain",
+      "author": "User:Orwellianist"
+    },
+    "panama": {
+      "file": "/flags/panama.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Panama.svg",
+      "license": "Public domain",
+      "author": "Zscout370 et al."
+    },
+    "paraguay-1842": {
+      "file": "/flags/paraguay-1842.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Paraguay_(1842%E2%80%931954).svg",
+      "license": "Public domain",
+      "author": "Kaiser Torikka"
+    },
+    "peru-1884": {
+      "file": "/flags/peru-1884.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Peru_(1884%E2%80%931950).svg",
+      "license": "Public domain",
+      "author": "Huhsunqu"
+    },
+    "poland-1919": {
+      "file": "/flags/poland-1919.webp",
+      "ratio": 1.6,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Poland_(1919%E2%80%931928).svg",
+      "license": "Public domain",
+      "author": "Arvedui89"
+    },
+    "poland-1928": {
+      "file": "/flags/poland-1928.webp",
+      "ratio": 1.6,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Poland_(1928%E2%80%931980).svg",
+      "license": "Public domain",
+      "author": "Arvedui89"
+    },
+    "portugal": {
+      "file": "/flags/portugal.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Portugal.svg",
+      "license": "Public domain",
+      "author": "Original: Columbano Bordalo Pinheiro (1910; generic design) Vector: Vítor Luís Rodrigues; António Martins-Tuválkin (2004; this specific vector set: see sources)"
+    },
+    "romania-1867": {
+      "file": "/flags/romania-1867.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Romania_(1867%E2%80%931948).svg",
+      "license": "Public domain",
+      "author": "Flag_of_Romania.svg : AdiJapan derivative work: Anime Addict AA ( talk )"
+    },
+    "rsfsr": {
+      "file": "/flags/rsfsr.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Russian_Soviet_Federative_Socialist_Republic_(1918%E2%80%931925).svg",
+      "license": "Public domain",
+      "author": "Sergey Chekhonin"
+    },
+    "rsfsr-1918": {
+      "file": "/flags/rsfsr-1918.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Russia_(1918).svg",
+      "license": "Public domain",
+      "author": "Osipov Georgiy Nokka"
+    },
+    "russia-1896": {
+      "file": "/flags/russia-1896.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Russia_(1896%E2%80%931918).svg",
+      "license": "Public domain",
+      "author": "Sports9494"
+    },
+    "saudi-arabia-1932": {
+      "file": "/flags/saudi-arabia-1932.webp",
+      "ratio": 1.429,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Saudi_Arabia_(1932%E2%80%931934).svg",
+      "license": "Public domain",
+      "author": "Orange Tuesday at English Wikipedia / ( Original text: Orange Tuesday ( talk ) )"
+    },
+    "saudi-arabia-1934": {
+      "file": "/flags/saudi-arabia-1934.webp",
+      "ratio": 1.291,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Saudi_Arabia_(1934%E2%80%931938).svg",
+      "license": "Public domain",
+      "author": "Orange Tuesday at English Wikipedia / ( Original text: Orange Tuesday ( talk ) )"
+    },
+    "saudi-arabia-1938": {
+      "file": "/flags/saudi-arabia-1938.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Saudi_Arabia_(1938%E2%80%931973).svg",
+      "license": "Public domain",
+      "author": "Orange Tuesday at English Wikipedia"
+    },
+    "serbia-1882": {
+      "file": "/flags/serbia-1882.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Serbia_(1882%E2%80%931918).svg",
+      "license": "CC BY-SA 3.0",
+      "author": "Guilherme Paula"
+    },
+    "siam-1855": {
+      "file": "/flags/siam-1855.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Siam_(1855).svg",
+      "license": "Public domain",
+      "author": "Xiengyod & Sodacan i The source code of this SVG is valid . This vector image was created with Inkscape ."
+    },
+    "south-africa-1912": {
+      "file": "/flags/south-africa-1912.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Red_Ensign_of_South_Africa_(1912%E2%80%931951).svg",
+      "license": "CC BY-SA 3.0",
+      "author": "Fornax"
+    },
+    "south-africa-1928": {
+      "file": "/flags/south-africa-1928.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Africa_(1928%E2%80%931994,_dark_colors).svg",
+      "license": "Public domain",
+      "author": "Parliament of South Africa (Vector graphics image by Denelson83 )"
+    },
+    "spain-1785": {
+      "file": "/flags/spain-1785.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain_(1785%E2%80%931873,_1875%E2%80%931931).svg",
+      "license": "CC BY-SA 3.0",
+      "author": "previous version User:Ignaciogavira ; current version HansenBCN , designs from SanchoPanzaXXI"
+    },
+    "spain-1931": {
+      "file": "/flags/spain-1931.webp",
+      "ratio": 1.667,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Second_Spanish_Republic.svg",
+      "license": "Public domain",
+      "author": "Marcos Felipe & Valadrem ; SanchoPanzaXXI"
+    },
+    "spain-1938": {
+      "file": "/flags/spain-1938.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain_(1938%E2%80%931945).svg",
+      "license": "CC BY-SA 4.0",
+      "author": "SanchoPanzaXXI"
+    },
+    "spain-1945": {
+      "file": "/flags/spain-1945.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain_(1945%E2%80%931977).svg",
+      "license": "CC BY-SA 4.0",
+      "author": "SanchoPanzaXXI"
+    },
+    "thailand": {
+      "file": "/flags/thailand.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Thailand.svg",
+      "license": "Public domain",
+      "author": "Zscout370"
+    },
+    "turkey": {
+      "file": "/flags/turkey.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Turkey.svg",
+      "license": "Public domain",
+      "author": "David Benbennick (original author)"
+    },
+    "uk": {
+      "file": "/flags/uk.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Kingdom_(1-2).svg",
+      "license": "Public domain",
+      "author": "Original: Acts of Union 1800 Vector: Zscout370"
+    },
+    "uruguay": {
+      "file": "/flags/uruguay.webp",
+      "ratio": 1.501,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Uruguay.svg",
+      "license": "Public domain",
+      "author": "See File history below for details."
+    },
+    "usa-1912": {
+      "file": "/flags/usa-1912.webp",
+      "ratio": 1.9,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(1912-1959).svg",
+      "license": "Public domain",
+      "author": "Created by jacobolus using Adobe Illustrator ."
+    },
+    "ussr-1923": {
+      "file": "/flags/ussr-1923.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Soviet_Union_(1924%E2%80%931936).svg",
+      "license": "Public domain",
+      "author": "Supreme Dragon"
+    },
+    "ussr-1936": {
+      "file": "/flags/ussr-1936.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Soviet_Union_(1936_%E2%80%93_1955).svg",
+      "license": "Public domain",
+      "author": "created by rotemliss from Image:Flag of the Soviet Union.svg ."
+    },
+    "venezuela-1905": {
+      "file": "/flags/venezuela-1905.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Venezuela_(1905%E2%80%931930).svg",
+      "license": "Public domain",
+      "author": ""
+    },
+    "venezuela-1930": {
+      "file": "/flags/venezuela-1930.webp",
+      "ratio": 1.5,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Venezuela_(1930%E2%80%932006).svg",
+      "license": "Public domain",
+      "author": "FXXX"
+    },
+    "yugoslavia-1918": {
+      "file": "/flags/yugoslavia-1918.webp",
+      "ratio": 1.501,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Yugoslavia_(1918%E2%80%931941).svg",
+      "license": "Public domain",
+      "author": "Fibonacci"
+    },
+    "yugoslavia-1945": {
+      "file": "/flags/yugoslavia-1945.webp",
+      "ratio": 2,
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Yugoslavia_(1946-1992).svg",
+      "license": "Public domain",
+      "author": "Flag designed by Đorđe Andrejević-Kun [3] SVG coding: Zscout370"
+    }
+  },
+  "countries": {
+    "albania": [
+      ["1914-01-01", "albania-1912"],
+      ["1914-03-07", "albania-1914"],
+      ["1920-01-31", "albania-1920"],
+      ["1928-09-01", "albania-1928"],
+      ["1939-09-28", "albania-1939"],
+      ["1943-07-25", "albania-1943"],
+      ["1944-11-29", "albania-1944"]
+    ],
+    "argentina": [["1914-01-01", "argentina"]],
+    "australia": [["1914-01-01", "australia"]],
+    "austria": [
+      ["1914-01-01", null],
+      ["1918-11-12", "austria"],
+      ["1938-03-13", null],
+      ["1945-04-27", "austria"]
+    ],
+    "austria-hungary": [
+      ["1914-01-01", "austria-hungary"],
+      ["1918-11-12", null]
+    ],
+    "belgium": [["1914-01-01", "belgium"]],
+    "bolivia": [["1914-01-01", "bolivia"]],
+    "brazil": [["1914-01-01", "brazil-1889"]],
+    "british-raj": [["1914-01-01", "british-raj"]],
+    "bulgaria": [["1914-01-01", "bulgaria"]],
+    "canada": [
+      ["1914-01-01", "canada-1868"],
+      ["1921-11-21", "canada-1921"]
+    ],
+    "chile": [["1914-01-01", "chile"]],
+    "china": [
+      ["1914-01-01", "china-1912"],
+      ["1928-12-29", "china-1928"]
+    ],
+    "colombia": [["1914-01-01", "colombia"]],
+    "costa-rica": [["1914-01-01", "costa-rica"]],
+    "cuba": [["1914-01-01", "cuba"]],
+    "czechoslovakia": [
+      ["1914-01-01", null],
+      ["1918-10-28", "czechoslovakia-1918"],
+      ["1920-03-30", "czechoslovakia"]
+    ],
+    "danzig": [
+      ["1914-01-01", null],
+      ["1920-11-15", "danzig"],
+      ["1939-09-01", null]
+    ],
+    "denmark": [["1914-01-01", "denmark"]],
+    "dominican-republic": [["1914-01-01", "dominican-republic"]],
+    "ecuador": [["1914-01-01", "ecuador-1900"]],
+    "egypt": [
+      ["1914-01-01", "egypt-1882"],
+      ["1923-12-10", "egypt-1923"]
+    ],
+    "el-salvador": [
+      ["1914-01-01", "el-salvador-1912"],
+      ["1916-03-24", "el-salvador"]
+    ],
+    "estonia": [
+      ["1914-01-01", null],
+      ["1918-02-24", "estonia"],
+      ["1940-08-06", null]
+    ],
+    "ethiopia": [["1914-01-01", "ethiopia"]],
+    "finland": [
+      ["1914-01-01", null],
+      ["1917-12-06", "finland-1917"],
+      ["1918-05-29", "finland"]
+    ],
+    "france": [["1914-01-01", "france"]],
+    "germany": [
+      ["1914-01-01", "germany-1867"],
+      ["1919-08-11", "germany-1919"],
+      ["1933-03-12", "germany-1933"],
+      ["1935-09-15", "germany-1935"],
+      ["1945-05-23", null]
+    ],
+    "greece": [["1914-01-01", "greece"]],
+    "guatemala": [["1914-01-01", "guatemala-1871"]],
+    "haiti": [["1914-01-01", "haiti"]],
+    "honduras": [["1914-01-01", "honduras-1866"]],
+    "hungary": [
+      ["1914-01-01", null],
+      ["1918-11-16", "hungary-1915"],
+      ["1918-11-29", "hungary-1918"],
+      ["1919-03-21", "hungary-1919"],
+      ["1919-08-02", "hungary-1918"],
+      ["1919-08-08", "hungary-1915"]
+    ],
+    "iran": [
+      ["1914-01-01", "iran-1907"],
+      ["1933-01-01", "iran-1933"]
+    ],
+    "iraq": [
+      ["1914-01-01", null],
+      ["1921-08-23", "iraq-1921"],
+      ["1924-07-10", "iraq-1924"]
+    ],
+    "ireland": [
+      ["1914-01-01", null],
+      ["1919-01-21", "ireland"]
+    ],
+    "italy": [["1914-01-01", "italy-1861"]],
+    "japan": [["1914-01-01", "japan-1870"]],
+    "latvia": [
+      ["1914-01-01", null],
+      ["1918-11-18", "latvia"],
+      ["1940-08-05", null]
+    ],
+    "liberia": [["1914-01-01", "liberia"]],
+    "lithuania": [
+      ["1914-01-01", null],
+      ["1918-02-16", "lithuania-1918"],
+      ["1940-08-03", null]
+    ],
+    "luxembourg": [["1914-01-01", "luxembourg"]],
+    "mexico": [
+      ["1914-01-01", "mexico-1893"],
+      ["1916-09-20", "mexico-1916"],
+      ["1934-02-05", "mexico-1934"]
+    ],
+    "mongolia": [
+      ["1914-01-01", "mongolia-1911"],
+      ["1920-01-01", null],
+      ["1921-07-11", "mongolia-1911"],
+      ["1924-11-26", "mongolia-1924"],
+      ["1940-07-30", "mongolia-1940"],
+      ["1945-07-10", "mongolia-1945"]
+    ],
+    "montenegro": [
+      ["1914-01-01", "montenegro-1905"],
+      ["1918-11-26", null]
+    ],
+    "nepal": [
+      ["1914-01-01", "nepal-1856"],
+      ["1930-01-01", "nepal-1930"]
+    ],
+    "netherlands": [["1914-01-01", "netherlands"]],
+    "new-zealand": [["1914-01-01", "new-zealand"]],
+    "newfoundland": [
+      ["1914-01-01", "newfoundland-1904"],
+      ["1931-05-15", "uk"]
+    ],
+    "nicaragua": [["1914-01-01", "nicaragua-1908"]],
+    "norway": [["1914-01-01", "norway"]],
+    "oman": [["1914-01-01", "muscat"]],
+    "ottoman-empire": [
+      ["1914-01-01", "ottoman-empire"],
+      ["1922-11-01", null]
+    ],
+    "panama": [["1914-01-01", "panama"]],
+    "paraguay": [["1914-01-01", "paraguay-1842"]],
+    "peru": [["1914-01-01", "peru-1884"]],
+    "poland": [
+      ["1914-01-01", null],
+      ["1918-11-11", "poland-1919"],
+      ["1928-03-29", "poland-1928"]
+    ],
+    "portugal": [["1914-01-01", "portugal"]],
+    "romania": [["1914-01-01", "romania-1867"]],
+    "russia": [
+      ["1914-01-01", "russia-1896"],
+      ["1922-10-25", null]
+    ],
+    "saudi-arabia": [
+      ["1914-01-01", null],
+      ["1932-09-23", "saudi-arabia-1932"],
+      ["1934-01-01", "saudi-arabia-1934"],
+      ["1938-01-01", "saudi-arabia-1938"]
+    ],
+    "serbia": [
+      ["1914-01-01", "serbia-1882"],
+      ["1918-12-01", null]
+    ],
+    "south-africa": [
+      ["1914-01-01", "south-africa-1912"],
+      ["1928-05-31", "south-africa-1928"]
+    ],
+    "spain": [
+      ["1914-01-01", "spain-1785"],
+      ["1931-04-14", "spain-1931"],
+      ["1939-04-01", "spain-1938"],
+      ["1945-10-11", "spain-1945"]
+    ],
+    "thailand": [
+      ["1914-01-01", "siam-1855"],
+      ["1917-09-28", "thailand"]
+    ],
+    "turkey": [
+      ["1914-01-01", null],
+      ["1920-04-23", "turkey"]
+    ],
+    "uk": [["1914-01-01", "uk"]],
+    "uruguay": [["1914-01-01", "uruguay"]],
+    "usa": [["1914-01-01", "usa-1912"]],
+    "ussr": [
+      ["1914-01-01", null],
+      ["1918-04-13", "rsfsr-1918"],
+      ["1918-07-10", "rsfsr"],
+      ["1923-11-12", "ussr-1923"],
+      ["1936-12-05", "ussr-1936"]
+    ],
+    "venezuela": [
+      ["1914-01-01", "venezuela-1905"],
+      ["1930-07-15", "venezuela-1930"]
+    ],
+    "yugoslavia": [
+      ["1914-01-01", null],
+      ["1918-12-01", "yugoslavia-1918"],
+      ["1945-11-29", "yugoslavia-1945"]
+    ]
+  }
+}
