@@ -1,9 +1,28 @@
+import { loadSample } from "~/composables/useSound";
 import type { Cue } from "./kit";
+
+type Kind = Cue[1];
+
+const SAMPLE: Record<Kind, string> = {
+  boom: "sp-boom",
+  far: "sp-far",
+  rumble: "sp-rumble",
+  drone: "sp-drone",
+};
+
+const DRONE_LOOP = [0.2, 8.2] as const;
+
+const LEVEL: Record<Kind, number> = {
+  boom: 0.9,
+  far: 0.65,
+  rumble: 1,
+  drone: 0.35,
+};
 
 export class SetPieceAudio {
   private ctx: AudioContext | null = null;
   private master: GainNode | null = null;
-  private noise: AudioBuffer | null = null;
+  private readonly samples = new Map<Kind, AudioBuffer>();
 
   constructor(enabled: boolean) {
     if (!enabled || typeof window === "undefined") return;
@@ -14,79 +33,41 @@ export class SetPieceAudio {
     if (!Ctor) return;
     this.ctx = new Ctor();
     this.master = this.ctx.createGain();
-    this.master.gain.value = 0.4;
+    this.master.gain.value = 0.8;
     this.master.connect(this.ctx.destination);
-    this.noise = this.ctx.createBuffer(
-      1,
-      this.ctx.sampleRate * 3,
-      this.ctx.sampleRate
-    );
-    const data = this.noise.getChannelData(0);
-    let last = 0;
-    for (let i = 0; i < data.length; i++) {
-      last = last * 0.96 + (Math.random() * 2 - 1) * 0.04;
-      data[i] = last * 6;
+    for (const kind of Object.keys(SAMPLE) as Kind[]) {
+      void loadSample(this.ctx, SAMPLE[kind]).then((buffer) => {
+        if (buffer) this.samples.set(kind, buffer);
+      });
     }
   }
 
-  play(kind: Cue[1], level: number) {
+  play(kind: Kind, level: number) {
     const ac = this.ctx;
-    if (!ac || !this.master || !this.noise) return;
+    const buffer = this.samples.get(kind);
+    if (!ac || !this.master || !buffer) return;
     if (ac.state === "suspended") void ac.resume();
     const at = ac.currentTime + 0.02;
+    const source = ac.createBufferSource();
+    source.buffer = buffer;
+    const gain = ac.createGain();
+    source.connect(gain).connect(this.master);
     if (kind === "drone") {
-      this.drone(ac, at, level);
+      const peak = LEVEL.drone;
+      source.loop = true;
+      source.loopStart = DRONE_LOOP[0];
+      source.loopEnd = DRONE_LOOP[1];
+      gain.gain.setValueAtTime(0.0001, at);
+      gain.gain.exponentialRampToValueAtTime(peak, at + 1.5);
+      gain.gain.setValueAtTime(peak, at + Math.max(1.6, level - 1.5));
+      gain.gain.exponentialRampToValueAtTime(0.0001, at + level);
+      source.start(at);
+      source.stop(at + level + 0.1);
       return;
     }
-    const long = kind === "rumble" ? 7 : kind === "far" ? 4 : 2.6;
-    const peak =
-      (kind === "far" ? 0.35 : kind === "rumble" ? 0.55 : 0.75) * level;
-    const src = ac.createBufferSource();
-    src.buffer = this.noise;
-    const filter = ac.createBiquadFilter();
-    filter.type = "lowpass";
-    filter.frequency.setValueAtTime(kind === "far" ? 220 : 420, at);
-    filter.frequency.exponentialRampToValueAtTime(60, at + long);
-    const gain = ac.createGain();
-    gain.gain.setValueAtTime(0.0001, at);
-    gain.gain.exponentialRampToValueAtTime(
-      peak,
-      at + (kind === "rumble" ? 0.6 : 0.03)
-    );
-    gain.gain.exponentialRampToValueAtTime(0.0001, at + long);
-    src.connect(filter).connect(gain).connect(this.master);
-    src.start(at);
-    src.stop(at + long + 0.1);
-    const osc = ac.createOscillator();
-    osc.frequency.setValueAtTime(kind === "rumble" ? 42 : 70, at);
-    osc.frequency.exponentialRampToValueAtTime(28, at + long * 0.8);
-    const body = ac.createGain();
-    body.gain.setValueAtTime(0.0001, at);
-    body.gain.exponentialRampToValueAtTime(peak * 0.8, at + 0.05);
-    body.gain.exponentialRampToValueAtTime(0.0001, at + long * 0.8);
-    osc.connect(body).connect(this.master);
-    osc.start(at);
-    osc.stop(at + long);
-  }
-
-  private drone(ac: AudioContext, at: number, seconds: number) {
-    const filter = ac.createBiquadFilter();
-    filter.type = "lowpass";
-    filter.frequency.value = 320;
-    const gain = ac.createGain();
-    gain.gain.setValueAtTime(0.0001, at);
-    gain.gain.exponentialRampToValueAtTime(0.09, at + 1.5);
-    gain.gain.setValueAtTime(0.09, at + Math.max(1.6, seconds - 1.5));
-    gain.gain.exponentialRampToValueAtTime(0.0001, at + seconds);
-    filter.connect(gain).connect(this.master!);
-    for (const freq of [58, 61.5, 116]) {
-      const osc = ac.createOscillator();
-      osc.type = "sawtooth";
-      osc.frequency.value = freq;
-      osc.connect(filter);
-      osc.start(at);
-      osc.stop(at + seconds + 0.1);
-    }
+    source.playbackRate.value = 0.92 + Math.random() * 0.16;
+    gain.gain.value = LEVEL[kind] * level;
+    source.start(at);
   }
 
   pause() {
@@ -101,6 +82,6 @@ export class SetPieceAudio {
     void this.ctx?.close();
     this.ctx = null;
     this.master = null;
-    this.noise = null;
+    this.samples.clear();
   }
 }

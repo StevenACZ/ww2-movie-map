@@ -100,7 +100,7 @@ bun scripts/data/wiki-lookup.ts "Stalingrad (1993 film)"
 - Reserve image space with `aspect-ratio`; lazy-load everything except the LCP image.
 - Component styles are `<style lang="scss" scoped>`; reuse tokens and global classes instead of new ones.
 - Spanish copy is neutral Latin American Spanish with correct accents.
-- Sound plays only on deliberate user actions, never on scroll or hover.
+- Sound plays only on deliberate user actions, never on scroll or hover. Sounds are licensed recordings in `public/audio/` (credits in `public/audio/CREDITS.md`); keep new ones CC0 or CC BY with attribution.
 - Never a colored accent stripe on any edge of cards, callouts, toasts, list items or quotes (left or top: `border-left`, `inset Npx 0 0` / `inset 0 Npx 0` shadows, `::before` bars); use a full hairline border, a subtle tint, a dot or an image.
 - Nothing over the globe uses `backdrop-filter` (use the `panel` mixin, not `glass`); the globe renders on demand and caps DPR at 1.5.
 

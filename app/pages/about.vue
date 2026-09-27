@@ -184,6 +184,13 @@ const credits = computed(() => [
     role: t("aboutPage.credits.three"),
     license: "MIT",
   },
+  {
+    name: "Freesound",
+    role: t("aboutPage.credits.sounds"),
+    url: "https://freesound.org",
+    note: t("aboutPage.credits.soundsNote"),
+    license: "CC0 · CC BY 4.0",
+  },
 ]);
 
 usePageSeo(() => {
