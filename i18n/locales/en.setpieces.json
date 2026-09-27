@@ -1,6 +1,11 @@
 {
   "setpieces": {
-    "open": "Special events",
+    "eyebrow": "Special events · {n} in 3D",
+    "tagline": "Turning points in 3D",
+    "short": "3D events",
+    "all": "All special events",
+    "now": "On the map now",
+    "in3d": "Watch in 3D",
     "title": "Special events",
     "intro": "Seven turning points, reconstructed in 3D on the globe. Scale and time are compressed.",
     "watch": "Watch",
@@ -10,7 +15,6 @@
     "replay": "Replay",
     "next": "Next",
     "previous": "Previous",
-    "loading": "Loading",
     "progress": "Scene progress",
     "keys": "Space pauses, Esc closes",
     "keysStill": "Arrows step, Esc closes",

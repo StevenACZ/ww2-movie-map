@@ -1,3 +1,5 @@
+import { toMonths } from "~~/shared/utils/time";
+
 export type SetPieceId =
   | "messines"
   | "dunkirk"
@@ -12,6 +14,7 @@ export interface SetPieceMeta {
   date: string;
   clock: string;
   era: "ww1" | "ww2";
+  event?: string;
   duration: number;
   beats: number[];
   stills: number[];
@@ -32,6 +35,7 @@ export const SET_PIECES: SetPieceMeta[] = [
   },
   {
     id: "dunkirk",
+    event: "dunkirk-evacuation",
     date: "1940-05-26",
     clock: "",
     era: "ww2",
@@ -43,6 +47,7 @@ export const SET_PIECES: SetPieceMeta[] = [
   },
   {
     id: "pearl-harbor",
+    event: "attack-on-pearl-harbor",
     date: "1941-12-07",
     clock: "07:48",
     era: "ww2",
@@ -54,6 +59,7 @@ export const SET_PIECES: SetPieceMeta[] = [
   },
   {
     id: "midway",
+    event: "battle-of-midway",
     date: "1942-06-04",
     clock: "10:25",
     era: "ww2",
@@ -65,6 +71,7 @@ export const SET_PIECES: SetPieceMeta[] = [
   },
   {
     id: "d-day",
+    event: "d-day",
     date: "1944-06-06",
     clock: "06:30",
     era: "ww2",
@@ -76,6 +83,7 @@ export const SET_PIECES: SetPieceMeta[] = [
   },
   {
     id: "hiroshima",
+    event: "atomic-bombing-of-hiroshima",
     date: "1945-08-06",
     clock: "08:15",
     era: "ww2",
@@ -87,6 +95,7 @@ export const SET_PIECES: SetPieceMeta[] = [
   },
   {
     id: "nagasaki",
+    event: "atomic-bombing-of-nagasaki",
     date: "1945-08-09",
     clock: "11:02",
     era: "ww2",
@@ -103,4 +112,24 @@ export function beatAt(meta: SetPieceMeta, t: number): number {
   for (let i = 0; i < meta.beats.length; i++)
     if (t >= meta.beats[i]!) index = i;
   return index;
+}
+
+export const SET_PIECE_BY_EVENT = new Map(
+  SET_PIECES.flatMap((piece) =>
+    piece.event ? [[piece.event, piece.id] as const] : []
+  )
+);
+
+export function featuredPiece(time: number): SetPieceMeta | null {
+  let best: SetPieceMeta | null = null;
+  let gap = Infinity;
+  for (const piece of SET_PIECES) {
+    const diff = time - toMonths(piece.date);
+    if (diff < -1 || diff > 3) continue;
+    if (Math.abs(diff) < gap) {
+      gap = Math.abs(diff);
+      best = piece;
+    }
+  }
+  return best;
 }

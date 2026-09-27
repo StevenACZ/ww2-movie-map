@@ -25,6 +25,8 @@ export interface LabelInput {
   rank: number;
 }
 
+const edgeOf = (horizon: number) => Math.min(0.02, (1 - horizon) * 0.1);
+
 interface Placed {
   el: HTMLElement;
   world: Vector3;
@@ -35,6 +37,12 @@ interface Placed {
   css?: string;
   alpha?: string;
 }
+
+type PlacedMarker = Placed & {
+  data: MarkerInput;
+  img?: HTMLImageElement;
+  full?: string;
+};
 
 function place(
   el: HTMLElement,
@@ -61,7 +69,8 @@ export class Overlay {
   private markerLayer: HTMLElement;
   private labelLayer: HTMLElement;
   private stopLayer: HTMLElement;
-  private markers = new Map<string, Placed & { data: MarkerInput }>();
+  private markers = new Map<string, PlacedMarker>();
+  private scale = 1;
   private labels = new Map<string, Placed & { data: LabelInput }>();
   private stops: (Placed & { index: number })[] = [];
   private events: (Placed & { id: string })[] = [];
@@ -78,6 +87,7 @@ export class Overlay {
     private readonly handlers: {
       select: (id: string) => void;
       cluster: (ids: string[], x: number, y: number) => void;
+      setpiece?: (id: string) => void;
     }
   ) {
     this.root = document.createElement("div");
@@ -88,10 +98,20 @@ export class Overlay {
     this.stopLayer.className = "globe-overlay__stops";
     this.markerLayer = document.createElement("div");
     this.markerLayer.className = "globe-overlay__markers";
-    this.root.append(this.labelLayer, this.stopLayer, this.markerLayer);
+    this.root.append(this.labelLayer, this.markerLayer, this.stopLayer);
     container.append(this.root);
     this.markerLayer.addEventListener("click", this.onClick);
+    this.stopLayer.addEventListener("click", this.onStopClick);
   }
+
+  private onStopClick = (event: MouseEvent) => {
+    const target = (event.target as HTMLElement).closest<HTMLElement>(
+      "[data-setpiece]"
+    );
+    if (!target?.dataset.setpiece) return;
+    event.stopPropagation();
+    this.handlers.setpiece?.(target.dataset.setpiece);
+  };
 
   private onClick = (event: MouseEvent) => {
     const target = (event.target as HTMLElement).closest<HTMLElement>(
@@ -128,9 +148,11 @@ export class Overlay {
       el.setAttribute("aria-label", `${data.title} (${data.year})`);
       const pin = document.createElement("span");
       pin.className = "gm__pin";
+      let img: HTMLImageElement | undefined;
+      const local = data.poster?.startsWith("/img/posters/");
       if (data.poster) {
-        const img = document.createElement("img");
-        img.src = data.poster.startsWith("/img/posters/")
+        img = document.createElement("img");
+        img.src = local
           ? data.poster.replace("/img/posters/", "/img/posters/sm/")
           : `${posterBase}${data.poster}`;
         img.alt = "";
@@ -149,6 +171,8 @@ export class Overlay {
       this.markers.set(data.id, {
         el,
         data,
+        img,
+        full: local ? data.poster : undefined,
         world: toVec3(data.lonLat[0], data.lonLat[1], 1.004),
         x: 0,
         y: 0,
@@ -231,7 +255,13 @@ export class Overlay {
   }
 
   setEvents(
-    events: { id: string; lonLat: LonLat; label: string; major: boolean }[]
+    events: {
+      id: string;
+      lonLat: LonLat;
+      label: string;
+      major: boolean;
+      setpiece?: { id: string; cta: string };
+    }[]
   ) {
     const key = events.map((e) => e.id).join(",");
     if (this.stopLayer.dataset.events === key) return;
@@ -239,9 +269,19 @@ export class Overlay {
     this.stale = true;
     this.events.forEach((e) => e.el.remove());
     this.events = events.map((event) => {
-      const el = document.createElement("span");
-      el.className = `ge${event.major ? " ge--major" : ""}`;
-      el.textContent = event.label;
+      const piece = event.setpiece;
+      const el = document.createElement(piece ? "button" : "span");
+      el.className = `ge${event.major ? " ge--major" : ""}${piece ? " ge--3d" : ""}`;
+      if (piece) {
+        (el as HTMLButtonElement).type = "button";
+        el.dataset.setpiece = piece.id;
+        el.setAttribute("aria-label", `${piece.cta}: ${event.label}`);
+        const badge = document.createElement("b");
+        badge.textContent = "3D";
+        const text = document.createElement("span");
+        text.textContent = event.label;
+        el.append(badge, text);
+      } else el.textContent = event.label;
       this.stopLayer.append(el);
       return {
         el,
@@ -303,7 +343,7 @@ export class Overlay {
     this.camDir.copy(camera.position).normalize();
     placed.facing = placed.world.clone().normalize().dot(this.camDir);
     const horizon = 1 / camera.position.length();
-    placed.visible = placed.facing > horizon + 0.02;
+    placed.visible = placed.facing > horizon + edgeOf(horizon);
     if (!placed.visible) return;
     this.v.copy(placed.world).project(camera);
     placed.x = (this.v.x * 0.5 + 0.5) * width;
@@ -319,10 +359,19 @@ export class Overlay {
   ) {
     this.stale = false;
     const horizon = 1 / camera.position.length();
+    const edge = edgeOf(horizon);
+    const band = Math.min(0.12, (1 - horizon) * 0.35);
     const fadeOf = (facing: number) =>
-      Math.max(0, Math.min(1, (facing - horizon - 0.02) / 0.12));
+      Math.max(0, Math.min(1, (facing - horizon - edge) / band));
 
     const maxRank = distance > 2.6 ? 2 : distance > 1.8 ? 3 : 5;
+    const scale =
+      Math.round(Math.min(2.4, Math.max(1, 1 + (2 - distance) * 1.6)) * 20) /
+      20;
+    if (scale !== this.scale) {
+      this.scale = scale;
+      this.markerLayer.style.setProperty("--gk", String(scale));
+    }
     for (const placed of this.labels.values()) {
       const allowed =
         showLabels &&
@@ -359,7 +408,7 @@ export class Overlay {
       );
     }
 
-    const visible: (Placed & { data: MarkerInput })[] = [];
+    const visible: PlacedMarker[] = [];
     for (const placed of this.markers.values()) {
       this.project(placed, camera, width, height);
       if (placed.visible) visible.push(placed);
@@ -375,9 +424,9 @@ export class Overlay {
     const clusters: {
       x: number;
       y: number;
-      members: (Placed & { data: MarkerInput })[];
+      members: PlacedMarker[];
     }[] = [];
-    const radius = distance < 1.3 ? CLUSTER_RADIUS * 0.8 : CLUSTER_RADIUS;
+    const radius = CLUSTER_RADIUS * Math.max(1, scale * 0.8);
     for (const placed of visible) {
       const hit = clusters.find(
         (c) => Math.hypot(c.x - placed.x, c.y - placed.y) < radius
@@ -391,6 +440,10 @@ export class Overlay {
       const [lead, ...rest] = cluster.members;
       if (!lead) continue;
       lead.el.classList.remove("is-hidden");
+      if (scale >= 1.6 && lead.full && lead.img) {
+        lead.img.src = lead.full;
+        lead.full = undefined;
+      }
       place(
         lead.el,
         lead,
@@ -425,6 +478,7 @@ export class Overlay {
 
   dispose() {
     this.markerLayer.removeEventListener("click", this.onClick);
+    this.stopLayer.removeEventListener("click", this.onStopClick);
     this.root.remove();
   }
 }

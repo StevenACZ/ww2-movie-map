@@ -461,15 +461,23 @@ export class Kit {
     const z = hermite(keys, 2, t);
     const h = hermite(keys, 3, t);
     const dist = Math.max(4, hermite(keys, 4, t));
-    const yaw = (hermite(keys, 5, t) * Math.PI) / 180;
+    const yaw =
+      ((hermite(keys, 5, t) + Math.sin(t * 0.37) * 0.6) * Math.PI) / 180;
     const pitch =
-      (Math.max(4, Math.min(84, hermite(keys, 6, t))) * Math.PI) / 180;
+      (Math.max(
+        4,
+        Math.min(84, hermite(keys, 6, t) + Math.sin(t * 0.29 + 1) * 0.5)
+      ) *
+        Math.PI) /
+      180;
     const cp = Math.cos(pitch);
     const jitter = this.shake;
+    const shakeX = (Math.sin(t * 47) + Math.sin(t * 83 + 2) * 0.5) * 0.67;
+    const shakeY = (Math.sin(t * 61 + 1) + Math.sin(t * 97 + 4) * 0.5) * 0.67;
     cameraTarget.set(x, ground(x, z) + h, z);
     cameraEye.set(
-      x + Math.sin(yaw) * cp * dist + Math.sin(t * 47) * jitter,
-      cameraTarget.y + Math.sin(pitch) * dist + Math.sin(t * 61 + 1) * jitter,
+      x + Math.sin(yaw) * cp * dist + shakeX * jitter,
+      cameraTarget.y + Math.sin(pitch) * dist + shakeY * jitter,
       z + Math.cos(yaw) * cp * dist
     );
     cameraTarget.applyMatrix4(this.root.matrix);

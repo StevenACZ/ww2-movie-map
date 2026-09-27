@@ -25,7 +25,7 @@ import {
   type MarkerInput,
   type TagInput,
 } from "./overlay";
-import type { ColorMode } from "./palette";
+import type { PaletteMode } from "./palette";
 import { UnitLayer } from "./units";
 
 export interface GlobeLayers {
@@ -53,6 +53,7 @@ export interface GlobeOptions {
   onSelect: (id: string) => void;
   onCluster: (ids: string[], x: number, y: number) => void;
   onHover: (hover: GlobeHover | null) => void;
+  onSetPiece?: (id: string) => void;
   onError?: (error: unknown) => void;
 }
 
@@ -159,7 +160,7 @@ export class GlobeEngine {
   }[] = [];
   private paletteFade: { layer: CountryLayer; start: number } | null = null;
   private t = 0;
-  private mode: ColorMode = "side";
+  private mode: PaletteMode = "side";
   private flight: Flight | null = null;
   private raf = 0;
   private width = 1;
@@ -279,6 +280,7 @@ export class GlobeEngine {
     this.overlay = new Overlay(container, {
       select: (id) => options.onSelect(id),
       cluster: (ids, x, y) => options.onCluster(ids, x, y),
+      setpiece: (id) => options.onSetPiece?.(id),
     });
 
     this.resizeObserver = new ResizeObserver(() => this.resize());
@@ -388,7 +390,7 @@ export class GlobeEngine {
     for (const key of keys) void this.loadLayer(key);
   }
 
-  setMode(mode: ColorMode) {
+  setMode(mode: PaletteMode) {
     if (mode === this.mode) return;
     this.mode = mode;
     if (
@@ -436,11 +438,16 @@ export class GlobeEngine {
     this.dirty = true;
   }
 
-  setEventLabels(labels: Map<string, string>) {
+  setEventLabels(
+    labels: Map<string, string>,
+    pieces = new Map<string, { id: string; cta: string }>()
+  ) {
     this.eventLabels = labels;
+    this.eventPieces = pieces;
   }
 
   private eventLabels = new Map<string, string>();
+  private eventPieces = new Map<string, { id: string; cta: string }>();
 
   select(id: string | null) {
     this.overlay.setSelected(id);
@@ -799,6 +806,7 @@ export class GlobeEngine {
             lonLat: e.lonLat,
             label: this.eventLabels.get(e.id) ?? "",
             major: e.major,
+            setpiece: this.eventPieces.get(e.id),
           }))
         : []
     );

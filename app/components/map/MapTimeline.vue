@@ -42,6 +42,9 @@
           </button>
         </p>
       </Transition>
+      <div v-if="$slots.aside" class="tl__aside">
+        <slot name="aside" />
+      </div>
     </div>
 
     <div
@@ -256,6 +259,7 @@ function onKey(event: KeyboardEvent) {
 <style lang="scss" scoped>
 .tl {
   @include panel(1);
+  container-type: inline-size;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -333,6 +337,34 @@ function onKey(event: KeyboardEvent) {
 
   @include up($bp-md) {
     display: flex;
+  }
+}
+
+@container (max-width: 560px) {
+  .tl__controls {
+    gap: 6px;
+  }
+
+  .tl__speed {
+    display: none;
+  }
+
+  .tl__eras {
+    margin-left: 0;
+  }
+
+  .tl__era {
+    padding: 0 0.62em;
+  }
+}
+
+.tl__aside {
+  flex: none;
+  min-width: 0;
+  margin-left: auto;
+
+  .tl__filter + & {
+    margin-left: 12px;
   }
 }
 

@@ -34,6 +34,10 @@ export class SetPiecePlayer {
   private audio: SetPieceAudio | null = null;
   private removeTicker: (() => void) | null = null;
   private flashEl: HTMLDivElement | null = null;
+  private gradeEl: HTMLDivElement | null = null;
+  private skyEl: HTMLDivElement | null = null;
+  private skyValue = -1;
+  private arc = 0;
   private flashValue = 0;
   private phase: Phase = "run";
   private phaseU = 0;
@@ -104,9 +108,12 @@ export class SetPiecePlayer {
       this.phase = "intro";
       this.phaseU = 0;
       this.phaseLength = 2 + angle * 0.9;
+      this.arc = Math.min(0.9, angle * 0.5);
       this.playing = true;
     }
     this.removeTicker = this.ctx.addTicker(this.tick);
+    this.grade(true);
+    this.sky();
     this.hooks.state(this.playing);
   }
 
@@ -175,7 +182,50 @@ export class SetPiecePlayer {
     this.phase = "outro";
     this.phaseU = 0;
     this.phaseLength = 1.8;
+    this.arc = 0.08;
     this.audio?.pause();
+    this.grade(false);
+  }
+
+  private sky() {
+    if (this.skyEl) return;
+    const el = document.createElement("div");
+    el.setAttribute("aria-hidden", "true");
+    el.style.cssText =
+      "position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;background:linear-gradient(to bottom,#11161d 0%,#232b35 22%,#3d434b 42%,#474a4d 100%)";
+    this.ctx.container.prepend(el);
+    this.skyEl = el;
+    this.skyValue = 0;
+  }
+
+  private applySky() {
+    if (!this.skyEl) return;
+    const u = this.phaseU;
+    const value =
+      this.still || this.phase === "run"
+        ? 1
+        : this.phase === "intro"
+          ? smooth(0.55, 1, u)
+          : 1 - smooth(0, 0.45, u);
+    const rounded = Math.round(value * 100) / 100;
+    if (rounded === this.skyValue) return;
+    this.skyValue = rounded;
+    this.skyEl.style.opacity = String(rounded);
+  }
+
+  private grade(on: boolean) {
+    if (!this.gradeEl) {
+      const el = document.createElement("div");
+      el.setAttribute("aria-hidden", "true");
+      el.style.cssText =
+        "position:absolute;inset:0;z-index:5;pointer-events:none;opacity:0;transition:opacity 1.4s ease;background:radial-gradient(ellipse 75% 70% at 50% 42%,transparent 55%,rgb(6 7 5 / 0.62) 100%),linear-gradient(to bottom,rgb(6 7 5 / 0.35),transparent 18%,transparent 78%,rgb(6 7 5 / 0.45))";
+      this.ctx.container.append(el);
+      this.gradeEl = el;
+    }
+    const el = this.gradeEl;
+    requestAnimationFrame(() => {
+      el.style.opacity = on ? "1" : "0";
+    });
   }
 
   private tick = (_now: number, dt: number): boolean => {
@@ -209,6 +259,7 @@ export class SetPiecePlayer {
       this.dirty = false;
     }
     this.place();
+    this.applySky();
     this.applyFlash(this.still ? 0 : kit.flash);
 
     const beat = this.still ? this.step : beatAt(meta, this.t);
@@ -243,7 +294,9 @@ export class SetPiecePlayer {
     camera.position
       .normalize()
       .multiplyScalar(
-        far.length() + (pose.position.length() - far.length()) * e
+        far.length() +
+          (pose.position.length() - far.length()) * e +
+          Math.sin(Math.PI * e) * this.arc
       );
     const w = smooth(0.2, 1, u);
     this.look.copy(ORIGIN).lerp(pose.target, w);
@@ -277,6 +330,10 @@ export class SetPiecePlayer {
     this.audio = null;
     this.flashEl?.remove();
     this.flashEl = null;
+    this.gradeEl?.remove();
+    this.gradeEl = null;
+    this.skyEl?.remove();
+    this.skyEl = null;
     this.flashValue = 0;
   }
 

@@ -158,27 +158,31 @@ const scene: SceneDef = {
       }
       const heard = clamp01((t - START - 1 - 6 * 0.55) / 1.5);
       if (heard > 0 && t < 24) {
+        const fade = 1 - smooth(20, 24, t);
         kit.glow.disc(
           lx,
           ground(lx, lz) + 0.5,
           lz,
-          4 + heard * 6,
-          0.8 * (1 - smooth(20, 24, t)),
+          2.2,
+          0.55 * fade,
           0.95,
           0.75,
           0.45
         );
-        kit.glow.ring(
-          lx,
-          ground(lx, lz) + 0.5,
-          lz,
-          6 + heard * 10,
-          0.15,
-          0.6 * (1 - heard),
-          0.95,
-          0.75,
-          0.45
-        );
+        for (let k = 0; k < 3; k++) {
+          const cycle = (t * 0.55 + k / 3) % 1;
+          kit.glow.ring(
+            lx,
+            ground(lx, lz) + 0.5,
+            lz,
+            3 + cycle * 16,
+            0.12,
+            0.55 * (1 - cycle) * heard * fade,
+            0.95,
+            0.75,
+            0.45
+          );
+        }
       }
 
       const dust = smooth(START + 2, START + 7, t);

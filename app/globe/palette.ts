@@ -1,4 +1,5 @@
 export type ColorMode = "side" | "war";
+export type PaletteMode = ColorMode | "terrain";
 
 export const STATUS_KEYS = [
   "neutral",
@@ -84,7 +85,10 @@ export const LEGEND: Record<
   ],
 };
 
-export function swatch(status: string, mode: ColorMode): Swatch {
+const TERRAIN: Swatch = ["#5a5843", "#5a5843", 0];
+
+export function swatch(status: string, mode: PaletteMode): Swatch {
+  if (mode === "terrain") return TERRAIN;
   const table = mode === "side" ? SIDE : WAR;
   return table[status as Status] ?? table.neutral;
 }
