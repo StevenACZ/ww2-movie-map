@@ -20,6 +20,7 @@ import {
   unitMaterial,
   type ModelKind,
 } from "./models";
+import { AirCombatEffects } from "./air-combat";
 import { FACTION_COLORS } from "./palette";
 
 type Operation = WorldData["operations"][number] & { weight?: number };
@@ -41,7 +42,7 @@ const FOLLOW_MAX = 14 * DEG;
 const JUMP = 16 * DEG;
 const VIEW_LIMIT = 70 * DEG;
 const LOOP_MIN = 25;
-const BANK = 0.42;
+const WHITE = new Color(0xffffff);
 const LAND_R = 1.0018;
 const SEA_R = 1.0012;
 const MARK_R = 1.0015;
@@ -54,6 +55,12 @@ const MODEL_KINDS: ModelKind[] = [
   "submarine",
   "fighter",
   "bomber",
+  "bf109",
+  "fw190",
+  "spitfireMk1",
+  "spitfireMk9",
+  "p51d",
+  "b29",
 ];
 const SLOT = Object.fromEntries(MODEL_KINDS.map((k, i) => [k, i])) as Record<
   ModelKind,
@@ -111,13 +118,14 @@ interface Track {
   bornAt: number;
   moving: number;
   loopPhase: number;
-  orbitPeriod: number;
+  model: ModelKind;
+  escort: boolean;
+  partner: Track | null;
+  combatStart: number;
+  combatSide: number;
+  combatCenter: Vector3;
+  combatHeading: Vector3;
   score: number;
-  sortieAt: number;
-  sortieStart: number;
-  sortieLength: number;
-  sortieSlot: number;
-  sortieTarget: Vector3;
 }
 
 function smoothstep(a: number, b: number, x: number): number {
@@ -149,6 +157,14 @@ export class UnitLayer {
   private readonly picked: UnitHighlight[] = [];
   private readonly highlightPool: UnitHighlight[];
   private visible = 0;
+  private rendered = 0;
+  private date = 0;
+  private nextPair = 0;
+  private readonly effects = new AirCombatEffects();
+  private readonly extent: number[] = [];
+  private readonly occupied = Array.from({ length: 70 }, () => new Vector3());
+  private readonly occupiedRadius = new Float32Array(70);
+  private occupiedCount = 0;
   private last = 0;
   private clock = 0;
   private zoom = 1;
@@ -228,16 +244,20 @@ export class UnitLayer {
         bornAt: 0,
         moving: 0,
         loopPhase: hash(i + 7),
-        orbitPeriod: 14 + 10 * hash(i + 3),
+        model: op.unit,
+        escort:
+          op.id === "battle-of-britain-luftwaffe" ||
+          op.id === "cbo-usaaf-daylight",
+        partner: null,
+        combatStart: -100,
+        combatSide: 1,
+        combatCenter: new Vector3(),
+        combatHeading: new Vector3(),
         score: 0,
-        sortieAt: 6 + 12 * hash(i + 5),
-        sortieStart: -1,
-        sortieLength: 8,
-        sortieSlot: 0,
-        sortieTarget: new Vector3(),
       };
     });
 
+    this.group.add(this.effects.mesh);
     const solid = unitMaterial();
     this.materials.push(solid);
     for (const kind of MODEL_KINDS)
@@ -261,6 +281,10 @@ export class UnitLayer {
     capacity: number,
     colored: boolean
   ): InstancedMesh {
+    geometry.computeBoundingSphere();
+    this.extent.push(
+      geometry.boundingSphere!.radius + geometry.boundingSphere!.center.length()
+    );
     geometry.setAttribute(
       "aOpacity",
       new InstancedBufferAttribute(new Float32Array(capacity), 1)
@@ -312,6 +336,8 @@ export class UnitLayer {
     this.clock = still ? 0 : time;
     this.zoom = zoom;
     this.still = still;
+    this.date = t;
+    this.effects.begin(time, still);
     const distance = eye ? Math.max(1.01, eye.length()) : 3;
     if (eye) this.eyeDir.copy(eye).normalize();
     const horizon = 1 / distance;
@@ -323,6 +349,7 @@ export class UnitLayer {
     this.orderCount = 0;
     for (const track of this.tracks) {
       const op = track.op;
+      track.model = aircraftModel(op, t);
       const inRange = t >= op.start && t <= op.end;
       track.inRange = inRange;
       if (inRange) this.active.push(op);
@@ -348,6 +375,9 @@ export class UnitLayer {
     }
 
     this.allocate(zoom);
+    this.pairCombat();
+    this.rendered = 0;
+    this.occupiedCount = 0;
 
     this.counts.fill(0);
     this.visible = 0;
@@ -359,12 +389,14 @@ export class UnitLayer {
         track.slots[j] = approach(track.slots[j]!, target, dt / FADE);
         const alpha = track.slots[j]! * track.presence;
         if (alpha <= 0.001) continue;
+        if (this.rendered >= this.budget) continue;
         shown = true;
         this.formation(track, j, alpha, horizon);
       }
       if (shown) this.visible++;
     }
 
+    this.effects.flush();
     for (let i = 0; i < this.meshes.length; i++) {
       const mesh = this.meshes[i]!;
       mesh.count = this.counts[i]!;
@@ -394,7 +426,7 @@ export class UnitLayer {
       case "bomber":
         return 3;
       case "carrier":
-        return 1 + tier;
+        return tier === 0 ? 2 : 3;
       default:
         return 1;
     }
@@ -590,6 +622,8 @@ export class UnitLayer {
     roll = 0,
     yaw = 0
   ) {
+    const principal = index < SHADOW && index !== SLOT.turret;
+    if (principal && this.rendered >= this.budget) return;
     const mesh = this.meshes[index]!;
     const n = this.counts[index]!;
     if (n >= mesh.instanceMatrix.count || opacity <= 0.002) return;
@@ -613,6 +647,7 @@ export class UnitLayer {
       opacity
     );
     this.counts[index] = n + 1;
+    if (principal) this.rendered++;
   }
 
   private infantry(
@@ -631,6 +666,7 @@ export class UnitLayer {
     const rx = pitch * count * 0.45;
     const rz = pitch * 1.1;
     for (let k = 0; k < count; k++) {
+      if (this.rendered >= this.budget) break;
       const phi =
         (TAU * this.clock) / period + track.seed * TAU + j * 1.7 - k * 0.55;
       const cx = rx * Math.cos(phi);
@@ -689,6 +725,7 @@ export class UnitLayer {
     const count = this.zoom >= 0.85 ? 2 : 3;
     const pitch = size * 1.6;
     for (let k = 0; k < count; k++) {
+      if (this.rendered >= this.budget) break;
       this.offset(
         base,
         heading,
@@ -764,6 +801,7 @@ export class UnitLayer {
     const a = alpha * this.fadeAt(this.lead, horizon);
     const s = size * (0.5 + 0.5 * a);
     const hullOpacity = a * (1 - 0.62 * dive);
+    if (!this.separate(this.lead, SEA_R, s, track.kind, this.leadFwd)) return;
     this.put(
       SLOT[track.kind],
       this.lead,
@@ -792,6 +830,7 @@ export class UnitLayer {
     const escorts = this.zoom >= 0.85 ? 1 : 2;
     const ship = SIZE.ship * this.zoom;
     for (let e = 1; e <= escorts; e++) {
+      if (this.rendered >= this.budget) break;
       const side = e === 1 ? 1 : -1;
       this.offset(
         this.lead,
@@ -802,6 +841,7 @@ export class UnitLayer {
       );
       const ea = alpha * this.fadeAt(this.pos, horizon);
       const es = ship * (0.5 + 0.5 * ea) * 0.8;
+      if (!this.separate(this.pos, SEA_R, es, "ship", this.leadFwd)) continue;
       this.put(
         SLOT.ship,
         this.pos,
@@ -827,72 +867,124 @@ export class UnitLayer {
     }
   }
 
-  private planePosition(
-    track: Track,
-    j: number,
-    base: Vector3,
-    heading: Vector3,
-    time: number,
-    out: Vector3
-  ): number {
-    const radius =
-      (0.5 + Math.max(0, Math.min(1.05, this.zoom - 0.2)) / 1.05) *
-      DEG *
-      (1 + 0.12 * ((j % 3) - 1));
-    const theta =
-      TAU * (time / track.orbitPeriod + j / track.maxForm + track.seed);
-    this.offset(
-      base,
-      heading,
-      radius * Math.cos(theta),
-      radius * Math.sin(theta),
-      out
-    );
-    if (track.sortieStart < 0 || track.sortieSlot !== j) return 0;
-    const u = (time - track.sortieStart) / track.sortieLength;
-    if (u <= 0 || u >= 1) return 0;
-    const reach = Math.sin(Math.PI * u);
-    const distance = out.angleTo(track.sortieTarget);
-    this.tmp3.crossVectors(out, track.sortieTarget);
-    slerp(out, track.sortieTarget, reach, out);
-    if (this.tmp3.lengthSq() > 1e-10)
-      out.addScaledVector(
-        this.tmp3.normalize(),
-        distance * 0.22 * Math.sin(TAU * u)
-      );
-    out.normalize();
-    return reach;
+  private pairCombat() {
+    if (this.still) {
+      for (const track of this.tracks) track.partner = null;
+      return;
+    }
+    for (const track of this.tracks) {
+      if (
+        track.partner &&
+        (!track.inRange ||
+          !track.partner.inRange ||
+          track.want === 0 ||
+          track.partner.want === 0 ||
+          this.clock - track.combatStart > 8)
+      )
+        track.partner = null;
+    }
+    if (this.clock < this.nextPair) return;
+    this.nextPair = this.clock + 1;
+    const limit = Math.min(this.orderCount, 20);
+    for (let i = 0; i < limit; i++) {
+      const a = this.order[i]!;
+      if (!this.combatEligible(a)) continue;
+      for (let j = i + 1; j < limit; j++) {
+        const b = this.order[j]!;
+        if (
+          !this.combatEligible(b) ||
+          a.op.faction === b.op.faction ||
+          (a.op.faction !== "axis" && b.op.faction !== "axis") ||
+          a.anchor.distanceToSquared(b.anchor) > 0.012
+        )
+          continue;
+        this.tmp.copy(b.anchor).sub(a.anchor);
+        this.tmp.addScaledVector(a.anchor, -this.tmp.dot(a.anchor));
+        if (this.tmp.lengthSq() < 1e-8) this.tmp.copy(a.heading);
+        this.tmp.normalize();
+        for (let member = 0; member < 2; member++) {
+          const track = member === 0 ? a : b;
+          track.partner = track === a ? b : a;
+          track.combatStart = this.clock;
+          track.combatSide = track === a ? 1 : -1;
+          track.combatCenter.copy(a.anchor).add(b.anchor).normalize();
+          track.combatHeading.copy(this.tmp);
+        }
+        break;
+      }
+    }
   }
 
-  private scheduleSortie(track: Track, base: Vector3, heading: Vector3) {
-    const time = this.clock;
-    if (track.sortieStart >= 0 && time < track.sortieStart + track.sortieLength)
-      return;
-    if (track.sortieStart >= 0) {
-      track.sortieStart = -1;
-      track.sortieAt = time + 10 + 15 * hash(time + track.seed);
-    }
-    if (time < track.sortieAt || track.want === 0) return;
-    const path = track.path;
-    let goal: Vector3 | null = null;
-    if (!track.op.loop) {
-      for (let i = 0; i < path.points.length; i++) {
-        const p = path.points[i]!;
-        if (p.dot(heading) > 0 && p.angleTo(base) > 1.5 * DEG) {
-          goal = p;
+  private combatEligible(track: Track): boolean {
+    return (
+      track.inRange &&
+      track.want > 0 &&
+      track.presence > 0.8 &&
+      (track.kind === "fighter" || track.escort) &&
+      !track.partner &&
+      this.clock - track.combatStart > 20
+    );
+  }
+
+  private separate(
+    position: Vector3,
+    radius: number,
+    scale: number,
+    kind: ModelKind,
+    heading: Vector3
+  ) {
+    const bound = this.extent[SLOT[kind]]! * scale;
+    this.tmp.copy(position).multiplyScalar(radius);
+    for (let attempt = 0; attempt < 8; attempt++) {
+      let overlap = false;
+      for (let i = 0; i < this.occupiedCount; i++) {
+        const clearance = bound + this.occupiedRadius[i]!;
+        if (
+          this.tmp.distanceToSquared(this.occupied[i]!) <
+          clearance * clearance
+        ) {
+          overlap = true;
           break;
         }
       }
+      if (!overlap) {
+        if (this.occupiedCount < this.occupied.length) {
+          this.occupied[this.occupiedCount]!.copy(this.tmp);
+          this.occupiedRadius[this.occupiedCount++] = bound;
+        }
+        position.copy(this.tmp).normalize();
+        return true;
+      }
+      this.offset(position, heading, -bound * 1.7, bound * 1.3, position);
+      this.tmp.copy(position).multiplyScalar(radius);
     }
-    if (goal) track.sortieTarget.copy(goal);
-    else this.offset(base, heading, 3 * DEG, 0, track.sortieTarget);
-    const distance = base.angleTo(track.sortieTarget);
-    if (distance > 6 * DEG)
-      slerp(base, track.sortieTarget, (6 * DEG) / distance, track.sortieTarget);
-    const reach = Math.min(distance, 6 * DEG);
-    track.sortieLength = Math.max(8, (2 * reach) / (3 * DEG) + 2);
-    track.sortieSlot = Math.floor(hash(time * 3.1 + track.seed) * track.want);
-    track.sortieStart = time;
+    return false;
+  }
+
+  private combatFlight(track: Track, size: number): number {
+    const u = Math.min(1, (this.clock - track.combatStart) / 8);
+    const direction = track.combatSide;
+    const reach = Math.max(size * 3, 0.035);
+    const arc = Math.max(0, (u - 0.55) / 0.45);
+    this.offset(
+      track.combatCenter,
+      track.combatHeading,
+      direction * (u * 2 - 1) * reach,
+      direction * (size * 1.6 + arc * arc * reach),
+      this.lead
+    );
+    this.tmp2.crossVectors(track.combatHeading, track.combatCenter);
+    this.leadFwd
+      .copy(track.combatHeading)
+      .multiplyScalar(direction)
+      .addScaledVector(this.tmp2, direction * arc * 2.2)
+      .normalize();
+    const blend = smoothstep(0, 0.18, u) * (1 - smoothstep(0.78, 1, u));
+    slerp(track.anchor, this.lead, blend, this.lead).normalize();
+    this.leadFwd.lerp(track.heading, 1 - blend);
+    if (this.leadFwd.lengthSq() < 1e-8) this.leadFwd.copy(track.heading);
+    this.leadFwd.normalize();
+    return direction * arc * 0.35 * blend;
   }
 
   private planes(
@@ -904,35 +996,44 @@ export class UnitLayer {
     alpha: number,
     horizon: number
   ) {
-    const altitude = 0.012 + 0.012 * this.zoom;
-    const bob = this.still
-      ? 0
-      : Math.sin(this.clock * 0.9 + j * 2.3 + track.seed * 7) * size * 0.25;
+    const altitude = 0.012 + 0.012 * this.zoom + (track.seed % 0.25) * size;
     let roll = 0;
-    if (track.op.loop) {
-      this.lead.copy(base);
-      this.leadFwd.copy(heading);
-    } else {
-      if (j === 0 && !this.still)
-        this.scheduleSortie(track, track.anchor, track.heading);
-      const reach = this.planePosition(
-        track,
-        j,
+    this.lead.copy(base);
+    this.leadFwd.copy(heading);
+    const combat = !this.still && j === 0 && track.partner !== null;
+    if (combat && !track.escort) {
+      roll = this.combatFlight(track, size);
+    } else if (!track.op.loop) {
+      const phase = this.still ? 0 : (this.clock * 0.018 + track.seed) % 1;
+      const angle = phase * TAU;
+      const along = Math.sin(angle) * size * 4;
+      const lateral = Math.cos(angle) * size * 1.8;
+      this.offset(
         base,
         heading,
-        this.clock,
+        along - j * size * 3,
+        lateral + (j % 2 ? 1 : -1) * j * size * 2.2,
         this.lead
       );
-      this.planePosition(track, j, base, heading, this.clock + 0.08, this.pos);
-      this.leadFwd.copy(this.pos).sub(this.lead);
-      if (this.leadFwd.lengthSq() < 1e-14)
-        this.leadFwd.crossVectors(this.lead, heading).negate();
-      roll = BANK * (1 - Math.min(1, reach * 2));
+      if (!this.still) {
+        this.tmp2.crossVectors(heading, base);
+        this.leadFwd
+          .copy(heading)
+          .multiplyScalar(Math.cos(angle) * 4)
+          .addScaledVector(this.tmp2, -Math.sin(angle) * 1.8)
+          .normalize();
+      }
     }
     const bomber = track.kind === "bomber";
     const members = bomber ? 3 : 2;
-    const radius = 1 + altitude + bob;
+    const radius = 1 + altitude;
     for (let k = 0; k < members; k++) {
+      if (this.rendered >= this.budget) break;
+      if (combat && track.escort && k === 1)
+        roll = this.combatFlight(track, size);
+      const model =
+        track.escort && k > 0 ? escortModel(track.op, this.date) : track.model;
+      const span = this.extent[SLOT[model]]! * 2;
       if (k === 0) {
         this.pos.copy(this.lead);
       } else {
@@ -942,22 +1043,44 @@ export class UnitLayer {
           .copy(this.leadFwd)
           .addScaledVector(this.lead, -this.leadFwd.dot(this.lead))
           .normalize();
-        this.offset(this.lead, this.fwd, back * size, lateral * size, this.pos);
+        this.offset(
+          this.lead,
+          this.fwd,
+          back * size * span,
+          lateral * size * span,
+          this.pos
+        );
       }
       const a = alpha * this.fadeAt(this.pos, horizon);
       const s = size * (0.5 + 0.5 * a);
+      const lane = radius + k * size * 0.22;
+      if (!this.separate(this.pos, lane, s, model, this.leadFwd)) continue;
       this.put(
-        SLOT[track.kind],
+        SLOT[model],
         this.pos,
-        radius + (k ? -size * 0.1 : 0),
+        lane,
         this.leadFwd,
         s,
         s,
         s,
         a,
-        track.color,
+        model === "fighter" || model === "bomber" ? track.color : WHITE,
         roll
       );
+      if (
+        combat &&
+        (track.kind === "fighter" || (track.escort && k > 0)) &&
+        this.clock - track.combatStart < 3.8 &&
+        a > 0.5
+      )
+        this.effects.fire(
+          this.pos,
+          this.leadFwd,
+          lane,
+          s,
+          this.clock,
+          track.seed + k
+        );
       this.tmp
         .copy(this.lightDir)
         .addScaledVector(this.pos, -this.lightDir.dot(this.pos));
@@ -977,10 +1100,32 @@ export class UnitLayer {
   }
 
   dispose() {
+    this.effects.dispose();
     for (const mesh of this.meshes) {
       mesh.geometry.dispose();
       mesh.dispose();
     }
     for (const material of this.materials) material.dispose();
   }
+}
+
+function aircraftModel(op: Operation, date: number): ModelKind {
+  const year = 1914 + date / 12;
+  if (op.unit === "bomber")
+    return year >= 1944 && /^(b29-raids|enola-gay|bockscar)/.test(op.id)
+      ? "b29"
+      : "bomber";
+  if (op.unit !== "fighter" || year < 1939) return op.unit;
+  if (op.faction === "axis" && /luftwaffe|german|reich/.test(op.id))
+    return year >= 1941.67 ? "fw190" : "bf109";
+  if (op.faction === "allies" && /raf|british/.test(op.id))
+    return year >= 1942.5 ? "spitfireMk9" : "spitfireMk1";
+  if (op.faction === "allies" && /usaaf|mustang/.test(op.id) && year >= 1944.25)
+    return "p51d";
+  return "fighter";
+}
+
+function escortModel(op: Operation, date: number): ModelKind {
+  if (op.id === "battle-of-britain-luftwaffe") return "bf109";
+  return date >= (1944 - 1914) * 12 + 3 ? "p51d" : "fighter";
 }

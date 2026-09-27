@@ -8,6 +8,11 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
+- Rebuilt Hiroshima and Nagasaki with detailed B-29s, distinct bomb exteriors, river and valley scenery, volumetric cloud billows, seven chapters and layered sound.
+- Added historical Bf 109, Fw 190, Spitfire and Mustang aircraft to the globe, with bounded dogfights, moving tracer bursts and a fixed visible-unit budget.
+- Improved D-Day aircraft and audio, and separated landing and evacuation routes to prevent ships from intersecting.
+- Collapsed the left map sidebar by default while keeping its manual toggle.
+
 - Rebuilt Dunkirk as a seven-chapter evacuation with a detailed East Mole, boarding troops, varied rescue boats, V/W-class destroyers, Spitfires and Ju 87s.
 - Added animated surf, ship wakes, diving aircraft, water impacts and a slower cinematic camera journey.
 - Added licensed sea, boat-engine and Spitfire recordings with stereo positioning, synchronized ambience and live sound controls.

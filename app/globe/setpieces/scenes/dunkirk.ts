@@ -1,4 +1,5 @@
 import { plume, trail } from "../fx";
+import { airFire, wingShot, type AirShot } from "./air-fire";
 import {
   clamp01,
   ground,
@@ -113,6 +114,8 @@ const scene: SceneDef = {
     [41.2, "boom", 0.65, -0.6],
     [43.5, "flyby", 0.85, -0.6],
     [43.7, "boom", 0.48, 0.65],
+    [45.3, "gunfire", 0.45, -0.4],
+    [47, "gunfire", 0.5, 0.5],
     [48, "flyby", 0.65, 0.5],
     [51.5, "far", 0.22, -0.8],
   ],
@@ -123,14 +126,16 @@ const scene: SceneDef = {
     const q = sample();
     const boats = Array.from({ length: 18 }, (_, i) => {
       const lane = i % 6;
-      const x = -3.5 + lane * 3.85 + Math.floor(i / 6) * 0.64;
+      const berth = lane % 3;
+      const wave = Math.floor(i / 6);
+      const x = -3.5 + lane * 3.85 + wave * 0.64;
       const ship = SHIPS[lane < 3 ? 1 : 2]!;
       const size = i % 3 === 0 ? 0.66 : i % 3 === 1 ? 0.82 : 0.46;
       const shoreZ = -0.16 - size * 0.5;
-      const offshoreX = ship.x + 0.55 + (lane % 3) * 1.05;
-      const offshoreZ = ship.z - 0.9 + Math.floor(i / 6) * 1.05;
-      const dockX = ship.x + ship.size * 0.052 + size * 0.14 + 0.018;
-      const dockZ = ship.z + ((lane % 3) - 1) * 0.78;
+      const offshoreX = ship.x + 2.2 + berth * 1.1;
+      const offshoreZ = ship.z - 3 - (2 - wave) * 1.25;
+      const dockX = ship.x + ship.size * 0.05 + size * 0.66 + 0.08;
+      const dockZ = ship.z + (berth - 1) * 1.1;
       return {
         i,
         ship,
@@ -139,7 +144,7 @@ const scene: SceneDef = {
         shoreZ,
         offshoreX,
         offshoreZ,
-        start: 12 + Math.floor(i / 6) * 4 + (lane === 2 ? 0 : lane * 0.9),
+        start: 12 + wave * 9 + berth * 0.85,
         kind:
           i % 3 === 0
             ? ("dunkirk-yacht" as const)
@@ -147,28 +152,25 @@ const scene: SceneDef = {
               ? ("dunkirk-trawler" as const)
               : ("dunkirk-lifeboat" as const),
         inbound: new Route([
-          [offshoreX, 0, offshoreZ],
-          [offshoreX, 0, -5.8],
-          [x - 0.65, 0, -3.4],
+          [x - 0.8, 0, -6.2],
+          [x - 0.7, 0, -3.4],
           [x, 0, shoreZ],
         ]),
         homebound: new Route([
-          [offshoreX + 0.5, 0, offshoreZ],
-          [offshoreX + 0.8, 0, offshoreZ - 3],
-          [offshoreX - 5, 0, offshoreZ - 10],
-          [offshoreX - 16, 0, offshoreZ - 24],
+          [offshoreX, 0, offshoreZ],
+          [offshoreX, 0, offshoreZ - 5],
+          [offshoreX, 0, offshoreZ - 16],
         ]),
         clearing: new Route([
           [dockX, 0, dockZ],
-          [dockX + 0.4, 0, dockZ - 0.6],
-          [offshoreX + 0.5, 0, offshoreZ],
+          [ship.x + 1.8 + berth * 0.45, 0, dockZ],
+          [offshoreX, 0, offshoreZ],
         ]),
         outbound: new Route([
           [x, 0, shoreZ],
-          [x + 0.35, 0, shoreZ - 0.55],
-          [x + 0.55, 0, -3],
-          [dockX + 0.4, 0, -5.8],
-          [dockX, 0, dockZ + 0.7],
+          [x + 0.8, 0, shoreZ - 1],
+          [ship.x + 3.6 + berth * 0.6, 0, dockZ + 1.2],
+          [dockX + 1.2, 0, dockZ],
           [dockX, 0, dockZ],
         ]),
       };
@@ -177,9 +179,9 @@ const scene: SceneDef = {
       (ship, i) =>
         new Route([
           [ship.x, 0, ship.z],
-          [ship.x - 0.15, 0, ship.z - 3.3],
-          [ship.x - 4.2, 0, ship.z - 8.5],
-          [ship.x - 13 - i * 1.4, 0, ship.z - 18],
+          [ship.x, 0, ship.z - 3.3],
+          [ship.x, 0, ship.z - 8.5],
+          [ship.x, 0, ship.z - 21 - i * 1.4],
         ])
     );
     const dives = ATTACKS.map(
@@ -204,6 +206,31 @@ const scene: SceneDef = {
       [-5, 5, -24, 55],
       [10, 5.5, -30, 59],
     ]);
+    const airShots: AirShot[] = [];
+    for (let i = 0; i < 3; i++)
+      for (let burst = 0; burst < 5; burst++)
+        for (let round = 0; round < 3; round++) {
+          const at = 45.2 + burst * 0.8 + round * 0.085 + i * 0.035;
+          fighter.at(at, q);
+          q.x += (i - 1) * 0.9;
+          q.y += i * 0.21;
+          q.z += i * 0.6;
+          for (const side of [-1, 1])
+            airShots.push(
+              wingShot(
+                at,
+                q,
+                side,
+                0.57,
+                [
+                  q.x + Math.sin(q.yaw) * 4,
+                  q.y - 0.12,
+                  q.z + Math.cos(q.yaw) * 4,
+                ],
+                false
+              )
+            );
+        }
     const oil = {
       rise: 1.1,
       wind: 0.24,
@@ -301,7 +328,13 @@ const scene: SceneDef = {
         if (home > 0) {
           boat.homebound.at(home, s);
         } else if (phase >= 19.6) {
-          boat.clearing.at(smooth(19.6, 23.3, phase), s);
+          const clear = smooth(19.6, 23.3, phase);
+          boat.clearing.at(clear, s);
+          const turn = Math.atan2(
+            Math.sin(s.yaw + Math.PI / 2),
+            Math.cos(s.yaw + Math.PI / 2)
+          );
+          s.yaw = -Math.PI / 2 + turn * smooth(0.18, 0.65, clear);
         } else if (phase < 4.5) {
           boat.inbound.at(approach, s);
         } else if (phase < 10.4) {
@@ -360,12 +393,12 @@ const scene: SceneDef = {
         );
         if (local > 16.8 && local < 19.6) {
           const u = ((local - 16.8) % 0.35) / 0.35;
-          const fromX = s.x - boat.size * 0.1;
+          const fromX = s.x - boat.size * 0.46;
           const toX = boat.ship.x + boat.ship.size * 0.04;
           const fromY = s.y + boat.size * 0.12;
           const toY = ground(toX, s.z) + boat.ship.size * 0.055;
           p.x = fromX + (toX - fromX) * u;
-          p.z = s.z + boat.size * 0.3;
+          p.z = s.z;
           p.y = fromY + (toY - fromY) * u;
           p.yaw = -Math.PI / 2;
           p.pitch = -0.15;
@@ -442,30 +475,9 @@ const scene: SceneDef = {
           q.pitch = s.pitch;
           q.roll = s.roll + (i - 1) * 0.06;
           kit.unit("spitfire-mk1", q, 0.57, WHITE);
-          if (t > 45 && t < 50 && Math.sin(t * 21 + i * 2) > 0.35) {
-            const fx = Math.sin(q.yaw),
-              fz = Math.cos(q.yaw);
-            const rightX = Math.cos(q.yaw),
-              rightZ = -Math.sin(q.yaw);
-            for (const side of [-1, 1]) {
-              const x = q.x + rightX * side * 0.17,
-                z = q.z + rightZ * side * 0.17;
-              kit.tracers.push(
-                x + fx * 0.35,
-                q.y,
-                z + fz * 0.35,
-                x + fx * 2.8,
-                q.y - 0.1,
-                z + fz * 2.8,
-                1,
-                0.75,
-                0.3,
-                0.7
-              );
-            }
-          }
         }
       }
+      airFire(kit, airShots, t);
       if (t > 34 && t < 49) {
         for (let i = 0; i < 6; i++) {
           const period = 1.3;

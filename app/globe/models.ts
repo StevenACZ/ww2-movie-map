@@ -16,6 +16,15 @@ import {
 } from "three";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 
+import {
+  bf109,
+  fw190,
+  spitfireMk9,
+  spitfireMk1Map,
+  p51d,
+  b29,
+} from "./arsenal/aviation";
+
 export type ModelKind =
   | "tank"
   | "turret"
@@ -24,7 +33,13 @@ export type ModelKind =
   | "carrier"
   | "submarine"
   | "fighter"
-  | "bomber";
+  | "bomber"
+  | "bf109"
+  | "fw190"
+  | "spitfireMk1"
+  | "spitfireMk9"
+  | "p51d"
+  | "b29";
 
 const HALF_PI = Math.PI / 2;
 
@@ -231,6 +246,18 @@ function submarine(): BufferGeometry {
 
 export function buildModel(kind: ModelKind): BufferGeometry {
   switch (kind) {
+    case "bf109":
+      return bf109("map").rotateY(HALF_PI);
+    case "fw190":
+      return fw190("map").rotateY(HALF_PI);
+    case "spitfireMk1":
+      return spitfireMk1Map().rotateY(HALF_PI);
+    case "spitfireMk9":
+      return spitfireMk9("map").rotateY(HALF_PI);
+    case "p51d":
+      return p51d("map").rotateY(HALF_PI);
+    case "b29":
+      return b29("map").rotateY(HALF_PI);
     case "tank":
       return tank();
     case "turret":

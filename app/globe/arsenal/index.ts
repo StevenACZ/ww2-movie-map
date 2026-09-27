@@ -1,5 +1,7 @@
 import type { BufferGeometry } from "three";
 import { b24, c47, horsa } from "./air";
+import { b29, bf109, fw190, p51d, spitfireMk9 } from "./aviation";
+import { fatMan, littleBoy } from "./atomic-models";
 import { ju87b, spitfireMk1 } from "./dunkirk-air";
 import {
   befSoldier,
@@ -29,6 +31,43 @@ export interface ArsenalEntry {
 }
 
 export const ARSENAL = {
+  bf109: {
+    name: "Messerschmitt Bf 109",
+    side: "axis",
+    meters: 9,
+    build: bf109,
+  },
+  fw190: { name: "Focke-Wulf Fw 190", side: "axis", meters: 9, build: fw190 },
+  "spitfire-mk9": {
+    name: "Supermarine Spitfire Mk IX",
+    side: "allied",
+    meters: 9.5,
+    build: spitfireMk9,
+  },
+  p51d: {
+    name: "North American P-51D Mustang",
+    side: "allied",
+    meters: 9.8,
+    build: p51d,
+  },
+  b29: {
+    name: "B-29 Superfortress, Silverplate",
+    side: "allied",
+    meters: 30.2,
+    build: b29,
+  },
+  "little-boy": {
+    name: "Little Boy, exterior",
+    side: "allied",
+    meters: 3,
+    build: littleBoy,
+  },
+  "fat-man": {
+    name: "Fat Man, exterior",
+    side: "allied",
+    meters: 3.3,
+    build: fatMan,
+  },
   "vw-destroyer": {
     name: "V/W-class destroyer (1940)",
     side: "allied",

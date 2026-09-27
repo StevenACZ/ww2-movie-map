@@ -1,36 +1,42 @@
 import {
-  BoxGeometry,
-  Color,
+  CircleGeometry,
+  CatmullRomCurve3,
+  DoubleSide,
+  Euler,
   InstancedMesh,
   Matrix4,
-  MeshLambertMaterial,
+  MeshBasicMaterial,
   Quaternion,
   Vector3,
 } from "three";
 import type { LonLat } from "../../geo";
-import { mushroom, plume } from "../fx";
+import { box, model } from "../../arsenal/parts";
+import { plume } from "../fx";
 import {
   clamp01,
   ground,
   hash,
-  Route,
+  offset,
+  Path,
   sample,
   smooth,
+  WHITE,
   type CameraKey,
   type Kit,
   type SceneDef,
 } from "../kit";
-import { FACTION } from "../models";
+import { atomicCity, type AtomicCity } from "./atomic-city";
+import { atomicCloud } from "./atomic-cloud";
 
 interface AtomicConfig {
+  city: AtomicCity;
   anchor: LonLat;
   release: number;
   burst: number;
   height: number;
   top: number;
   seed: number;
-  flight: [number, number, number][];
-  speed: number;
+  flight: [at: number, x: number, y: number, z: number][];
   camera: CameraKey[];
   blocks: (add: (x: number, z: number) => void) => void;
   destroyed: (x: number, z: number, d: number) => number;
@@ -38,179 +44,228 @@ interface AtomicConfig {
   water: [number, number][][];
 }
 
-const BLOCK = new Color(0xb9ae98);
-const CHARRED = new Color(0x2c241f);
-const WATER = [0.07, 0.13, 0.15] as const;
-const FIRE = { rise: 0.55, wind: 0.12, life: 7, every: 0.45, fire: 0.9 };
+const FIRE = { rise: 0.32, wind: 0.08, life: 9, every: 0.7, fire: 0.55 };
 
 export function atomic(config: AtomicConfig): SceneDef {
+  const hiroshima = config.city === "hiroshima";
   return {
     anchor: config.anchor,
+    near: 1,
+    pace: 0.75,
+    clip: [0.025, 260],
+    bare: true,
+    night: [
+      [0, 0],
+      [25.8, 0],
+      [29, 0.14],
+      [43, 0.2],
+      [60, 0.16],
+    ],
     capacity: {
       smoke: 1500,
-      fire: 260,
-      balls: 4,
-      decals: 420,
-      glow: 16,
-      tracers: 4,
-      units: { bomber: 3, bomb: 1 },
+      fire: 180,
+      balls: 6,
+      decals: 160,
+      glow: 24,
+      tracers: 1,
+      units: { b29: 3, "little-boy": 1, "fat-man": 1 },
     },
     camera: config.camera,
-    cues: [[config.burst, "rumble", 1]],
+    cues: [
+      [6, "heavy-prop", 20],
+      [config.burst + 0.7, "blast", 0.9],
+      [config.burst + 2, "blast-tail", 0.85],
+    ],
     build(kit) {
+      kit.terrain(
+        [
+          [-85, -75],
+          [85, -75],
+          [85, 80],
+          [-85, 80],
+        ],
+        0.015,
+        [0x777c63, 0x878873, 0x6f765e],
+        7
+      );
       config.terrain(kit);
       const spots: number[] = [];
-      config.blocks((x, z) => spots.push(x, z));
-      const count = spots.length / 2;
-      const geometry = new BoxGeometry(1, 1, 1).translate(0, 0.5, 0);
-      const blocks = new InstancedMesh(
-        geometry,
-        new MeshLambertMaterial({ emissive: 0x16140f }),
-        count
+      config.blocks((x, z) => {
+        const landmark = hiroshima ? [-0.18, -0.05] : [0.7, -0.45];
+        if (Math.hypot(x - landmark[0]!, z - landmark[1]!) > 0.45)
+          spots.push(x, z);
+      });
+      const cityTime = atomicCity(
+        kit,
+        config.city,
+        spots,
+        config.burst,
+        config.destroyed
       );
-      blocks.frustumCulled = false;
-      blocks.renderOrder = 4;
-      kit.add(blocks);
-      const size = new Float32Array(count * 3);
-      const fate = new Float32Array(count);
-      const distance = new Float32Array(count);
-      for (let i = 0; i < count; i++) {
-        const x = spots[i * 2]!;
-        const z = spots[i * 2 + 1]!;
-        size[i * 3] = 0.18 + hash(i * 3.1) * 0.16;
-        size[i * 3 + 1] = 0.06 + hash(i * 5.7) * 0.2;
-        size[i * 3 + 2] = 0.18 + hash(i * 7.3) * 0.16;
-        distance[i] = Math.hypot(x, z);
-        fate[i] = config.destroyed(x, z, distance[i]!);
-      }
-      const matrix = new Matrix4();
-      const position = new Vector3();
-      const scale = new Vector3();
-      const turn = new Quaternion();
-      const axis = new Vector3(0, 1, 0);
-      const color = new Color();
-      const fires: number[] = [];
-      for (let i = 0; i < count && fires.length < 32; i += 7) {
-        if (fate[i]! > 0.8 && hash(i * 1.7) > 0.35)
-          fires.push(spots[i * 2]!, spots[i * 2 + 1]!);
-      }
-      const water: number[] = [];
       for (const line of config.water) {
-        for (let k = 0; k < line.length - 1; k++) {
-          const [ax, az] = line[k]!;
-          const [bx, bz] = line[k + 1]!;
-          const steps = Math.max(
-            1,
-            Math.ceil(Math.hypot(bx - ax, bz - az) / 0.3)
-          );
-          for (let s = 0; s < steps; s++)
-            water.push(
-              ax + ((bx - ax) * s) / steps,
-              az + ((bz - az) * s) / steps
-            );
-        }
+        const curve = new CatmullRomCurve3(
+          line.map(([x, z]) => new Vector3(x, 0, z))
+        );
+        const river = curve
+          .getPoints(36)
+          .map((p): [number, number] => [p.x, p.z]);
+        kit.strip(river, hiroshima ? 0.32 : 0.22, 0x626a5d, 0.033);
+        kit.strip(river, hiroshima ? 0.26 : 0.16, 0x36565a, 0.037);
+        kit.strip(river, 0.018, 0x67827c, 0.038);
       }
-
-      const route = new Route(config.flight);
+      const cloudTime = atomicCloud(
+        kit,
+        config.burst,
+        config.height,
+        config.top,
+        config.seed
+      );
+      const route = new Path(
+        config.flight.map(([at, x, y, z]) => [x, y, z, at])
+      );
       const plane = sample();
       const escort = sample();
+      const falling = sample();
       const bombStart = sample();
-      const along = (t: number) =>
-        clamp01(((t - 1) * config.speed) / route.length);
-      const gap = 2.6 / route.length;
-      route.at(along(config.release), bombStart);
-
+      route.at(config.release, bombStart);
+      const fires: number[] = [];
+      for (let i = 0; i < spots.length && fires.length < 48; i += 14) {
+        const x = spots[i]!;
+        const z = spots[i + 1]!;
+        if (config.destroyed(x, z, Math.hypot(x, z)) > 0.5) fires.push(x, z);
+      }
+      const props = new InstancedMesh(
+        new CircleGeometry(1, 16),
+        new MeshBasicMaterial({
+          color: 0xb8bfc0,
+          transparent: true,
+          opacity: 0.19,
+          side: DoubleSide,
+          depthWrite: false,
+        }),
+        12
+      );
+      props.frustumCulled = false;
+      props.renderOrder = 5;
+      kit.stage.add(props);
+      const blades = new InstancedMesh(
+        model([
+          box(0.019, 0.176, 0.009, 0x3f484b),
+          box(0.176, 0.019, 0.009, 0x3f484b),
+        ]),
+        new MeshBasicMaterial({ vertexColors: true }),
+        12
+      );
+      blades.frustumCulled = false;
+      blades.renderOrder = 4;
+      kit.stage.add(blades);
+      const matrix = new Matrix4();
+      const position = new Vector3();
+      const planeSize = 1.7;
+      const size = new Vector3(0.15, 0.15, 0.15);
+      const rotation = new Quaternion();
+      const spin = new Quaternion();
+      const rotor = new Quaternion();
+      const rotorAxis = new Vector3(0, 0, 1);
+      const rotorSize = new Vector3(planeSize, planeSize, planeSize);
+      const angles = new Euler(0, 0, 0, "YXZ");
+      const engines = [
+        [-0.455, 0.195],
+        [-0.234, 0.274],
+        [0.234, 0.274],
+        [0.455, 0.195],
+      ];
       return (t) => {
         const since = t - config.burst;
-        const front = since > 0 ? since * 1.6 : -1;
-        for (let i = 0; i < count; i++) {
-          const x = spots[i * 2]!;
-          const z = spots[i * 2 + 1]!;
-          const hit =
-            front > distance[i]! ? smooth(0, 0.6, front - distance[i]!) : 0;
-          const loss = hit * fate[i]!;
-          position.set(x, ground(x, z), z);
-          scale.set(
-            size[i * 3]!,
-            size[i * 3 + 1]! * (1 - loss * 0.85) + 0.01,
-            size[i * 3 + 2]!
-          );
-          turn.setFromAxisAngle(axis, hash(i) * 0.6 + loss * 0.4);
-          matrix.compose(position, turn, scale);
-          blocks.setMatrixAt(i, matrix);
-          color.copy(BLOCK).lerp(CHARRED, loss);
-          blocks.setColorAt(i, color);
+        cityTime(t);
+        cloudTime(t);
+        props.count = 0;
+        blades.count = 0;
+        if (t < 42) {
+          route.at(t, plane);
+          for (let i = 0; i < (hiroshima ? 3 : 2); i++) {
+            Object.assign(escort, plane);
+            if (i) offset(escort, i === 1 ? 5.2 : -5.4, 5 + i, i * 0.32);
+            kit.unit("b29", escort, planeSize, WHITE);
+            angles.set(-escort.pitch, escort.yaw, escort.roll);
+            rotation.setFromEuler(angles);
+            for (const [x, z] of engines) {
+              position
+                .set(x! * planeSize, 0, z! * planeSize)
+                .applyQuaternion(rotation);
+              position.x += escort.x;
+              position.y += escort.y;
+              position.z += escort.z;
+              matrix.compose(position, rotation, size);
+              props.setMatrixAt(props.count++, matrix);
+              spin.setFromAxisAngle(rotorAxis, t * 85 + props.count * 1.7);
+              rotor.copy(rotation).multiply(spin);
+              matrix.compose(position, rotor, rotorSize);
+              blades.setMatrixAt(blades.count++, matrix);
+            }
+          }
+          props.instanceMatrix.needsUpdate = true;
+          blades.instanceMatrix.needsUpdate = true;
         }
-        blocks.instanceMatrix.needsUpdate = true;
-        if (blocks.instanceColor) blocks.instanceColor.needsUpdate = true;
-
-        for (let i = 0; i < water.length; i += 2) {
-          const x = water[i]!;
-          const z = water[i + 1]!;
-          kit.decals.disc(
-            x,
-            ground(x, z) + 0.02,
-            z,
-            0.3,
-            0.9,
-            WATER[0],
-            WATER[1],
-            WATER[2]
-          );
-        }
-
-        const f = along(t);
-        route.at(f, plane);
-        kit.unit("bomber", plane, 1.9, FACTION.allied);
-        route.at(clamp01(f - gap), escort);
-        escort.x += 1.4;
-        escort.y += 0.3;
-        kit.unit("bomber", escort, 1.9, FACTION.allied);
-        route.at(clamp01(f - gap * 1.8), escort);
-        escort.x -= 1.2;
-        escort.y -= 0.2;
-        kit.unit("bomber", escort, 1.9, FACTION.allied);
-
         if (t >= config.release && t < config.burst) {
           const u = (t - config.release) / (config.burst - config.release);
-          escort.x = bombStart.x * (1 - u);
-          escort.z = bombStart.z * (1 - u);
-          escort.y = bombStart.y - (bombStart.y - config.height) * u * u;
-          escort.yaw = bombStart.yaw;
-          escort.pitch = -0.3 - u * 1.1;
-          escort.roll = 0;
-          kit.unit("bomb", escort, 0.5, FACTION.dark);
-        }
-
-        if (since > 0 && since < 0.25) kit.flash = 0.85 * (1 - since / 0.25);
-        if (since >= 0) {
-          const heat = Math.max(0, 1 - since / 1.2);
-          kit.glow.disc(
-            0,
-            ground(0, 0) + 0.1,
-            0,
-            3 + since * 6,
-            heat,
-            1,
-            0.85,
-            0.6
+          falling.x = bombStart.x * (1 - u);
+          falling.z = bombStart.z * (1 - u);
+          falling.y =
+            bombStart.y - 0.11 - (bombStart.y - 0.11 - config.height) * u * u;
+          falling.yaw = bombStart.yaw;
+          falling.pitch = -0.15 - smooth(0, 0.65, u) * 1.42;
+          falling.roll = Math.sin(u * 8) * 0.025;
+          kit.unit(
+            hiroshima ? "little-boy" : "fat-man",
+            falling,
+            hiroshima ? 0.32 : 0.36,
+            WHITE
           );
-          mushroom(kit, t, {
-            x: 0,
-            z: 0,
-            burst: config.burst,
-            top: config.top,
-            seed: config.seed,
-          });
+        }
+        if (!hiroshima && since < 2) {
+          for (let i = 0; i < 26; i++) {
+            const a = i * 2.39996;
+            const r = 7 + hash(i) * 10;
+            kit.smoke.push(
+              Math.cos(a) * r,
+              4.1 + hash(i + 2) * 1.1,
+              Math.sin(a) * r,
+              3.5 + hash(i + 9) * 3,
+              0.25 * (1 - smooth(-1, 2, since)),
+              0,
+              0.9,
+              0.05,
+              hash(i + 3)
+            );
+          }
+        }
+        if (since >= 0 && since < 0.5)
+          kit.flash = 0.65 * (1 - smooth(0, 0.5, since));
+        if (since >= 0) {
+          const heat = 1 - smooth(0.2, 2.3, since);
+          if (heat > 0) {
+            kit.balls.push(
+              0,
+              config.height + since * 0.35,
+              0,
+              0.35 + smooth(0, 1.4, since) * 3.2,
+              since / 3,
+              config.seed,
+              1.1
+            );
+            kit.glow.disc(0, 0.05, 0, 1 + since * 4, heat * 0.72, 1, 0.8, 0.48);
+          }
+          kit.shake = Math.sin(since * 21) * Math.exp(-since * 1.8) * 0.045;
           for (let i = 0; i < fires.length; i += 2) {
             plume(
               kit,
               t,
-              config.burst + 2.5 + hash(i * 3.3) * 3,
-              99,
+              config.burst + 2 + hash(i) * 3,
+              60,
               fires[i]!,
               fires[i + 1]!,
-              0.5,
+              0.17 + hash(i + 2) * 0.13,
               config.seed + i,
               FIRE
             );
