@@ -145,24 +145,36 @@
         "teaser": "La mayor invasión por mar de la historia llega a cinco playas.",
         "beats": [
           {
-            "time": "Pasada la medianoche",
-            "text": "Unos 24 000 paracaidistas estadounidenses, británicos y canadienses caen tras las playas."
+            "time": "00:16 · Puente Pegasus",
+            "text": "Planeadores británicos aterrizan junto al puente del canal de Caen. Minutos después salta la 6.ª División Aerotransportada al este del Orne."
           },
           {
-            "time": "Cruce nocturno",
-            "text": "La mayor invasión por mar de la historia: unos 6900 buques cruzan el Canal."
+            "time": "01:30 · Tras Utah",
+            "text": "Unos 13 000 paracaidistas de la 82.ª y la 101.ª estadounidenses saltan sobre el Cotentin. El fuego antiaéreo los dispersa por campos y pantanos inundados."
           },
           {
-            "time": "Amanecer",
-            "text": "Acorazados, cruceros y destructores bombardean las defensas costeras alemanas."
+            "time": "Antes del alba",
+            "text": "Unos 6900 buques llegan a las cinco playas. Los transportes fondean a 18 km y bajan sus lanchas de desembarco."
           },
           {
-            "time": "Desde las 06:30",
-            "text": "Las lanchas de desembarco llegan a cinco playas: Utah, Omaha, Gold, Juno y Sword."
+            "time": "05:50 · Bombardeo naval",
+            "text": "Acorazados, cruceros y destructores abren fuego contra los búnkeres del Muro Atlántico."
           },
           {
-            "time": "6 de junio",
-            "text": "Omaha es la más sangrienta. Ese día desembarcan por mar y aire unos 156 000 soldados aliados."
+            "time": "06:00 · Bombarderos sobre Omaha",
+            "text": "Cientos de B-24 bombardean entre las nubes. Por miedo a alcanzar sus propias lanchas sueltan tarde, y la mayoría de las bombas cae kilómetros tierra adentro."
+          },
+          {
+            "time": "06:30 · Omaha y Utah",
+            "text": "En Omaha las defensas siguen intactas: casi todos los tanques anfibios se hunden y la primera oleada queda clavada en la arena. En Utah apenas hay resistencia."
+          },
+          {
+            "time": "07:25 · Gold, Juno y Sword",
+            "text": "Los británicos desembarcan en Gold y Sword, con comandos de la Francia Libre en Sword, y los canadienses en Juno. Los tanques llegan con las primeras oleadas."
+          },
+          {
+            "time": "Al caer la noche",
+            "text": "Unos 156 000 soldados aliados ya están en tierra. En Omaha apenas tienen una franja y la 21.ª Panzer contraataca desde Caen. También participaron polacos, noruegos, australianos, neozelandeses, neerlandeses y otros."
           }
         ]
       },

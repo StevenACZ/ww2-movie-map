@@ -144,7 +144,16 @@
     "dispatch": "Parte de guerra",
     "journeyStop": "Parada {n} de {total}",
     "tourStop": "Siguiente parada",
-    "inProgress": "En curso"
+    "inProgress": "En curso",
+    "hideList": "Ocultar la lista",
+    "showList": "Mostrar la lista",
+    "tour": {
+      "exit": "Salir del recorrido",
+      "prev": "Parada anterior",
+      "next": "Parada siguiente",
+      "replay": "Repetir",
+      "resume": "Continuar"
+    }
   },
   "title": {
     "journey": "Dónde ocurrió",

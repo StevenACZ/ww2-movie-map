@@ -144,7 +144,16 @@
     "dispatch": "Dispatch",
     "journeyStop": "Stop {n} of {total}",
     "tourStop": "Next stop",
-    "inProgress": "In progress"
+    "inProgress": "In progress",
+    "hideList": "Hide the list",
+    "showList": "Show the list",
+    "tour": {
+      "exit": "Leave the journey",
+      "prev": "Previous stop",
+      "next": "Next stop",
+      "replay": "Replay",
+      "resume": "Resume"
+    }
   },
   "title": {
     "journey": "Where it happened",

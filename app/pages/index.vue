@@ -5,23 +5,25 @@
       'has-panel': !!selectedCard,
       'sheet-open': sheetOpen,
       'is-cinematic': cinematic,
+      'is-touring': touring,
+      'side-closed': !sideOpen,
     }"
   >
     <MapGlobe
       ref="globe"
       class="map__globe"
-      :titles="cinematic ? [] : visibleTitles"
+      :titles="cinematic || touring ? [] : visibleTitles"
       :events="events"
       :t="time"
       :mode="cinematic ? 'terrain' : mode"
       :layers="
-        cinematic
+        cinematic || touring
           ? {
               ...layers,
               units: false,
               fronts: false,
               events: false,
-              labels: false,
+              labels: touring,
             }
           : layers
       "
@@ -56,6 +58,20 @@
 
     <button
       type="button"
+      class="map__side-toggle"
+      :aria-expanded="sideOpen"
+      :aria-label="sideOpen ? t('map.hideList') : t('map.showList')"
+      :title="sideOpen ? t('map.hideList') : t('map.showList')"
+      @click="sideOpen = !sideOpen"
+    >
+      <Icon :name="sideOpen ? 'chevron-left' : 'list'" />
+      <span v-if="!sideOpen">{{
+        t("map.results", { n: visibleTitles.length })
+      }}</span>
+    </button>
+
+    <button
+      type="button"
       class="map__sheet-toggle"
       :aria-expanded="sheetOpen"
       @click="sheetOpen = !sheetOpen"
@@ -75,8 +91,24 @@
       :touring="touring"
       @close="closePanel"
       @stop="goToStop"
-      @tour="toggleTour"
+      @tour="startTour"
     />
+
+    <Transition name="tour">
+      <MapJourneyCard
+        v-if="touring && selectedCard && activeStop !== null"
+        class="map__tour"
+        :card="selectedCard"
+        :stops="tourStops"
+        :index="activeStop"
+        :paused="tourPaused"
+        :ended="tourEnded"
+        :duration="tourDuration"
+        @go="showTourStop"
+        @toggle="toggleTourPause"
+        @exit="exitTour"
+      />
+    </Transition>
 
     <div class="map__corner">
       <MapLegend
@@ -269,6 +301,8 @@ const ERA_FOCUS: Record<Era, string> = {
   ww2: "1942-11-19",
 };
 const DEFAULT_DATE = "1942-11-19";
+const TOUR_DISTANCE = 1.22;
+const SIDE_KEY = "ww2:side";
 const CATEGORY_ICONS: Record<string, IconName> = {
   war: "swords",
   battle: "crosshair",
@@ -345,6 +379,10 @@ const selectedId = ref<string | null>(null);
 const detail = ref<TitleDetail | null>(null);
 const activeStop = ref<number | null>(null);
 const touring = ref(false);
+const tourPaused = ref(false);
+const tourEnded = ref(false);
+const tourDuration = ref(9000);
+const sideOpen = ref(true);
 const playing = ref(false);
 const speedIndex = ref(0);
 const sheetOpen = ref(false);
@@ -663,9 +701,82 @@ function resetFilters() {
 }
 
 let tourTimer: ReturnType<typeof setTimeout> | undefined;
+let tourDeadline = 0;
+let tourRemaining = 0;
+
+const tourStops = computed(
+  () => detail.value?.journey ?? selectedCard.value?.stops ?? []
+);
+
 function stopTour() {
   touring.value = false;
+  tourPaused.value = false;
+  tourEnded.value = false;
   clearTimeout(tourTimer);
+}
+
+function readingTime(index: number) {
+  const stop = detail.value?.journey[index];
+  const chars = (stop?.story?.length ?? 0) + (stop?.history?.length ?? 0);
+  return Math.round(Math.min(22000, Math.max(8000, 3500 + chars * 40)));
+}
+
+function armTour() {
+  clearTimeout(tourTimer);
+  tourDeadline = performance.now() + tourRemaining;
+  tourTimer = setTimeout(advanceTour, tourRemaining);
+}
+
+function showTourStop(index: number) {
+  const stop = tourStops.value[index];
+  if (!stop) return;
+  clearTimeout(tourTimer);
+  activeStop.value = index;
+  tourEnded.value = false;
+  tourDuration.value = readingTime(index);
+  tourRemaining = tourDuration.value;
+  globe.value?.flyTo(stop.coordinates, TOUR_DISTANCE);
+  travelTo(toMonths(stop.date), 800);
+  if (!tourPaused.value) armTour();
+}
+
+function advanceTour() {
+  const index = activeStop.value ?? 0;
+  if (index < tourStops.value.length - 1) showTourStop(index + 1);
+  else tourEnded.value = true;
+}
+
+function startTour() {
+  if (!tourStops.value.length) return;
+  interacted.value = true;
+  cluster.value = null;
+  sheetOpen.value = false;
+  stopPlaying();
+  touring.value = true;
+  tourPaused.value = false;
+  sound.play("whoosh");
+  showTourStop(0);
+}
+
+function toggleTourPause() {
+  if (tourEnded.value) {
+    tourPaused.value = false;
+    showTourStop(0);
+  } else if (tourPaused.value) {
+    tourPaused.value = false;
+    armTour();
+  } else {
+    tourPaused.value = true;
+    clearTimeout(tourTimer);
+    tourRemaining = Math.max(0, tourDeadline - performance.now());
+  }
+}
+
+function exitTour() {
+  const stops = tourStops.value;
+  stopTour();
+  activeStop.value = null;
+  if (stops.length) globe.value?.fitStops(stops.map((s) => s.coordinates));
 }
 
 async function select(
@@ -720,26 +831,6 @@ function goToStop(index: number) {
   travelTo(toMonths(stop.date), 800);
 }
 
-function toggleTour() {
-  if (touring.value) {
-    stopTour();
-    return;
-  }
-  const stops = detail.value?.journey ?? selectedCard.value?.stops ?? [];
-  if (stops.length < 2) return;
-  touring.value = true;
-  sound.play("whoosh");
-  let index = 0;
-  const next = () => {
-    if (!touring.value) return;
-    goToStop(index);
-    index++;
-    if (index < stops.length) tourTimer = setTimeout(next, 4800);
-    else tourTimer = setTimeout(() => (touring.value = false), 4800);
-  };
-  next();
-}
-
 function onCluster(ids: string[], x: number, y: number) {
   interacted.value = true;
   const first = titleById.value.get(ids[0]!);
@@ -782,6 +873,14 @@ function onReady(data: WorldData) {
 }
 
 function onKey(event: KeyboardEvent) {
+  if (touring.value && activeStop.value !== null) {
+    if ((event.target as HTMLElement | null)?.closest("input, textarea"))
+      return;
+    if (event.key === "ArrowRight") showTourStop(activeStop.value + 1);
+    else if (event.key === "ArrowLeft") showTourStop(activeStop.value - 1);
+    else if (event.key === "Escape") exitTour();
+    return;
+  }
   if (event.key !== "Escape") return;
   if (cluster.value) cluster.value = null;
   else if (selectedId.value) closePanel();
@@ -804,7 +903,16 @@ watch(
   }
 );
 
+watch(sideOpen, (value) => {
+  try {
+    localStorage.setItem(SIDE_KEY, value ? "1" : "0");
+  } catch {}
+});
+
 onMounted(() => {
+  try {
+    if (localStorage.getItem(SIDE_KEY) === "0") sideOpen.value = false;
+  } catch {}
   window.addEventListener("keydown", onKey);
   document.addEventListener("click", onDocumentClick);
 });
@@ -824,6 +932,7 @@ onBeforeUnmount(() => {
   --panel-w: 400px;
   --edge: 16px;
   --timeline-h: 136px;
+  --side-room: calc(var(--side-w) + var(--edge) * 2);
   position: absolute;
   inset: 0;
   overflow: hidden;
@@ -1017,7 +1126,7 @@ onBeforeUnmount(() => {
 .map__timeline {
   position: absolute;
   z-index: 25;
-  left: calc(var(--side-w) + var(--edge) * 2);
+  left: var(--side-room);
   right: var(--edge);
   bottom: var(--edge);
 
@@ -1046,6 +1155,126 @@ onBeforeUnmount(() => {
     @include down($bp-lg) {
       bottom: calc(var(--timeline-h) + var(--edge) + 10px);
     }
+
+    .side-closed & {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateX(calc(-100% - var(--edge)));
+      transition:
+        opacity 0.4s $ease-out,
+        transform 0.45s $ease-out,
+        visibility 0s 0.45s;
+    }
+  }
+
+  .map.side-closed {
+    --side-room: var(--edge);
+  }
+}
+
+.map__side-toggle {
+  position: absolute;
+  z-index: 21;
+  left: calc(var(--edge) + var(--side-w) - 1px);
+  top: calc(var(--header-h) + 22px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 26px;
+  height: 52px;
+  border-radius: 0 10px 10px 0;
+  @include panel(0.96);
+  border-left: 0;
+  color: var(--muted);
+  transition:
+    color 0.2s $ease-out,
+    left 0.45s $ease-out,
+    opacity 0.4s $ease-out;
+
+  svg {
+    flex: none;
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    color: var(--gold);
+  }
+
+  .side-closed & {
+    left: var(--edge);
+    top: calc(var(--header-h) + 4px);
+    width: auto;
+    height: 40px;
+    padding: 0 16px 0 14px;
+    border-radius: 999px;
+    border-left: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--paper);
+
+    svg {
+      color: var(--gold);
+    }
+  }
+
+  @include down($bp-md) {
+    display: none;
+  }
+}
+
+.map__tour {
+  position: absolute;
+  z-index: 32;
+  left: var(--edge);
+  bottom: var(--edge);
+  width: min(420px, calc(100% - var(--edge) * 2));
+
+  @include down($bp-md) {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    width: auto;
+  }
+}
+
+.tour-enter-active,
+.tour-leave-active {
+  transition:
+    opacity 0.4s $ease-out,
+    transform 0.45s $ease-out;
+}
+
+.tour-enter-from,
+.tour-leave-to {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.map.is-touring {
+  .map__side,
+  .map__side-toggle,
+  .map__panel,
+  .map__corner,
+  .map__dispatch,
+  .map__sheet-toggle,
+  .map__hint,
+  .map__timeline {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  :deep(.gs:not(.is-active) span) {
+    opacity: 0;
+  }
+
+  .map__zoom {
+    right: var(--edge);
   }
 }
 
@@ -1069,14 +1298,24 @@ onBeforeUnmount(() => {
 .map__zoom,
 .map__sheet-toggle,
 .map__timeline {
-  transition: opacity 0.4s $ease-out;
+  transition:
+    opacity 0.4s $ease-out,
+    transform 0.45s $ease-out,
+    left 0.45s $ease-out;
+}
+
+.map__side-toggle {
+  .is-cinematic & {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .map__dispatch {
   --legend-room: calc(250px + 12px);
   position: absolute;
   z-index: 18;
-  left: calc(var(--side-w) + var(--edge) * 2);
+  left: var(--side-room);
   right: calc(var(--edge) + var(--legend-room));
   top: calc(var(--header-h) + 4px);
   margin-inline: auto;
@@ -1334,7 +1573,7 @@ onBeforeUnmount(() => {
 .map__hint {
   position: absolute;
   z-index: 10;
-  left: calc(50% + (var(--side-w) + var(--edge)) / 2);
+  left: calc(50% + (var(--side-room) - var(--edge)) / 2);
   bottom: calc(var(--timeline-h) + var(--edge) + 18px);
   translate: -50% 0;
   padding: 6px 14px;

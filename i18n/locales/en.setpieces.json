@@ -145,24 +145,36 @@
         "teaser": "The largest seaborne invasion in history lands on five beaches.",
         "beats": [
           {
-            "time": "After midnight",
-            "text": "About 24,000 American, British and Canadian airborne troops drop behind the beaches."
+            "time": "00:16 · Pegasus Bridge",
+            "text": "British gliders land beside the Caen canal bridge. Minutes later the 6th Airborne jumps east of the Orne."
           },
           {
-            "time": "Night crossing",
-            "text": "The largest seaborne invasion in history: about 6,900 vessels cross the Channel."
+            "time": "01:30 · Behind Utah",
+            "text": "About 13,000 men of the US 82nd and 101st Airborne jump over the Cotentin. Flak scatters them across fields and flooded marsh."
           },
           {
-            "time": "Dawn",
-            "text": "Battleships, cruisers and destroyers bombard the German coastal defences."
+            "time": "Before dawn",
+            "text": "Some 6,900 vessels reach the five beaches. Transports anchor 18 km out and lower their landing craft."
           },
           {
-            "time": "From 06:30",
-            "text": "Landing craft reach five beaches: Utah, Omaha, Gold, Juno and Sword."
+            "time": "05:50 · Naval bombardment",
+            "text": "Battleships, cruisers and destroyers open fire on the Atlantic Wall bunkers."
           },
           {
-            "time": "6 June",
-            "text": "Omaha is the bloodiest. About 156,000 Allied troops land by sea and air that day."
+            "time": "06:00 · Bombers over Omaha",
+            "text": "Hundreds of B-24s bomb through cloud. Afraid of hitting their own boats, they release late, and most bombs fall kilometres inland."
+          },
+          {
+            "time": "06:30 · Omaha and Utah",
+            "text": "At Omaha the defences are intact: most amphibious tanks sink and the first wave is pinned on the sand. At Utah the landing meets little resistance."
+          },
+          {
+            "time": "07:25 · Gold, Juno and Sword",
+            "text": "The British land at Gold and Sword, with Free French commandos at Sword, and the Canadians at Juno. Tanks come ashore with the first waves."
+          },
+          {
+            "time": "By nightfall",
+            "text": "About 156,000 Allied troops are ashore. At Omaha they hold only a thin strip, and the 21st Panzer counterattacks from Caen. Poles, Norwegians, Australians, New Zealanders, Dutch and others also took part."
           }
         ]
       },

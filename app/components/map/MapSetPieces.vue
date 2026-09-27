@@ -28,8 +28,12 @@
         <p class="sp__clock mono">{{ current?.time }}</p>
         <div class="sp__copy" aria-live="polite">
           <p class="sp__label">
-            {{ t(`setpieces.scenes.${active}.title`) }} ·
-            {{ formatDate(meta.date, locale) }}
+            <span
+              >{{ t(`setpieces.scenes.${active}.title`) }}
+              <span class="sp__date"
+                >· {{ formatDate(meta.date, locale) }}</span
+              ></span
+            >
             <span class="sp__count mono"
               >{{ beat + 1 }}/{{ meta.beats.length }}</span
             >
@@ -304,6 +308,10 @@ onBeforeUnmount(() => {
   align-items: center;
   gap: 10px;
   font-size: 0.64rem;
+}
+
+.sp__date {
+  white-space: nowrap;
 }
 
 .sp__count {
