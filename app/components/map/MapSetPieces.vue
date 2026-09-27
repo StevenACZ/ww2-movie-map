@@ -104,6 +104,7 @@
 </template>
 
 <script setup lang="ts">
+import { watch as watchSound } from "vue";
 import type { GlobeContext } from "~/globe/engine";
 import { SET_PIECES, type SetPieceId } from "~/globe/setpieces/catalog";
 import type { SetPiecePlayer } from "~/globe/setpieces/player";
@@ -129,6 +130,8 @@ const beat = ref(0);
 const bar = ref<HTMLElement | null>(null);
 const player = shallowRef<SetPiecePlayer | null>(null);
 let lastScale = -1;
+
+watchSound(sound.enabled, (enabled) => player.value?.setSound(enabled));
 
 const meta = computed(
   () => SET_PIECES.find((piece) => piece.id === active.value) ?? null
@@ -230,7 +233,7 @@ onBeforeUnmount(() => {
 .sp__caption {
   position: absolute;
   left: 50%;
-  bottom: calc(var(--timeline-h) + var(--edge) + 10px);
+  bottom: max(16px, env(safe-area-inset-bottom));
   width: min(760px, calc(100vw - 32px));
   translate: -50% 0;
   border-radius: var(--radius);
@@ -241,7 +244,7 @@ onBeforeUnmount(() => {
   @include down($bp-md) {
     left: 8px;
     right: 8px;
-    bottom: calc(var(--timeline-h) + 8px);
+    bottom: max(8px, env(safe-area-inset-bottom));
     width: auto;
     translate: none;
   }
@@ -282,9 +285,9 @@ onBeforeUnmount(() => {
   padding: 12px 12px 6px 18px;
 
   @include down($bp-sm) {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 8px 12px;
-    padding: 10px 10px 4px 14px;
+    padding: 10px 10px 12px 14px;
   }
 }
 
@@ -297,8 +300,18 @@ onBeforeUnmount(() => {
   color: var(--gold);
 
   @include down($bp-sm) {
+    grid-column: 1;
+    font-size: 1.08rem;
+    line-height: 1.15;
+  }
+}
+
+.sp__copy {
+  min-width: 0;
+
+  @include down($bp-sm) {
     grid-column: 1 / -1;
-    font-size: 1.2rem;
+    grid-row: 2;
   }
 }
 
@@ -312,6 +325,10 @@ onBeforeUnmount(() => {
 
 .sp__date {
   white-space: nowrap;
+
+  @include down($bp-sm) {
+    display: none;
+  }
 }
 
 .sp__count {
@@ -325,6 +342,10 @@ onBeforeUnmount(() => {
   line-height: 1.4;
   color: var(--text);
   text-wrap: pretty;
+
+  @include down($bp-sm) {
+    font-size: 0.9rem;
+  }
 }
 
 .sp__controls {
@@ -346,9 +367,9 @@ onBeforeUnmount(() => {
   }
 
   @include down($bp-sm) {
-    grid-row: 2;
+    grid-row: 1;
     grid-column: 2;
-    align-self: end;
+    align-self: center;
   }
 }
 
