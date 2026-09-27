@@ -1,6 +1,7 @@
 import { plume, trail } from "../fx";
 import {
   type Kit,
+  type Sample,
   clamp01,
   easeOut,
   ground,
@@ -379,6 +380,7 @@ interface Drop {
 const scene: SceneDef = {
   anchor: [-0.7, 49.42],
   near: 2.2,
+  pace: 0.62,
   clip: [0.05, 420],
   bare: true,
   labels: LABELS,
@@ -730,6 +732,13 @@ const scene: SceneDef = {
       dd.push({ beach: beaches[0]!, u: 0.2 + i * 0.2, sink: 0, seed: 20 + i });
 
     const plane = sample();
+    const wing = sample();
+    const slot = (yaw: number, j: number) => {
+      wing.x = 0;
+      wing.z = 0;
+      wing.yaw = yaw;
+      offset(wing, V[j]![0] * 0.55, V[j]![1] * 0.55, 0);
+    };
     const usSerials = [0, 1, 2, 3].map((k) => ({
       t0: 9.8 + k * 0.55,
       t1: 17.8 + k * 0.55,
@@ -737,19 +746,25 @@ const scene: SceneDef = {
       x1: -4,
       z: 1.4 + k * 1.5,
       h: 1.15,
+      seed: k * 11,
     }));
     const usAt = (serial: (typeof usSerials)[number], j: number, t: number) => {
-      const u = (t - serial.t0 - j * 0.06) / (serial.t1 - serial.t0);
-      plane.x = serial.x0 + (serial.x1 - serial.x0) * u;
-      plane.z = serial.z + (plane.x - serial.x0) * 0.012;
-      plane.y = ground(plane.x, plane.z) + serial.h;
-      plane.yaw = Math.atan2(
-        serial.x1 - serial.x0,
-        0.012 * (serial.x1 - serial.x0)
+      const u = (t - serial.t0) / (serial.t1 - serial.t0);
+      const span = serial.x1 - serial.x0;
+      const yaw0 = Math.atan2(span, 0.012 * span);
+      slot(yaw0, j);
+      fly(
+        plane,
+        serial.x0 + wing.x,
+        serial.z + wing.z,
+        yaw0,
+        span * u,
+        smx + 7 - serial.x0,
+        5,
+        1.25
       );
-      plane.pitch = 0;
-      plane.roll = 0;
-      offset(plane, V[j]![0] * 0.55, V[j]![1] * 0.55, 0);
+      plane.y = ground(plane.x, plane.z) + serial.h;
+      jostle(plane, t, serial.seed + j);
       return u;
     };
     const [rx, rz] = geo(RANVILLE);
@@ -760,16 +775,24 @@ const scene: SceneDef = {
       z0: -16,
       z1: 44,
       h: 1.05,
+      seed: 50 + k * 11,
     }));
     const ukAt = (serial: (typeof ukSerials)[number], j: number, t: number) => {
-      const u = (t - serial.t0 - j * 0.06) / (serial.t1 - serial.t0);
-      plane.x = serial.x;
-      plane.z = serial.z0 + (serial.z1 - serial.z0) * u;
+      const u = (t - serial.t0) / (serial.t1 - serial.t0);
+      const span = serial.z1 - serial.z0;
+      slot(0, j);
+      fly(
+        plane,
+        serial.x + wing.x,
+        serial.z0 + wing.z,
+        0,
+        span * u,
+        rz + 3 - serial.z0,
+        4,
+        2.4
+      );
       plane.y = ground(plane.x, plane.z) + serial.h;
-      plane.yaw = 0;
-      plane.pitch = 0;
-      plane.roll = 0;
-      offset(plane, V[j]![0] * 0.55, V[j]![1] * 0.55, 0);
+      jostle(plane, t, serial.seed + j);
       return u;
     };
 
@@ -782,7 +805,7 @@ const scene: SceneDef = {
           const xDrop =
             smx - 3 + (k % 2) * 5 + p * 0.35 + (hash(seed) - 0.5) * 6;
           const u = (xDrop - serial.x0) / (serial.x1 - serial.x0);
-          const at = serial.t0 + j * 0.06 + u * (serial.t1 - serial.t0);
+          const at = serial.t0 + u * (serial.t1 - serial.t0);
           usAt(serial, j, at);
           drops.push({
             at,
@@ -801,7 +824,7 @@ const scene: SceneDef = {
           const seed = drops.length + 7;
           const zDrop = rz - 1.4 + p * 0.4 + (hash(seed) - 0.5) * 1.6;
           const u = (zDrop - serial.z0) / (serial.z1 - serial.z0);
-          const at = serial.t0 + j * 0.06 + u * (serial.t1 - serial.t0);
+          const at = serial.t0 + u * (serial.t1 - serial.t0);
           ukAt(serial, j, at);
           drops.push({
             at,
@@ -1173,8 +1196,20 @@ const scene: SceneDef = {
       for (const b of bombers) {
         const age = t - b.t0;
         if (age < 0 || age > 9) continue;
-        const z = b.z0 + age * BOMBER_SPEED;
-        put("b24", b.x, ground(b.x, z) + 2.35, z, 0, 0.5);
+        fly(
+          s,
+          b.x,
+          b.z0,
+          0,
+          age * BOMBER_SPEED,
+          (b.release - b.t0) * BOMBER_SPEED + 3,
+          3.5,
+          -2.4
+        );
+        const climb = Math.max(0, t - b.release - 0.4) * 0.05;
+        s.y = ground(s.x, s.z) + 2.35 + climb;
+        jostle(s, t, b.z0 * 7);
+        kit.unit("b24", s, 0.5, WHITE);
       }
       for (const bomb of bombs) {
         const age = t - bomb.at;
@@ -1206,7 +1241,7 @@ const scene: SceneDef = {
         if (t < start) continue;
         const from = b === omaha ? 5.5 : 3;
         const k = clamp01((t - start) / (touch - start));
-        const [x, z] = shore(b, d.u, from * (1 - k) + 0.02);
+        const [x, z] = shore(b, d.u, from * (1 - k) + 0.06);
         if (d.sink && t > d.sink) {
           const a = t - d.sink;
           if (a < 1.6)
@@ -1252,10 +1287,10 @@ const scene: SceneDef = {
         const b = boat.beach;
         const omahaFirst = b === omaha && boat.first;
         const k = clamp01((t - boat.start) / (boat.touch - boat.start));
-        const reach = boat.from * (1 - easeOut(k)) + 0.03;
+        const size = boat.kind === "lct" ? 0.34 : 0.2;
+        const reach = boat.from * (1 - easeOut(k)) + size * 0.45 + 0.02;
         const leave = Math.max(0, t - boat.touch - 5) * 0.35;
         const [x, z] = shore(b, boat.u, reach + leave);
-        const size = boat.kind === "lct" ? 0.34 : 0.2;
         const rock = Math.sin(t * 2.3 + boat.seed) * 0.05;
         if (boat.hit && t > boat.hit) {
           const a = t - boat.hit;
@@ -1321,13 +1356,23 @@ const scene: SceneDef = {
           b === omaha ? (t < 50 ? 0.3 : 0.3 + (t - 50) * 0.09) : 2.2;
         if (boat.kind === "lcvp") {
           for (let q = 0; q < 2; q++) {
-            const adv = Math.min(
-              stall,
-              Math.max(0, since - 0.3 - q * 0.4) * (b === omaha ? 0.09 : 0.16)
-            );
             if (since < 0.3 + q * 0.4) continue;
-            const [ix, iz] = shore(b, boat.u + (q - 0.5) * 0.012, -adv);
-            put("infantry", ix, top(ix, iz), iz, b.toShore, 0.12);
+            const seed = boat.seed * 3 + q;
+            const pinned = omahaFirst && hash(seed + 0.77) < 0.4;
+            const adv = Math.min(
+              pinned ? 0.07 + hash(seed) * 0.08 : stall,
+              rush(since - 0.3 - q * 0.4, b === omaha ? 0.09 : 0.16, seed)
+            );
+            const spread = (q - 0.5) * 0.02 + (hash(seed + 0.4) - 0.5) * 0.012;
+            const [ix, iz] = shore(b, boat.u + spread * (1 + adv * 6), -adv);
+            put(
+              "infantry",
+              ix,
+              top(ix, iz),
+              iz,
+              b.toShore + (hash(seed + 0.6) - 0.5) * 0.6,
+              0.12
+            );
           }
         } else {
           for (let q = 0; q < 3; q++) {
@@ -1461,6 +1506,58 @@ const scene: SceneDef = {
     };
   },
 };
+
+function fly(
+  out: Sample,
+  x0: number,
+  z0: number,
+  yaw0: number,
+  dist: number,
+  at: number,
+  radius: number,
+  by: number
+) {
+  const sign = Math.sign(by);
+  out.pitch = 0;
+  if (dist <= at) {
+    out.x = x0 + Math.sin(yaw0) * dist;
+    out.z = z0 + Math.cos(yaw0) * dist;
+    out.yaw = yaw0;
+    out.roll = 0;
+    return out;
+  }
+  const arc = radius * Math.abs(by);
+  const sx = x0 + Math.sin(yaw0) * at;
+  const sz = z0 + Math.cos(yaw0) * at;
+  const cx = sx + radius * sign * Math.cos(yaw0);
+  const cz = sz - radius * sign * Math.sin(yaw0);
+  const yaw = yaw0 + (sign * Math.min(dist - at, arc)) / radius;
+  const rest = Math.max(0, dist - at - arc);
+  out.x = cx - radius * sign * Math.cos(yaw) + Math.sin(yaw) * rest;
+  out.z = cz + radius * sign * Math.sin(yaw) + Math.cos(yaw) * rest;
+  out.yaw = yaw;
+  const ease = radius * 0.35;
+  out.roll =
+    -sign *
+    0.55 *
+    Math.min(clamp01((dist - at) / ease), 1 - clamp01(rest / ease));
+  return out;
+}
+
+function jostle(out: Sample, t: number, seed: number) {
+  out.y += Math.sin(t * 1.3 + seed * 1.7) * 0.015;
+  out.pitch += Math.sin(t * 1.1 + seed) * 0.03;
+  out.roll += Math.sin(t * 0.8 + seed * 2.3) * 0.05;
+  offset(out, Math.sin(t * 0.6 + seed * 0.9) * 0.04, 0, 0);
+}
+
+function rush(time: number, rate: number, seed: number) {
+  if (time <= 0) return 0;
+  const period = 1.3 + hash(seed) * 0.8;
+  const k = time / period;
+  const n = Math.floor(k);
+  return ((n * 0.6 + Math.min(k - n, 0.6)) * period * rate) / 0.6;
+}
 
 function spout(
   kit: Kit,

@@ -657,6 +657,7 @@ export interface SceneDef {
   anchor: LonLat;
   scale?: number;
   near?: number;
+  pace?: number;
   clip?: [near: number, far: number];
   bare?: boolean;
   labels?: Label[];

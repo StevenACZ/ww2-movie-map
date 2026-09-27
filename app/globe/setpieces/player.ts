@@ -383,7 +383,7 @@ export class SetPiecePlayer {
     } else if (this.phase === "outro") {
       this.phaseU = Math.min(1, this.phaseU + dt / this.phaseLength);
     } else if (this.playing) {
-      this.t = Math.min(meta.duration, this.t + dt);
+      this.t = Math.min(meta.duration, this.t + dt * (this.scene?.pace ?? 1));
       this.dirty = true;
       const cues = scene.cues;
       while (this.cue < cues.length && cues[this.cue]![0] <= this.t) {
