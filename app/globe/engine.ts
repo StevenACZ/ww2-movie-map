@@ -565,6 +565,7 @@ export class GlobeEngine {
 
   private cinematic(on: boolean, bare = false) {
     this.isCinematic = on;
+    if (on) this.clearHover();
     if (on && bare && !this.bareHidden.length) {
       this.bareHidden = [
         this.units.group,
@@ -719,6 +720,10 @@ export class GlobeEngine {
   private pick(x: number, y: number) {
     const layer = this.activeLayer;
     if (!layer) return;
+    if (this.isCinematic) {
+      this.clearHover();
+      return;
+    }
     this.raycaster.setFromCamera(this.pointer, this.camera);
     const sphere = this.raycaster.intersectObject(this.ocean, false)[0];
     if (!sphere) {
