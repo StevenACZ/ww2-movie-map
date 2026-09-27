@@ -91,6 +91,7 @@ Pushes to `main` and a daily schedule run a GitHub Actions workflow that install
 - **historical-basemaps** (`aourednik/historical-basemaps`): historical borders, licensed under GPL-3.0. See `public/geo/LICENSE-historical-basemaps.txt`.
 - **Wikipedia and Wikidata**: historical context and identifiers, licensed under CC BY-SA.
 - **Posters**: film and series posters from their Wikipedia articles, shown at small size to identify each title.
+- **Freesound**: sound effects, CC0 and CC BY 4.0 recordings by juskiddink, duckduckpony and others. Authors, sources, and licenses for each file are listed in `public/audio/CREDITS.md`.
 - **Wikimedia Commons**: timeline event images (public domain, CC0, CC BY, CC BY-SA). Author, license, and source for each image are listed in `data/event-images.json` and shown on its card.
 
 ## License

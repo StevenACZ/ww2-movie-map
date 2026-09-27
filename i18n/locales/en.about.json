@@ -21,7 +21,9 @@
       "borders": "Historical borders",
       "wiki": "History, places, events and posters",
       "fonts": "Typefaces",
-      "three": "3D globe engine"
+      "three": "3D globe engine",
+      "sounds": "Sound effects",
+      "soundsNote": "Recordings by juskiddink and duckduckpony (CC BY 4.0) and CC0 contributors, trimmed and mixed for this site."
     },
     "authorEyebrow": "Author",
     "error": {
