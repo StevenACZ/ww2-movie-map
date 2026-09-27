@@ -840,8 +840,8 @@ const scene: SceneDef = {
 
     const gliders = [0, 1, 2, 3, 4, 5].map((i) => {
       const land = 2.8 + i * 0.35;
-      const lx = px + 0.3 + (i % 3) * 0.13 + (i > 2 ? 0.2 : 0);
-      const lz = pz - 0.25 + (i % 3) * 0.12 + (i > 2 ? 0.35 : 0);
+      const lx = px + 0.35 + (i > 2 ? 0.8 : 0) + (hash(i + 60) - 0.5) * 0.12;
+      const lz = pz - 0.2 - (i % 3) * 0.62 - (i > 2 ? 0.3 : 0);
       return new Path([
         [px + 9 + i * 0.4, 1.7, pz - 16 + i * 0.5, 0],
         [px + 3, 0.9, pz - 6, land - 1.4],
@@ -924,8 +924,12 @@ const scene: SceneDef = {
           if (landed) {
             s.pitch = 0;
             s.roll = 0.08 * (g % 2 ? 1 : -1);
+            s.yaw +=
+              (hash(g + 61) - 0.5) *
+              0.5 *
+              smooth(path.finish - 0.6, path.finish, t);
           }
-          kit.unit("horsa", s, 0.55, WHITE);
+          kit.unit("horsa", s, 0.42, WHITE);
           if (!landed && t > path.start) trail(kit, s, 0.4, 0.05, 0.2, 3);
         }
         for (const serial of ukSerials)
