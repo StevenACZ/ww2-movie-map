@@ -1,4 +1,5 @@
 import { plume, trail } from "../fx";
+import { airFire, wingShot, type AirShot } from "./air-fire";
 import {
   type Kit,
   type Sample,
@@ -406,6 +407,8 @@ const scene: SceneDef = {
       horsa: 6,
       paratrooper: 270,
       b24: 24,
+      p51d: 2,
+      "spitfire-mk9": 2,
       bomb: 72,
       "us-battleship-firing": 7,
       "fletcher-destroyer": 12,
@@ -419,7 +422,7 @@ const scene: SceneDef = {
       "panzer-iv": 5,
       casemate: 14,
       "mg-nest": 22,
-      hedgehog: 170,
+      hedgehog: 176,
       village: 16,
     },
   },
@@ -453,16 +456,19 @@ const scene: SceneDef = {
     [66, 2, 6, 0.3, 62, 186, 46],
   ],
   cues: [
-    [0.3, "drone", 0.5],
-    [10.5, "drone", 0.7],
+    [0.3, "heavy-prop", 8],
+    [10.5, "heavy-prop", 8],
     [13.5, "far", 0.4],
     [25.3, "far", 0.7],
     [26, "boom", 0.55],
     [27.4, "far", 0.7],
     [29, "boom", 0.5],
-    [31, "drone", 0.8],
+    [31, "heavy-prop", 5.8],
     [34.6, "rumble", 0.7],
     [35.2, "far", 0.6],
+    [37.6, "flyby", 0.65, -0.6],
+    [37.8, "gunfire", 0.55, -0.4],
+    [39.2, "gunfire", 0.45, 0.4],
     [40.2, "boom", 0.45],
     [41.5, "far", 0.5],
     [44.5, "boom", 0.5],
@@ -631,18 +637,26 @@ const scene: SceneDef = {
       ) => {
         for (let i = 0; i < count; i++) {
           const seed = ships.length;
-          const [x, z] = shore(
-            b,
-            (i + 0.5) / count + (hash(seed) - 0.5) * 0.15,
-            dist + (hash(seed + 0.5) - 0.5) * 1.5
-          );
+          const [x, z] = shore(b, (i + 0.5) / count, dist);
+          let stationX = x;
+          let stationZ = z;
+          while (
+            ships.some(
+              (ship) =>
+                Math.hypot(stationX - ship.x, stationZ - ship.z) <
+                (ship.size + size) * 0.6 + 0.2
+            )
+          ) {
+            stationX += b.nx * 0.5;
+            stationZ += b.nz * 0.5;
+          }
           ships.push({
             kind,
             beach: b,
-            x,
-            z,
+            x: stationX,
+            z: stationZ,
             size,
-            arrive: 22.6 + hash(seed + 0.2) * 1.8,
+            arrive: 23.5,
             yaw: b.toShore,
             fire:
               kind === "attack-transport"
@@ -654,9 +668,9 @@ const scene: SceneDef = {
           });
         }
       };
-      add("us-battleship-firing", bs, 9.5, 1.5, 1.8, bi > 1 ? 49 : 39.5);
-      add("fletcher-destroyer", ds, 4.5, 0.75, 1.15, 57);
-      add("attack-transport", ts, 16, 1.05, 0, 0);
+      add("us-battleship-firing", bs, 13, 1.5, 1.8, bi > 1 ? 49 : 39.5);
+      add("fletcher-destroyer", ds, 10, 0.75, 1.15, 57);
+      add("attack-transport", ts, 18, 1.05, 0, 0);
     });
 
     const targets = (b: Beach, seed: number, out: [number, number]) => {
@@ -710,7 +724,7 @@ const scene: SceneDef = {
             kind,
             start: start + (hash(seed) - 0.5) * 0.5,
             touch: touch + (hash(seed + 0.2) - 0.5) * 0.4,
-            u: (i + 0.5 + (hash(seed + 0.3) - 0.5) * 0.5) / count,
+            u: (i + 0.5) / count,
             from: kind === "lct" ? 5 : 6.5,
             hit,
             first: wi < 2,
@@ -719,6 +733,18 @@ const scene: SceneDef = {
         }
       });
     });
+
+    for (const beach of beaches) {
+      const lanes = boats
+        .filter((boat) => boat.beach === beach)
+        .sort((a, b) => a.u - b.u || a.start - b.start);
+      const width = (boat: Boat) => (boat.kind === "lct" ? 0.145 : 0.085);
+      let lane = -lanes.reduce((sum, boat) => sum + width(boat), 0) / 2;
+      for (const boat of lanes) {
+        boat.u = 0.5 + (lane + width(boat) / 2) / beach.len;
+        lane += width(boat);
+      }
+    }
 
     const dd: { beach: Beach; u: number; sink: number; seed: number }[] = [];
     for (let i = 0; i < 8; i++)
@@ -877,6 +903,56 @@ const scene: SceneDef = {
         });
     });
 
+    const covers = Array.from({ length: 4 }, (_, i) => ({
+      kind: i < 2 ? ("p51d" as const) : ("spitfire-mk9" as const),
+      at: 35.5 + i * 0.55,
+      x: omaha.ax - omaha.tx * (9 + i * 0.65) - omaha.nx * (1.4 + i * 0.32),
+      z: omaha.az - omaha.tz * (9 + i * 0.65) - omaha.nz * (1.4 + i * 0.32),
+      yaw: Math.atan2(omaha.tx, omaha.tz),
+    }));
+    const coverAt = (
+      cover: (typeof covers)[number],
+      t: number,
+      out: Sample
+    ) => {
+      fly(
+        out,
+        cover.x,
+        cover.z,
+        cover.yaw,
+        (t - cover.at) * 4.4,
+        18,
+        4.8,
+        -1.15
+      );
+      out.y =
+        ground(out.x, out.z) +
+        0.95 +
+        smooth(cover.at + 4, cover.at + 7, t) * 1.8;
+      out.pitch = -0.28 * (1 - smooth(cover.at + 3.7, cover.at + 4.5, t));
+    };
+    const airShots: AirShot[] = [];
+    covers.forEach((cover) => {
+      for (let burst = 0; burst < 3; burst++)
+        for (let round = 0; round < 3; round++) {
+          const at = cover.at + 2.1 + burst * 0.52 + round * 0.09;
+          coverAt(cover, at, plane);
+          for (const side of [-1, 1]) {
+            const tx =
+              plane.x +
+              Math.sin(plane.yaw) * 3.2 +
+              Math.cos(plane.yaw) * side * 0.08;
+            const tz =
+              plane.z +
+              Math.cos(plane.yaw) * 3.2 -
+              Math.sin(plane.yaw) * side * 0.08;
+            airShots.push(
+              wingShot(at, plane, side, 0.38, [tx, top(tx, tz) + 0.015, tz])
+            );
+          }
+        }
+    });
+
     const [cx, cz] = geo(CAEN);
     const [lx, lz] = geo(LION);
     const aimShip = [0, 0];
@@ -884,14 +960,14 @@ const scene: SceneDef = {
     const shipAt = (ship: Ship, t: number) => {
       const k = clamp01((t - ship.arrive + 8) / 8);
       const back = 40 * (1 - easeOut(k));
-      s.x = ship.x + ship.beach.nx * back;
-      s.z = ship.z + ship.beach.nz * back;
+      s.x = ship.x;
+      s.z = ship.z - back;
       s.y = sea(s.x, s.z);
       const turn =
         ship.kind === "us-battleship-firing"
           ? smooth(ship.arrive, ship.arrive + 2, t) * 1.25
           : 0;
-      s.yaw = ship.yaw + turn;
+      s.yaw = smooth(ship.arrive - 2, ship.arrive, t) * ship.yaw + turn;
       s.pitch = Math.sin(t * 0.9 + ship.seed) * 0.01;
       s.roll = Math.sin(t * 0.7 + ship.seed * 2) * 0.015;
       if (ship.kind === "fletcher-destroyer" && ship.beach === omaha) {
@@ -903,6 +979,12 @@ const scene: SceneDef = {
     };
 
     return (t) => {
+      for (const cover of covers) {
+        if (t < cover.at || t > cover.at + 8) continue;
+        coverAt(cover, t, plane);
+        kit.unit(cover.kind, plane, 0.38, WHITE);
+      }
+      airFire(kit, airShots, t);
       for (const [x, z, size, yaw] of villages)
         put("village", x, top(x, z), z, yaw, size);
 
@@ -1050,20 +1132,24 @@ const scene: SceneDef = {
         const k = shipAt(ship, t);
         kit.unit(ship.kind, s, ship.size, WHITE);
         if (k < 1) trail(kit, s, 3, 0.16, 0.45 * (1 - k * k));
-        if (ship.kind === "attack-transport" && t > 25 && t < 48)
+        if (ship.kind === "attack-transport" && t > 25 && t < 48) {
+          const shipX = s.x;
+          const shipZ = s.z;
+          const shipYaw = s.yaw;
           for (let side = -1; side <= 1; side += 2) {
             const bob = Math.sin(t * 1.3 + ship.seed + side) * 0.004;
-            aimShip[0] = s.x + Math.cos(s.yaw) * side * 0.14;
-            aimShip[1] = s.z - Math.sin(s.yaw) * side * 0.14;
+            aimShip[0] = shipX + Math.cos(shipYaw) * side * 0.16;
+            aimShip[1] = shipZ - Math.sin(shipYaw) * side * 0.16;
             put(
               "lcvp",
               aimShip[0]!,
               sea(aimShip[0]!, aimShip[1]!) + bob,
               aimShip[1]!,
-              s.yaw,
+              shipYaw,
               0.13
             );
           }
+        }
       }
 
       for (const shot of shots) {
@@ -1305,7 +1391,9 @@ const scene: SceneDef = {
               (1 -
                 easeOut(
                   clamp01((boat.hit - boat.start) / (boat.touch - boat.start))
-                ))
+                )) +
+              size * 0.45 +
+              0.02
           );
           blast(
             kit,
@@ -1332,14 +1420,17 @@ const scene: SceneDef = {
         }
         const landed = t >= boat.touch;
         const kind: ModelKind =
-          boat.kind === "lct" ? "lct" : landed ? "lcvp-open" : "lcvp";
-        const yaw =
-          leave > 0 ? b.toShore + Math.min(Math.PI, leave * 2) : b.toShore;
+          boat.kind === "lct"
+            ? "lct"
+            : landed && leave === 0
+              ? "lcvp-open"
+              : "lcvp";
+        const yaw = b.toShore;
         put(kind, x, sea(x, z), z, yaw, size, landed ? 0 : rock * 0.6, rock);
         if (!landed || leave > 0) {
           s.x = x;
           s.z = z;
-          s.yaw = yaw;
+          s.yaw = yaw + (leave > 0 ? Math.PI : 0);
           trail(kit, s, 0.32, 0.035, 0.3, 5);
         }
         if (!landed) {

@@ -172,7 +172,13 @@ export class SetPiecePlayer {
     if (!this.playing) this.audio.pause();
     if (this.phase !== "run" || !this.scene) return;
     for (const [at, kind, duration, pan] of this.scene.cues) {
-      if (kind !== "drone" && kind !== "surf" && kind !== "engine") continue;
+      if (
+        kind !== "drone" &&
+        kind !== "surf" &&
+        kind !== "engine" &&
+        kind !== "heavy-prop"
+      )
+        continue;
       if (at <= this.t && at + duration > this.t)
         this.audio.play(kind, at + duration - this.t, pan, this.scene.pace);
     }

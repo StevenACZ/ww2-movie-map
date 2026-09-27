@@ -18,12 +18,17 @@ const SAMPLE: Record<Kind, string> = {
   surf: "sp-surf-1940",
   engine: "sp-launch-1940",
   flyby: "sp-merlin-1940",
+  gunfire: "sp-gunfire",
+  "heavy-prop": "sp-heavy-prop",
+  blast: "sp-blast",
+  "blast-tail": "sp-blast-tail",
 };
 
 const LOOPS: Partial<Record<Kind, readonly [number, number]>> = {
   drone: [0.2, 8.2],
   surf: [0.2, 14.2],
   engine: [0.2, 14.2],
+  "heavy-prop": [0.2, 14.2],
 };
 
 const LEVEL: Record<Kind, number> = {
@@ -34,6 +39,10 @@ const LEVEL: Record<Kind, number> = {
   surf: 0.32,
   engine: 0.24,
   flyby: 0.7,
+  gunfire: 0.8,
+  "heavy-prop": 0.32,
+  blast: 0.95,
+  "blast-tail": 0.42,
 };
 
 export class SetPieceAudio {
@@ -124,7 +133,7 @@ export class SetPieceAudio {
       source.start(at, loop[0] + (elapsed % (loop[1] - loop[0])));
       source.stop(at + remaining);
     } else {
-      if (cue.kind !== "flyby")
+      if (cue.kind === "boom" || cue.kind === "far" || cue.kind === "rumble")
         source.playbackRate.value = 0.92 + Math.random() * 0.16;
       gain.gain.value = LEVEL[cue.kind] * cue.level;
       source.start(at, elapsed);

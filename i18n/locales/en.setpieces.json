@@ -188,28 +188,32 @@
         "teaser": "The first atomic bomb used in war.",
         "beats": [
           {
-            "time": "6 August",
-            "text": "A clear morning over Hiroshima, a city built on the delta of the Ōta River."
+            "time": "6 August 1945",
+            "text": "Morning over Hiroshima. Homes, streets and bridges fill the islands of the Ōta River delta."
           },
           {
-            "time": "08:09",
-            "text": "The B-29 Enola Gay begins its bomb run at about 9,400 m, with two accompanying aircraft."
-          },
-          {
-            "time": "08:15",
-            "text": "Little Boy is released. It falls for about 44 seconds."
+            "time": "The approach",
+            "text": "The B-29 Enola Gay approaches with two accompanying aircraft. The distinctive Aioi Bridge is the aiming point."
           },
           {
             "time": "08:15",
-            "text": "It detonates about 600 m above the city, with the force of about 15 kilotons of TNT."
+            "text": "Little Boy is released. The fall takes about 43 seconds; time is compressed in this reconstruction."
+          },
+          {
+            "time": "08:15",
+            "text": "The bomb explodes in the air, about 600 metres above the city. A blinding flash precedes the blast."
           },
           {
             "time": "Minutes later",
-            "text": "Blast and heat destroy much of the city. Fires spread as the cloud climbs."
+            "text": "A towering cloud rises above the delta. Dust and smoke obscure the streets below."
           },
           {
-            "time": "1945",
-            "text": "About 70,000 to 80,000 people die in the blast; by the end of 1945 the toll reaches 90,000 to 166,000."
+            "time": "The city below",
+            "text": "Heat, blast and fires devastate Hiroshima. Near the centre, the shell of the Industrial Promotion Hall remains standing."
+          },
+          {
+            "time": "Remembering Hiroshima",
+            "text": "Tens of thousands of people die, and many more suffer lasting injuries and illness. The surviving Dome becomes a memorial for peace."
           }
         ]
       },
@@ -219,28 +223,32 @@
         "teaser": "Three days later, a second atomic bomb.",
         "beats": [
           {
-            "time": "9 August",
-            "text": "Kokura, the primary target, is hidden by cloud and smoke. The B-29 Bockscar turns to Nagasaki."
+            "time": "9 August 1945",
+            "text": "Nagasaki stretches between steep hills. Homes, factories, railway lines and Urakami Cathedral fill the valley."
+          },
+          {
+            "time": "The approach",
+            "text": "Cloud and smoke obscure Kokura. The B-29 Bockscar turns to Nagasaki, where a break in the clouds permits the bombing run."
           },
           {
             "time": "11:01",
-            "text": "Fat Man is released over the Urakami Valley, nearly 3 km from the planned aim point."
+            "text": "Fat Man is released over the Urakami Valley. Time is compressed in this reconstruction."
           },
           {
             "time": "11:02",
-            "text": "It detonates about 500 m above the valley, with the force of about 21 kilotons of TNT."
-          },
-          {
-            "time": "11:02",
-            "text": "The hills confine the blast to the Urakami Valley; much of the city beyond is shielded."
+            "text": "The bomb explodes about 500 metres above the valley. A brilliant flash is followed by the blast."
           },
           {
             "time": "Minutes later",
-            "text": "The cloud climbs over the burning valley."
+            "text": "The cloud rises above the hills. Dust and smoke spread through Urakami, north of the city centre."
           },
           {
-            "time": "1945",
-            "text": "About 60,000 to 80,000 people die by the end of 1945."
+            "time": "The valley below",
+            "text": "Homes, factories and the cathedral are devastated. The surrounding hills shape the destruction and partly shelter other districts."
+          },
+          {
+            "time": "Remembering Nagasaki",
+            "text": "Tens of thousands of people die. Survivors carry the consequences for the rest of their lives, and the city becomes a voice for peace."
           }
         ]
       }

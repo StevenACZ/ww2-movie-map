@@ -70,3 +70,11 @@ with no material groups, for one instanced draw per type. Target budgets are
 2. Register it in `index.ts` with its real name, side and length in metres.
 3. Add a row to the catalog above.
 4. Give the scene a capacity for the new id and place it with `kit.unit(id, ...)`.
+
+## Aviation and atomic scenes
+
+`aviation.ts` supplies Bf 109, Fw 190, Spitfire IX, P-51D and B-29 models in
+`map` and `scene` detail, plus a Spitfire I map model. The globe rotates these
+from arsenal +Z forward to its +X convention and preserves their baked paint.
+The scene IDs are `bf109`, `fw190`, `spitfire-mk9`, `p51d` and `b29`.
+`atomic-models.ts` supplies the exterior-only `little-boy` and `fat-man` models.

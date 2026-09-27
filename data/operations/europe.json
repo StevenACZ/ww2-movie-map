@@ -1,6 +1,34 @@
 {
   "operations": [
     {
+      "id": "luftwaffe-reich-defense",
+      "era": "ww2",
+      "name": {
+        "en": "Defence of the Reich: Luftwaffe interceptions",
+        "es": "Defensa del Reich: intercepciones de la Luftwaffe"
+      },
+      "summary": {
+        "en": "German fighters periodically intercept Allied bomber formations during the final air campaign, despite declining pilot and fuel reserves. This representative route illustrates the interception area over western and central Germany, not continuous combat or an individual sortie.",
+        "es": "Los cazas alemanes interceptan periódicamente a los bombarderos aliados durante la campaña aérea final, pese a la escasez de pilotos y combustible. Esta ruta representativa ilustra el área de intercepción en el oeste y centro de Alemania, no un combate continuo ni una salida individual."
+      },
+      "faction": "axis",
+      "unit": "fighter",
+      "count": 3,
+      "weight": 2,
+      "start": "1944-03-01",
+      "end": "1945-04-12",
+      "path": [
+        [6.8, 51.3],
+        [8.6, 50.1],
+        [10.23, 50.05],
+        [10.5, 51.5],
+        [8.5, 52.0],
+        [6.8, 51.3]
+      ],
+      "loop": true,
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Defence_of_the_Reich"
+    },
+    {
       "id": "poland-army-group-north",
       "era": "ww2",
       "name": {

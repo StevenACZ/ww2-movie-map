@@ -188,28 +188,32 @@
         "teaser": "La primera bomba atómica usada en una guerra.",
         "beats": [
           {
-            "time": "6 de agosto",
-            "text": "Una mañana despejada sobre Hiroshima, ciudad levantada en el delta del río Ōta."
+            "time": "6 de agosto de 1945",
+            "text": "Amanece en Hiroshima. Casas, calles y puentes ocupan las islas del delta del río Ōta."
           },
           {
-            "time": "08:09",
-            "text": "El B-29 Enola Gay inicia su pasada de bombardeo a unos 9400 m, con dos aviones de acompañamiento."
-          },
-          {
-            "time": "08:15",
-            "text": "Little Boy es lanzada. Cae durante unos 44 segundos."
+            "time": "La aproximación",
+            "text": "El B-29 Enola Gay se aproxima con dos aviones acompañantes. El singular puente Aioi es el punto de mira."
           },
           {
             "time": "08:15",
-            "text": "Detona a unos 600 m sobre la ciudad, con la fuerza de unos 15 kilotones de TNT."
+            "text": "Se lanza Little Boy. La caída dura unos 43 segundos; esta reconstrucción comprime el tiempo."
+          },
+          {
+            "time": "08:15",
+            "text": "La bomba explota en el aire, a unos 600 metros sobre la ciudad. Un destello cegador precede a la onda expansiva."
           },
           {
             "time": "Minutos después",
-            "text": "La onda expansiva y el calor destruyen gran parte de la ciudad. Los incendios se extienden mientras sube la nube."
+            "text": "Una enorme nube asciende sobre el delta. El polvo y el humo ocultan las calles."
           },
           {
-            "time": "1945",
-            "text": "Unas 70 000 a 80 000 personas mueren en la explosión; a finales de 1945 la cifra llega a entre 90 000 y 166 000."
+            "time": "La ciudad abajo",
+            "text": "El calor, la onda expansiva y los incendios devastan Hiroshima. Cerca del centro, queda en pie la estructura del Salón de Promoción Industrial."
+          },
+          {
+            "time": "Recordar Hiroshima",
+            "text": "Mueren decenas de miles de personas; muchas más sufren heridas y enfermedades duraderas. La cúpula que sobrevive se convierte en un memorial por la paz."
           }
         ]
       },
@@ -219,28 +223,32 @@
         "teaser": "Tres días después, una segunda bomba atómica.",
         "beats": [
           {
-            "time": "9 de agosto",
-            "text": "Kokura, el objetivo principal, está cubierta por nubes y humo. El B-29 Bockscar se desvía hacia Nagasaki."
+            "time": "9 de agosto de 1945",
+            "text": "Nagasaki se extiende entre colinas escarpadas. Casas, fábricas, vías férreas y la catedral de Urakami ocupan el valle."
+          },
+          {
+            "time": "La aproximación",
+            "text": "Las nubes y el humo ocultan Kokura. El B-29 Bockscar se dirige a Nagasaki, donde una abertura entre las nubes permite la aproximación."
           },
           {
             "time": "11:01",
-            "text": "Fat Man es lanzada sobre el valle de Urakami, a casi 3 km del punto previsto."
+            "text": "Se lanza Fat Man sobre el valle de Urakami. Esta reconstrucción comprime el tiempo."
           },
           {
             "time": "11:02",
-            "text": "Detona a unos 500 m sobre el valle, con la fuerza de unos 21 kilotones de TNT."
-          },
-          {
-            "time": "11:02",
-            "text": "Las colinas encierran la explosión en el valle de Urakami; buena parte de la ciudad queda protegida."
+            "text": "La bomba explota a unos 500 metros sobre el valle. A un intenso destello le sigue la onda expansiva."
           },
           {
             "time": "Minutos después",
-            "text": "La nube sube sobre el valle en llamas."
+            "text": "La nube se eleva por encima de las colinas. El polvo y el humo cubren Urakami, al norte del centro urbano."
           },
           {
-            "time": "1945",
-            "text": "Unas 60 000 a 80 000 personas mueren antes de terminar 1945."
+            "time": "El valle abajo",
+            "text": "Casas, fábricas y la catedral quedan devastadas. Las colinas condicionan la destrucción y protegen parcialmente otros barrios."
+          },
+          {
+            "time": "Recordar Nagasaki",
+            "text": "Mueren decenas de miles de personas. Los sobrevivientes cargan con las consecuencias de por vida, y la ciudad se convierte en una voz por la paz."
           }
         ]
       }
