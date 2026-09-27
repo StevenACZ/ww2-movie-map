@@ -15,15 +15,16 @@ import type { EventCard, TitleCard, WorldData } from "~~/types/view";
 import type { GlobeEngine, GlobeHover, GlobeLayers } from "~/globe/engine";
 import type { LonLat } from "~/globe/geo";
 import type { TagInput } from "~/globe/overlay";
-import type { ColorMode } from "~/globe/palette";
+import type { PaletteMode } from "~/globe/palette";
 import { TMDB_IMAGE } from "~/utils/seo";
+import { SET_PIECE_BY_EVENT } from "~/globe/setpieces/catalog";
 
 const props = withDefaults(
   defineProps<{
     titles: TitleCard[];
     events: EventCard[];
     t: number;
-    mode: ColorMode;
+    mode: PaletteMode;
     layers: GlobeLayers;
     selected: string | null;
     journey: { lonLat: LonLat; label: string }[] | null;
@@ -33,6 +34,7 @@ const props = withDefaults(
     zoom?: boolean;
     fit?: LonLat[];
     tags?: TagInput[];
+    setpieces?: boolean;
   }>(),
   { zoom: true }
 );
@@ -42,6 +44,7 @@ const emit = defineEmits<{
   cluster: [ids: string[], x: number, y: number];
   hover: [hover: GlobeHover | null];
   ready: [world: WorldData];
+  setpiece: [id: string];
 }>();
 
 const { t, locale } = useI18n();
@@ -105,8 +108,17 @@ function pushEvents() {
       major: !!event.major,
     }))
   );
+  const cta = t("setpieces.in3d");
   engine.setEventLabels(
-    new Map(located.map((event) => [event.id, event.title]))
+    new Map(located.map((event) => [event.id, event.title])),
+    new Map(
+      props.setpieces
+        ? located.flatMap((event) => {
+            const id = SET_PIECE_BY_EVENT.get(event.id);
+            return id ? [[event.id, { id, cta }] as const] : [];
+          })
+        : []
+    )
   );
 }
 
@@ -136,6 +148,7 @@ async function init() {
       onSelect: (id) => emit("select", id),
       onCluster: (ids, x, y) => emit("cluster", ids, x, y),
       onHover: (hover) => emit("hover", hover),
+      onSetPiece: (id) => emit("setpiece", id),
       onError: () => {
         failed.value = true;
       },
@@ -352,6 +365,14 @@ defineExpose({
   inset: 0;
 }
 
+.globe-overlay__markers {
+  z-index: 1;
+}
+
+.globe-overlay__stops {
+  z-index: 2;
+}
+
 .gl {
   position: absolute;
   left: 0;
@@ -424,6 +445,7 @@ defineExpose({
   height: 14px;
   translate: -50% -50%;
   rotate: 45deg;
+  scale: var(--gk, 1);
   background: var(--c);
   border: 1.5px solid #0b0c09;
   box-shadow:
@@ -444,6 +466,7 @@ defineExpose({
     height: 45px;
     rotate: none;
     translate: -50% -100%;
+    transform-origin: 50% 100%;
     border-radius: 4px;
     border: 1px solid rgb(236 230 214 / 0.35);
     overflow: hidden;
@@ -463,7 +486,7 @@ defineExpose({
   .gm:hover &,
   .gm:focus-visible &,
   .gm.is-selected & {
-    scale: 1.35;
+    scale: calc(var(--gk, 1) * 1.35);
   }
 
   .gm.is-selected & {
@@ -475,7 +498,7 @@ defineExpose({
 
 .gm__label {
   position: absolute;
-  left: 14px;
+  left: calc(7px + 7px * var(--gk, 1));
   top: 0;
   translate: 0 -50%;
   display: flex;
@@ -507,8 +530,8 @@ defineExpose({
   }
 
   .gm--poster & {
-    left: 20px;
-    top: -24px;
+    left: calc(5px + 15px * var(--gk, 1));
+    top: calc(-2px - 22px * var(--gk, 1));
   }
 
   .gm:hover &,
@@ -536,7 +559,7 @@ defineExpose({
   position: absolute;
   left: 0;
   top: 0;
-  margin: -24px 0 0 6px;
+  margin: calc(-24px * var(--gk, 1)) 0 0 calc(6px * var(--gk, 1));
   min-width: 24px;
   height: 20px;
   padding: 0 6px;
@@ -671,6 +694,57 @@ defineExpose({
 
   &--major {
     border-color: rgb(224 69 47 / 0.6);
+  }
+
+  &--3d {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 3px 10px 3px 3px;
+    border-radius: 999px;
+    border-color: var(--gold);
+    background: rgb(20 17 9 / 0.92);
+    box-shadow: 0 0 18px rgb(216 174 82 / 0.28);
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    pointer-events: auto;
+    transition:
+      background-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    b {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 3px 7px 3px 6px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #17130a;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+
+      &::before {
+        content: "";
+        border-block: 4px solid transparent;
+        border-left: 6px solid currentColor;
+      }
+    }
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      background: rgb(40 32 14 / 0.96);
+      box-shadow: 0 0 26px rgb(216 174 82 / 0.5);
+    }
   }
 }
 </style>

@@ -13,10 +13,16 @@
       :titles="cinematic ? [] : visibleTitles"
       :events="events"
       :t="time"
-      :mode="mode"
+      :mode="cinematic ? 'terrain' : mode"
       :layers="
         cinematic
-          ? { ...layers, units: false, events: false, labels: false }
+          ? {
+              ...layers,
+              units: false,
+              fronts: false,
+              events: false,
+              labels: false,
+            }
           : layers
       "
       :selected="selectedId"
@@ -24,7 +30,9 @@
       :active-stop="activeStop"
       :initial="initialView"
       :tags="tags"
+      setpieces
       @select="(id: string) => select(id)"
+      @setpiece="(id: string) => setPieces?.watch(id as SetPieceId)"
       @cluster="onCluster"
       @hover="onHover"
       @ready="onReady"
@@ -154,7 +162,14 @@
       @speed="speedIndex = (speedIndex + 1) % SPEEDS.length"
       @era="setEra"
       @clear-date="dateFilter = false"
-    />
+    >
+      <template #aside>
+        <MapSetPieceMenu
+          :time="time"
+          @watch="(id: SetPieceId) => setPieces?.watch(id)"
+        />
+      </template>
+    </MapTimeline>
 
     <div
       v-if="hover"
@@ -196,6 +211,7 @@
     </p>
 
     <MapSetPieces
+      ref="setPieces"
       :context="() => globe?.context() ?? null"
       @time="onSetPieceTime"
       @start="onSetPieceStart"
@@ -214,6 +230,7 @@ import type {
 } from "~~/types/view";
 import type { GlobeContext, GlobeHover, GlobeLayers } from "~/globe/engine";
 import type { LonLat } from "~/globe/geo";
+import type { SetPieceId } from "~/globe/setpieces/catalog";
 import { FACTION_COLORS, type ColorMode } from "~/globe/palette";
 import type { IconName } from "~/utils/icons";
 import {
@@ -330,6 +347,7 @@ const globe = ref<{
   context: () => GlobeContext | null;
 }>();
 const cinematic = ref(false);
+const setPieces = ref<{ watch: (id: SetPieceId) => void }>();
 
 function onSetPieceStart() {
   cinematic.value = true;
@@ -778,7 +796,7 @@ onBeforeUnmount(() => {
   --side-w: 360px;
   --panel-w: 400px;
   --edge: 16px;
-  --timeline-h: 128px;
+  --timeline-h: 136px;
   position: absolute;
   inset: 0;
   overflow: hidden;
@@ -797,7 +815,7 @@ onBeforeUnmount(() => {
   z-index: 20;
   left: var(--edge);
   top: calc(var(--header-h) + 4px);
-  bottom: calc(var(--timeline-h) + var(--edge) + 10px);
+  bottom: var(--edge);
   width: var(--side-w);
 
   @include down($bp-md) {
@@ -860,7 +878,7 @@ onBeforeUnmount(() => {
   z-index: 30;
   right: var(--edge);
   top: calc(var(--header-h) + 4px);
-  bottom: calc(var(--timeline-h) + var(--edge) + 10px);
+  bottom: var(--edge);
   width: var(--panel-w);
 
   @include down($bp-md) {

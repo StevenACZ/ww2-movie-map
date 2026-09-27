@@ -35,6 +35,10 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Redesigned the era cards on the films index as photo cards.
 - Merged overlapping markers on the places atlas until zoomed in, anchored zoom buttons on the places with titles, and kept the atlas view when returning to it.
 - Made map panels opaque and kept the date bar clear of the legend.
+- Moved special events into the timeline dock as a highlighted launcher that features the event nearest to the current date, with its list opening above the dock and a 3D chip on the globe for events that have a reconstruction.
+- Extended the map sidebar and the title panel to the full height of the map, with the timeline dock between them.
+- Made globe posters grow as the camera zooms in, loading the larger image up close.
+- Made special events play over a neutral terrain globe, with an arcing camera flight, a cinematic vignette, and a less mechanical camera shake.
 
 ### Removed
 

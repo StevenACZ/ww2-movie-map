@@ -1,84 +1,5 @@
 <template>
   <div class="sp" :class="{ 'is-playing': !!active }">
-    <button
-      v-if="!active"
-      type="button"
-      class="sp__open"
-      :aria-expanded="open"
-      aria-controls="setpieces-panel"
-      @click="open = !open"
-    >
-      <Icon name="flame" />
-      <span>{{ t("setpieces.open") }}</span>
-    </button>
-
-    <Transition name="sp-panel">
-      <section
-        v-if="open && !active"
-        id="setpieces-panel"
-        class="sp__panel"
-        role="dialog"
-        :aria-label="t('setpieces.title')"
-      >
-        <header class="sp__head">
-          <div>
-            <h2 class="sp__title">{{ t("setpieces.title") }}</h2>
-            <p class="sp__intro">{{ t("setpieces.intro") }}</p>
-          </div>
-          <button
-            type="button"
-            class="btn btn--icon btn--ghost"
-            :aria-label="t('setpieces.close')"
-            @click="open = false"
-          >
-            <Icon name="x" />
-          </button>
-        </header>
-        <ul class="sp__list" data-lenis-prevent>
-          <li v-for="piece in SET_PIECES" :key="piece.id">
-            <button
-              type="button"
-              class="sp__card"
-              :style="{ '--era': ERA_COLORS[piece.era] }"
-              :disabled="!!loading"
-              @click="watch(piece.id)"
-            >
-              <svg
-                class="sp__vignette"
-                viewBox="0 0 64 56"
-                aria-hidden="true"
-                v-html="piece.vignette"
-              />
-              <span class="sp__meta">
-                <span class="sp__date mono">
-                  <span class="sp__era">{{ t(`era.short.${piece.era}`) }}</span>
-                  {{ formatDate(piece.date, locale)
-                  }}{{ piece.clock ? ` · ${piece.clock}` : "" }}
-                </span>
-                <strong class="sp__name">{{
-                  t(`setpieces.scenes.${piece.id}.title`)
-                }}</strong>
-                <span class="sp__place">{{
-                  t(`setpieces.scenes.${piece.id}.place`)
-                }}</span>
-                <span class="sp__teaser">{{
-                  t(`setpieces.scenes.${piece.id}.teaser`)
-                }}</span>
-              </span>
-              <span class="sp__watch">
-                <Icon name="play" />
-                {{
-                  loading === piece.id
-                    ? t("setpieces.loading")
-                    : t("setpieces.watch")
-                }}
-              </span>
-            </button>
-          </li>
-        </ul>
-      </section>
-    </Transition>
-
     <section
       v-if="active && meta"
       class="sp__caption"
@@ -184,9 +105,9 @@ import { SET_PIECES, type SetPieceId } from "~/globe/setpieces/catalog";
 import type { SetPiecePlayer } from "~/globe/setpieces/player";
 import { formatDate, toMonths } from "~~/shared/utils/time";
 
-const ERA_COLORS = { ww1: "#a07c47", ww2: "#8d9a52" } as const;
-
-const props = defineProps<{ context: () => GlobeContext | null }>();
+const props = defineProps<{
+  context: () => GlobeContext | null;
+}>();
 const emit = defineEmits<{
   time: [value: number];
   start: [id: SetPieceId];
@@ -196,7 +117,6 @@ const emit = defineEmits<{
 const { t, tm, rt, locale } = useI18n();
 const sound = useSound();
 
-const open = ref(false);
 const active = ref<SetPieceId | null>(null);
 const loading = ref<SetPieceId | null>(null);
 const playing = ref(false);
@@ -254,7 +174,6 @@ async function watch(id: SetPieceId) {
   } finally {
     loading.value = null;
   }
-  open.value = false;
   still.value = context.reducedMotion;
   beat.value = 0;
   lastScale = -1;
@@ -267,10 +186,7 @@ async function watch(id: SetPieceId) {
 function onKey(event: KeyboardEvent) {
   const target = event.target as HTMLElement | null;
   if (target?.closest("input, textarea, select, [contenteditable]")) return;
-  if (!active.value) {
-    if (event.key === "Escape" && open.value) open.value = false;
-    return;
-  }
+  if (!active.value) return;
   if (event.key === " " || event.code === "Space") {
     if (target?.closest("button")) return;
     event.preventDefault();
@@ -285,6 +201,8 @@ function onKey(event: KeyboardEvent) {
 }
 
 onMounted(() => window.addEventListener("keydown", onKey));
+
+defineExpose({ watch });
 
 onBeforeUnmount(() => {
   window.removeEventListener("keydown", onKey);
@@ -302,240 +220,6 @@ onBeforeUnmount(() => {
 
   > * {
     pointer-events: auto;
-  }
-}
-
-.sp__open {
-  position: absolute;
-  bottom: calc(var(--timeline-h) + var(--edge) + 10px);
-  left: calc(var(--side-w) + var(--edge) * 2);
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  height: 42px;
-  padding: 0 16px 0 13px;
-  border-radius: 999px;
-  @include panel(0.9);
-  box-shadow: var(--shadow);
-  font-family: var(--font-display);
-  font-size: 0.96rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: border-color 0.2s $ease-out;
-
-  svg {
-    width: 17px;
-    height: 17px;
-    color: var(--gold);
-  }
-
-  &:hover {
-    border-color: var(--gold);
-  }
-
-  &:focus-visible {
-    @include focus-ring;
-  }
-
-  @include down($bp-md) {
-    top: calc(var(--header-h) + 4px);
-    bottom: auto;
-    left: 8px;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-
-    span {
-      @include visually-hidden;
-    }
-  }
-}
-
-.sp__panel {
-  position: absolute;
-  bottom: calc(var(--timeline-h) + var(--edge) + 62px);
-  left: calc(var(--side-w) + var(--edge) * 2);
-  display: flex;
-  flex-direction: column;
-  width: min(420px, calc(100vw - var(--side-w) - var(--edge) * 3));
-  max-height: calc(100% - var(--header-h) - var(--timeline-h) - 90px);
-  border-radius: var(--radius);
-  @include panel(1);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-
-  @include down($bp-md) {
-    top: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: auto;
-    max-height: 78dvh;
-    border-radius: var(--radius) var(--radius) 0 0;
-    border-bottom: 0;
-  }
-}
-
-.sp__head {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 16px 12px 12px 18px;
-  border-bottom: 1px solid var(--line);
-
-  .btn {
-    width: 38px;
-    min-height: 38px;
-    flex: none;
-  }
-}
-
-.sp__title {
-  @include display(1.7rem);
-  color: var(--paper);
-}
-
-.sp__intro {
-  margin-top: 6px;
-  font-size: 0.82rem;
-  line-height: 1.45;
-  color: var(--muted);
-}
-
-.sp__list {
-  list-style: none;
-  display: grid;
-  gap: 8px;
-  padding: 12px;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-}
-
-.sp__card {
-  display: grid;
-  grid-template-columns: 64px 1fr auto;
-  align-items: center;
-  gap: 14px;
-  width: 100%;
-  padding: 12px 12px 12px 10px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--line);
-  background: rgb(236 230 214 / 0.025);
-  text-align: left;
-  transition:
-    border-color 0.2s $ease-out,
-    background-color 0.2s $ease-out;
-
-  &:hover,
-  &:focus-visible {
-    border-color: var(--gold);
-    background: rgb(216 174 82 / 0.06);
-
-    .sp__watch {
-      background: var(--gold);
-      color: #17130a;
-    }
-  }
-
-  &:focus-visible {
-    @include focus-ring;
-  }
-
-  &:disabled {
-    cursor: progress;
-  }
-}
-
-.sp__vignette {
-  width: 64px;
-  height: 56px;
-  padding: 4px;
-  border-radius: 8px;
-  background: rgb(0 0 0 / 0.28);
-  border: 1px solid var(--line);
-  color: var(--gold);
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.sp__meta {
-  display: grid;
-  gap: 3px;
-  min-width: 0;
-}
-
-.sp__date {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.sp__era {
-  padding: 1px 6px;
-  border-radius: 4px;
-  background: color-mix(in srgb, var(--era) 30%, transparent);
-  border: 1px solid color-mix(in srgb, var(--era) 70%, transparent);
-  color: var(--paper);
-  font-size: 0.62rem;
-}
-
-.sp__name {
-  font-family: var(--font-stencil);
-  font-size: 1.14rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  line-height: 1.05;
-  color: var(--text);
-}
-
-.sp__place {
-  font-size: 0.76rem;
-  color: var(--gold-2);
-}
-
-.sp__teaser {
-  font-size: 0.8rem;
-  line-height: 1.35;
-  color: var(--muted);
-}
-
-.sp__watch {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  height: 30px;
-  padding: 0 11px;
-  border-radius: 999px;
-  border: 1px solid var(--gold-deep);
-  font-family: var(--font-display);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold);
-  transition:
-    background-color 0.2s $ease-out,
-    color 0.2s $ease-out;
-
-  svg {
-    width: 11px;
-    height: 11px;
-  }
-
-  @include down($bp-sm) {
-    grid-column: 2 / 4;
-    justify-self: start;
   }
 }
 
@@ -670,35 +354,6 @@ onBeforeUnmount(() => {
 
   @include down($bp-md) {
     display: none;
-  }
-}
-
-.sp-panel-enter-active,
-.sp-panel-leave-active {
-  transition:
-    opacity 0.25s $ease-out,
-    transform 0.3s $ease-out;
-}
-
-.sp-panel-enter-from,
-.sp-panel-leave-to {
-  opacity: 0;
-  transform: translateY(-8px);
-
-  @include down($bp-md) {
-    transform: translateY(24px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .sp-panel-enter-active,
-  .sp-panel-leave-active {
-    transition: opacity 0.15s linear;
-  }
-
-  .sp-panel-enter-from,
-  .sp-panel-leave-to {
-    transform: none;
   }
 }
 </style>

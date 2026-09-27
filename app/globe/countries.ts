@@ -21,7 +21,7 @@ import { LineSegmentsGeometry } from "three/examples/jsm/lines/LineSegmentsGeome
 import { feature, mesh as topoMesh } from "topojson-client";
 import type { GeometryCollection, Topology } from "topojson-specification";
 import { densify, toVec3, unwrapRing, type LonLat } from "./geo";
-import { belligerent, camp, swatch, type ColorMode } from "./palette";
+import { belligerent, camp, swatch, type PaletteMode } from "./palette";
 
 type CountryProps = { id: string };
 export type BordersTopology = Topology<{
@@ -358,7 +358,7 @@ export class CountryLayer {
   /** Returns true when the palette changed and a crossfade should run. */
   apply(
     statusOf: (id: string) => string,
-    mode: ColorMode,
+    mode: PaletteMode,
     animate: boolean
   ): boolean {
     const statuses = this.ids.map(statusOf);
@@ -391,26 +391,10 @@ export class CountryLayer {
     this.material.uniforms.uMix!.value = animate ? 0 : 1;
 
     const camps = statuses.map(camp);
-    const campKey = camps.join(",");
+    const campKey = mode === "terrain" ? mode : camps.join(",");
     if (campKey !== this.campKey) {
       this.campKey = campKey;
-      const object = this.topology.objects.countries;
-      const war = topoMesh(this.topology, object, (a, b) => {
-        if (a === b) return false;
-        const sa =
-          statuses[
-            this.byId.get(
-              (a.properties as CountryProps | undefined)?.id ?? ""
-            ) ?? -1
-          ] ?? "neutral";
-        const sb =
-          statuses[
-            this.byId.get(
-              (b.properties as CountryProps | undefined)?.id ?? ""
-            ) ?? -1
-          ] ?? "neutral";
-        return camp(sa) !== camp(sb) && (belligerent(sa) || belligerent(sb));
-      }).coordinates as LonLat[][];
+      const war = mode === "terrain" ? [] : this.warBorders(statuses);
       const positions = segmentsFrom(war, LINE_RADIUS + 0.0004);
       for (const line of [this.warLines, this.warGlow]) {
         line.geometry.dispose();
@@ -423,6 +407,21 @@ export class CountryLayer {
       }
     }
     return animate;
+  }
+
+  private warBorders(statuses: string[]): LonLat[][] {
+    const statusOf = (country: { properties?: unknown }) =>
+      statuses[
+        this.byId.get(
+          (country.properties as CountryProps | undefined)?.id ?? ""
+        ) ?? -1
+      ] ?? "neutral";
+    return topoMesh(this.topology, this.topology.objects.countries, (a, b) => {
+      if (a === b) return false;
+      const sa = statusOf(a);
+      const sb = statusOf(b);
+      return camp(sa) !== camp(sb) && (belligerent(sa) || belligerent(sb));
+    }).coordinates as LonLat[][];
   }
 
   pick(lon: number, lat: number): string | undefined {

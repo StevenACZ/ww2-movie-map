@@ -1,6 +1,11 @@
 {
   "setpieces": {
-    "open": "Eventos especiales",
+    "eyebrow": "Eventos especiales · {n} en 3D",
+    "tagline": "Momentos clave en 3D",
+    "short": "Eventos 3D",
+    "all": "Todos los eventos especiales",
+    "now": "Ahora en el mapa",
+    "in3d": "Ver en 3D",
     "title": "Eventos especiales",
     "intro": "Siete momentos decisivos, reconstruidos en 3D sobre el globo. La escala y el tiempo están comprimidos.",
     "watch": "Ver",
@@ -10,7 +15,6 @@
     "replay": "Repetir",
     "next": "Siguiente",
     "previous": "Anterior",
-    "loading": "Cargando",
     "progress": "Progreso de la escena",
     "keys": "Espacio pausa, Esc cierra",
     "keysStill": "Flechas avanzan, Esc cierra",
