@@ -576,12 +576,13 @@ export class Tracers {
 
 const seaVertex = /* glsl */ `
 uniform float uRadius;
+uniform float uLevel;
 uniform vec2 uOffset;
 varying vec2 vPos;
 void main() {
   vPos = position.xy;
   vec2 w = vec2(position.x, -position.y) + uOffset;
-  vec3 p = vec3(position.x, -0.35 - dot(w, w) / ${(2 * EARTH_KM).toFixed(1)}, -position.y);
+  vec3 p = vec3(position.x, uLevel - dot(w, w) / ${(2 * EARTH_KM).toFixed(1)}, -position.y);
   gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
 }
 `;
@@ -607,7 +608,8 @@ void main() {
 export function seaPatch(
   radius: number,
   x: number,
-  z: number
+  z: number,
+  level = -0.35
 ): Mesh<RingGeometry, ShaderMaterial> {
   const mesh = new Mesh(
     new RingGeometry(0.01, radius, 96, 32),
@@ -616,6 +618,7 @@ export function seaPatch(
       fragmentShader: seaFragment,
       uniforms: {
         uRadius: { value: radius },
+        uLevel: { value: level },
         uTime: { value: 0 },
         uOffset: { value: new Vector2(x, z) },
       },

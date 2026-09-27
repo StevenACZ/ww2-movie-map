@@ -2,13 +2,14 @@ import { Matrix4, Quaternion, Vector3 } from "three";
 import type { GlobeContext } from "../engine";
 import { easeInOut, slerp } from "../geo";
 import { SetPieceAudio } from "./audio";
+import { KM } from "./effects";
 import {
   SET_PIECES,
   beatAt,
   type SetPieceId,
   type SetPieceMeta,
 } from "./catalog";
-import { Kit, smooth, type Pose, type SceneDef } from "./kit";
+import { ground, Kit, smooth, type Pose, type SceneDef } from "./kit";
 import { SCENES } from "./scenes";
 
 export interface PlayerHooks {
@@ -37,6 +38,12 @@ export class SetPiecePlayer {
   private gradeEl: HTMLDivElement | null = null;
   private skyEl: HTMLDivElement | null = null;
   private skyValue = -1;
+  private nightEl: HTMLDivElement | null = null;
+  private nightValue = -1;
+  private labelsEl: HTMLDivElement | null = null;
+  private labelEls: HTMLDivElement[] = [];
+  private labelSpots: number[] = [];
+  private readonly probe = new Vector3();
   private arc = 0;
   private flashValue = 0;
   private phase: Phase = "run";
@@ -49,6 +56,8 @@ export class SetPiecePlayer {
   private step = 0;
   private cue = 0;
   private near = 0.01;
+  private far = 100;
+  private clipped = false;
   private readonly still: boolean;
   private readonly pose: Pose = {
     position: new Vector3(),
@@ -78,11 +87,14 @@ export class SetPiecePlayer {
     this.meta = meta;
     this.scene = scene;
     this.kit = new Kit(scene.anchor, scene.scale ?? 1, scene.capacity);
+    this.kit.stage.visible = !scene.bare;
     this.ctx.scene.add(this.kit.root);
     this.update = scene.build(this.kit);
     this.audio = this.still ? null : new SetPieceAudio(sound);
     const camera = this.ctx.camera;
     this.near = camera.near;
+    this.far = camera.far;
+    this.clipped = false;
     camera.near = NEAR;
     const width = this.ctx.container.clientWidth || 1;
     const height = this.ctx.container.clientHeight || 1;
@@ -100,7 +112,7 @@ export class SetPiecePlayer {
       this.phase = "run";
       this.playing = false;
     } else {
-      this.kit.pose(scene.camera, 0, this.pose);
+      this.kit.pose(scene.camera, 0, this.pose, scene.near);
       const angle = this.dirA
         .copy(this.from)
         .normalize()
@@ -114,6 +126,7 @@ export class SetPiecePlayer {
     this.removeTicker = this.ctx.addTicker(this.tick);
     this.grade(true);
     this.sky();
+    this.labels();
     this.hooks.state(this.playing);
   }
 
@@ -213,6 +226,137 @@ export class SetPiecePlayer {
     this.skyEl.style.opacity = String(rounded);
   }
 
+  private labels() {
+    const list = this.scene?.labels;
+    const kit = this.kit;
+    if (!list?.length || !kit) return;
+    const es = document.documentElement.lang.startsWith("es");
+    const layer = document.createElement("div");
+    layer.setAttribute("aria-hidden", "true");
+    layer.style.cssText =
+      "position:absolute;inset:0;z-index:5;pointer-events:none;overflow:hidden";
+    for (const label of list) {
+      const [x, z] = kit.geo(label.at[0], label.at[1]);
+      this.labelSpots.push(x, z, label.lift ?? 0.4);
+      const el = document.createElement("div");
+      el.style.cssText =
+        "position:absolute;left:0;top:0;display:flex;flex-direction:column;align-items:center;opacity:0;will-change:transform,opacity";
+      const pill = document.createElement("div");
+      pill.style.cssText =
+        "display:flex;align-items:center;gap:6px;padding:5px 10px 5px 7px;border-radius:999px;background:rgb(11 12 9 / 0.8);border:1px solid rgb(216 174 82 / 0.5);color:#ece6d6;font:600 11px/1 var(--font-mono, monospace);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap";
+      for (const flag of label.flags ?? []) {
+        const img = document.createElement("img");
+        img.src = `/flags/${flag}.webp`;
+        img.alt = "";
+        img.style.cssText =
+          "height:11px;width:auto;border-radius:2px;box-shadow:0 0 0 1px rgb(0 0 0 / 0.45)";
+        pill.append(img);
+      }
+      pill.append(
+        typeof label.text === "string"
+          ? label.text
+          : es
+            ? label.text.es
+            : label.text.en
+      );
+      const stem = document.createElement("div");
+      stem.style.cssText =
+        "width:1px;height:18px;background:linear-gradient(rgb(216 174 82 / 0.75),rgb(216 174 82 / 0.15))";
+      const dot = document.createElement("div");
+      dot.style.cssText =
+        "width:5px;height:5px;border-radius:50%;background:#d8ae52;box-shadow:0 0 6px rgb(216 174 82 / 0.8)";
+      el.append(pill, stem, dot);
+      layer.append(el);
+      this.labelEls.push(el);
+    }
+    this.ctx.container.append(layer);
+    this.labelsEl = layer;
+  }
+
+  private applyLabels() {
+    const list = this.scene?.labels;
+    const kit = this.kit;
+    if (!list || !kit || !this.labelEls.length) return;
+    const camera = this.ctx.camera;
+    camera.updateMatrixWorld();
+    const width = this.ctx.container.clientWidth;
+    const height = this.ctx.container.clientHeight;
+    const shown = this.still || this.phase === "run" ? 1 : 0;
+    for (let i = 0; i < list.length; i++) {
+      const label = list[i]!;
+      const el = this.labelEls[i]!;
+      const fade =
+        shown *
+        smooth(label.from, label.from + 0.6, this.t) *
+        (1 - smooth(label.to - 0.6, label.to, this.t));
+      const x = this.labelSpots[i * 3]!;
+      const z = this.labelSpots[i * 3 + 1]!;
+      this.probe
+        .set(x, ground(x, z) + this.labelSpots[i * 3 + 2]!, z)
+        .applyMatrix4(kit.root.matrix)
+        .project(camera);
+      const p = this.probe;
+      const visible =
+        fade > 0.01 && p.z < 1 && Math.abs(p.x) < 1.1 && Math.abs(p.y) < 1.1;
+      el.style.opacity = visible ? fade.toFixed(3) : "0";
+      if (!visible) continue;
+      const sx = ((p.x + 1) / 2) * width;
+      const sy = ((1 - p.y) / 2) * height;
+      el.style.transform = `translate(${sx.toFixed(1)}px,${sy.toFixed(1)}px) translate(-50%,-100%)`;
+    }
+  }
+
+  private applyClip() {
+    const clip = this.scene?.clip;
+    if (!clip) return;
+    const on = this.still || this.phase === "run";
+    if (on === this.clipped) return;
+    this.clipped = on;
+    if (this.scene?.bare) {
+      this.ctx.cinematic(true, on);
+      if (this.kit) this.kit.stage.visible = on;
+    }
+    const camera = this.ctx.camera;
+    camera.near = on ? clip[0] * KM : NEAR;
+    camera.far = on ? clip[1] * KM : this.far;
+    camera.updateProjectionMatrix();
+  }
+
+  private applyNight() {
+    const keys = this.scene?.night;
+    if (!keys?.length) return;
+    let value = keys[keys.length - 1]![1];
+    for (let i = 0; i < keys.length - 1; i++) {
+      const [a, va] = keys[i]!;
+      const [b, vb] = keys[i + 1]!;
+      if (this.t <= a) {
+        value = va;
+        break;
+      }
+      if (this.t < b) {
+        value = va + (vb - va) * smooth(a, b, this.t);
+        break;
+      }
+    }
+    if (!this.still && this.phase !== "run")
+      value *=
+        this.phase === "intro"
+          ? smooth(0.4, 1, this.phaseU)
+          : 1 - smooth(0, 0.5, this.phaseU);
+    const rounded = Math.round(value * 100) / 100;
+    if (rounded === this.nightValue) return;
+    this.nightValue = rounded;
+    if (!this.nightEl) {
+      const el = document.createElement("div");
+      el.setAttribute("aria-hidden", "true");
+      el.style.cssText =
+        "position:absolute;inset:0;z-index:4;pointer-events:none;background:#16244a;mix-blend-mode:multiply;opacity:0";
+      this.ctx.container.append(el);
+      this.nightEl = el;
+    }
+    this.nightEl.style.opacity = String(rounded);
+  }
+
   private grade(on: boolean) {
     if (!this.gradeEl) {
       const el = document.createElement("div");
@@ -255,11 +399,14 @@ export class SetPiecePlayer {
       kit.begin(this.t);
       this.update(this.t);
       kit.end();
-      kit.pose(scene.camera, this.t, this.pose);
+      kit.pose(scene.camera, this.t, this.pose, scene.near);
       this.dirty = false;
     }
     this.place();
+    this.applyClip();
     this.applySky();
+    this.applyNight();
+    this.applyLabels();
     this.applyFlash(this.still ? 0 : kit.flash);
 
     const beat = this.still ? this.step : beatAt(meta, this.t);
@@ -334,6 +481,13 @@ export class SetPiecePlayer {
     this.gradeEl = null;
     this.skyEl?.remove();
     this.skyEl = null;
+    this.nightEl?.remove();
+    this.nightEl = null;
+    this.nightValue = -1;
+    this.labelsEl?.remove();
+    this.labelsEl = null;
+    this.labelEls = [];
+    this.labelSpots = [];
     this.flashValue = 0;
   }
 
@@ -346,6 +500,7 @@ export class SetPiecePlayer {
         camera.lookAt(0, 0, 0);
       }
       camera.near = this.near;
+      camera.far = this.far;
       camera.clearViewOffset();
       camera.updateProjectionMatrix();
     }

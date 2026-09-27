@@ -476,7 +476,7 @@ defineExpose({
   }
 
   .has-selection &:not(.is-selected) {
-    filter: saturate(0.4) brightness(0.8);
+    filter: saturate(0.3) brightness(0.55);
   }
 }
 
@@ -692,13 +692,49 @@ defineExpose({
     font-size: 12px;
     font-weight: 600;
     color: var(--paper);
-    white-space: nowrap;
+    max-width: 40vw;
     opacity: 0.85;
   }
 
+  b {
+    position: relative;
+    transition:
+      scale 0.4s $ease-spring,
+      background-color 0.3s $ease-out;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border: 2px solid var(--gold-2);
+      border-radius: 50%;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &.is-active {
+    z-index: 1;
+    gap: 14px;
+  }
+
+  &.gs--twin {
+    translate: 0 -30px;
+  }
+
+  &.gs--twin:not(.is-active) span {
+    display: none;
+  }
+
   &.is-active b {
-    scale: 1.25;
+    scale: 1.45;
     background: var(--gold-2);
+
+    &::before,
+    &::after {
+      opacity: 0.8;
+    }
   }
 
   &.is-active span {
@@ -709,6 +745,26 @@ defineExpose({
   @media (prefers-reduced-motion: no-preference) {
     animation: stop-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
     animation-delay: calc(var(--i) * 120ms + 300ms);
+
+    &.is-active b::before,
+    &.is-active b::after {
+      animation: stop-ping 2.2s $ease-out infinite;
+    }
+
+    &.is-active b::after {
+      animation-delay: 1.1s;
+    }
+  }
+}
+
+@keyframes stop-ping {
+  from {
+    opacity: 0.85;
+    scale: 1;
+  }
+  to {
+    opacity: 0;
+    scale: 3.2;
   }
 }
 

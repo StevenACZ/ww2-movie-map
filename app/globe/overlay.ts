@@ -247,6 +247,13 @@ export class Overlay {
       const name = document.createElement("span");
       name.textContent = stop.label;
       if ((stops ?? []).length > 1) el.append(num);
+      const [lon, lat] = stop.lonLat;
+      if (
+        (stops ?? [])
+          .slice(0, index)
+          .some((o) => Math.hypot(o.lonLat[0] - lon, o.lonLat[1] - lat) < 0.3)
+      )
+        el.classList.add("gs--twin");
       el.append(name);
       this.stopLayer.append(el);
       this.stops.push({

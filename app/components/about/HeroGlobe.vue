@@ -1,132 +1,122 @@
 <template>
-  <svg
-    class="globe"
-    viewBox="0 0 400 400"
-    fill="none"
-    aria-hidden="true"
-    focusable="false"
-  >
-    <defs>
-      <radialGradient id="about-globe-shade" cx="38%" cy="34%" r="70%">
-        <stop offset="0" stop-color="#262a1d" />
-        <stop offset="0.65" stop-color="#15170f" />
-        <stop offset="1" stop-color="#0b0c09" />
-      </radialGradient>
-    </defs>
-
-    <g class="globe__bezel">
-      <circle
-        cx="200"
-        cy="200"
-        r="194"
-        stroke="var(--line-strong)"
-        stroke-dasharray="1.5 7.2"
-      />
-      <path
-        v-for="tick in TICKS"
-        :key="tick"
-        :d="`M200 2v${tick % 90 === 0 ? 14 : 7}`"
-        :transform="`rotate(${tick} 200 200)`"
-        :stroke="tick % 90 === 0 ? 'var(--gold)' : 'var(--line-strong)'"
-        stroke-width="1.4"
-      />
-    </g>
-
-    <circle cx="200" cy="200" :r="R" fill="url(#about-globe-shade)" />
-
-    <g
-      class="globe__grid"
-      stroke="var(--paper)"
-      stroke-width="1"
-      stroke-opacity=".38"
+  <div class="emblem" :class="{ 'is-3d': ready }">
+    <svg
+      class="globe"
+      viewBox="0 0 400 400"
+      fill="none"
+      aria-hidden="true"
+      focusable="false"
     >
-      <path
-        v-for="(line, i) in PARALLELS"
-        :key="`p${i}`"
-        class="globe__draw"
-        :style="{ '--i': i }"
-        pathLength="1"
-        :d="line"
-      />
-      <g class="globe__spin">
-        <ellipse
-          v-for="i in MERIDIANS"
-          :key="`m${i}`"
-          class="globe__meridian"
-          :style="{
-            '--m': i - 1,
-            transform: `scaleX(${Math.cos(((i - 1) * Math.PI) / MERIDIANS).toFixed(4)})`,
-          }"
+      <defs>
+        <radialGradient id="about-globe-shade" cx="38%" cy="34%" r="70%">
+          <stop offset="0" stop-color="#262a1d" />
+          <stop offset="0.65" stop-color="#15170f" />
+          <stop offset="1" stop-color="#0b0c09" />
+        </radialGradient>
+      </defs>
+
+      <g class="globe__bezel">
+        <circle
           cx="200"
           cy="200"
-          :rx="R"
-          :ry="R"
-          vector-effect="non-scaling-stroke"
+          r="194"
+          stroke="var(--line-strong)"
+          stroke-dasharray="1.5 7.2"
+        />
+        <path
+          v-for="tick in TICKS"
+          :key="tick"
+          :d="`M200 2v${tick % 90 === 0 ? 14 : 7}`"
+          :transform="`rotate(${tick} 200 200)`"
+          :stroke="tick % 90 === 0 ? 'var(--gold)' : 'var(--line-strong)'"
+          stroke-width="1.4"
         />
       </g>
-    </g>
 
-    <circle
-      class="globe__draw globe__rim"
-      style="--i: 0"
-      cx="200"
-      cy="200"
-      :r="R"
-      pathLength="1"
-      stroke="var(--paper)"
-      stroke-width="2"
-    />
+      <circle cx="200" cy="200" :r="R" fill="url(#about-globe-shade)" />
 
-    <g
-      class="globe__front"
-      stroke="var(--red-2)"
-      stroke-width="2.2"
-      stroke-linecap="round"
-    >
-      <path
-        class="globe__draw"
-        style="--i: 11"
+      <g
+        class="globe__grid"
+        stroke="var(--paper)"
+        stroke-width="1"
+        stroke-opacity=".38"
+      >
+        <path
+          v-for="(line, i) in PARALLELS"
+          :key="`p${i}`"
+          class="globe__draw"
+          :style="{ '--i': i }"
+          pathLength="1"
+          :d="line"
+        />
+        <g class="globe__spin">
+          <ellipse
+            v-for="i in MERIDIANS"
+            :key="`m${i}`"
+            class="globe__meridian"
+            :style="{
+              '--m': i - 1,
+              transform: `scaleX(${Math.cos(((i - 1) * Math.PI) / MERIDIANS).toFixed(4)})`,
+            }"
+            cx="200"
+            cy="200"
+            :rx="R"
+            :ry="R"
+            vector-effect="non-scaling-stroke"
+          />
+        </g>
+      </g>
+
+      <circle
+        class="globe__draw globe__rim"
+        style="--i: 0"
+        cx="200"
+        cy="200"
+        :r="R"
         pathLength="1"
-        d="M142 118c18 14 30 8 44 24s10 34 30 46 16 30 38 44"
-        stroke-dasharray="4 5"
-      />
-    </g>
-
-    <g class="globe__roundel">
-      <circle
-        class="globe__pulse"
-        cx="200"
-        cy="200"
-        r="58"
-        stroke="var(--gold)"
-        stroke-width="1.5"
-      />
-      <circle
-        cx="200"
-        cy="200"
-        r="58"
-        fill="var(--bg)"
-        stroke="var(--gold)"
+        stroke="var(--paper)"
         stroke-width="2"
       />
-      <circle
-        cx="200"
-        cy="200"
-        r="49"
-        stroke="var(--gold-deep)"
-        stroke-width="1"
-      />
-      <path
-        class="globe__star"
-        transform="translate(200 200) scale(4.6) translate(-20 -20)"
-        d="M20 12.5 21.76 17.57 27.13 17.68 22.85 20.93 24.41 26.07 20 23 15.59 26.07 17.15 20.93 12.87 17.68 18.24 17.57Z"
-        fill="var(--gold)"
-      />
-    </g>
-  </svg>
+
+      <g class="globe__roundel">
+        <circle
+          class="globe__pulse"
+          cx="200"
+          cy="200"
+          r="58"
+          stroke="var(--gold)"
+          stroke-width="1.5"
+        />
+        <circle
+          cx="200"
+          cy="200"
+          r="58"
+          fill="var(--bg)"
+          stroke="var(--gold)"
+          stroke-width="2"
+        />
+        <circle
+          cx="200"
+          cy="200"
+          r="49"
+          stroke="var(--gold-deep)"
+          stroke-width="1"
+        />
+        <path
+          class="globe__star"
+          transform="translate(200 200) scale(4.6) translate(-20 -20)"
+          d="M20 12.5 21.76 17.57 27.13 17.68 22.85 20.93 24.41 26.07 20 23 15.59 26.07 17.15 20.93 12.87 17.68 18.24 17.57Z"
+          fill="var(--gold)"
+        />
+      </g>
+    </svg>
+    <canvas ref="canvas" class="emblem__gl" aria-hidden="true" />
+  </div>
 </template>
 
 <script setup lang="ts">
+import type { Emblem } from "~/globe/emblem";
+
 const R = 168;
 const MERIDIANS = 6;
 const TICKS = Array.from({ length: 72 }, (_, i) => i * 5);
@@ -136,9 +126,63 @@ const PARALLELS = [-60, -30, 0, 30, 60].map((lat) => {
   const half = +(R * Math.cos(rad)).toFixed(2);
   return `M${200 - half} ${y}H${200 + half}`;
 });
+
+const canvas = ref<HTMLCanvasElement>();
+const ready = ref(false);
+let emblem: Emblem | undefined;
+let observer: IntersectionObserver | undefined;
+let alive = true;
+
+onMounted(async () => {
+  if (!document.createElement("canvas").getContext("webgl2")) return;
+  const { mountEmblem } = await import("~/globe/emblem");
+  if (!alive || !canvas.value) return;
+  try {
+    const mounted = await mountEmblem(canvas.value, () => (ready.value = true));
+    if (!alive) return mounted.dispose();
+    emblem = mounted;
+    observer = new IntersectionObserver((entries) =>
+      emblem?.setVisible(entries.some((entry) => entry.isIntersecting))
+    );
+    observer.observe(canvas.value);
+  } catch {
+    ready.value = false;
+  }
+});
+
+onBeforeUnmount(() => {
+  alive = false;
+  observer?.disconnect();
+  emblem?.dispose();
+});
 </script>
 
 <style lang="scss" scoped>
+.emblem {
+  position: relative;
+}
+
+.emblem__gl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s $ease-out;
+
+  .is-3d & {
+    opacity: 1;
+  }
+}
+
+.globe > :not(.globe__bezel) {
+  transition: opacity 0.8s $ease-out;
+
+  .is-3d & {
+    opacity: 0;
+  }
+}
+
 .globe {
   width: 100%;
   height: auto;

@@ -1,5 +1,8 @@
 import {
+  BufferAttribute,
+  BufferGeometry,
   Color,
+  DoubleSide,
   ExtrudeGeometry,
   Group,
   InstancedMesh,
@@ -9,6 +12,7 @@ import {
   type Object3D,
   type Quaternion,
   Shape,
+  ShapeGeometry,
   SphereGeometry,
   Vector3,
   type DataTexture,
@@ -273,6 +277,7 @@ export interface Pose {
 
 export class Kit {
   readonly root = new Group();
+  readonly stage = new Group();
   readonly smoke: Puffs;
   readonly fire: Puffs;
   readonly balls: Fireballs;
@@ -318,6 +323,7 @@ export class Kit {
     this.tracers = new Tracers(capacity.tracers ?? 160);
     this.units = new Units(capacity.units);
     this.root.add(
+      this.stage,
       this.units.group,
       this.decals.mesh,
       this.glow.mesh,
@@ -343,11 +349,134 @@ export class Kit {
     return object;
   }
 
-  sea(radius: number, x = 0, z = 0) {
-    const mesh = seaPatch(radius, x, z);
+  sea(radius: number, x = 0, z = 0, level?: number) {
+    const mesh = seaPatch(radius, x, z, level);
     mesh.position.set(x, 0, z);
     this.timed.push(mesh.material);
-    return this.add(mesh);
+    this.stage.add(mesh);
+    return mesh;
+  }
+
+  strip(points: [number, number][], width: number, color: number, y: number) {
+    const positions: number[] = [];
+    for (let i = 0; i < points.length - 1; i++) {
+      const [ax, az] = points[i]!;
+      const [bx, bz] = points[i + 1]!;
+      const len = Math.hypot(bx - ax, bz - az) || 1;
+      const nx = (-(bz - az) / len) * (width / 2);
+      const nz = ((bx - ax) / len) * (width / 2);
+      const quad = [
+        [ax - nx, az - nz],
+        [ax + nx, az + nz],
+        [bx + nx, bz + nz],
+        [bx - nx, bz - nz],
+      ].map(([qx, qz]) => [qx!, y + ground(qx!, qz!), qz!]);
+      for (const k of [0, 1, 2, 0, 2, 3]) positions.push(...quad[k]!);
+    }
+    const geometry = new BufferGeometry();
+    geometry.setAttribute(
+      "position",
+      new BufferAttribute(new Float32Array(positions), 3)
+    );
+    geometry.computeVertexNormals();
+    const mesh = new Mesh(
+      geometry,
+      new MeshLambertMaterial({ color, emissive: 0x14130e, side: DoubleSide })
+    );
+    mesh.renderOrder = 3;
+    this.stage.add(mesh);
+    return mesh;
+  }
+
+  terrain(
+    points: [number, number][],
+    height: number,
+    palette: number[],
+    maxEdge = 1.5
+  ) {
+    const shape = new Shape();
+    points.forEach(([x, z], i) =>
+      i ? shape.lineTo(x, z) : shape.moveTo(x, z)
+    );
+    const flat = new ShapeGeometry(shape);
+    const source = flat.getAttribute("position");
+    const index = flat.index!;
+    const out: number[] = [];
+    const split = (tri: number[], depth: number) => {
+      const [ax, az, bx, bz, cx, cz] = tri as [
+        number,
+        number,
+        number,
+        number,
+        number,
+        number,
+      ];
+      const edge = Math.max(
+        Math.hypot(bx - ax, bz - az),
+        Math.hypot(cx - bx, cz - bz),
+        Math.hypot(ax - cx, az - cz)
+      );
+      if (edge <= maxEdge || depth > 9) {
+        out.push(...tri);
+        return;
+      }
+      const abx = (ax + bx) / 2;
+      const abz = (az + bz) / 2;
+      const bcx = (bx + cx) / 2;
+      const bcz = (bz + cz) / 2;
+      const cax = (cx + ax) / 2;
+      const caz = (cz + az) / 2;
+      split([ax, az, abx, abz, cax, caz], depth + 1);
+      split([abx, abz, bx, bz, bcx, bcz], depth + 1);
+      split([cax, caz, bcx, bcz, cx, cz], depth + 1);
+      split([abx, abz, bcx, bcz, cax, caz], depth + 1);
+    };
+    for (let i = 0; i < index.count; i += 3) {
+      const tri: number[] = [];
+      for (let k = 0; k < 3; k++) {
+        const v = index.getX(i + k);
+        tri.push(source.getX(v), source.getY(v));
+      }
+      split(tri, 0);
+    }
+    flat.dispose();
+    const colors = palette.map((hex) => new Color(hex));
+    const mixed = new Color();
+    const count = out.length / 2;
+    const positions = new Float32Array(count * 3);
+    const tints = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
+      const x = out[i * 2]!;
+      const z = out[i * 2 + 1]!;
+      positions[i * 3] = x;
+      positions[i * 3 + 1] = height + ground(x, z);
+      positions[i * 3 + 2] = z;
+      const n = clamp01(
+        0.5 +
+          0.28 * Math.sin(x * 0.31 + Math.sin(z * 0.19) * 2.4) +
+          0.22 * Math.sin(z * 0.37 + x * 0.11) +
+          (hash(Math.round(x * 3) * 7.1 + Math.round(z * 3) * 3.3) - 0.5) * 0.35
+      );
+      const f = n * (colors.length - 1);
+      const k = Math.min(colors.length - 2, Math.floor(f));
+      mixed.copy(colors[k]!).lerp(colors[k + 1]!, f - k);
+      mixed.toArray(tints, i * 3);
+    }
+    const geometry = new BufferGeometry();
+    geometry.setAttribute("position", new BufferAttribute(positions, 3));
+    geometry.setAttribute("color", new BufferAttribute(tints, 3));
+    geometry.computeVertexNormals();
+    const mesh = new Mesh(
+      geometry,
+      new MeshLambertMaterial({
+        vertexColors: true,
+        emissive: 0x14130e,
+        side: DoubleSide,
+      })
+    );
+    mesh.renderOrder = 2;
+    this.stage.add(mesh);
+    return mesh;
   }
 
   land(points: [number, number][], height: number, color: number) {
@@ -456,11 +585,11 @@ export class Kit {
     );
   }
 
-  pose(keys: CameraKey[], t: number, out: Pose) {
+  pose(keys: CameraKey[], t: number, out: Pose, near = 4) {
     const x = hermite(keys, 1, t);
     const z = hermite(keys, 2, t);
     const h = hermite(keys, 3, t);
-    const dist = Math.max(4, hermite(keys, 4, t));
+    const dist = Math.max(near, hermite(keys, 4, t));
     const yaw =
       ((hermite(keys, 5, t) + Math.sin(t * 0.37) * 0.6) * Math.PI) / 180;
     const pitch =
@@ -515,9 +644,23 @@ export type Cue = [
   level: number,
 ];
 
+export interface Label {
+  at: [number, number];
+  text: string | { en: string; es: string };
+  flags?: string[];
+  lift?: number;
+  from: number;
+  to: number;
+}
+
 export interface SceneDef {
   anchor: LonLat;
   scale?: number;
+  near?: number;
+  clip?: [near: number, far: number];
+  bare?: boolean;
+  labels?: Label[];
+  night?: [at: number, value: number][];
   capacity: Capacity;
   camera: CameraKey[];
   cues: Cue[];

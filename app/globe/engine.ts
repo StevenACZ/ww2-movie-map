@@ -1,5 +1,7 @@
 import {
   AmbientLight,
+  Group,
+  type Object3D,
   BackSide,
   DirectionalLight,
   Mesh,
@@ -67,7 +69,7 @@ export interface GlobeContext {
   reducedMotion: boolean;
   flyTo(lonLat: LonLat, distance?: number, duration?: number): void;
   addTicker(tick: (now: number, dt: number) => boolean): () => void;
-  cinematic(on: boolean): void;
+  cinematic(on: boolean, bare?: boolean): void;
 }
 
 const MIN_DISTANCE = 1.08;
@@ -153,6 +155,8 @@ export class GlobeEngine {
   };
   private countryLayers = new Map<string, Promise<CountryLayer>>();
   private activeLayer: CountryLayer | null = null;
+  private bareHidden: Object3D[] = [];
+  private readonly lands = new Group();
   private fading: {
     layer: CountryLayer;
     from: number;
@@ -270,6 +274,7 @@ export class GlobeEngine {
     this.units = new UnitLayer(world.operations, { mobile });
     this.fronts = new FrontLayer(world.frontlines);
     this.scene.add(
+      this.lands,
       this.units.group,
       this.fronts.group,
       this.journey.group,
@@ -342,7 +347,7 @@ export class GlobeEngine {
         .then((topology) => {
           const layer = new CountryLayer(key, topology);
           layer.setOpacity(0);
-          this.scene.add(layer.group);
+          this.lands.add(layer.group);
           return layer;
         });
       pending.catch((error) => {
@@ -483,6 +488,8 @@ export class GlobeEngine {
 
   setActiveStop(index: number | null) {
     this.overlay.setActiveStop(index);
+    this.journey.reveal(index, performance.now() / 1000);
+    this.dirty = true;
   }
 
   fitStops(stops: LonLat[], padding = 1) {
@@ -552,12 +559,25 @@ export class GlobeEngine {
           this.dirty = true;
         };
       },
-      cinematic: (on) => this.cinematic(on),
+      cinematic: (on, bare) => this.cinematic(on, bare),
     };
   }
 
-  private cinematic(on: boolean) {
+  private cinematic(on: boolean, bare = false) {
     this.isCinematic = on;
+    if (on && bare && !this.bareHidden.length) {
+      this.bareHidden = [
+        this.units.group,
+        this.fronts.group,
+        this.pulses.group,
+        this.journey.group,
+        this.lands,
+      ].filter((group) => group.visible);
+      for (const group of this.bareHidden) group.visible = false;
+    } else if (!(on && bare)) {
+      for (const group of this.bareHidden) group.visible = true;
+      this.bareHidden = [];
+    }
     this.controls.enabled = !on;
     this.controls.minDistance = on ? CINEMATIC_MIN_DISTANCE : MIN_DISTANCE;
     this.zoomTarget = null;
@@ -771,7 +791,7 @@ export class GlobeEngine {
       this.units.update(this.t, time, zoom, still, this.camera.position);
     if (this.layers.fronts) this.fronts.update(this.t, time);
     if (this.layers.events) this.pulses.update(this.t, time, zoom, still);
-    this.journey.update(time, still);
+    if (this.journey.update(time, still)) this.dirty = true;
 
     let ticking = false;
     for (const tick of this.tickers) ticking = tick(now, dt) || ticking;

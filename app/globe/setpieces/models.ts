@@ -15,8 +15,9 @@ import {
   Vector3,
 } from "three";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
+import { ARSENAL, type ArsenalId } from "../arsenal";
 
-export type ModelKind =
+type LegacyKind =
   | "carrier"
   | "battleship"
   | "destroyer"
@@ -29,6 +30,8 @@ export type ModelKind =
   | "twin"
   | "bomb"
   | "squad";
+
+export type ModelKind = LegacyKind | ArsenalId;
 
 export const FACTION = {
   allied: new Color(0x86a6c8),
@@ -121,7 +124,7 @@ function hull(width: number, height: number, shade: number): Part[] {
   ];
 }
 
-const BUILDERS: Record<ModelKind, () => BufferGeometry> = {
+const BUILDERS: Record<LegacyKind, () => BufferGeometry> = {
   carrier: () =>
     build([
       ...hull(0.12, 0.05, 0.62),
@@ -256,7 +259,11 @@ export class Units {
       ModelKind,
       number,
     ][]) {
-      const mesh = new InstancedMesh(BUILDERS[kind](), this.material, count);
+      const geometry =
+        kind in ARSENAL
+          ? ARSENAL[kind as ArsenalId].build()
+          : BUILDERS[kind as LegacyKind]();
+      const mesh = new InstancedMesh(geometry, this.material, count);
       mesh.frustumCulled = false;
       mesh.renderOrder = 4;
       mesh.count = 0;

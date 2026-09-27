@@ -217,6 +217,10 @@ export class JourneyLayer {
   private core = lineObject("#f3d78e", 2.2, 1);
   private total = 0;
   private drawStart = 0;
+  private stopEnds: number[] = [];
+  private revealFrom = 0;
+  private revealTo = 0;
+  private revealStart = 0;
   private readonly v = new Vector3();
 
   constructor() {
@@ -235,6 +239,7 @@ export class JourneyLayer {
     const positions: number[] = [];
     const a = new Vector3();
     const b = new Vector3();
+    this.stopEnds = [0];
     for (let i = 0; i < stops.length - 1; i++) {
       toVec3(stops[i]![0], stops[i]![1], 1, a);
       toVec3(stops[i + 1]![0], stops[i + 1]![1], 1, b);
@@ -248,24 +253,43 @@ export class JourneyLayer {
           .multiplyScalar(1.003 + Math.sin(Math.PI * u) * lift);
         positions.push(this.v.x, this.v.y, this.v.z);
       }
+      this.stopEnds.push(positions.length / 3 - 1);
     }
     setLine(this.core, positions);
     setLine(this.glow, positions);
     this.total = positions.length / 3 - 1;
     this.drawStart = time;
+    this.revealFrom = this.revealTo = this.total;
     this.group.visible = true;
   }
 
-  update(time: number, still: boolean) {
+  /** Lights the route up to a stop; null lights all of it. */
+  reveal(stop: number | null, time: number) {
     if (!this.group.visible) return;
+    this.revealFrom = this.revealed(time);
+    this.revealTo =
+      stop === null
+        ? this.total
+        : (this.stopEnds[Math.min(stop, this.stopEnds.length - 1)] ?? 0);
+    this.revealStart = time;
+  }
+
+  private revealed(time: number): number {
+    const u = Math.min(1, (time - this.revealStart) / 1.5);
+    const e = u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2;
+    return this.revealFrom + (this.revealTo - this.revealFrom) * e;
+  }
+
+  /** Returns true while the route is still being drawn or revealed. */
+  update(time: number, still: boolean): boolean {
+    if (!this.group.visible) return false;
     const progress = still ? 1 : Math.min(1, (time - this.drawStart) / 1.6);
-    const segments = Math.max(
-      1,
-      Math.round(this.total * (1 - Math.pow(1 - progress, 3)))
-    );
-    this.core.geometry.instanceCount = segments;
-    this.glow.geometry.instanceCount = segments;
+    const drawn = this.total * (1 - Math.pow(1 - progress, 3));
+    const lit = still ? this.revealTo : this.revealed(time);
+    this.glow.geometry.instanceCount = Math.max(1, Math.round(drawn));
+    this.core.geometry.instanceCount = Math.round(Math.min(drawn, lit));
     this.core.material.dashOffset = still ? 0 : -time * 0.05;
+    return !still && (progress < 1 || time - this.revealStart < 1.5);
   }
 
   get animating(): boolean {
