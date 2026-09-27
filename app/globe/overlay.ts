@@ -18,6 +18,16 @@ export interface TagInput {
   color: string;
 }
 
+export interface PieceInput {
+  id: string;
+  lonLat: LonLat;
+  t: number;
+  title: string;
+  date: string;
+  cta: string;
+  icon: string;
+}
+
 export interface LabelInput {
   id: string;
   lonLat: LonLat;
@@ -73,9 +83,12 @@ export class Overlay {
   private scale = 1;
   private labels = new Map<string, Placed & { data: LabelInput }>();
   private stops: (Placed & { index: number })[] = [];
-  private events: (Placed & { id: string })[] = [];
+  private events: (Placed & { id: string; piece?: string })[] = [];
+  private pieces: (Placed & { id: string; t: number })[] = [];
+  private pieceTime = 0;
   private tags = new Map<string, Placed & { label: string }>();
   private clusterPool: HTMLButtonElement[] = [];
+  private badgeCss = new WeakMap<HTMLElement, string>();
   private selected: string | null = null;
   private labelFilter: Set<string> | null = null;
   private readonly v = new Vector3();
@@ -286,6 +299,7 @@ export class Overlay {
       return {
         el,
         id: event.id,
+        piece: piece?.id,
         world: toVec3(event.lonLat[0], event.lonLat[1], 1.004),
         x: 0,
         y: 0,
@@ -293,6 +307,46 @@ export class Overlay {
         facing: 0,
       };
     });
+  }
+
+  setPieces(list: PieceInput[]) {
+    this.stale = true;
+    this.pieces.forEach((p) => p.el.remove());
+    this.pieces = list.map((piece) => {
+      const el = document.createElement("button");
+      el.type = "button";
+      el.className = "gp";
+      el.dataset.setpiece = piece.id;
+      el.setAttribute("aria-label", `${piece.cta}: ${piece.title}`);
+      const badge = document.createElement("span");
+      badge.className = "gp__badge";
+      badge.innerHTML = `<svg viewBox="0 0 64 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${piece.icon}</svg><b>3D</b>`;
+      const label = document.createElement("span");
+      label.className = "gp__label";
+      const title = document.createElement("strong");
+      title.textContent = piece.title;
+      const date = document.createElement("small");
+      date.textContent = `${piece.date} · ${piece.cta}`;
+      label.append(title, date);
+      el.append(badge, label);
+      this.stopLayer.append(el);
+      return {
+        el,
+        id: piece.id,
+        t: piece.t,
+        world: toVec3(piece.lonLat[0], piece.lonLat[1], 1.004),
+        x: 0,
+        y: 0,
+        visible: false,
+        facing: 0,
+      };
+    });
+  }
+
+  setPieceTime(t: number) {
+    if (t === this.pieceTime) return;
+    this.pieceTime = t;
+    if (this.pieces.length) this.stale = true;
   }
 
   setTags(list: TagInput[]) {
@@ -341,7 +395,7 @@ export class Overlay {
     height: number
   ) {
     this.camDir.copy(camera.position).normalize();
-    placed.facing = placed.world.clone().normalize().dot(this.camDir);
+    placed.facing = this.v.copy(placed.world).normalize().dot(this.camDir);
     const horizon = 1 / camera.position.length();
     placed.visible = placed.facing > horizon + edgeOf(horizon);
     if (!placed.visible) return;
@@ -378,10 +432,12 @@ export class Overlay {
         placed.data.rank <= maxRank &&
         (!this.labelFilter || this.labelFilter.has(placed.data.id));
       if (!allowed) {
+        placed.el.classList.toggle("is-off", true);
         place(placed.el, placed, placed.css ?? "", "0");
         continue;
       }
       this.project(placed, camera, width, height);
+      placed.el.classList.toggle("is-off", !placed.visible);
       place(
         placed.el,
         placed,
@@ -408,11 +464,33 @@ export class Overlay {
       );
     }
 
+    const live = new Set(this.events.map((e) => e.piece));
+    const shown: Placed[] = [];
+    for (const placed of [...this.pieces].sort(
+      (a, b) => Math.abs(a.t - this.pieceTime) - Math.abs(b.t - this.pieceTime)
+    )) {
+      this.project(placed, camera, width, height);
+      const free =
+        placed.visible &&
+        !live.has(placed.id) &&
+        shown.every((o) => Math.hypot(o.x - placed.x, o.y - placed.y) > 40);
+      if (free) shown.push(placed);
+      placed.el.classList.toggle("is-hidden", !free);
+      place(
+        placed.el,
+        placed,
+        free
+          ? `translate(${px(placed.x)}px, ${px(placed.y)}px)`
+          : (placed.css ?? ""),
+        free ? fadeOf(placed.facing).toFixed(2) : "0"
+      );
+    }
+
     const visible: PlacedMarker[] = [];
     for (const placed of this.markers.values()) {
       this.project(placed, camera, width, height);
       if (placed.visible) visible.push(placed);
-      else placed.el.classList.add("is-hidden");
+      else placed.el.classList.toggle("is-hidden", true);
     }
     visible.sort(
       (a, b) =>
@@ -439,7 +517,7 @@ export class Overlay {
     for (const cluster of clusters) {
       const [lead, ...rest] = cluster.members;
       if (!lead) continue;
-      lead.el.classList.remove("is-hidden");
+      lead.el.classList.toggle("is-hidden", false);
       if (scale >= 1.6 && lead.full && lead.img) {
         lead.img.src = lead.full;
         lead.full = undefined;
@@ -453,7 +531,7 @@ export class Overlay {
       const z =
         lead.data.id === this.selected ? "30" : lead.data.gold ? "20" : "10";
       if (lead.el.style.zIndex !== z) lead.el.style.zIndex = z;
-      for (const member of rest) member.el.classList.add("is-hidden");
+      for (const member of rest) member.el.classList.toggle("is-hidden", true);
       if (rest.length) {
         let badge = this.clusterPool[pool];
         if (!badge) {
@@ -464,16 +542,26 @@ export class Overlay {
           this.markerLayer.append(badge);
         }
         pool++;
-        badge.hidden = false;
-        badge.dataset.ids = cluster.members.map((m) => m.data.id).join(",");
-        badge.textContent = `+${rest.length}`;
-        badge.setAttribute("aria-label", `${cluster.members.length}`);
-        badge.style.transform = `translate(${px(lead.x)}px, ${px(lead.y)}px)`;
-        badge.style.opacity = lead.el.style.opacity;
+        if (badge.hidden) badge.hidden = false;
+        const ids = cluster.members.map((m) => m.data.id).join(",");
+        if (badge.dataset.ids !== ids) {
+          badge.dataset.ids = ids;
+          badge.textContent = `+${rest.length}`;
+          badge.setAttribute("aria-label", `${cluster.members.length}`);
+        }
+        const transform = `translate(${px(lead.x)}px, ${px(lead.y)}px)`;
+        if (this.badgeCss.get(badge) !== transform) {
+          this.badgeCss.set(badge, transform);
+          badge.style.transform = transform;
+        }
+        if (badge.style.opacity !== lead.el.style.opacity)
+          badge.style.opacity = lead.el.style.opacity;
       }
     }
-    for (let i = pool; i < this.clusterPool.length; i++)
-      this.clusterPool[i]!.hidden = true;
+    for (let i = pool; i < this.clusterPool.length; i++) {
+      const badge = this.clusterPool[i]!;
+      if (!badge.hidden) badge.hidden = true;
+    }
   }
 
   dispose() {

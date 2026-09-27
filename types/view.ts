@@ -160,7 +160,9 @@ export interface WorldData {
       label?: LonLat;
       labelRank?: number;
       timeline: [number, string][];
+      flags?: [number, string | null][];
     }
   >;
+  flags: Record<string, { file: string; ratio: number }>;
   sets: Record<string, { from: number; to: number }>;
 }

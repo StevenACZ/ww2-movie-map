@@ -83,10 +83,9 @@ import { LEGEND, type ColorMode } from "~/globe/palette";
 const MODES = ["side", "war"] as const;
 const LAYER_KEYS = ["units", "fronts", "events", "labels"] as const;
 
-const props = defineProps<{
+defineProps<{
   mode: ColorMode;
   layers: GlobeLayers;
-  startOpen?: boolean;
 }>();
 defineEmits<{
   "update:mode": [value: ColorMode];
@@ -94,7 +93,7 @@ defineEmits<{
 }>();
 
 const { t } = useI18n();
-const open = ref(props.startOpen ?? false);
+const open = defineModel<boolean>("open", { default: false });
 </script>
 
 <style lang="scss" scoped>

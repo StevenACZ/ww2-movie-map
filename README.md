@@ -16,6 +16,8 @@ WW2 Film Map is a bilingual (English and Spanish) static site that places 222 fi
 - Own three.js globe with historical borders for 1914, 1920, 1930, 1938, and 1945; no map tiles or map API keys.
 - Timeline from 1914 to 1945 that recolors countries by side or by war status and animates tanks, ships, planes, and front lines.
 - Historical events on the globe and on a dedicated timeline page.
+- Seven special events reconstructed in 3D (Messines to Nagasaki), opened from pins on the globe or from the timeline dock.
+- A nations-at-war panel with the belligerents of each date, grouped by side, with the flags they flew.
 - Every title has a journey of story locations that can be followed on the globe.
 - Collection of films and series with era pages for WW1, the interwar years, and WW2, plus a curated set of must-watch classics.
 - Title pages with synopsis, historical context, trailer, and where-to-watch providers.
@@ -92,6 +94,7 @@ Pushes to `main` and a daily schedule run a GitHub Actions workflow that install
 - **Wikipedia and Wikidata**: historical context and identifiers, licensed under CC BY-SA.
 - **Posters**: film and series posters from their Wikipedia articles, shown at small size to identify each title.
 - **Freesound**: sound effects, CC0 and CC BY 4.0 recordings by juskiddink, duckduckpony and others. Authors, sources, and licenses for each file are listed in `public/audio/CREDITS.md`.
+- **Wikimedia Commons**: historical national flags, public domain and CC BY-SA files. Authors, sources, and licenses for each flag are listed in `public/flags/CREDITS.md`; rebuild them with `bun run flags`.
 - **Wikimedia Commons**: timeline event images (public domain, CC0, CC BY, CC BY-SA). Author, license, and source for each image are listed in `data/event-images.json` and shown on its card.
 
 ## License

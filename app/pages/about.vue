@@ -191,6 +191,13 @@ const credits = computed(() => [
     note: t("aboutPage.credits.soundsNote"),
     license: "CC0 · CC BY 4.0",
   },
+  {
+    name: "Wikimedia Commons",
+    role: t("aboutPage.credits.flags"),
+    url: "https://commons.wikimedia.org",
+    note: t("aboutPage.credits.flagsNote"),
+    license: "Public domain · CC BY-SA",
+  },
 ]);
 
 usePageSeo(() => {

@@ -78,11 +78,21 @@
       @tour="toggleTour"
     />
 
-    <MapLegend
-      v-model:mode="mode"
-      v-model:layers="layers"
-      class="map__legend"
-    />
+    <div class="map__corner">
+      <MapLegend
+        v-model:mode="mode"
+        v-model:layers="layers"
+        :open="corner === 'legend'"
+        @update:open="(value: boolean) => (corner = value ? 'legend' : null)"
+      />
+      <MapNations
+        :world="world"
+        :time="time"
+        :open="corner === 'nations'"
+        @update:open="(value: boolean) => (corner = value ? 'nations' : null)"
+        @focus="focusCountry"
+      />
+    </div>
 
     <div class="map__zoom" role="group" :aria-label="t('map.resetView')">
       <button
@@ -179,7 +189,15 @@
       }"
       aria-hidden="true"
     >
-      <strong>{{ hover.name }}</strong>
+      <strong
+        ><img
+          v-if="hover.flag"
+          :src="hover.flag.file"
+          alt=""
+          :width="Math.round(hover.flag.ratio * 14)"
+          height="14"
+        />{{ hover.name }}</strong
+      >
       <span :class="`status status--${hover.status}`">{{
         t(`status.${hover.status}`)
       }}</span>
@@ -233,6 +251,7 @@ import type { LonLat } from "~/globe/geo";
 import type { SetPieceId } from "~/globe/setpieces/catalog";
 import { FACTION_COLORS, type ColorMode } from "~/globe/palette";
 import type { IconName } from "~/utils/icons";
+import { flagAt, type Flag } from "~/utils/nations";
 import {
   ERA_RANGES,
   TIME_MAX,
@@ -332,11 +351,13 @@ const sheetOpen = ref(false);
 const interacted = ref(false);
 const hover = ref<{
   name: string;
+  flag: Flag | null;
   status: string;
   x: number;
   y: number;
 } | null>(null);
 const cluster = ref<{ ids: string[]; x: number; y: number } | null>(null);
+const corner = ref<"legend" | "nations" | null>(null);
 const globe = ref<{
   flyTo: (lonLat: LonLat, distance?: number) => void;
   fitStops: (stops: LonLat[]) => void;
@@ -740,11 +761,17 @@ function onHover(value: GlobeHover | null) {
   hover.value = value
     ? {
         name: globe.value?.countryName(value.id) ?? value.id,
+        flag: world.value ? flagAt(world.value, value.id, time.value) : null,
         status: value.status,
         x: value.x,
         y: value.y,
       }
     : null;
+}
+
+function focusCountry(id: string) {
+  const label = world.value?.countries[id]?.label;
+  if (label) globe.value?.flyTo(label, 2.2);
 }
 
 function onReady(data: WorldData) {
@@ -891,11 +918,43 @@ onBeforeUnmount(() => {
   }
 }
 
-.map__legend {
+@mixin corner-row {
+  flex-direction: row;
+  align-items: flex-start;
+  width: auto;
+
+  :deep(.legend),
+  :deep(.nations) {
+    width: auto;
+    overflow: visible;
+  }
+
+  :deep(.legend__body),
+  :deep(.nations__body) {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    width: min(280px, calc(100vw - 16px));
+    padding-top: 12px;
+    border-radius: var(--radius);
+    @include panel(1);
+    box-shadow: var(--shadow);
+  }
+
+  :deep(.nations__title) {
+    @include visually-hidden;
+  }
+}
+
+.map__corner {
   position: absolute;
   z-index: 19;
   right: var(--edge);
   top: calc(var(--header-h) + 4px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
 
   .has-panel & {
     right: calc(var(--panel-w) + var(--edge) * 2);
@@ -907,9 +966,18 @@ onBeforeUnmount(() => {
     }
   }
 
+  @media (max-width: 1405px) {
+    .has-panel & {
+      @include corner-row;
+    }
+  }
+
+  @media (max-width: 989px) {
+    @include corner-row;
+  }
+
   @include down($bp-md) {
     right: 8px;
-    width: min(250px, calc(100vw - 16px));
 
     .has-panel & {
       display: none;
@@ -984,7 +1052,7 @@ onBeforeUnmount(() => {
 .map.is-cinematic {
   .map__side,
   .map__panel,
-  .map__legend,
+  .map__corner,
   .map__zoom,
   .map__dispatch,
   .map__sheet-toggle,
@@ -997,7 +1065,7 @@ onBeforeUnmount(() => {
 
 .map__side,
 .map__panel,
-.map__legend,
+.map__corner,
 .map__zoom,
 .map__sheet-toggle,
 .map__timeline {
@@ -1177,10 +1245,21 @@ onBeforeUnmount(() => {
   font-size: 0.8rem;
 
   strong {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-family: var(--font-display);
     font-size: 1rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+  }
+
+  img {
+    flex: none;
+    height: 14px;
+    width: auto;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 0.55);
   }
 }
 

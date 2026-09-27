@@ -301,6 +301,7 @@ export class CountryLayer {
   private statusKey = "";
   private readonly byId = new Map<string, number>();
   private readonly shapes: Shape[] = [];
+  private readonly fill: Mesh;
 
   constructor(
     readonly key: string,
@@ -312,6 +313,7 @@ export class CountryLayer {
       vertexShader,
       fragmentShader,
       transparent: true,
+      depthWrite: false,
       side: DoubleSide,
       uniforms: {
         uPaletteA: { value: this.paletteA },
@@ -325,9 +327,9 @@ export class CountryLayer {
         uHighlightIndex: { value: -1 },
       },
     });
-    const mesh = new Mesh(fill, this.material);
-    mesh.renderOrder = 1;
-    this.group.add(mesh);
+    this.fill = new Mesh(fill, this.material);
+    this.fill.renderOrder = 1;
+    this.group.add(this.fill);
 
     const object = topology.objects.countries;
     const inner = topoMesh(topology, object, (a, b) => a !== b)
@@ -443,16 +445,24 @@ export class CountryLayer {
     return undefined;
   }
 
-  setOpacity(value: number) {
-    this.material.uniforms.uOpacity!.value = value;
+  get opacity(): number {
+    return this.material.uniforms.uOpacity!.value as number;
+  }
+
+  raise(front: boolean) {
+    this.fill.renderOrder = front ? 1.5 : 1;
+  }
+
+  setOpacity(fill: number, lines = fill) {
+    this.material.uniforms.uOpacity!.value = fill;
     this.group.traverse((child) => {
       if (child instanceof LineSegments2) {
         const base = (child.userData.baseOpacity ??=
           child.material.opacity) as number;
-        child.material.opacity = base * value;
+        child.material.opacity = base * lines;
       }
     });
-    this.group.visible = value > 0.001;
+    this.group.visible = Math.max(fill, lines) > 0.001;
   }
 
   dispose() {

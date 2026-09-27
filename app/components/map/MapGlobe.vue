@@ -17,7 +17,7 @@ import type { LonLat } from "~/globe/geo";
 import type { TagInput } from "~/globe/overlay";
 import type { PaletteMode } from "~/globe/palette";
 import { TMDB_IMAGE } from "~/utils/seo";
-import { SET_PIECE_BY_EVENT } from "~/globe/setpieces/catalog";
+import { SET_PIECE_BY_EVENT, SET_PIECES } from "~/globe/setpieces/catalog";
 
 const props = withDefaults(
   defineProps<{
@@ -122,6 +122,24 @@ function pushEvents() {
   );
 }
 
+function pushPieces() {
+  if (!engine) return;
+  const cta = t("setpieces.in3d");
+  engine.setPieces(
+    props.setpieces
+      ? SET_PIECES.map((piece) => ({
+          id: piece.id,
+          lonLat: piece.at,
+          t: toMonths(piece.date),
+          title: t(`setpieces.scenes.${piece.id}.title`),
+          date: formatDate(piece.date, locale.value),
+          cta,
+          icon: piece.vignette,
+        }))
+      : []
+  );
+}
+
 async function init() {
   try {
     const [{ GlobeEngine, webglAvailable }, data] = await Promise.all([
@@ -159,6 +177,7 @@ async function init() {
     pushMarkers();
     pushLabels();
     pushEvents();
+    pushPieces();
     engine.select(props.selected);
     engine.showJourney(props.journey);
     engine.setTags(props.tags ?? []);
@@ -220,6 +239,7 @@ watch(() => props.events, pushEvents);
 watch(locale, () => {
   pushLabels();
   pushEvents();
+  pushPieces();
 });
 watch(
   () => props.t,
@@ -369,6 +389,22 @@ defineExpose({
   z-index: 1;
 }
 
+.gl,
+.gm,
+.gs,
+.ge,
+.gt,
+.gp,
+.gc {
+  will-change: transform, opacity;
+}
+
+.gl.is-off,
+.gm.is-hidden,
+.gp.is-hidden {
+  will-change: auto;
+}
+
 .globe-overlay__stops {
   z-index: 2;
 }
@@ -387,6 +423,13 @@ defineExpose({
     0 1px 2px rgb(0 0 0 / 0.9),
     0 0 12px rgb(0 0 0 / 0.6);
   transition: opacity 0.3s linear;
+
+  &.is-off {
+    visibility: hidden;
+    transition:
+      opacity 0.3s linear,
+      visibility 0s 0.3s;
+  }
 
   &--r1 {
     font-size: 15px;
@@ -745,6 +788,129 @@ defineExpose({
       background: rgb(40 32 14 / 0.96);
       box-shadow: 0 0 26px rgb(216 174 82 / 0.5);
     }
+  }
+}
+
+.gp {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--gold-2);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: opacity 0.25s linear;
+
+  &.is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.gp__badge {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  translate: -50% -50%;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  background: radial-gradient(circle at 50% 35%, #2b2412, #120f07 75%);
+  box-shadow:
+    0 0 0 3px rgb(11 12 9 / 0.7),
+    0 0 20px rgb(216 174 82 / 0.45);
+  transition:
+    scale 0.25s $ease-spring,
+    box-shadow 0.25s $ease-out;
+
+  svg {
+    width: 26px;
+    height: 23px;
+  }
+
+  b {
+    position: absolute;
+    right: -9px;
+    bottom: -5px;
+    padding: 1px 5px;
+    border-radius: 999px;
+    background: var(--gold);
+    color: #17130a;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.4;
+  }
+
+  .gp:hover &,
+  .gp:focus-visible & {
+    scale: 1.14;
+    box-shadow:
+      0 0 0 3px rgb(11 12 9 / 0.75),
+      0 0 30px rgb(243 215 142 / 0.7);
+  }
+
+  .gp:focus-visible & {
+    outline: 2px solid var(--gold-2);
+    outline-offset: 3px;
+  }
+}
+
+.gp__label {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  translate: 0 -50%;
+  display: grid;
+  gap: 2px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--gold);
+  background: rgb(14 12 7 / 0.94);
+  white-space: nowrap;
+  text-align: left;
+  opacity: 0;
+  scale: 0.94;
+  transform-origin: left center;
+  transition:
+    opacity 0.2s $ease-out,
+    scale 0.2s $ease-out;
+  pointer-events: none;
+
+  strong {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+
+  small {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--gold-2);
+  }
+
+  .gp:hover &,
+  .gp:focus-visible & {
+    opacity: 1;
+    scale: 1;
   }
 }
 </style>

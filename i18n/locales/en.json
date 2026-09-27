@@ -299,5 +299,9 @@
   "footer": {
     "made": "Made by Steven Coaila Zaa",
     "tmdb": "Data and images: TMDB. Streaming: JustWatch."
+  },
+  "nations": {
+    "title": "Nations",
+    "note": "Flags as flown on this date. Pick one to find it on the globe."
   }
 }
