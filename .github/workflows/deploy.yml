@@ -211,7 +211,7 @@ jobs:
           port="${SSH_PORT:-22}"
           output_dir="${{ steps.build.outputs.output_dir }}"
 
-          ssh -i ~/.ssh/deploy_key -p "$port" "$SSH_USER@$SSH_HOST" "mkdir -p '$DEPLOY_PATH'"
+          ssh -i ~/.ssh/deploy_key -p "$port" "$SSH_USER@$SSH_HOST" "deploy ${DEPLOY_PATH##*/} $GITHUB_SHA"
 
           rsync -avz --delete --delete-delay --delay-updates \
             --chmod=D755,F644 \
