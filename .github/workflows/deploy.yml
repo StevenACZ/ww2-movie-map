@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 jobs:
   deploy:
@@ -105,11 +106,41 @@ jobs:
           fi
 
       - name: Dependency audit
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          audit_ok=true
           if [ "${{ steps.pm.outputs.manager }}" = "npm" ]; then
-            npm audit --audit-level=high
+            npm audit --audit-level=high 2>&1 | tee "$RUNNER_TEMP/audit.txt" || audit_ok=false
           else
-            bun audit
+            bun run audit:deps 2>&1 | tee "$RUNNER_TEMP/audit.txt" || audit_ok=false
+          fi
+          if [ "$audit_ok" = "true" ]; then
+            exit 0
+          fi
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            exit 1
+          fi
+          echo "::warning title=Dependency audit failing::Scheduled rebuild continued with a failing dependency audit."
+          sed -i 's/\x1b\[[0-9;]*m//g' "$RUNNER_TEMP/audit.txt"
+          api="https://api.github.com/repos/${{ github.repository }}/issues"
+          title="Dependency audit failing on scheduled deploys"
+          existing=$(curl -fsS -H "Authorization: Bearer $GH_TOKEN" "$api?state=open&per_page=100" \
+            | jq -r --arg t "$title" 'map(select(.title == $t)) | first | .number // empty' || true)
+          jq -n --arg t "$title" --rawfile log "$RUNNER_TEMP/audit.txt" \
+            '{title: $t, body: ("The scheduled rebuild deployed, but the dependency audit is failing:\n\n```\n" + $log + "\n```\n\nFix: update or pin the affected packages, regenerate bun.lock, run `bun run verify`, and deploy.")}' \
+            > "$RUNNER_TEMP/issue.json"
+          if [ -n "$existing" ]; then
+            curl -fsS -X PATCH -H "Authorization: Bearer $GH_TOKEN" "$api/$existing" \
+              -d @"$RUNNER_TEMP/issue.json" > /dev/null \
+              && echo "Updated open audit issue #$existing" \
+              || echo "Could not update audit issue #$existing"
+          else
+            curl -fsS -X POST -H "Authorization: Bearer $GH_TOKEN" "$api" \
+              -d @"$RUNNER_TEMP/issue.json" > /dev/null \
+              && echo "Opened audit issue" \
+              || echo "Could not open audit issue"
           fi
 
       - name: Tests
