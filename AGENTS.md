@@ -72,7 +72,8 @@ bun scripts/tmdb/sync.ts
 bun scripts/data/wiki-lookup.ts "Stalingrad (1993 film)"
 ```
 
-- `bun run verify` runs format check, Nuxt typecheck, build, static generation, and `bun audit`.
+- `bun run verify` runs format check, Nuxt typecheck, build, static generation, and `bun run audit:deps`.
+- `audit:deps` is `bun audit` minus GHSA-86w9-cpqp-85rv (`node-forge`, no patched release; it only reaches the dev server through `listhen` and never ships in the static output). Drop the ignore once a fixed `node-forge` exists.
 - TMDB sync reads `TMDB_API_KEY` or `TMDB_READ_TOKEN`; supports `--only <id,id>` and `--fixture <dir>`.
 - Never run `nuxt build`, `generate`, `typecheck`, or `prepare` while `nuxt dev` runs on the same checkout; they share `.nuxt`. Typecheck against a running dev server with `bunx vue-tsc -b --noEmit`.
 - Use Bun because this repo tracks `bun.lock`. Do not commit `.output/`, `.nuxt/`, `dist/`, local docs, or env files.
@@ -123,6 +124,7 @@ For SEO work, inspect the generated `dist/public` output for JSON-LD, canonical 
 
 - Push to `main` triggers GitHub Actions on the self-hosted runner: install, optional TMDB refresh, checks, `generate`, then rsync of `dist/public` to production.
 - A daily schedule rebuilds with fresh TMDB data; the refresh step runs only when the `TMDB_API_KEY` secret exists and never blocks the deploy.
+- A failing dependency audit blocks push and manual deploys. On the daily schedule it deploys anyway, warns, and opens or updates one issue titled "Dependency audit failing on scheduled deploys"; that issue is the signal to patch the dependencies.
 - The workflow deploys only when its SSH configuration is present and validates the live site, `robots.txt`, and sitemap after rsync.
 - After pushing, verify the Actions run and the production URL.
 

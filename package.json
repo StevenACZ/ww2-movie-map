@@ -14,7 +14,8 @@
     "check:data": "bun scripts/data/validate.ts && bun scripts/checks/fronts.ts",
     "posters": "bun scripts/images/posters.ts",
     "flags": "bun scripts/images/flags.ts",
-    "verify": "bun run format:check && bun run check:data && bun run typecheck && bun run build && bun run generate && bun audit"
+    "audit:deps": "bun audit --ignore=GHSA-86w9-cpqp-85rv",
+    "verify": "bun run format:check && bun run check:data && bun run typecheck && bun run build && bun run generate && bun run audit:deps"
   },
   "dependencies": {
     "@fontsource-variable/big-shoulders-display": "^5.3.0",
@@ -43,7 +44,7 @@
     "@babel/core": "7.29.7",
     "brace-expansion": "5.0.12",
     "defu": "6.1.7",
-    "devalue": "5.9.2",
+    "devalue": "5.9.4",
     "esbuild": "0.28.2",
     "fast-xml-parser": "5.11.1",
     "immutable": "5.1.9",
