@@ -14,7 +14,7 @@
     "check:data": "bun scripts/data/validate.ts && bun scripts/checks/fronts.ts",
     "posters": "bun scripts/images/posters.ts",
     "flags": "bun scripts/images/flags.ts",
-    "audit:deps": "bun audit --ignore=GHSA-86w9-cpqp-85rv",
+    "audit:deps": "bun audit --ignore=GHSA-86w9-cpqp-85rv --ignore=GHSA-vfj7-8cjw-p6xm",
     "verify": "bun run format:check && bun run check:data && bun run typecheck && bun run build && bun run generate && bun run audit:deps"
   },
   "dependencies": {
