@@ -212,26 +212,6 @@ usePageSeo(() => ({
       { name: t("nav.map"), path: "/" },
       { name: t("nav.timeline"), path: "/timeline" },
     ]),
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      name: t("timeline.title"),
-      numberOfItems: events.value.length,
-      itemListElement: events.value.map((event, i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        item: {
-          "@type": "Event",
-          name: event.title,
-          startDate: event.date,
-          ...(event.endDate ? { endDate: event.endDate } : {}),
-          ...(event.place
-            ? { location: { "@type": "Place", name: event.place } }
-            : {}),
-          sameAs: event.wikipedia,
-        },
-      })),
-    },
   ],
 }));
 </script>
